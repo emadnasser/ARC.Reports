@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARC.Reports", "ARC.Reports\ARC.Reports.csproj", "{31EF97C5-48FF-45A4-AE0C-F94CEB4B717F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARC.Reports.DAL", "ARC.Reports.DAL\ARC.Reports.DAL.csproj", "{07D807A8-FCB1-4F9E-B7A9-D28EC0A7DF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{C92F97FE-0FE5-4358-968B-580E58A04715}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31EF97C5-48FF-45A4-AE0C-F94CEB4B717F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EF97C5-48FF-45A4-AE0C-F94CEB4B717F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EF97C5-48FF-45A4-AE0C-F94CEB4B717F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EF97C5-48FF-45A4-AE0C-F94CEB4B717F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D807A8-FCB1-4F9E-B7A9-D28EC0A7DF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D807A8-FCB1-4F9E-B7A9-D28EC0A7DF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D807A8-FCB1-4F9E-B7A9-D28EC0A7DF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D807A8-FCB1-4F9E-B7A9-D28EC0A7DF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92F97FE-0FE5-4358-968B-580E58A04715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92F97FE-0FE5-4358-968B-580E58A04715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92F97FE-0FE5-4358-968B-580E58A04715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92F97FE-0FE5-4358-968B-580E58A04715}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
