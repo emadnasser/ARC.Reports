@@ -19,12 +19,12 @@ namespace ARC.Reports.DAL
             if (pMarketType == 0)
             {
                 parameters[0] = new SqlParameter("@pMarketType", "SAM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE CONVERT(DATE, GETDATE()-3) = InsertedDate AND MarketType = @pMarketType", parameters);
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE CONVERT(DATE, GETDATE()) = InsertedDate AND MarketType = @pMarketType", parameters);
             }
             else
             {
                 parameters[0] = new SqlParameter("@pMarketType", "SEM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE CONVERT(DATE, GETDATE()-3) = InsertedDate AND MarketType = @pMarketType", parameters);
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE CONVERT(DATE, GETDATE()) = InsertedDate AND MarketType = @pMarketType", parameters);
             }
 
             if (myDataTable != null)
@@ -52,12 +52,12 @@ namespace ARC.Reports.DAL
             if (pMarketType == 0)
             {
                 parameters[0] = new SqlParameter("@pMarketType", "SAM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE CONVERT(DATE, GETDATE()-3) = date AND Market = @pMarketType", parameters);
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE CONVERT(DATE, GETDATE()) = date AND Market = @pMarketType", parameters);
             }
             else
             {
                 parameters[0] = new SqlParameter("@pMarketType", "SEM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE CONVERT(DATE, GETDATE()-3) = date AND Market = @pMarketType", parameters);
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE CONVERT(DATE, GETDATE()) = date AND Market = @pMarketType", parameters);
             }
 
             if (myDataTable != null)
