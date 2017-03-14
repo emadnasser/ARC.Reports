@@ -20,16 +20,21 @@ namespace ARC.Reports
                 }
             }
 
-            ASPxGridView0.DataSource = SData.Rep_001Get(0);
+            //if(dateEdit.Date == DateTime.MinValue)
+            //    dateEdit.Date = DateTime.Today;
+            //else
+            //    dateEdit.Date = dateEdit.Date;
+
+            ASPxGridView0.DataSource = SData.Rep_001Get(0, DateTime.Now.ToShortDateString());
             ASPxGridView0.DataBind();
 
-            ASPxGridView1.DataSource = SData.Rep_001Get(1);
+            ASPxGridView1.DataSource = SData.Rep_001Get(1, DateTime.Now.ToShortDateString());
             ASPxGridView1.DataBind();
 
-            ASPxGridView2.DataSource = SData.Rep_0011Get(0);
+            ASPxGridView2.DataSource = SData.Rep_0011Get(0, DateTime.Now.ToShortDateString());
             ASPxGridView2.DataBind();
 
-            ASPxGridView3.DataSource = SData.Rep_0011Get(1);
+            ASPxGridView3.DataSource = SData.Rep_0011Get(1, DateTime.Now.ToShortDateString());
             ASPxGridView3.DataBind();
         }
 

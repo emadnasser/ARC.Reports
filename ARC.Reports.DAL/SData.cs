@@ -10,21 +10,23 @@ namespace ARC.Reports.DAL
 {
     public static class SData
     {
-        public static List<Rep_001> Rep_001Get(int pMarketType)
+        public static List<Rep_001> Rep_001Get(int pMarketType, string @pDate)
         {
-            SqlParameter[] parameters = new SqlParameter[1];
+            SqlParameter[] parameters = new SqlParameter[2];
 
             DataTable myDataTable;
 
             if (pMarketType == 0)
             {
-                parameters[0] = new SqlParameter("@pMarketType", "SAM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE CONVERT(DATE, GETDATE()) = InsertedDate AND MarketType = @pMarketType", parameters);
+                parameters[0] = new SqlParameter("@pDate", @pDate);
+                parameters[1] = new SqlParameter("@pMarketType", "SAM");
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE convert(datetime, InsertedDate, 103) = @pDate AND MarketType = @pMarketType", parameters);
             }
             else
             {
-                parameters[0] = new SqlParameter("@pMarketType", "SEM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE CONVERT(DATE, GETDATE()) = InsertedDate AND MarketType = @pMarketType", parameters);
+                parameters[0] = new SqlParameter("@pDate", @pDate);
+                parameters[1] = new SqlParameter("@pMarketType", "SEM");
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE convert(datetime, InsertedDate, 103) = @pDate AND MarketType = @pMarketType", parameters);
             }
 
             if (myDataTable != null)
@@ -43,21 +45,23 @@ namespace ARC.Reports.DAL
             return null;
         }
 
-        public static List<Rep_0011> Rep_0011Get(int pMarketType)
+        public static List<Rep_0011> Rep_0011Get(int pMarketType, string @pDate)
         {
-            SqlParameter[] parameters = new SqlParameter[1];
+            SqlParameter[] parameters = new SqlParameter[2];
 
             DataTable myDataTable;
 
             if (pMarketType == 0)
             {
-                parameters[0] = new SqlParameter("@pMarketType", "SAM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE CONVERT(DATE, GETDATE()) = date AND Market = @pMarketType", parameters);
+                parameters[0] = new SqlParameter("@pDate", @pDate);
+                parameters[1] = new SqlParameter("@pMarketType", "SAM");
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE convert(datetime, [date], 103) = @pDate AND Market = @pMarketType", parameters);
             }
             else
             {
-                parameters[0] = new SqlParameter("@pMarketType", "SEM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE CONVERT(DATE, GETDATE()) = date AND Market = @pMarketType", parameters);
+                parameters[0] = new SqlParameter("@pDate", @pDate);
+                parameters[1] = new SqlParameter("@pMarketType", "SEM");
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE convert(datetime, [date], 103) = @pDate AND Market = @pMarketType", parameters);
             }
 
             if (myDataTable != null)
