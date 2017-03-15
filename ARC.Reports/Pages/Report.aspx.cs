@@ -20,22 +20,12 @@ namespace ARC.Reports
                 }
             }
 
-            //if(dateEdit.Date == DateTime.MinValue)
-            //    dateEdit.Date = DateTime.Today;
-            //else
-            //    dateEdit.Date = dateEdit.Date;
+            if (!Page.IsPostBack)
+            {
+                dateEdit.Date = DateTime.Today;
 
-            ASPxGridView0.DataSource = SData.Rep_001Get(0, DateTime.Now.ToShortDateString());
-            ASPxGridView0.DataBind();
-
-            ASPxGridView1.DataSource = SData.Rep_001Get(1, DateTime.Now.ToShortDateString());
-            ASPxGridView1.DataBind();
-
-            ASPxGridView2.DataSource = SData.Rep_0011Get(0, DateTime.Now.ToShortDateString());
-            ASPxGridView2.DataBind();
-
-            ASPxGridView3.DataSource = SData.Rep_0011Get(1, DateTime.Now.ToShortDateString());
-            ASPxGridView3.DataBind();
+                GetData();
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -45,18 +35,50 @@ namespace ARC.Reports
 
         protected void ASPxPageControl1_TabClick(object source, TabControlCancelEventArgs e)
         {
-            if (Session["ActiveTabIndex"] != null)
-                ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
-            else
-                Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
+            try
+            {
+                if (Session["ActiveTabIndex"] != null)
+                    ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
+                else
+                    Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
+            }
+            catch
+            {
+            }
         }
 
         protected void ASPxGridViews_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
         {
-            ASPxGridView0.DataBind();
-            ASPxGridView1.DataBind();
-            ASPxGridView2.DataBind();
-            ASPxGridView3.DataBind();
+            GetData();
+
+        }
+
+        protected void dateEdit_ValueChanged(object sender, EventArgs e)
+        {
+
+            GetData();
+        }
+
+
+        private void GetData()
+        {
+            try
+            {
+                ASPxGridView0.DataSource = SData.Rep_001Get(0, dateEdit.Date.ToShortDateString());
+                ASPxGridView0.DataBind();
+
+                ASPxGridView1.DataSource = SData.Rep_001Get(1, dateEdit.Date.ToShortDateString());
+                ASPxGridView1.DataBind();
+
+                ASPxGridView2.DataSource = SData.Rep_0011Get(0, dateEdit.Date.ToShortDateString());
+                ASPxGridView2.DataBind();
+
+                ASPxGridView3.DataSource = SData.Rep_0011Get(1, dateEdit.Date.ToShortDateString());
+                ASPxGridView3.DataBind();
+            }
+            catch
+            {
+            }
         }
     }
 }

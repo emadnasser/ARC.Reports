@@ -4,17 +4,28 @@
 
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        #MainContent_ASPxLabel1 {
+            text-align: right;
+            padding-top: 3px;
+        }
+    </style>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="page-header">
         <h1>Market Share Value:</h1>
     </div>
     <br />
     <div class="row">
-        <div class="col-xs-6 col-sm-4 col-md-12 col-lg-12">
-            <dx:ASPxLabel ID="ASPxLabel1" runat="server" Text="Date:"></dx:ASPxLabel>
-            <dx:ASPxDateEdit ID="dateEdit" runat="server" Width="150px" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="true" />
+        <div class="form-group">
+            <dx:ASPxLabel ID="ASPxLabel1" Font-Bold="true" CssClass="col-sm-1 control-label no-padding-right" runat="server" Text="Date:"></dx:ASPxLabel>
+            <div class="col-sm-11">
+                <dx:ASPxDateEdit ID="dateEdit" runat="server" Width="150px" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="true" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
+            </div>
         </div>
     </div>
+    <div class="hr hr-16 hr-dotted"></div>
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-md-12 col-lg-12">
             <dx:ASPxPageControl ID="ASPxPageControl1" runat="server" Theme="DevEx" Width="100%" ActiveTabIndex="0" EnableTheming="True" OnTabClick="ASPxPageControl1_TabClick">
@@ -208,14 +219,14 @@
                     </dx:TabPage>
                 </TabPages>
             </dx:ASPxPageControl>
-<%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
+            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView0.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView1.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView2.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView3.PerformCallback();
                 }" />
-            </dx:ASPxTimer>--%>
+            </dx:ASPxTimer>
         </div>
     </div>
 </asp:Content>
