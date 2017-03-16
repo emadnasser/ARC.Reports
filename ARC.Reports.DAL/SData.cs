@@ -39,13 +39,14 @@ namespace ARC.Reports.DAL
                             Amount = Helper.ToGFormat(x["Amount"].ToString(), 2),
                             Transactions = (int)x["Transactions"],
                             Percentage = (double)x["Percentage"],
+                            TradeShare = (double)x["TradeShare"],
                             MarketType = x["MarketType"].ToString(),
-                            InsertedDate = System.Convert.ToDateTime(x["InsertedDate"])
+                            InsertedDate = Convert.ToDateTime(x["InsertedDate"])
                         }).ToList();
             return null;
         }
 
-        public static List<Rep_0011> Rep_0011Get(int pMarketType, string @pDate)
+        public static List<Rep_0011> Rep_0011aGet(int pMarketType, string @pDate)
         {
             SqlParameter[] parameters = new SqlParameter[2];
 
@@ -55,13 +56,48 @@ namespace ARC.Reports.DAL
             {
                 parameters[0] = new SqlParameter("@pDate", @pDate);
                 parameters[1] = new SqlParameter("@pMarketType", "SAM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE convert(datetime, [date], 103) = @pDate AND Market = @pMarketType", parameters);
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE convert(datetime, [date], 103) = @pDate AND Market = @pMarketType AND [Type] = 'Value'", parameters);
             }
             else
             {
                 parameters[0] = new SqlParameter("@pDate", @pDate);
                 parameters[1] = new SqlParameter("@pMarketType", "SEM");
-                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE convert(datetime, [date], 103) = @pDate AND Market = @pMarketType", parameters);
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE convert(datetime, [date], 103) = @pDate AND Market = @pMarketType AND [Type] = 'Value'", parameters);
+            }
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new Rep_0011
+                        {
+                            Id = (int)x["Id"],
+                            Buy_Total_Ammount = Helper.ToGFormat(x["Buy_Total_Ammount"].ToString(), 2),
+                            Sell_Total_Ammount = Helper.ToGFormat(x["Sell_Total_Ammount"].ToString(), 2),
+                            ETS_Share_Value = Helper.ToGFormat(x["ETS_Share_Value"].ToString(), 2),
+                            Market_Share_Value = Helper.ToGFormat(x["Market_Share_Value"].ToString(), 2),
+                            Percentage = Helper.ToGFormat(x["Percentage"].ToString(), 2),
+                            Market = x["Market"].ToString(),
+                            date = Convert.ToDateTime(x["date"])
+                        }).ToList();
+            return null;
+        }
+
+        public static List<Rep_0011> Rep_0011bGet(int pMarketType, string @pDate)
+        {
+            SqlParameter[] parameters = new SqlParameter[2];
+
+            DataTable myDataTable;
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pDate", @pDate);
+                parameters[1] = new SqlParameter("@pMarketType", "SAM");
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE convert(datetime, [date], 103) = @pDate AND Market = @pMarketType AND [Type] = 'Trades'", parameters);
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pDate", @pDate);
+                parameters[1] = new SqlParameter("@pMarketType", "SEM");
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE convert(datetime, [date], 103) = @pDate AND Market = @pMarketType AND [Type] = 'Trades'", parameters);
             }
 
             if (myDataTable != null)

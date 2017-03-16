@@ -10,7 +10,16 @@
 namespace ARC.Reports {
     
     
-    public partial class Report {
+    public partial class Report2 {
+        
+        /// <summary>
+        /// ASPxButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton ASPxButton1;
         
         /// <summary>
         /// ASPxLabel1 control.
@@ -58,15 +67,6 @@ namespace ARC.Reports {
         protected global::DevExpress.Web.ASPxGridView ASPxGridView0;
         
         /// <summary>
-        /// ASPxButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxButton ASPxButton1;
-        
-        /// <summary>
         /// ASPxGridView2 control.
         /// </summary>
         /// <remarks>
@@ -74,15 +74,6 @@ namespace ARC.Reports {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView ASPxGridView2;
-        
-        /// <summary>
-        /// ASPxGridView4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView4;
         
         /// <summary>
         /// ContentControl2 control.
@@ -103,15 +94,6 @@ namespace ARC.Reports {
         protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
         
         /// <summary>
-        /// ASPxButton2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxButton ASPxButton2;
-        
-        /// <summary>
         /// ASPxGridView3 control.
         /// </summary>
         /// <remarks>
@@ -119,24 +101,6 @@ namespace ARC.Reports {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView ASPxGridView3;
-        
-        /// <summary>
-        /// ASPxGridView5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView5;
-        
-        /// <summary>
-        /// ASPxTimer1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer1;
         
         /// <summary>
         /// gridExport_0 control.
@@ -148,6 +112,15 @@ namespace ARC.Reports {
         protected global::DevExpress.Web.ASPxGridViewExporter gridExport_0;
         
         /// <summary>
+        /// gridExport_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_2;
+        
+        /// <summary>
         /// gridExport_1 control.
         /// </summary>
         /// <remarks>
@@ -155,5 +128,14 @@ namespace ARC.Reports {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridViewExporter gridExport_1;
+        
+        /// <summary>
+        /// gridExport_3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_3;
     }
 }

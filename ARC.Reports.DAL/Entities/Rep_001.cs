@@ -14,6 +14,7 @@ namespace ARC.Reports.DAL.Entities
         public string Amount { get; set; }
         public Nullable<int> Transactions { get; set; }
         public Nullable<double> Percentage { get; set; }
+        public Nullable<double> TradeShare { get; set; }
         public string MarketType { get; set; }
         public Nullable<System.DateTime> InsertedDate { get; set; }
     }
