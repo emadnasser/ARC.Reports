@@ -73,6 +73,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\Default.aspx" />
     <Content Include="icon.ico" />
     <Content Include="packages.config" />
     <Content Include="Admin.Master" />
@@ -260,6 +261,7 @@
     <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Main.Master" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -558,9 +560,8 @@
     <Content Include="Content\site.css" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.png" />
-    <Content Include="Pages\Report1.aspx" />
-    <Content Include="Pages\Report2.aspx" />
-    <Content Include="Pages\Report.aspx" />
+    <Content Include="Pages\MarketShareTotals.aspx" />
+    <Content Include="Pages\MarketShareDetails.aspx" />
     <Content Include="Public\Unauthorized.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.12.2.min.js" />
@@ -575,26 +576,33 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Report1.aspx.cs">
-      <DependentUpon>Report1.aspx</DependentUpon>
+    <Compile Include="Pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Report1.aspx.designer.cs">
-      <DependentUpon>Report1.aspx</DependentUpon>
+    <Compile Include="Pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Report2.aspx.cs">
-      <DependentUpon>Report2.aspx</DependentUpon>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Report2.aspx.designer.cs">
-      <DependentUpon>Report2.aspx</DependentUpon>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Report.aspx.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
+    <Compile Include="Pages\MarketShareTotals.aspx.cs">
+      <DependentUpon>MarketShareTotals.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Report.aspx.designer.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
+    <Compile Include="Pages\MarketShareTotals.aspx.designer.cs">
+      <DependentUpon>MarketShareTotals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MarketShareDetails.aspx.cs">
+      <DependentUpon>MarketShareDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MarketShareDetails.aspx.designer.cs">
+      <DependentUpon>MarketShareDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public\Unauthorized.aspx.cs">

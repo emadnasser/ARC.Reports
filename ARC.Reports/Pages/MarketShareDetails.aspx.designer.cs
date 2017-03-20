@@ -10,25 +10,7 @@
 namespace ARC.Reports {
     
     
-    public partial class Report {
-        
-        /// <summary>
-        /// ASPxLabel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxLabel ASPxLabel1;
-        
-        /// <summary>
-        /// dateEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxDateEdit dateEdit;
+    public partial class MarketShareDetails {
         
         /// <summary>
         /// ASPxPageControl1 control.

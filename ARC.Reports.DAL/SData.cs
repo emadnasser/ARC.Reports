@@ -116,6 +116,40 @@ namespace ARC.Reports.DAL
             return null;
         }
 
+        public static List<Rep_002> Rep_002Get(int pMarketType, string @pDate)
+        {
+            SqlParameter[] parameters = new SqlParameter[2];
+
+            parameters[0] = new SqlParameter("@pDate", @pDate);
+
+            if (pMarketType == 0)
+            {
+                parameters[1] = new SqlParameter("@pMarketType", "SAM");
+            }
+            else
+            {
+                parameters[1] = new SqlParameter("@pMarketType", "SEM");
+            }
+
+            DataTable myDataTable;
+            myDataTable = Helper.ExecuteReader("SELECT Channel s0, SUM(Amount) AS s1, SUM(Transactions) AS s2, SUM(Percentage) AS s3, SUM(TradeShare) AS s4 FROM [dbo].[Rep_001] " +
+                                                "WHERE convert(datetime, InsertedDate, 103) = @pDate AND MarketType = @pMarketType " +
+                                                "GROUP BY Channel", parameters);
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new Rep_002
+                        {
+                            s0 = Helper.Channel(x["s0"].ToString()),
+                            s1 = x["s1"].ToString(),
+                            s2 = x["s2"].ToString(),
+                            s3 = x["s3"].ToString(),
+                            s4 = x["s4"].ToString(),
+                        }).ToList();
+
+            return null;
+        }
+
         public static List<TestEnt> Test_01()
         {
             return Helper.sqlDataReaderTest();

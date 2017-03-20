@@ -10,7 +10,7 @@ using DevExpress.Export;
 
 namespace ARC.Reports
 {
-    public partial class Report : System.Web.UI.Page
+    public partial class MarketShareDetails : System.Web.UI.Page
     {
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -26,6 +26,7 @@ namespace ARC.Reports
 
             if (!Page.IsPostBack)
             {
+                ASPxDateEdit dateEdit = ASPxPageControl1.FindControl("dateEdit") as ASPxDateEdit;
                 dateEdit.Date = DateTime.Today;
 
                 GetData();
@@ -65,6 +66,8 @@ namespace ARC.Reports
         {
             try
             {
+                ASPxDateEdit dateEdit = ASPxPageControl1.FindControl("dateEdit") as ASPxDateEdit;
+
                 ASPxGridView0.DataSource = SData.Rep_001Get(0, dateEdit.Date.ToShortDateString());
                 ASPxGridView0.DataBind();
 
