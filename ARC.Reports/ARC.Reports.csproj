@@ -558,6 +558,7 @@
     <Content Include="Content\site.css" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Pages\Report1.aspx" />
     <Content Include="Pages\Report2.aspx" />
     <Content Include="Pages\Report.aspx" />
     <Content Include="Public\Unauthorized.aspx" />
@@ -573,6 +574,13 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Report1.aspx.cs">
+      <DependentUpon>Report1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Report1.aspx.designer.cs">
+      <DependentUpon>Report1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Report2.aspx.cs">
       <DependentUpon>Report2.aspx</DependentUpon>

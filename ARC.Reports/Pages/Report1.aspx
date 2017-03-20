@@ -1,4 +1,4 @@
-﻿<%@ Page Title="ARC Reports - Market Share Value" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Report.aspx.cs" Inherits="ARC.Reports.Report" %>
+﻿<%@ Page Title="ARC Reports - Market Share Value" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Report1.aspx.cs" Inherits="ARC.Reports.Report1" %>
 
 <%@ Register Assembly="DevExpress.Web.v16.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
@@ -17,6 +17,8 @@
         <h1>Market Share Value:</h1>
     </div>
     <br />
+    <%--<dx:ToolbarExport runat="server" ID="ToolbarExport" ExportItemTypes="Pdf,Xls,Xlsx,Rtf,Csv" OnItemClick="ToolbarExport_ItemClick" />--%>
+
     <div class="row">
         <div class="form-group">
             <dx:ASPxLabel ID="ASPxLabel1" Font-Bold="true" CssClass="col-sm-1 control-label no-padding-right" runat="server" Text="Date:"></dx:ASPxLabel>
@@ -68,7 +70,7 @@
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="TradeShare" VisibleIndex="5" Caption="Trade Share">
+                                        <dx:GridViewDataTextColumn FieldName="TradeShare" VisibleIndex="5" Caption="Trades Share">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
@@ -182,48 +184,48 @@
                                 <dx:ASPxGridView ID="ASPxGridView1" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
                                     <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
                                     <Columns>
-                                        <dx:GridViewDataTextColumn FieldName="Id" ReadOnly="True" Visible="false">
+                                        <dx:GridViewDataTextColumn FieldName="Id" ReadOnly="True" VisibleIndex="0" Visible="false">
                                             <HeaderStyle HorizontalAlign="Center" />
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0">
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Operation" VisibleIndex="1">
+                                        <dx:GridViewDataTextColumn FieldName="Operation" VisibleIndex="2">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Amount" VisibleIndex="2" Caption="Trade Value">
+                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="1">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Transactions" VisibleIndex="3" Caption="Trades Count">
+                                        <dx:GridViewDataTextColumn FieldName="Amount" VisibleIndex="3" Caption="Trade Value">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Percentage" VisibleIndex="4" Caption="Trade Value Share">
+                                        <dx:GridViewDataTextColumn FieldName="Percentage" VisibleIndex="5" Caption="Trade Value Share">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="TradeShare" VisibleIndex="5" Caption="Trade Share">
+                                        <dx:GridViewDataTextColumn FieldName="Transactions" VisibleIndex="4" Caption="Trades Count">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="MarketType" Visible="false">
+                                        <dx:GridViewDataTextColumn FieldName="TradeShare" VisibleIndex="4">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <CellStyle HorizontalAlign="Center">
+                                            </CellStyle>
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataDateColumn FieldName="InsertedDate" VisibleIndex="6" Caption="Date">
+                                        <dx:GridViewDataTextColumn FieldName="MarketType" VisibleIndex="6" Visible="false">
+                                        </dx:GridViewDataTextColumn>
+                                        <dx:GridViewDataDateColumn FieldName="InsertedDate" VisibleIndex="7" Caption="Date">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
