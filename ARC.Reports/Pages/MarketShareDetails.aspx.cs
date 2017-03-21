@@ -16,7 +16,7 @@ namespace ARC.Reports
         {
             string id = Request.LogonUserIdentity.Name.Trim();
 
-            if (!Roles.GetRolesForUser(id).Contains("R_001"))
+            if (!Roles.GetRolesForUser(id).Contains("R_002"))
             {
                 if (!Roles.GetRolesForUser(id).Contains("Admins"))
                 {

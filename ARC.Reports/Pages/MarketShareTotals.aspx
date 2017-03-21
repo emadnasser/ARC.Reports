@@ -13,13 +13,26 @@
         #MainContent_ASPxPageControl1_TPTCL_dateEdit_0 {
             float: right;
         }
+
+        #MainContent_ASPxPageControl1_TPTCL_Label1_0 {
+            float: right;
+            margin-top: 4px;
+            margin-right: 5px;
+        }
     </style>
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $("#sidebar > ul > li > ul > li > ul > li:nth-child(1)").addClass("active");
+            });
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h4 class="header smaller lighter blue strong">Market Share Totals</h4>
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-md-12 col-lg-12">
-            <dx:ASPxPageControl ID="ASPxPageControl1" runat="server" Theme="DevEx" Width="100%" ActiveTabIndex="1" EnableTheming="True" OnTabClick="ASPxPageControl1_TabClick">
+            <dx:ASPxPageControl ID="ASPxPageControl1" runat="server" Theme="DevEx" Width="100%" ActiveTabIndex="0" EnableTheming="True" OnTabClick="ASPxPageControl1_TabClick">
                 <TabPages>
                     <dx:TabPage Text="Main Market">
                         <ContentCollection>
@@ -118,6 +131,7 @@
                 </TabPages>
                 <SpaceAfterTabsTemplate>
                     <dx:ASPxDateEdit ID="dateEdit" runat="server" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="true" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
+                    <asp:Label ID="Label1" runat="server" Text="Date:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
             <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
@@ -127,7 +141,6 @@
                 }" />
             </dx:ASPxTimer>
         </div>
-
         <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Totals Main"></dx:ASPxGridViewExporter>
         <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Market Share Totals Nomu"></dx:ASPxGridViewExporter>
     </div>

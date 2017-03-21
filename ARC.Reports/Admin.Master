@@ -105,7 +105,7 @@
                 <ul class="nav nav-list">
                     <li class="active">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-desktop"></i>
+                            <i class="menu-icon fa fa-list"></i>
                             <span class="menu-text">Reports
                             </span>
 

@@ -14,7 +14,20 @@
         #MainContent_ASPxPageControl1_TPTCL_dateEdit_0 {
             float: right;
         }
+         
+        #MainContent_ASPxPageControl1_TPTCL_Label1_0 {
+            float: right;
+            margin-top: 4px;
+            margin-right: 5px;
+        }
     </style>
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $("#sidebar > ul > li > ul > li > ul > li:nth-child(2)").addClass("active");
+            });
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h4 class="header smaller lighter blue strong">Market Share Details</h4>
@@ -318,6 +331,7 @@
                 </TabPages>
                 <SpaceAfterTabsTemplate>
                     <dx:ASPxDateEdit ID="dateEdit" runat="server" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="true" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
+                    <asp:Label ID="Label1" runat="server" Text="Date:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
             <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
@@ -331,7 +345,6 @@
                 }" />
             </dx:ASPxTimer>
         </div>
-
         <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Main"></dx:ASPxGridViewExporter>
         <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Market Share Nomu"></dx:ASPxGridViewExporter>
     </div>
