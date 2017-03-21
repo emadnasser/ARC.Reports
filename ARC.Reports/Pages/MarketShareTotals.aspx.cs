@@ -70,9 +70,18 @@ namespace ARC.Reports
 
                 ASPxGridView0.DataSource = SData.Rep_002Get(0, dateEdit.Date.ToShortDateString());
                 ASPxGridView0.DataBind();
+                ASPxGridView2.DataSource = SData.Rep_0011aGet(0, dateEdit.Date.ToShortDateString());
+                ASPxGridView2.DataBind();
+                ASPxGridView4.DataSource = SData.Rep_0011bGet(0, dateEdit.Date.ToShortDateString());
+                ASPxGridView4.DataBind();
+
 
                 ASPxGridView1.DataSource = SData.Rep_002Get(1, dateEdit.Date.ToShortDateString());
                 ASPxGridView1.DataBind();
+                ASPxGridView3.DataSource = SData.Rep_0011aGet(1, dateEdit.Date.ToShortDateString());
+                ASPxGridView3.DataBind();
+                ASPxGridView5.DataSource = SData.Rep_0011bGet(1, dateEdit.Date.ToShortDateString());
+                ASPxGridView5.DataBind();
             }
             catch
             {
