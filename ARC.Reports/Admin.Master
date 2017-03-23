@@ -36,15 +36,15 @@
     <script src="../assets/js/ace/ace.widget-on-reload.js"></script>
     <script src="../assets/js/ace/ace.searchbox-autocomplete.js"></script>
 
-    <link href="../assets/css/bootstrap.css"" rel="stylesheet" />
-    <link href="../assets/css/ace.css"" class="ace-main-stylesheet" id="main-ace-style" rel="stylesheet" />
-    <link href="../assets/css/ace-rtl.css"" rel="stylesheet" />
-    <link href="../assets/css/ace-part2.css"" rel="stylesheet" />
-    <link href="../assets/css/ace-ie.css"" rel="stylesheet" />
-    <link href="../Content/Enhancement.css"" rel="stylesheet" />
-    <link href="../assets/css/font-awesome.css"" rel="stylesheet" />
-    <link href="../assets/css/ace-fonts.css"" rel="stylesheet" />
-    <link href="../assets/css/ace-skins.css"" id="ace-skins-stylesheet" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/ace.css" class="ace-main-stylesheet" rel="stylesheet" />
+    <link href="../assets/css/ace-rtl.css" rel="stylesheet" />
+    <link href="../assets/css/ace-part2.css" rel="stylesheet" />
+    <link href="../assets/css/ace-ie.css" rel="stylesheet" />
+    <link href="../Content/Enhancement.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/ace-fonts.css" rel="stylesheet" />
+    <link href="../assets/css/ace-skins.css" rel="stylesheet" />
     <link rel="shortcut icon" href="~/icon.ico">
 
     <style>
@@ -114,8 +114,8 @@
 
                         <b class="arrow"></b>
 
-                                                        <ul class="submenu nav-show" style="display: block;">
-                                                        <li class="open">
+                        <ul class="submenu nav-show" style="display: block;">
+                            <li class="open">
                                 <a href="#" class="dropdown-toggle">
                                     <i class="menu-icon fa fa-caret-right"></i>
 

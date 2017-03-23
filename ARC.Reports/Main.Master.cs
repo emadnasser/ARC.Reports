@@ -11,7 +11,7 @@ namespace ARC.Reports
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var x = Request.Url;
         }
     }
 }
