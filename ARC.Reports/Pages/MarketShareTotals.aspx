@@ -302,6 +302,10 @@
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView0.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView1.PerformCallback();
+                MainContent_ASPxPageControl1_ASPxGridView2.PerformCallback();
+                MainContent_ASPxPageControl1_ASPxGridView3.PerformCallback();
+                MainContent_ASPxPageControl1_ASPxGridView4.PerformCallback();
+                MainContent_ASPxPageControl1_ASPxGridView5.PerformCallback();
                 }" />
             </dx:ASPxTimer>
         </div>
