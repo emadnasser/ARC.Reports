@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ARC.Price.UI {
+namespace ARC.Reports.Pages {
     
     
     public partial class AdminMaster {

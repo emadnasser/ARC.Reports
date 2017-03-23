@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ARC.Reports.Pages
+namespace ARC.Reports
 {
 
 

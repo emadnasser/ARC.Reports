@@ -1,4 +1,4 @@
-﻿<%@ Page Title="ARC Reports - Market Share Details" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="MarketShareDetails.aspx.cs" Inherits="ARC.Reports.MarketShareDetails" %>
+﻿<%@ Page Title="ARC Reports - Market Share Details" Language="C#" MasterPageFile="~/Pages/Admin.Master" AutoEventWireup="true" CodeBehind="~/Pages/MarketShareDetails.aspx.cs" Inherits="ARC.Reports.Pages.MarketShareDetails" %>
 
 <%@ Register Assembly="DevExpress.Web.v16.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
 

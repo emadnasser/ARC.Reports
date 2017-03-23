@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ARC.Reports {
+namespace ARC.Reports.Pages {
     
     
     public partial class MarketShareDetails {

@@ -8,7 +8,7 @@ using DevExpress.XtraPrinting;
 using DevExpress.XtraPrintingLinks;
 using DevExpress.Export;
 
-namespace ARC.Reports
+namespace ARC.Reports.Pages
 {
     public partial class MarketShareTotals : System.Web.UI.Page
     {

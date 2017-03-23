@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web.Security;
 
-namespace ARC.Price.UI
+namespace ARC.Reports.Pages
 {
     public partial class AdminMaster : System.Web.UI.MasterPage
     {
