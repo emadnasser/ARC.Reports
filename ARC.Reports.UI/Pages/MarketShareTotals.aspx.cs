@@ -67,17 +67,40 @@ namespace ARC.Reports.Pages
             try
             {
                 ASPxDateEdit dateEdit = ASPxPageControl1.FindControl("dateEdit") as ASPxDateEdit;
+                ASPxComboBox myOption = ASPxPageControl1.FindControl("myOption") as ASPxComboBox;
 
-                ASPxGridView0.DataSource = SData.Rep_002Get(0, dateEdit.Date.ToShortDateString());
-                ASPxGridView0.DataBind();
+                if (myOption.SelectedIndex == 0)
+                {
+                    ASPxGridView0.DataSource = SData.Rep_002Get(0, dateEdit.Date.ToShortDateString());
+                    ASPxGridView0.DataBind();
+
+                    ASPxGridView1.DataSource = SData.Rep_002Get(1, dateEdit.Date.ToShortDateString());
+                    ASPxGridView1.DataBind();
+                }
+                else if (myOption.SelectedIndex == 1)
+                {
+                    ASPxGridView6.DataSource = SData.Rep_003Get(2017, 0);
+                    ASPxGridView6.DataBind();
+
+                    //ASPxGridView7.DataSource = SData.Rep_003Get(2017, 1);
+                    //ASPxGridView7.DataBind();
+                }
+                else if (myOption.SelectedIndex == 2)
+                {
+                    //ASPxGridView20.DataSource = SData.Rep_002Get(0, dateEdit.Date.ToShortDateString());
+                    //ASPxGridView20.DataBind();
+
+                    //ASPxGridView12.DataSource = SData.Rep_002Get(1, dateEdit.Date.ToShortDateString());
+                    //ASPxGridView12.DataBind();
+                }
+
                 ASPxGridView2.DataSource = SData.Rep_0011aGet(0, dateEdit.Date.ToShortDateString());
                 ASPxGridView2.DataBind();
                 ASPxGridView4.DataSource = SData.Rep_0011bGet(0, dateEdit.Date.ToShortDateString());
                 ASPxGridView4.DataBind();
 
 
-                ASPxGridView1.DataSource = SData.Rep_002Get(1, dateEdit.Date.ToShortDateString());
-                ASPxGridView1.DataBind();
+
                 ASPxGridView3.DataSource = SData.Rep_0011aGet(1, dateEdit.Date.ToShortDateString());
                 ASPxGridView3.DataBind();
                 ASPxGridView5.DataSource = SData.Rep_0011bGet(1, dateEdit.Date.ToShortDateString());
@@ -98,6 +121,11 @@ namespace ARC.Reports.Pages
         {
             GetData();
             gridExport_1.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
+        }
+
+        protected void myOption_ValueChanged(object sender, EventArgs e)
+        {
+            GetData();
         }
     }
 }

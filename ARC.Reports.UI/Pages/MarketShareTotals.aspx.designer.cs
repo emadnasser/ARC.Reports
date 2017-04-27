@@ -40,6 +40,15 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ASPxGridView ASPxGridView0;
         
         /// <summary>
+        /// ASPxGridView6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridView ASPxGridView6;
+        
+        /// <summary>
         /// ASPxButton1 control.
         /// </summary>
         /// <remarks>

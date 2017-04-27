@@ -13,6 +13,11 @@
         #MainContent_ASPxPageControl1_TPTCL_dateEdit_0 {
             float: right;
         }
+        
+        #MainContent_ASPxPageControl1_TPTCL_myOption_0{
+            float: right;
+            margin-right: 40px;
+        }
 
         #MainContent_ASPxPageControl1_TPTCL_Label1_0 {
             float: right;
@@ -75,6 +80,35 @@
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
                                     <%--<Settings ShowFooter="True" />--%>
                                 </dx:ASPxGridView>
+
+                                <dx:ASPxGridView ID="ASPxGridView6" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id">
+                                    <Columns>
+                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <CellStyle HorizontalAlign="Center">
+                                            </CellStyle>
+                                        </dx:GridViewDataTextColumn>
+                                        <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Market Share">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <CellStyle HorizontalAlign="Center">
+                                            </CellStyle>
+                                        </dx:GridViewDataTextColumn>
+                                        <dx:GridViewDataTextColumn FieldName="MarketTrades_1" VisibleIndex="3" Caption="Market Trades">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <CellStyle HorizontalAlign="Center">
+                                            </CellStyle>
+                                        </dx:GridViewDataTextColumn>
+                                    </Columns>
+                                    <settings showgrouppanel="True" />
+                                    <SettingsBehavior AllowFixedGroups="true" AllowGroup="true" />
+                                    <SettingsPager Mode="ShowAllRecords" />
+                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                    <%--<Settings ShowFooter="True" />--%>
+                                </dx:ASPxGridView>
+
                                 <br />
                                 <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Export To Excel" OnClick="ASPxButton1_Click" Theme="DevEx">
                                 </dx:ASPxButton>
@@ -294,8 +328,15 @@
                     </dx:TabPage>
                 </TabPages>
                 <SpaceAfterTabsTemplate>
-                    <dx:ASPxDateEdit ID="dateEdit" runat="server" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="true" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
+                    <dx:ASPxDateEdit ID="dateEdit" runat="server" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="True" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
                     <asp:Label ID="Label1" runat="server" Text="Date:"></asp:Label>
+                    <dx:ASPxComboBox ID="myOption" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="myOption_ValueChanged">
+                        <Items>
+                            <dx:ListEditItem Selected="True" Text="Daily" Value="0" />
+                            <dx:ListEditItem Text="Monthly" Value="1" />
+                            <dx:ListEditItem Text="Yearly" Value="2" />
+                        </Items>
+                    </dx:ASPxComboBox>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
             <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
