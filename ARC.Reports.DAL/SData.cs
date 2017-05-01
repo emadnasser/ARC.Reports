@@ -181,7 +181,7 @@ namespace ARC.Reports.DAL
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 4 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_4 " +
                                                 " ON S_1.[Channel] = S_4.[Channel]" +
                                                 " LEFT OUTER JOIN" +
-                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 5 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_5 "  +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 5 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_5 " +
                                                 " ON S_1.[Channel] = S_5.[Channel]" +
                                                 " LEFT OUTER JOIN" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 6 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_6 " +
@@ -239,37 +239,46 @@ namespace ARC.Reports.DAL
             return null;
         }
 
-        public static List<Rep_002> Rep_004Get(int pMarketType, string @pDate)
+        public static List<Rep_0013> Rep_004Get(int @pMarketType)
         {
-            SqlParameter[] parameters = new SqlParameter[2];
+            SqlParameter[] parameters = new SqlParameter[4];
 
-            parameters[0] = new SqlParameter("@pDate", @pDate);
+            parameters[0] = new SqlParameter("@pYear_0", DateTime.Now.Year-3);
+            parameters[1] = new SqlParameter("@pYear_1", DateTime.Now.Year - 2);
+            parameters[2] = new SqlParameter("@pYear_2", DateTime.Now.Year - 1);
 
             if (pMarketType == 0)
             {
-                parameters[1] = new SqlParameter("@pMarketType", "SAM");
+                parameters[3] = new SqlParameter("@pMarketType", "SAM");
             }
             else
             {
-                parameters[1] = new SqlParameter("@pMarketType", "SEM");
+                parameters[3] = new SqlParameter("@pMarketType", "SEM");
             }
 
             DataTable myDataTable;
-            myDataTable = Helper.ExecuteReader("SELECT Channel s0, SUM(Amount) AS s1, SUM(Transactions) AS s2, SUM(Percentage) AS s3, SUM(TradeShare) AS s4 FROM [dbo].[Rep_001] " +
-                                                "WHERE convert(datetime, InsertedDate, 103) = @pDate AND MarketType = @pMarketType " +
-                                                "GROUP BY Channel", parameters);
+            myDataTable = Helper.ExecuteReader("SELECT" +
+                                                " S_1.[Channel], S_1.[MarketShare], S_1.[MarketTrades], S_2.[MarketShare], S_2.[MarketTrades], S_3.[MarketShare], S_3.[MarketTrades] FROM" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = @pYear_0) S_1" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = @pYear_1) S_2" +
+                                                " ON S_1.[Channel] = S_2.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = @pYear_2) S_3" +
+                                                " ON S_1.[Channel] = S_3.[Channel]", parameters);
 
             if (myDataTable != null)
                 return (from DataRow x in myDataTable.Rows
-                        select new Rep_002
+                        select new Rep_0013
                         {
-                            s0 = Helper.Channel(x["s0"].ToString()),
-                            s1 = Helper.ToGFormat(x["s1"].ToString(), 2),
-                            s2 = x["s2"].ToString(),
-                            s3 = x["s3"].ToString(),
-                            s4 = x["s4"].ToString(),
+                            Channel = Helper.Channel(x[0].ToString()),
+                            MarketShare_1 = x[1] != DBNull.Value ? (double?)x[1] : 0,
+                            MarketTrades_1 = x[2] != DBNull.Value ? (double?)x[2] : 0,
+                            MarketShare_2 = x[3] != DBNull.Value ? (double?)x[3] : 0,
+                            MarketTrades_2 = x[4] != DBNull.Value ? (double?)x[4] : 0,
+                            MarketShare_3 = x[5] != DBNull.Value ? (double?)x[5] : 0,
+                            MarketTrades_3 = x[6] != DBNull.Value ? (double?)x[6] : 0
                         }).ToList();
-
             return null;
         }
 

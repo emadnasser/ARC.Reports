@@ -129,14 +129,14 @@
                                     <li class="">
                                         <a href="<%= ResolveUrl("~/Pages/MarketShareTotals.aspx") %>">
                                             <i class="menu-icon fa fa-caret-right"></i>
-                                            Daily Market Share Totals
+                                            Market Share Totals
                                         </a>
                                         <b class="arrow"></b>
                                     </li>
                                     <li class="">
                                         <a href="<%= ResolveUrl("~/Pages/MarketShareDetails.aspx") %>">
                                             <i class="menu-icon fa fa-caret-right"></i>
-                                            Daily Market Share Details
+                                            Market Share Details
                                         </a>
                                         <b class="arrow"></b>
                                     </li>

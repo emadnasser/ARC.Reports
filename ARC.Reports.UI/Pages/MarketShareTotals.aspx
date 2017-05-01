@@ -12,6 +12,7 @@
 
         #MainContent_ASPxPageControl1_TPTCL_dateEdit_0 {
             float: right;
+            margin-right: 40px
         }
 
         #MainContent_ASPxPageControl1_TPTCL_myOption_0 {
@@ -20,6 +21,12 @@
         }
 
         #MainContent_ASPxPageControl1_TPTCL_lblType_0 {
+            float: right;
+            margin-top: 4px;
+            margin-right: 5px;
+        }
+
+        #MainContent_ASPxPageControl1_TPTCL_lblDate_0 {
             float: right;
             margin-top: 4px;
             margin-right: 5px;
@@ -44,7 +51,7 @@
                             <dx:ContentControl ID="ContentControl1" runat="server">
                                 <dx:ASPxGridView ID="ASPxGridView0" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id">
                                     <Columns>
-                                        <dx:GridViewDataTextColumn FieldName="s0" VisibleIndex="0" Caption="Channel">
+                                        <dx:GridViewDataTextColumn FieldName="s0" VisibleIndex="0" Caption="Channel" CellStyle-BackColor="#f5f7fa">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
@@ -79,9 +86,7 @@
                                     <SettingsPager Mode="ShowAllRecords" />
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
                                 </dx:ASPxGridView>
-                                <br />
-
-                                <dx:ASPxGridView ID="ASPxGridView6" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" KeyFieldName="Id">
+                                <dx:ASPxGridView ID="ASPxGridView6" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id">
                                     <Columns>
                                         <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left">
                                             <HeaderStyle HorizontalAlign="Center" />
@@ -270,7 +275,67 @@
                                         </dx:GridViewBandColumn>
                                     </Columns>
                                     <Styles>
-                                        <FixedColumn BackColor="LightYellow"></FixedColumn>
+                                        <FixedColumn BackColor="#f5f7fa"></FixedColumn>
+                                    </Styles>
+                                    <SettingsPager Mode="ShowAllRecords" />
+                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                    <SettingsBehavior AutoExpandAllGroups="true" />
+                                </dx:ASPxGridView>
+                                <dx:ASPxGridView ID="ASPxGridView8" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id">
+                                    <Columns>
+                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <CellStyle HorizontalAlign="Center" />
+                                        </dx:GridViewDataTextColumn>
+                                        <dx:GridViewBandColumn Name="_1" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_1" VisibleIndex="2" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Name="_2" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_2" VisibleIndex="3" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_2" VisibleIndex="4" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Name="_3" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_3" VisibleIndex="5" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_3" VisibleIndex="6" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                    </Columns>
+                                    <Styles>
+                                        <FixedColumn BackColor="#f5f7fa"></FixedColumn>
                                     </Styles>
                                     <SettingsPager Mode="ShowAllRecords" />
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
@@ -367,10 +432,10 @@
                     <dx:TabPage Text="Nomu Market">
                         <ContentCollection>
                             <dx:ContentControl ID="ContentControl2" runat="server">
-                                <dx:ASPxGridView ID="ASPxGridView1" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
+                                <dx:ASPxGridView ID="ASPxGridView1" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id">
                                     <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
                                     <Columns>
-                                        <dx:GridViewDataTextColumn FieldName="s0" VisibleIndex="0" Caption="Channel">
+                                        <dx:GridViewDataTextColumn FieldName="s0" VisibleIndex="0" Caption="Channel" CellStyle-BackColor="#f5f7fa">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
@@ -404,6 +469,261 @@
                                     <SettingsBehavior AllowFixedGroups="true" AllowGroup="true" />
                                     <SettingsPager Mode="ShowAllRecords" />
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                </dx:ASPxGridView>
+                                <dx:ASPxGridView ID="ASPxGridView7" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id">
+                                    <Columns>
+                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <CellStyle HorizontalAlign="Center" />
+                                        </dx:GridViewDataTextColumn>
+                                        <dx:GridViewBandColumn Caption="Jan" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_1" VisibleIndex="2" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Feb" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_2" VisibleIndex="3" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_2" VisibleIndex="4" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Mar" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_3" VisibleIndex="5" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_3" VisibleIndex="6" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Apr" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_4" VisibleIndex="7" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_4" VisibleIndex="8" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="May" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_5" VisibleIndex="9" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_5" VisibleIndex="10" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Jun" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_6" VisibleIndex="11" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_6" VisibleIndex="12" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Jul" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_7" VisibleIndex="13" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_7" VisibleIndex="3" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Aug" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_8" VisibleIndex="14" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_8" VisibleIndex="15" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Sep" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_9" VisibleIndex="16" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_9" VisibleIndex="17" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Oct" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_10" VisibleIndex="18" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_10" VisibleIndex="19" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Nov" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_11" VisibleIndex="20" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_11" VisibleIndex="21" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Caption="Dec" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_12" VisibleIndex="22" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_12" VisibleIndex="23" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                    </Columns>
+                                    <Styles>
+                                        <FixedColumn BackColor="#f5f7fa"></FixedColumn>
+                                    </Styles>
+                                    <SettingsPager Mode="ShowAllRecords" />
+                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                    <SettingsBehavior AutoExpandAllGroups="true" />
+                                </dx:ASPxGridView>
+                                <dx:ASPxGridView ID="ASPxGridView9" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="true" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id">
+                                    <Columns>
+                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left">
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <CellStyle HorizontalAlign="Center" />
+                                        </dx:GridViewDataTextColumn>
+                                        <dx:GridViewBandColumn Name="_1" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_1" VisibleIndex="2" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Name="_2" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_2" VisibleIndex="3" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_2" VisibleIndex="4" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Name="_3" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_3" VisibleIndex="5" Caption="Shares">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_3" VisibleIndex="6" Caption="Trades">
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
+                                    </Columns>
+                                    <Styles>
+                                        <FixedColumn BackColor="#f5f7fa"></FixedColumn>
+                                    </Styles>
+                                    <SettingsPager Mode="ShowAllRecords" />
+                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                    <SettingsBehavior AutoExpandAllGroups="true" />
                                 </dx:ASPxGridView>
                                 <br />
                                 <dx:ASPxButton ID="ASPxButton2" runat="server" Text="Export To Excel" OnClick="ASPxButton2_Click" Theme="DevEx">
@@ -495,7 +815,12 @@
                     </dx:TabPage>
                 </TabPages>
                 <SpaceAfterTabsTemplate>
-                    <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
+                    <%--                    <dx:ASPxComboBox ID="ASPxComboBoxYears" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="ASPxComboBoxYears_ValueChanged">
+                    </dx:ASPxComboBox>
+                    <asp:Label ID="lblYear" runat="server" Text="Year:"></asp:Label>--%>
+
+                    <dx:ASPxDateEdit ID="dateEdit" runat="server" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="True" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
+                    <asp:Label ID="lblDate" runat="server" Text="Date:"></asp:Label>
                     <dx:ASPxComboBox ID="myOption" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="myOption_ValueChanged">
                         <Items>
                             <dx:ListEditItem Text="Daily" Value="0" Selected="True" />
@@ -503,9 +828,7 @@
                             <dx:ListEditItem Text="Yearly" Value="2" />
                         </Items>
                     </dx:ASPxComboBox>
-
-                    <asp:Label ID="lblDate" runat="server" Text="Date:"></asp:Label>
-                    <dx:ASPxDateEdit ID="dateEdit" runat="server" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="True" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
+                    <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
             <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
@@ -516,10 +839,20 @@
                 MainContent_ASPxPageControl1_ASPxGridView3.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView4.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView5.PerformCallback();
+                MainContent_ASPxPageControl1_ASPxGridView6.PerformCallback();
+                MainContent_ASPxPageControl1_ASPxGridView7.PerformCallback();
+                MainContent_ASPxPageControl1_ASPxGridView8.PerformCallback();
+                MainContent_ASPxPageControl1_ASPxGridView9.PerformCallback();
                 }" />
             </dx:ASPxTimer>
         </div>
         <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Totals Main"></dx:ASPxGridViewExporter>
         <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Market Share Totals Nomu"></dx:ASPxGridViewExporter>
+
+        <dx:ASPxGridViewExporter ID="gridExport_2" runat="server" GridViewID="ASPxGridView6" FileName="Market Share Totals Main"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_3" runat="server" GridViewID="ASPxGridView7" FileName="Market Share Totals Nomu"></dx:ASPxGridViewExporter>
+
+        <dx:ASPxGridViewExporter ID="gridExport_4" runat="server" GridViewID="ASPxGridView8" FileName="Market Share Totals Main"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_5" runat="server" GridViewID="ASPxGridView9" FileName="Market Share Totals Nomu"></dx:ASPxGridViewExporter>
     </div>
 </asp:Content>
