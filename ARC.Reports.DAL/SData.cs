@@ -167,73 +167,73 @@ namespace ARC.Reports.DAL
 
             DataTable myDataTable;
             myDataTable = Helper.ExecuteReader("SELECT" +
-                                                "S_1.[Channel], S_1.[MarketShare], S_1.[MarketTrades], S_2.[MarketShare], S_2.[MarketTrades], S_3.[MarketShare], S_3.[MarketTrades], S_4.[MarketShare], S_4.[MarketTrades]," +
-                                                "S_5.[MarketShare], S_5.[MarketTrades], S_6.[MarketShare], S_6.[MarketTrades], S_7.[MarketShare], S_7.[MarketTrades], S_8.[MarketShare], S_8.[MarketTrades]," +
-                                                "S_9.[MarketShare], S_9.[MarketTrades], S_10.[MarketShare], S_10.[MarketTrades], S_11.[MarketShare], S_11.[MarketTrades], S_12.[MarketShare], S_12.[MarketTrades] FROM" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 1 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_1" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 2 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_2" +
-                                                "ON S_1.[Channel] = S_2.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 3 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_3" +
-                                                "ON S_1.[Channel] = S_3.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_4" +
-                                                "ON S_1.[Channel] = S_4.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_5" +
-                                                "ON S_1.[Channel] = S_5.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_6" +
-                                                "ON S_1.[Channel] = S_6.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_7" +
-                                                "ON S_1.[Channel] = S_7.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_8" +
-                                                "ON S_1.[Channel] = S_8.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_9" +
-                                                "ON S_1.[Channel] = S_9.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_10" +
-                                                "ON S_1.[Channel] = S_10.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_11" +
-                                                "ON S_1.[Channel] = S_11.[Channel]" +
-                                                "LEFT OUTER JOIN" +
-                                                "(SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] = 4 AND[MarketType] = @pMarketType AND[Year] = @pYear) S_12" +
-                                                "ON S_1.[Channel] = S_12.[Channel]", parameters);
+                                                " S_1.[Channel], S_1.[MarketShare], S_1.[MarketTrades], S_2.[MarketShare], S_2.[MarketTrades], S_3.[MarketShare], S_3.[MarketTrades], S_4.[MarketShare], S_4.[MarketTrades]," +
+                                                " S_5.[MarketShare], S_5.[MarketTrades], S_6.[MarketShare], S_6.[MarketTrades], S_7.[MarketShare], S_7.[MarketTrades], S_8.[MarketShare], S_8.[MarketTrades]," +
+                                                " S_9.[MarketShare], S_9.[MarketTrades], S_10.[MarketShare], S_10.[MarketTrades], S_11.[MarketShare], S_11.[MarketTrades], S_12.[MarketShare], S_12.[MarketTrades] FROM" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 1 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_1 " +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 2 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_2 " +
+                                                " ON S_1.[Channel] = S_2.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 3 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_3 " +
+                                                " ON S_1.[Channel] = S_3.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 4 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_4 " +
+                                                " ON S_1.[Channel] = S_4.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 5 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_5 "  +
+                                                " ON S_1.[Channel] = S_5.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 6 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_6 " +
+                                                " ON S_1.[Channel] = S_6.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 7 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_7 " +
+                                                " ON S_1.[Channel] = S_7.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 8 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_8 " +
+                                                " ON S_1.[Channel] = S_8.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 9 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_9 " +
+                                                " ON S_1.[Channel] = S_9.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 10 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_10 " +
+                                                " ON S_1.[Channel] = S_10.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 11 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_11 " +
+                                                " ON S_1.[Channel] = S_11.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 12 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_12 " +
+                                                " ON S_1.[Channel] = S_12.[Channel]", parameters);
 
             if (myDataTable != null)
                 return (from DataRow x in myDataTable.Rows
                         select new Rep_0012
                         {
                             Channel = Helper.Channel(x[0].ToString()),
-                            MarketShare_1 = (double)x[1],
-                            MarketTrades_1 = (double)x[2],
-                            MarketShare_2 = (double)x[3],
-                            MarketTrades_2 = (double)x[4],
-                            MarketShare_3 = (double)x[5],
-                            MarketTrades_3 = (double)x[6],
-                            MarketShare_4 = (double)x[7],
-                            MarketTrades_4 = (double)x[8],
-                            MarketShare_5 = (double)x[9],
-                            MarketTrades_5 = (double)x[10],
-                            MarketShare_6 = (double)x[11],
-                            MarketTrades_6 = (double)x[12],
-                            MarketShare_7 = (double)x[13],
-                            MarketTrades_7 = (double)x[14],
-                            MarketShare_8 = (double)x[15],
-                            MarketTrades_8 = (double)x[16],
-                            MarketShare_9 = (double)x[17],
-                            MarketTrades_9 = (double)x[18],
-                            MarketShare_10 = (double)x[19],
-                            MarketTrades_10 = (double)x[20],
-                            MarketShare_11 = (double)x[21],
-                            MarketTrades_11 = (double)x[22],
-                            MarketShare_12 = (double)x[23],
-                            MarketTrades_12 = (double)x[24],
+                            MarketShare_1 = x[1] != DBNull.Value ? (double?)x[1] : 0,
+                            MarketTrades_1 = x[2] != DBNull.Value ? (double?)x[2] : 0,
+                            MarketShare_2 = x[3] != DBNull.Value ? (double?)x[3] : 0,
+                            MarketTrades_2 = x[4] != DBNull.Value ? (double?)x[4] : 0,
+                            MarketShare_3 = x[5] != DBNull.Value ? (double?)x[5] : 0,
+                            MarketTrades_3 = x[6] != DBNull.Value ? (double?)x[6] : 0,
+                            MarketShare_4 = x[7] != DBNull.Value ? (double?)x[7] : 0,
+                            MarketTrades_4 = x[8] != DBNull.Value ? (double?)x[8] : 0,
+                            MarketShare_5 = x[9] != DBNull.Value ? (double?)x[9] : 0,
+                            MarketTrades_5 = x[10] != DBNull.Value ? (double?)x[10] : 0,
+                            MarketShare_6 = x[11] != DBNull.Value ? (double?)x[11] : 0,
+                            MarketTrades_6 = x[12] != DBNull.Value ? (double?)x[12] : 0,
+                            MarketShare_7 = x[13] != DBNull.Value ? (double?)x[13] : 0,
+                            MarketTrades_7 = x[14] != DBNull.Value ? (double?)x[14] : 0,
+                            MarketShare_8 = x[15] != DBNull.Value ? (double?)x[15] : 0,
+                            MarketTrades_8 = x[16] != DBNull.Value ? (double?)x[16] : 0,
+                            MarketShare_9 = x[17] != DBNull.Value ? (double?)x[17] : 0,
+                            MarketTrades_9 = x[18] != DBNull.Value ? (double?)x[18] : 0,
+                            MarketShare_10 = x[19] != DBNull.Value ? (double?)x[19] : 0,
+                            MarketTrades_10 = x[20] != DBNull.Value ? (double?)x[20] : 0,
+                            MarketShare_11 = x[21] != DBNull.Value ? (double?)x[21] : 0,
+                            MarketTrades_11 = x[22] != DBNull.Value ? (double?)x[22] : 0,
+                            MarketShare_12 = x[23] != DBNull.Value ? (double?)x[23] : 0,
+                            MarketTrades_12 = x[24] != DBNull.Value ? (double?)x[24] : 0,
 
                         }).ToList();
             return null;
