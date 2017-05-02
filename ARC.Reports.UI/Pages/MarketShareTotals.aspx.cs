@@ -93,6 +93,8 @@ namespace ARC.Reports.Pages
                     ASPxGridView7.Visible = false;
                     ASPxGridView8.Visible = false;
                     ASPxGridView9.Visible = false;
+                    pnlLastGrids_1.Visible = true;
+                    pnlLastGrids_2.Visible = true;
                 }
                 else if (myOption.SelectedIndex == 1)
                 {
@@ -136,13 +138,44 @@ namespace ARC.Reports.Pages
                     ASPxGridView1.Visible = false;
                     ASPxGridView8.Visible = false;
                     ASPxGridView9.Visible = false;
+                    pnlLastGrids_1.Visible = false;
+                    pnlLastGrids_2.Visible = false;
+
                 }
                 else if (myOption.SelectedIndex == 2)
+                {
+
+                }
+                else if (myOption.SelectedIndex == 3)
                 {
                     ASPxGridView8.Columns["_1"].Caption = (DateTime.Now.Year - 3).ToString();
                     ASPxGridView8.Columns["_2"].Caption = (DateTime.Now.Year - 2).ToString();
                     ASPxGridView8.Columns["_3"].Caption = (DateTime.Now.Year - 1).ToString();
-                    ASPxGridView8.DataSource = SData.Rep_004Get(0);
+                    var myData = SData.Rep_004Get(0);
+
+                    
+                    
+                    double? sumMarketShare_1 = myData.Sum(x => x.MarketShare_1);
+                    double? sumMarketShare_2 = myData.Sum(x => x.MarketShare_2);
+                    double? sumMarketShare_3 = myData.Sum(x => x.MarketShare_3);
+
+                    double? sumMarketTrades_1 = myData.Sum(x => x.MarketTrades_1);
+                    double? sumMarketTrades_2 = myData.Sum(x => x.MarketTrades_2);
+                    double? sumMarketTrades_3 = myData.Sum(x => x.MarketTrades_3);
+
+                    myData.Add(new DAL.Entities.Rep_0013()
+                    {
+                        Channel = "Average",
+                        MarketShare_1 = sumMarketShare_1,
+                        MarketShare_2 = sumMarketShare_2,
+                        MarketShare_3 = sumMarketShare_3,
+                        MarketTrades_1 = sumMarketTrades_1,
+                        MarketTrades_2 = sumMarketTrades_2,
+                        MarketTrades_3 = sumMarketTrades_3,
+
+                    });
+
+                    ASPxGridView8.DataSource = myData;
                     ASPxGridView8.DataBind();
 
                     ASPxGridView9.Columns["_1"].Caption = (DateTime.Now.Year - 3).ToString();
@@ -159,6 +192,9 @@ namespace ARC.Reports.Pages
                     ASPxGridView1.Visible = false;
                     ASPxGridView8.Visible = true;
                     ASPxGridView9.Visible = true;
+                    pnlLastGrids_1.Visible = false;
+                    pnlLastGrids_2.Visible = false;
+
                 }
 
                 ASPxGridView2.DataSource = SData.Rep_0011aGet(0, dateEdit.Date.ToShortDateString());
@@ -192,6 +228,10 @@ namespace ARC.Reports.Pages
             }
             else if (myOption.SelectedIndex == 2)
             {
+                //gridExport_2.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
+            }
+            else if (myOption.SelectedIndex == 3)
+            {
                 gridExport_4.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
             }
         }
@@ -212,9 +252,12 @@ namespace ARC.Reports.Pages
             }
             else if (myOption.SelectedIndex == 2)
             {
+                //gridExport_5.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
+            }
+            else if (myOption.SelectedIndex == 3)
+            {
                 gridExport_5.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
             }
-
         }
 
         protected void myOption_ValueChanged(object sender, EventArgs e)

@@ -67,6 +67,15 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ASPxButton ASPxButton1;
         
         /// <summary>
+        /// pnlLastGrids_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlLastGrids_1;
+        
+        /// <summary>
         /// ASPxGridView2 control.
         /// </summary>
         /// <remarks>
@@ -128,6 +137,15 @@ namespace ARC.Reports.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton ASPxButton2;
+        
+        /// <summary>
+        /// pnlLastGrids_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlLastGrids_2;
         
         /// <summary>
         /// ASPxGridView3 control.

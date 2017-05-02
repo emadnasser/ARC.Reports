@@ -74,6 +74,9 @@ namespace ARC.Reports.DAL
                             Sell_Total_Ammount = Helper.ToGFormat(x["Sell_Total_Ammount"].ToString(), 2),
                             ETS_Share_Value = Helper.ToGFormat(x["ETS_Share_Value"].ToString(), 2),
                             Market_Share_Value = Helper.ToGFormat(x["Market_Share_Value"].ToString(), 2),
+                            Market_Share_Index = Helper.ToGFormat(x["Market_Share_Index"].ToString(), 2),
+                            DiffDayNom = x["DiffDayPer"].ToString() + "% // " + x["DiffDayNom"].ToString(),
+                            DiffDayPer = x["DiffDayPer"].ToString(),
                             Percentage = Helper.ToGFormat(x["Percentage"].ToString(), 2),
                             Market = x["Market"].ToString(),
                             date = Convert.ToDateTime(x["date"])
@@ -109,6 +112,9 @@ namespace ARC.Reports.DAL
                             Sell_Total_Ammount = Helper.ToGFormat(x["Sell_Total_Ammount"].ToString(), 2),
                             ETS_Share_Value = Helper.ToGFormat(x["ETS_Share_Value"].ToString(), 2),
                             Market_Share_Value = Helper.ToGFormat(x["Market_Share_Value"].ToString(), 2),
+                            Market_Share_Index = Helper.ToGFormat(x["Market_Share_Index"].ToString(), 2),
+                            DiffDayNom = x["DiffDayPer"].ToString() + "% // " + x["DiffDayNom"].ToString(),
+                            DiffDayPer = x["DiffDayPer"].ToString(),
                             Percentage = Helper.ToGFormat(x["Percentage"].ToString(), 2),
                             Market = x["Market"].ToString(),
                             date = Convert.ToDateTime(x["date"])
@@ -265,7 +271,7 @@ namespace ARC.Reports.DAL
                                                 " ON S_1.[Channel] = S_2.[Channel]" +
                                                 " LEFT OUTER JOIN" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = @pYear_2) S_3" +
-                                                " ON S_1.[Channel] = S_3.[Channel]", parameters);
+                                                " ON S_1.[Channel] = S_3.[Channel] ORDER BY S_1.[Channel]", parameters);
 
             if (myDataTable != null)
                 return (from DataRow x in myDataTable.Rows

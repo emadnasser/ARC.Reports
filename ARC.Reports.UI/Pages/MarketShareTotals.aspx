@@ -31,11 +31,22 @@
             margin-top: 4px;
             margin-right: 5px;
         }
+
+        .tblLast
+        {
+            background-color: #808080 !important;
+            font-weight: bold;
+            color: white;
+        }
     </style>
     <script>
         $(document).ready(function () {
             $(function () {
                 $("#sidebar > ul > li > ul > li > ul > li:nth-child(1)").addClass("active");
+                $("#MainContent_ASPxPageControl1_ASPxGridView8_DXMainTable tr td").css("background-color", ""); 
+                $("#MainContent_ASPxPageControl1_ASPxGridView8_DXMainTable tr:Last").addClass("tblLast");
+                $("#MainContent_ASPxPageControl1_ASPxGridView9_DXMainTable tr td").css("background-color", "");
+                $("#MainContent_ASPxPageControl1_ASPxGridView9_DXMainTable tr:Last").addClass("tblLast");
             });
         });
     </script>
@@ -291,12 +302,12 @@
                                         <dx:GridViewBandColumn Name="_1" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
-                                                <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
+                                                <dx:GridViewDataTextColumn Name="MarketShare_1" FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
                                                     <HeaderStyle HorizontalAlign="Center" />
                                                     <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                                     <CellStyle HorizontalAlign="Center" />
                                                 </dx:GridViewDataTextColumn>
-                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_1" VisibleIndex="2" Caption="Trades">
+                                                <dx:GridViewDataTextColumn Name="MarketShare_2" FieldName="MarketTrades_1" VisibleIndex="2" Caption="Trades">
                                                     <HeaderStyle HorizontalAlign="Center" />
                                                     <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                                     <CellStyle HorizontalAlign="Center" />
@@ -334,6 +345,10 @@
                                             </Columns>
                                         </dx:GridViewBandColumn>
                                     </Columns>
+<%--                                    <TotalSummary>
+                                        <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum"  ShowInColumn="MarketShare_1" Visible="true"  />
+                                        <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum"  ShowInColumn="MarketShare_2"  />
+                                    </TotalSummary>--%>
                                     <Styles>
                                         <FixedColumn BackColor="#f5f7fa"></FixedColumn>
                                     </Styles>
@@ -344,88 +359,102 @@
                                 <br />
                                 <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Export To Excel" OnClick="ASPxButton1_Click" Theme="DevEx">
                                 </dx:ASPxButton>
-                                <div class="hr hr-18 dotted hr-double" runat="server"></div>
-                                <br />
-                                <dx:ASPxGridView ID="ASPxGridView2" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
-                                    <Columns>
-                                        <dx:GridViewDataColumn FieldName="Buy_Total_Ammount" VisibleIndex="1" Caption="Buy Total Value">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Sell_Total_Ammount" VisibleIndex="2" Caption="Sell Total Value">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="ETS_Share_Value" VisibleIndex="3" Caption="ETS Share Value">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Value">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                    </Columns>
-                                    <SettingsPager Visible="False">
-                                    </SettingsPager>
-                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
-                                    <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
-                                    <EditFormLayoutProperties ColCount="2">
-                                    </EditFormLayoutProperties>
-                                </dx:ASPxGridView>
-                                <div class="hr hr-18 dotted hr-double" runat="server"></div>
-                                <br />
-                                <dx:ASPxGridView ID="ASPxGridView4" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
-                                    <Columns>
-                                        <dx:GridViewDataColumn FieldName="Buy_Total_Ammount" VisibleIndex="1" Caption="Buy Total Trades">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Sell_Total_Ammount" VisibleIndex="2" Caption="Sell Total Trades">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="ETS_Share_Value" VisibleIndex="3" Caption="ETS Share Trades">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Trades">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                    </Columns>
-                                    <SettingsPager Visible="False">
-                                    </SettingsPager>
-                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
-                                    <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
-                                    <EditFormLayoutProperties ColCount="2">
-                                    </EditFormLayoutProperties>
-                                </dx:ASPxGridView>
+                                <asp:Panel ID="pnlLastGrids_1" runat="server">
+                                    <div class="hr hr-18 dotted hr-double" runat="server"></div>
+                                    <br />
+                                    <dx:ASPxGridView ID="ASPxGridView2" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
+                                        <Columns>
+                                            <dx:GridViewDataColumn FieldName="Buy_Total_Ammount" VisibleIndex="1" Caption="Buy Total Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Sell_Total_Ammount" VisibleIndex="2" Caption="Sell Total Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="ETS_Share_Value" VisibleIndex="3" Caption="ETS Share Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Market_Share_Index" VisibleIndex="4" Caption="Index">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="DiffDayNom" VisibleIndex="5" Caption="Change">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="7" Caption="Market Share Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="8" Caption="%">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                        </Columns>
+                                        <SettingsPager Visible="False">
+                                        </SettingsPager>
+                                        <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                        <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+                                        <EditFormLayoutProperties ColCount="2">
+                                        </EditFormLayoutProperties>
+                                    </dx:ASPxGridView>
+                                    <div class="hr hr-18 dotted hr-double" runat="server"></div>
+                                    <br />
+                                    <dx:ASPxGridView ID="ASPxGridView4" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
+                                        <Columns>
+                                            <dx:GridViewDataColumn FieldName="Buy_Total_Ammount" VisibleIndex="1" Caption="Buy Total Trades">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Sell_Total_Ammount" VisibleIndex="2" Caption="Sell Total Trades">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="ETS_Share_Value" VisibleIndex="3" Caption="ETS Share Trades">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Trades">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                        </Columns>
+                                        <SettingsPager Visible="False">
+                                        </SettingsPager>
+                                        <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                        <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+                                        <EditFormLayoutProperties ColCount="2">
+                                        </EditFormLayoutProperties>
+                                    </dx:ASPxGridView>
+                                </asp:Panel>
                             </dx:ContentControl>
                         </ContentCollection>
                     </dx:TabPage>
@@ -728,88 +757,90 @@
                                 <br />
                                 <dx:ASPxButton ID="ASPxButton2" runat="server" Text="Export To Excel" OnClick="ASPxButton2_Click" Theme="DevEx">
                                 </dx:ASPxButton>
-                                <div class="hr hr-18 dotted hr-double" runat="server"></div>
-                                <br />
-                                <dx:ASPxGridView ID="ASPxGridView3" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
-                                    <Columns>
-                                        <dx:GridViewDataColumn FieldName="Buy_Total_Ammount" VisibleIndex="1" Caption="Buy Total Value">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Sell_Total_Ammount" VisibleIndex="2" Caption="Sell Total Value">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="ETS_Share_Value" VisibleIndex="3" Caption="ETS Share Value">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Value">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                    </Columns>
-                                    <SettingsPager Visible="False">
-                                    </SettingsPager>
-                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
-                                    <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
-                                    <EditFormLayoutProperties ColCount="2">
-                                    </EditFormLayoutProperties>
-                                </dx:ASPxGridView>
-                                <div class="hr hr-18 dotted hr-double" runat="server"></div>
-                                <br />
-                                <dx:ASPxGridView ID="ASPxGridView5" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
-                                    <Columns>
-                                        <dx:GridViewDataColumn FieldName="Buy_Total_Ammount" VisibleIndex="1" Caption="Buy Total Trades">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Sell_Total_Ammount" VisibleIndex="2" Caption="Sell Total Trades">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="ETS_Share_Value" VisibleIndex="3" Caption="ETS Share Trades">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Trades">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
-                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                                            <HeaderStyle HorizontalAlign="Center" />
-                                            <CellStyle HorizontalAlign="Center">
-                                            </CellStyle>
-                                        </dx:GridViewDataColumn>
-                                    </Columns>
-                                    <SettingsPager Visible="False">
-                                    </SettingsPager>
-                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
-                                    <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
-                                    <EditFormLayoutProperties ColCount="2">
-                                    </EditFormLayoutProperties>
-                                </dx:ASPxGridView>
+                                <asp:Panel ID="pnlLastGrids_2" runat="server">
+                                    <div class="hr hr-18 dotted hr-double" runat="server"></div>
+                                    <br />
+                                    <dx:ASPxGridView ID="ASPxGridView3" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
+                                        <Columns>
+                                            <dx:GridViewDataColumn FieldName="Buy_Total_Ammount" VisibleIndex="1" Caption="Buy Total Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Sell_Total_Ammount" VisibleIndex="2" Caption="Sell Total Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="ETS_Share_Value" VisibleIndex="3" Caption="ETS Share Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                        </Columns>
+                                        <SettingsPager Visible="False">
+                                        </SettingsPager>
+                                        <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                        <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+                                        <EditFormLayoutProperties ColCount="2">
+                                        </EditFormLayoutProperties>
+                                    </dx:ASPxGridView>
+                                    <div class="hr hr-18 dotted hr-double" runat="server"></div>
+                                    <br />
+                                    <dx:ASPxGridView ID="ASPxGridView5" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback">
+                                        <Columns>
+                                            <dx:GridViewDataColumn FieldName="Buy_Total_Ammount" VisibleIndex="1" Caption="Buy Total Trades">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Sell_Total_Ammount" VisibleIndex="2" Caption="Sell Total Trades">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="ETS_Share_Value" VisibleIndex="3" Caption="ETS Share Trades">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Trades">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                        </Columns>
+                                        <SettingsPager Visible="False">
+                                        </SettingsPager>
+                                        <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                        <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+                                        <EditFormLayoutProperties ColCount="2">
+                                        </EditFormLayoutProperties>
+                                    </dx:ASPxGridView>
+                                </asp:Panel>
                             </dx:ContentControl>
                         </ContentCollection>
                     </dx:TabPage>
@@ -825,7 +856,8 @@
                         <Items>
                             <dx:ListEditItem Text="Daily" Value="0" Selected="True" />
                             <dx:ListEditItem Text="Monthly" Value="1" />
-                            <dx:ListEditItem Text="Yearly" Value="2" />
+                            <dx:ListEditItem Text="Quarterly" Value="2" />
+                            <dx:ListEditItem Text="Yearly" Value="3" />
                         </Items>
                     </dx:ASPxComboBox>
                     <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
@@ -846,13 +878,13 @@
                 }" />
             </dx:ASPxTimer>
         </div>
-        <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Totals Main"></dx:ASPxGridViewExporter>
-        <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Market Share Totals Nomu"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Totals Main - Daily"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Market Share Totals Nomu - Daily"></dx:ASPxGridViewExporter>
 
-        <dx:ASPxGridViewExporter ID="gridExport_2" runat="server" GridViewID="ASPxGridView6" FileName="Market Share Totals Main"></dx:ASPxGridViewExporter>
-        <dx:ASPxGridViewExporter ID="gridExport_3" runat="server" GridViewID="ASPxGridView7" FileName="Market Share Totals Nomu"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_2" runat="server" GridViewID="ASPxGridView6" FileName="Market Share Totals Main - Monthly"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_3" runat="server" GridViewID="ASPxGridView7" FileName="Market Share Totals Nomu - Monthly"></dx:ASPxGridViewExporter>
 
-        <dx:ASPxGridViewExporter ID="gridExport_4" runat="server" GridViewID="ASPxGridView8" FileName="Market Share Totals Main"></dx:ASPxGridViewExporter>
-        <dx:ASPxGridViewExporter ID="gridExport_5" runat="server" GridViewID="ASPxGridView9" FileName="Market Share Totals Nomu"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_4" runat="server" GridViewID="ASPxGridView8" FileName="Market Share Totals Main - Yearly"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_5" runat="server" GridViewID="ASPxGridView9" FileName="Market Share Totals Nomu - Yearly"></dx:ASPxGridViewExporter>
     </div>
 </asp:Content>
