@@ -175,6 +175,24 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ASPxTimer ASPxTimer1;
         
         /// <summary>
+        /// ASPxTimer2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
+        
+        /// <summary>
+        /// ASPxTimer3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer3;
+        
+        /// <summary>
         /// gridExport_0 control.
         /// </summary>
         /// <remarks>

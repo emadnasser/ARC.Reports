@@ -14,19 +14,38 @@
         #MainContent_ASPxPageControl1_TPTCL_dateEdit_0 {
             float: right;
         }
-         
+
         #MainContent_ASPxPageControl1_TPTCL_Label1_0 {
             float: right;
             margin-top: 4px;
             margin-right: 5px;
+        }
+
+        .highVal {
+            color: green;
+        }
+
+        .lowVal {
+            color: red;
         }
     </style>
     <script>
         $(document).ready(function () {
             $(function () {
                 $("#sidebar > ul > li > ul > li > ul > li:nth-child(2)").addClass("active");
+                Clr();
             });
         });
+
+        function Clr() {
+            var ctr = $('#MainContent_ASPxPageControl1_ASPxGridView2_DXDataRow0 > td:nth-child(5)');
+            var val = parseFloat((ctr.html().substring(0, ctr.html().indexOf('%'))));
+
+            if (val > 0)
+                ctr.addClass("highVal");
+            else
+                ctr.addClass("lowVal");
+        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -117,13 +136,25 @@
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Value">
+                                        <dx:GridViewDataColumn FieldName="Market_Share_Index" VisibleIndex="4" Caption="Index">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
+                                        <dx:GridViewDataColumn FieldName="DiffDayNom" VisibleIndex="5" Caption="Change">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <CellStyle HorizontalAlign="Center">
+                                            </CellStyle>
+                                        </dx:GridViewDataColumn>
+                                        <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="6" Caption="Market Share Value">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <CellStyle HorizontalAlign="Center">
+                                            </CellStyle>
+                                        </dx:GridViewDataColumn>
+                                        <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="7" Caption="%">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <CellStyle HorizontalAlign="Center">
@@ -263,13 +294,25 @@
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Value">
+                                        <dx:GridViewDataColumn FieldName="Market_Share_Index" VisibleIndex="4" Caption="Index">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataColumn>
-                                        <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
+                                        <dx:GridViewDataColumn FieldName="DiffDayNom" VisibleIndex="5" Caption="Change">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <CellStyle HorizontalAlign="Center">
+                                            </CellStyle>
+                                        </dx:GridViewDataColumn>
+                                        <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="6" Caption="Market Share Value">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                            <HeaderStyle HorizontalAlign="Center" />
+                                            <CellStyle HorizontalAlign="Center">
+                                            </CellStyle>
+                                        </dx:GridViewDataColumn>
+                                        <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="7" Caption="%">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <CellStyle HorizontalAlign="Center">
@@ -343,6 +386,7 @@
                 MainContent_ASPxPageControl1_ASPxGridView4.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView5.PerformCallback();
                 }" />
+                <ClientSideEvents Tick="Clr()" />
             </dx:ASPxTimer>
         </div>
         <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Main"></dx:ASPxGridViewExporter>

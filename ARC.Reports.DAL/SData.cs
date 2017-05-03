@@ -209,7 +209,8 @@ namespace ARC.Reports.DAL
                                                 " ON S_1.[Channel] = S_11.[Channel]" +
                                                 " LEFT OUTER JOIN" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 12 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_12 " +
-                                                " ON S_1.[Channel] = S_12.[Channel]", parameters);
+                                                " ON S_1.[Channel] = S_12.[Channel]" +
+                                                " ORDER BY S_1.[Channel]", parameters);
 
             if (myDataTable != null)
                 return (from DataRow x in myDataTable.Rows
@@ -249,7 +250,7 @@ namespace ARC.Reports.DAL
         {
             SqlParameter[] parameters = new SqlParameter[4];
 
-            parameters[0] = new SqlParameter("@pYear_0", DateTime.Now.Year-3);
+            parameters[0] = new SqlParameter("@pYear_0", DateTime.Now.Year - 3);
             parameters[1] = new SqlParameter("@pYear_1", DateTime.Now.Year - 2);
             parameters[2] = new SqlParameter("@pYear_2", DateTime.Now.Year - 1);
 
@@ -288,6 +289,53 @@ namespace ARC.Reports.DAL
             return null;
         }
 
+        public static List<Rep_0012> Rep_005Get(int @pYear, int @pMarketType)
+        {
+            SqlParameter[] parameters = new SqlParameter[2];
+
+            parameters[0] = new SqlParameter("@pYear", @pYear);
+
+            if (pMarketType == 0)
+            {
+                parameters[1] = new SqlParameter("@pMarketType", "SAM");
+            }
+            else
+            {
+                parameters[1] = new SqlParameter("@pMarketType", "SEM");
+            }
+
+            DataTable myDataTable;
+            myDataTable = Helper.ExecuteReader("SELECT" +
+                                                 " S_1.[Channel], S_1.[MarketShare], S_1.[MarketTrades], S_2.[MarketShare], S_2.[MarketTrades], S_3.[MarketShare], S_3.[MarketTrades], S_4.[MarketShare], S_4.[MarketTrades] FROM" +
+                                                 " (SELECT[Channel], SUM([MarketShare]) AS[MarketShare], SUM([MarketTrades]) AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(1, 2, 3) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_1" +
+                                                 " LEFT OUTER JOIN" +
+                                                 " (SELECT[Channel], SUM([MarketShare]) AS [MarketShare], SUM([MarketTrades]) AS [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN (4, 5, 6) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_2" +
+                                                 " ON S_1.[Channel] = S_2.[Channel]" +
+                                                 " LEFT OUTER JOIN" +
+                                                 " (SELECT[Channel], SUM([MarketShare]) AS[MarketShare], SUM([MarketTrades]) AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(7, 8, 9) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_3" +
+                                                 " ON S_1.[Channel] = S_3.[Channel]" +
+                                                 " LEFT OUTER JOIN" +
+                                                 " (SELECT[Channel], SUM([MarketShare]) AS[MarketShare], SUM([MarketTrades]) AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(10, 11, 12) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_4" +
+                                                 " ON S_1.[Channel] = S_4.[Channel]" +
+                                                 " ORDER BY S_1.[Channel]", parameters);
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new Rep_0012
+                        {
+                            Channel = Helper.Channel(x[0].ToString()),
+                            MarketShare_1 = x[1] != DBNull.Value ? (double?)x[1] : 0,
+                            MarketTrades_1 = x[2] != DBNull.Value ? (double?)x[2] : 0,
+                            MarketShare_2 = x[3] != DBNull.Value ? (double?)x[3] : 0,
+                            MarketTrades_2 = x[4] != DBNull.Value ? (double?)x[4] : 0,
+                            MarketShare_3 = x[5] != DBNull.Value ? (double?)x[5] : 0,
+                            MarketTrades_3 = x[6] != DBNull.Value ? (double?)x[6] : 0,
+                            MarketShare_4 = x[7] != DBNull.Value ? (double?)x[7] : 0,
+                            MarketTrades_4 = x[8] != DBNull.Value ? (double?)x[8] : 0,
+
+                        }).ToList();
+            return null;
+        }
 
         public static List<TestEnt> Test_01()
         {

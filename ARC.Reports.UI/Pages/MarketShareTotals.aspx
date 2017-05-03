@@ -32,23 +32,55 @@
             margin-right: 5px;
         }
 
-        .tblLast
-        {
+        .tblLast {
             background-color: #808080 !important;
             font-weight: bold;
             color: white;
+        }
+
+        .highVal {
+            color: green;
+        }
+
+        .lowVal {
+            color: red;
         }
     </style>
     <script>
         $(document).ready(function () {
             $(function () {
                 $("#sidebar > ul > li > ul > li > ul > li:nth-child(1)").addClass("active");
-                $("#MainContent_ASPxPageControl1_ASPxGridView8_DXMainTable tr td").css("background-color", ""); 
-                $("#MainContent_ASPxPageControl1_ASPxGridView8_DXMainTable tr:Last").addClass("tblLast");
-                $("#MainContent_ASPxPageControl1_ASPxGridView9_DXMainTable tr td").css("background-color", "");
-                $("#MainContent_ASPxPageControl1_ASPxGridView9_DXMainTable tr:Last").addClass("tblLast");
+                //Clr();
+                //Ctr();
             });
         });
+
+        function Clr() {
+            $("#MainContent_ASPxPageControl1_ASPxGridView6_DXMainTable tr:Last td").css("background-color", "");
+            $("#MainContent_ASPxPageControl1_ASPxGridView6_DXMainTable tr:Last").addClass("tblLast");
+            $("#MainContent_ASPxPageControl1_ASPxGridView7_DXMainTable tr:Last td").css("background-color", "");
+            $("#MainContent_ASPxPageControl1_ASPxGridView7_DXMainTable tr:Last").addClass("tblLast");
+
+            $("#MainContent_ASPxPageControl1_ASPxGridView8_DXMainTable tr:Last td").css("background-color", "");
+            $("#MainContent_ASPxPageControl1_ASPxGridView8_DXMainTable tr:Last").addClass("tblLast");
+            $("#MainContent_ASPxPageControl1_ASPxGridView9_DXMainTable tr:Last td").css("background-color", "");
+            $("#MainContent_ASPxPageControl1_ASPxGridView9_DXMainTable tr:Last").addClass("tblLast");
+        }
+
+        function Ctr() {
+            var ctr = $('#MainContent_ASPxPageControl1_ASPxGridView2_DXDataRow0 > td:nth-child(5)');
+            var val = parseFloat((ctr.html().substring(0, ctr.html().indexOf('%'))));
+
+            if (val > 0) {
+                ctr.removeClass("lowVal");
+                ctr.addClass("highVal");
+            }
+            else {
+                ctr.removeClass("highVal");
+                ctr.addClass("lowVal");
+            }
+        }
+
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -104,7 +136,7 @@
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center" />
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewBandColumn Caption="Jan" HeaderStyle-HorizontalAlign="Center">
+                                        <dx:GridViewBandColumn Name="_1" Caption="Jan" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
                                                 <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
@@ -119,7 +151,7 @@
                                                 </dx:GridViewDataTextColumn>
                                             </Columns>
                                         </dx:GridViewBandColumn>
-                                        <dx:GridViewBandColumn Caption="Feb" HeaderStyle-HorizontalAlign="Center">
+                                        <dx:GridViewBandColumn Name="_2" Caption="Feb" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
                                                 <dx:GridViewDataTextColumn FieldName="MarketShare_2" VisibleIndex="3" Caption="Shares">
@@ -134,7 +166,7 @@
                                                 </dx:GridViewDataTextColumn>
                                             </Columns>
                                         </dx:GridViewBandColumn>
-                                        <dx:GridViewBandColumn Caption="Mar" HeaderStyle-HorizontalAlign="Center">
+                                        <dx:GridViewBandColumn Name="_3" Caption="Mar" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
                                                 <dx:GridViewDataTextColumn FieldName="MarketShare_3" VisibleIndex="5" Caption="Shares">
@@ -149,7 +181,7 @@
                                                 </dx:GridViewDataTextColumn>
                                             </Columns>
                                         </dx:GridViewBandColumn>
-                                        <dx:GridViewBandColumn Caption="Apr" HeaderStyle-HorizontalAlign="Center">
+                                        <dx:GridViewBandColumn Name="_4" Caption="Apr" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
                                                 <dx:GridViewDataTextColumn FieldName="MarketShare_4" VisibleIndex="7" Caption="Shares">
@@ -345,7 +377,7 @@
                                             </Columns>
                                         </dx:GridViewBandColumn>
                                     </Columns>
-<%--                                    <TotalSummary>
+                                    <%--                                    <TotalSummary>
                                         <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum"  ShowInColumn="MarketShare_1" Visible="true"  />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum"  ShowInColumn="MarketShare_2"  />
                                     </TotalSummary>--%>
@@ -506,7 +538,7 @@
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center" />
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewBandColumn Caption="Jan" HeaderStyle-HorizontalAlign="Center">
+                                        <dx:GridViewBandColumn Name="_1" Caption="Jan" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
                                                 <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
@@ -521,7 +553,7 @@
                                                 </dx:GridViewDataTextColumn>
                                             </Columns>
                                         </dx:GridViewBandColumn>
-                                        <dx:GridViewBandColumn Caption="Feb" HeaderStyle-HorizontalAlign="Center">
+                                        <dx:GridViewBandColumn Name="_2" Caption="Feb" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
                                                 <dx:GridViewDataTextColumn FieldName="MarketShare_2" VisibleIndex="3" Caption="Shares">
@@ -536,7 +568,7 @@
                                                 </dx:GridViewDataTextColumn>
                                             </Columns>
                                         </dx:GridViewBandColumn>
-                                        <dx:GridViewBandColumn Caption="Mar" HeaderStyle-HorizontalAlign="Center">
+                                        <dx:GridViewBandColumn Name="_3" Caption="Mar" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
                                                 <dx:GridViewDataTextColumn FieldName="MarketShare_3" VisibleIndex="5" Caption="Shares">
@@ -551,7 +583,7 @@
                                                 </dx:GridViewDataTextColumn>
                                             </Columns>
                                         </dx:GridViewBandColumn>
-                                        <dx:GridViewBandColumn Caption="Apr" HeaderStyle-HorizontalAlign="Center">
+                                        <dx:GridViewBandColumn Name="_4" Caption="Apr" HeaderStyle-HorizontalAlign="Center">
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                                             <Columns>
                                                 <dx:GridViewDataTextColumn FieldName="MarketShare_4" VisibleIndex="7" Caption="Shares">
@@ -779,13 +811,25 @@
                                                 <CellStyle HorizontalAlign="Center">
                                                 </CellStyle>
                                             </dx:GridViewDataColumn>
-                                            <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="4" Caption="Market Share Value">
+                                            <dx:GridViewDataColumn FieldName="Market_Share_Index" VisibleIndex="4" Caption="Index">
                                                 <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <CellStyle HorizontalAlign="Center">
                                                 </CellStyle>
                                             </dx:GridViewDataColumn>
-                                            <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="5" Caption="%">
+                                            <dx:GridViewDataColumn FieldName="DiffDayNom" VisibleIndex="5" Caption="Change">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Market_Share_Value" VisibleIndex="6" Caption="Market Share Value">
+                                                <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                <HeaderStyle HorizontalAlign="Center" />
+                                                <CellStyle HorizontalAlign="Center">
+                                                </CellStyle>
+                                            </dx:GridViewDataColumn>
+                                            <dx:GridViewDataColumn FieldName="Percentage" VisibleIndex="7" Caption="%">
                                                 <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                                 <HeaderStyle HorizontalAlign="Center" />
                                                 <CellStyle HorizontalAlign="Center">
@@ -846,10 +890,6 @@
                     </dx:TabPage>
                 </TabPages>
                 <SpaceAfterTabsTemplate>
-                    <%--                    <dx:ASPxComboBox ID="ASPxComboBoxYears" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="ASPxComboBoxYears_ValueChanged">
-                    </dx:ASPxComboBox>
-                    <asp:Label ID="lblYear" runat="server" Text="Year:"></asp:Label>--%>
-
                     <dx:ASPxDateEdit ID="dateEdit" runat="server" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="True" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
                     <asp:Label ID="lblDate" runat="server" Text="Date:"></asp:Label>
                     <dx:ASPxComboBox ID="myOption" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="myOption_ValueChanged">
@@ -863,7 +903,7 @@
                     <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
-            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
+            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000" Enabled="false">
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView0.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView1.PerformCallback();
@@ -871,10 +911,25 @@
                 MainContent_ASPxPageControl1_ASPxGridView3.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView4.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView5.PerformCallback();
+                }" />
+                <ClientSideEvents Tick="function(s, e) { 
+                Ctr();
+                }" />
+            </dx:ASPxTimer>
+
+            <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="10000" Enabled="false">
+                <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView6.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView7.PerformCallback();
+                Clr();
+                }" />
+            </dx:ASPxTimer>
+
+            <dx:ASPxTimer ID="ASPxTimer3" runat="server" Interval="10000" Enabled="false">
+                <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView8.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView9.PerformCallback();
+                Clr();
                 }" />
             </dx:ASPxTimer>
         </div>
