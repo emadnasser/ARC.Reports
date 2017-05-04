@@ -33,19 +33,8 @@
         $(document).ready(function () {
             $(function () {
                 $("#sidebar > ul > li > ul > li > ul > li:nth-child(2)").addClass("active");
-                Clr();
             });
         });
-
-        function Clr() {
-            var ctr = $('#MainContent_ASPxPageControl1_ASPxGridView2_DXDataRow0 > td:nth-child(5)');
-            var val = parseFloat((ctr.html().substring(0, ctr.html().indexOf('%'))));
-
-            if (val > 0)
-                ctr.addClass("highVal");
-            else
-                ctr.addClass("lowVal");
-        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -62,7 +51,7 @@
                                         <dx:GridViewDataTextColumn FieldName="Id" ReadOnly="True" Visible="false">
                                             <HeaderStyle HorizontalAlign="Center" />
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0">
+                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" CellStyle-BackColor="#f5f7fa">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
@@ -221,7 +210,7 @@
                                         <dx:GridViewDataTextColumn FieldName="Id" ReadOnly="True" Visible="false">
                                             <HeaderStyle HorizontalAlign="Center" />
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0">
+                                        <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" CellStyle-BackColor="#f5f7fa">
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
@@ -386,7 +375,6 @@
                 MainContent_ASPxPageControl1_ASPxGridView4.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView5.PerformCallback();
                 }" />
-                <ClientSideEvents Tick="Clr()" />
             </dx:ASPxTimer>
         </div>
         <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Main"></dx:ASPxGridViewExporter>

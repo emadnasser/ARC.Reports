@@ -7,6 +7,7 @@ using System.IO;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraPrintingLinks;
 using DevExpress.Export;
+using System.Drawing;
 
 namespace ARC.Reports.Pages
 {
@@ -70,14 +71,31 @@ namespace ARC.Reports.Pages
 
                 ASPxGridView0.DataSource = SData.Rep_001Get(0, dateEdit.Date.ToShortDateString());
                 ASPxGridView0.DataBind();
-                ASPxGridView2.DataSource = SData.Rep_0011aGet(0, dateEdit.Date.ToShortDateString());
+
+                var lst = SData.Rep_0011aGet(0, dateEdit.Date.ToShortDateString());
+
+                if (Convert.ToDouble(lst[0].DiffDayPer) >= 0)
+                    ASPxGridView2.Columns[4].CellStyle.ForeColor = Color.Green;
+                else if (Convert.ToDouble(lst[0].DiffDayPer) < 0)
+                    ASPxGridView2.Columns[4].CellStyle.ForeColor = Color.Red;
+
+                ASPxGridView2.DataSource = lst;
                 ASPxGridView2.DataBind();
+
                 ASPxGridView4.DataSource = SData.Rep_0011bGet(0, dateEdit.Date.ToShortDateString());
                 ASPxGridView4.DataBind();
 
                 ASPxGridView1.DataSource = SData.Rep_001Get(1, dateEdit.Date.ToShortDateString());
                 ASPxGridView1.DataBind();
-                ASPxGridView3.DataSource = SData.Rep_0011aGet(1, dateEdit.Date.ToShortDateString());
+
+                var lst_3 = SData.Rep_0011aGet(1, dateEdit.Date.ToShortDateString());
+
+                if (Convert.ToDouble(lst_3[0].DiffDayPer) >= 0)
+                    ASPxGridView3.Columns[4].CellStyle.ForeColor = Color.Green;
+                else if (Convert.ToDouble(lst_3[0].DiffDayPer) < 0)
+                    ASPxGridView3.Columns[4].CellStyle.ForeColor = Color.Red;
+
+                ASPxGridView3.DataSource = lst_3;
                 ASPxGridView3.DataBind();
                 ASPxGridView5.DataSource = SData.Rep_0011bGet(1, dateEdit.Date.ToShortDateString());
                 ASPxGridView5.DataBind();
