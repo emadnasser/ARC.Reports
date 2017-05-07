@@ -290,11 +290,13 @@ namespace ARC.Reports.Pages
             }
             else if (myOption.SelectedIndex == 1)
             {
+                gridExport_2.FileName = "Market Share Totals Main - Monthly";
                 gridExport_2.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
             }
             else if (myOption.SelectedIndex == 2)
             {
-                //gridExport_2.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
+                gridExport_2.FileName = "Market Share Totals Main - Quarterly";
+                gridExport_2.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
             }
             else if (myOption.SelectedIndex == 3)
             {
@@ -314,11 +316,13 @@ namespace ARC.Reports.Pages
             }
             else if (myOption.SelectedIndex == 1)
             {
+                gridExport_3.FileName = "Market Share Totals Nomu - Monthly";
                 gridExport_3.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
             }
             else if (myOption.SelectedIndex == 2)
             {
-                //gridExport_5.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
+                gridExport_3.FileName = "Market Share Totals Nomu - Quarterly";
+                gridExport_3.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
             }
             else if (myOption.SelectedIndex == 3)
             {

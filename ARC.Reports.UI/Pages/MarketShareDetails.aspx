@@ -377,7 +377,7 @@
                 }" />
             </dx:ASPxTimer>
         </div>
-        <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Main"></dx:ASPxGridViewExporter>
-        <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Market Share Nomu"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Details Main"></dx:ASPxGridViewExporter>
+        <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Market Share Details Nomu"></dx:ASPxGridViewExporter>
     </div>
 </asp:Content>

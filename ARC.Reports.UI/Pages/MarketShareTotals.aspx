@@ -289,6 +289,7 @@
                                         </dx:GridViewBandColumn>
                                     </Columns>
                                     <TotalSummary>
+                                        <dx:ASPxSummaryItem FieldName="Channel" SummaryType="Sum" DisplayFormat="Average{0}" ShowInColumn="Channel" />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketShare_1" />
                                         <dx:ASPxSummaryItem FieldName="MarketTrades_1" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketTrades_1" />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketShare_2" />
@@ -315,9 +316,14 @@
                                         <dx:ASPxSummaryItem FieldName="MarketTrades_12" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketTrades_12" />
                                     </TotalSummary>
                                     <Styles>
+                                        <Footer HorizontalAlign="Center" VerticalAlign="Middle">
+                                        </Footer>
                                         <FixedColumn BackColor="#f5f7fa"></FixedColumn>
                                     </Styles>
                                     <SettingsPager Mode="ShowAllRecords" />
+
+                                    <Settings ShowFooter="True"></Settings>
+
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
                                     <SettingsBehavior AutoExpandAllGroups="true" />
                                 </dx:ASPxGridView>
@@ -375,6 +381,7 @@
                                         </dx:GridViewBandColumn>
                                     </Columns>
                                     <TotalSummary>
+                                        <dx:ASPxSummaryItem FieldName="Channel" SummaryType="Sum" DisplayFormat="Average{0}" ShowInColumn="Channel" />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketShare_1" />
                                         <dx:ASPxSummaryItem FieldName="MarketTrades_1" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketTrades_1" />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketShare_2" />
@@ -383,9 +390,12 @@
                                         <dx:ASPxSummaryItem FieldName="MarketTrades_3" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketTrades_3" />
                                     </TotalSummary>
                                     <Styles>
+                                        <Footer HorizontalAlign="Center" VerticalAlign="Middle">
+                                        </Footer>
                                         <FixedColumn BackColor="#f5f7fa"></FixedColumn>
                                     </Styles>
                                     <SettingsPager Mode="ShowAllRecords" />
+                                    <Settings ShowFooter="True"></Settings>
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
                                     <SettingsBehavior AutoExpandAllGroups="true" />
                                 </dx:ASPxGridView>
@@ -721,6 +731,7 @@
                                         </dx:GridViewBandColumn>
                                     </Columns>
                                     <TotalSummary>
+                                        <dx:ASPxSummaryItem FieldName="Channel" SummaryType="Sum" DisplayFormat="Average{0}" ShowInColumn="Channel" />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketShare_1" />
                                         <dx:ASPxSummaryItem FieldName="MarketTrades_1" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketTrades_1" />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketShare_2" />
@@ -747,9 +758,12 @@
                                         <dx:ASPxSummaryItem FieldName="MarketTrades_12" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketTrades_12" />
                                     </TotalSummary>
                                     <Styles>
+                                        <Footer HorizontalAlign="Center" VerticalAlign="Middle">
+                                        </Footer>
                                         <FixedColumn BackColor="#f5f7fa"></FixedColumn>
                                     </Styles>
                                     <SettingsPager Mode="ShowAllRecords" />
+                                    <Settings ShowFooter="True"></Settings>
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
                                     <SettingsBehavior AutoExpandAllGroups="true" />
                                 </dx:ASPxGridView>
@@ -807,6 +821,7 @@
                                         </dx:GridViewBandColumn>
                                     </Columns>
                                     <TotalSummary>
+                                        <dx:ASPxSummaryItem FieldName="Channel" SummaryType="Sum" DisplayFormat="Average{0}" ShowInColumn="Channel" />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketShare_1" />
                                         <dx:ASPxSummaryItem FieldName="MarketTrades_1" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketTrades_1" />
                                         <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketShare_2" />
@@ -815,9 +830,12 @@
                                         <dx:ASPxSummaryItem FieldName="MarketTrades_3" SummaryType="Sum" DisplayFormat="{0}" ShowInColumn="MarketTrades_3" />
                                     </TotalSummary>
                                     <Styles>
+                                        <Footer HorizontalAlign="Center" VerticalAlign="Middle">
+                                        </Footer>
                                         <FixedColumn BackColor="#f5f7fa"></FixedColumn>
                                     </Styles>
                                     <SettingsPager Mode="ShowAllRecords" />
+                                    <Settings ShowFooter="True"></Settings>
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
                                     <SettingsBehavior AutoExpandAllGroups="true" />
                                 </dx:ASPxGridView>
