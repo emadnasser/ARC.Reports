@@ -337,6 +337,40 @@ namespace ARC.Reports.DAL
             return null;
         }
 
+        public static List<Rep_001> Rep_emad(int pMarketType)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            DataTable myDataTable;
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SAM");
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE MarketType = @pMarketType", parameters);
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SEM");
+                myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_001] WHERE MarketType = @pMarketType", parameters);
+            }
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new Rep_001
+                        {
+                            Id = (int)x["Id"],
+                            Channel = Helper.Channel(x["Channel"].ToString()),
+                            Operation = Helper.Operation(x["Operation"].ToString()),
+                            Amount = Helper.ToGFormat(x["Amount"].ToString(), 2),
+                            Transactions = (int)x["Transactions"],
+                            Percentage = (double)x["Percentage"],
+                            TradeShare = (double)x["TradeShare"],
+                            MarketType = x["MarketType"].ToString(),
+                            InsertedDate = Convert.ToDateTime(x["InsertedDate"])
+                        }).ToList();
+            return null;
+        }
+
         public static List<TestEnt> Test_01()
         {
             return Helper.sqlDataReaderTest();

@@ -76,12 +76,14 @@
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
                                         <dx:GridViewDataTextColumn FieldName="Percentage" VisibleIndex="4" Caption="Trade Value Share">
+                                            <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
                                         <dx:GridViewDataTextColumn FieldName="TradeShare" VisibleIndex="5" Caption="Trade Share">
+                                            <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
@@ -235,12 +237,14 @@
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
                                         <dx:GridViewDataTextColumn FieldName="Percentage" VisibleIndex="4" Caption="Trade Value Share">
+                                            <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
                                             </CellStyle>
                                         </dx:GridViewDataTextColumn>
                                         <dx:GridViewDataTextColumn FieldName="TradeShare" VisibleIndex="5" Caption="Trade Share">
+                                            <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
                                             <HeaderStyle HorizontalAlign="Center" />
                                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                                             <CellStyle HorizontalAlign="Center">
