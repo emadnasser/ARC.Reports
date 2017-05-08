@@ -111,9 +111,9 @@
                                     </Columns>
                                     <SettingsBehavior AllowFixedGroups="true" AllowGroup="true" />
                                     <SettingsPager Mode="ShowAllRecords" />
-                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
+                                    <SettingsBehavior AllowSort="false" SortMode="DisplayText" />
                                 </dx:ASPxGridView>
-                                <dx:ASPxGridView ID="ASPxGridView6" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id" Settings-ShowFooter="true">
+                                <dx:ASPxGridView ID="ASPxGridView6" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Channel" Settings-ShowFooter="true">
                                     <Columns>
                                         <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left">
                                             <HeaderStyle HorizontalAlign="Center" />
@@ -357,15 +357,14 @@
                                         </Footer>
                                         <FixedColumn BackColor="#f5f7fa"></FixedColumn>
                                     </Styles>
+                                    <%--<ClientSideEvents ColumnSorting="function(s, e) {MainContent_ASPxPageControl1_ASPxGridView6.PerformCallback();}" />--%>
                                     <SettingsPager Mode="ShowAllRecords" />
 
                                     <Settings ShowFooter="True"></Settings>
 
-                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
-                                    <SettingsBehavior AutoExpandAllGroups="true" />
+                                    <SettingsBehavior AllowSort="true" SortMode="Value" />
                                 </dx:ASPxGridView>
                                 <dx:ASPxGridView ID="ASPxGridView8" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id" Settings-ShowFooter="true">
-                                    <ClientSideEvents ColumnSorting="OnColumnSorting" />
                                     <Columns>
                                         <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left" SortOrder="Ascending">
                                             <HeaderStyle HorizontalAlign="Center" />
@@ -440,8 +439,8 @@
                                     </Styles>
                                     <SettingsPager Mode="ShowAllRecords" />
                                     <Settings ShowFooter="True"></Settings>
-                                    <SettingsBehavior AllowSort="true" SortMode="Default" />
                                     <SettingsBehavior AutoExpandAllGroups="true" />
+                                    <SettingsBehavior AllowSort="true" SortMode="Value" />
                                 </dx:ASPxGridView>
                                 <br />
                                 <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Export To Excel" OnClick="ASPxButton1_Click" Theme="DevEx">
@@ -834,8 +833,8 @@
                                     </Styles>
                                     <SettingsPager Mode="ShowAllRecords" />
                                     <Settings ShowFooter="True"></Settings>
-                                    <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
                                     <SettingsBehavior AutoExpandAllGroups="true" />
+                                    <SettingsBehavior AllowSort="true" SortMode="Value" />
                                 </dx:ASPxGridView>
                                 <dx:ASPxGridView ID="ASPxGridView9" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="true" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id" Settings-ShowFooter="true">
                                     <Columns>
@@ -912,8 +911,8 @@
                                     </Styles>
                                     <SettingsPager Mode="ShowAllRecords" />
                                     <Settings ShowFooter="True"></Settings>
-                                    <%--<SettingsBehavior AllowSort="False" SortMode="DisplayText" />--%>
                                     <SettingsBehavior AutoExpandAllGroups="true" />
+                                    <SettingsBehavior AllowSort="true" SortMode="Value" />
                                 </dx:ASPxGridView>
                                 <br />
                                 <dx:ASPxButton ID="ASPxButton2" runat="server" Text="Export To Excel" OnClick="ASPxButton2_Click" Theme="DevEx">
@@ -1042,14 +1041,12 @@
                 MainContent_ASPxPageControl1_ASPxGridView5.PerformCallback();
                 }" />
             </dx:ASPxTimer>
-
             <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="10000" Enabled="false">
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView6.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView7.PerformCallback();
                 }" />
             </dx:ASPxTimer>
-
             <dx:ASPxTimer ID="ASPxTimer3" runat="server" Interval="10000" Enabled="false">
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView8.PerformCallback();
@@ -1059,10 +1056,8 @@
         </div>
         <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Market Share Totals Main - Daily"></dx:ASPxGridViewExporter>
         <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Market Share Totals Nomu - Daily"></dx:ASPxGridViewExporter>
-
         <dx:ASPxGridViewExporter ID="gridExport_2" runat="server" GridViewID="ASPxGridView6" FileName="Market Share Totals Main - Monthly"></dx:ASPxGridViewExporter>
         <dx:ASPxGridViewExporter ID="gridExport_3" runat="server" GridViewID="ASPxGridView7" FileName="Market Share Totals Nomu - Monthly"></dx:ASPxGridViewExporter>
-
         <dx:ASPxGridViewExporter ID="gridExport_4" runat="server" GridViewID="ASPxGridView8" FileName="Market Share Totals Main - Yearly"></dx:ASPxGridViewExporter>
         <dx:ASPxGridViewExporter ID="gridExport_5" runat="server" GridViewID="ASPxGridView9" FileName="Market Share Totals Nomu - Yearly"></dx:ASPxGridViewExporter>
     </div>

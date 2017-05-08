@@ -37,14 +37,12 @@ namespace ARC.Reports.Pages
                 //ASPxComboBoxYears.Items.Add("", 0);
                 //ASPxComboBoxYears.Items.Add("", 0);
                 //ASPxComboBoxYears.Items.Add("", 0);
-
-                GetData();
             }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GetData();
         }
 
         protected void ASPxPageControl1_TabClick(object source, TabControlCancelEventArgs e)
