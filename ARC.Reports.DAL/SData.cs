@@ -307,15 +307,15 @@ namespace ARC.Reports.DAL
             DataTable myDataTable;
             myDataTable = Helper.ExecuteReader("SELECT" +
                                                  " S_1.[Channel], S_1.[MarketShare], S_1.[MarketTrades], S_2.[MarketShare], S_2.[MarketTrades], S_3.[MarketShare], S_3.[MarketTrades], S_4.[MarketShare], S_4.[MarketTrades] FROM" +
-                                                 " (SELECT[Channel], SUM([MarketShare]) AS[MarketShare], SUM([MarketTrades]) AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(1, 2, 3) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_1" +
+                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(1, 2, 3) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_1" +
                                                  " LEFT OUTER JOIN" +
-                                                 " (SELECT[Channel], SUM([MarketShare]) AS [MarketShare], SUM([MarketTrades]) AS [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN (4, 5, 6) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_2" +
+                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS [MarketShare], SUM([MarketTrades])/3 AS [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN (4, 5, 6) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_2" +
                                                  " ON S_1.[Channel] = S_2.[Channel]" +
                                                  " LEFT OUTER JOIN" +
-                                                 " (SELECT[Channel], SUM([MarketShare]) AS[MarketShare], SUM([MarketTrades]) AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(7, 8, 9) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_3" +
+                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(7, 8, 9) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_3" +
                                                  " ON S_1.[Channel] = S_3.[Channel]" +
                                                  " LEFT OUTER JOIN" +
-                                                 " (SELECT[Channel], SUM([MarketShare]) AS[MarketShare], SUM([MarketTrades]) AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(10, 11, 12) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_4" +
+                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(10, 11, 12) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_4" +
                                                  " ON S_1.[Channel] = S_4.[Channel]" +
                                                  " ORDER BY S_1.[Channel]", parameters);
 
@@ -324,14 +324,14 @@ namespace ARC.Reports.DAL
                         select new Rep_0012
                         {
                             Channel = Helper.Channel(x[0].ToString()),
-                            MarketShare_1 = x[1] != DBNull.Value ? (double?)x[1] : 0,
-                            MarketTrades_1 = x[2] != DBNull.Value ? (double?)x[2] : 0,
-                            MarketShare_2 = x[3] != DBNull.Value ? (double?)x[3] : 0,
-                            MarketTrades_2 = x[4] != DBNull.Value ? (double?)x[4] : 0,
-                            MarketShare_3 = x[5] != DBNull.Value ? (double?)x[5] : 0,
-                            MarketTrades_3 = x[6] != DBNull.Value ? (double?)x[6] : 0,
-                            MarketShare_4 = x[7] != DBNull.Value ? (double?)x[7] : 0,
-                            MarketTrades_4 = x[8] != DBNull.Value ? (double?)x[8] : 0,
+                            MarketShare_1 = x[1] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[1].ToString(), 2)) : 0,
+                            MarketTrades_1 = x[2] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[2].ToString(), 2)) : 0,
+                            MarketShare_2 = x[3] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[3].ToString(), 2)) : 0,
+                            MarketTrades_2 = x[4] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[4].ToString(), 2)) : 0,
+                            MarketShare_3 = x[5] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[5].ToString(), 2)) : 0,
+                            MarketTrades_3 = x[6] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[6].ToString(), 2)) : 0,
+                            MarketShare_4 = x[7] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[7].ToString(), 2)) : 0,
+                            MarketTrades_4 = x[8] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[8].ToString(), 2)) : 0,
 
                         }).ToList();
             return null;
