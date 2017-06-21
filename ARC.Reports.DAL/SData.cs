@@ -307,15 +307,15 @@ namespace ARC.Reports.DAL
             DataTable myDataTable;
             myDataTable = Helper.ExecuteReader("SELECT" +
                                                  " S_1.[Channel], S_1.[MarketShare], S_1.[MarketTrades], S_2.[MarketShare], S_2.[MarketTrades], S_3.[MarketShare], S_3.[MarketTrades], S_4.[MarketShare], S_4.[MarketTrades] FROM" +
-                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(1, 2, 3) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_1" +
+                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(1, 2, 3) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel] HAVING MAX(Month) = 3) S_1" +
                                                  " LEFT OUTER JOIN" +
-                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS [MarketShare], SUM([MarketTrades])/3 AS [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN (4, 5, 6) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_2" +
+                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS [MarketShare], SUM([MarketTrades])/3 AS [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN (4, 5, 6) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel] HAVING MAX(Month) = 6) S_2" +
                                                  " ON S_1.[Channel] = S_2.[Channel]" +
                                                  " LEFT OUTER JOIN" +
-                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(7, 8, 9) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_3" +
+                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(7, 8, 9) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel] HAVING MAX(Month) = 9) S_3" +
                                                  " ON S_1.[Channel] = S_3.[Channel]" +
                                                  " LEFT OUTER JOIN" +
-                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(10, 11, 12) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel]) S_4" +
+                                                 " (SELECT[Channel], SUM([MarketShare])/3 AS[MarketShare], SUM([MarketTrades])/3 AS[MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE[Month] IN(10, 11, 12) AND[MarketType] = @pMarketType AND[Year] = @pYear GROUP BY[Channel] HAVING MAX(Month) = 12) S_4" +
                                                  " ON S_1.[Channel] = S_4.[Channel]" +
                                                  " ORDER BY S_1.[Channel]", parameters);
 
