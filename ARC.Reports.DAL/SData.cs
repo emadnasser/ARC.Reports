@@ -158,7 +158,7 @@ namespace ARC.Reports.DAL
 
         public static List<Rep_0012> Rep_003Get(int @pYear, int @pMarketType)
         {
-            SqlParameter[] parameters = new SqlParameter[2];
+            SqlParameter[] parameters = new SqlParameter[3];
 
             parameters[0] = new SqlParameter("@pYear", @pYear);
 
@@ -171,11 +171,14 @@ namespace ARC.Reports.DAL
                 parameters[1] = new SqlParameter("@pMarketType", "SEM");
             }
 
+            parameters[2] = new SqlParameter("@pNumberOfDays", Rep_006Get());
+
             DataTable myDataTable;
             myDataTable = Helper.ExecuteReader("SELECT" +
                                                 " S_1.[Channel], S_1.[MarketShare], S_1.[MarketTrades], S_2.[MarketShare], S_2.[MarketTrades], S_3.[MarketShare], S_3.[MarketTrades], S_4.[MarketShare], S_4.[MarketTrades]," +
                                                 " S_5.[MarketShare], S_5.[MarketTrades], S_6.[MarketShare], S_6.[MarketTrades], S_7.[MarketShare], S_7.[MarketTrades], S_8.[MarketShare], S_8.[MarketTrades]," +
-                                                " S_9.[MarketShare], S_9.[MarketTrades], S_10.[MarketShare], S_10.[MarketTrades], S_11.[MarketShare], S_11.[MarketTrades], S_12.[MarketShare], S_12.[MarketTrades] FROM" +
+                                                " S_9.[MarketShare], S_9.[MarketTrades], S_10.[MarketShare], S_10.[MarketTrades], S_11.[MarketShare], S_11.[MarketTrades], " +
+                                                " S_12.[MarketShare], S_12.[MarketTrades], S_13.[MarketShare], S_13.[MarketTrades] FROM" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 1 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_1 " +
                                                 " LEFT OUTER JOIN" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 2 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_2 " +
@@ -210,6 +213,12 @@ namespace ARC.Reports.DAL
                                                 " LEFT OUTER JOIN" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 12 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_12 " +
                                                 " ON S_1.[Channel] = S_12.[Channel]" +
+                                                " LEFT OUTER JOIN" +
+                                                " (SELECT[Channel], ROUND(SUM(Percentage)/ @pNumberOfDays, 2) AS[MarketShare], ROUND(SUM(TradeShare)/ @pNumberOfDays, 2) AS[MarketTrades]" +
+                                                " FROM[dbo].[Rep_001]" +
+                                                " WHERE MONTH(InsertedDate) = MONTH(GETDATE()) AND MarketType = @pMarketType AND YEAR(InsertedDate) = @pYear" +
+                                                " GROUP BY Channel) S_13" +
+                                                " ON S_1.[Channel] = S_13.[Channel]" +
                                                 " ORDER BY S_1.[Channel]", parameters);
 
             if (myDataTable != null)
@@ -241,6 +250,8 @@ namespace ARC.Reports.DAL
                             MarketTrades_11 = x[22] != DBNull.Value ? (double?)x[22] : 0,
                             MarketShare_12 = x[23] != DBNull.Value ? (double?)x[23] : 0,
                             MarketTrades_12 = x[24] != DBNull.Value ? (double?)x[24] : 0,
+                            MarketShare_13 = x[25] != DBNull.Value ? (double?)x[25] : 0,
+                            MarketTrades_13 = x[26] != DBNull.Value ? (double?)x[26] : 0,
 
                         }).ToList();
             return null;
@@ -333,6 +344,49 @@ namespace ARC.Reports.DAL
                             MarketShare_4 = x[7] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[7].ToString(), 2)) : 0,
                             MarketTrades_4 = x[8] != DBNull.Value ? Convert.ToDouble(Helper.ToGFormat(x[8].ToString(), 2)) : 0,
 
+                        }).ToList();
+            return null;
+        }
+
+        public static int Rep_006Get()
+        {
+            var RetVal = Convert.ToInt32(Helper.ExecuteScalar(" SELECT COUNT(DISTINCT InsertedDate) FROM [dbo].[Rep_001]" +
+                                                              " WHERE MONTH(InsertedDate) = MONTH(GETDATE()) AND MarketType = 'SAM' AND YEAR(InsertedDate) = '2017'"));
+
+            if (RetVal != 0)
+                return RetVal;
+            return 1;
+        }
+
+        public static List<Rep_007> Rep_007Get(int @pYear, int @pMarketType)
+        {
+            SqlParameter[] parameters = new SqlParameter[2];
+
+            parameters[0] = new SqlParameter("@pYear", @pYear);
+
+            if (pMarketType == 0)
+            {
+                parameters[1] = new SqlParameter("@pMarketType", "SAM");
+            }
+            else
+            {
+                parameters[1] = new SqlParameter("@pMarketType", "SEM");
+            }
+
+            DataTable myDataTable;
+            myDataTable = Helper.ExecuteReader(
+                " SELECT MarketShare, MarketTrades, [Month] FROM[Rep_0012]" +
+                " WHERE[Channel] = 'AVG' AND[MarketType] = @pMarketType AND[Year] = @pYear" +
+                " ORDER BY[Month]", parameters);
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new Rep_007
+                        {
+                            MarketShare = x[0].ToString(),
+                            MarketTrades = x[1].ToString(),
+                            Month = x[2].ToString(),
+                               
                         }).ToList();
             return null;
         }

@@ -27,6 +27,8 @@
         public double? MarketTrades_11 { get; set; }
         public double? MarketShare_12 { get; set; }
         public double? MarketTrades_12 { get; set; }
+        public double? MarketShare_13 { get; set; }
+        public double? MarketTrades_13 { get; set; }
         public int Month { get; set; }
         public int Year { get; set; }
     }

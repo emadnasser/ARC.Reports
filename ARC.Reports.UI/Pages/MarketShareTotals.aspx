@@ -113,7 +113,7 @@
                                     <SettingsPager Mode="ShowAllRecords" />
                                     <SettingsBehavior AllowSort="false" SortMode="DisplayText" />
                                 </dx:ASPxGridView>
-                                <dx:ASPxGridView ID="ASPxGridView6" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Channel" Settings-ShowFooter="true">
+                                <dx:ASPxGridView ID="ASPxGridView6" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Channel" Settings-ShowFooter="true" OnCustomSummaryCalculate="ASPxGridView6_CustomSummaryCalculate">
                                     <Columns>
                                         <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left">
                                             <HeaderStyle HorizontalAlign="Center" />
@@ -324,33 +324,52 @@
                                                 </dx:GridViewDataTextColumn>
                                             </Columns>
                                         </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Name="_13" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_13" VisibleIndex="24" Caption="Shares">
+                                                    <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_13" VisibleIndex="25" Caption="Trades">
+                                                    <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
                                     </Columns>
                                     <TotalSummary>
                                         <dx:ASPxSummaryItem FieldName="Channel" SummaryType="Sum" DisplayFormat="Average{0}" ShowInColumn="Channel" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_1" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_1" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_1" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_2" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_2" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_2" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_3" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_3" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_3" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_3" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_4" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_4" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_4" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_4" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_5" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_5" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_5" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_5" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_6" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_6" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_6" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_6" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_7" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_7" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_7" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_7" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_8" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_8" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_8" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_8" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_9" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_9" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_9" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_9" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_10" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_10" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_10" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_10" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_11" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_11" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_11" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_11" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_12" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_12" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_12" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_12" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s1" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_1" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t1" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_1" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s2" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_2" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t2" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_2" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s3" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_3" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t3" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_3" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s4" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_4" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t4" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_4" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s5" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_5" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t5" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_5" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s6" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_6" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t6" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_6" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s7" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_7" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t7" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_7" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s8" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_8" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t8" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_8" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s9" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_9" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t9" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_9" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s10" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_10" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t10" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_10" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s11" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_11" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t11" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_11" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s12" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_12" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t12" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_12" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s13" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_13" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t13" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_13" />
                                     </TotalSummary>
                                     <Styles>
                                         <Footer HorizontalAlign="Center" VerticalAlign="Middle">
@@ -587,7 +606,7 @@
                                     <SettingsPager Mode="ShowAllRecords" />
                                     <SettingsBehavior AllowSort="False" SortMode="DisplayText" />
                                 </dx:ASPxGridView>
-                                <dx:ASPxGridView ID="ASPxGridView7" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id" Settings-ShowFooter="true">
+                                <dx:ASPxGridView ID="ASPxGridView7" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id" Settings-ShowFooter="true" OnCustomSummaryCalculate="ASPxGridView7_CustomSummaryCalculate">
                                     <Columns>
                                         <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left">
                                             <HeaderStyle HorizontalAlign="Center" />
@@ -798,33 +817,52 @@
                                                 </dx:GridViewDataTextColumn>
                                             </Columns>
                                         </dx:GridViewBandColumn>
+                                        <dx:GridViewBandColumn Name="_13" HeaderStyle-HorizontalAlign="Center">
+                                            <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                                            <Columns>
+                                                <dx:GridViewDataTextColumn FieldName="MarketShare_13" VisibleIndex="24" Caption="Shares">
+                                                    <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="MarketTrades_13" VisibleIndex="25" Caption="Trades">
+                                                    <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                    <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                                                    <CellStyle HorizontalAlign="Center" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:GridViewBandColumn>
                                     </Columns>
                                     <TotalSummary>
                                         <dx:ASPxSummaryItem FieldName="Channel" SummaryType="Sum" DisplayFormat="Average{0}" ShowInColumn="Channel" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_1" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_1" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_1" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_2" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_2" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_2" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_3" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_3" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_3" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_3" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_4" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_4" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_4" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_4" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_5" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_5" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_5" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_5" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_6" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_6" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_6" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_6" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_7" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_7" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_7" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_7" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_8" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_8" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_8" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_8" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_9" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_9" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_9" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_9" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_10" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_10" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_10" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_10" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_11" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_11" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_11" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_11" />
-                                        <dx:ASPxSummaryItem FieldName="MarketShare_12" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_12" />
-                                        <dx:ASPxSummaryItem FieldName="MarketTrades_12" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_12" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s1" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_1" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t1" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_1" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s2" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_2" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t2" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_2" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s3" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_3" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t3" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_3" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s4" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_4" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t4" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_4" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s5" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_5" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t5" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_5" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s6" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_6" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t6" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_6" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s7" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_7" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t7" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_7" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s8" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_8" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t8" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_8" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s9" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_9" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t9" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_9" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s10" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_10" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t10" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_10" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s11" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_11" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t11" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_11" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s12" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_12" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t12" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_12" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_s13" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_13" />
+                                        <dx:ASPxSummaryItem FieldName="Sm_t13" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_13" />
                                     </TotalSummary>
                                     <Styles>
                                         <Footer HorizontalAlign="Center" VerticalAlign="Middle">

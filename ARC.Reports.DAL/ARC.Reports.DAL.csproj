@@ -46,6 +46,7 @@
     <Compile Include="Common\Helper.cs" />
     <Compile Include="Entities\Rep_0013.cs" />
     <Compile Include="Entities\Rep_0012.cs" />
+    <Compile Include="Entities\Rep_007.cs" />
     <Compile Include="Entities\Rep_002.cs" />
     <Compile Include="Entities\Rep_001.cs" />
     <Compile Include="Entities\Rep_0011.cs" />

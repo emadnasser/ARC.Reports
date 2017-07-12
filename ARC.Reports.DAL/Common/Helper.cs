@@ -73,7 +73,7 @@ namespace ARC.Reports.DAL.Common
             {
                 var sqlCommandObj = new SqlCommand(procedureName, sqlConnectionObj)
                 {
-                    CommandType = CommandType.StoredProcedure
+                    CommandType = CommandType.Text
                 };
 
                 if (sqlConnectionObj.State != ConnectionState.Open)

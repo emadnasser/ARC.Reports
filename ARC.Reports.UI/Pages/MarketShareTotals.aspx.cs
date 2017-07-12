@@ -10,6 +10,7 @@ using DevExpress.Export;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace ARC.Reports.Pages
 {
@@ -106,6 +107,7 @@ namespace ARC.Reports.Pages
                     ASPxGridView6.Columns["_2"].Caption = "Feb";
                     ASPxGridView6.Columns["_3"].Caption = "Mar";
                     ASPxGridView6.Columns["_4"].Caption = "Apr";
+                    ASPxGridView6.Columns["_13"].Caption = DateTime.Now.ToString("MMM");
 
                     ASPxGridView6.DataSource = SData.Rep_003Get(DateTime.Now.Year, 0);
                     ASPxGridView6.DataBind();
@@ -127,6 +129,7 @@ namespace ARC.Reports.Pages
                     ASPxGridView7.Columns["_2"].Caption = "Feb";
                     ASPxGridView7.Columns["_3"].Caption = "Mar";
                     ASPxGridView7.Columns["_4"].Caption = "Apr";
+                    ASPxGridView7.Columns["_13"].Caption = DateTime.Now.ToString("MMM");
 
                     ASPxGridView7.DataSource = SData.Rep_003Get(DateTime.Now.Year, 1);
                     ASPxGridView7.DataBind();
@@ -331,6 +334,226 @@ namespace ARC.Reports.Pages
         protected void myOption_ValueChanged(object sender, EventArgs e)
         {
             GetData();
+        }
+
+        protected void ASPxGridView6_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
+        {
+            var myData = SData.Rep_007Get(DateTime.Now.Year, 0);
+
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s1" && myData.Count > 0)
+            {
+                    e.TotalValue = myData[0].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s2" && myData.Count > 1)
+            {
+                    e.TotalValue = myData[1].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s3" && myData.Count > 2)
+            {
+                    e.TotalValue = myData[2].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s4" && myData.Count > 3)
+            {
+                    e.TotalValue = myData[3].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s5" && myData.Count > 4)
+            {
+                    e.TotalValue = myData[4].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s6" && myData.Count > 5)
+            {
+                    e.TotalValue = myData[5].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s7" && myData.Count > 6)
+            {
+                    e.TotalValue = myData[6].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s8" && myData.Count > 7)
+            {
+                    e.TotalValue = myData[7].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s9" && myData.Count > 8)
+            {
+                    e.TotalValue = myData[8].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s10" && myData.Count > 9)
+            {
+                    e.TotalValue = myData[9].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s11" && myData.Count > 10)
+            {
+                    e.TotalValue = myData[10].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s12" && myData.Count > 11)
+            {
+                    e.TotalValue = myData[11].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s13" && myData.Count > 12)
+            {
+                    e.TotalValue = myData[12].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t1" && myData.Count > 0)
+            {
+                e.TotalValue = myData[0].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t2" && myData.Count > 1)
+            {
+                e.TotalValue = myData[1].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t3" && myData.Count > 2)
+            {
+                e.TotalValue = myData[2].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t4" && myData.Count > 3)
+            {
+                e.TotalValue = myData[3].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t5" && myData.Count > 4)
+            {
+                e.TotalValue = myData[4].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t6" && myData.Count > 5)
+            {
+                e.TotalValue = myData[5].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t7" && myData.Count > 6)
+            {
+                e.TotalValue = myData[6].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t8" && myData.Count > 7)
+            {
+                e.TotalValue = myData[7].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t9" && myData.Count > 8)
+            {
+                e.TotalValue = myData[8].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t10" && myData.Count > 9)
+            {
+                e.TotalValue = myData[9].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t11" && myData.Count > 10)
+            {
+                e.TotalValue = myData[10].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t12" && myData.Count > 11)
+            {
+                e.TotalValue = myData[11].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t13" && myData.Count > 12)
+            {
+                e.TotalValue = myData[12].MarketTrades;
+            }
+        }
+
+        protected void ASPxGridView7_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
+        {
+            var myData = SData.Rep_007Get(DateTime.Now.Year, 1);
+
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s1" && myData.Count > 0)
+            {
+                e.TotalValue = myData[0].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s2" && myData.Count > 1)
+            {
+                e.TotalValue = myData[1].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s3" && myData.Count > 2)
+            {
+                e.TotalValue = myData[2].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s4" && myData.Count > 3)
+            {
+                e.TotalValue = myData[3].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s5" && myData.Count > 4)
+            {
+                e.TotalValue = myData[4].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s6" && myData.Count > 5)
+            {
+                e.TotalValue = myData[5].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s7" && myData.Count > 6)
+            {
+                e.TotalValue = myData[6].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s8" && myData.Count > 7)
+            {
+                e.TotalValue = myData[7].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s9" && myData.Count > 8)
+            {
+                e.TotalValue = myData[8].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s10" && myData.Count > 9)
+            {
+                e.TotalValue = myData[9].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s11" && myData.Count > 10)
+            {
+                e.TotalValue = myData[10].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s12" && myData.Count > 11)
+            {
+                e.TotalValue = myData[11].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s13" && myData.Count > 12)
+            {
+                e.TotalValue = myData[12].MarketShare;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t1" && myData.Count > 0)
+            {
+                e.TotalValue = myData[0].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t2" && myData.Count > 1)
+            {
+                e.TotalValue = myData[1].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t3" && myData.Count > 2)
+            {
+                e.TotalValue = myData[2].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t4" && myData.Count > 3)
+            {
+                e.TotalValue = myData[3].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t5" && myData.Count > 4)
+            {
+                e.TotalValue = myData[4].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t6" && myData.Count > 5)
+            {
+                e.TotalValue = myData[5].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t7" && myData.Count > 6)
+            {
+                e.TotalValue = myData[6].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t8" && myData.Count > 7)
+            {
+                e.TotalValue = myData[7].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t9" && myData.Count > 8)
+            {
+                e.TotalValue = myData[8].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t10" && myData.Count > 9)
+            {
+                e.TotalValue = myData[9].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t11" && myData.Count > 10)
+            {
+                e.TotalValue = myData[10].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t12" && myData.Count > 11)
+            {
+                e.TotalValue = myData[11].MarketTrades;
+            }
+            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t13" && myData.Count > 12)
+            {
+                e.TotalValue = myData[12].MarketTrades;
+            }
         }
     }
 }
