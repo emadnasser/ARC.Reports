@@ -219,6 +219,7 @@ namespace ARC.Reports.DAL
                                                 " WHERE MONTH(InsertedDate) = MONTH(GETDATE()) AND MarketType = @pMarketType AND YEAR(InsertedDate) = @pYear" +
                                                 " GROUP BY Channel) S_13" +
                                                 " ON S_1.[Channel] = S_13.[Channel]" +
+                                                " WHERE S_1.[Channel] != 'AVG'" +
                                                 " ORDER BY S_1.[Channel]", parameters);
 
             if (myDataTable != null)
@@ -386,8 +387,38 @@ namespace ARC.Reports.DAL
                             MarketShare = x[0].ToString(),
                             MarketTrades = x[1].ToString(),
                             Month = x[2].ToString(),
-                               
+
                         }).ToList();
+            return null;
+        }
+
+        public static Rep_007 Rep_008Get(int pMarketType, string @pDate)
+        {
+            SqlParameter[] parameters = new SqlParameter[2];
+
+            parameters[0] = new SqlParameter("@pDate", @pDate);
+
+            if (pMarketType == 0)
+            {
+                parameters[1] = new SqlParameter("@pMarketType", "SAM");
+            }
+            else
+            {
+                parameters[1] = new SqlParameter("@pMarketType", "SEM");
+            }
+
+            DataTable myDataTable;
+            myDataTable = Helper.ExecuteReader(" SELECT ROUND(SUM(Percentage)/ 9, 2) AS[MarketShare], ROUND(SUM(TradeShare) / 9, 2) AS[MarketTrades]" +
+                                               " FROM[dbo].[Rep_001]" +
+                                               " WHERE MONTH(InsertedDate) = MONTH(GETDATE()) AND MarketType = @pMarketType AND YEAR(InsertedDate) = @pDate", parameters);
+
+            if (myDataTable != null)
+                return new Rep_007()
+                {
+                    MarketShare = myDataTable.Rows[0][0].ToString(),
+                    MarketTrades = myDataTable.Rows[0][1].ToString(),
+                };
+
             return null;
         }
 
