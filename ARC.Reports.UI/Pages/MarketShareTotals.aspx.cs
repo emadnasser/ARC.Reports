@@ -340,12 +340,12 @@ namespace ARC.Reports.Pages
         {
             var myData = SData.Rep_007Get(DateTime.Now.Year, 0);
 
-            var sumLst = SData.Rep_008Get(0, DateTime.Now.Year.ToString());
-            myData.Add(new DAL.Entities.Rep_007()
-            {
-                MarketShare = sumLst.MarketShare,
-                MarketTrades = sumLst.MarketTrades,
-            });
+            //var sumLst = SData.Rep_008Get(0, DateTime.Now.Year.ToString());
+            //myData.Add(new DAL.Entities.Rep_007()
+            //{
+            //    MarketShare = sumLst.MarketShare,
+            //    MarketTrades = sumLst.MarketTrades,
+            //});
 
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s1" && myData.Count > 0)
             {
@@ -470,12 +470,12 @@ namespace ARC.Reports.Pages
         {
             var myData = SData.Rep_007Get(DateTime.Now.Year, 1);
 
-            var sumLst = SData.Rep_008Get(1, DateTime.Now.Year.ToString());
-            myData.Add(new DAL.Entities.Rep_007()
-            {
-                MarketShare = sumLst.MarketShare,
-                MarketTrades = sumLst.MarketTrades,
-            });
+            //var sumLst = SData.Rep_008Get(1, DateTime.Now.Year.ToString());
+            //myData.Add(new DAL.Entities.Rep_007()
+            //{
+            //    MarketShare = sumLst.MarketShare,
+            //    MarketTrades = sumLst.MarketTrades,
+            //});
 
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s1" && myData.Count > 0)
             {
