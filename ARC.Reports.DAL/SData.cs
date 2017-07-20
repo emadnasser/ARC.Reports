@@ -5,6 +5,7 @@ using System.Linq;
 using System.Data.SqlClient;
 using System;
 using ARC.Reports.DAL.Entities;
+using System.Globalization;
 
 namespace ARC.Reports.DAL
 {
@@ -452,6 +453,56 @@ namespace ARC.Reports.DAL
                             TradeShare = (double)x["TradeShare"],
                             MarketType = x["MarketType"].ToString(),
                             InsertedDate = Convert.ToDateTime(x["InsertedDate"])
+                        }).ToList();
+            return null;
+        }
+
+        public static List<BrokerageMetricsYearly> BrokerageMetricsYearly()
+        {
+            DataTable myDataTable;
+            myDataTable = Helper.ExecuteReader(" SELECT [Period], [Active_CICs], [Trunover], [Port_Value] FROM [ARC_Reports].[dbo].[Brokerage_Metrics_Yearly] ORDER BY [Id] DESC");
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new BrokerageMetricsYearly
+                        {
+                            Period_0 = myfun(x[0].ToString()),
+                            Period_1 = "(" + x[0].ToString() + ")",
+                            Active_CICs = Helper.ToGFormat(x[1].ToString(), 0),
+                            Trunover = Helper.ToGFormat(x[2].ToString(), 2),
+                            Port_Value = Helper.ToGFormat(x[3].ToString(), 2),
+                        }).ToList();
+            return null;
+        }
+
+        public static string myfun(string str)
+        {
+            var x = str.Split('-');
+
+            string ret = string.Empty;
+            DateTime dateTime_0 = new DateTime(Convert.ToInt32(x[0].Split('/')[2].Trim()), Convert.ToInt32(x[0].Split('/')[1].Trim()), Convert.ToInt32(x[0].Split('/')[0].Trim()));
+            DateTime dateTime_1 = new DateTime(Convert.ToInt32(x[1].Split('/')[2].Trim()), Convert.ToInt32(x[1].Split('/')[1].Trim()), Convert.ToInt32(x[1].Split('/')[0].Trim()));
+
+            ret = dateTime_0.ToString("MMM", CultureInfo.InvariantCulture) + " " + dateTime_0.Year;
+            ret += " - ";
+            ret += dateTime_1.ToString("MMM", CultureInfo.InvariantCulture) + " " + dateTime_1.Year;
+
+            return ret;
+        }
+
+        public static List<BrokerageMetricsMonthly> BrokerageMetricsMonthly()
+        {
+            DataTable myDataTable;
+            myDataTable = Helper.ExecuteReader(" SELECT [Month], [Active_CICs], [Turnover], [Port_Value] FROM [ARC_Reports].[dbo].[Brokerage_Metrics_Monthly] ORDER BY [Id] DESC");
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new BrokerageMetricsMonthly
+                        {
+                            Months = x[0].ToString(),
+                            Active_CICs = Helper.ToGFormat(x[1].ToString(), 0),
+                            Turnover = Helper.ToGFormat(x[2].ToString(), 2),
+                            Port_Value = Helper.ToGFormat(x[3].ToString(), 2),
                         }).ToList();
             return null;
         }

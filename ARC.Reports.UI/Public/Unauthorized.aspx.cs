@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ARC.Reports.UI.Public
 {
-    public partial class Unauthorized1 : System.Web.UI.Page
+    public partial class Unauthorized : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

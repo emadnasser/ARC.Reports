@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Unauthorized.aspx.cs" Inherits="ARC.Reports.UI.Public.Unauthorized1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Admin.Master" AutoEventWireup="true" CodeBehind="Unauthorized.aspx.cs" Inherits="ARC.Reports.UI.Public.Unauthorized" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

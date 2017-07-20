@@ -45,7 +45,7 @@
     <link href="../assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/ace-fonts.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/ace-skins.css" rel="stylesheet" type="text/css" />
-    
+
     <link rel="shortcut icon" href="~/icon.ico">
 
     <style>
@@ -137,6 +137,37 @@
                                         <a href="<%= ResolveUrl("~/Pages/MarketShareDetails.aspx") %>">
                                             <i class="menu-icon fa fa-caret-right"></i>
                                             Market Share Details
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu nav-show" style="display: block;">
+                            <li class="open">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Brokerage Metrics
+									<b class="arrow fa fa-angle-down"></b>
+                                </a>
+
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                    <li class="">
+                                        <a href="<%= ResolveUrl("~/Pages/BrokerageMetricsYearly.aspx") %>">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Brokerage Metrics Yearly
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                    <li class="">
+                                        <a href="<%= ResolveUrl("~/Pages/BrokerageMetricsMonthly.aspx") %>">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Brokerage Metrics Monthly
                                         </a>
                                         <b class="arrow"></b>
                                     </li>
