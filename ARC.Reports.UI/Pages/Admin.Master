@@ -140,34 +140,10 @@
                                         </a>
                                         <b class="arrow"></b>
                                     </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu nav-show" style="display: block;">
-                            <li class="open">
-                                <a href="#" class="dropdown-toggle">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Brokerage Metrics
-									<b class="arrow fa fa-angle-down"></b>
-                                </a>
-
-                                <b class="arrow"></b>
-
-                                <ul class="submenu">
                                     <li class="">
-                                        <a href="<%= ResolveUrl("~/Pages/BrokerageMetricsYearly.aspx") %>">
+                                        <a href="<%= ResolveUrl("~/Pages/BrokerageMetrics.aspx") %>">
                                             <i class="menu-icon fa fa-caret-right"></i>
-                                            Brokerage Metrics Yearly
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-                                    <li class="">
-                                        <a href="<%= ResolveUrl("~/Pages/BrokerageMetricsMonthly.aspx") %>">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            Brokerage Metrics Monthly
+                                            Brokerage Metrics
                                         </a>
                                         <b class="arrow"></b>
                                     </li>

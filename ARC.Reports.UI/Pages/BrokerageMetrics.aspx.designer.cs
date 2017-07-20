@@ -10,7 +10,7 @@
 namespace ARC.Reports.Pages {
     
     
-    public partial class BrokerageMetricsMonthly {
+    public partial class BrokerageMetrics {
         
         /// <summary>
         /// ASPxGridView0 control.
@@ -47,5 +47,41 @@ namespace ARC.Reports.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridViewExporter gridExport_0;
+        
+        /// <summary>
+        /// ASPxGridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
+        
+        /// <summary>
+        /// ASPxButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton ASPxButton2;
+        
+        /// <summary>
+        /// ASPxTimer2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
+        
+        /// <summary>
+        /// gridExport_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_1;
     }
 }

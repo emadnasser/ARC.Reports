@@ -566,8 +566,7 @@
     <Content Include="Content\site.css" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.png" />
-    <Content Include="Pages\BrokerageMetricsMonthly.aspx" />
-    <Content Include="Pages\BrokerageMetricsYearly.aspx" />
+    <Content Include="Pages\BrokerageMetrics.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\MarketShareTotals.aspx" />
     <Content Include="Pages\MarketShareDetails.aspx" />
@@ -600,19 +599,12 @@
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\BrokerageMetricsMonthly.aspx.cs">
-      <DependentUpon>BrokerageMetricsMonthly.aspx</DependentUpon>
+    <Compile Include="Pages\BrokerageMetrics.aspx.cs">
+      <DependentUpon>BrokerageMetrics.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\BrokerageMetricsMonthly.aspx.designer.cs">
-      <DependentUpon>BrokerageMetricsMonthly.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\BrokerageMetricsYearly.aspx.cs">
-      <DependentUpon>BrokerageMetricsYearly.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\BrokerageMetricsYearly.aspx.designer.cs">
-      <DependentUpon>BrokerageMetricsYearly.aspx</DependentUpon>
+    <Compile Include="Pages\BrokerageMetrics.aspx.designer.cs">
+      <DependentUpon>BrokerageMetrics.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
