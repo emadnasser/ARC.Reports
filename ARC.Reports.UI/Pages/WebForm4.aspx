@@ -156,7 +156,10 @@
         <SeriesSerializable>
             <dx:Series Name="Market Share Value" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="Market_Share_Value">
                 <ViewSerializable>
-                    <dx:LineSeriesView MarkerVisibility="False"></dx:LineSeriesView>
+                    <dx:LineSeriesView MarkerVisibility="True">
+                        <LineMarkerOptions Kind="Square" Size="1">
+                        </LineMarkerOptions>
+                    </dx:LineSeriesView>
                 </ViewSerializable>
                 <LabelSerializable>
                     <dx:PointSeriesLabel Angle="90">
@@ -165,8 +168,8 @@
             </dx:Series>
             <dx:Series Name="ETS Share Value" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="ETS_Share_Value">
                 <ViewSerializable>
-                    <dx:AreaSeriesView Transparency="0" PaneName="Pane 1" AxisYName="secondaryAxisY1" MarkerVisibility="False">
-                    </dx:AreaSeriesView>
+                    <dx:LineSeriesView AxisYName="secondaryAxisY1" MarkerVisibility="False" PaneName="Pane 1">
+                    </dx:LineSeriesView>
                 </ViewSerializable>
                 <LabelSerializable>
                     <dx:PointSeriesLabel>
@@ -187,46 +190,36 @@
         <CrosshairOptions ArgumentLineColor="DeepSkyBlue" ArgumentLineStyle-Thickness="2"
             ShowOnlyInFocusedPane="False">
         </CrosshairOptions>
-        <Legend AlignmentHorizontal="Left" Direction="LeftToRight" AlignmentVertical="BottomOutside"></Legend>
+        <Legend AlignmentHorizontal="Center" Direction="LeftToRight" AlignmentVertical="BottomOutside" MarkerSize="18, 35" Visibility="True">
+            <Border Visibility="True" />
+        </Legend>
         <BorderOptions Visibility="False" />
-        <Titles>
-            <dx:ChartTitle Text="Weather in London" Visibility="False"></dx:ChartTitle>
-        </Titles>
         <DiagramSerializable>
             <dx:XYDiagram PaneDistance="4">
                 <AxisX Title-Text="Date" VisibleInPanesSerializable="1">
-                    <DateTimeScaleOptions MeasureUnit="Hour" GridAlignment="Hour" AutoGrid="False" GridSpacing="6" />
-                    <Tickmarks MinorVisible="False" />
-                    <Label Staggered="True" TextPattern="{A:dd}">
+                    <Tickmarks MinorVisible="False" Visible="False" />
+                    <Label Staggered="True" TextPattern="{A:dd}" Visible="False">
                     </Label>
                     <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
-
-                    <GridLines Visible="True"></GridLines>
                 </AxisX>
                 <AxisY Title-Text="Market Share Value" Title-Visibility="True" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="-1">
                     <WholeRange AlwaysShowZeroLevel="False"></WholeRange>
-                    <GridLines MinorVisible="True"></GridLines>
+                    <GridLines MinorVisible="True" Visible="False"></GridLines>
                     <Label TextPattern="{V:G}">
                     </Label>
                 </AxisY>
                 <SecondaryAxesY>
                     <dx:SecondaryAxisY AxisID="0" Alignment="Near" Title-Text="ETS Share Value" Title-Visibility="True" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="0" Name="secondaryAxisY1">
-
                         <VisualRange AutoSideMargins="False" SideMarginsValue="0"></VisualRange>
-
-                        <WholeRange Auto="False" MinValueSerializable="1014" MaxValueSerializable="1025" AutoSideMargins="False" SideMarginsValue="0"></WholeRange>
+<%--                        <WholeRange AlwaysShowZeroLevel="False" SideMarginsValue="0"></WholeRange>--%>
+                        <WholeRange Auto="False" MinValueSerializable="90000000" MaxValueSerializable="2000000000" AutoSideMargins="False" SideMarginsValue="5"></WholeRange>
                         <GridLines Visible="True" MinorVisible="True"></GridLines>
                         <Label TextPattern="{V:G}">
                         </Label>
-                        <NumericScaleOptions AutoGrid="False" GridSpacing="4" />
+                        <NumericScaleOptions AutoGrid="False" GridSpacing="15" />
                     </dx:SecondaryAxisY>
                     <dx:SecondaryAxisY AxisID="1" Alignment="Near" Title-Text="Market Share" Title-Visibility="True" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="1" Name="secondaryAxisY2">
-                        <ConstantLines>
-                            <dx:ConstantLine AxisValueSerializable="100" ShowInLegend="False" Title-Visible="False" Name="ConstantLine1" />
-                        </ConstantLines>
-
                         <VisualRange AutoSideMargins="False" SideMarginsValue="0"></VisualRange>
-
                         <WholeRange Auto="False" MinValueSerializable="0" MaxValueSerializable="40" AutoSideMargins="False" SideMarginsValue="5"></WholeRange>
                         <GridLines Visible="True" MinorVisible="True"></GridLines>
                         <Label TextPattern="{V:G}">
