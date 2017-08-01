@@ -7,36 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ARC.Reports.Pages {
+namespace ARC.Reports.Controls {
     
     
-    public partial class WebForm1 {
+    public partial class MarketShareTotal_2MQ {
         
         /// <summary>
-        /// WebChartControl2 control.
+        /// ASPxGridView6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl2;
+        protected global::DevExpress.Web.ASPxGridView ASPxGridView6;
         
         /// <summary>
-        /// WebChartControl1 control.
+        /// ASPxButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl1;
+        protected global::DevExpress.Web.ASPxButton ASPxButton1;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// ASPxTimer2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
+        
+        /// <summary>
+        /// gridExport_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_2;
     }
 }

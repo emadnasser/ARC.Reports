@@ -46,6 +46,7 @@
     <Compile Include="Common\Helper.cs" />
     <Compile Include="Entities\BrokerageMetricsMonthly.cs" />
     <Compile Include="Entities\BrokerageMetricsYearly.cs" />
+    <Compile Include="Entities\Rep_0018.cs" />
     <Compile Include="Entities\Rep_0013.cs" />
     <Compile Include="Entities\Rep_0012.cs" />
     <Compile Include="Entities\Rep_007.cs" />

@@ -388,7 +388,6 @@ namespace ARC.Reports.DAL
                             MarketShare = x[0].ToString(),
                             MarketTrades = x[1].ToString(),
                             Month = x[2].ToString(),
-
                         }).ToList();
             return null;
         }
@@ -503,6 +502,50 @@ namespace ARC.Reports.DAL
                             Active_CICs = Helper.ToGFormat(x[1].ToString(), 0),
                             Turnover = Helper.ToGFormat(x[2].ToString(), 2),
                             Port_Value = Helper.ToGFormat(x[3].ToString(), 2),
+                        }).ToList();
+            return null;
+        }
+
+        public static List<Rep_0018> Rep_0011a_Graph_Get(int pMarketType, int pDateType)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            DataTable myDataTable = new DataTable();
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SAM");
+
+                if (pDateType == 1)
+                    myDataTable = Helper.ExecuteReader("SELECT [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [Rep_0011]" +
+                                                        "WHERE[Type] = 'Value' AND[Market] = 'SAM' AND MONTH(date) = MONTH(GETDATE())", parameters);
+                else if (pDateType == 2)
+                    myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
+
+                else if (pDateType == 3)
+                    myDataTable = Helper.ExecuteReader("SELECT SUM([ETS_Share_Value]) AS [ETS_Share_Value], SUM([Market_Share_Value]) AS [Market_Share_Value], SUM([Percentage])/COUNT([Percentage]) AS [Percentage], YEAR(date) AS [date] FROM [Rep_0011]" +
+                                                        "WHERE[Type] = 'Value' AND[Market] = 'SAM' GROUP BY YEAR(date)", parameters);
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SEM");
+
+                if (pDateType == 1)
+                    myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND MONTH(date) = MONTH(GETDATE())", parameters);
+                else if (pDateType == 2)
+                    myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
+                else if (pDateType == 3)
+                    myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value'", parameters);
+            }
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new Rep_0018
+                        {
+                            ETS_Share_Value = Convert.ToDouble( x["ETS_Share_Value"]),
+                            Market_Share_Value = Convert.ToDouble(x["Market_Share_Value"]),
+                            Percentage = Convert.ToDouble(x["Percentage"]),
+                            date = Convert.ToDateTime(x["date"])
                         }).ToList();
             return null;
         }

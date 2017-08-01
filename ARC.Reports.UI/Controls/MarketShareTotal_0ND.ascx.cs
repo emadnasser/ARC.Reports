@@ -5,18 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ARC.Reports.Pages
+namespace ARC.Reports.Controls
 {
-    public partial class WebForm4 : System.Web.UI.Page
+    public partial class MarketShareTotal_0ND : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void myOption_ValueChanged(object sender, EventArgs e)
-        {
-            //if()
         }
     }
 }

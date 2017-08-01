@@ -79,6 +79,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\MarketShareTotal_0MD.ascx" />
+    <Content Include="Controls\MarketShareTotal_0ND.ascx" />
+    <Content Include="Controls\MarketShareTotal_1MM.ascx" />
+    <Content Include="Controls\MarketShareTotal_1NM.ascx" />
+    <Content Include="Controls\MarketShareTotal_2MQ.ascx" />
+    <Content Include="Controls\MarketShareTotal_2NQ.ascx" />
+    <Content Include="Controls\MarketShareTotal_3MY.ascx" />
+    <Content Include="Controls\MarketShareTotal_3NY.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="icon.ico" />
     <Content Include="packages.config" />
@@ -568,11 +576,10 @@
     <Content Include="Images\logo.png" />
     <Content Include="Pages\BrokerageMetrics.aspx" />
     <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\MarketShareGraph.aspx" />
+    <Content Include="Pages\MarketShareTotals2.aspx" />
     <Content Include="Pages\MarketShareTotals.aspx" />
     <Content Include="Pages\MarketShareDetails.aspx" />
-    <Content Include="Pages\WebForm1.aspx" />
-    <Content Include="Pages\WebForm2.aspx" />
-    <Content Include="Pages\WebForm3.aspx" />
     <Content Include="Pages\WebForm4.aspx" />
     <Content Include="Public\Unauthorized.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -581,6 +588,62 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\MarketShareTotal_0MD.ascx.cs">
+      <DependentUpon>MarketShareTotal_0MD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_0MD.ascx.designer.cs">
+      <DependentUpon>MarketShareTotal_0MD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_0ND.ascx.cs">
+      <DependentUpon>MarketShareTotal_0ND.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_0ND.ascx.designer.cs">
+      <DependentUpon>MarketShareTotal_0ND.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_1MM.ascx.cs">
+      <DependentUpon>MarketShareTotal_1MM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_1MM.ascx.designer.cs">
+      <DependentUpon>MarketShareTotal_1MM.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_1NM.ascx.cs">
+      <DependentUpon>MarketShareTotal_1NM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_1NM.ascx.designer.cs">
+      <DependentUpon>MarketShareTotal_1NM.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_2MQ.ascx.cs">
+      <DependentUpon>MarketShareTotal_2MQ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_2MQ.ascx.designer.cs">
+      <DependentUpon>MarketShareTotal_2MQ.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_2NQ.ascx.cs">
+      <DependentUpon>MarketShareTotal_2NQ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_2NQ.ascx.designer.cs">
+      <DependentUpon>MarketShareTotal_2NQ.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_3MY.ascx.cs">
+      <DependentUpon>MarketShareTotal_3MY.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_3MY.ascx.designer.cs">
+      <DependentUpon>MarketShareTotal_3MY.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_3NY.ascx.cs">
+      <DependentUpon>MarketShareTotal_3NY.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketShareTotal_3NY.ascx.designer.cs">
+      <DependentUpon>MarketShareTotal_3NY.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -616,6 +679,20 @@
     <Compile Include="Pages\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MarketShareGraph.aspx.cs">
+      <DependentUpon>MarketShareGraph.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MarketShareGraph.aspx.designer.cs">
+      <DependentUpon>MarketShareGraph.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MarketShareTotals2.aspx.cs">
+      <DependentUpon>MarketShareTotals2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MarketShareTotals2.aspx.designer.cs">
+      <DependentUpon>MarketShareTotals2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MarketShareTotals.aspx.cs">
       <DependentUpon>MarketShareTotals.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -629,27 +706,6 @@
     </Compile>
     <Compile Include="Pages\MarketShareDetails.aspx.designer.cs">
       <DependentUpon>MarketShareDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\WebForm3.aspx.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\WebForm3.aspx.designer.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\WebForm4.aspx.cs">
       <DependentUpon>WebForm4.aspx</DependentUpon>

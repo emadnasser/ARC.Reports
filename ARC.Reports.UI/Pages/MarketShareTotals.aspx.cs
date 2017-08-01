@@ -1,16 +1,13 @@
-﻿using System;
-using ARC.Reports.DAL;
-using DevExpress.Web;
-using System.Web.Security;
-using System.Linq;
-using System.IO;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraPrintingLinks;
+﻿using ARC.Reports.DAL;
 using DevExpress.Export;
-using System.Web.UI.WebControls;
-using System.Web.UI;
+using DevExpress.Web;
+using DevExpress.XtraPrinting;
+using System;
 using System.Drawing;
-using System.Collections.Generic;
+using System.Linq;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace ARC.Reports.Pages
 {
@@ -32,12 +29,6 @@ namespace ARC.Reports.Pages
             {
                 ASPxDateEdit dateEdit = ASPxPageControl1.FindControl("dateEdit") as ASPxDateEdit;
                 dateEdit.Date = DateTime.Today;
-
-                //ASPxComboBox ASPxComboBoxYears = ASPxPageControl1.FindControl("ASPxComboBoxYears") as ASPxComboBox;
-                //ASPxComboBoxYears.Items.Add("", 0);
-                //ASPxComboBoxYears.Items.Add("", 0);
-                //ASPxComboBoxYears.Items.Add("", 0);
-                //ASPxComboBoxYears.Items.Add("", 0);
             }
         }
 
@@ -63,7 +54,6 @@ namespace ARC.Reports.Pages
         protected void ASPxGridViews_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
         {
             GetData();
-
         }
 
         protected void dateEdit_ValueChanged(object sender, EventArgs e)
@@ -340,13 +330,6 @@ namespace ARC.Reports.Pages
         {
             var myData = SData.Rep_007Get(DateTime.Now.Year, 0);
 
-            //var sumLst = SData.Rep_008Get(0, DateTime.Now.Year.ToString());
-            //myData.Add(new DAL.Entities.Rep_007()
-            //{
-            //    MarketShare = sumLst.MarketShare,
-            //    MarketTrades = sumLst.MarketTrades,
-            //});
-
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s1" && myData.Count > 0)
             {
                 e.TotalValue = myData[0].MarketShare;
@@ -395,10 +378,7 @@ namespace ARC.Reports.Pages
             {
                 e.TotalValue = myData[11].MarketShare;
             }
-            //if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s13" && myData.Count > 12)
-            //{
-            //    e.TotalValue = myData[12].MarketShare;
-            //}
+
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t1" && myData.Count > 0)
             {
                 e.TotalValue = myData[0].MarketTrades;
@@ -447,20 +427,14 @@ namespace ARC.Reports.Pages
             {
                 e.TotalValue = myData[11].MarketTrades;
             }
-            //if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t13" && myData.Count > 12)
-            //{
-            //    e.TotalValue = myData[12].MarketTrades;
-            //}
 
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s13")
             {
-                //((ASPxSummaryItem)e.Item).SummaryType = DevExpress.Data.SummaryItemType.Sum;
                 e.TotalValue = myData[myData.Count - 1].MarketShare;
                 ((ASPxSummaryItem)e.Item).ShowInColumn = "MarketShare_13";
             }
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t13")
             {
-                //((ASPxSummaryItem)e.Item).SummaryType = DevExpress.Data.SummaryItemType.Sum;
                 e.TotalValue = myData[myData.Count - 1].MarketTrades;
                 ((ASPxSummaryItem)e.Item).ShowInColumn = "MarketTrades_13";
             }
@@ -470,13 +444,6 @@ namespace ARC.Reports.Pages
         {
             var myData = SData.Rep_007Get(DateTime.Now.Year, 1);
 
-            //var sumLst = SData.Rep_008Get(1, DateTime.Now.Year.ToString());
-            //myData.Add(new DAL.Entities.Rep_007()
-            //{
-            //    MarketShare = sumLst.MarketShare,
-            //    MarketTrades = sumLst.MarketTrades,
-            //});
-
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s1" && myData.Count > 0)
             {
                 e.TotalValue = myData[0].MarketShare;
@@ -525,10 +492,6 @@ namespace ARC.Reports.Pages
             {
                 e.TotalValue = myData[11].MarketShare;
             }
-            //if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s13" && myData.Count > 12)
-            //{
-            //    e.TotalValue = myData[12].MarketShare;
-            //}
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t1" && myData.Count > 0)
             {
                 e.TotalValue = myData[0].MarketTrades;
@@ -577,23 +540,19 @@ namespace ARC.Reports.Pages
             {
                 e.TotalValue = myData[11].MarketTrades;
             }
-            //if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t13" && myData.Count > 12)
-            //{
-            //    e.TotalValue = myData[12].MarketTrades;
-            //}
 
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s13")
             {
-                //((ASPxSummaryItem)e.Item).SummaryType = DevExpress.Data.SummaryItemType.Sum;
                 e.TotalValue = myData[myData.Count - 1].MarketShare;
                 ((ASPxSummaryItem)e.Item).ShowInColumn = "MarketShare_13";
             }
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t13")
             {
-                //((ASPxSummaryItem)e.Item).SummaryType = DevExpress.Data.SummaryItemType.Sum;
                 e.TotalValue = myData[myData.Count - 1].MarketTrades;
                 ((ASPxSummaryItem)e.Item).ShowInColumn = "MarketTrades_13";
             }
         }
+
+
     }
 }
