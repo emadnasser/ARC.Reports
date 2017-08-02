@@ -16,7 +16,6 @@ namespace ARC.Reports.Controls
         public string Date { get; set; }
         public int MarketType { get; set; }
 
-
         protected void Page_Init(object sender, EventArgs e)
         {
             string id = Request.LogonUserIdentity.Name.Trim();
@@ -53,13 +52,13 @@ namespace ARC.Reports.Controls
             {
                 var lst_2 = new List<Rep_0011>();
 
-                if (MarketType == 1)
+                if (MarketType == 0)
                 {
                     ASPxGridView0.DataSource = SData.Rep_002Get(0, Date);
                     lst_2 = SData.Rep_0011aGet(0, Date);
                     ASPxGridView2.DataSource = SData.Rep_0011bGet(0, Date);
                 }
-                else if (MarketType == 0)
+                else if (MarketType == 1)
                 {
                     ASPxGridView0.DataSource = SData.Rep_002Get(1, Date);
                     lst_2 = SData.Rep_0011aGet(1, Date);

@@ -11,6 +11,7 @@ namespace ARC.Reports.Controls
     public partial class MarketShareTotal_2MQ : System.Web.UI.UserControl
     {
         public string Date { get; set; }
+        public int MarketType { get; set; }
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -171,7 +172,15 @@ namespace ARC.Reports.Controls
                 ASPxGridView6.Columns["_3"].Caption = "3rd";
                 ASPxGridView6.Columns["_4"].Caption = "4th";
 
-                ASPxGridView6.DataSource = SData.Rep_005Get(DateTime.Now.Year, 0);
+                if (MarketType == 0)
+                {
+                    ASPxGridView6.DataSource = SData.Rep_005Get(DateTime.Now.Year, 0);
+                }
+                else if (MarketType == 1)
+                {
+                    ASPxGridView6.DataSource = SData.Rep_005Get(DateTime.Now.Year, 1);
+                }
+
                 ASPxGridView6.DataBind();
 
                 if (ASPxGridView6.Columns.Count >= 12)

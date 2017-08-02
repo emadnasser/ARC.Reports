@@ -40,6 +40,33 @@ namespace ARC.Reports.Pages {
         protected global::ARC.Reports.Controls.MarketShareTotal_0MD MarketShareTotal_0MD1;
         
         /// <summary>
+        /// MarketShareTotal_1MM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketShareTotal_1MM MarketShareTotal_1MM;
+        
+        /// <summary>
+        /// MarketShareTotal_2MQ control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketShareTotal_2MQ MarketShareTotal_2MQ;
+        
+        /// <summary>
+        /// MarketShareTotal_3MY control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketShareTotal_3MY MarketShareTotal_3MY;
+        
+        /// <summary>
         /// ContentControl2 control.
         /// </summary>
         /// <remarks>

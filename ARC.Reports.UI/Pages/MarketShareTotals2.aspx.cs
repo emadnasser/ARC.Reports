@@ -31,17 +31,20 @@ namespace ARC.Reports.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            GetData();
+            if (!Page.IsPostBack)
+                GetData();
         }
 
         protected void ASPxPageControl1_TabClick(object source, TabControlCancelEventArgs e)
         {
             try
             {
-                if (Session["ActiveTabIndex"] != null)
-                    ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
-                else
-                    Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
+                //if (Session["ActiveTabIndex"] != null)
+                //    ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
+                //else
+                //    Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
+
+                GetData(e.Tab.Index);
             }
             catch
             {
@@ -58,7 +61,7 @@ namespace ARC.Reports.Pages
             GetData();
         }
 
-        private void GetData()
+        private void GetData(int pIndex = 0)
         {
             try
             {
@@ -69,28 +72,31 @@ namespace ARC.Reports.Pages
                 if (myOption.SelectedIndex == 0)
                 {
                     MarketShareTotal_0MD1.Date = dateEdit.Date.ToShortDateString();
-                    MarketShareTotal_0MD1.MarketType = ASPxPageControl1.TabIndex;
+                    MarketShareTotal_0MD1.MarketType = pIndex;
 
                     dateEdit.Visible = true;
                     lblDate.Visible = true;
                 }
                 else if (myOption.SelectedIndex == 1)
                 {
-                    //MarketShareTotal_1MM.Date = dateEdit.Date.ToShortDateString();
+                    MarketShareTotal_1MM.Date = dateEdit.Date.ToShortDateString();
+                    MarketShareTotal_1MM.MarketType = pIndex;
 
                     dateEdit.Visible = false;
                     lblDate.Visible = false;
                 }
                 else if (myOption.SelectedIndex == 2)
                 {
-                    //MarketShareTotal_2MQ.Date = dateEdit.Date.ToShortDateString();
+                    MarketShareTotal_2MQ.Date = dateEdit.Date.ToShortDateString();
+                    MarketShareTotal_2MQ.MarketType = pIndex;
 
                     dateEdit.Visible = false;
                     lblDate.Visible = false;
                 }
                 else if (myOption.SelectedIndex == 3)
                 {
-                    //MarketShareTotal_3MY.Date = dateEdit.Date.ToShortDateString();
+                    MarketShareTotal_3MY.Date = dateEdit.Date.ToShortDateString();
+                    MarketShareTotal_3MY.MarketType = pIndex;
 
                     dateEdit.Visible = false;
                     lblDate.Visible = false;
