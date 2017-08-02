@@ -517,35 +517,38 @@ namespace ARC.Reports.DAL
                 parameters[0] = new SqlParameter("@pMarketType", "SAM");
 
                 if (pDateType == 1)
-                    myDataTable = Helper.ExecuteReader("SELECT [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [Rep_0011]" +
-                                                        "WHERE[Type] = 'Value' AND[Market] = 'SAM' AND MONTH(date) = MONTH(GETDATE())", parameters);
+                    myDataTable = Helper.ExecuteReader("SELECT TOP (5) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [Rep_0011]" +
+                                                        "WHERE[Type] = 'Value' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
                 else if (pDateType == 2)
-                    myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
+                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
 
                 else if (pDateType == 3)
-                    myDataTable = Helper.ExecuteReader("SELECT SUM([ETS_Share_Value]) AS [ETS_Share_Value], SUM([Market_Share_Value]) AS [Market_Share_Value], SUM([Percentage])/COUNT([Percentage]) AS [Percentage], YEAR(date) AS [date] FROM [Rep_0011]" +
-                                                        "WHERE[Type] = 'Value' AND[Market] = 'SAM' GROUP BY YEAR(date)", parameters);
+                    myDataTable = Helper.ExecuteReader("SELECT [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
+                //Helper.ExecStoredProcedure("GetGraphYear_1");
             }
             else
             {
                 parameters[0] = new SqlParameter("@pMarketType", "SEM");
 
                 if (pDateType == 1)
-                    myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND MONTH(date) = MONTH(GETDATE())", parameters);
+                    myDataTable = Helper.ExecuteReader("SELECT TOP (5) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [Rep_0011]" +
+                                                        "WHERE[Type] = 'Value' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
                 else if (pDateType == 2)
-                    myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
+                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
                 else if (pDateType == 3)
-                    myDataTable = Helper.ExecuteReader("SELECT * FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value'", parameters);
+                    myDataTable = Helper.ExecuteReader("SELECT [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
+                //Helper.ExecStoredProcedure("GetGraphYear_2");
             }
 
             if (myDataTable != null)
                 return (from DataRow x in myDataTable.Rows
                         select new Rep_0018
                         {
-                            ETS_Share_Value = Convert.ToDouble( x["ETS_Share_Value"]),
+                            ETS_Share_Value = Convert.ToDouble(x["ETS_Share_Value"]),
                             Market_Share_Value = Convert.ToDouble(x["Market_Share_Value"]),
                             Percentage = Convert.ToDouble(x["Percentage"]),
-                            date = Convert.ToDateTime(x["date"])
+                            date = Convert.ToDateTime(x["date"]),
+                            date2 = Convert.ToDateTime(x["date"])
                         }).ToList();
             return null;
         }

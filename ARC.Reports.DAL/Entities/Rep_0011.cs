@@ -12,5 +12,6 @@ namespace ARC.Reports.DAL.Entities
         public double Market_Share_Value { get; set; }
         public double Percentage { get; set; }
         public Nullable<System.DateTime> date { get; set; }
+        public Nullable<System.DateTime> date2 { get; set; }
     }
 }

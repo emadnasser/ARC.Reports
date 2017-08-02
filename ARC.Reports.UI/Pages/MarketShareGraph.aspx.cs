@@ -45,10 +45,12 @@ namespace ARC.Reports.Pages
         {
             try
             {
-                if (Session["ActiveTabIndex"] != null)
-                    ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
-                else
-                    Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
+                //if (Session["ActiveTabIndex"] != null)
+                //    ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
+                //else
+                //    Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
+
+                GetData(e.Tab.Index);
             }
             catch
             {
@@ -66,13 +68,11 @@ namespace ARC.Reports.Pages
             GetData();
         }
 
-        private void GetData()
+        private void GetData(int pIndex = 0)
         {
             //try
             //{
-            //ASPxDateEdit dateEdit = ASPxPageControl1.FindControl("dateEdit") as ASPxDateEdit;
             ASPxComboBox myOption = ASPxPageControl1.FindControl("myOption") as ASPxComboBox;
-            //Label lblDate = ASPxPageControl1.FindControl("lblDate") as Label;
 
             List<Rep_0018> x1 = new List<Rep_0018>();
             List<Rep_0018> x2 = new List<Rep_0018>();
@@ -86,16 +86,61 @@ namespace ARC.Reports.Pages
             {
                 x1 = SData.Rep_0011a_Graph_Get(0, 1);
                 y1 = SData.Rep_0011a_Graph_Get(1, 1);
+
+                if (pIndex == 0)
+                {
+                    WebChartControl2.Visible = false;
+                    WebChartControl3.Visible = false;
+
+                    WebChartControl1.Visible = true;
+                }
+                else if(pIndex == 1)
+                {
+                    WebChartControl5.Visible = false;
+                    WebChartControl6.Visible = false;
+
+                    WebChartControl4.Visible = true;
+                }
             }
             else if (myOption.SelectedIndex == 1)
             {
                 x2 = SData.Rep_0011a_Graph_Get(0, 2);
                 y2 = SData.Rep_0011a_Graph_Get(1, 2);
+
+                if (pIndex == 0)
+                {
+                    WebChartControl1.Visible = false;
+                    WebChartControl3.Visible = false;
+
+                    WebChartControl2.Visible = true;
+                }
+                else if (pIndex == 1)
+                {
+                    WebChartControl4.Visible = false;
+                    WebChartControl6.Visible = false;
+
+                    WebChartControl5.Visible = true;
+                }
             }
             else if (myOption.SelectedIndex == 2)
             {
                 x3 = SData.Rep_0011a_Graph_Get(0, 3);
                 y3 = SData.Rep_0011a_Graph_Get(1, 3);
+
+                if (pIndex == 0)
+                {
+                    WebChartControl1.Visible = false;
+                    WebChartControl2.Visible = false;
+
+                    WebChartControl3.Visible = true;
+                }
+                else if (pIndex == 1)
+                {
+                    WebChartControl4.Visible = false;
+                    WebChartControl5.Visible = false;
+
+                    WebChartControl6.Visible = true;
+                }
             }
 
             WebChartControl1.DataSource = x1;
