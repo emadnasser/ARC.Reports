@@ -161,9 +161,9 @@ namespace ARC.Reports.Pages
                     ASPxGridView6.DataSource = SData.Rep_005Get(DateTime.Now.Year, 0);
                     ASPxGridView6.DataBind();
 
-                    if (ASPxGridView6.Columns.Count >= 12)
+                    if (ASPxGridView6.Columns.Count >= 6)
                     {
-                        var month = DateTime.Now.Month;
+                        var month = 5;
 
                         for (int i = month; i < 13; i++)
                         {
@@ -182,9 +182,9 @@ namespace ARC.Reports.Pages
                     ASPxGridView7.DataSource = SData.Rep_005Get(DateTime.Now.Year, 1);
                     ASPxGridView7.DataBind();
 
-                    if (ASPxGridView7.Columns.Count >= 12)
+                    if (ASPxGridView7.Columns.Count >= 6)
                     {
-                        var month = DateTime.Now.Month;
+                        var month = 5;
 
                         for (int i = month; i < 13; i++)
                         {
@@ -553,6 +553,9 @@ namespace ARC.Reports.Pages
             }
         }
 
+        protected void ASPxPageControl1_ActiveTabChanged(object source, TabControlEventArgs e)
+        {
 
+        }
     }
 }

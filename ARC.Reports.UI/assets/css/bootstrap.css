@@ -1736,7 +1736,9 @@ pre code {
     .col-lg-offset-0 { margin-left: 0%; }
 }
 
-table { background-color: transparent; }
+table { background-color: transparent;
+    direction: ltr;
+}
 
 caption {
     padding-top: 8px;

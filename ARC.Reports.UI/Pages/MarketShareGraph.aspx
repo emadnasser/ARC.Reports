@@ -1,4 +1,4 @@
-﻿<%@ Page Title="ARC Reports - Market Share Graph" Language="C#" MasterPageFile="~/Pages/Admin.Master" AutoEventWireup="true" CodeBehind="MarketShareGraph.aspx.cs" Inherits="ARC.Reports.Pages.MarketShareGraph" %>
+﻿<%@ Page Title="ARC Reports - Market Share Graphs" Language="C#" MasterPageFile="~/Pages/Admin.Master" AutoEventWireup="true" CodeBehind="MarketShareGraph.aspx.cs" Inherits="ARC.Reports.Pages.MarketShareGraph" %>
 
 <%@ Register Assembly="DevExpress.Web.v16.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
@@ -38,10 +38,10 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h4 class="header smaller lighter blue strong">Market Share Graph</h4>
+    <h4 class="header smaller lighter blue strong">Market Share Graphs</h4>
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-md-12 col-lg-12">
-            <dx:ASPxPageControl ID="ASPxPageControl1" runat="server" Theme="DevEx" Width="100%" ActiveTabIndex="1" EnableTheming="True" OnTabClick="ASPxPageControl1_TabClick">
+            <dx:ASPxPageControl ID="ASPxPageControl1" runat="server" Theme="DevEx" Width="100%" ActiveTabIndex="0" EnableTheming="True" OnTabClick="ASPxPageControl1_TabClick">
                 <TabPages>
                     <dx:TabPage Text="Main Market">
                         <ContentCollection>

@@ -38,6 +38,7 @@ namespace ARC.Reports.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if(!Page.IsPostBack)
             GetData();
         }
 
@@ -46,11 +47,11 @@ namespace ARC.Reports.Pages
             try
             {
                 //if (Session["ActiveTabIndex"] != null)
-                //    ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
+                //    e.Tab.Index = (int)Session["ActiveTabIndex"];
                 //else
-                //    Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
+                //    Session["ActiveTabIndex"] = e.Tab.Index;
 
-                GetData(e.Tab.Index);
+                //GetData(e.Tab.Index);
             }
             catch
             {
@@ -60,15 +61,13 @@ namespace ARC.Reports.Pages
         protected void ASPxGridViews_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
         {
             GetData();
-
         }
-
-        protected void dateEdit_ValueChanged(object sender, EventArgs e)
+        protected void myOption_ValueChanged(object sender, EventArgs e)
         {
             GetData();
         }
 
-        private void GetData(int pIndex = 0)
+        private void GetData()
         {
             //try
             //{
@@ -87,60 +86,60 @@ namespace ARC.Reports.Pages
                 x1 = SData.Rep_0011a_Graph_Get(0, 1);
                 y1 = SData.Rep_0011a_Graph_Get(1, 1);
 
-                if (pIndex == 0)
-                {
+                //if (pIndex == 0)
+                //{
                     WebChartControl2.Visible = false;
                     WebChartControl3.Visible = false;
 
                     WebChartControl1.Visible = true;
-                }
-                else if(pIndex == 1)
-                {
+                //}
+                //else if(pIndex == 1)
+                //{
                     WebChartControl5.Visible = false;
                     WebChartControl6.Visible = false;
 
                     WebChartControl4.Visible = true;
-                }
+                //}
             }
             else if (myOption.SelectedIndex == 1)
             {
                 x2 = SData.Rep_0011a_Graph_Get(0, 2);
                 y2 = SData.Rep_0011a_Graph_Get(1, 2);
 
-                if (pIndex == 0)
-                {
+                //if (pIndex == 0)
+                //{
                     WebChartControl1.Visible = false;
                     WebChartControl3.Visible = false;
 
                     WebChartControl2.Visible = true;
-                }
-                else if (pIndex == 1)
-                {
+                //}
+                //else if (pIndex == 1)
+                //{
                     WebChartControl4.Visible = false;
                     WebChartControl6.Visible = false;
 
                     WebChartControl5.Visible = true;
-                }
+                //}
             }
             else if (myOption.SelectedIndex == 2)
             {
                 x3 = SData.Rep_0011a_Graph_Get(0, 3);
                 y3 = SData.Rep_0011a_Graph_Get(1, 3);
 
-                if (pIndex == 0)
-                {
+                //if (pIndex == 0)
+                //{
                     WebChartControl1.Visible = false;
                     WebChartControl2.Visible = false;
 
                     WebChartControl3.Visible = true;
-                }
-                else if (pIndex == 1)
-                {
+                //}
+                //else if (pIndex == 1)
+                //{
                     WebChartControl4.Visible = false;
                     WebChartControl5.Visible = false;
 
                     WebChartControl6.Visible = true;
-                }
+                //}
             }
 
             WebChartControl1.DataSource = x1;
@@ -163,9 +162,6 @@ namespace ARC.Reports.Pages
             //}
         }
 
-        protected void myOption_ValueChanged(object sender, EventArgs e)
-        {
-            GetData();
-        }
+
     }
 }

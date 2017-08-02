@@ -130,7 +130,7 @@
                                     <li class="">
                                         <a href="<%= ResolveUrl("~/Pages/MarketShareGraph.aspx") %>">
                                             <i class="menu-icon fa fa-caret-right"></i>
-                                            Market Share Graph
+                                            Market Share Graphs
                                         </a>
                                         <b class="arrow"></b>
                                     </li>
