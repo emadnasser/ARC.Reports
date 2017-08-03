@@ -74,7 +74,7 @@
                                                 </dx:PointSeriesLabel>
                                             </LabelSerializable>
                                         </dx:Series>
-                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}" LabelsVisibility="False">
+                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}%" LabelsVisibility="False">
                                             <ViewSerializable>
                                                 <dx:LineSeriesView AxisYName="secondaryAxisY2" MarkerVisibility="True" PaneName="Pane 2">
                                                     <LineMarkerOptions Size="1">
@@ -102,6 +102,7 @@
                                                 </Label>
                                                 <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
+<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -140,7 +141,7 @@
                                 <dx:WebChartControl ID="WebChartControl2" runat="server" Height="480px" CssClass="AlignCenter TopLargeMargin"
                                     Width="1000px" ClientInstanceName="chart" CrosshairEnabled="True" Visible="false">
                                     <SeriesSerializable>
-                                        <dx:Series Name="Market Share Value" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="Market_Share_Value" CrosshairLabelPattern="{V:n2}">
+                                        <dx:Series Name="Market Share Value" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="Market_Share_Value" CrosshairLabelPattern="{V:n2}%">
                                             <ViewSerializable>
                                                 <dx:LineSeriesView MarkerVisibility="True">
                                                     <LineMarkerOptions Kind="Square" Size="1">
@@ -192,6 +193,7 @@
                                                 </Label>
                                                 <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" />
+<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -254,7 +256,7 @@
                                                 </dx:PointSeriesLabel>
                                             </LabelSerializable>
                                         </dx:Series>
-                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}" LabelsVisibility="False">
+                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}%" LabelsVisibility="False">
                                             <ViewSerializable>
                                                 <dx:LineSeriesView AxisYName="secondaryAxisY2" MarkerVisibility="True" PaneName="Pane 2">
                                                     <LineMarkerOptions Size="1">
@@ -282,6 +284,7 @@
                                                 </Label>
                                                 <CrosshairAxisLabelOptions Pattern="MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
+<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -350,7 +353,7 @@
                                                 </dx:PointSeriesLabel>
                                             </LabelSerializable>
                                         </dx:Series>
-                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}" LabelsVisibility="False">
+                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}%" LabelsVisibility="False">
                                             <ViewSerializable>
                                                 <dx:LineSeriesView AxisYName="secondaryAxisY2" MarkerVisibility="True" PaneName="Pane 2">
                                                     <LineMarkerOptions Size="1">
@@ -378,6 +381,7 @@
                                                 </Label>
                                                 <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
+<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -440,7 +444,7 @@
                                                 </dx:PointSeriesLabel>
                                             </LabelSerializable>
                                         </dx:Series>
-                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}" LabelsVisibility="False">
+                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}%" LabelsVisibility="False">
                                             <ViewSerializable>
                                                 <dx:LineSeriesView AxisYName="secondaryAxisY2" MarkerVisibility="True" PaneName="Pane 2">
                                                     <LineMarkerOptions Size="1">
@@ -468,6 +472,7 @@
                                                 </Label>
                                                 <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
+<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -530,7 +535,7 @@
                                                 </dx:PointSeriesLabel>
                                             </LabelSerializable>
                                         </dx:Series>
-                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}" LabelsVisibility="False">
+                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}%" LabelsVisibility="False">
                                             <ViewSerializable>
                                                 <dx:LineSeriesView AxisYName="secondaryAxisY2" MarkerVisibility="True" PaneName="Pane 2">
                                                     <LineMarkerOptions Size="1">
@@ -558,6 +563,7 @@
                                                 </Label>
                                                 <CrosshairAxisLabelOptions Pattern="MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
+                                                <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -606,7 +612,7 @@
                     <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
-            <%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
+                <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView0.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView1.PerformCallback();
@@ -615,10 +621,7 @@
                 MainContent_ASPxPageControl1_ASPxGridView4.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView5.PerformCallback();
                 }" />
-            </dx:ASPxTimer>--%>
+            </dx:ASPxTimer>
         </div>
     </div>
-
-    <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RepConnection %>" SelectCommand="SELECT [Buy_Total_Ammount], [Sell_Total_Ammount], [ETS_Share_Value], [Market_Share_Value], [Market_Share_Index], [DiffDayNom], [DiffDayPer], [Percentage], [Market], [date], [Type] FROM [Rep_0011]"></asp:SqlDataSource>--%>
-
 </asp:Content>

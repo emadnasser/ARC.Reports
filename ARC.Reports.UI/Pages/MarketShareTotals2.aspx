@@ -94,7 +94,7 @@
                     </dx:TabPage>
                 </TabPages>
                 <SpaceAfterTabsTemplate>
-                    <dx:ASPxDateEdit ID="dateEdit" runat="server" EditFormat="Custom" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="True" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
+                    <dx:ASPxDateEdit ID="dateEdit" runat="server" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="True" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" />
                     <asp:Label ID="lblDate" runat="server" Text="Date:"></asp:Label>
                     <dx:ASPxComboBox ID="myOption" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="myOption_ValueChanged">
                         <Items>
@@ -107,6 +107,12 @@
                     <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
+
+            <dx:ASPxDateEdit ID="ASPxDateEdit1" runat="server">
+                <validationsettings display="Dynamic">
+                </validationsettings>
+            </dx:ASPxDateEdit>
+            
         </div>
     </div>
 </asp:Content>
