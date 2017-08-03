@@ -9,7 +9,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        #MainContent_ASPxLabel1 {
+        #MainContent_ASPxLabel1 { 
             text-align: right;
             padding-top: 3px;
         }
