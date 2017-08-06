@@ -9,7 +9,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        #MainContent_ASPxLabel1 { 
+        #MainContent_ASPxLabel1 {
             text-align: right;
             padding-top: 3px;
         }
@@ -46,6 +46,101 @@
                     <dx:TabPage Text="Main Market">
                         <ContentCollection>
                             <dx:ContentControl ID="ContentControl1" runat="server">
+                                <%--One Day--%>
+                                <dx:WebChartControl ID="WebChartControl7" runat="server" Height="480px" CssClass="AlignCenter TopLargeMargin"
+                                    Width="1000px" ClientInstanceName="chart" CrosshairEnabled="True" Visible="false">
+                                    <SeriesSerializable>
+                                        <dx:Series Name="Market Share Value" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="Market_Share_Value" CrosshairLabelPattern="{V:n2}">
+                                            <ViewSerializable>
+                                                <dx:LineSeriesView MarkerVisibility="True">
+                                                    <LineMarkerOptions Kind="Square" Size="1">
+                                                    </LineMarkerOptions>
+                                                </dx:LineSeriesView>
+                                            </ViewSerializable>
+                                            <LabelSerializable>
+                                                <dx:PointSeriesLabel Angle="90">
+                                                </dx:PointSeriesLabel>
+                                            </LabelSerializable>
+                                        </dx:Series>
+                                        <dx:Series Name="ETS Share Value" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="ETS_Share_Value" CrosshairLabelPattern="{V:n2}">
+                                            <ViewSerializable>
+                                                <dx:LineSeriesView AxisYName="secondaryAxisY1" MarkerVisibility="True" PaneName="Pane 1">
+                                                    <LineMarkerOptions Kind="Diamond" Size="1">
+                                                    </LineMarkerOptions>
+                                                </dx:LineSeriesView>
+                                            </ViewSerializable>
+                                            <LabelSerializable>
+                                                <dx:PointSeriesLabel>
+                                                </dx:PointSeriesLabel>
+                                            </LabelSerializable>
+                                        </dx:Series>
+                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}%" LabelsVisibility="False">
+                                            <ViewSerializable>
+                                                <dx:LineSeriesView AxisYName="secondaryAxisY2" MarkerVisibility="True" PaneName="Pane 2">
+                                                    <LineMarkerOptions Size="1">
+                                                    </LineMarkerOptions>
+                                                </dx:LineSeriesView>
+                                            </ViewSerializable>
+                                            <LabelSerializable>
+                                                <dx:SideBySideBarSeriesLabel>
+                                                </dx:SideBySideBarSeriesLabel>
+                                            </LabelSerializable>
+                                        </dx:Series>
+                                    </SeriesSerializable>
+                                    <CrosshairOptions ArgumentLineColor="DeepSkyBlue" ArgumentLineStyle-Thickness="2"
+                                        ShowOnlyInFocusedPane="False">
+                                    </CrosshairOptions>
+                                    <Legend AlignmentHorizontal="Right" Direction="LeftToRight" AlignmentVertical="BottomOutside" MarkerSize="18, 35" Visibility="True">
+                                        <Border Visibility="True" />
+                                    </Legend>
+                                    <BorderOptions Visibility="False" />
+                                    <DiagramSerializable>
+                                        <dx:XYDiagram PaneDistance="4">
+                                            <AxisX Title-Text="Date" VisibleInPanesSerializable="1" Interlaced="True" InterlacedColor="244, 243, 237" MinorCount="5">
+                                                <GridLines Visible="False"></GridLines>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
+                                                </workdaysoptions>
+                                                <tickmarks length="2" />
+                                                <Label Staggered="True" TextPattern="{A:HH:mm}">
+                                                </Label>
+                                                <CrosshairAxisLabelOptions Pattern="h:mm" />
+                                                <DateTimeScaleOptions GridAlignment="Second" AutoGrid="False" GridSpacing="2" WorkdaysOnly="True" ScaleMode="Continuous" />
+<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
+                                                </workdaysoptions>
+                                            </AxisX>
+                                            <AxisY Title-Text="Market Share Value" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="-1">
+                                                <WholeRange AlwaysShowZeroLevel="False"></WholeRange>
+                                                <GridLines MinorVisible="True" Visible="False"></GridLines>
+                                                <Label TextPattern="{V:G}">
+                                                </Label>
+                                            </AxisY>
+                                            <SecondaryAxesY>
+                                                <dx:SecondaryAxisY AxisID="0" Alignment="Near" Title-Text="ETS Share Value" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="0" Name="secondaryAxisY1">
+                                                    <WholeRange AlwaysShowZeroLevel="False"></WholeRange>
+                                                    <GridLines MinorVisible="True"></GridLines>
+                                                    <Label TextPattern="{V:G}">
+                                                    </Label>
+                                                    <NumericScaleOptions AutoGrid="False" GridSpacing="100000000" />
+                                                </dx:SecondaryAxisY>
+                                                <dx:SecondaryAxisY AxisID="1" Alignment="Near" Title-Text="Market Share" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="1" Name="secondaryAxisY2">
+                                                    <VisualRange AutoSideMargins="False" SideMarginsValue="0"></VisualRange>
+                                                    <WholeRange Auto="False" MinValueSerializable="0" MaxValueSerializable="40" AutoSideMargins="False" SideMarginsValue="5"></WholeRange>
+                                                    <GridLines Visible="True" MinorVisible="True"></GridLines>
+                                                    <Label TextPattern="{V:G}">
+                                                    </Label>
+                                                    <NumericScaleOptions AutoGrid="False" GridSpacing="15" />
+                                                </dx:SecondaryAxisY>
+                                            </SecondaryAxesY>
+                                            <DefaultPane Weight="2"></DefaultPane>
+                                            <Panes>
+                                                <dx:XYDiagramPane PaneID="0" Name="Pane 1" Weight="2"></dx:XYDiagramPane>
+                                                <dx:XYDiagramPane PaneID="1" Name="Pane 2" Weight="1.8"></dx:XYDiagramPane>
+                                            </Panes>
+                                        </dx:XYDiagram>
+                                    </DiagramSerializable>
+                                </dx:WebChartControl>
                                 <%--Daily--%>
                                 <dx:WebChartControl ID="WebChartControl1" runat="server" Height="480px" CssClass="AlignCenter TopLargeMargin"
                                     Width="1000px" ClientInstanceName="chart" CrosshairEnabled="True" Visible="false">
@@ -96,13 +191,15 @@
                                     <BorderOptions Visibility="False" />
                                     <DiagramSerializable>
                                         <dx:XYDiagram PaneDistance="4">
-                                            <AxisX Title-Text="Date" VisibleInPanesSerializable="1" Interlaced="True" InterlacedColor="244, 243, 237" minorcount="1">
+                                            <AxisX Title-Text="Date" VisibleInPanesSerializable="1" Interlaced="True" InterlacedColor="244, 243, 237" MinorCount="1">
                                                 <GridLines Visible="False"></GridLines>
                                                 <Label Staggered="True" TextPattern="{A:dd/MMM}">
                                                 </Label>
                                                 <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
 <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -194,6 +291,8 @@
                                                 <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" />
 <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -285,6 +384,8 @@
                                                 <CrosshairAxisLabelOptions Pattern="MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
 <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -325,6 +426,101 @@
                     <dx:TabPage Text="Nomu Market">
                         <ContentCollection>
                             <dx:ContentControl ID="ContentControl2" runat="server">
+                                <%--One Day--%>
+                                <dx:WebChartControl ID="WebChartControl8" runat="server" Height="480px" CssClass="AlignCenter TopLargeMargin"
+                                    Width="1000px" ClientInstanceName="chart" CrosshairEnabled="True" Visible="false">
+                                    <SeriesSerializable>
+                                        <dx:Series Name="Market Share Value" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="Market_Share_Value" CrosshairLabelPattern="{V:n2}">
+                                            <ViewSerializable>
+                                                <dx:LineSeriesView MarkerVisibility="True">
+                                                    <LineMarkerOptions Kind="Square" Size="1">
+                                                    </LineMarkerOptions>
+                                                </dx:LineSeriesView>
+                                            </ViewSerializable>
+                                            <LabelSerializable>
+                                                <dx:PointSeriesLabel Angle="90">
+                                                </dx:PointSeriesLabel>
+                                            </LabelSerializable>
+                                        </dx:Series>
+                                        <dx:Series Name="ETS Share Value" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="ETS_Share_Value" CrosshairLabelPattern="{V:n2}">
+                                            <ViewSerializable>
+                                                <dx:LineSeriesView AxisYName="secondaryAxisY1" MarkerVisibility="True" PaneName="Pane 1">
+                                                    <LineMarkerOptions Kind="Diamond" Size="1">
+                                                    </LineMarkerOptions>
+                                                </dx:LineSeriesView>
+                                            </ViewSerializable>
+                                            <LabelSerializable>
+                                                <dx:PointSeriesLabel>
+                                                </dx:PointSeriesLabel>
+                                            </LabelSerializable>
+                                        </dx:Series>
+                                        <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LegendName="Default Legend" ValueDataMembersSerializable="Percentage" ArgumentDataMember="date" CrosshairLabelPattern="{V:n2}%" LabelsVisibility="False">
+                                            <ViewSerializable>
+                                                <dx:LineSeriesView AxisYName="secondaryAxisY2" MarkerVisibility="True" PaneName="Pane 2">
+                                                    <LineMarkerOptions Size="1">
+                                                    </LineMarkerOptions>
+                                                </dx:LineSeriesView>
+                                            </ViewSerializable>
+                                            <LabelSerializable>
+                                                <dx:SideBySideBarSeriesLabel>
+                                                </dx:SideBySideBarSeriesLabel>
+                                            </LabelSerializable>
+                                        </dx:Series>
+                                    </SeriesSerializable>
+                                    <CrosshairOptions ArgumentLineColor="DeepSkyBlue" ArgumentLineStyle-Thickness="2"
+                                        ShowOnlyInFocusedPane="False">
+                                    </CrosshairOptions>
+                                    <Legend AlignmentHorizontal="Right" Direction="LeftToRight" AlignmentVertical="BottomOutside" MarkerSize="18, 35" Visibility="True">
+                                        <Border Visibility="True" />
+                                    </Legend>
+                                    <BorderOptions Visibility="False" />
+                                    <DiagramSerializable>
+                                        <dx:XYDiagram PaneDistance="4">
+                                            <AxisX Title-Text="Date" VisibleInPanesSerializable="1" Interlaced="True" InterlacedColor="244, 243, 237" MinorCount="5">
+                                                <GridLines Visible="False"></GridLines>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
+                                                </workdaysoptions>
+                                                <tickmarks length="2" />
+                                                <Label Staggered="True" TextPattern="{A:HH:mm}">
+                                                </Label>
+                                                <CrosshairAxisLabelOptions Pattern="h:mm" />
+                                                <DateTimeScaleOptions GridAlignment="Second" AutoGrid="False" GridSpacing="2" WorkdaysOnly="True" ScaleMode="Continuous" />
+<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
+                                                </workdaysoptions>
+                                            </AxisX>
+                                            <AxisY Title-Text="Market Share Value" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="-1">
+                                                <WholeRange AlwaysShowZeroLevel="False"></WholeRange>
+                                                <GridLines MinorVisible="True" Visible="False"></GridLines>
+                                                <Label TextPattern="{V:G}">
+                                                </Label>
+                                            </AxisY>
+                                            <SecondaryAxesY>
+                                                <dx:SecondaryAxisY AxisID="0" Alignment="Near" Title-Text="ETS Share Value" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="0" Name="secondaryAxisY1">
+                                                    <WholeRange AlwaysShowZeroLevel="False"></WholeRange>
+                                                    <GridLines MinorVisible="True"></GridLines>
+                                                    <Label TextPattern="{V:G}">
+                                                    </Label>
+                                                    <NumericScaleOptions AutoGrid="False" GridSpacing="100000000" />
+                                                </dx:SecondaryAxisY>
+                                                <dx:SecondaryAxisY AxisID="1" Alignment="Near" Title-Text="Market Share" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="1" Name="secondaryAxisY2">
+                                                    <VisualRange AutoSideMargins="False" SideMarginsValue="0"></VisualRange>
+                                                    <WholeRange Auto="False" MinValueSerializable="0" MaxValueSerializable="40" AutoSideMargins="False" SideMarginsValue="5"></WholeRange>
+                                                    <GridLines Visible="True" MinorVisible="True"></GridLines>
+                                                    <Label TextPattern="{V:G}">
+                                                    </Label>
+                                                    <NumericScaleOptions AutoGrid="False" GridSpacing="15" />
+                                                </dx:SecondaryAxisY>
+                                            </SecondaryAxesY>
+                                            <DefaultPane Weight="2"></DefaultPane>
+                                            <Panes>
+                                                <dx:XYDiagramPane PaneID="0" Name="Pane 1" Weight="2"></dx:XYDiagramPane>
+                                                <dx:XYDiagramPane PaneID="1" Name="Pane 2" Weight="1.8"></dx:XYDiagramPane>
+                                            </Panes>
+                                        </dx:XYDiagram>
+                                    </DiagramSerializable>
+                                </dx:WebChartControl>
                                 <%--Daily--%>
                                 <dx:WebChartControl ID="WebChartControl4" runat="server" Height="480px" CssClass="AlignCenter TopLargeMargin"
                                     Width="1000px" ClientInstanceName="chart" CrosshairEnabled="True" Visible="false">
@@ -382,6 +578,8 @@
                                                 <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
 <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -473,6 +671,8 @@
                                                 <CrosshairAxisLabelOptions Pattern="dd/MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
 <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -563,7 +763,9 @@
                                                 </Label>
                                                 <CrosshairAxisLabelOptions Pattern="MM/yyyy" />
                                                 <DateTimeScaleOptions MeasureUnit="Day" GridAlignment="Day" AutoGrid="True" GridSpacing="6" WorkdaysOnly="True" />
-                                                <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
+                                                <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
                                                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
                                                 </workdaysoptions>
                                             </AxisX>
@@ -575,7 +777,7 @@
                                             </AxisY>
                                             <SecondaryAxesY>
                                                 <dx:SecondaryAxisY AxisID="0" Alignment="Near" Title-Text="ETS Share Value" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="0" Name="secondaryAxisY1">
-                                                    <GridLines MinorVisible="True" visible="True"></GridLines>
+                                                    <GridLines MinorVisible="True" Visible="True"></GridLines>
                                                     <Label TextPattern="{V:G}">
                                                     </Label>
                                                     <NumericScaleOptions AutoGrid="False" GridSpacing="1000000" />
@@ -604,15 +806,16 @@
                 <SpaceAfterTabsTemplate>
                     <dx:ASPxComboBox ID="myOption" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="myOption_ValueChanged">
                         <Items>
-                            <dx:ListEditItem Text="5 Days" Value="0" Selected="True" />
-                            <dx:ListEditItem Text="1 Month" Value="1" />
-                            <dx:ListEditItem Text="1 Year" Value="2" />
+                            <dx:ListEditItem Text="1 Day" Value="0" Selected="True" />
+                            <dx:ListEditItem Text="5 Days" Value="1" />
+                            <dx:ListEditItem Text="1 Month" Value="2" />
+                            <dx:ListEditItem Text="1 Year" Value="3" />
                         </Items>
                     </dx:ASPxComboBox>
                     <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
-                <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
+            <%--<dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView0.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView1.PerformCallback();
@@ -621,7 +824,7 @@
                 MainContent_ASPxPageControl1_ASPxGridView4.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView5.PerformCallback();
                 }" />
-            </dx:ASPxTimer>
+            </dx:ASPxTimer>--%>
         </div>
     </div>
 </asp:Content>

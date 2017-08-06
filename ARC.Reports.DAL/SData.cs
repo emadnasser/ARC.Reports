@@ -517,25 +517,39 @@ namespace ARC.Reports.DAL
                 parameters[0] = new SqlParameter("@pMarketType", "SAM");
 
                 if (pDateType == 1)
+                    myDataTable = Helper.ExecuteReader("SELECT" +
+                                                        " MAX([ETS_Share_Value]) AS[ETS_Share_Value], MAX([Market_Share_Value]) AS[Market_Share_Value], MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
+                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
+                                                        " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
+                                                        " ORDER BY[date]", parameters);
+                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                if (pDateType == 2)
                     myDataTable = Helper.ExecuteReader("SELECT TOP (5) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [Rep_0011]" +
                                                         "WHERE[Type] = 'Value' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
-                else if (pDateType == 2)
+                else if (pDateType == 3)
                     myDataTable = Helper.ExecuteReader("SELECT TOP(30) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
 
-                else if (pDateType == 3)
+                else if (pDateType == 4)
                     myDataTable = Helper.ExecuteReader("SELECT [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
-                //Helper.ExecStoredProcedure("GetGraphYear_1");
+                //Helper.ExecStored  Procedure("GetGraphYear_1");
             }
             else
             {
                 parameters[0] = new SqlParameter("@pMarketType", "SEM");
 
                 if (pDateType == 1)
+                    myDataTable = Helper.ExecuteReader("SELECT" +
+                                                        " MAX([ETS_Share_Value]) AS[ETS_Share_Value], MAX([Market_Share_Value]) AS[Market_Share_Value], MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
+                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
+                                                        " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
+                                                        " ORDER BY[date]", parameters);
+                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                if (pDateType == 2)
                     myDataTable = Helper.ExecuteReader("SELECT TOP (5) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [Rep_0011]" +
                                                         "WHERE[Type] = 'Value' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
-                else if (pDateType == 2)
-                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
                 else if (pDateType == 3)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
+                else if (pDateType == 4)
                     myDataTable = Helper.ExecuteReader("SELECT [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
                 //Helper.ExecStoredProcedure("GetGraphYear_2");
             }
