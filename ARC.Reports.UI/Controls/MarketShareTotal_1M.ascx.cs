@@ -8,7 +8,7 @@ using System.Web.Security;
 
 namespace ARC.Reports.Controls
 {
-    public partial class MarketShareTotal_2MQ : System.Web.UI.UserControl
+    public partial class MarketShareTotal_1M : System.Web.UI.UserControl
     {
         public string Date { get; set; }
         public int MarketType { get; set; }
@@ -45,7 +45,7 @@ namespace ARC.Reports.Controls
         {
             GetData();
 
-            gridExport_2.FileName = "Market Share Totals Main - Quarterly";
+            gridExport_2.FileName = "Market Share Totals Main - Monthly";
             gridExport_2.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
         }
 
@@ -167,18 +167,19 @@ namespace ARC.Reports.Controls
         {
             try
             {
-                ASPxGridView6.Columns["_1"].Caption = "1st";
-                ASPxGridView6.Columns["_2"].Caption = "2nd";
-                ASPxGridView6.Columns["_3"].Caption = "3rd";
-                ASPxGridView6.Columns["_4"].Caption = "4th";
+                ASPxGridView6.Columns["_1"].Caption = "Jan";
+                ASPxGridView6.Columns["_2"].Caption = "Feb";
+                ASPxGridView6.Columns["_3"].Caption = "Mar";
+                ASPxGridView6.Columns["_4"].Caption = "Apr";
+                ASPxGridView6.Columns["_13"].Caption = DateTime.Now.ToString("MMM");
 
                 if (MarketType == 0)
                 {
-                    ASPxGridView6.DataSource = SData.Rep_005Get(DateTime.Now.Year, 0);
+                    ASPxGridView6.DataSource = SData.Rep_003Get(DateTime.Now.Year, 0);
                 }
                 else if (MarketType == 1)
                 {
-                    ASPxGridView6.DataSource = SData.Rep_005Get(DateTime.Now.Year, 1);
+                    ASPxGridView6.DataSource = SData.Rep_003Get(DateTime.Now.Year, 1);
                 }
 
                 ASPxGridView6.DataBind();

@@ -32,8 +32,7 @@
     <script>
         $(document).ready(function () {
             $(function () {
-                //$("#sidebar > ul > li > ul > li > ul > li:nth-child(2)").addClass("active");
-                $("#sidebar > ul > li > ul:nth-child(3) > li > ul > li:nth-child(3)").addClass("active");
+                $("#sidebar > ul > li > ul:nth-child(3) > li > ul > li:nth-child(2)").addClass("active");
             });
         });
     </script>

@@ -1,14 +1,17 @@
 ﻿using ARC.Reports.DAL;
+using ARC.Reports.DAL.Entities;
 using DevExpress.Export;
 using DevExpress.Web;
 using DevExpress.XtraPrinting;
 using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web.Security;
 
 namespace ARC.Reports.Controls
 {
-    public partial class MarketShareTotal_3MY : System.Web.UI.UserControl
+    public partial class MarketShareTotal_0D : System.Web.UI.UserControl
     {
         public string Date { get; set; }
         public int MarketType { get; set; }
@@ -36,36 +39,42 @@ namespace ARC.Reports.Controls
             GetData();
         }
 
-        protected void dateEdit_ValueChanged(object sender, EventArgs e)
-        {
-            GetData();
-        }
-
         protected void ASPxButton1_Click(object sender, EventArgs e)
         {
             GetData();
 
-            gridExport_4.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
+            gridExport_0.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
         }
 
         private void GetData()
         {
             try
             {
-                ASPxGridView8.Columns["_1"].Caption = (DateTime.Now.Year - 3).ToString();
-                ASPxGridView8.Columns["_2"].Caption = (DateTime.Now.Year - 2).ToString();
-                ASPxGridView8.Columns["_3"].Caption = (DateTime.Now.Year - 1).ToString();
+                var lst_2 = new List<Rep_0011>();
 
                 if (MarketType == 0)
                 {
-                    ASPxGridView8.DataSource = SData.Rep_004Get(0);
+                    ASPxGridView0.DataSource = SData.Rep_002Get(0, Date);
+                    lst_2 = SData.Rep_0011aGet(0, Date);
+                    ASPxGridView2.DataSource = SData.Rep_0011bGet(0, Date);
                 }
                 else if (MarketType == 1)
                 {
-                    ASPxGridView8.DataSource = SData.Rep_004Get(1);
+                    ASPxGridView0.DataSource = SData.Rep_002Get(1, Date);
+                    lst_2 = SData.Rep_0011aGet(1, Date);
+                    ASPxGridView2.DataSource = SData.Rep_0011bGet(1, Date);
                 }
 
-                ASPxGridView8.DataBind();
+                if (Convert.ToDouble(lst_2[0].DiffDayPer) >= 0)
+                    ASPxGridView1.Columns[4].CellStyle.ForeColor = Color.Green;
+                else if (Convert.ToDouble(lst_2[0].DiffDayPer) < 0)
+                    ASPxGridView1.Columns[4].CellStyle.ForeColor = Color.Red;
+
+                ASPxGridView1.DataSource = lst_2;
+
+                ASPxGridView0.DataBind();
+                ASPxGridView1.DataBind();
+                ASPxGridView2.DataBind();
             }
             catch
             {

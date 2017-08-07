@@ -10,16 +10,16 @@
 namespace ARC.Reports.Controls {
     
     
-    public partial class MarketShareTotal_3MY {
+    public partial class MarketShareTotal_1M {
         
         /// <summary>
-        /// ASPxGridView8 control.
+        /// ASPxGridView6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView8;
+        protected global::DevExpress.Web.ASPxGridView ASPxGridView6;
         
         /// <summary>
         /// ASPxButton1 control.
@@ -31,21 +31,21 @@ namespace ARC.Reports.Controls {
         protected global::DevExpress.Web.ASPxButton ASPxButton1;
         
         /// <summary>
-        /// ASPxTimer3 control.
+        /// ASPxTimer2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer3;
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
         
         /// <summary>
-        /// gridExport_4 control.
+        /// gridExport_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_4;
+        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_2;
     }
 }

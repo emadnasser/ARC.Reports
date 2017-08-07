@@ -31,67 +31,40 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ContentControl ContentControl1;
         
         /// <summary>
-        /// ASPxGridView0 control.
+        /// MarketShareTotal_0D control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView0;
+        protected global::ARC.Reports.Controls.MarketShareTotal_0D MarketShareTotal_0D;
         
         /// <summary>
-        /// ASPxGridView6 control.
+        /// MarketShareTotal_1M control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView6;
+        protected global::ARC.Reports.Controls.MarketShareTotal_1M MarketShareTotal_1M;
         
         /// <summary>
-        /// ASPxGridView8 control.
+        /// MarketShareTotal_2Q control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView8;
+        protected global::ARC.Reports.Controls.MarketShareTotal_2Q MarketShareTotal_2Q;
         
         /// <summary>
-        /// ASPxButton1 control.
+        /// MarketShareTotal_3Y control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton ASPxButton1;
-        
-        /// <summary>
-        /// pnlLastGrids_1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLastGrids_1;
-        
-        /// <summary>
-        /// ASPxGridView2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView2;
-        
-        /// <summary>
-        /// ASPxGridView4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView4;
+        protected global::ARC.Reports.Controls.MarketShareTotal_3Y MarketShareTotal_3Y;
         
         /// <summary>
         /// ContentControl2 control.
@@ -103,147 +76,39 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ContentControl ContentControl2;
         
         /// <summary>
-        /// ASPxGridView1 control.
+        /// MarketShareTotal_0D1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
+        protected global::ARC.Reports.Controls.MarketShareTotal_0D MarketShareTotal_0D1;
         
         /// <summary>
-        /// ASPxGridView7 control.
+        /// MarketShareTotal_1M1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView7;
+        protected global::ARC.Reports.Controls.MarketShareTotal_1M MarketShareTotal_1M1;
         
         /// <summary>
-        /// ASPxGridView9 control.
+        /// MarketShareTotal_2Q1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView9;
+        protected global::ARC.Reports.Controls.MarketShareTotal_2Q MarketShareTotal_2Q1;
         
         /// <summary>
-        /// ASPxButton2 control.
+        /// MarketShareTotal_3Y1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton ASPxButton2;
-        
-        /// <summary>
-        /// pnlLastGrids_2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLastGrids_2;
-        
-        /// <summary>
-        /// ASPxGridView3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView3;
-        
-        /// <summary>
-        /// ASPxGridView5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView5;
-        
-        /// <summary>
-        /// ASPxTimer1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer1;
-        
-        /// <summary>
-        /// ASPxTimer2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
-        
-        /// <summary>
-        /// ASPxTimer3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer3;
-        
-        /// <summary>
-        /// gridExport_0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_0;
-        
-        /// <summary>
-        /// gridExport_1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_1;
-        
-        /// <summary>
-        /// gridExport_2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_2;
-        
-        /// <summary>
-        /// gridExport_3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_3;
-        
-        /// <summary>
-        /// gridExport_4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_4;
-        
-        /// <summary>
-        /// gridExport_5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter gridExport_5;
+        protected global::ARC.Reports.Controls.MarketShareTotal_3Y MarketShareTotal_3Y1;
     }
 }

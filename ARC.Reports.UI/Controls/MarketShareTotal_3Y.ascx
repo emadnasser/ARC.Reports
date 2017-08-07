@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MarketShareTotal_3MY.ascx.cs" Inherits="ARC.Reports.Controls.MarketShareTotal_3MY" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MarketShareTotal_3Y.ascx.cs" Inherits="ARC.Reports.Controls.MarketShareTotal_3Y" %>
 
 <%@ Register Assembly="DevExpress.Web.v16.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
@@ -19,7 +19,9 @@
                             <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
                             <HeaderStyle HorizontalAlign="Center" />
                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                            <CellStyle HorizontalAlign="Center" />
+                            <CellStyle HorizontalAlign="Center" BackColor="#D7DCEA" />
+                            <FooterCellStyle BackColor="#D7DCEA">
+                            </FooterCellStyle>
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="MarketTrades_1" VisibleIndex="2" Caption="Trades">
                             <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
@@ -36,7 +38,9 @@
                             <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
                             <HeaderStyle HorizontalAlign="Center" />
                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                            <CellStyle HorizontalAlign="Center" />
+                            <CellStyle HorizontalAlign="Center" BackColor="#D7DCEA" />
+                            <FooterCellStyle BackColor="#D7DCEA">
+                            </FooterCellStyle>
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="MarketTrades_2" VisibleIndex="4" Caption="Trades">
                             <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
@@ -53,7 +57,9 @@
                             <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
                             <HeaderStyle HorizontalAlign="Center" />
                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                            <CellStyle HorizontalAlign="Center" />
+                            <CellStyle HorizontalAlign="Center" BackColor="#D7DCEA" />
+                            <FooterCellStyle BackColor="#D7DCEA">
+                            </FooterCellStyle>
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="MarketTrades_3" VisibleIndex="6" Caption="Trades">
                             <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>

@@ -10,7 +10,7 @@
 namespace ARC.Reports.Controls {
     
     
-    public partial class MarketShareTotal_2MQ {
+    public partial class MarketShareTotal_2Q {
         
         /// <summary>
         /// ASPxGridView6 control.

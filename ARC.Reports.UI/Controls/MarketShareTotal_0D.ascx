@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MarketShareTotal_0MD.ascx.cs" Inherits="ARC.Reports.Controls.MarketShareTotal_0MD" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MarketShareTotal_0D.ascx.cs" Inherits="ARC.Reports.Controls.MarketShareTotal_0D" %>
 
 <%@ Register Assembly="DevExpress.Web.v16.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
