@@ -105,7 +105,6 @@
                 </Footer>
                 <FixedColumn BackColor="#f5f7fa"></FixedColumn>
             </Styles>
-            <%--<ClientSideEvents ColumnSorting="function(s, e) {MainContent_ASPxPageControl1_ASPxGridView6.PerformCallback();}" />--%>
             <SettingsPager Mode="ShowAllRecords" />
 
             <Settings ShowFooter="True"></Settings>
@@ -115,9 +114,10 @@
         <br />
         <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Export To Excel" OnClick="ASPxButton1_Click" Theme="DevEx">
         </dx:ASPxButton>
-        <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="10000" Enabled="false">
+        <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="10000">
             <ClientSideEvents Tick="function(s, e) { 
-                MainContent_ASPxPageControl1_ASPxGridView6.PerformCallback();
+                MainContent_ASPxPageControl1_MarketShareTotal_2Q_ASPxGridView6.PerformCallback();
+                MainContent_ASPxPageControl1_MarketShareTotal_2Q1_ASPxGridView6.PerformCallback();
                 }" />
         </dx:ASPxTimer>
     </div>

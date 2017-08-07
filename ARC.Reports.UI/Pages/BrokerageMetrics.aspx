@@ -80,11 +80,6 @@
             <br />
             <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Export To Excel" OnClick="ASPxButton1_Click" Theme="DevEx">
             </dx:ASPxButton>
-            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="60000">
-                <ClientSideEvents Tick="function(s, e) { 
-                MainContent_ASPxGridView0.PerformCallback();
-                }" />
-            </dx:ASPxTimer>
         </div>
         <dx:ASPxGridViewExporter ID="gridExport_0" runat="server" GridViewID="ASPxGridView0" FileName="Brokerage Metrics Yearly"></dx:ASPxGridViewExporter>
     </div>
@@ -126,13 +121,13 @@
             <br />
             <dx:ASPxButton ID="ASPxButton2" runat="server" Text="Export To Excel" OnClick="ASPxButton2_Click" Theme="DevEx">
             </dx:ASPxButton>
-            <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="60000">
-                <ClientSideEvents Tick="function(s, e) { 
-                MainContent_ASPxGridView0.PerformCallback();
-                MainContent_ASPxGridView1.PerformCallback();
-                }" />
-            </dx:ASPxTimer>
         </div>
         <dx:ASPxGridViewExporter ID="gridExport_1" runat="server" GridViewID="ASPxGridView1" FileName="Brokerage Metrics Monthly"></dx:ASPxGridViewExporter>
     </div>
+    <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="60000">
+        <ClientSideEvents Tick="function(s, e) { 
+                MainContent_ASPxGridView0.PerformCallback();
+                MainContent_ASPxGridView1.PerformCallback();
+                }" />
+    </dx:ASPxTimer>
 </asp:Content>

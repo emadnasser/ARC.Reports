@@ -31,15 +31,6 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ASPxButton ASPxButton1;
         
         /// <summary>
-        /// ASPxTimer1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer1;
-        
-        /// <summary>
         /// gridExport_0 control.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ASPxButton ASPxButton2;
         
         /// <summary>
-        /// ASPxTimer2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
-        
-        /// <summary>
         /// gridExport_1 control.
         /// </summary>
         /// <remarks>
@@ -83,5 +65,14 @@ namespace ARC.Reports.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridViewExporter gridExport_1;
+        
+        /// <summary>
+        /// ASPxTimer2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
     }
 }

@@ -16,19 +16,6 @@ namespace ARC.Reports.Controls
         public string Date { get; set; }
         public int MarketType { get; set; }
 
-        protected void Page_Init(object sender, EventArgs e)
-        {
-            string id = Request.LogonUserIdentity.Name.Trim();
-
-            if (!Roles.GetRolesForUser(id).Contains("R_001"))
-            {
-                if (!Roles.GetRolesForUser(id).Contains("Admins"))
-                {
-                    Server.Transfer("~/Public/Unauthorized.aspx");
-                }
-            }
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             GetData();

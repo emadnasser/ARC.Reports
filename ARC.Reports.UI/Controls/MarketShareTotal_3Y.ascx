@@ -92,9 +92,10 @@
         <br />
         <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Export To Excel" OnClick="ASPxButton1_Click" Theme="DevEx">
         </dx:ASPxButton>
-        <dx:ASPxTimer ID="ASPxTimer3" runat="server" Interval="10000" Enabled="false">
+        <dx:ASPxTimer ID="ASPxTimer3" runat="server" Interval="10000">
             <ClientSideEvents Tick="function(s, e) { 
-                MainContent_ASPxPageControl1_ASPxGridView8.PerformCallback();
+                MainContent_ASPxPageControl1_MarketShareTotal_3Y_ASPxGridView8.PerformCallback();
+                MainContent_ASPxPageControl1_MarketShareTotal_3Y1_ASPxGridView8.PerformCallback();
                 }" />
         </dx:ASPxTimer>
     </div>
