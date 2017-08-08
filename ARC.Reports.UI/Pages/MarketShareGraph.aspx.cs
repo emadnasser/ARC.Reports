@@ -67,131 +67,136 @@ namespace ARC.Reports.Pages
 
         private void GetData()
         {
-            //try
-            //{
-            ASPxComboBox myOption = ASPxPageControl1.FindControl("myOption") as ASPxComboBox;
-
-            List<Rep_0018> x0 = new List<Rep_0018>();
-            List<Rep_0018> x1 = new List<Rep_0018>();
-            List<Rep_0018> x2 = new List<Rep_0018>();
-            List<Rep_0018> x3 = new List<Rep_0018>();
-
-            List<Rep_0018> y0 = new List<Rep_0018>();
-            List<Rep_0018> y1 = new List<Rep_0018>();
-            List<Rep_0018> y2 = new List<Rep_0018>();
-            List<Rep_0018> y3 = new List<Rep_0018>();
-
-            if (myOption.SelectedIndex == 0)
+            try
             {
-                x0 = SData.Rep_0011a_Graph_Get(0, 1);
-                y0 = SData.Rep_0011a_Graph_Get(1, 1);
+                ASPxComboBox myOption = ASPxPageControl1.FindControl("myOption") as ASPxComboBox;
 
-                //if (pIndex == 0)
-                //{
-                WebChartControl1.Visible = false;
-                WebChartControl2.Visible = false;
-                WebChartControl3.Visible = false;
+                List<Rep_0018> x0 = new List<Rep_0018>();
+                List<Rep_0018> x1 = new List<Rep_0018>();
+                List<Rep_0018> x2 = new List<Rep_0018>();
+                List<Rep_0018> x3 = new List<Rep_0018>();
 
-                WebChartControl7.Visible = true;
-                //}
-                //else if(pIndex == 1)
-                //{
-                WebChartControl4.Visible = false;
-                WebChartControl5.Visible = false;
-                WebChartControl6.Visible = false;
+                List<Rep_0018> y0 = new List<Rep_0018>();
+                List<Rep_0018> y1 = new List<Rep_0018>();
+                List<Rep_0018> y2 = new List<Rep_0018>();
+                List<Rep_0018> y3 = new List<Rep_0018>();
 
-                WebChartControl8.Visible = true;
-                //}
+                if (myOption.SelectedIndex == 0)
+                {
+                    x0 = SData.Rep_0011a_Graph_Get(0, 1);
+                    y0 = SData.Rep_0011a_Graph_Get(1, 1);
+
+                    //if (pIndex == 0)
+                    //{
+                    WebChartControl1.Visible = false;
+                    WebChartControl2.Visible = false;
+                    WebChartControl3.Visible = false;
+
+                    WebChartControl0.Visible = true;
+                    //}
+                    //else if(pIndex == 1)
+                    //{
+                    WebChartControl4.Visible = false;
+                    WebChartControl5.Visible = false;
+                    WebChartControl6.Visible = false;
+
+                    WebChartControl8.Visible = true;
+                    //}
+                }
+                else if (myOption.SelectedIndex == 1)
+                {
+                    x1 = SData.Rep_0011a_Graph_Get(0, 2);
+                    y1 = SData.Rep_0011a_Graph_Get(1, 2);
+
+                    //if (pIndex == 0)
+                    //{
+                    WebChartControl0.Visible = false;
+                    WebChartControl2.Visible = false;
+                    WebChartControl3.Visible = false;
+
+                    WebChartControl1.Visible = true;
+                    //}
+                    //else if(pIndex == 1)
+                    //{
+                    WebChartControl8.Visible = false;
+                    WebChartControl5.Visible = false;
+                    WebChartControl6.Visible = false;
+
+                    WebChartControl4.Visible = true;
+                    //}
+                }
+                else if (myOption.SelectedIndex == 2)
+                {
+                    x2 = SData.Rep_0011a_Graph_Get(0, 3);
+                    y2 = SData.Rep_0011a_Graph_Get(1, 3);
+
+                    //if (pIndex == 0)
+                    //{
+                    WebChartControl1.Visible = false;
+                    WebChartControl3.Visible = false;
+                    WebChartControl0.Visible = false;
+
+                    WebChartControl2.Visible = true;
+                    //}
+                    //else if (pIndex == 1)
+                    //{
+                    WebChartControl4.Visible = false;
+                    WebChartControl6.Visible = false;
+                    WebChartControl8.Visible = false;
+
+                    WebChartControl5.Visible = true;
+                    //}
+                }
+                else if (myOption.SelectedIndex == 3)
+                {
+                    x3 = SData.Rep_0011a_Graph_Get(0, 4);
+                    y3 = SData.Rep_0011a_Graph_Get(1, 4);
+
+                    //if (pIndex == 0)
+                    //{
+                    WebChartControl1.Visible = false;
+                    WebChartControl2.Visible = false;
+                    WebChartControl0.Visible = false;
+
+                    WebChartControl3.Visible = true;
+                    //}
+                    //else if (pIndex == 1)
+                    //{
+                    WebChartControl4.Visible = false;
+                    WebChartControl5.Visible = false;
+                    WebChartControl8.Visible = false;
+
+                    WebChartControl6.Visible = true;
+                    //}
+                }
+
+                WebChartControl0.DataSource = x0;
+                WebChartControl1.DataSource = x1;
+                WebChartControl2.DataSource = x2;
+                WebChartControl3.DataSource = x3;
+                WebChartControl1.DataBind();
+                WebChartControl2.DataBind();
+                WebChartControl3.DataBind();
+                WebChartControl0.DataBind();
+
+                WebChartControl8.DataSource = y0;
+                WebChartControl4.DataSource = y1;
+                WebChartControl5.DataSource = y2;
+                WebChartControl6.DataSource = y3;
+                WebChartControl4.DataBind();
+                WebChartControl5.DataBind();
+                WebChartControl6.DataBind();
+                WebChartControl8.DataBind();
+
             }
-            else if (myOption.SelectedIndex == 1)
+            catch
             {
-                x1 = SData.Rep_0011a_Graph_Get(0, 2);
-                y1 = SData.Rep_0011a_Graph_Get(1, 2);
-
-                //if (pIndex == 0)
-                //{
-                WebChartControl7.Visible = false;
-                WebChartControl2.Visible = false;
-                WebChartControl3.Visible = false;
-
-                WebChartControl1.Visible = true;
-                //}
-                //else if(pIndex == 1)
-                //{
-                WebChartControl8.Visible = false;
-                WebChartControl5.Visible = false;
-                WebChartControl6.Visible = false;
-
-                WebChartControl4.Visible = true;
-                //}
             }
-            else if (myOption.SelectedIndex == 2)
-            {
-                x2 = SData.Rep_0011a_Graph_Get(0, 3);
-                y2 = SData.Rep_0011a_Graph_Get(1, 3);
+        }
 
-                //if (pIndex == 0)
-                //{
-                WebChartControl1.Visible = false;
-                WebChartControl3.Visible = false;
-                WebChartControl7.Visible = false;
-
-                WebChartControl2.Visible = true;
-                //}
-                //else if (pIndex == 1)
-                //{
-                WebChartControl4.Visible = false;
-                WebChartControl6.Visible = false;
-                WebChartControl8.Visible = false;
-
-                WebChartControl5.Visible = true;
-                //}
-            }
-            else if (myOption.SelectedIndex == 3)
-            {
-                x3 = SData.Rep_0011a_Graph_Get(0, 4);
-                y3 = SData.Rep_0011a_Graph_Get(1, 4);
-
-                //if (pIndex == 0)
-                //{
-                WebChartControl1.Visible = false;
-                WebChartControl2.Visible = false;
-                WebChartControl7.Visible = false;
-
-                WebChartControl3.Visible = true;
-                //}
-                //else if (pIndex == 1)
-                //{
-                WebChartControl4.Visible = false;
-                WebChartControl5.Visible = false;
-                WebChartControl8.Visible = false;
-
-                WebChartControl6.Visible = true;
-                //}
-            }
-
-            WebChartControl7.DataSource = x0;
-            WebChartControl1.DataSource = x1;
-            WebChartControl2.DataSource = x2;
-            WebChartControl3.DataSource = x3;
-            WebChartControl1.DataBind();
-            WebChartControl2.DataBind();
-            WebChartControl3.DataBind();
-            WebChartControl7.DataBind();
-
-            WebChartControl8.DataSource = y0;
-            WebChartControl4.DataSource = y1;
-            WebChartControl5.DataSource = y2;
-            WebChartControl6.DataSource = y3;
-            WebChartControl4.DataBind();
-            WebChartControl5.DataBind();
-            WebChartControl6.DataBind();
-            WebChartControl8.DataBind();
-
-            //}
-            //catch
-            //{
-            //}
+        protected void WebChartControl0_CustomCallback(object sender, DevExpress.XtraCharts.Web.CustomCallbackEventArgs e)
+        {
+            GetData();
         }
     }
 }

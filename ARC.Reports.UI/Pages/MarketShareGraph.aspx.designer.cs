@@ -31,13 +31,13 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ContentControl ContentControl1;
         
         /// <summary>
-        /// WebChartControl7 control.
+        /// WebChartControl0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl7;
+        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl0;
         
         /// <summary>
         /// WebChartControl1 control.
@@ -110,5 +110,23 @@ namespace ARC.Reports.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl6;
+        
+        /// <summary>
+        /// ASPxTimer1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer1;
+        
+        /// <summary>
+        /// ASPxTimer2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
     }
 }
