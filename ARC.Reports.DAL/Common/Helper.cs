@@ -15,7 +15,6 @@ namespace ARC.Reports.DAL.Common
             using (SqlConnection sqlConnection = GetConniction.GetRepConniction())
             {
                 SqlCommand sqlCommand = new SqlCommand(cmdText, sqlConnection);
-                //sqlCommand.Parameters.AddWithValue("@ProductName", productName + "%");
 
                 if (sqlParameters != null)
                     sqlCommand.Parameters.AddRange(sqlParameters.ToArray());
@@ -49,13 +48,6 @@ namespace ARC.Reports.DAL.Common
                 sqlCommandObj.Connection = sqlConnectionObj;
 
                 var sqlDataReaderObj = sqlCommandObj.ExecuteReader();
-
-                //while (sqlDataReaderObj.Read())
-                //{
-                //    object.x = Convert.ToInt32(sqlDataReaderObj["idFormDB"]);
-                //    ...
-                //    ...
-                //}
 
                 var x = new DataTable();
                 x.Load(sqlDataReaderObj);
@@ -179,56 +171,56 @@ namespace ARC.Reports.DAL.Common
         }
 
         /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        public static List<TestEnt> sqlDataReaderTest()
-        {
-            List<TestEnt> x = new List<TestEnt>();
+        //public static List<TestEnt> sqlDataReaderTest()
+        //{
+        //    List<TestEnt> x = new List<TestEnt>();
 
-            using (SqlConnection sqlConnection = GetConniction.GetRepConniction())
-            {
-                SqlCommand sqlCommand = new SqlCommand("SELECT * FROM [Sample].[dbo].[Products_Destination]", sqlConnection);
-                sqlConnection.Open();
-                using (SqlDataReader reader = sqlCommand.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        x.Add(new TestEnt()
-                        {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Name = reader["Name"].ToString(),
-                            Description = reader["Description"].ToString()
-                        });
-                    }
-                }
-            }
+        //    using (SqlConnection sqlConnection = GetConniction.GetRepConniction())
+        //    {
+        //        SqlCommand sqlCommand = new SqlCommand("SELECT * FROM [Sample].[dbo].[Products_Destination]", sqlConnection);
+        //        sqlConnection.Open();
+        //        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+        //        {
+        //            while (reader.Read())
+        //            {
+        //                x.Add(new TestEnt()
+        //                {
+        //                    Id = Convert.ToInt32(reader["Id"]),
+        //                    Name = reader["Name"].ToString(),
+        //                    Description = reader["Description"].ToString()
+        //                });
+        //            }
+        //        }
+        //    }
 
-            return x;
-        }
+        //    return x;
+        //}
 
-        public static List<TestEnt> sqlDataAdapterTest()
-        {
-            List<TestEnt> x = new List<TestEnt>();
+        //public static List<TestEnt> sqlDataAdapterTest()
+        //{
+        //    List<TestEnt> x = new List<TestEnt>();
 
-            using (SqlConnection sqlConnection = GetConniction.GetRepConniction())
-            {
-                SqlCommand sqlCommand = new SqlCommand("SELECT * FROM [Sample].[dbo].[Products_Destination]", sqlConnection);
+        //    using (SqlConnection sqlConnection = GetConniction.GetRepConniction())
+        //    {
+        //        SqlCommand sqlCommand = new SqlCommand("SELECT * FROM [Sample].[dbo].[Products_Destination]", sqlConnection);
 
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+        //        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
 
-                DataTable dataTable = new DataTable();
-                sqlDataAdapter.Fill(dataTable);
+        //        DataTable dataTable = new DataTable();
+        //        sqlDataAdapter.Fill(dataTable);
 
-                foreach (DataRow rows in dataTable.Rows)
-	            {
-                    x.Add(new TestEnt()
-                    {
-                        Id = Convert.ToInt32(rows["Id"]),
-                        Name = rows["Name"].ToString(),
-                        Description = rows["Description"].ToString()
-                    });
-                }
+        //        foreach (DataRow rows in dataTable.Rows)
+	       //     {
+        //            x.Add(new TestEnt()
+        //            {
+        //                Id = Convert.ToInt32(rows["Id"]),
+        //                Name = rows["Name"].ToString(),
+        //                Description = rows["Description"].ToString()
+        //            });
+        //        }
 
-                return x;
-            }
-        }
+        //        return x;
+        //    }
+        //}
     }
 }

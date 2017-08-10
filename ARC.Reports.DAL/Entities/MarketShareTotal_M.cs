@@ -1,6 +1,6 @@
 ﻿namespace ARC.Reports.DAL.Entities
 {
-    public class Rep_0012
+    public class MarketShareTotal_M
     {
         public string Channel { get; set; }
         public double? MarketShare_1 { get; set; }

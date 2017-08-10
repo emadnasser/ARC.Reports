@@ -38,7 +38,7 @@ namespace ARC.Reports.Controls
 
         protected void ASPxGridView6_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
         {
-            var myData = SData.Rep_007Get(DateTime.Now.Year, 0);
+            var myData = SData.MarketShareAVG(DateTime.Now.Year, MarketType);
 
             if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s1" && myData.Count > 0)
             {
@@ -162,11 +162,11 @@ namespace ARC.Reports.Controls
 
                 if (MarketType == 0)
                 {
-                    ASPxGridView6.DataSource = SData.Rep_003Get(DateTime.Now.Year, 0);
+                    ASPxGridView6.DataSource = SData.MarketShareTotal_M(DateTime.Now.Year, 0);
                 }
                 else if (MarketType == 1)
                 {
-                    ASPxGridView6.DataSource = SData.Rep_003Get(DateTime.Now.Year, 1);
+                    ASPxGridView6.DataSource = SData.MarketShareTotal_M(DateTime.Now.Year, 1);
                 }
 
                 ASPxGridView6.DataBind();

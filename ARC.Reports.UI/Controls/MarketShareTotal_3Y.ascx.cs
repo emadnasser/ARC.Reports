@@ -45,11 +45,11 @@ namespace ARC.Reports.Controls
 
                 if (MarketType == 0)
                 {
-                    ASPxGridView8.DataSource = SData.Rep_004Get(0);
+                    ASPxGridView8.DataSource = SData.MarketShareTotal_Y(0);
                 }
                 else if (MarketType == 1)
                 {
-                    ASPxGridView8.DataSource = SData.Rep_004Get(1);
+                    ASPxGridView8.DataSource = SData.MarketShareTotal_Y(1);
                 }
 
                 ASPxGridView8.DataBind();

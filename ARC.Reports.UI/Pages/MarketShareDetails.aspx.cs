@@ -69,10 +69,10 @@ namespace ARC.Reports.Pages
             {
                 ASPxDateEdit dateEdit = ASPxPageControl1.FindControl("dateEdit") as ASPxDateEdit;
 
-                ASPxGridView0.DataSource = SData.Rep_001Get(0, dateEdit.Date.ToShortDateString());
+                ASPxGridView0.DataSource = SData.MarketShareDetail(0, dateEdit.Date.ToShortDateString());
                 ASPxGridView0.DataBind();
 
-                var lst = SData.Rep_0011aGet(0, dateEdit.Date.ToShortDateString());
+                var lst = SData.MarketShareTotal_D_Totals(0, 0, dateEdit.Date.ToShortDateString());
 
                 if (Convert.ToDouble(lst[0].DiffDayPer) >= 0)
                     ASPxGridView2.Columns[4].CellStyle.ForeColor = Color.Green;
@@ -82,13 +82,13 @@ namespace ARC.Reports.Pages
                 ASPxGridView2.DataSource = lst;
                 ASPxGridView2.DataBind();
 
-                ASPxGridView4.DataSource = SData.Rep_0011bGet(0, dateEdit.Date.ToShortDateString());
+                ASPxGridView4.DataSource = SData.MarketShareTotal_D_Totals(0, 1, dateEdit.Date.ToShortDateString());
                 ASPxGridView4.DataBind();
 
-                ASPxGridView1.DataSource = SData.Rep_001Get(1, dateEdit.Date.ToShortDateString());
+                ASPxGridView1.DataSource = SData.MarketShareDetail(1, dateEdit.Date.ToShortDateString());
                 ASPxGridView1.DataBind();
 
-                var lst_3 = SData.Rep_0011aGet(1, dateEdit.Date.ToShortDateString());
+                var lst_3 = SData.MarketShareTotal_D_Totals(1, 0, dateEdit.Date.ToShortDateString());
 
                 if (Convert.ToDouble(lst_3[0].DiffDayPer) >= 0)
                     ASPxGridView3.Columns[4].CellStyle.ForeColor = Color.Green;
@@ -97,7 +97,7 @@ namespace ARC.Reports.Pages
 
                 ASPxGridView3.DataSource = lst_3;
                 ASPxGridView3.DataBind();
-                ASPxGridView5.DataSource = SData.Rep_0011bGet(1, dateEdit.Date.ToShortDateString());
+                ASPxGridView5.DataSource = SData.MarketShareTotal_D_Totals(1, 1, dateEdit.Date.ToShortDateString());
                 ASPxGridView5.DataBind();
             }
             catch

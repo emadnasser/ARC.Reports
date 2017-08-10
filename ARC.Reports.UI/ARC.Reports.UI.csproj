@@ -576,6 +576,7 @@
     <Content Include="Pages\MarketShareGraph.aspx" />
     <Content Include="Pages\MarketShareTotals.aspx" />
     <Content Include="Pages\MarketShareDetails.aspx" />
+    <Content Include="Pages\WebForm1.aspx" />
     <Content Include="Public\Unauthorized.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.12.2.min.js" />
@@ -666,6 +667,13 @@
     </Compile>
     <Compile Include="Pages\MarketShareDetails.aspx.designer.cs">
       <DependentUpon>MarketShareDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public\Unauthorized.aspx.cs">

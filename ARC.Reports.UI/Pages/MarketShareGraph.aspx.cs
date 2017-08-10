@@ -71,20 +71,20 @@ namespace ARC.Reports.Pages
             {
                 ASPxComboBox myOption = ASPxPageControl1.FindControl("myOption") as ASPxComboBox;
 
-                List<Rep_0018> x0 = new List<Rep_0018>();
-                List<Rep_0018> x1 = new List<Rep_0018>();
-                List<Rep_0018> x2 = new List<Rep_0018>();
-                List<Rep_0018> x3 = new List<Rep_0018>();
+                List<MarketShareGraphs> x0 = new List<MarketShareGraphs>();
+                List<MarketShareGraphs> x1 = new List<MarketShareGraphs>();
+                List<MarketShareGraphs> x2 = new List<MarketShareGraphs>();
+                List<MarketShareGraphs> x3 = new List<MarketShareGraphs>();
 
-                List<Rep_0018> y0 = new List<Rep_0018>();
-                List<Rep_0018> y1 = new List<Rep_0018>();
-                List<Rep_0018> y2 = new List<Rep_0018>();
-                List<Rep_0018> y3 = new List<Rep_0018>();
+                List<MarketShareGraphs> y0 = new List<MarketShareGraphs>();
+                List<MarketShareGraphs> y1 = new List<MarketShareGraphs>();
+                List<MarketShareGraphs> y2 = new List<MarketShareGraphs>();
+                List<MarketShareGraphs> y3 = new List<MarketShareGraphs>();
 
                 if (myOption.SelectedIndex == 0)
                 {
-                    x0 = SData.Rep_0011a_Graph_Get(0, 1);
-                    y0 = SData.Rep_0011a_Graph_Get(1, 1);
+                    x0 = SData.MarketShareGraphs(0, 1);
+                    y0 = SData.MarketShareGraphs(1, 1);
 
                     //if (pIndex == 0)
                     //{
@@ -105,8 +105,8 @@ namespace ARC.Reports.Pages
                 }
                 else if (myOption.SelectedIndex == 1)
                 {
-                    x1 = SData.Rep_0011a_Graph_Get(0, 2);
-                    y1 = SData.Rep_0011a_Graph_Get(1, 2);
+                    x1 = SData.MarketShareGraphs(0, 2);
+                    y1 = SData.MarketShareGraphs(1, 2);
 
                     //if (pIndex == 0)
                     //{
@@ -127,8 +127,8 @@ namespace ARC.Reports.Pages
                 }
                 else if (myOption.SelectedIndex == 2)
                 {
-                    x2 = SData.Rep_0011a_Graph_Get(0, 3);
-                    y2 = SData.Rep_0011a_Graph_Get(1, 3);
+                    x2 = SData.MarketShareGraphs(0, 3);
+                    y2 = SData.MarketShareGraphs(1, 3);
 
                     //if (pIndex == 0)
                     //{
@@ -149,8 +149,8 @@ namespace ARC.Reports.Pages
                 }
                 else if (myOption.SelectedIndex == 3)
                 {
-                    x3 = SData.Rep_0011a_Graph_Get(0, 4);
-                    y3 = SData.Rep_0011a_Graph_Get(1, 4);
+                    x3 = SData.MarketShareGraphs(0, 4);
+                    y3 = SData.MarketShareGraphs(1, 4);
 
                     //if (pIndex == 0)
                     //{

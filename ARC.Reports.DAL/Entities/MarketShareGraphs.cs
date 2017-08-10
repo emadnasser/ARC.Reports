@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ARC.Reports.DAL.Entities
 {
-    public class Rep_0018
+    public class MarketShareGraphs
     {
         public double ETS_Share_Value { get; set; }
         public double Market_Share_Value { get; set; }
         public double Percentage { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
-        public Nullable<System.DateTime> date2 { get; set; }
+        public DateTime? date { get; set; }
+        public DateTime? date2 { get; set; }
     }
 }

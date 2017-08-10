@@ -37,19 +37,19 @@ namespace ARC.Reports.Controls
         {
             try
             {
-                var lst_2 = new List<Rep_0011>();
+                var lst_2 = new List<MarketShareTotal_D_Totals>();
 
                 if (MarketType == 0)
                 {
-                    ASPxGridView0.DataSource = SData.Rep_002Get(0, Date);
-                    lst_2 = SData.Rep_0011aGet(0, Date);
-                    ASPxGridView2.DataSource = SData.Rep_0011bGet(0, Date);
+                    ASPxGridView0.DataSource = SData.MarketShareTotal_D(0, Date);
+                    lst_2 = SData.MarketShareTotal_D_Totals(0, 0, Date);
+                    ASPxGridView2.DataSource = SData.MarketShareTotal_D_Totals(0, 1, Date);
                 }
                 else if (MarketType == 1)
                 {
-                    ASPxGridView0.DataSource = SData.Rep_002Get(1, Date);
-                    lst_2 = SData.Rep_0011aGet(1, Date);
-                    ASPxGridView2.DataSource = SData.Rep_0011bGet(1, Date);
+                    ASPxGridView0.DataSource = SData.MarketShareTotal_D(1, Date);
+                    lst_2 = SData.MarketShareTotal_D_Totals(1, 0, Date);
+                    ASPxGridView2.DataSource = SData.MarketShareTotal_D_Totals(1, 1, Date);
                 }
 
                 if (Convert.ToDouble(lst_2[0].DiffDayPer) >= 0)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ARC.Reports.DAL.Entities
 {
-    public class Rep_007
+    public class MarketShareAVG
     {
         public string MarketShare { get; set; }
         public string MarketTrades { get; set; }

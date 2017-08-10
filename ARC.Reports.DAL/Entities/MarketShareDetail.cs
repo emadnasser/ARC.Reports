@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ARC.Reports.DAL.Entities
 {
-    public class Rep_001
+    public class MarketShareDetail
     {
         public int Id { get; set; }
         public string Channel { get; set; }
