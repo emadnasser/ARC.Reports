@@ -31,40 +31,40 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ContentControl ContentControl1;
         
         /// <summary>
-        /// WebChartControl0 control.
+        /// MarketShareGraphs_H_0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl0;
+        protected global::ARC.Reports.Controls.MarketShareGraphs_H MarketShareGraphs_H_0;
         
         /// <summary>
-        /// WebChartControl1 control.
+        /// MarketShareGraphs_D_0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl1;
+        protected global::ARC.Reports.Controls.MarketShareGraphs_D MarketShareGraphs_D_0;
         
         /// <summary>
-        /// WebChartControl2 control.
+        /// MarketShareGraphs_M_0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl2;
+        protected global::ARC.Reports.Controls.MarketShareGraphs_M MarketShareGraphs_M_0;
         
         /// <summary>
-        /// WebChartControl3 control.
+        /// MarketShareGraphs_Y_0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl3;
+        protected global::ARC.Reports.Controls.MarketShareGraphs_Y MarketShareGraphs_Y_0;
         
         /// <summary>
         /// ContentControl2 control.
@@ -76,40 +76,40 @@ namespace ARC.Reports.Pages {
         protected global::DevExpress.Web.ContentControl ContentControl2;
         
         /// <summary>
-        /// WebChartControl8 control.
+        /// MarketShareGraphs_H_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl8;
+        protected global::ARC.Reports.Controls.MarketShareGraphs_H MarketShareGraphs_H_1;
         
         /// <summary>
-        /// WebChartControl4 control.
+        /// MarketShareGraphs_D_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl4;
+        protected global::ARC.Reports.Controls.MarketShareGraphs_D MarketShareGraphs_D_1;
         
         /// <summary>
-        /// WebChartControl5 control.
+        /// MarketShareGraphs_M_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl5;
+        protected global::ARC.Reports.Controls.MarketShareGraphs_M MarketShareGraphs_M_1;
         
         /// <summary>
-        /// WebChartControl6 control.
+        /// MarketShareGraphs_Y_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl6;
+        protected global::ARC.Reports.Controls.MarketShareGraphs_Y MarketShareGraphs_Y_1;
         
         /// <summary>
         /// ASPxTimer1 control.

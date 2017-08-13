@@ -8,6 +8,8 @@ namespace ARC.Reports.Controls
 {
     public partial class MarketShareGraphs_M : System.Web.UI.UserControl
     {
+        public int MarketType { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //if(!Page.IsPostBack)
@@ -25,7 +27,14 @@ namespace ARC.Reports.Controls
             {
                 List<MarketShareGraphs> x = new List<MarketShareGraphs>();
 
-                x = SData.MarketShareGraphs(0, 3);
+                if (MarketType == 0)
+                {
+                    x = SData.MarketShareGraphs(0, 3);
+                }
+                else
+                {
+                    x = SData.MarketShareGraphs(1, 3);
+                }
 
                 WebChartControl2.DataSource = x;
                 WebChartControl2.DataBind();

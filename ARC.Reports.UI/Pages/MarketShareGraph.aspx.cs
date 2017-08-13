@@ -83,120 +83,64 @@ namespace ARC.Reports.Pages
 
                 if (myOption.SelectedIndex == 0)
                 {
-                    x0 = SData.MarketShareGraphs(0, 1);
-                    y0 = SData.MarketShareGraphs(1, 1);
+                    MarketShareGraphs_H_0.MarketType = 0;
+                    MarketShareGraphs_H_1.MarketType = 1;
+                    MarketShareGraphs_H_0.Visible = true;
+                    MarketShareGraphs_H_1.Visible = true;
 
-                    //if (pIndex == 0)
-                    //{
-                    WebChartControl1.Visible = false;
-                    WebChartControl2.Visible = false;
-                    WebChartControl3.Visible = false;
-
-                    WebChartControl0.Visible = true;
-                    //}
-                    //else if(pIndex == 1)
-                    //{
-                    WebChartControl4.Visible = false;
-                    WebChartControl5.Visible = false;
-                    WebChartControl6.Visible = false;
-
-                    WebChartControl8.Visible = true;
-                    //}
+                    MarketShareGraphs_D_0.Visible = false;
+                    MarketShareGraphs_M_0.Visible = false;
+                    MarketShareGraphs_Y_0.Visible = false;
+                    MarketShareGraphs_D_1.Visible = false;
+                    MarketShareGraphs_M_1.Visible = false;
+                    MarketShareGraphs_Y_1.Visible = false;
                 }
                 else if (myOption.SelectedIndex == 1)
                 {
-                    x1 = SData.MarketShareGraphs(0, 2);
-                    y1 = SData.MarketShareGraphs(1, 2);
+                    MarketShareGraphs_D_0.MarketType = 0;
+                    MarketShareGraphs_D_1.MarketType = 1;
+                    MarketShareGraphs_D_0.Visible = true;
+                    MarketShareGraphs_D_1.Visible = true;
 
-                    //if (pIndex == 0)
-                    //{
-                    WebChartControl0.Visible = false;
-                    WebChartControl2.Visible = false;
-                    WebChartControl3.Visible = false;
-
-                    WebChartControl1.Visible = true;
-                    //}
-                    //else if(pIndex == 1)
-                    //{
-                    WebChartControl8.Visible = false;
-                    WebChartControl5.Visible = false;
-                    WebChartControl6.Visible = false;
-
-                    WebChartControl4.Visible = true;
-                    //}
+                    MarketShareGraphs_H_0.Visible = false;
+                    MarketShareGraphs_M_0.Visible = false;
+                    MarketShareGraphs_Y_0.Visible = false;
+                    MarketShareGraphs_H_1.Visible = false;
+                    MarketShareGraphs_M_1.Visible = false;
+                    MarketShareGraphs_Y_1.Visible = false;
                 }
                 else if (myOption.SelectedIndex == 2)
                 {
-                    x2 = SData.MarketShareGraphs(0, 3);
-                    y2 = SData.MarketShareGraphs(1, 3);
+                    MarketShareGraphs_M_0.MarketType = 0;
+                    MarketShareGraphs_M_1.MarketType = 1;
+                    MarketShareGraphs_M_0.Visible = true;
+                    MarketShareGraphs_M_1.Visible = true;
 
-                    //if (pIndex == 0)
-                    //{
-                    WebChartControl1.Visible = false;
-                    WebChartControl3.Visible = false;
-                    WebChartControl0.Visible = false;
-
-                    WebChartControl2.Visible = true;
-                    //}
-                    //else if (pIndex == 1)
-                    //{
-                    WebChartControl4.Visible = false;
-                    WebChartControl6.Visible = false;
-                    WebChartControl8.Visible = false;
-
-                    WebChartControl5.Visible = true;
-                    //}
+                    MarketShareGraphs_H_0.Visible = false;
+                    MarketShareGraphs_D_0.Visible = false;
+                    MarketShareGraphs_Y_0.Visible = false;
+                    MarketShareGraphs_H_1.Visible = false;
+                    MarketShareGraphs_D_1.Visible = false;
+                    MarketShareGraphs_Y_1.Visible = false;
                 }
                 else if (myOption.SelectedIndex == 3)
                 {
-                    x3 = SData.MarketShareGraphs(0, 4);
-                    y3 = SData.MarketShareGraphs(1, 4);
+                    MarketShareGraphs_Y_0.MarketType = 0;
+                    MarketShareGraphs_Y_1.MarketType = 1;
+                    MarketShareGraphs_Y_0.Visible = true;
+                    MarketShareGraphs_Y_1.Visible = true;
 
-                    //if (pIndex == 0)
-                    //{
-                    WebChartControl1.Visible = false;
-                    WebChartControl2.Visible = false;
-                    WebChartControl0.Visible = false;
-
-                    WebChartControl3.Visible = true;
-                    //}
-                    //else if (pIndex == 1)
-                    //{
-                    WebChartControl4.Visible = false;
-                    WebChartControl5.Visible = false;
-                    WebChartControl8.Visible = false;
-
-                    WebChartControl6.Visible = true;
-                    //}
+                    MarketShareGraphs_H_0.Visible = false;
+                    MarketShareGraphs_D_0.Visible = false;
+                    MarketShareGraphs_M_0.Visible = false;
+                    MarketShareGraphs_H_1.Visible = false;
+                    MarketShareGraphs_D_1.Visible = false;
+                    MarketShareGraphs_M_1.Visible = false;
                 }
-
-                WebChartControl0.DataSource = x0;
-                WebChartControl1.DataSource = x1;
-                WebChartControl2.DataSource = x2;
-                WebChartControl3.DataSource = x3;
-                WebChartControl1.DataBind();
-                WebChartControl2.DataBind();
-                WebChartControl3.DataBind();
-                WebChartControl0.DataBind();
-
-                WebChartControl8.DataSource = y0;
-                WebChartControl4.DataSource = y1;
-                WebChartControl5.DataSource = y2;
-                WebChartControl6.DataSource = y3;
-                WebChartControl4.DataBind();
-                WebChartControl5.DataBind();
-                WebChartControl6.DataBind();
-                WebChartControl8.DataBind();
-
             }
             catch
             {
             }
-        }
-
-        protected void WebChartControl0_CustomCallback(object sender, DevExpress.XtraCharts.Web.CustomCallbackEventArgs e)
-        {
-            GetData();
         }
     }
 }
