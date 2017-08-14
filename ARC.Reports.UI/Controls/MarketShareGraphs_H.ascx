@@ -67,25 +67,23 @@
                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
             </AxisX>
             <AxisY Title-Text="Market Share Value" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="-1">
-                <WholeRange Auto="False" MaxValueSerializable="1000000000" MinValueSerializable="0"></WholeRange>
+                <WholeRange AlwaysShowZeroLevel="False"></WholeRange>
                 <GridLines MinorVisible="True" Visible="False"></GridLines>
                 <Label TextPattern="{V:G}">
                 </Label>
             </AxisY>
             <SecondaryAxesY>
                 <dx:SecondaryAxisY AxisID="0" Alignment="Near" Title-Text="ETS Share Value" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="0" Name="secondaryAxisY1">
-                    <WholeRange Auto="False" MaxValueSerializable="1000000000" MinValueSerializable="0"></WholeRange>
-                    <GridLines MinorVisible="True"></GridLines>
+                    <WholeRange AlwaysShowZeroLevel="False"></WholeRange>
+                    <GridLines MinorVisible="True" Visible="False"></GridLines>
                     <Label TextPattern="{V:G}">
                     </Label>
                 </dx:SecondaryAxisY>
                 <dx:SecondaryAxisY AxisID="1" Alignment="Near" Title-Text="Market Share" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="1" Name="secondaryAxisY2">
-                    <VisualRange AutoSideMargins="False" SideMarginsValue="0"></VisualRange>
-                    <WholeRange Auto="False" MinValueSerializable="0" MaxValueSerializable="40" AutoSideMargins="False" SideMarginsValue="5"></WholeRange>
-                    <GridLines Visible="True" MinorVisible="True"></GridLines>
+                    <WholeRange AlwaysShowZeroLevel="False"></WholeRange>
+                    <GridLines MinorVisible="True" Visible="False" ></GridLines>
                     <Label TextPattern="{V:G}">
                     </Label>
-                    <NumericScaleOptions AutoGrid="False" GridSpacing="15" />
                 </dx:SecondaryAxisY>
             </SecondaryAxesY>
             <DefaultPane Weight="2"></DefaultPane>

@@ -80,6 +80,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\MarketValueGraphs_D.ascx" />
     <Content Include="Controls\MarketShareGraphs_D.ascx" />
     <Content Include="Controls\MarketShareGraphs_H.ascx" />
     <Content Include="Controls\MarketShareGraphs_M.ascx" />
@@ -578,6 +579,7 @@
     <Content Include="Pages\BrokerageMetrics.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\MarketShareGraph.aspx" />
+    <Content Include="Pages\WebForm2.aspx" />
     <Content Include="Pages\_MarketShareGraph.aspx" />
     <Content Include="Pages\MarketShareTotals.aspx" />
     <Content Include="Pages\MarketShareDetails.aspx" />
@@ -589,6 +591,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\MarketValueGraphs_D.ascx.cs">
+      <DependentUpon>MarketValueGraphs_D.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketValueGraphs_D.ascx.designer.cs">
+      <DependentUpon>MarketValueGraphs_D.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MarketShareGraphs_D.ascx.cs">
       <DependentUpon>MarketShareGraphs_D.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -686,6 +695,13 @@
     </Compile>
     <Compile Include="Pages\MarketShareGraph.aspx.designer.cs">
       <DependentUpon>MarketShareGraph.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\_MarketShareGraph.aspx.cs">
       <DependentUpon>_MarketShareGraph.aspx</DependentUpon>
