@@ -49,6 +49,7 @@
     <Compile Include="Entities\BrokerageMetricsYearly.cs" />
     <Compile Include="Entities\MarketShareTotal_D_Totals.cs" />
     <Compile Include="Entities\MarketShareTotal_Q.cs" />
+    <Compile Include="Entities\CommissionSummary.cs" />
     <Compile Include="Entities\MarketShareTotal_Y.cs" />
     <Compile Include="Entities\MarketShareTotal_M.cs" />
     <Compile Include="Entities\MarketShareAVG.cs" />

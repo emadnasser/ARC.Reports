@@ -155,6 +155,13 @@
                                         </a>
                                         <b class="arrow"></b>
                                     </li>
+                                    <li class="">
+                                        <a href="<%= ResolveUrl("~/Pages/SummaryCommission.aspx") %>">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Summary Commission
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

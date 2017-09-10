@@ -470,8 +470,6 @@ namespace ARC.Reports.DAL
             return ret;
         }
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
         public static MarketShareAVG Rep_008Get(int pMarketType, string @pDate)
         {
             SqlParameter[] parameters = new SqlParameter[2];
@@ -499,6 +497,40 @@ namespace ARC.Reports.DAL
                     MarketTrades = myDataTable.Rows[0][1].ToString(),
                 };
 
+            return null;
+        }
+
+        public static List<CommissionSummary> CommissionSummary()
+        {
+            DataTable myDataTable = new DataTable();
+
+            myDataTable = Helper.ExecuteReader("SELECT" +
+                                                  " CIC, EQUATOR, AGENT, SYMBOL," +
+                                                  " SUBSTRING([DATE_], 1, 2) AS[Month]," +
+                                                  " SUBSTRING([DATE_], 4, 4) AS[Year]," +
+                                                  " [TOTAL_COMM] AS[Total_Commission]," +
+                                                  " [CMA_COMM] AS[SAMA_Commission]," +
+                                                  " [ARC_COMM] AS[ARC_Commission]," +
+                                                  " [TRADE_COUNT] AS[Number_Of_Trades]," +
+                                                  " [TOTAL_VALUE] AS[Total_Amount]" +
+                                                  " FROM[ARC_Reports].[dbo].[commission_summary]");
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new CommissionSummary
+                        {
+                            CIC = Convert.ToDecimal(x["CIC"]),
+                            Equator = x["EQUATOR"].ToString(),
+                            Agent = x["AGENT"].ToString(),
+                            Symbol = x["SYMBOL"].ToString(),
+                            Month = Convert.ToInt32(x["Month"]),
+                            Year = Convert.ToInt32(x["Year"]),
+                            Total_Commission = Convert.ToDecimal(x["Total_Commission"]),
+                            SAMA_Commission = Convert.ToDecimal(x["SAMA_Commission"]),
+                            ARC_Commission = Convert.ToDecimal(x["ARC_Commission"]),
+                            Number_Of_Trades = Convert.ToDecimal(x["Number_Of_Trades"]),
+                            Total_Amount = Convert.ToDecimal(x["Total_Amount"]),
+                        }).ToList();
             return null;
         }
 

@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,18 +46,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.ASPxThemes.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.Bootstrap.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.Resources.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v16.2.Web, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.2.Web, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -71,6 +83,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -80,6 +93,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\nwind.mdb" />
+    <Content Include="Content\Images\Panner3.png" />
     <Content Include="Controls\MarketValueGraphs_D.ascx" />
     <Content Include="Controls\MarketShareGraphs_D.ascx" />
     <Content Include="Controls\MarketShareGraphs_H.ascx" />
@@ -560,30 +575,20 @@
     <Content Include="assets\media\js\jquery.js" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Enhancement.css" />
-    <Content Include="Content\Images\Blog\image0.png" />
-    <Content Include="Content\Images\Blog\image1.png" />
-    <Content Include="Content\Images\Blog\image2.png" />
-    <Content Include="Content\Images\Blog\image3.png" />
-    <Content Include="Content\Images\Components\aspnet-mvc-extensions.jpg" />
-    <Content Include="Content\Images\Components\DevExpress-Dashboard.jpg" />
-    <Content Include="Content\Images\Components\DevExpress-WinForms-Diagram-Control.jpg" />
-    <Content Include="Content\Images\Components\Grid-Dashboard.jpg" />
-    <Content Include="Content\Images\Components\WPF-Office-Inspired-App.jpg" />
-    <Content Include="Content\Images\Customers\GaryRubio.jpg" />
-    <Content Include="Content\Images\Customers\HeidiLopez.jpg" />
-    <Content Include="Content\Images\Customers\NathanBryant.jpg" />
-    <Content Include="Content\Images\Customers\RafaelRaje.jpg" />
     <Content Include="Content\site.css" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.png" />
     <Content Include="Pages\BrokerageMetrics.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\MarketShareGraph.aspx" />
-    <Content Include="Pages\WebForm2.aspx" />
-    <Content Include="Pages\_MarketShareGraph.aspx" />
+    <Content Include="_Lab\WebForm2.aspx" />
+    <Content Include="_Lab\WebForm3.aspx" />
+    <Content Include="_Lab\WebForm4.aspx" />
+    <Content Include="Pages\SummaryCommission.aspx" />
+    <Content Include="_Lab\_MarketShareGraph.aspx" />
     <Content Include="Pages\MarketShareTotals.aspx" />
     <Content Include="Pages\MarketShareDetails.aspx" />
-    <Content Include="Pages\WebForm1.aspx" />
+    <Content Include="_Lab\WebForm1.aspx" />
     <Content Include="Public\Unauthorized.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.12.2.min.js" />
@@ -696,18 +701,39 @@
     <Compile Include="Pages\MarketShareGraph.aspx.designer.cs">
       <DependentUpon>MarketShareGraph.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WebForm2.aspx.cs">
+    <Compile Include="_Lab\WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\WebForm2.aspx.designer.cs">
+    <Compile Include="_Lab\WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\_MarketShareGraph.aspx.cs">
+    <Compile Include="_Lab\WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Lab\WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_Lab\WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Lab\WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SummaryCommission.aspx.cs">
+      <DependentUpon>SummaryCommission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SummaryCommission.aspx.designer.cs">
+      <DependentUpon>SummaryCommission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_Lab\_MarketShareGraph.aspx.cs">
       <DependentUpon>_MarketShareGraph.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\_MarketShareGraph.aspx.designer.cs">
+    <Compile Include="_Lab\_MarketShareGraph.aspx.designer.cs">
       <DependentUpon>_MarketShareGraph.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\MarketShareTotals.aspx.cs">
@@ -724,11 +750,11 @@
     <Compile Include="Pages\MarketShareDetails.aspx.designer.cs">
       <DependentUpon>MarketShareDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WebForm1.aspx.cs">
+    <Compile Include="_Lab\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\WebForm1.aspx.designer.cs">
+    <Compile Include="_Lab\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -739,9 +765,18 @@
     <Compile Include="Public\Unauthorized.aspx.designer.cs">
       <DependentUpon>Unauthorized.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\SummaryCommission.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SummaryCommission.Designer.cs">
+      <DependentUpon>SummaryCommission.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\SummaryCommission.resx">
+      <DependentUpon>SummaryCommission.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ARC.Reports.DAL\ARC.Reports.DAL.csproj">
@@ -749,6 +784,7 @@
       <Name>ARC.Reports.DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
