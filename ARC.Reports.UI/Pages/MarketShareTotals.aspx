@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="ARC Reports - Market Share Totals" Language="C#" MasterPageFile="~/Pages/Admin.Master" AutoEventWireup="true" CodeBehind="MarketShareTotals.aspx.cs" Inherits="ARC.Reports.Pages.MarketShareTotals" %>
 
-<%@ Register Assembly="DevExpress.Web.v16.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <%@ Register Src="~/Controls/MarketShareTotal_0D.ascx" TagName="MarketShareTotal_0D" TagPrefix="em" %>
 <%@ Register Src="~/Controls/MarketShareTotal_1M.ascx" TagName="MarketShareTotal_1M" TagPrefix="em" %>
