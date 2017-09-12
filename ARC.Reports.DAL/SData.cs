@@ -376,7 +376,7 @@ namespace ARC.Reports.DAL
                 if (pDateType == 1)
                     myDataTable = Helper.ExecuteReader("SELECT" +
                                                         " MAX([ETS_Share_Value]) AS[ETS_Share_Value], MAX([Market_Share_Value]) AS[Market_Share_Value], MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
-                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, '2017-08-07')" +
+                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
                                                         " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
                                                         " ORDER BY[date]", parameters);
                 if (pDateType == 2)
@@ -395,7 +395,7 @@ namespace ARC.Reports.DAL
                 if (pDateType == 1)
                     myDataTable = Helper.ExecuteReader("SELECT" +
                                                         " MAX([ETS_Share_Value]) AS[ETS_Share_Value], MAX([Market_Share_Value]) AS[Market_Share_Value], MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
-                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, '2017-08-07')" +
+                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
                                                         " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
                                                         " ORDER BY[date]", parameters);
                 if (pDateType == 2)

@@ -110,23 +110,5 @@ namespace ARC.Reports.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::ARC.Reports.Controls.MarketShareGraphs_Y MarketShareGraphs_Y_1;
-        
-        /// <summary>
-        /// ASPxTimer1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer1;
-        
-        /// <summary>
-        /// ASPxTimer2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
     }
 }

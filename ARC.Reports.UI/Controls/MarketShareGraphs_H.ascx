@@ -11,7 +11,8 @@
     Width="1000px" CrosshairEnabled="True">
     <SeriesSerializable>
         <dx:Series Name="Market Share" ArgumentScaleType="DateTime" LabelsVisibility="False" ArgumentDataMember="date" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="Time: {A:hh:mm}
-Market Share: {V:n2}%" LegendName="Default Legend">
+Market Share: {V:n2}%"
+            LegendName="Default Legend">
             <ViewSerializable>
                 <dx:LineSeriesView MarkerVisibility="True">
                     <LineMarkerOptions Size="1">
@@ -23,7 +24,7 @@ Market Share: {V:n2}%" LegendName="Default Legend">
     <CrosshairOptions ArgumentLineColor="DeepSkyBlue" ArgumentLineStyle-Thickness="2"
         ShowOnlyInFocusedPane="False">
     </CrosshairOptions>
-    <Legend AlignmentHorizontal="Right" Direction="LeftToRight" AlignmentVertical="BottomOutside" MarkerSize="18, 35" Visibility="True">
+    <Legend AlignmentHorizontal="Right" Direction="LeftToRight" AlignmentVertical="BottomOutside" MarkerSize="18, 35" Visibility="False">
         <Border Visibility="True" />
     </Legend>
     <BorderOptions Visibility="False" />
@@ -36,8 +37,8 @@ Market Share: {V:n2}%" LegendName="Default Legend">
                 <Label Staggered="True" TextPattern="{A:HH:mm}">
                 </Label>
                 <CrosshairAxisLabelOptions Pattern="h:mm" />
-                <DateTimeScaleOptions GridAlignment="Minute" AutoGrid="False" GridSpacing="10" WorkdaysOnly="True" ScaleMode="Continuous" >
-<WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
+                <DateTimeScaleOptions GridAlignment="Minute" AutoGrid="False" GridSpacing="10" WorkdaysOnly="True" ScaleMode="Continuous">
+                    <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></WorkdaysOptions>
                 </DateTimeScaleOptions>
                 <workdaysoptions workdays="Sunday, Monday, Tuesday, Wednesday, Thursday"></workdaysoptions>
             </AxisX>
@@ -51,3 +52,9 @@ Market Share: {V:n2}%" LegendName="Default Legend">
         </dx:XYDiagram>
     </DiagramSerializable>
 </dx:WebChartControl>
+
+<%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="3000">
+                <ClientSideEvents Tick="function(s, e) { 
+                MainContent_ASPxPageControl1_MarketShareGraphs_H_0_WebChartControl0.PerformCallback();
+                }" />
+            </dx:ASPxTimer>--%>

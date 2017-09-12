@@ -74,17 +74,17 @@
                         <Items>
                             <dx:ListEditItem Text="1 Day" Value="0" Selected="True" />
                             <dx:ListEditItem Text="5 Days" Value="1" />
-                            <dx:ListEditItem Text="1 Month" Value="2" />
+                            <dx:ListEditItem Text="30 Days" Value="2" />
                             <dx:ListEditItem Text="1 Year" Value="3" />
                         </Items>
                     </dx:ASPxComboBox>
                     <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
-            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="60000">
+<%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="3000">
                 <ClientSideEvents Tick="function(s, e) { 
-                Chart_0.PerformCallback();
-                Chart_4.PerformCallback();
+                MainContent_ASPxPageControl1_MarketShareGraphs_H_0_WebChartControl0.PerformCallback();
+                MainContent_ASPxPageControl1_MarketShareGraphs_H_1_WebChartControl0.PerformCallback();
                 }" />
             </dx:ASPxTimer>
             <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="600000">
@@ -96,7 +96,7 @@
                 Chart_6.PerformCallback();
                 Chart_7.PerformCallback();
                 }" />
-            </dx:ASPxTimer>
+            </dx:ASPxTimer>--%>
         </div>
     </div>
 </asp:Content>
