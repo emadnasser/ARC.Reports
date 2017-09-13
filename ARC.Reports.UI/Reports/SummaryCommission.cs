@@ -14,7 +14,6 @@ namespace ARC.Reports.Reports
         {
             InitializeComponent();
 
-
             //if (lblEquatorD.NullValueText=="")
             //{
             //    lblEquatorH.Visible = false;
@@ -24,6 +23,23 @@ namespace ARC.Reports.Reports
             //{
             //    lblEquatorH.Visible = true;
             //    lblEquatorD.Visible = true;
+            //}
+        }
+
+        private void SummaryCommission_ParametersRequestBeforeShow(object sender, ParametersRequestEventArgs e)
+        {
+            //e.ParametersInformation[0].Parameter.Value = DateTime.Now.Month.ToString("D2");
+            //e.ParametersInformation[1].Parameter.Value = DateTime.Now.Year.ToString("D4");
+        }
+
+        private void SummaryCommission_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            //if (Parameters[0].Value.ToString() == "" && Parameters[1].Value.ToString() == "" &&
+            //    Parameters[2].Value.ToString() == "" && Parameters[3].Value.ToString() == "" &&
+            //    Parameters[4].Value.ToString() == "" && Parameters[5].Value.ToString() == ""
+            //    )
+            //{
+            //    StopPageBuilding();
             //}
         }
     }

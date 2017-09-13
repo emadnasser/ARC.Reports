@@ -10,12 +10,15 @@
         $(document).ready(function () {
             $(function () {
                 $("#sidebar > ul > li > ul:nth-child(3) > li > ul > li:nth-child(5)").addClass("active");
+                $('#MainContent_ASPxDocumentViewer_Splitter_RibbonToolbar_T0G3I2').remove();
+                $('#MainContent_ASPxDocumentViewer_Splitter_ParametersPanel_Submit').click().delay(3000);
             });
         });
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <dx:ASPxDocumentViewer ID="ASPxDocumentViewer" runat="server" EnableTheming="True" Theme="DevEx" ToolbarMode="Ribbon" ReportTypeName="ARC.Reports.Reports.SummaryCommission" AssociatedRibbonID="213">
+    <dx:ASPxDocumentViewer ID="ASPxDocumentViewer" runat="server" EnableTheming="True" Theme="DevEx" ToolbarMode="Ribbon" ReportTypeName="ARC.Reports.Reports.SummaryCommission" AssociatedRibbonID="213" >
+        <settingsdocumentmap allowselectnode="False" />
         <stylessplitter sidepanewidth="230px">
         </stylessplitter>
     </dx:ASPxDocumentViewer>

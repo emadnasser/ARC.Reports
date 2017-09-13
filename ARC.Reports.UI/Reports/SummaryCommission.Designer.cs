@@ -98,7 +98,7 @@
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
             this.Detail.Dpi = 100F;
-            this.Detail.HeightF = 30.98874F;
+            this.Detail.HeightF = 31F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -270,12 +270,14 @@
             // 
             // TopMargin
             // 
+            this.TopMargin.BackColor = System.Drawing.Color.Thistle;
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPictureBox1});
             this.TopMargin.Dpi = 100F;
-            this.TopMargin.HeightF = 61.36364F;
+            this.TopMargin.HeightF = 51F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.TopMargin.StylePriority.UseBackColor = false;
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPictureBox1
@@ -283,9 +285,9 @@
             this.xrPictureBox1.BorderWidth = 0F;
             this.xrPictureBox1.Dpi = 100F;
             this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(3.178914E-05F, 0F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(839F, 61.36364F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(838.9999F, 51.36364F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // BottomMargin
@@ -335,7 +337,7 @@
             this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1});
             this.pageHeaderBand1.Dpi = 100F;
-            this.pageHeaderBand1.HeightF = 42.54824F;
+            this.pageHeaderBand1.HeightF = 43F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.StylePriority.UseBackColor = false;
             // 
@@ -567,18 +569,18 @@
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPageInfo2});
             this.pageFooterBand1.Dpi = 100F;
-            this.pageFooterBand1.HeightF = 29.00001F;
+            this.pageFooterBand1.HeightF = 29F;
             this.pageFooterBand1.Name = "pageFooterBand1";
             // 
             // xrPageInfo2
             // 
             this.xrPageInfo2.Dpi = 100F;
-            this.xrPageInfo2.Font = new System.Drawing.Font("Calibri", 9F);
+            this.xrPageInfo2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.xrPageInfo2.Format = "Page {0} of {1}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(526F, 6.00001F);
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(514.5833F, 6.00001F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(313F, 23F);
+            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(312.9999F, 23F);
             this.xrPageInfo2.StyleName = "PageInfo";
             this.xrPageInfo2.StylePriority.UseFont = false;
             this.xrPageInfo2.StylePriority.UseTextAlignment = false;
@@ -592,28 +594,28 @@
             this.lblEquatorH,
             this.xrLabel1});
             this.reportHeaderBand1.Dpi = 100F;
-            this.reportHeaderBand1.HeightF = 87.77651F;
+            this.reportHeaderBand1.HeightF = 88F;
             this.reportHeaderBand1.Name = "reportHeaderBand1";
             // 
             // lblEquatorD
             // 
             this.lblEquatorD.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "GetCommissionSummary(@pMonth, @pYear, @pCIC, @pEquator, @pAgent, @pSymbol).EQUATO" +
-                    "R")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "GetCommissionSummary(@pMonth, @pYear, @pCIC, @pEquator, @pAgent, @pSymbol).CIC")});
             this.lblEquatorD.Dpi = 100F;
-            this.lblEquatorD.LocationFloat = new DevExpress.Utils.PointFloat(110.072F, 64.77652F);
+            this.lblEquatorD.LocationFloat = new DevExpress.Utils.PointFloat(31.94699F, 64.77652F);
             this.lblEquatorD.Name = "lblEquatorD";
             this.lblEquatorD.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblEquatorD.SizeF = new System.Drawing.SizeF(100F, 18.26516F);
             this.lblEquatorD.StylePriority.UseTextAlignment = false;
-            this.lblEquatorD.Text = "lblEquatorD";
+            this.lblEquatorD.Text = "lblCIC";
             this.lblEquatorD.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrPageInfo1
             // 
             this.xrPageInfo1.Dpi = 100F;
-            this.xrPageInfo1.Font = new System.Drawing.Font("Calibri", 10F);
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(684.3334F, 64.77653F);
+            this.xrPageInfo1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.xrPageInfo1.Format = "{0:dddd MM/dd/yyyy}";
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(672.9167F, 64.77653F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -626,18 +628,18 @@
             // lblEquatorH
             // 
             this.lblEquatorH.Dpi = 100F;
-            this.lblEquatorH.LocationFloat = new DevExpress.Utils.PointFloat(5.999998F, 64.77653F);
+            this.lblEquatorH.LocationFloat = new DevExpress.Utils.PointFloat(5.999994F, 64.77655F);
             this.lblEquatorH.Name = "lblEquatorH";
             this.lblEquatorH.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblEquatorH.SizeF = new System.Drawing.SizeF(104.072F, 18.26516F);
+            this.lblEquatorH.SizeF = new System.Drawing.SizeF(25.947F, 18.26515F);
             this.lblEquatorH.StylePriority.UseTextAlignment = false;
-            this.lblEquatorH.Text = "Equator Account:";
+            this.lblEquatorH.Text = "CIC:";
             this.lblEquatorH.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel1
             // 
             this.xrLabel1.Dpi = 100F;
-            this.xrLabel1.Font = new System.Drawing.Font("Calibri", 20F);
+            this.xrLabel1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(5.999994F, 5.999994F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -712,6 +714,7 @@
             // 
             this.Year.Description = "Year:";
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("", "---------------------------"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("2018", ""));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("2017", null));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("2016", null));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("2015", null));
@@ -766,8 +769,8 @@
             this.sqlDataSource1});
             this.DataMember = "GetCommissionSummary(@pMonth, @pYear, @pCIC, @pEquator, @pAgent, @pSymbol)";
             this.DataSource = this.sqlDataSource1;
-            this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margins = new System.Drawing.Printing.Margins(5, 6, 61, 100);
+            this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margins = new System.Drawing.Printing.Margins(5, 6, 51, 100);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.Month,
             this.Year,
@@ -775,6 +778,7 @@
             this.Equator,
             this.Agent,
             this.Symbol});
+            this.SnapGridSize = 9.84252F;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
             this.FieldCaption,
@@ -782,6 +786,8 @@
             this.DataField,
             this.xrControlStyle1});
             this.Version = "16.2";
+            this.ParametersRequestBeforeShow += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestEventArgs>(this.SummaryCommission_ParametersRequestBeforeShow);
+            this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.SummaryCommission_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
