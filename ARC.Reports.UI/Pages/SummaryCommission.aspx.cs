@@ -28,10 +28,9 @@ namespace ARC.Reports.Pages
         protected void Page_Load(object sender, System.EventArgs e)
         {
             var report = new Reports.SummaryCommission();
-            report.RequestParameters = true;
+            report.RequestParameters = false;
             //report.AfterPrint += report_AfterPrint;
             report.CreateDocument(true);
-
             ASPxDocumentViewer.Report = report;
         }
     }
