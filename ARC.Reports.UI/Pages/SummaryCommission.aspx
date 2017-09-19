@@ -22,10 +22,10 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <dx:ASPxDocumentViewer ID="ASPxDocumentViewer" runat="server" EnableTheming="True" Theme="DevEx" ToolbarMode="Ribbon" ReportTypeName="ARC.Reports.Reports.SummaryCommission" AssociatedRibbonID="213" Width="100%" Height="100%" >
-        <settingsdocumentmap allowselectnode="False" />
+    <dx:ASPxDocumentViewer ID="ASPxDocumentViewer" runat="server" EnableTheming="True" Theme="DevEx" ToolbarMode="Ribbon" ReportTypeName="ARC.Reports.Reports.SummaryCommission" AssociatedRibbonID="213" Width="100%" Height="100%" SettingsDocumentMap-AllowSelectNode="true" >
+        <settingsdocumentmap showtreelines="True" AllowSelectNode="true" />
+        <StylesReportViewer ShowDocumentShadow="false"></StylesReportViewer>
         <stylessplitter sidepanewidth="230px">
         </stylessplitter>
-        <StylesReportViewer ShowDocumentShadow="false"></StylesReportViewer>
     </dx:ASPxDocumentViewer>
 </asp:Content>
