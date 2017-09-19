@@ -29,19 +29,31 @@ namespace ARC.Reports.Reports
 
         private void SummaryCommission_ParametersRequestBeforeShow(object sender, ParametersRequestEventArgs e)
         {
-            //if (Parameters[0].Value.ToString() == "1/1/0001 12:00:00 AM")
-            //{
-            //    lblDateFrom.Text = "...";
-            //}
-            //if (Parameters[1].Value.ToString() == "1/1/0001 12:00:00 AM")
-            //{
-            //    Parameters[1].Value = DateTime.Now;
-            //    lblDateTo.Text = "...";
-            //}
+            if (Parameters[0].Value.ToString() == "1/1/0001 12:00:00 AM")
+            {
+                //lblDateFrom.Text = "...";
+            }
+            if (Parameters[1].Value.ToString() == "1/1/0001 12:00:00 AM")
+            {
+                Parameters[1].Value = DateTime.Now;
+                //lblDateTo.Text = "...";
+            }
         }
 
         private void SummaryCommission_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
+            //var currentDate = DateTime.Now.ToString();
+            //var xx = x.Substring(0, x.IndexOf(" "));
+            //Parameters[0].Value.ToString() == "1/1/2007 12:00:00 AM" &&
+            //    Parameters[1].ToString() == DateTime.Now.ToString() &&
+
+            if (Parameters[2].Value.ToString() == "" && Parameters[3].Value.ToString() == "" &&
+                Parameters[4].Value.ToString() == "" && Parameters[5].Value.ToString() == "" &&
+                Parameters[6].Value.ToString() == "" && Parameters[7].Value.ToString() == "")
+            {
+                StopPageBuilding();
+            }
+
             //if (Parameters[0].Value.ToString() == "1/1/2007 12:00:00 AM")
             //{
             //    lblDateFrom.Text = "....";

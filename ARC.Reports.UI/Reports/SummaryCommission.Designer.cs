@@ -119,7 +119,7 @@
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.GroupFooter = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
             this.TotalCommissionS = new DevExpress.XtraReports.UI.XRTableCell();
@@ -127,6 +127,8 @@
             this.ARCCommissionS = new DevExpress.XtraReports.UI.XRTableCell();
             this.NumberOfTradesS = new DevExpress.XtraReports.UI.XRTableCell();
             this.TotalAmmountS = new DevExpress.XtraReports.UI.XRTableCell();
+            this.GroupHeader = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -139,6 +141,7 @@
             this.DateTo.Description = "Date To:";
             this.DateTo.Name = "DateTo";
             this.DateTo.Type = typeof(System.DateTime);
+            this.DateTo.Visible = false;
             // 
             // Detail
             // 
@@ -431,12 +434,12 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblDate.Dpi = 100F;
             this.lblDate.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.lblDate.Format = "{0:dddd MM/dd/yyyy}";
-            this.lblDate.LocationFloat = new DevExpress.Utils.PointFloat(684.3334F, 90.57511F);
+            this.lblDate.Format = "{0:dddd - MM d yyyy, H:mm:ss}";
+            this.lblDate.LocationFloat = new DevExpress.Utils.PointFloat(637.5F, 88.57514F);
             this.lblDate.Name = "lblDate";
             this.lblDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.lblDate.SizeF = new System.Drawing.SizeF(154.6666F, 18.26516F);
+            this.lblDate.SizeF = new System.Drawing.SizeF(201.5F, 18.26516F);
             this.lblDate.StylePriority.UseBackColor = false;
             this.lblDate.StylePriority.UseBorderColor = false;
             this.lblDate.StylePriority.UseBorderDashStyle = false;
@@ -517,6 +520,7 @@
             this.DateFrom.Name = "DateFrom";
             this.DateFrom.Type = typeof(System.DateTime);
             this.DateFrom.ValueInfo = "2007-01-01";
+            this.DateFrom.Visible = false;
             // 
             // lblDateP1
             // 
@@ -1127,6 +1131,7 @@
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.lblPage});
             this.pageFooterBand1.Dpi = 100F;
+            this.pageFooterBand1.Expanded = false;
             this.pageFooterBand1.HeightF = 29.00002F;
             this.pageFooterBand1.Name = "pageFooterBand1";
             // 
@@ -1200,13 +1205,14 @@
             this.xrControlStyle1.Name = "xrControlStyle1";
             this.xrControlStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             // 
-            // GroupFooter1
+            // GroupFooter
             // 
-            this.GroupFooter1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.GroupFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable5});
-            this.GroupFooter1.Dpi = 100F;
-            this.GroupFooter1.HeightF = 41.66667F;
-            this.GroupFooter1.Name = "GroupFooter1";
+            this.GroupFooter.Dpi = 100F;
+            this.GroupFooter.Expanded = false;
+            this.GroupFooter.HeightF = 41.66667F;
+            this.GroupFooter.Name = "GroupFooter";
             // 
             // xrTable5
             // 
@@ -1348,6 +1354,27 @@
             this.TotalAmmountS.Summary = xrSummary5;
             this.TotalAmmountS.Weight = 32.95593698101704D;
             // 
+            // GroupHeader
+            // 
+            this.GroupHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1});
+            this.GroupHeader.Dpi = 100F;
+            this.GroupHeader.HeightF = 100F;
+            this.GroupHeader.Name = "GroupHeader";
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.Bookmark = "xrLabel1";
+            this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "GetCommissionSummary(@pMonth, @pYear, @pCIC, @pEquator, @pAgent, @pSymbol).EQUATO" +
+                    "R")});
+            this.xrLabel1.Dpi = 100F;
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(20F, 10.00001F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel1.Text = "xrLabel1";
+            // 
             // SummaryCommission
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1356,7 +1383,8 @@
             this.BottomMargin,
             this.pageHeaderBand1,
             this.pageFooterBand1,
-            this.GroupFooter1});
+            this.GroupFooter,
+            this.GroupHeader});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
             this.DataMember = "GetCommissionSummary(@pMonth, @pYear, @pCIC, @pEquator, @pAgent, @pSymbol)";
@@ -1372,7 +1400,6 @@
             this.Equator,
             this.Agent,
             this.Symbol});
-            this.ReportPrintOptions.PrintOnEmptyDataSource = false;
             this.SnapGridSize = 9.84252F;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
@@ -1467,7 +1494,7 @@
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.XRLabel lblTitle;
-        private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
+        private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter;
         private DevExpress.XtraReports.UI.XRTable xrTable5;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow5;
         private DevExpress.XtraReports.UI.XRTableCell TotalCommissionS;
@@ -1478,5 +1505,7 @@
         private DevExpress.XtraReports.Parameters.Parameter DateTo;
         private DevExpress.XtraReports.Parameters.Parameter DateFrom;
         private DevExpress.XtraReports.UI.XRTableCell lblEquatorF;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
     }
 }

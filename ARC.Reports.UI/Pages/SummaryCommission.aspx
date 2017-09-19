@@ -10,7 +10,7 @@
         $(document).ready(function () {
             $(function () {
                 $("#sidebar > ul > li > ul:nth-child(3) > li > ul > li:nth-child(5)").addClass("active");
-                $('#MainContent_ASPxDocumentViewer_Splitter_RibbonToolbar_T0G3I2').remove();
+                //$('#MainContent_ASPxDocumentViewer_Splitter_RibbonToolbar_T0G3I2').remove();
                 //$('#MainContent_ASPxDocumentViewer_Splitter_ParametersPanel_Submit').click().delay(3000);
 
                 //if ($('#MainContent_ASPxDocumentViewer_Splitter_ParametersPanel_dxxrppEditor1_I').val() == "1/1/2007")
