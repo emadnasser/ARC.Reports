@@ -65,28 +65,40 @@ namespace ARC.Reports.Pages
             GetData();
         }
 
+        protected void Type_ValueChanged(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
         private void GetData()
         {
             try
             {
                 ASPxComboBox myOption = ASPxPageControl1.FindControl("myOption") as ASPxComboBox;
-
-                List<MarketShareGraphs> x0 = new List<MarketShareGraphs>();
-                List<MarketShareGraphs> x1 = new List<MarketShareGraphs>();
-                List<MarketShareGraphs> x2 = new List<MarketShareGraphs>();
-                List<MarketShareGraphs> x3 = new List<MarketShareGraphs>();
-
-                List<MarketShareGraphs> y0 = new List<MarketShareGraphs>();
-                List<MarketShareGraphs> y1 = new List<MarketShareGraphs>();
-                List<MarketShareGraphs> y2 = new List<MarketShareGraphs>();
-                List<MarketShareGraphs> y3 = new List<MarketShareGraphs>();
+                ASPxComboBox Type = ASPxPageControl1.FindControl("Type") as ASPxComboBox;
 
                 if (myOption.SelectedIndex == 0)
                 {
-                    MarketShareGraphs_H_0.MarketType = 0;
-                    MarketShareGraphs_H_1.MarketType = 1;
-                    MarketShareGraphs_H_0.Visible = true;
-                    MarketShareGraphs_H_1.Visible = true;
+                    if (Type.SelectedIndex == 0)
+                    {
+                        MarketShareGraphs_H_0.MarketType = 0;
+                        MarketShareGraphs_H_1.MarketType = 1;
+                        MarketShareGraphs_H_0.Visible = true;
+                        MarketShareGraphs_H_1.Visible = true;
+
+                        MarketTradeGraphs_H_0.Visible = false;
+                        MarketTradeGraphs_H_1.Visible = false;
+                    }
+                    else
+                    {
+                        MarketTradeGraphs_H_0.MarketType = 0;
+                        MarketTradeGraphs_H_1.MarketType = 1;
+                        MarketTradeGraphs_H_0.Visible = true;
+                        MarketTradeGraphs_H_1.Visible = true;
+
+                        MarketShareGraphs_H_0.Visible = false;
+                        MarketShareGraphs_H_1.Visible = false;
+                    }
 
                     MarketShareGraphs_D_0.Visible = false;
                     MarketShareGraphs_M_0.Visible = false;
@@ -94,13 +106,37 @@ namespace ARC.Reports.Pages
                     MarketShareGraphs_D_1.Visible = false;
                     MarketShareGraphs_M_1.Visible = false;
                     MarketShareGraphs_Y_1.Visible = false;
+
+                    MarketTradeGraphs_D_0.Visible = false;
+                    MarketTradeGraphs_M_0.Visible = false;
+                    MarketTradeGraphs_Y_0.Visible = false;
+                    MarketTradeGraphs_D_1.Visible = false;
+                    MarketTradeGraphs_M_1.Visible = false;
+                    MarketTradeGraphs_Y_1.Visible = false;
                 }
                 else if (myOption.SelectedIndex == 1)
                 {
-                    MarketShareGraphs_D_0.MarketType = 0;
-                    MarketShareGraphs_D_1.MarketType = 1;
-                    MarketShareGraphs_D_0.Visible = true;
-                    MarketShareGraphs_D_1.Visible = true;
+
+                    if (Type.SelectedIndex == 0)
+                    {
+                        MarketShareGraphs_D_0.MarketType = 0;
+                        MarketShareGraphs_D_1.MarketType = 1;
+                        MarketShareGraphs_D_0.Visible = true;
+                        MarketShareGraphs_D_1.Visible = true;
+
+                        MarketTradeGraphs_D_0.Visible = false;
+                        MarketTradeGraphs_D_1.Visible = false;
+                    }
+                    else
+                    {
+                        MarketTradeGraphs_D_0.MarketType = 0;
+                        MarketTradeGraphs_D_1.MarketType = 1;
+                        MarketTradeGraphs_D_0.Visible = true;
+                        MarketTradeGraphs_D_1.Visible = true;
+
+                        MarketShareGraphs_D_0.Visible = false;
+                        MarketShareGraphs_D_1.Visible = false;
+                    }
 
                     MarketShareGraphs_H_0.Visible = false;
                     MarketShareGraphs_M_0.Visible = false;
@@ -108,13 +144,36 @@ namespace ARC.Reports.Pages
                     MarketShareGraphs_H_1.Visible = false;
                     MarketShareGraphs_M_1.Visible = false;
                     MarketShareGraphs_Y_1.Visible = false;
+
+                    MarketTradeGraphs_H_0.Visible = false;
+                    MarketTradeGraphs_M_0.Visible = false;
+                    MarketTradeGraphs_Y_0.Visible = false;
+                    MarketTradeGraphs_H_1.Visible = false;
+                    MarketTradeGraphs_M_1.Visible = false;
+                    MarketTradeGraphs_Y_1.Visible = false;
                 }
                 else if (myOption.SelectedIndex == 2)
                 {
-                    MarketShareGraphs_M_0.MarketType = 0;
-                    MarketShareGraphs_M_1.MarketType = 1;
-                    MarketShareGraphs_M_0.Visible = true;
-                    MarketShareGraphs_M_1.Visible = true;
+                    if (Type.SelectedIndex == 0)
+                    {
+                        MarketShareGraphs_M_0.MarketType = 0;
+                        MarketShareGraphs_M_1.MarketType = 1;
+                        MarketShareGraphs_M_0.Visible = true;
+                        MarketShareGraphs_M_1.Visible = true;
+
+                        MarketTradeGraphs_M_0.Visible = false;
+                        MarketTradeGraphs_M_1.Visible = false;
+                    }
+                    else
+                    {
+                        MarketTradeGraphs_M_0.MarketType = 0;
+                        MarketTradeGraphs_M_1.MarketType = 1;
+                        MarketTradeGraphs_M_0.Visible = true;
+                        MarketTradeGraphs_M_1.Visible = true;
+
+                        MarketShareGraphs_M_0.Visible = false;
+                        MarketShareGraphs_M_1.Visible = false;
+                    }
 
                     MarketShareGraphs_H_0.Visible = false;
                     MarketShareGraphs_D_0.Visible = false;
@@ -122,13 +181,36 @@ namespace ARC.Reports.Pages
                     MarketShareGraphs_H_1.Visible = false;
                     MarketShareGraphs_D_1.Visible = false;
                     MarketShareGraphs_Y_1.Visible = false;
+
+                    MarketTradeGraphs_H_0.Visible = false;
+                    MarketTradeGraphs_D_0.Visible = false;
+                    MarketTradeGraphs_Y_0.Visible = false;
+                    MarketTradeGraphs_H_1.Visible = false;
+                    MarketTradeGraphs_D_1.Visible = false;
+                    MarketTradeGraphs_Y_1.Visible = false;
                 }
                 else if (myOption.SelectedIndex == 3)
                 {
-                    MarketShareGraphs_Y_0.MarketType = 0;
-                    MarketShareGraphs_Y_1.MarketType = 1;
-                    MarketShareGraphs_Y_0.Visible = true;
-                    MarketShareGraphs_Y_1.Visible = true;
+                    if (Type.SelectedIndex == 0)
+                    {
+                        MarketShareGraphs_Y_0.MarketType = 0;
+                        MarketShareGraphs_Y_1.MarketType = 1;
+                        MarketShareGraphs_Y_0.Visible = true;
+                        MarketShareGraphs_Y_1.Visible = true;
+
+                        MarketTradeGraphs_Y_0.Visible = false;
+                        MarketTradeGraphs_Y_1.Visible = false;
+                    }
+                    else
+                    {
+                        MarketTradeGraphs_Y_0.MarketType = 0;
+                        MarketTradeGraphs_Y_1.MarketType = 1;
+                        MarketTradeGraphs_Y_0.Visible = true;
+                        MarketTradeGraphs_Y_1.Visible = true;
+
+                        MarketShareGraphs_Y_0.Visible = false;
+                        MarketShareGraphs_Y_1.Visible = false;
+                    }
 
                     MarketShareGraphs_H_0.Visible = false;
                     MarketShareGraphs_D_0.Visible = false;
@@ -136,6 +218,13 @@ namespace ARC.Reports.Pages
                     MarketShareGraphs_H_1.Visible = false;
                     MarketShareGraphs_D_1.Visible = false;
                     MarketShareGraphs_M_1.Visible = false;
+
+                    MarketTradeGraphs_H_0.Visible = false;
+                    MarketTradeGraphs_D_0.Visible = false;
+                    MarketTradeGraphs_M_0.Visible = false;
+                    MarketTradeGraphs_H_1.Visible = false;
+                    MarketTradeGraphs_D_1.Visible = false;
+                    MarketTradeGraphs_M_1.Visible = false;
                 }
             }
             catch

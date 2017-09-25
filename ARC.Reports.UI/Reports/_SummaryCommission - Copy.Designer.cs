@@ -127,7 +127,6 @@
             this.ARCCommissionS = new DevExpress.XtraReports.UI.XRTableCell();
             this.NumberOfTradesS = new DevExpress.XtraReports.UI.XRTableCell();
             this.TotalAmmountS = new DevExpress.XtraReports.UI.XRTableCell();
-            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -147,7 +146,7 @@
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
             this.Detail.Dpi = 100F;
-            this.Detail.HeightF = 23.98268F;
+            this.Detail.HeightF = 21.89935F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -161,7 +160,7 @@
             this.xrTable2.OddStyleName = "DataField";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(833F, 23.98268F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(833F, 21.89935F);
             this.xrTable2.StylePriority.UseTextAlignment = false;
             this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
@@ -309,7 +308,7 @@
             this.lblTitle,
             this.xrPictureBox1});
             this.TopMargin.Dpi = 100F;
-            this.TopMargin.HeightF = 104F;
+            this.TopMargin.HeightF = 104.3334F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 5, 0, 100F);
             this.TopMargin.StylePriority.UseBackColor = false;
@@ -348,7 +347,7 @@
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 100F;
-            this.BottomMargin.HeightF = 15F;
+            this.BottomMargin.HeightF = 6.166522F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -434,12 +433,11 @@
             this.lblDate.Dpi = 100F;
             this.lblDate.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
             this.lblDate.Format = "{0:dddd - MM d yyyy, H:mm:ss}";
-            this.lblDate.LocationFloat = new DevExpress.Utils.PointFloat(626.0833F, 81.04904F);
+            this.lblDate.LocationFloat = new DevExpress.Utils.PointFloat(637.5F, 88.57514F);
             this.lblDate.Name = "lblDate";
             this.lblDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.lblDate.SizeF = new System.Drawing.SizeF(201.5F, 24F);
-            this.lblDate.StartPageNumber = 0;
+            this.lblDate.SizeF = new System.Drawing.SizeF(201.5F, 18.26516F);
             this.lblDate.StylePriority.UseBackColor = false;
             this.lblDate.StylePriority.UseBorderColor = false;
             this.lblDate.StylePriority.UseBorderDashStyle = false;
@@ -787,7 +785,7 @@
             this.lblEquatorF.StylePriority.UseBorderDashStyle = false;
             this.lblEquatorF.StylePriority.UseBorders = false;
             this.lblEquatorF.Text = "Equator:";
-            this.lblEquatorF.Weight = 0.54427651625346363D;
+            this.lblEquatorF.Weight = 0.632818115803065D;
             // 
             // lblEquatorP
             // 
@@ -806,7 +804,7 @@
             this.lblEquatorP.StylePriority.UseBorders = false;
             this.lblEquatorP.StylePriority.UseTextAlignment = false;
             this.lblEquatorP.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.lblEquatorP.Weight = 1.4499160593091383D;
+            this.lblEquatorP.Weight = 1.3613744597595368D;
             // 
             // Equator
             // 
@@ -1131,7 +1129,7 @@
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.lblPage});
             this.pageFooterBand1.Dpi = 100F;
-            this.pageFooterBand1.HeightF = 30.04172F;
+            this.pageFooterBand1.HeightF = 29.00002F;
             this.pageFooterBand1.Name = "pageFooterBand1";
             // 
             // lblPage
@@ -1145,10 +1143,10 @@
             this.lblPage.Dpi = 100F;
             this.lblPage.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
             this.lblPage.Format = "Page {0} of {1}";
-            this.lblPage.LocationFloat = new DevExpress.Utils.PointFloat(672.9166F, 6.041718F);
+            this.lblPage.LocationFloat = new DevExpress.Utils.PointFloat(684.3334F, 6.000015F);
             this.lblPage.Name = "lblPage";
             this.lblPage.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblPage.SizeF = new System.Drawing.SizeF(154.6666F, 24F);
+            this.lblPage.SizeF = new System.Drawing.SizeF(154.6666F, 23F);
             this.lblPage.StylePriority.UseBackColor = false;
             this.lblPage.StylePriority.UseBorderColor = false;
             this.lblPage.StylePriority.UseBorderDashStyle = false;
@@ -1366,7 +1364,7 @@
             this.DataMember = "GetCommissionSummary(@pMonth, @pYear, @pCIC, @pEquator, @pAgent, @pSymbol)";
             this.DataSource = this.sqlDataSource1;
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margins = new System.Drawing.Printing.Margins(5, 6, 104, 15);
+            this.Margins = new System.Drawing.Printing.Margins(5, 6, 104, 6);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.DateFrom,
             this.DateTo,
@@ -1481,6 +1479,5 @@
         private DevExpress.XtraReports.Parameters.Parameter DateTo;
         private DevExpress.XtraReports.Parameters.Parameter DateFrom;
         private DevExpress.XtraReports.UI.XRTableCell lblEquatorF;
-        private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }
 }

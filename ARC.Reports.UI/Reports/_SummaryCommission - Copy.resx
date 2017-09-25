@@ -214,7 +214,4 @@
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
     <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkdldENvbW1pc3Npb25TdW1tYXJ5KEBwTW9udGgsIEBwWWVhciwgQHBDSUMsIEBwRXF1YXRvciwgQHBBZ2VudCwgQHBTeW1ib2wpIj48RmllbGQgTmFtZT0iTW9udGgiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iWWVhciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUb3RhbF9Db21taXNzaW9uIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTQU1BX0NvbW1pc3Npb24iIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkFSQ19Db21taXNzaW9uIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJOdW1iZXJfT2ZfVHJhZGVzIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJUb3RhbF9BbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
   </data>
-  <metadata name="directoryEntry1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
 </root>

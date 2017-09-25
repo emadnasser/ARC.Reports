@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace ARC.Reports.Controls
 {
-    public partial class MarketValueGraphs_D : System.Web.UI.UserControl
+    public partial class _MarketValueGraphs_D : System.Web.UI.UserControl
     {
         public int MarketType { get; set; }
 

@@ -186,10 +186,10 @@ namespace ARC.Reports.DAL
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 12 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_12 " +
                                                 " ON S_1.[Channel] = S_12.[Channel]" +
                                                 " LEFT OUTER JOIN" +
-                                                " (SELECT[Channel], ROUND(SUM(Percentage)/ @pNumberOfDays, 2) AS[MarketShare], ROUND(SUM(TradeShare)/ @pNumberOfDays, 2) AS[MarketTrades]" +
-                                                " FROM[dbo].[Rep_001]" +
+                                                " (SELECT[Channel], [MarketShare], [MarketTrades]" +
+                                                " FROM[dbo].[Rep_0012]" +
                                                 " WHERE MONTH(InsertedDate) = MONTH(GETDATE()) AND MarketType = @pMarketType AND YEAR(InsertedDate) = @pYear" +
-                                                " GROUP BY Channel) S_13" +
+                                                " ) S_13" +
                                                 " ON S_1.[Channel] = S_13.[Channel]" +
                                                 " WHERE S_1.[Channel] != 'AVG'" +
                                                 " ORDER BY S_1.[Channel]", parameters);
@@ -363,63 +363,6 @@ namespace ARC.Reports.DAL
             return 1;
         }
 
-        public static List<MarketShareGraphs> MarketShareGraphs(int pMarketType, int pDateType)
-        {
-            SqlParameter[] parameters = new SqlParameter[1];
-
-            DataTable myDataTable = new DataTable();
-
-            if (pMarketType == 0)
-            {
-                parameters[0] = new SqlParameter("@pMarketType", "SAM");
-
-                if (pDateType == 1)
-                    myDataTable = Helper.ExecuteReader("SELECT" +
-                                                        " MAX([ETS_Share_Value]) AS[ETS_Share_Value], MAX([Market_Share_Value]) AS[Market_Share_Value], MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
-                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
-                                                        " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
-                                                        " ORDER BY[date]", parameters);
-                if (pDateType == 2)
-                    myDataTable = Helper.ExecuteReader("SELECT TOP (5) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [Rep_0011]" +
-                                                        "WHERE[Type] = 'Value' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
-                else if (pDateType == 3)
-                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
-
-                else if (pDateType == 4)
-                    myDataTable = Helper.ExecuteReader("SELECT [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
-            }
-            else
-            {
-                parameters[0] = new SqlParameter("@pMarketType", "SEM");
-
-                if (pDateType == 1)
-                    myDataTable = Helper.ExecuteReader("SELECT" +
-                                                        " MAX([ETS_Share_Value]) AS[ETS_Share_Value], MAX([Market_Share_Value]) AS[Market_Share_Value], MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
-                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
-                                                        " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
-                                                        " ORDER BY[date]", parameters);
-                if (pDateType == 2)
-                    myDataTable = Helper.ExecuteReader("SELECT TOP (5) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [Rep_0011]" +
-                                                        "WHERE[Type] = 'Value' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
-                else if (pDateType == 3)
-                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
-                else if (pDateType == 4)
-                    myDataTable = Helper.ExecuteReader("SELECT [ETS_Share_Value], [Market_Share_Value], [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
-            }
-
-            if (myDataTable != null)
-                return (from DataRow x in myDataTable.Rows
-                        select new MarketShareGraphs
-                        {
-                            ETS_Share_Value = Convert.ToDouble(x["ETS_Share_Value"]),
-                            Market_Share_Value = Convert.ToDouble(x["Market_Share_Value"]),
-                            Percentage = Convert.ToDouble(x["Percentage"]),
-                            date = Convert.ToDateTime(x["date"]),
-                            date2 = Convert.ToDateTime(x["date"])
-                        }).ToList();
-            return null;
-        }
-
         public static List<BrokerageMetricsYearly> BrokerageMetricsYearly()
         {
             DataTable myDataTable;
@@ -533,6 +476,121 @@ namespace ARC.Reports.DAL
                         }).ToList();
             return null;
         }
+
+        public static List<MarketShareGraphs> MarketShareGraphs(int pMarketType, int pDateType)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            DataTable myDataTable = new DataTable();
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SAM");
+
+                if (pDateType == 1)
+                    myDataTable = Helper.ExecuteReader("SELECT" +
+                                                        " MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
+                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
+                                                        " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
+                                                        " ORDER BY[date]", parameters);
+                if (pDateType == 2)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP (5) [Percentage], [date] FROM [Rep_0011]" +
+                                                        "WHERE[Type] = 'Value' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
+                else if (pDateType == 3)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
+
+                else if (pDateType == 4)
+                    myDataTable = Helper.ExecuteReader("SELECT [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SEM");
+
+                if (pDateType == 1)
+                    myDataTable = Helper.ExecuteReader("SELECT" +
+                                                        " MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
+                                                        " WHERE[Type] = 'Value' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
+                                                        " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
+                                                        " ORDER BY[date]", parameters);
+                if (pDateType == 2)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP (5) [Percentage], [date] FROM [Rep_0011]" +
+                                                        "WHERE[Type] = 'Value' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
+                else if (pDateType == 3)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' ORDER BY [date] DESC", parameters);
+                else if (pDateType == 4)
+                    myDataTable = Helper.ExecuteReader("SELECT [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Value' AND YEAR(date) = YEAR(GETDATE())", parameters);
+            }
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new MarketShareGraphs
+                        {
+                            //ETS_Share_Value = Convert.ToDouble(x["ETS_Share_Value"]),
+                            //Market_Share_Value = Convert.ToDouble(x["Market_Share_Value"]),
+                            Percentage = Convert.ToDouble(x["Percentage"]),
+                            date = Convert.ToDateTime(x["date"]),
+                            date2 = Convert.ToDateTime(x["date"])
+                        }).ToList();
+            return null;
+        }
+
+        public static List<MarketShareGraphs> MarketShareGraphsTrades(int pMarketType, int pDateType)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            DataTable myDataTable = new DataTable();
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SAM");
+
+                if (pDateType == 1)
+                    myDataTable = Helper.ExecuteReader("SELECT" +
+                                                        " MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
+                                                        " WHERE[Type] = 'Trades' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
+                                                        " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
+                                                        " ORDER BY[date]", parameters);
+                if (pDateType == 2)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP (5) [Percentage], [date] FROM [Rep_0011]" +
+                                                        "WHERE[Type] = 'Trades' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
+                else if (pDateType == 3)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Trades' ORDER BY [date] DESC", parameters);
+
+                else if (pDateType == 4)
+                    myDataTable = Helper.ExecuteReader("SELECT [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Trades' AND YEAR(date) = YEAR(GETDATE())", parameters);
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SEM");
+
+                if (pDateType == 1)
+                    myDataTable = Helper.ExecuteReader("SELECT" +
+                                                        " MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
+                                                        " WHERE[Type] = 'Trades' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
+                                                        " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
+                                                        " ORDER BY[date]", parameters);
+                if (pDateType == 2)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP (5) [Percentage], [date] FROM [Rep_0011]" +
+                                                        "WHERE[Type] = 'Trades' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
+                else if (pDateType == 3)
+                    myDataTable = Helper.ExecuteReader("SELECT TOP(30) [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Trades' ORDER BY [date] DESC", parameters);
+                else if (pDateType == 4)
+                    myDataTable = Helper.ExecuteReader("SELECT [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Trades' AND YEAR(date) = YEAR(GETDATE())", parameters);
+            }
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new MarketShareGraphs
+                        {
+                            //ETS_Share_Value = Convert.ToDouble(x["ETS_Share_Value"]),
+                            //Market_Share_Value = Convert.ToDouble(x["Market_Share_Value"]),
+                            Percentage = Convert.ToDouble(x["Percentage"]),
+                            date = Convert.ToDateTime(x["date"]),
+                            date2 = Convert.ToDateTime(x["date"])
+                        }).ToList();
+            return null;
+        }
+
 
         //public static List<Rep_001> Rep_emad(int pMarketType)
         //{

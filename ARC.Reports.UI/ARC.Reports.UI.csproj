@@ -55,6 +55,7 @@
     <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.ASPxThemes.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.Bootstrap.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.Resources.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -62,6 +63,7 @@
     <Reference Include="DevExpress.Xpo.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v16.2.Web, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGauges.v16.2.Core, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v16.2.Web, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -69,6 +71,7 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -91,7 +94,10 @@
   <ItemGroup>
     <Content Include="App_Data\nwind.mdb" />
     <Content Include="Content\Images\Panner3.png" />
-    <Content Include="Controls\MarketValueGraphs_D.ascx" />
+    <Content Include="Controls\MarketTradeGraphs_D.ascx" />
+    <Content Include="Controls\MarketTradeGraphs_H.ascx" />
+    <Content Include="Controls\MarketTradeGraphs_M.ascx" />
+    <Content Include="Controls\MarketTradeGraphs_Y.ascx" />
     <Content Include="Controls\MarketShareGraphs_D.ascx" />
     <Content Include="Controls\MarketShareGraphs_H.ascx" />
     <Content Include="Controls\MarketShareGraphs_M.ascx" />
@@ -587,12 +593,33 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\MarketValueGraphs_D.ascx.cs">
-      <DependentUpon>MarketValueGraphs_D.ascx</DependentUpon>
+    <Compile Include="Controls\MarketTradeGraphs_D.ascx.cs">
+      <DependentUpon>MarketTradeGraphs_D.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\MarketValueGraphs_D.ascx.designer.cs">
-      <DependentUpon>MarketValueGraphs_D.ascx</DependentUpon>
+    <Compile Include="Controls\MarketTradeGraphs_D.ascx.designer.cs">
+      <DependentUpon>MarketTradeGraphs_D.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketTradeGraphs_H.ascx.cs">
+      <DependentUpon>MarketTradeGraphs_H.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketTradeGraphs_H.ascx.designer.cs">
+      <DependentUpon>MarketTradeGraphs_H.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketTradeGraphs_M.ascx.cs">
+      <DependentUpon>MarketTradeGraphs_M.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketTradeGraphs_M.ascx.designer.cs">
+      <DependentUpon>MarketTradeGraphs_M.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketTradeGraphs_Y.ascx.cs">
+      <DependentUpon>MarketTradeGraphs_Y.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketTradeGraphs_Y.ascx.designer.cs">
+      <DependentUpon>MarketTradeGraphs_Y.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\MarketShareGraphs_D.ascx.cs">
       <DependentUpon>MarketShareGraphs_D.ascx</DependentUpon>

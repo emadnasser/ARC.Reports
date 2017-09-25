@@ -67,6 +67,42 @@ namespace ARC.Reports.Pages {
         protected global::ARC.Reports.Controls.MarketShareGraphs_Y MarketShareGraphs_Y_0;
         
         /// <summary>
+        /// MarketTradeGraphs_H_0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketTradeGraphs_H MarketTradeGraphs_H_0;
+        
+        /// <summary>
+        /// MarketTradeGraphs_D_0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketTradeGraphs_D MarketTradeGraphs_D_0;
+        
+        /// <summary>
+        /// MarketTradeGraphs_M_0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketTradeGraphs_M MarketTradeGraphs_M_0;
+        
+        /// <summary>
+        /// MarketTradeGraphs_Y_0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketTradeGraphs_Y MarketTradeGraphs_Y_0;
+        
+        /// <summary>
         /// ContentControl2 control.
         /// </summary>
         /// <remarks>
@@ -110,5 +146,41 @@ namespace ARC.Reports.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::ARC.Reports.Controls.MarketShareGraphs_Y MarketShareGraphs_Y_1;
+        
+        /// <summary>
+        /// MarketTradeGraphs_H_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketTradeGraphs_H MarketTradeGraphs_H_1;
+        
+        /// <summary>
+        /// MarketTradeGraphs_D_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketTradeGraphs_D MarketTradeGraphs_D_1;
+        
+        /// <summary>
+        /// MarketTradeGraphs_M_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketTradeGraphs_M MarketTradeGraphs_M_1;
+        
+        /// <summary>
+        /// MarketTradeGraphs_Y_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketTradeGraphs_Y MarketTradeGraphs_Y_1;
     }
 }

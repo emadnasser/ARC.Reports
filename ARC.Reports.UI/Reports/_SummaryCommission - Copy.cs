@@ -6,7 +6,6 @@ using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Parameters;
 using System.Collections.Generic;
 using ARC.Reports.DAL;
-using DevExpress.XtraReports.Web;
 
 namespace ARC.Reports.Reports
 {
@@ -112,7 +111,7 @@ namespace ARC.Reports.Reports
 
         private void SummaryCommission_ParametersRequestValueChanged(object sender, ParametersRequestValueChangedEventArgs e)
         {
-
+            
         }
     }
 }

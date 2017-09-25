@@ -6,6 +6,14 @@
 <%@ Register Src="~/Controls/MarketShareGraphs_D.ascx" TagName="MarketShareGraphs_D" TagPrefix="em" %>
 <%@ Register Src="~/Controls/MarketShareGraphs_M.ascx" TagName="MarketShareGraphs_M" TagPrefix="em" %>
 <%@ Register Src="~/Controls/MarketShareGraphs_Y.ascx" TagName="MarketShareGraphs_Y" TagPrefix="em" %>
+<%@ Register Src="~/Controls/MarketTradeGraphs_H.ascx" TagPrefix="em" TagName="MarketTradeGraphs_H" %>
+<%@ Register Src="~/Controls/MarketTradeGraphs_D.ascx" TagPrefix="em" TagName="MarketTradeGraphs_D" %>
+<%@ Register Src="~/Controls/MarketTradeGraphs_M.ascx" TagPrefix="em" TagName="MarketTradeGraphs_M" %>
+<%@ Register Src="~/Controls/MarketTradeGraphs_Y.ascx" TagPrefix="em" TagName="MarketTradeGraphs_Y" %>
+
+
+
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -14,13 +22,15 @@
             padding-top: 3px;
         }
 
-        #MainContent_ASPxPageControl1_TPTCL_dateEdit_0 {
+        #MainContent_ASPxPageControl1_TPTCL_myOption_0 {
             float: right;
             margin-right: 40px
         }
 
-        #MainContent_ASPxPageControl1_TPTCL_myOption_0 {
+        #MainContent_ASPxPageControl1_TPTCL_Type_0
+        {
             float: right;
+            margin-right: 40px;
         }
 
         #MainContent_ASPxPageControl1_TPTCL_lblType_0 {
@@ -50,6 +60,11 @@
                                 <em:MarketShareGraphs_D id="MarketShareGraphs_D_0" runat="server" />
                                 <em:MarketShareGraphs_M id="MarketShareGraphs_M_0" runat="server" />
                                 <em:MarketShareGraphs_Y id="MarketShareGraphs_Y_0" runat="server" />
+
+                                <em:MarketTradeGraphs_H ID="MarketTradeGraphs_H_0" runat="server" />
+                                <em:MarketTradeGraphs_D ID="MarketTradeGraphs_D_0" runat="server" />
+                                <em:MarketTradeGraphs_M ID="MarketTradeGraphs_M_0" runat="server" />
+                                <em:MarketTradeGraphs_Y ID="MarketTradeGraphs_Y_0" runat="server" />
                             </dx:ContentControl>
                         </ContentCollection>
                     </dx:TabPage>
@@ -60,6 +75,11 @@
                                 <em:MarketShareGraphs_D id="MarketShareGraphs_D_1" runat="server" />
                                 <em:MarketShareGraphs_M id="MarketShareGraphs_M_1" runat="server" />
                                 <em:MarketShareGraphs_Y id="MarketShareGraphs_Y_1" runat="server" />
+
+                                <em:MarketTradeGraphs_H ID="MarketTradeGraphs_H_1" runat="server" />
+                                <em:MarketTradeGraphs_D ID="MarketTradeGraphs_D_1" runat="server" />
+                                <em:MarketTradeGraphs_M ID="MarketTradeGraphs_M_1" runat="server" />
+                                <em:MarketTradeGraphs_Y ID="MarketTradeGraphs_Y_1" runat="server" />
                             </dx:ContentControl>
                         </ContentCollection>
                     </dx:TabPage>
@@ -74,9 +94,16 @@
                         </Items>
                     </dx:ASPxComboBox>
                     <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
+                    <dx:ASPxComboBox ID="Type" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="Type_ValueChanged">
+                        <Items>
+                            <dx:ListEditItem Text="Market Share Value" Value="Market Share" Selected="True"></dx:ListEditItem>
+                            <dx:ListEditItem Text="Market Share Trade" Value="Market Value"></dx:ListEditItem>
+                            <%--<dx:ListEditItem Text="Market Share Channels" Value="Channels"></dx:ListEditItem>--%>
+                        </Items>
+                    </dx:ASPxComboBox>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
-<%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="3000">
+            <%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="3000">
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_MarketShareGraphs_H_0_WebChartControl0.PerformCallback();
                 MainContent_ASPxPageControl1_MarketShareGraphs_H_1_WebChartControl0.PerformCallback();

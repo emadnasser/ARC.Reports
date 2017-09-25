@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MarketValueGraphs_D.ascx.cs" Inherits="ARC.Reports.Controls.MarketValueGraphs_D" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="_MarketValueGraphs_D.ascx.cs" Inherits="ARC.Reports.Controls._MarketValueGraphs_D" %>
 
 <%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.XtraCharts.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.XtraCharts" TagPrefix="dx" %>
