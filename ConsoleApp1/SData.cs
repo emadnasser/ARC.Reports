@@ -12,6 +12,6 @@ namespace ConsoleApp1
         public static List<TestEnt> Test_02()
         {
             return Helper.sqlDataAdapterTest();
-        }
+        } 
     }
 }
