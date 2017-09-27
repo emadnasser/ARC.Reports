@@ -6,14 +6,14 @@
 <%@ Register Src="~/Controls/MarketShareGraphs_D.ascx" TagName="MarketShareGraphs_D" TagPrefix="em" %>
 <%@ Register Src="~/Controls/MarketShareGraphs_M.ascx" TagName="MarketShareGraphs_M" TagPrefix="em" %>
 <%@ Register Src="~/Controls/MarketShareGraphs_Y.ascx" TagName="MarketShareGraphs_Y" TagPrefix="em" %>
-<%@ Register Src="~/Controls/MarketTradeGraphs_H.ascx" TagPrefix="em" TagName="MarketTradeGraphs_H" %>
-<%@ Register Src="~/Controls/MarketTradeGraphs_D.ascx" TagPrefix="em" TagName="MarketTradeGraphs_D" %>
-<%@ Register Src="~/Controls/MarketTradeGraphs_M.ascx" TagPrefix="em" TagName="MarketTradeGraphs_M" %>
-<%@ Register Src="~/Controls/MarketTradeGraphs_Y.ascx" TagPrefix="em" TagName="MarketTradeGraphs_Y" %>
 
-
-
-
+<%@ Register Src="~/Controls/MarketTradeGraphs_H.ascx" TagName="MarketTradeGraphs_H" TagPrefix="em" %>
+<%@ Register Src="~/Controls/MarketTradeGraphs_D.ascx" TagName="MarketTradeGraphs_D" TagPrefix="em" %>
+<%@ Register Src="~/Controls/MarketTradeGraphs_M.ascx" TagName="MarketTradeGraphs_M" TagPrefix="em" %>
+<%@ Register Src="~/Controls/MarketTradeGraphs_Y.ascx" TagName="MarketTradeGraphs_Y" TagPrefix="em" %>
+<%@ Register Src="~/Controls/MarketChannelsGraphs_D.ascx" TagName="MarketChannelsGraphs_D" TagPrefix="em" %>
+<%@ Register Src="~/Controls/MarketChannelsGraphs_M.ascx" TagName="MarketChannelsGraphs_M" TagPrefix="em" %>
+<%@ Register Src="~/Controls/MarketChannelsGraphs_Y.ascx" TagName="MarketChannelsGraphs_Y" TagPrefix="em" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -65,6 +65,10 @@
                                 <em:MarketTradeGraphs_D ID="MarketTradeGraphs_D_0" runat="server" />
                                 <em:MarketTradeGraphs_M ID="MarketTradeGraphs_M_0" runat="server" />
                                 <em:MarketTradeGraphs_Y ID="MarketTradeGraphs_Y_0" runat="server" />
+
+                                <em:MarketChannelsGraphs_D ID="MarketChannelsGraphs_D_0" runat="server" />
+                                <em:MarketChannelsGraphs_M ID="MarketChannelsGraphs_M_0" runat="server" />
+                                <em:MarketChannelsGraphs_Y ID="MarketChannelsGraphs_Y_0" runat="server" />
                             </dx:ContentControl>
                         </ContentCollection>
                     </dx:TabPage>
@@ -80,6 +84,10 @@
                                 <em:MarketTradeGraphs_D ID="MarketTradeGraphs_D_1" runat="server" />
                                 <em:MarketTradeGraphs_M ID="MarketTradeGraphs_M_1" runat="server" />
                                 <em:MarketTradeGraphs_Y ID="MarketTradeGraphs_Y_1" runat="server" />
+                                
+                                <em:MarketChannelsGraphs_D ID="MarketChannelsGraphs_D_1" runat="server" />
+                                <em:MarketChannelsGraphs_M ID="MarketChannelsGraphs_M_1" runat="server" />
+                                <em:MarketChannelsGraphs_Y ID="MarketChannelsGraphs_Y_1" runat="server" />
                             </dx:ContentControl>
                         </ContentCollection>
                     </dx:TabPage>
@@ -98,7 +106,7 @@
                         <Items>
                             <dx:ListEditItem Text="Market Share Value" Value="Market Share" Selected="True"></dx:ListEditItem>
                             <dx:ListEditItem Text="Market Share Trade" Value="Market Value"></dx:ListEditItem>
-                            <%--<dx:ListEditItem Text="Market Share Channels" Value="Channels"></dx:ListEditItem>--%>
+                            <dx:ListEditItem Text="Market Share Channels" Value="Channels"></dx:ListEditItem>
                         </Items>
                     </dx:ASPxComboBox>
                 </SpaceAfterTabsTemplate>

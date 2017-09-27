@@ -94,9 +94,12 @@
   <ItemGroup>
     <Content Include="App_Data\nwind.mdb" />
     <Content Include="Content\Images\Panner3.png" />
+    <Content Include="Controls\MarketChannelsGraphs_D.ascx" />
     <Content Include="Controls\MarketTradeGraphs_D.ascx" />
     <Content Include="Controls\MarketTradeGraphs_H.ascx" />
+    <Content Include="Controls\MarketChannelsGraphs_M.ascx" />
     <Content Include="Controls\MarketTradeGraphs_M.ascx" />
+    <Content Include="Controls\MarketChannelsGraphs_Y.ascx" />
     <Content Include="Controls\MarketTradeGraphs_Y.ascx" />
     <Content Include="Controls\MarketShareGraphs_D.ascx" />
     <Content Include="Controls\MarketShareGraphs_H.ascx" />
@@ -586,6 +589,7 @@
     <Content Include="Pages\SummaryCommission.aspx" />
     <Content Include="Pages\MarketShareTotals.aspx" />
     <Content Include="Pages\MarketShareDetails.aspx" />
+    <Content Include="Pages\WebForm1.aspx" />
     <Content Include="Public\Unauthorized.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.12.2.min.js" />
@@ -593,6 +597,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\MarketChannelsGraphs_D.ascx.cs">
+      <DependentUpon>MarketChannelsGraphs_D.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_D.ascx.designer.cs">
+      <DependentUpon>MarketChannelsGraphs_D.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MarketTradeGraphs_D.ascx.cs">
       <DependentUpon>MarketTradeGraphs_D.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -607,12 +618,26 @@
     <Compile Include="Controls\MarketTradeGraphs_H.ascx.designer.cs">
       <DependentUpon>MarketTradeGraphs_H.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_M.ascx.cs">
+      <DependentUpon>MarketChannelsGraphs_M.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_M.ascx.designer.cs">
+      <DependentUpon>MarketChannelsGraphs_M.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MarketTradeGraphs_M.ascx.cs">
       <DependentUpon>MarketTradeGraphs_M.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\MarketTradeGraphs_M.ascx.designer.cs">
       <DependentUpon>MarketTradeGraphs_M.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_Y.ascx.cs">
+      <DependentUpon>MarketChannelsGraphs_Y.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_Y.ascx.designer.cs">
+      <DependentUpon>MarketChannelsGraphs_Y.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\MarketTradeGraphs_Y.ascx.cs">
       <DependentUpon>MarketTradeGraphs_Y.ascx</DependentUpon>
@@ -739,6 +764,13 @@
     </Compile>
     <Compile Include="Pages\MarketShareDetails.aspx.designer.cs">
       <DependentUpon>MarketShareDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public\Unauthorized.aspx.cs">

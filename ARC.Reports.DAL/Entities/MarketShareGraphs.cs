@@ -8,6 +8,7 @@ namespace ARC.Reports.DAL.Entities
 {
     public class MarketShareGraphs
     {
+        public string Channel { get; set; }
         public double ETS_Share_Value { get; set; }
         public double Market_Share_Value { get; set; }
         public double Percentage { get; set; }
