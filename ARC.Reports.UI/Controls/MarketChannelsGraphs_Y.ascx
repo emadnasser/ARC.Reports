@@ -6,7 +6,7 @@
 
 <%@ Register Assembly="DevExpress.Xpo.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Xpo" TagPrefix="dx" %>
 
-<dx:WebChartControl ID="WebChartControl3" ClientInstanceName="Chart_3" CrosshairEnabled="True"
+<%--<dx:WebChartControl ID="WebChartControl3" ClientInstanceName="Chart_3" CrosshairEnabled="True"
     Width="1000px" Height="480px" CssClass="AlignCenter TopLargeMargin" runat="server" DataSourceID="ObjectDataSource1">
 
     <SeriesSerializable>
@@ -146,118 +146,164 @@
             <DefaultPane Weight="2"></DefaultPane>
         </dx:XYDiagram>
     </DiagramSerializable>
-</dx:WebChartControl>
-
-<dx:WebChartControl ID="WebChartControl1" ClientInstanceName="Chart_3" CrosshairEnabled="True"
-    Width="1000px" Height="480px" CssClass="AlignCenter TopLargeMargin" runat="server" DataSourceID="ObjectDataSource1">
-
+</dx:WebChartControl>--%>
+<dx:WebChartControl ID="WebChartControl2" ClientInstanceName="Chart" Width="1000px" Height="480px" CssClass="AlignCenter TopLargeMargin" runat="server" DataSourceID="ObjectDataSource1" 
+    CrosshairEnabled="True">
     <SeriesSerializable>
-        <dx:Series ArgumentDataMember="date" Name="APT" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True" CrosshairLabelVisibility="True">
-            <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="APT" />
-            </DataFilters>
-            <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
-            </LabelSerializable>
-        </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="AMS" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
-            <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="AMS" />
-            </DataFilters>
-            <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
-            </LabelSerializable>
-        </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="Branches" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
-            <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="Branches" />
-            </DataFilters>
-            <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
-            </LabelSerializable>
-        </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="CTF" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
-            <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="CTF" />
-            </DataFilters>
-            <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
-            </LabelSerializable>
-        </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="CTU" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
-            <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="CTU" />
-            </DataFilters>
-            <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
-            </LabelSerializable>
-        </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="ETS" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
-            <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="ETS" />
-            </DataFilters>
-            <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
-            </LabelSerializable>
-        </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="Internet" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
+        <dx:Series ArgumentDataMember="date" Name="Internet" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
             <DataFilters>
                 <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="Internet" />
             </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
             <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
             </LabelSerializable>
         </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="IPO" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
-            <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="IPO" />
-            </DataFilters>
-            <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
-            </LabelSerializable>
-        </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="Mobile" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
+        <dx:Series ArgumentDataMember="date" Name="Mobile" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
             <DataFilters>
                 <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="Mobile" />
             </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
             <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
             </LabelSerializable>
         </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="ORM" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
+        <dx:Series ArgumentDataMember="date" Name="CTF" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
             <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="ORM" />
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="CTF" />
             </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
             <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
             </LabelSerializable>
         </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="OPR" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
-            <DataFilters>
-                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="OPR" />
-            </DataFilters>
-            <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}" LineLength="4" Position="Top">
-                </dx:SideBySideBarSeriesLabel>
-            </LabelSerializable>
-        </dx:Series>
-        <dx:Series ArgumentDataMember="date" Name="PTC" ValueDataMembersSerializable="Percentage" CrosshairLabelPattern="{S}: {V:n2}" LabelsVisibility="True">
+        <dx:Series ArgumentDataMember="date" Name="PTC" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
             <DataFilters>
                 <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="PTC" />
             </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
             <LabelSerializable>
-                <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}">
-                </dx:SideBySideBarSeriesLabel>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
+            </LabelSerializable>
+        </dx:Series>
+        <dx:Series ArgumentDataMember="date" Name="CTU" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
+            <DataFilters>
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="CTU" />
+            </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
+            <LabelSerializable>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}">
+                </dx:StackedBarSeriesLabel>
+            </LabelSerializable>
+        </dx:Series>
+        <dx:Series ArgumentDataMember="date" Name="ETS" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
+            <DataFilters>
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="ETS" />
+            </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
+            <LabelSerializable>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
+            </LabelSerializable>
+        </dx:Series>
+        <dx:Series ArgumentDataMember="date" Name="APT" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
+            <DataFilters>
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="APT" />
+            </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
+            <LabelSerializable>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
+            </LabelSerializable>
+        </dx:Series>
+        <dx:Series ArgumentDataMember="date" Name="AMS" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
+            <DataFilters>
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="AMS" />
+            </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
+            <LabelSerializable>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
+            </LabelSerializable>
+        </dx:Series>
+        <dx:Series ArgumentDataMember="date" Name="Branches" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
+            <DataFilters>
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="Branches" />
+            </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
+            <LabelSerializable>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
+            </LabelSerializable>
+        </dx:Series>
+        <dx:Series ArgumentDataMember="date" Name="IPO" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
+            <DataFilters>
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="IPO" />
+            </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
+            <LabelSerializable>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
+            </LabelSerializable>
+        </dx:Series>
+        <dx:Series ArgumentDataMember="date" Name="ORM" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
+            <DataFilters>
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="ORM" />
+            </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
+            <LabelSerializable>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
+            </LabelSerializable>
+        </dx:Series>
+        <dx:Series ArgumentDataMember="date" Name="OPR" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="Percentage">
+            <DataFilters>
+                <dx:DataFilter ColumnName="Channel" InvariantValueSerializable="OPR" />
+            </DataFilters>
+            <ViewSerializable>
+                <dx:StackedBarSeriesView>
+                </dx:StackedBarSeriesView>
+            </ViewSerializable>
+            <LabelSerializable>
+                <dx:StackedBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                </dx:StackedBarSeriesLabel>
             </LabelSerializable>
         </dx:Series>
     </SeriesSerializable>
@@ -269,26 +315,29 @@
     </Legend>
     <BorderOptions Visibility="False" />
     <DiagramSerializable>
-        <dx:XYDiagram PaneDistance="4">
-            <AxisX Title-Text="Date" VisibleInPanesSerializable="-1" Interlaced="True" InterlacedColor="244, 243, 237">
+        <dx:XYDiagram>
+            <AxisX Title-Text="Date" VisibleInPanesSerializable="-1" Interlaced="True" InterlacedColor="244, 243, 237" Title-Visibility="Default">
+                <VisualRange AutoSideMargins="False" SideMarginsValue="1" />
+                <WholeRange AutoSideMargins="False" SideMarginsValue="1" />
                 <GridLines Visible="True"></GridLines>
+                <ScaleBreakOptions Style="Straight" />
                 <Tickmarks MinorVisible="False" />
-                <Label Staggered="True" TextPattern="{A:MM/yyyy}">
-                </Label>
+                <Label Staggered="True" TextPattern="{A:MM/yyyy}"></Label>
                 <CrosshairAxisLabelOptions Pattern="MM/yyyy" />
-                <DateTimeScaleOptions MeasureUnit="Month" GridAlignment="Month" AutoGrid="True" WorkdaysOnly="True" />
+                <DateTimeScaleOptions GridSpacing="2" AutoGrid="False" WorkdaysOnly="True" AggregateFunction="None" ScaleMode="Automatic" >
+                    <WorkdaysOptions Workdays="Sunday, Monday, Tuesday, Wednesday, Thursday">
+                    </WorkdaysOptions>
+                </DateTimeScaleOptions>
             </AxisX>
             <AxisY Title-Text="Market Share Value" Title-Font="Tahoma, 10pt" VisibleInPanesSerializable="-1">
-                <ScaleBreakOptions Style="waved" />
                 <Tickmarks MinorVisible="False" />
                 <Label TextPattern="{V:G}">
                 </Label>
-                <NumericScaleOptions AutoGrid="False" />
             </AxisY>
-            <DefaultPane Weight="2"></DefaultPane>
         </dx:XYDiagram>
     </DiagramSerializable>
 </dx:WebChartControl>
+
 <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="MarketShareGraphsChannels" TypeName="ARC.Reports.DAL.SData">
     <SelectParameters>
         <asp:Parameter DefaultValue="0" Name="pMarketType" Type="Int32" />

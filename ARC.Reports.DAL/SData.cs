@@ -718,7 +718,7 @@ namespace ARC.Reports.DAL
                                                         " GROUP BY[InsertedDate]" +
                                                         " ORDER BY Channel, [InsertedDate] DESC", parameters);
             else if (pDateType == 4)
-                    myDataTable = Helper.ExecuteReader("SELECT Channel, [Percentage], [InsertedDate] FROM [dbo].[Rep_001] WHERE MarketType = @pMarketType AND YEAR([InsertedDate]) = YEAR(GETDATE())", parameters);
+                    myDataTable = Helper.ExecuteReader("SELECT Channel, MarketShare, [Month], [InsertedDate] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [MarketType] = @pMarketType AND YEAR([InsertedDate]) = YEAR(GETDATE())", parameters);
             //}
 
             if (myDataTable != null)
@@ -727,7 +727,9 @@ namespace ARC.Reports.DAL
                         {
                             //Channel = x["Channel"].ToString(),
                             Channel = Helper.Channel(x["Channel"].ToString()),
-                            Percentage = Convert.ToDouble(x["Percentage"]),
+                            MarketShare = Convert.ToDouble(x["MarketShare"]),
+                            Percentage = Convert.ToDouble(x["MarketShare"]),
+                            Month = Convert.ToInt32(x["Month"]),
                             date = Convert.ToDateTime(x["InsertedDate"]),
                         }).ToList();
             return null;

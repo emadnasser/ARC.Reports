@@ -13,22 +13,13 @@ namespace ARC.Reports.Controls {
     public partial class MarketChannelsGraphs_Y {
         
         /// <summary>
-        /// WebChartControl3 control.
+        /// WebChartControl2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl3;
-        
-        /// <summary>
-        /// WebChartControl1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl1;
+        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl2;
         
         /// <summary>
         /// ObjectDataSource1 control.
