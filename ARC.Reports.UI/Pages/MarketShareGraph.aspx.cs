@@ -72,13 +72,21 @@ namespace ARC.Reports.Pages
 
             if (Type.SelectedIndex == 2)
             {
-                myOption.Items.RemoveAt(0);
-                myOption.SelectedIndex = 0;
+                //myOption.Items.RemoveAt(0);
+
+                myOption.Items.Clear();
+                myOption.Items.Insert(0, new ListEditItem() { Index = 0, Text = "Daily", Selected = true, Value = 0 });
+                myOption.Items.Insert(1, new ListEditItem() { Index = 1, Text = "Monthly", Selected = false, Value = 1 });
+                myOption.Items.Insert(2, new ListEditItem() { Index = 2, Text = "Quarterly", Selected = false, Value = 2 });
+                myOption.Items.Insert(3, new ListEditItem() { Index = 3, Text = "Yearly", Selected = false, Value = 3 });
             }
             else
             {
-                if(myOption.Items.Count == 3)
-                    myOption.Items.Insert(0, new ListEditItem() { Index = 0, Text = "1 Day", Selected = true, Value = 0 });
+                myOption.Items.Clear();
+                myOption.Items.Insert(0, new ListEditItem() { Index = 0, Text = "1 Day", Selected = true, Value = 0 });
+                myOption.Items.Insert(1, new ListEditItem() { Index = 1, Text = "5 Days", Selected = false, Value = 1 });
+                myOption.Items.Insert(2, new ListEditItem() { Index = 2, Text = "30 Days", Selected = false, Value = 2 });
+                myOption.Items.Insert(3, new ListEditItem() { Index = 3, Text = "1 Year", Selected = false, Value = 3 });
             }
             GetData();
         }
@@ -114,6 +122,15 @@ namespace ARC.Reports.Pages
                     }
                     else
                     {
+                        MarketChannelsGraphs_D_0.MarketType = 0;
+                        MarketChannelsGraphs_D_0.MarketType = 1;
+                        MarketChannelsGraphs_D_0.Visible = true;
+                        MarketChannelsGraphs_D_0.Visible = true;
+
+                        MarketTradeGraphs_H_0.Visible = false;
+                        MarketTradeGraphs_H_1.Visible = false;
+                        MarketShareGraphs_H_0.Visible = false;
+                        MarketShareGraphs_H_1.Visible = false;
                     }
 
                     MarketShareGraphs_D_0.Visible = false;

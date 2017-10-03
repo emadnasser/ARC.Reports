@@ -591,7 +591,6 @@ namespace ARC.Reports.DAL
             return null;
         }
 
-        //************************************************************************************************************************************************************************************************
         public static List<MarketShareGraphs> MarketShareGraphsChannels(int pMarketType, int pDateType)
         {
             SqlParameter[] parameters = new SqlParameter[1];
@@ -601,140 +600,73 @@ namespace ARC.Reports.DAL
             if (pMarketType == 0)
             {
                 parameters[0] = new SqlParameter("@pMarketType", "SAM");
-
-                //if (pDateType == 1)
-                //    //myDataTable = Helper.ExecuteReader("SELECT" +
-                //    //                                    " MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
-                //    //                                    " WHERE[Type] = 'Trades' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
-                //    //                                    " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +JJ
-                //    //                                    " ORDER BY[date]", parameters);
-                //    if (pDateType == 2)
-                //    //myDataTable = Helper.ExecuteReader("SELECT TOP (5) [Percentage], [date] FROM [Rep_0011]" +
-                //    //"WHERE[Type] = 'Trades' AND[Market] = @pMarketType ORDER BY date DESC", parameters);
-                //    else if (pDateType == 3)
-                //    //myDataTable = Helper.ExecuteReader("SELECT TOP(30) [Percentage], [date] FROM [dbo].[Rep_0011] WHERE Market = @pMarketType AND [Type] = 'Trades' ORDER BY [date] DESC", parameters);
-
-                //else if (pDateType == 4)
-                //        myDataTable = Helper.ExecuteReader("SELECT Channel, [Percentage], [InsertedDate] FROM [dbo].[Rep_001] WHERE MarketType = @pMarketType AND YEAR([InsertedDate]) = YEAR(GETDATE())", parameters);
             }
             else
             {
                 parameters[0] = new SqlParameter("@pMarketType", "SEM");
             }
-                //if (pDateType == 1)
-                //myDataTable = Helper.ExecuteReader("SELECT" +
-                //                                    " MAX([Percentage]) AS[Percentage], CONVERT(VARCHAR(5), [date], 108) AS[date] FROM MarketShare_Graphs" +
-                //                                    " WHERE[Type] = 'Trades' AND[Market] = @pMarketType AND[date] >= CONVERT(DATE, GETDATE())" +
-                //                                    " GROUP BY CONVERT(VARCHAR(5), [date], 108)" +
-                //                                    " ORDER BY[date]", parameters);
-                if (pDateType == 2)
-                    myDataTable = Helper.ExecuteReader(" SELECT TOP(5) 'P' AS Channel, SUM([Percentage]) AS[Percentage], [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'P'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION ALL" +
-                                                        " SELECT TOP(5) 'OPR', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'OPR'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'A', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'A'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'F', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'F'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'C', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'C'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'O', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'O'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'I', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'I'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'T', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'T'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'B', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'B'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'PTC', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'PTC'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'CTU', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'CTU'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " ORDER BY Channel, [InsertedDate] DESC", parameters);
-                else if (pDateType == 3)
-                    myDataTable = Helper.ExecuteReader(" SELECT TOP(30) 'P' AS Channel, SUM([Percentage]) AS[Percentage], [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'P'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION ALL" +
-                                                        " SELECT TOP(5) 'OPR', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'OPR'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'A', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'A'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'F', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'F'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'C', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'C'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'O', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'O'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'I', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'I'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'T', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'T'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'B', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'B'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'PTC', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'PTC'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " UNION" +
-                                                        " SELECT TOP(5) 'CTU', SUM([Percentage]), [InsertedDate] FROM[dbo].[Rep_001]" +
-                                                        " WHERE MarketType = @pMarketType AND Channel = 'CTU'" +
-                                                        " GROUP BY[InsertedDate]" +
-                                                        " ORDER BY Channel, [InsertedDate] DESC", parameters);
-            else if (pDateType == 4)
-                    myDataTable = Helper.ExecuteReader("SELECT Channel, MarketShare, [Month], [InsertedDate] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [MarketType] = @pMarketType AND YEAR([InsertedDate]) = YEAR(GETDATE())", parameters);
-            //}
+
+            if (pDateType == 1)
+                myDataTable = Helper.ExecuteReader(" SELECT Channel, MarketShare, SUBSTRING('JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC ', ([Month] * 4) - 3, 3) AS Month FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [MarketType] = @pMarketType AND [Year] = YEAR(GETDATE()) AND Channel != 'AVG' AND MarketShare != 0 ORDER BY [Month]", parameters);
+            else if (pDateType == 2)
+                myDataTable = Helper.ExecuteReader(" SELECT[Channel], SUM([MarketShare])/ 3 AS[MarketShare], '1st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
+                                                    " WHERE[Month] IN(1, 2, 3) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 3" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], SUM([MarketShare])/ 3 AS[MarketShare], '2st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
+                                                    " WHERE[Month] IN(4, 5, 6) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 6" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], SUM([MarketShare])/ 3 AS[MarketShare], '3st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
+                                                    " WHERE[Month] IN(7, 8, 9) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 9" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], SUM([MarketShare])/ 3 AS[MarketShare], '4st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
+                                                    " WHERE[Month] IN(10, 11, 12) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 12" +
+                                                    " ORDER BY[Month]; ", parameters);
+            else if (pDateType == 3)
+                myDataTable = Helper.ExecuteReader(" SELECT[Channel], [MarketShare], YEAR(GETDATE()) - 1 AS 'Month' FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) - 1" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], [MarketShare], YEAR(GETDATE()) - 2 AS 'Month' FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) - 2" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], [MarketShare], YEAR(GETDATE()) - 3 AS 'Month' FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) - 3" +
+                                                    " ORDER BY[Month]", parameters);
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new MarketShareGraphs
+                        {
+                            Channel = Helper.Channel(x["Channel"].ToString()),
+                            MarketShare = Convert.ToDouble(x["MarketShare"]),
+                            Month = x["Month"].ToString(),
+                        }).ToList();
+            return null;
+        }
+
+        public static List<MarketShareGraphs> MarketShareGraphsChannels_D(int pMarketType)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            DataTable myDataTable = new DataTable();
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SAM");
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SEM");
+            }
+
+            myDataTable = Helper.ExecuteReader(" SELECT Channel, SUM(TradeShare) AS TradeShare FROM[dbo].[Rep_001]" +
+                                                    " WHERE convert(date, InsertedDate, 103) = convert(date, GETDATE(), 103) AND MarketType = @pMarketType" +
+                                                    " GROUP BY Channel", parameters);
 
             if (myDataTable != null)
                 return (from DataRow x in myDataTable.Rows
                         select new MarketShareGraphs
                         {
-                            //Channel = x["Channel"].ToString(),
                             Channel = Helper.Channel(x["Channel"].ToString()),
-                            MarketShare = Convert.ToDouble(x["MarketShare"]),
-                            Percentage = Convert.ToDouble(x["MarketShare"]),
-                            Month = Convert.ToInt32(x["Month"]),
-                            date = Convert.ToDateTime(x["InsertedDate"]),
+                            TradeShare = Convert.ToDouble(x["TradeShare"]),
                         }).ToList();
             return null;
         }
-
         //public static List<Rep_001> Rep_emad(int pMarketType)
         //{
         //    SqlParameter[] parameters = new SqlParameter[1];

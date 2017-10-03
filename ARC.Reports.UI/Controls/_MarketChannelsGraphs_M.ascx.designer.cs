@@ -10,15 +10,15 @@
 namespace ARC.Reports.Controls {
     
     
-    public partial class MarketChannelsGraphs_D {
+    public partial class MarketChannelsGraphs_M {
         
         /// <summary>
-        /// WebChartControl control.
+        /// WebChartControl2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl;
+        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl2;
     }
 }

@@ -95,9 +95,10 @@
     <Content Include="App_Data\nwind.mdb" />
     <Content Include="Content\Images\Panner3.png" />
     <Content Include="Controls\MarketChannelsGraphs_D.ascx" />
+    <Content Include="Controls\MarketChannelsGraphs_M.ascx" />
+    <Content Include="Controls\MarketChannelsGraphs_Q.ascx" />
     <Content Include="Controls\MarketTradeGraphs_D.ascx" />
     <Content Include="Controls\MarketTradeGraphs_H.ascx" />
-    <Content Include="Controls\MarketChannelsGraphs_M.ascx" />
     <Content Include="Controls\MarketTradeGraphs_M.ascx" />
     <Content Include="Controls\MarketChannelsGraphs_Y.ascx" />
     <Content Include="Controls\MarketTradeGraphs_Y.ascx" />
@@ -604,6 +605,20 @@
     <Compile Include="Controls\MarketChannelsGraphs_D.ascx.designer.cs">
       <DependentUpon>MarketChannelsGraphs_D.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_M.ascx.cs">
+      <DependentUpon>MarketChannelsGraphs_M.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_M.ascx.designer.cs">
+      <DependentUpon>MarketChannelsGraphs_M.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_Q.ascx.cs">
+      <DependentUpon>MarketChannelsGraphs_Q.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MarketChannelsGraphs_Q.ascx.designer.cs">
+      <DependentUpon>MarketChannelsGraphs_Q.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MarketTradeGraphs_D.ascx.cs">
       <DependentUpon>MarketTradeGraphs_D.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -617,13 +632,6 @@
     </Compile>
     <Compile Include="Controls\MarketTradeGraphs_H.ascx.designer.cs">
       <DependentUpon>MarketTradeGraphs_H.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\MarketChannelsGraphs_M.ascx.cs">
-      <DependentUpon>MarketChannelsGraphs_M.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\MarketChannelsGraphs_M.ascx.designer.cs">
-      <DependentUpon>MarketChannelsGraphs_M.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\MarketTradeGraphs_M.ascx.cs">
       <DependentUpon>MarketTradeGraphs_M.ascx</DependentUpon>

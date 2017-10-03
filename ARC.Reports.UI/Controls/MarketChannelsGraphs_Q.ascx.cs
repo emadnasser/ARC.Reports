@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace ARC.Reports.Controls
 {
-    public partial class MarketChannelsGraphs_Y : System.Web.UI.UserControl
+    public partial class MarketChannelsGraphs_Q : System.Web.UI.UserControl
     {
         public int MarketType { get; set; }
 
@@ -29,11 +29,11 @@ namespace ARC.Reports.Controls
 
                 if (MarketType == 0)
                 {
-                    x = SData.MarketShareGraphsChannels(0, 3);
+                    x = SData.MarketShareGraphsChannels(0, 2);
                 }
                 else
                 {
-                    x = SData.MarketShareGraphsChannels(1, 3);
+                    x = SData.MarketShareGraphsChannels(1, 2);
                 }
 
                 WebChartControl.DataSource = x;

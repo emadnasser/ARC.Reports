@@ -29,15 +29,15 @@ namespace ARC.Reports.Controls
 
                 if (MarketType == 0)
                 {
-                    x = SData.MarketShareGraphsChannels(0, 2);
+                    x = SData.MarketShareGraphsChannels_D(0);
                 }
                 else
                 {
-                    x = SData.MarketShareGraphsChannels(1, 2);
+                    x = SData.MarketShareGraphsChannels_D(1);
                 }
 
-                WebChartControl1.DataSource = x;
-                WebChartControl1.DataBind();
+                WebChartControl.DataSource = x;
+                WebChartControl.DataBind();
             }
             catch
             {

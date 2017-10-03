@@ -121,6 +121,15 @@ namespace ARC.Reports.Pages {
         protected global::ARC.Reports.Controls.MarketChannelsGraphs_M MarketChannelsGraphs_M_0;
         
         /// <summary>
+        /// MarketChannelsGraphs_Q_0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketChannelsGraphs_Q MarketChannelsGraphs_Q_0;
+        
+        /// <summary>
         /// MarketChannelsGraphs_Y_0 control.
         /// </summary>
         /// <remarks>
@@ -227,6 +236,15 @@ namespace ARC.Reports.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::ARC.Reports.Controls.MarketChannelsGraphs_M MarketChannelsGraphs_M_1;
+        
+        /// <summary>
+        /// MarketChannelsGraphs_Q_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ARC.Reports.Controls.MarketChannelsGraphs_Q MarketChannelsGraphs_Q_1;
         
         /// <summary>
         /// MarketChannelsGraphs_Y_1 control.

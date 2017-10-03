@@ -10,7 +10,7 @@
 namespace ARC.Reports.Controls {
     
     
-    public partial class MarketChannelsGraphs_D {
+    public partial class MarketChannelsGraphs_Q {
         
         /// <summary>
         /// WebChartControl control.

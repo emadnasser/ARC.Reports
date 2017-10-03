@@ -13,12 +13,12 @@ namespace ARC.Reports.Pages {
     public partial class WebForm1 {
         
         /// <summary>
-        /// MarketChannelsGraphs_Y control.
+        /// MarketChannelsGraphs_D control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ARC.Reports.Controls.MarketChannelsGraphs_Y MarketChannelsGraphs_Y;
+        protected global::ARC.Reports.Controls.MarketChannelsGraphs_D MarketChannelsGraphs_D;
     }
 }

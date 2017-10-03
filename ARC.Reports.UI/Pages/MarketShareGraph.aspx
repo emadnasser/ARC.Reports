@@ -14,6 +14,8 @@
 <%@ Register Src="~/Controls/MarketChannelsGraphs_D.ascx" TagName="MarketChannelsGraphs_D" TagPrefix="em" %>
 <%@ Register Src="~/Controls/MarketChannelsGraphs_M.ascx" TagName="MarketChannelsGraphs_M" TagPrefix="em" %>
 <%@ Register Src="~/Controls/MarketChannelsGraphs_Y.ascx" TagName="MarketChannelsGraphs_Y" TagPrefix="em" %>
+<%@ Register Src="~/Controls/MarketChannelsGraphs_Q.ascx" TagPrefix="em" TagName="MarketChannelsGraphs_Q" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -68,6 +70,7 @@
 
                                 <em:MarketChannelsGraphs_D ID="MarketChannelsGraphs_D_0" runat="server" />
                                 <em:MarketChannelsGraphs_M ID="MarketChannelsGraphs_M_0" runat="server" />
+                                <em:MarketChannelsGraphs_Q ID="MarketChannelsGraphs_Q_0" runat="server" />
                                 <em:MarketChannelsGraphs_Y ID="MarketChannelsGraphs_Y_0" runat="server" />
                             </dx:ContentControl>
                         </ContentCollection>
@@ -87,6 +90,7 @@
                                 
                                 <em:MarketChannelsGraphs_D ID="MarketChannelsGraphs_D_1" runat="server" />
                                 <em:MarketChannelsGraphs_M ID="MarketChannelsGraphs_M_1" runat="server" />
+                                <em:MarketChannelsGraphs_Q ID="MarketChannelsGraphs_Q_1" runat="server" />
                                 <em:MarketChannelsGraphs_Y ID="MarketChannelsGraphs_Y_1" runat="server" />
                             </dx:ContentControl>
                         </ContentCollection>
