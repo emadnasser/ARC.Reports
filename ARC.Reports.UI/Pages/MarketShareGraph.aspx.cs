@@ -98,224 +98,116 @@ namespace ARC.Reports.Pages
                 ASPxComboBox myOption = ASPxPageControl1.FindControl("myOption") as ASPxComboBox;
                 ASPxComboBox Type = ASPxPageControl1.FindControl("Type") as ASPxComboBox;
 
-                if (myOption.SelectedIndex == 0)
+                MarketShareGraphs_H_0.Visible = false;
+                MarketShareGraphs_D_0.Visible = false;
+                MarketShareGraphs_M_0.Visible = false;
+                MarketShareGraphs_Y_0.Visible = false;
+                MarketTradeGraphs_H_0.Visible = false;
+                MarketTradeGraphs_D_0.Visible = false;
+                MarketTradeGraphs_M_0.Visible = false;
+                MarketTradeGraphs_Y_0.Visible = false;
+                MarketChannelsGraphs_D_0.Visible = false;
+                MarketChannelsGraphs_M_0.Visible = false;
+                MarketChannelsGraphs_Q_0.Visible = false;
+                MarketChannelsGraphs_Y_0.Visible = false;
+                MarketShareGraphs_H_1.Visible = false;
+                MarketShareGraphs_D_1.Visible = false;
+                MarketShareGraphs_M_1.Visible = false;
+                MarketShareGraphs_Y_1.Visible = false;
+                MarketTradeGraphs_H_1.Visible = false;
+                MarketTradeGraphs_D_1.Visible = false;
+                MarketTradeGraphs_M_1.Visible = false;
+                MarketTradeGraphs_Y_1.Visible = false;
+                MarketChannelsGraphs_D_1.Visible = false;
+                MarketChannelsGraphs_M_1.Visible = false;
+                MarketChannelsGraphs_Q_1.Visible = false;
+                MarketChannelsGraphs_Y_1.Visible = false;
+
+                if (Type.SelectedIndex == 0 && myOption.SelectedIndex == 0)
                 {
-                    if (Type.SelectedIndex == 0)
-                    {
-                        MarketShareGraphs_H_0.MarketType = 0;
-                        MarketShareGraphs_H_1.MarketType = 1;
-                        MarketShareGraphs_H_0.Visible = true;
-                        MarketShareGraphs_H_1.Visible = true;
-
-                        MarketTradeGraphs_H_0.Visible = false;
-                        MarketTradeGraphs_H_1.Visible = false;
-                    }
-                    else if (Type.SelectedIndex == 1)
-                    {
-                        MarketTradeGraphs_H_0.MarketType = 0;
-                        MarketTradeGraphs_H_1.MarketType = 1;
-                        MarketTradeGraphs_H_0.Visible = true;
-                        MarketTradeGraphs_H_1.Visible = true;
-
-                        MarketShareGraphs_H_0.Visible = false;
-                        MarketShareGraphs_H_1.Visible = false;
-                    }
-                    else
-                    {
-                        MarketChannelsGraphs_D_0.MarketType = 0;
-                        MarketChannelsGraphs_D_0.MarketType = 1;
-                        MarketChannelsGraphs_D_0.Visible = true;
-                        MarketChannelsGraphs_D_0.Visible = true;
-
-                        MarketTradeGraphs_H_0.Visible = false;
-                        MarketTradeGraphs_H_1.Visible = false;
-                        MarketShareGraphs_H_0.Visible = false;
-                        MarketShareGraphs_H_1.Visible = false;
-                    }
-
-                    MarketShareGraphs_D_0.Visible = false;
-                    MarketShareGraphs_M_0.Visible = false;
-                    MarketShareGraphs_Y_0.Visible = false;
-                    MarketShareGraphs_D_1.Visible = false;
-                    MarketShareGraphs_M_1.Visible = false;
-                    MarketShareGraphs_Y_1.Visible = false;
-
-                    MarketTradeGraphs_D_0.Visible = false;
-                    MarketTradeGraphs_M_0.Visible = false;
-                    MarketTradeGraphs_Y_0.Visible = false;
-                    MarketTradeGraphs_D_1.Visible = false;
-                    MarketTradeGraphs_M_1.Visible = false;
-                    MarketTradeGraphs_Y_1.Visible = false;
-
-                    MarketChannelsGraphs_D_0.Visible = false;
-                    MarketChannelsGraphs_D_1.Visible = false;
-                    MarketChannelsGraphs_M_0.Visible = false;
-                    MarketChannelsGraphs_M_1.Visible = false;
-                    MarketChannelsGraphs_Y_0.Visible = false;
-                    MarketChannelsGraphs_Y_1.Visible = false;
+                    MarketShareGraphs_H_0.MarketType = 0;
+                    MarketShareGraphs_H_1.MarketType = 1;
+                    MarketShareGraphs_H_0.Visible = true;
+                    MarketShareGraphs_H_1.Visible = true;
                 }
-                else if (myOption.SelectedIndex == 1)
+                else if (Type.SelectedIndex == 0 && myOption.SelectedIndex == 1)
                 {
-
-                    if (Type.SelectedIndex == 0)
-                    {
-                        MarketShareGraphs_D_0.MarketType = 0;
-                        MarketShareGraphs_D_1.MarketType = 1;
-                        MarketShareGraphs_D_0.Visible = true;
-                        MarketShareGraphs_D_1.Visible = true;
-
-                        MarketTradeGraphs_D_0.Visible = false;
-                        MarketTradeGraphs_D_1.Visible = false;
-                    }
-                    else if (Type.SelectedIndex == 1)
-                    {
-                        MarketTradeGraphs_D_0.MarketType = 0;
-                        MarketTradeGraphs_D_1.MarketType = 1;
-                        MarketTradeGraphs_D_0.Visible = true;
-                        MarketTradeGraphs_D_1.Visible = true;
-
-                        MarketShareGraphs_D_0.Visible = false;
-                        MarketShareGraphs_D_1.Visible = false;
-                    }
-                    else
-                    {
-                        MarketChannelsGraphs_D_0.MarketType = 0;
-                        MarketChannelsGraphs_D_1.MarketType = 1;
-                        MarketChannelsGraphs_D_0.Visible = true;
-                        MarketChannelsGraphs_D_1.Visible = true;
-
-                        MarketShareGraphs_D_0.Visible = false;
-                        MarketShareGraphs_D_1.Visible = false;
-                        MarketTradeGraphs_D_0.Visible = false;
-                        MarketTradeGraphs_D_1.Visible = false;
-                    }
-
-                    MarketShareGraphs_H_0.Visible = false;
-                    MarketShareGraphs_M_0.Visible = false;
-                    MarketShareGraphs_Y_0.Visible = false;
-                    MarketShareGraphs_H_1.Visible = false;
-                    MarketShareGraphs_M_1.Visible = false;
-                    MarketShareGraphs_Y_1.Visible = false;
-
-                    MarketTradeGraphs_H_0.Visible = false;
-                    MarketTradeGraphs_M_0.Visible = false;
-                    MarketTradeGraphs_Y_0.Visible = false;
-                    MarketTradeGraphs_H_1.Visible = false;
-                    MarketTradeGraphs_M_1.Visible = false;
-                    MarketTradeGraphs_Y_1.Visible = false;
-
-                    MarketChannelsGraphs_M_0.Visible = false;
-                    MarketChannelsGraphs_M_1.Visible = false;
-                    MarketChannelsGraphs_Y_0.Visible = false;
-                    MarketChannelsGraphs_Y_1.Visible = false;
+                    MarketShareGraphs_D_0.MarketType = 0;
+                    MarketShareGraphs_D_0.MarketType = 1;
+                    MarketShareGraphs_D_0.Visible = true;
+                    MarketShareGraphs_D_0.Visible = true;
                 }
-                else if (myOption.SelectedIndex == 2)
+                else if (Type.SelectedIndex == 0 && myOption.SelectedIndex == 2)
                 {
-                    if (Type.SelectedIndex == 0)
-                    {
-                        MarketShareGraphs_M_0.MarketType = 0;
-                        MarketShareGraphs_M_1.MarketType = 1;
-                        MarketShareGraphs_M_0.Visible = true;
-                        MarketShareGraphs_M_1.Visible = true;
-
-                        MarketTradeGraphs_M_0.Visible = false;
-                        MarketTradeGraphs_M_1.Visible = false;
-                    }
-                    else if (Type.SelectedIndex == 1)
-                    {
-                        MarketTradeGraphs_M_0.MarketType = 0;
-                        MarketTradeGraphs_M_1.MarketType = 1;
-                        MarketTradeGraphs_M_0.Visible = true;
-                        MarketTradeGraphs_M_1.Visible = true;
-
-                        MarketShareGraphs_M_0.Visible = false;
-                        MarketShareGraphs_M_1.Visible = false;
-                    }
-                    else
-                    {
-                        MarketChannelsGraphs_M_0.MarketType = 0;
-                        MarketChannelsGraphs_M_1.MarketType = 1;
-                        MarketChannelsGraphs_M_0.Visible = true;
-                        MarketChannelsGraphs_M_1.Visible = true;
-
-                        MarketShareGraphs_M_0.Visible = false;
-                        MarketShareGraphs_M_1.Visible = false;
-                        MarketTradeGraphs_M_0.Visible = false;
-                        MarketTradeGraphs_M_1.Visible = false;
-                    }
-
-                    MarketShareGraphs_H_0.Visible = false;
-                    MarketShareGraphs_D_0.Visible = false;
-                    MarketShareGraphs_Y_0.Visible = false;
-                    MarketShareGraphs_H_1.Visible = false;
-                    MarketShareGraphs_D_1.Visible = false;
-                    MarketShareGraphs_Y_1.Visible = false;
-
-                    MarketTradeGraphs_H_0.Visible = false;
-                    MarketTradeGraphs_D_0.Visible = false;
-                    MarketTradeGraphs_Y_0.Visible = false;
-                    MarketTradeGraphs_H_1.Visible = false;
-                    MarketTradeGraphs_D_1.Visible = false;
-                    MarketTradeGraphs_Y_1.Visible = false;
-
-                    MarketChannelsGraphs_D_0.Visible = false;
-                    MarketChannelsGraphs_D_1.Visible = false;
-                    MarketChannelsGraphs_Y_0.Visible = false;
-                    MarketChannelsGraphs_Y_1.Visible = false;
+                    MarketShareGraphs_M_0.MarketType = 0;
+                    MarketShareGraphs_M_0.MarketType = 1;
+                    MarketShareGraphs_M_0.Visible = true;
+                    MarketShareGraphs_M_0.Visible = true;
                 }
-                else if (myOption.SelectedIndex == 3)
+                else if (Type.SelectedIndex == 0 && myOption.SelectedIndex == 3)
                 {
-                    if (Type.SelectedIndex == 0)
-                    {
-                        MarketShareGraphs_Y_0.MarketType = 0;
-                        MarketShareGraphs_Y_1.MarketType = 1;
-                        MarketShareGraphs_Y_0.Visible = true;
-                        MarketShareGraphs_Y_1.Visible = true;
+                    MarketShareGraphs_Y_0.MarketType = 0;
+                    MarketShareGraphs_Y_0.MarketType = 1;
+                    MarketShareGraphs_Y_0.Visible = true;
+                    MarketShareGraphs_Y_0.Visible = true;
+                }
 
-                        MarketTradeGraphs_Y_0.Visible = false;
-                        MarketTradeGraphs_Y_1.Visible = false;
-                    }
-                    else if (Type.SelectedIndex == 1)
-                    {
-                        MarketTradeGraphs_Y_0.MarketType = 0;
-                        MarketTradeGraphs_Y_1.MarketType = 1;
-                        MarketTradeGraphs_Y_0.Visible = true;
-                        MarketTradeGraphs_Y_1.Visible = true;
+                else if (Type.SelectedIndex == 1 && myOption.SelectedIndex == 0)
+                {
+                    MarketTradeGraphs_H_0.MarketType = 0;
+                    MarketTradeGraphs_H_1.MarketType = 1;
+                    MarketTradeGraphs_H_0.Visible = true;
+                    MarketTradeGraphs_H_1.Visible = true;
+                }
+                else if (Type.SelectedIndex == 1 && myOption.SelectedIndex == 1)
+                {
+                    MarketTradeGraphs_D_0.MarketType = 0;
+                    MarketTradeGraphs_D_1.MarketType = 1;
+                    MarketTradeGraphs_D_0.Visible = true;
+                    MarketTradeGraphs_D_1.Visible = true;
+                }
+                else if (Type.SelectedIndex == 1 && myOption.SelectedIndex == 2)
+                {
+                    MarketTradeGraphs_M_0.MarketType = 0;
+                    MarketTradeGraphs_M_1.MarketType = 1;
+                    MarketTradeGraphs_M_0.Visible = true;
+                    MarketTradeGraphs_M_1.Visible = true;
+                }
+                else if (Type.SelectedIndex == 1 && myOption.SelectedIndex == 3)
+                {
+                    MarketTradeGraphs_Y_0.MarketType = 0;
+                    MarketTradeGraphs_Y_1.MarketType = 1;
+                    MarketTradeGraphs_Y_0.Visible = true;
+                    MarketTradeGraphs_Y_1.Visible = true;
+                }
 
-                        MarketShareGraphs_Y_0.Visible = false;
-                        MarketShareGraphs_Y_1.Visible = false;
-                    }
-                    else
-                    {
-                        MarketChannelsGraphs_Y_0.MarketType = 0;
-                        MarketChannelsGraphs_Y_1.MarketType = 1;
-                        MarketChannelsGraphs_Y_0.Visible = true;
-                        MarketChannelsGraphs_Y_1.Visible = true;
-
-                        MarketShareGraphs_Y_0.Visible = false;
-                        MarketShareGraphs_Y_1.Visible = false;
-                        MarketTradeGraphs_Y_0.Visible = false;
-                        MarketTradeGraphs_Y_1.Visible = false;
-                    }
-
-                    MarketShareGraphs_H_0.Visible = false;
-                    MarketShareGraphs_D_0.Visible = false;
-                    MarketShareGraphs_M_0.Visible = false;
-                    MarketShareGraphs_H_1.Visible = false;
-                    MarketShareGraphs_D_1.Visible = false;
-                    MarketShareGraphs_M_1.Visible = false;
-
-                    MarketTradeGraphs_H_0.Visible = false;
-                    MarketTradeGraphs_D_0.Visible = false;
-                    MarketTradeGraphs_M_0.Visible = false;
-                    MarketTradeGraphs_H_1.Visible = false;
-                    MarketTradeGraphs_D_1.Visible = false;
-                    MarketTradeGraphs_M_1.Visible = false;
-
-                    MarketChannelsGraphs_D_0.Visible = false;
-                    MarketChannelsGraphs_D_1.Visible = false;
-                    MarketChannelsGraphs_M_0.Visible = false;
-                    MarketChannelsGraphs_M_1.Visible = false;
+                else if (Type.SelectedIndex == 2 && myOption.SelectedIndex == 0)
+                {
+                    MarketChannelsGraphs_D_0.MarketType = 0;
+                    MarketChannelsGraphs_D_1.MarketType = 1;
+                    MarketChannelsGraphs_D_0.Visible = true;
+                    MarketChannelsGraphs_D_1.Visible = true;
+                }
+                else if (Type.SelectedIndex == 2 && myOption.SelectedIndex == 1)
+                {
+                    MarketChannelsGraphs_M_0.MarketType = 0;
+                    MarketChannelsGraphs_M_1.MarketType = 1;
+                    MarketChannelsGraphs_M_0.Visible = true;
+                    MarketChannelsGraphs_M_1.Visible = true;
+                }
+                else if (Type.SelectedIndex == 2 && myOption.SelectedIndex == 2)
+                {
+                    MarketChannelsGraphs_Q_0.MarketType = 0;
+                    MarketChannelsGraphs_Q_1.MarketType = 1;
+                    MarketChannelsGraphs_Q_0.Visible = true;
+                    MarketChannelsGraphs_Q_1.Visible = true;
+                }
+                else if (Type.SelectedIndex == 2 && myOption.SelectedIndex == 3)
+                {
+                    MarketChannelsGraphs_Y_0.MarketType = 0;
+                    MarketChannelsGraphs_Y_1.MarketType = 1;
+                    MarketChannelsGraphs_Y_0.Visible = true;
+                    MarketChannelsGraphs_Y_1.Visible = true;
                 }
             }
             catch

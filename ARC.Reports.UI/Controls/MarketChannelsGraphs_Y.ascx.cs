@@ -26,18 +26,24 @@ namespace ARC.Reports.Controls
             try
             {
                 List<MarketShareGraphs> x = new List<MarketShareGraphs>();
+                List<MarketShareGraphs> y = new List<MarketShareGraphs>();
 
                 if (MarketType == 0)
                 {
-                    x = SData.MarketShareGraphsChannels(0, 3);
+                    x = SData.MarketShareGraphsChannelsMarketShare(0, 3);
+                    y = SData.MarketShareGraphsChannelsTradeShare(0, 3);
                 }
                 else
                 {
-                    x = SData.MarketShareGraphsChannels(1, 3);
+                    x = SData.MarketShareGraphsChannelsMarketShare(1, 3);
+                    y = SData.MarketShareGraphsChannelsTradeShare(1, 3);
                 }
 
-                WebChartControl.DataSource = x;
-                WebChartControl.DataBind();
+                WebChartControl_0.DataSource = x;
+                WebChartControl_1.DataSource = y;
+
+                WebChartControl_0.DataBind();
+                WebChartControl_1.DataBind();
             }
             catch
             {

@@ -3297,7 +3297,7 @@ body.mob-safari .sidebar.sidebar-fixed {
             top: -1px;
             left: 42px;
             z-index: 1025;
-            width: 176px;
+            width: 200px;
             height: 41px;
             line-height: 38px;
             padding-left: 12px;
@@ -3338,7 +3338,7 @@ body.mob-safari .sidebar.sidebar-fixed {
         top: -1px;
         margin-top: 40px;
         padding-bottom: 2px;
-        width: 176px;
+        width: 200px;
         display: none !important;
         height: auto !important;
         visibility: visible !important;
@@ -4379,7 +4379,7 @@ body.mob-safari .sidebar.sidebar-fixed {
                 top: -1px;
                 left: 42px;
                 z-index: 1025;
-                width: 176px;
+                width: 200px;
                 height: 41px;
                 line-height: 38px;
                 padding-left: 12px;
@@ -4420,7 +4420,7 @@ body.mob-safari .sidebar.sidebar-fixed {
             top: -1px;
             margin-top: 40px;
             padding-bottom: 2px;
-            width: 176px;
+            width: 200px;
             display: none !important;
             height: auto !important;
             visibility: visible !important;

@@ -591,7 +591,7 @@ namespace ARC.Reports.DAL
             return null;
         }
 
-        public static List<MarketShareGraphs> MarketShareGraphsChannels(int pMarketType, int pDateType)
+        public static List<MarketShareGraphs> MarketShareGraphsChannelsMarketShare(int pMarketType, int pDateType)
         {
             SqlParameter[] parameters = new SqlParameter[1];
 
@@ -607,7 +607,7 @@ namespace ARC.Reports.DAL
             }
 
             if (pDateType == 1)
-                myDataTable = Helper.ExecuteReader(" SELECT Channel, MarketShare, SUBSTRING('JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC ', ([Month] * 4) - 3, 3) AS Month FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [MarketType] = @pMarketType AND [Year] = YEAR(GETDATE()) AND Channel != 'AVG' AND MarketShare != 0 ORDER BY [Month]", parameters);
+                myDataTable = Helper.ExecuteReader(" SELECT Channel, MarketShare, SUBSTRING('JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC ', ([Month] * 4) - 3, 3) AS Month FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [MarketType] = @pMarketType AND [Year] = YEAR(GETDATE()) AND Channel != 'AVG' AND MarketShare != 0", parameters);
             else if (pDateType == 2)
                 myDataTable = Helper.ExecuteReader(" SELECT[Channel], SUM([MarketShare])/ 3 AS[MarketShare], '1st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
                                                     " WHERE[Month] IN(1, 2, 3) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 3" +
@@ -634,6 +634,54 @@ namespace ARC.Reports.DAL
                         {
                             Channel = Helper.Channel(x["Channel"].ToString()),
                             MarketShare = Convert.ToDouble(x["MarketShare"]),
+                            Month = x["Month"].ToString(),
+                        }).ToList();
+            return null;
+        }
+
+        public static List<MarketShareGraphs> MarketShareGraphsChannelsTradeShare(int pMarketType, int pDateType)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            DataTable myDataTable = new DataTable();
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SAM");
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SEM");
+            }
+
+            if (pDateType == 1)
+                myDataTable = Helper.ExecuteReader(" SELECT Channel, [MarketTrades], SUBSTRING('JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC ', ([Month] * 4) - 3, 3) AS Month FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [MarketType] = @pMarketType AND [Year] = YEAR(GETDATE()) AND Channel != 'AVG' AND [MarketTrades] != 0", parameters);
+            else if (pDateType == 2)
+                myDataTable = Helper.ExecuteReader(" SELECT[Channel], SUM([MarketTrades])/ 3 AS[MarketTrades], '1st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
+                                                    " WHERE[Month] IN(1, 2, 3) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 3" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], SUM([MarketTrades]) / 3 AS[MarketTrades], '2st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
+                                                    " WHERE[Month] IN(4, 5, 6) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 6" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], SUM([MarketTrades])/ 3 AS[MarketTrades], '3st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
+                                                    " WHERE[Month] IN(7, 8, 9) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 9" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], SUM([MarketTrades])/ 3 AS[MarketTrades], '4st' AS[Month] FROM[ARC_Reports].[dbo].[Rep_0012]" +
+                                                    " WHERE[Month] IN(10, 11, 12) AND[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) AND Channel != 'AVG' GROUP BY[Channel] HAVING MAX(Month) = 12" +
+                                                    " ORDER BY[Month] ", parameters);
+            else if (pDateType == 3)
+                myDataTable = Helper.ExecuteReader(" SELECT[Channel], [MarketTrades], YEAR(GETDATE()) - 1 AS 'Month' FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) - 1" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], [MarketTrades], YEAR(GETDATE()) - 2 AS 'Month' FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) - 2" +
+                                                    " UNION" +
+                                                    " SELECT[Channel], [MarketTrades], YEAR(GETDATE()) - 3 AS 'Month' FROM[ARC_Reports].[dbo].[Rep_0013] WHERE[MarketType] = @pMarketType AND[Year] = YEAR(GETDATE()) - 3" +
+                                                    " ORDER BY[Month]", parameters);
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new MarketShareGraphs
+                        {
+                            Channel = Helper.Channel(x["Channel"].ToString()),
+                            MarketShare = Convert.ToDouble(x["MarketTrades"]),
                             Month = x["Month"].ToString(),
                         }).ToList();
             return null;

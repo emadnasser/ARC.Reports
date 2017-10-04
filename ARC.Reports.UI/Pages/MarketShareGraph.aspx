@@ -35,7 +35,9 @@
             margin-right: 40px;
         }
 
-        #MainContent_ASPxPageControl1_TPTCL_lblType_0 {
+        #MainContent_ASPxPageControl1_TPTCL_lblType_0,
+        #MainContent_ASPxPageControl1_TPTCL_lblOption_0
+        {
             float: right;
             margin-top: 4px;
             margin-right: 5px;
@@ -58,40 +60,40 @@
                     <dx:TabPage Text="Main Market">
                         <ContentCollection>
                             <dx:ContentControl ID="ContentControl1" runat="server">
-                                <em:MarketShareGraphs_H id="MarketShareGraphs_H_0" runat="server" />
-                                <em:MarketShareGraphs_D id="MarketShareGraphs_D_0" runat="server" />
-                                <em:MarketShareGraphs_M id="MarketShareGraphs_M_0" runat="server" />
-                                <em:MarketShareGraphs_Y id="MarketShareGraphs_Y_0" runat="server" />
+                                <em:MarketShareGraphs_H id="MarketShareGraphs_H_0" runat="server" Visible="false" />
+                                <em:MarketShareGraphs_D id="MarketShareGraphs_D_0" runat="server" Visible="false" />
+                                <em:MarketShareGraphs_M id="MarketShareGraphs_M_0" runat="server" Visible="false" />
+                                <em:MarketShareGraphs_Y id="MarketShareGraphs_Y_0" runat="server" Visible="false" />
 
-                                <em:MarketTradeGraphs_H ID="MarketTradeGraphs_H_0" runat="server" />
-                                <em:MarketTradeGraphs_D ID="MarketTradeGraphs_D_0" runat="server" />
-                                <em:MarketTradeGraphs_M ID="MarketTradeGraphs_M_0" runat="server" />
-                                <em:MarketTradeGraphs_Y ID="MarketTradeGraphs_Y_0" runat="server" />
+                                <em:MarketTradeGraphs_H ID="MarketTradeGraphs_H_0" runat="server" Visible="false" />
+                                <em:MarketTradeGraphs_D ID="MarketTradeGraphs_D_0" runat="server" Visible="false" />
+                                <em:MarketTradeGraphs_M ID="MarketTradeGraphs_M_0" runat="server" Visible="false" />
+                                <em:MarketTradeGraphs_Y ID="MarketTradeGraphs_Y_0" runat="server" Visible="false" />
 
-                                <em:MarketChannelsGraphs_D ID="MarketChannelsGraphs_D_0" runat="server" />
-                                <em:MarketChannelsGraphs_M ID="MarketChannelsGraphs_M_0" runat="server" />
-                                <em:MarketChannelsGraphs_Q ID="MarketChannelsGraphs_Q_0" runat="server" />
-                                <em:MarketChannelsGraphs_Y ID="MarketChannelsGraphs_Y_0" runat="server" />
+                                <em:MarketChannelsGraphs_D ID="MarketChannelsGraphs_D_0" runat="server" Visible="false" />
+                                <em:MarketChannelsGraphs_M ID="MarketChannelsGraphs_M_0" runat="server" Visible="false" />
+                                <em:MarketChannelsGraphs_Q ID="MarketChannelsGraphs_Q_0" runat="server" Visible="false" />
+                                <em:MarketChannelsGraphs_Y ID="MarketChannelsGraphs_Y_0" runat="server" Visible="false" />
                             </dx:ContentControl>
                         </ContentCollection>
                     </dx:TabPage>
                     <dx:TabPage Text="Nomu Market">
                         <ContentCollection>
                             <dx:ContentControl ID="ContentControl2" runat="server">
-                                <em:MarketShareGraphs_H id="MarketShareGraphs_H_1" runat="server" />
-                                <em:MarketShareGraphs_D id="MarketShareGraphs_D_1" runat="server" />
-                                <em:MarketShareGraphs_M id="MarketShareGraphs_M_1" runat="server" />
-                                <em:MarketShareGraphs_Y id="MarketShareGraphs_Y_1" runat="server" />
+                                <em:MarketShareGraphs_H id="MarketShareGraphs_H_1" runat="server" Visible="false" />
+                                <em:MarketShareGraphs_D id="MarketShareGraphs_D_1" runat="server" Visible="false" />
+                                <em:MarketShareGraphs_M id="MarketShareGraphs_M_1" runat="server" Visible="false" />
+                                <em:MarketShareGraphs_Y id="MarketShareGraphs_Y_1" runat="server" Visible="false" />
 
-                                <em:MarketTradeGraphs_H ID="MarketTradeGraphs_H_1" runat="server" />
-                                <em:MarketTradeGraphs_D ID="MarketTradeGraphs_D_1" runat="server" />
-                                <em:MarketTradeGraphs_M ID="MarketTradeGraphs_M_1" runat="server" />
-                                <em:MarketTradeGraphs_Y ID="MarketTradeGraphs_Y_1" runat="server" />
+                                <em:MarketTradeGraphs_H ID="MarketTradeGraphs_H_1" runat="server" Visible="false" />
+                                <em:MarketTradeGraphs_D ID="MarketTradeGraphs_D_1" runat="server" Visible="false" />
+                                <em:MarketTradeGraphs_M ID="MarketTradeGraphs_M_1" runat="server" Visible="false" />
+                                <em:MarketTradeGraphs_Y ID="MarketTradeGraphs_Y_1" runat="server" Visible="false" />
                                 
-                                <em:MarketChannelsGraphs_D ID="MarketChannelsGraphs_D_1" runat="server" />
-                                <em:MarketChannelsGraphs_M ID="MarketChannelsGraphs_M_1" runat="server" />
-                                <em:MarketChannelsGraphs_Q ID="MarketChannelsGraphs_Q_1" runat="server" />
-                                <em:MarketChannelsGraphs_Y ID="MarketChannelsGraphs_Y_1" runat="server" />
+                                <em:MarketChannelsGraphs_D ID="MarketChannelsGraphs_D_1" runat="server" Visible="false" />
+                                <em:MarketChannelsGraphs_M ID="MarketChannelsGraphs_M_1" runat="server" Visible="false" />
+                                <em:MarketChannelsGraphs_Q ID="MarketChannelsGraphs_Q_1" runat="server" Visible="false" />
+                                <em:MarketChannelsGraphs_Y ID="MarketChannelsGraphs_Y_1" runat="server" Visible="false" />
                             </dx:ContentControl>
                         </ContentCollection>
                     </dx:TabPage>
@@ -105,7 +107,7 @@
                             <dx:ListEditItem Text="1 Year" Value="3" />
                         </Items>
                     </dx:ASPxComboBox>
-                    <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
+                    <asp:Label ID="lblOption" runat="server" Text="Period:"></asp:Label>
                     <dx:ASPxComboBox ID="Type" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="Type_ValueChanged">
                         <Items>
                             <dx:ListEditItem Text="Market Share Value" Value="Market Share" Selected="True"></dx:ListEditItem>
@@ -113,6 +115,7 @@
                             <dx:ListEditItem Text="Market Share Channels" Value="Channels"></dx:ListEditItem>
                         </Items>
                     </dx:ASPxComboBox>
+                    <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
             <%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="3000">
