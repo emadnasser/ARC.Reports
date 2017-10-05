@@ -1385,7 +1385,6 @@
             this.xrControlStyle1});
             this.Version = "16.2";
             this.ParametersRequestBeforeShow += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestEventArgs>(this.SummaryCommission_ParametersRequestBeforeShow);
-            this.ParametersRequestValueChanged += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestValueChangedEventArgs>(this.SummaryCommission_ParametersRequestValueChanged);
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.SummaryCommission_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
@@ -1467,7 +1466,6 @@
         private DevExpress.XtraReports.UI.XRTableCell lblSymbolF;
         private DevExpress.XtraReports.UI.XRTableCell lblSymbolP;
         private DevExpress.XtraReports.UI.XRLine xrLine1;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.XRLabel lblTitle;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter;
@@ -1482,5 +1480,6 @@
         private DevExpress.XtraReports.Parameters.Parameter DateFrom;
         private DevExpress.XtraReports.UI.XRTableCell lblEquatorF;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
     }
 }

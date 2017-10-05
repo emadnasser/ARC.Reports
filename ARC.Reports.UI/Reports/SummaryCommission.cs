@@ -43,11 +43,6 @@ namespace ARC.Reports.Reports
 
         private void SummaryCommission_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-            //var currentDate = DateTime.Now.ToString();
-            //var xx = x.Substring(0, x.IndexOf(" "));
-            //Parameters[0].Value.ToString() == "1/1/2007 12:00:00 AM" &&
-            //    Parameters[1].ToString() == DateTime.Now.ToString() &&
-
             if (Parameters[2].Value.ToString() == "" && Parameters[3].Value.ToString() == "" &&
                 Parameters[4].Value.ToString() == "" && Parameters[5].Value.ToString() == "" &&
                 Parameters[6].Value.ToString() == "" && Parameters[7].Value.ToString() == "")
@@ -55,64 +50,20 @@ namespace ARC.Reports.Reports
                 StopPageBuilding();
             }
 
-            //if (Parameters[0].Value.ToString() == "1/1/2007 12:00:00 AM")
-            //{
-            //    lblDateFrom.Text = "....";
-            //}
-            //if (lblDateTo.Text == DateTime.Now.ToString("dd/M/yyyy"))
-            //{
-            //    lblDateTo.Text = "....";
-            //}
-            //if (Parameters[2].Value.ToString() != "")
-            //{
-            //    //lblMonthH.Text = "CIC:";
-            //    //lblMonthH.WidthF = 27;
-            //    //lblMonthD.Visible = true;
-            //    //lblMonthD.Text = Parameters[2].Value.ToString();
-            //}
-            //if (Parameters[0].Value.ToString() != "")
-            //{
-            //    //lblMonthH.Text = "Month:";
-            //    //lblMonthH.WidthF = 35;
-            //    //lblMonthD.Visible = true;
-            //    //lblMonthD.Text = Parameters[0].Value.ToString();
-            //}
-            //if (Parameters[1].Value.ToString() != "")
-            //{
-            //    //lblMonthH.Text = "Year:";
-            //    //lblMonthH.WidthF = 35;
-            //    //lblMonthD.Visible = true;
-            //    //lblMonthD.Text = Parameters[1].Value.ToString();
-            //}
-            //if (Parameters[2].Value.ToString() != "")
-            //{
-            //    //lblMonthH.Text = "Equator:";
-            //    //lblMonthH.WidthF = 35;
-            //    //lblMonthD.Visible = true;
-            //    //lblMonthD.Text = Parameters[2].Value.ToString();
-            //}
-            //if (Parameters[3].Value.ToString() != "")
-            //{
-            //    //lblMonthH.Text = "Agent:";
-            //    //lblMonthH.WidthF = 35;
-            //    //lblMonthD.Visible = true;
-            //    //lblMonthD.Text = Parameters[3].Value.ToString();
-            //}
-            //if (Parameters[4].Value.ToString() == "")
-            //{
-            //    lblCIC.Text = "....";
-            //}
+            //if (e.PrintAction == System.Drawing.Printing.PrintAction.PrintToFile) //|| e.PrintAction == System.Drawing.Printing.PrintAction.PrintToFile)
+            //    xrPictureBox1.Visible = true;
             //else
-            //{
-            //    //lblMonthH.Text = "The Last 150 Records:";
-            //    //lblMonthH.WidthF = 200;
-            //    //lblMonthD.Visible = false;
-            //}
+            //    xrPictureBox1.Visible = false;
         }
 
-        private void SummaryCommission_ParametersRequestValueChanged(object sender, ParametersRequestValueChangedEventArgs e)
-        {
+        //private void xrPictureBox1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        //{
+        //    if (e.PrintAction == System.Drawing.Printing.PrintAction.PrintToFile) //|| e.PrintAction == System.Drawing.Printing.PrintAction.PrintToFile)
+        //        xrPictureBox1.Visible = false;
+        //    else
+        //        xrPictureBox1.Visible = true;
 
-        }
+        //    //    base.OnBeforePrint(e);
+        //}
     }
 }

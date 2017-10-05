@@ -5,12 +5,17 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        .pnl {
+        width:200px !important;
+        }
     </style>
     <script>
         $(document).ready(function () {
             $(function () {
                 $("#sidebar > ul > li > ul:nth-child(3) > li > ul > li:nth-child(5)").addClass("active");
-                $('#MainContent_ASPxDocumentViewer_Splitter_RibbonToolbar_T0G3I2').remove();
+                $("#MainContent_ASPxDocumentViewer_Splitter_RibbonToolbar_T0G3I2").remove();
+                $("#MainContent_ASPxDocumentViewer_Splitter_1i1i0_CC").removeAttr("style");
+                $("#MainContent_ASPxDocumentViewer_Splitter_1i1i0_CC").addClass("pnl");
                 //$('#MainContent_ASPxDocumentViewer_Splitter_ParametersPanel_Submit').click().delay(3000);
 
                 //if ($('#MainContent_ASPxDocumentViewer_Splitter_ParametersPanel_dxxrppEditor1_I').val() == "1/1/2007")
@@ -25,7 +30,7 @@
     <dx:ASPxDocumentViewer ID="ASPxDocumentViewer" runat="server" EnableTheming="True" Theme="DevEx" ToolbarMode="Ribbon" ReportTypeName="ARC.Reports.Reports.SummaryCommission" AssociatedRibbonID="213" Width="100%" Height="100%" SettingsDocumentMap-AllowSelectNode="true" >
         <settingsdocumentmap showtreelines="True" AllowSelectNode="true" />
         <StylesReportViewer ShowDocumentShadow="false"></StylesReportViewer>
-        <stylessplitter sidepanewidth="230px">
+        <stylessplitter sidepanewidth="200px" >
         </stylessplitter>
     </dx:ASPxDocumentViewer>
 </asp:Content>

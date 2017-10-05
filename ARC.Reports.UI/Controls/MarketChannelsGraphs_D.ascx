@@ -25,7 +25,7 @@
                         <SeriesSerializable>
                             <dx:Series ArgumentDataMember="Channel" Name="Channel" CrosshairLabelPattern="{S}: {V:n2}%" LabelsVisibility="True" ValueDataMembersSerializable="TradeShare">
                                 <LabelSerializable>
-                                    <dx:SideBySideBarSeriesLabel TextPattern="{S}: {V:n2}%">
+                                    <dx:SideBySideBarSeriesLabel TextPattern="{V:n2}%">
                                     </dx:SideBySideBarSeriesLabel>
                                 </LabelSerializable>
                             </dx:Series>
