@@ -31,13 +31,13 @@ namespace ARC.Reports.Controls {
         protected global::DevExpress.Web.ASPxButton ASPxButton1;
         
         /// <summary>
-        /// ASPxTimer2 control.
+        /// ASPxTimer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTimer ASPxTimer2;
+        protected global::DevExpress.Web.ASPxTimer ASPxTimer;
         
         /// <summary>
         /// gridExport_2 control.

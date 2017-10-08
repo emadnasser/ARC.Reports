@@ -13,6 +13,16 @@ namespace ARC.Reports.Controls
         public string Date { get; set; }
         public int MarketType { get; set; }
 
+        public void ON()
+        {
+            ASPxTimer.Enabled = true;
+        }
+
+        public void OFF()
+        {
+            ASPxTimer.Enabled = false;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             GetData();

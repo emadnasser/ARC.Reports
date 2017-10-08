@@ -368,7 +368,7 @@
                     <asp:Label ID="Label1" runat="server" Text="Date:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
-            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
+            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="20000">
                 <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_ASPxGridView0.PerformCallback();
                 MainContent_ASPxPageControl1_ASPxGridView1.PerformCallback();

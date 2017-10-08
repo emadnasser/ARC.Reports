@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ARC.Reports.Controls {
+namespace ARC.Reports.Pages {
     
     
-    public partial class MarketChannelsGraphs_M {
+    public partial class SummaryCommissionPortfolio {
         
         /// <summary>
-        /// WebChartControl2 control.
+        /// ASPxDocumentViewer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl WebChartControl2;
+        protected global::DevExpress.XtraReports.Web.ASPxDocumentViewer ASPxDocumentViewer;
     }
 }

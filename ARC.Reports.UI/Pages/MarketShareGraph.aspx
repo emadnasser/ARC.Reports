@@ -118,22 +118,6 @@
                     <asp:Label ID="lblType" runat="server" Text="Type:"></asp:Label>
                 </SpaceAfterTabsTemplate>
             </dx:ASPxPageControl>
-            <%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="3000">
-                <ClientSideEvents Tick="function(s, e) { 
-                MainContent_ASPxPageControl1_MarketShareGraphs_H_0_WebChartControl0.PerformCallback();
-                MainContent_ASPxPageControl1_MarketShareGraphs_H_1_WebChartControl0.PerformCallback();
-                }" />
-            </dx:ASPxTimer>
-            <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="600000">
-                <ClientSideEvents Tick="function(s, e) { 
-                Chart_1.PerformCallback();
-                Chart_2.PerformCallback();
-                Chart_3.PerformCallback();
-                Chart_5.PerformCallback();
-                Chart_6.PerformCallback();
-                Chart_7.PerformCallback();
-                }" />
-            </dx:ASPxTimer>--%>
         </div>
     </div>
 </asp:Content>

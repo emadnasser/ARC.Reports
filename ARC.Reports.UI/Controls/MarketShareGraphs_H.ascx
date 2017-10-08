@@ -49,9 +49,3 @@ Market Share: {V:n2}%"
         </dx:XYDiagram>
     </DiagramSerializable>
 </dx:WebChartControl>
-
-<%--            <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="3000">
-                <ClientSideEvents Tick="function(s, e) { 
-                MainContent_ASPxPageControl1_MarketShareGraphs_H_0_WebChartControl0.PerformCallback();
-                }" />
-            </dx:ASPxTimer>--%>

@@ -302,7 +302,7 @@
         <br />
         <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Export To Excel" OnClick="ASPxButton1_Click" Theme="DevEx">
         </dx:ASPxButton>
-        <dx:ASPxTimer ID="ASPxTimer2" runat="server" Interval="10000">
+        <dx:ASPxTimer ID="ASPxTimer" runat="server" Interval="60000" Enabled="false">
             <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_MarketShareTotal_1M_ASPxGridView6.PerformCallback();
                 MainContent_ASPxPageControl1_MarketShareTotal_1M1_ASPxGridView6.PerformCallback();

@@ -142,7 +142,7 @@
                 </EditFormLayoutProperties>
             </dx:ASPxGridView>
         </asp:Panel>
-        <dx:ASPxTimer ID="ASPxTimer1" runat="server" Interval="10000">
+        <dx:ASPxTimer ID="ASPxTimer" runat="server" Interval="20000" Enabled="false">
             <ClientSideEvents Tick="function(s, e) { 
                 MainContent_ASPxPageControl1_MarketShareTotal_0D_ASPxGridView0.PerformCallback();
                 MainContent_ASPxPageControl1_MarketShareTotal_0D_ASPxGridView1.PerformCallback();

@@ -587,6 +587,7 @@
     <Content Include="Pages\BrokerageMetrics.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\MarketShareGraph.aspx" />
+    <Content Include="Pages\SummaryCommissionPortfolio.aspx" />
     <Content Include="Pages\SummaryCommission.aspx" />
     <Content Include="Pages\MarketShareTotals.aspx" />
     <Content Include="Pages\MarketShareDetails.aspx" />
@@ -752,6 +753,13 @@
     <Compile Include="Pages\MarketShareGraph.aspx.designer.cs">
       <DependentUpon>MarketShareGraph.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SummaryCommissionPortfolio.aspx.cs">
+      <DependentUpon>SummaryCommissionPortfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SummaryCommissionPortfolio.aspx.designer.cs">
+      <DependentUpon>SummaryCommissionPortfolio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SummaryCommission.aspx.cs">
       <DependentUpon>SummaryCommission.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -788,17 +796,35 @@
     <Compile Include="Public\Unauthorized.aspx.designer.cs">
       <DependentUpon>Unauthorized.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\SummaryCommissionPortfolio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SummaryCommissionPortfolio.Designer.cs">
+      <DependentUpon>SummaryCommissionPortfolio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\SummaryCommission.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\SummaryCommission.Designer.cs">
       <DependentUpon>SummaryCommission.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\SummaryCommissionPortfolio.resx">
+      <DependentUpon>SummaryCommissionPortfolio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\SummaryCommission.resx">
       <DependentUpon>SummaryCommission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

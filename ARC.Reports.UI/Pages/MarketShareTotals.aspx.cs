@@ -78,6 +78,15 @@ namespace ARC.Reports.Pages
                     MarketShareTotal_0D.Visible = true;
                     MarketShareTotal_0D1.Visible = true;
 
+                    MarketShareTotal_0D.ON();
+                    MarketShareTotal_0D1.ON();
+                    MarketShareTotal_1M.OFF();
+                    MarketShareTotal_1M1.OFF();
+                    MarketShareTotal_2Q.OFF();
+                    MarketShareTotal_2Q1.OFF();
+                    MarketShareTotal_3Y.OFF();
+                    MarketShareTotal_3Y1.OFF();
+
                     dateEdit.Visible = true;
                     lblDate.Visible = true;
                     MarketShareTotal_1M.Visible = false;
@@ -93,6 +102,15 @@ namespace ARC.Reports.Pages
                     MarketShareTotal_1M1.Date = dateEdit.Date.ToShortDateString();
                     MarketShareTotal_1M.MarketType = 0;
                     MarketShareTotal_1M1.MarketType = 1;
+
+                    MarketShareTotal_0D.OFF();
+                    MarketShareTotal_0D1.OFF();
+                    MarketShareTotal_1M.ON();
+                    MarketShareTotal_1M1.ON();
+                    MarketShareTotal_2Q.OFF();
+                    MarketShareTotal_2Q1.OFF();
+                    MarketShareTotal_3Y.OFF();
+                    MarketShareTotal_3Y1.OFF();
 
                     MarketShareTotal_1M.Visible = true;
                     MarketShareTotal_1M1.Visible = true;
@@ -114,6 +132,15 @@ namespace ARC.Reports.Pages
                     MarketShareTotal_2Q.Visible = true;
                     MarketShareTotal_2Q1.Visible = true;
 
+                    MarketShareTotal_0D.OFF();
+                    MarketShareTotal_0D1.OFF();
+                    MarketShareTotal_1M.OFF();
+                    MarketShareTotal_1M1.OFF();
+                    MarketShareTotal_2Q.ON();
+                    MarketShareTotal_2Q1.ON();
+                    MarketShareTotal_3Y.OFF();
+                    MarketShareTotal_3Y1.OFF();
+
                     dateEdit.Visible = false;
                     lblDate.Visible = false;
                     MarketShareTotal_0D.Visible = false;
@@ -131,6 +158,15 @@ namespace ARC.Reports.Pages
                     MarketShareTotal_3Y1.Date = dateEdit.Date.ToShortDateString();
                     MarketShareTotal_3Y.MarketType = 0;
                     MarketShareTotal_3Y1.MarketType = 1;
+
+                    MarketShareTotal_0D.OFF();
+                    MarketShareTotal_0D1.OFF();
+                    MarketShareTotal_1M.OFF();
+                    MarketShareTotal_1M1.OFF();
+                    MarketShareTotal_2Q.OFF();
+                    MarketShareTotal_2Q1.OFF();
+                    MarketShareTotal_3Y.ON();
+                    MarketShareTotal_3Y1.ON();
 
                     dateEdit.Visible = false;
                     lblDate.Visible = false;
