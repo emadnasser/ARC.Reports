@@ -11,10 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARC.Reports.UI", "ARC.Repor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARC.Reports", "ARC.Reports\ARC.Reports.csproj", "{6C883AF3-0D4E-485E-8DEC-FFDB26313A61}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Temp", "Temp", "{F52DB14C-4691-4BA6-86EB-D7326CA7708F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{EC81CBB3-808A-4006-95B8-8AB66639E33A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D0471966-08E8-4AA0-BAF8-EF7C6F362F02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DX_Bootstrapped", "DX_Bootstrapped\DX_Bootstrapped.csproj", "{972182B3-A56C-4A3F-BC2A-C42ED39670FD}"
+EndProject
 Global
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -36,11 +41,25 @@ Global
 		{6C883AF3-0D4E-485E-8DEC-FFDB26313A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C883AF3-0D4E-485E-8DEC-FFDB26313A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C883AF3-0D4E-485E-8DEC-FFDB26313A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{972182B3-A56C-4A3F-BC2A-C42ED39670FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972182B3-A56C-4A3F-BC2A-C42ED39670FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972182B3-A56C-4A3F-BC2A-C42ED39670FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972182B3-A56C-4A3F-BC2A-C42ED39670FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07D807A8-FCB1-4F9E-B7A9-D28EC0A7DF3D} = {D0471966-08E8-4AA0-BAF8-EF7C6F362F02}
+		{C92F97FE-0FE5-4358-968B-580E58A04715} = {F52DB14C-4691-4BA6-86EB-D7326CA7708F}
+		{70F785AE-6A64-4773-AE54-F789977547CC} = {EC81CBB3-808A-4006-95B8-8AB66639E33A}
+		{6C883AF3-0D4E-485E-8DEC-FFDB26313A61} = {F52DB14C-4691-4BA6-86EB-D7326CA7708F}
+		{972182B3-A56C-4A3F-BC2A-C42ED39670FD} = {EC81CBB3-808A-4006-95B8-8AB66639E33A}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4C322FC4-477D-4E32-A2F5-90B943DA3CAB}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

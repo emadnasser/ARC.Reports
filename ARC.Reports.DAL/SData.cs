@@ -687,7 +687,36 @@ namespace ARC.Reports.DAL
             return null;
         }
 
-        public static List<MarketShareGraphs> MarketShareGraphsChannels_D(int pMarketType)
+        public static List<MarketShareGraphs> MarketShareGraphsChannels_D_MS(int pMarketType)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            DataTable myDataTable = new DataTable();
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SAM");
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SEM");
+            }
+
+            myDataTable = Helper.ExecuteReader(" SELECT Channel, SUM([Percentage]) AS TradeShare FROM[dbo].[Rep_001]" +
+                                                    " WHERE convert(date, InsertedDate, 103) = convert(date, GETDATE(), 103) AND MarketType = @pMarketType" +
+                                                    " GROUP BY Channel", parameters);
+
+            if (myDataTable != null)
+                return (from DataRow x in myDataTable.Rows
+                        select new MarketShareGraphs
+                        {
+                            Channel = Helper.Channel(x["Channel"].ToString()),
+                            TradeShare = Convert.ToDouble(x["TradeShare"]),
+                        }).ToList();
+            return null;
+        }
+
+        public static List<MarketShareGraphs> MarketShareGraphsChannels_D_MT(int pMarketType)
         {
             SqlParameter[] parameters = new SqlParameter[1];
 
@@ -715,6 +744,7 @@ namespace ARC.Reports.DAL
                         }).ToList();
             return null;
         }
+
         //public static List<Rep_001> Rep_emad(int pMarketType)
         //{
         //    SqlParameter[] parameters = new SqlParameter[1];

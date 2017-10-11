@@ -796,35 +796,17 @@
     <Compile Include="Public\Unauthorized.aspx.designer.cs">
       <DependentUpon>Unauthorized.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Reports\SummaryCommissionPortfolio.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\SummaryCommissionPortfolio.Designer.cs">
-      <DependentUpon>SummaryCommissionPortfolio.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\SummaryCommission.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\SummaryCommission.Designer.cs">
       <DependentUpon>SummaryCommission.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Reports\SummaryCommissionPortfolio.resx">
-      <DependentUpon>SummaryCommissionPortfolio.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\SummaryCommission.resx">
       <DependentUpon>SummaryCommission.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
