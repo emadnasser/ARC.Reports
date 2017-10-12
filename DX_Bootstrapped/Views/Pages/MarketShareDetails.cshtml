@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "MarketShareDetails";
+}
+
+<h2>MarketShareDetails</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div class="vertComponentContainer">
+        @Html.DevExpress().Label(settings=> { settings.Name = "lblName"; settings.Text = "Emad Nasser"; }).GetHtml()
+        @Html.DevExpress().PageControl(
+            settings =>
+            {
+                settings.Name = "pcFeatures";
+                settings.ActivateTabPageAction = 0;
+                settings.SaveStateToCookies = true;
+
+                settings.TabPages.Add("Acura").SetContent(() =>
+                {
+                    @Html.DevExpress().GridView(
+                        x =>
+                        {
+                            x.Name = "gvDataBindingToLinq";
+                            x.CallbackRouteValues = new { Controller = "DataBinding", Action = "DataBindingToLargeDatabasePartial" };
+                            x.KeyFieldName = "ID";
+                            x.Width = Unit.Percentage(100);
+                            x.EnableRowsCache = true;
+
+                            //x.x.ShowFilterRow = true;
+                            //x.x.ShowGroupPanel = true;
+                            //x.x.ShowFooter = true;
+
+                            x.Columns.Add("From").Width = Unit.Pixel(200);
+                            x.Columns.Add("Subject");
+                            x.Columns.Add(column =>
+                            {
+                                column.FieldName = "Sent";
+                                column.ColumnType = MVCxGridViewColumnType.DateEdit;
+                                //column.x.AutoFilterCondition = AutoFilterCondition.Equals;
+                                column.Width = Unit.Pixel(100);
+                            });
+                            //x.Columns.Add("Size").x.AutoFilterCondition = AutoFilterCondition.Equals;
+                            x.Columns.Add("HasAttachment", "Attachment?", MVCxGridViewColumnType.CheckBox).Width = Unit.Pixel(100);
+
+                            x.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Size");
+                            x.TotalSummary.Add(DevExpress.Data.SummaryItemType.Count, "Subject");
+                            x.GroupSummary.Add(DevExpress.Data.SummaryItemType.Count, "");
+
+                            x.ClientSideEvents.Init = "function(s, e) { s.PerformCallback(); }";
+                            x.ClientSideEvents.BeginCallback = "function(s, e) { OnStartCallback(s, e); }";
+                            x.ClientSideEvents.EndCallback = "function(s, e) { OnEndCallback(s, e); }";
+
+                        }).BindToEF(string.Empty, string.Empty, (s, e) =>
+                        //{
+                        //    //e.QueryableSource = LargeDatabaseDataProvider.DB.Emails;
+                        //}).GetHtml()
+                });
+                settings.TabPages.Add("BMW").SetContent(() =>
+                {
+                    //ViewContext.Writer.Write(
+                    //    "<img alt=\"\" src=\"" + Url.Content("~/Content/TabControl/Cars/BMW_760i_Sedan.jpg") + "\" style=\"width:320px; height:240px\" />"
+                    //);
+                });
+            }).GetHtml()
+    </div>
+}

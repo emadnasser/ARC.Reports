@@ -1798,6 +1798,7 @@
     <Content Include="Views\Pages\BlogCategoriesNavBarPartial.cshtml" />
     <Content Include="Views\Pages\Search.cshtml" />
     <Content Include="Views\Pages\SearchGridViewPartial.cshtml" />
+    <Content Include="Views\Pages\MarketShareDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1810,6 +1811,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EmadController.cs" />
+    <Compile Include="Controllers\PagesController.MarketShareDetails.cs" />
     <Compile Include="Controllers\PagesController.BlogPosts.cs" />
     <Compile Include="Controllers\PagesController.Contacts.cs" />
     <Compile Include="Controllers\PagesController.Home.cs" />
@@ -1821,6 +1823,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\ll\" />
     <Folder Include="_Template_1\mustache\app\views\pages\partials\_shared\" />
     <Folder Include="_Template_1\mustache\php\_cache\" />
   </ItemGroup>
