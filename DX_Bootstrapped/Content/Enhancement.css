@@ -1,0 +1,40 @@
+﻿.beta {
+    color: #fff;
+    font-size: 10px;
+}
+
+.project-title {
+    color: #fff;
+    font-family: "hacen_casablanca";
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.project-baner {
+    background-color: #1c3f95 !important;
+}
+
+.highlight {
+    color: #fff !important;
+    background: #6fb3e0 !important;
+}
+
+.menu-text {
+    font-size: 12px !important;
+}
+
+.modal-open .modal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-y: scroll;
+}
+
+.project-title-admin {
+    color: #fff;
+    font-weight: normal;
+}
+
+#navbar-container > div.navbar-header.pull-right > a {
+    padding-top: 15px !important;
+}
+

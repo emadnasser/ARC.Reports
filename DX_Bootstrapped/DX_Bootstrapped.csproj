@@ -385,6 +385,7 @@
     <Content Include="assets\js\x-editable\ace-editable.js" />
     <Content Include="assets\js\x-editable\bootstrap-editable.js" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Enhancement.css" />
     <Content Include="Content\Images\Blog\image0.png" />
     <Content Include="Content\Images\Blog\image1.png" />
     <Content Include="Content\Images\Blog\image2.png" />
@@ -398,6 +399,8 @@
     <Content Include="Content\Images\Customers\HeidiLopez.jpg" />
     <Content Include="Content\Images\Customers\NathanBryant.jpg" />
     <Content Include="Content\Images\Customers\RafaelRaje.jpg" />
+    <Content Include="Content\Images\icon.ico" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\site.css" />
@@ -1845,7 +1848,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1528</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/Reports</IISUrl>
+          <IISUrl>http://localhost/ARC.Reports</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
