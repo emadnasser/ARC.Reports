@@ -150,7 +150,7 @@ namespace ARC.Reports.DAL
                                                 " S_1.[Channel], S_1.[MarketShare], S_1.[MarketTrades], S_2.[MarketShare], S_2.[MarketTrades], S_3.[MarketShare], S_3.[MarketTrades], S_4.[MarketShare], S_4.[MarketTrades]," +
                                                 " S_5.[MarketShare], S_5.[MarketTrades], S_6.[MarketShare], S_6.[MarketTrades], S_7.[MarketShare], S_7.[MarketTrades], S_8.[MarketShare], S_8.[MarketTrades]," +
                                                 " S_9.[MarketShare], S_9.[MarketTrades], S_10.[MarketShare], S_10.[MarketTrades], S_11.[MarketShare], S_11.[MarketTrades], " +
-                                                " S_12.[MarketShare], S_12.[MarketTrades], S_13.[MarketShare], S_13.[MarketTrades] FROM" +
+                                                " S_12.[MarketShare], S_12.[MarketTrades] FROM" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 1 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_1 " +
                                                 " LEFT OUTER JOIN" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 2 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_2 " +
@@ -185,12 +185,6 @@ namespace ARC.Reports.DAL
                                                 " LEFT OUTER JOIN" +
                                                 " (SELECT[Channel], [MarketShare], [MarketTrades] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [Month] = 12 AND [MarketType] = @pMarketType AND [Year] = @pYear) S_12 " +
                                                 " ON S_1.[Channel] = S_12.[Channel]" +
-                                                " LEFT OUTER JOIN" +
-                                                " (SELECT[Channel], [MarketShare], [MarketTrades]" +
-                                                " FROM[dbo].[Rep_0012]" +
-                                                " WHERE MONTH(InsertedDate) = MONTH(GETDATE()) AND MarketType = @pMarketType AND YEAR(InsertedDate) = @pYear" +
-                                                " ) S_13" +
-                                                " ON S_1.[Channel] = S_13.[Channel]" +
                                                 " WHERE S_1.[Channel] != 'AVG'" +
                                                 " ORDER BY S_1.[Channel]", parameters);
 
@@ -223,9 +217,6 @@ namespace ARC.Reports.DAL
                             MarketTrades_11 = x[22] != DBNull.Value ? (double?)x[22] : 0,
                             MarketShare_12 = x[23] != DBNull.Value ? (double?)x[23] : 0,
                             MarketTrades_12 = x[24] != DBNull.Value ? (double?)x[24] : 0,
-                            MarketShare_13 = x[25] != DBNull.Value ? (double?)x[25] : 0,
-                            MarketTrades_13 = x[26] != DBNull.Value ? (double?)x[26] : 0,
-
                         }).ToList();
             return null;
         }

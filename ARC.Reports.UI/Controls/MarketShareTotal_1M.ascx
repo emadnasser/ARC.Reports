@@ -11,7 +11,7 @@
                     <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                     <CellStyle HorizontalAlign="Center" />
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewBandColumn Name="_1" Caption="Jan" HeaderStyle-HorizontalAlign="Center">
+                <dx:GridViewBandColumn Caption="Jan" HeaderStyle-HorizontalAlign="Center">
                     <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
@@ -30,7 +30,7 @@
                         </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
-                <dx:GridViewBandColumn Name="_2" Caption="Feb" HeaderStyle-HorizontalAlign="Center">
+                <dx:GridViewBandColumn Caption="Feb" HeaderStyle-HorizontalAlign="Center">
                     <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="MarketShare_2" VisibleIndex="3" Caption="Shares">
@@ -49,7 +49,7 @@
                         </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
-                <dx:GridViewBandColumn Name="_3" Caption="Mar" HeaderStyle-HorizontalAlign="Center">
+                <dx:GridViewBandColumn Caption="Mar" HeaderStyle-HorizontalAlign="Center">
                     <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="MarketShare_3" VisibleIndex="5" Caption="Shares">
@@ -68,7 +68,7 @@
                         </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
-                <dx:GridViewBandColumn Name="_4" Caption="Apr" HeaderStyle-HorizontalAlign="Center">
+                <dx:GridViewBandColumn Caption="Apr" HeaderStyle-HorizontalAlign="Center">
                     <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="MarketShare_4" VisibleIndex="7" Caption="Shares">
@@ -239,25 +239,6 @@
                         </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
-                <dx:GridViewBandColumn Name="_13" HeaderStyle-HorizontalAlign="Center">
-                    <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
-                    <Columns>
-                        <dx:GridViewDataTextColumn FieldName="MarketShare_13" VisibleIndex="25" Caption="Shares">
-                            <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
-                            <HeaderStyle HorizontalAlign="Center" />
-                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                            <CellStyle HorizontalAlign="Center" BackColor="#D7DCEA" />
-                            <FooterCellStyle BackColor="#D7DCEA">
-                            </FooterCellStyle>
-                        </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="MarketTrades_13" VisibleIndex="26" Caption="Trades">
-                            <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
-                            <HeaderStyle HorizontalAlign="Center" />
-                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
-                            <CellStyle HorizontalAlign="Center" />
-                        </dx:GridViewDataTextColumn>
-                    </Columns>
-                </dx:GridViewBandColumn>
             </Columns>
             <TotalSummary>
                 <dx:ASPxSummaryItem FieldName="Channel" SummaryType="Sum" DisplayFormat="Average{0}" ShowInColumn="Channel" />
@@ -285,8 +266,6 @@
                 <dx:ASPxSummaryItem FieldName="Sm_t11" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_11" />
                 <dx:ASPxSummaryItem FieldName="Sm_s12" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_12" />
                 <dx:ASPxSummaryItem FieldName="Sm_t12" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_12" />
-                <dx:ASPxSummaryItem FieldName="Sm_s13" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_13" />
-                <dx:ASPxSummaryItem FieldName="Sm_t13" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_13" />
             </TotalSummary>
             <Styles>
                 <Footer HorizontalAlign="Center" VerticalAlign="Middle">

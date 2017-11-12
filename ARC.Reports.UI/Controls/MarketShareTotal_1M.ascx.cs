@@ -148,27 +148,27 @@ namespace ARC.Reports.Controls
                 e.TotalValue = myData[11].MarketTrades;
             }
 
-            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s13")
-            {
-                e.TotalValue = myData[myData.Count - 1].MarketShare;
-                ((ASPxSummaryItem)e.Item).ShowInColumn = "MarketShare_13";
-            }
-            if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t13")
-            {
-                e.TotalValue = myData[myData.Count - 1].MarketTrades;
-                ((ASPxSummaryItem)e.Item).ShowInColumn = "MarketTrades_13";
-            }
+            //if (((ASPxSummaryItem)e.Item).FieldName == "Sm_s13")
+            //{
+            //    e.TotalValue = myData[myData.Count - 1].MarketShare;
+            //    ((ASPxSummaryItem)e.Item).ShowInColumn = "MarketShare_13";
+            //}
+            //if (((ASPxSummaryItem)e.Item).FieldName == "Sm_t13")
+            //{
+            //    e.TotalValue = myData[myData.Count - 1].MarketTrades;
+            //    ((ASPxSummaryItem)e.Item).ShowInColumn = "MarketTrades_13";
+            //}
         }
 
         private void GetData()
         {
             try
             {
-                ASPxGridView6.Columns["_1"].Caption = "Jan";
-                ASPxGridView6.Columns["_2"].Caption = "Feb";
-                ASPxGridView6.Columns["_3"].Caption = "Mar";
-                ASPxGridView6.Columns["_4"].Caption = "Apr";
-                ASPxGridView6.Columns["_13"].Caption = DateTime.Now.ToString("MMM");
+                //ASPxGridView6.Columns["_1"].Caption = "Jan";
+                //ASPxGridView6.Columns["_2"].Caption = "Feb";
+                //ASPxGridView6.Columns["_3"].Caption = "Mar";
+                //ASPxGridView6.Columns["_4"].Caption = "Apr";
+                //ASPxGridView6.Columns["_13"].Caption = DateTime.Now.ToString("MMM");
 
                 if (MarketType == 0)
                 {
@@ -181,18 +181,18 @@ namespace ARC.Reports.Controls
 
                 ASPxGridView6.DataBind();
 
-                if (ASPxGridView6.Columns.Count >= 12)
+                //if (ASPxGridView6.Columns.Count >= 12)
+                //{
+                var month = DateTime.Now.Month + 1;
+
+                for (int i = month; i < 13; i++)
                 {
-                    var month = DateTime.Now.Month;
-
-                    for (int i = month; i < 13; i++)
-                    {
-                        ASPxGridView6.Columns.RemoveAt(month);
-                    }
-
-                    if (month > 9)
-                        ASPxGridView6.Settings.HorizontalScrollBarMode = ScrollBarMode.Visible;
+                    ASPxGridView6.Columns.RemoveAt(month);
                 }
+
+                if (month > 9)
+                    ASPxGridView6.Settings.HorizontalScrollBarMode = ScrollBarMode.Visible;
+                //}
             }
             catch
             {
