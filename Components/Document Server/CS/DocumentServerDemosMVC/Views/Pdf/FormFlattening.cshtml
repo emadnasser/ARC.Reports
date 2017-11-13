@@ -1,0 +1,47 @@
+﻿@model PdfFormFlatteningModel
+<table class="OptionsTable">
+    <tr>
+        <td>
+            @Html.DevExpress().Label(settings => {
+           settings.Name = "labelSelectDocument";
+           settings.Text = "Select document: ";
+       }).GetHtml()
+        </td>
+        <td>
+            <div style="vertical-align: middle;">
+                @using (Html.BeginForm("FormFlatteningUploadFile", "Pdf", FormMethod.Post)) {
+                    @Html.DevExpress().UploadControl(settings => {
+                   settings.Name = "uploader";
+                   settings.ControlStyle.CssClass = "CustomTextBox";
+                   settings.ValidationSettings.Assign(PdfController.ValidationSettings);
+                   settings.AdvancedModeSettings.EnableMultiSelect = false;
+                   settings.ShowClearFileSelectionButton = false;
+                   settings.FileInputSpacing = new Unit("0");
+                   settings.Height = new Unit("25px");
+                   settings.BrowseButton.Text = "Open...";
+                   settings.ClientSideEvents.TextChanged = "function(s, e) { uploader.Upload();}";
+                   settings.ClientSideEvents.FilesUploadComplete = "function(s, e) { PdfViewer.PerformCallback(); }";
+               }).GetHtml()
+                }
+            </div>
+        </td>
+        <td class="middle">
+            @Html.DevExpress().Button(settings => {
+           settings.Name = "FormFlatteningButton";
+           settings.Text = "Flatten And Download...";
+           settings.ClientSideEvents.Click = String.Format("function (s, e) {{ document.location.href = '{0}'; }}", Url.Action("FlattenFormFields", "Pdf"));
+       }).GetHtml()
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" style="text-align:center">
+            @Html.DevExpress().Label(settings => {
+           settings.Name = "labelMaxFileSize";
+           settings.Text = "Maximum file size: 10Mb";
+           settings.ControlStyle.Font.Size = new FontUnit("8pt");
+       }).GetHtml()
+        </td>
+    </tr>
+</table>
+<br />
+@Html.Partial("PdfFileView")

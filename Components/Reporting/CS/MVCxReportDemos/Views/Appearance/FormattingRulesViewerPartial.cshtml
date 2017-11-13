@@ -1,0 +1,11 @@
+﻿@using DevExpress.Web.Demos.Code.Designer
+@model ReportsDemoModel
+@Html.DevExpress().DocumentViewer(
+    settings => {
+        settings.Name = "DocumentViewer";
+        settings.Report = Model.Report;
+        settings.SettingsSplitter.DocumentMapCollapsed = true;
+        settings.CallbackRouteValues = new { Controller = "Appearance", Action = "FormattingRulesViewerPartial", ReportID = Model.ReportID };
+        settings.ExportRouteValues = new { Controller = "Appearance", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+    }
+).GetHtml()

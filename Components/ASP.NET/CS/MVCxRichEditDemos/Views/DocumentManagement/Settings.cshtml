@@ -1,0 +1,6 @@
+﻿@model SettingsDemoOptions
+
+@using(Html.BeginForm()) {
+    @Html.Partial("SettingsFormLayoutPartial", Model)
+    @Html.Partial("SettingsPartial", Model)
+}

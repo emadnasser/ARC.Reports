@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<items>
+  <item Id="0" Text="(Athens) Academy of Athens" ImageUrl="~/Content/Images/cities/(Athens)-Academy-of-Athens.jpg" MediumImageUrl="~/Content/Images/cities/Medium/(Athens)-Academy-of-Athens.jpg" ThumbnailUrl="~/Content/Images/cities/Small/(Athens)-Academy-of-Athens.jpg" Rating="4" />
+  <item Id="1" Text="(Barcelona) Arc de Triomf" ImageUrl="~/Content/Images/cities/(Barcelona)-Arc-de-Triomf.jpg" MediumImageUrl="~/Content/Images/cities/Medium/(Barcelona)-Arc-de-Triomf.jpg" ThumbnailUrl="~/Content/Images/cities/Small/(Barcelona)-Arc-de-Triomf.jpg" Rating="3.5" />
+  <item Id="2" Text="(Barcelona) Camp Nou" ImageUrl="~/Content/Images/cities/(Barcelona)-Camp-Nou.jpg" MediumImageUrl="~/Content/Images/cities/Medium/(Barcelona)-Camp-Nou.jpg" ThumbnailUrl="~/Content/Images/cities/Small/(Barcelona)-Camp-Nou.jpg" Rating="5" />
+</items>

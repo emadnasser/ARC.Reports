@@ -1,0 +1,223 @@
+﻿<%@ Master Language="C#" %>
+<!DOCTYPE html>
+<script runat="server">
+    protected void Page_Init(object sender, EventArgs e) {
+        Page.Header.Title = Utils.GetCurrentDemoPageTitle();
+    }
+</script>
+<html lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="CustomTopHeadHolder" runat="server" />
+    <dx:Head ID="Head" runat="server" />
+    <asp:ContentPlaceHolder ID="CustomHeadHolder" runat="server" />
+</head>
+<body>
+    <form runat="server" id="form1" class="AspForm">
+        <asp:ContentPlaceHolder ID="CustomTopAreaHolder" runat="server" />
+        <div class="LayoutContainer">
+            <div class="LayoutLeft">
+                <div class="Inner">
+                    <div class="Header">
+                        <div class="AspLogo">
+                            <h2><a href="<%= ResolveUrl("~/") %>"><%= DemosModel.Instance.GlobalHeader.LogoPlatformSubject%></a></h2>
+                            <h5><a href="<%= ResolveUrl("~/") %>"><%= DemosModel.Instance.GlobalHeader.LogoPlatformDescription %></a></h5>
+                        </div>
+                    </div>
+                    <% if (!DemosModel.Current.IsRootDemo && !Utils.CurrentDemo.IsErrorPage) { %>
+                    <div class="Separator"></div>
+                    <dx:Search ID="Search" runat="server" />
+                    <div class="Navigation" <%= Utils.GetAccessibilityRoleAttribute("navigation") %>>
+                        <dx:Navigation ID="Navigation" runat="server" />
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="LayoutRight">
+                <div class="Inner">
+                    <div class="Header" <%= Utils.GetAccessibilityRoleAttribute("banner") %>>
+                        <div class="Buttons">
+                            <a class="DownloadButton" href="<%= AssemblyInfo.DXLinkTrial %>">
+                                <dx:ASPxImage runat="server" ID="dIcon" SpriteCssClass="Icon"></dx:ASPxImage>
+                                FREE TRIAL
+                            </a>
+                            <a class="BuyButton" href="<%= AssemblyInfo.DXLinkBuyNowASP %>">
+                                <dx:ASPxImage runat="server" ID="bIcon" SpriteCssClass="Icon"></dx:ASPxImage>
+                                BUY NOW
+                            </a>
+                            <div class="Separator Vertical"></div>
+                            <a href="http://www.devexpress.com" class="Logo">
+                                <dx:ASPxImage ID="ASPxImage1" runat="server" SpriteCssClass="LogoImage" AlternateText="DevExpress" />
+                            </a>
+                        </div>
+                    </div>
+                    <b class="Clear"></b>
+                    <% if (!DemosModel.Current.IsRootDemo && !Utils.CurrentDemo.IsErrorPage) { %>
+                    <div class="Separator"></div>
+                    <% if(Utils.CanChangeTheme) { %>
+                    <div style="float: right;">
+                        <div class="theme-selector-container">
+                            <dx:ThemeSelector ID="ThemeSelector" runat="server" />
+                        </div>
+                         <% if(Utils.CanApplyThemeParameters) { %>
+                        <div class="theme-parameters-selector-container">
+                            <dx:ThemeParametersSelector ID="ThemeParametersSelector" runat="server" />
+                        </div>
+                        <% } %>
+                    </div>
+                    <% } %>
+                    <asp:ContentPlaceHolder ID="TopRightMenuRegion" runat="server" />
+                    <div <%= Utils.GetAccessibilityRoleAttribute("main") %>>
+                    <% if(Utils.CurrentDemoPage != null) { %>
+                    <h1 class="DemoTitle">
+                        <span class="DemoNavigationTitle"><%= Utils.GetDemoNavigationTitle() %></span>
+                        <span><%= Utils.CurrentDemo.Title %></span>
+                    </h1>
+                    <b class="Clear"></b>
+                    <% } %>
+                    <% if(Utils.IsIntro) { %>
+                    <div class="IntroArea">
+                        <table class="Banner">
+                            <tr>
+                                <td class="LeftArea">
+                                    <div class="SmallScreenshotShadow">
+                                        <a href="<%= Utils.CurrentIntro.BannerUrl %>" target="_blank">
+                                            <img src="<%= ResolveClientUrl(Utils.CurrentIntro.BannerImageUrl) %>" alt="See overview video" class="VideoFrame" />
+                                            <img src="<%= ResolveClientUrl("~/Content/VideoButton.png") %>" class="VideoButton" alt="See overview video" />
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="RightArea">
+                                    <h1><%= Utils.CurrentIntro.BannerTitle %></h1>
+                                    <%= Utils.CurrentIntro.BannerText %>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="LeftArea"><a href="<%= Utils.CurrentIntro.BannerUrl %>" class="BannerLink" target="_blank">See overview video
+                                </a></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <div class="FeaturesHeader">
+                            FEATURED TECHNICAL DEMOS
+                            <div class="Separator"></div>
+                        </div>
+                        <%
+                           rptFeaturedDemos.DataSource = Utils.GenerateFeaturedDemos();
+                           rptFeaturedDemos.DataBind();
+                        %>
+                        <asp:Repeater runat="server" ID="rptFeaturedDemos">
+                            <ItemTemplate>
+                                <table class="Banner Featured">
+                                    <tr>
+                                        <td class="LeftArea">
+                                            <div class="SmallScreenshotShadow">
+                                                <a href="<%# ResolveUrl((string)Eval("NavigateUrl")) %>">
+                                                    <img src="<%# ResolveUrl((string)Eval("ImageUrl")) %>" alt="<%# Eval("Title") %>" />
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="RightArea">
+                                            <h3><%# Eval("Title") %></h3>
+                                            <%# Eval("Description") %>
+                                            <a href="<%# ResolveUrl((string)Eval("NavigateUrl")) %>" class="SeeDemo">See demo</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                    <% }
+                       else { /* Demo Page */ %>
+                    <div id="DemoArea">
+                        <% if(!Utils.IsOverview) { %>
+                        <asp:ContentPlaceHolder ID="ContentHolder" runat="server" />
+                        <div class="Clear"></div>
+                        <dx:DemoTabs runat="server" ID="DemoTabs" />
+                        <% }
+                        else { %>
+                        <table class="OverviewArea">
+                            <tr>
+                                <td class="LeftArea">
+                                    <asp:ContentPlaceHolder ID="OverviewDemoContentHolder" runat="server" />
+                                    <div class="Description">
+                                        <span class="Title"><%= Utils.GetDescriptionTitle() %></span>
+                                        <div class="TextContent"><%= Utils.CurrentDemo.Description %></div>
+                                    </div>
+                                </td>
+                                <td class="RightArea">
+                                    <div class="TextContent">
+                                    <% if(Utils.CurrentDemoPage.SeeAlsoLinks.Count > 0) { %>
+                                        <span class="Title">Resources to Learn</span>
+                                        <ul>
+                                        <% foreach(var sa in Utils.CurrentDemoPage.SeeAlsoLinks) { %>
+                                            <li><a href="<%=Utils.EncodeUrl(sa.Url.Replace("&", "&amp;")) %>"><%=sa.Title %></a></li>
+                                        <% } %>
+                                        </ul>
+                                    <% } %>
+                                    </div>
+                                    <div class="TextContent KeyFeatures">
+                                    <% if(Utils.CurrentOverview.KeyFeatures.Count > 0) { %>
+                                        <span class="Title">Key Features</span>
+                                        <ul>
+                                        <% foreach(var keyFeature in Utils.CurrentOverview.KeyFeatures) { %>
+                                            <li>
+                                                <span class="KeyFeatureName"><%=keyFeature.GetNameHtml() %></span>
+                                                <% if(!String.IsNullOrEmpty(keyFeature.Description)) { %>
+                                                <div class="KeyFeatureDescription"><%=keyFeature.Description%></div>
+                                                <% } %>
+                                            </li>
+                                        <% } %>
+                                        </ul>
+                                    <% } %>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <% } %>
+                    </div>
+                    <% } %>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            <b class="Clear"></b>
+            <% if (DemosModel.Current.IsRootDemo && !Utils.CurrentDemo.IsErrorPage) { %>
+            <div class="Separator"></div>
+            <div class="RootIntro">
+                <div class="Header">
+                    <h1>When only the best will do.</h1>
+                    Over 90 ASP.NET AJAX Controls
+                </div>
+                <dx:Search ID="Search1" runat="server" FocusOnLoad="true" />
+                <dx:Products runat="server" ID="Products"></dx:Products>
+            </div>
+            <% } else if (Utils.CurrentDemo.IsErrorPage) { %>
+               <div class="Separator"></div>
+               <asp:ContentPlaceHolder ID="ErrorHolder" runat="server"></asp:ContentPlaceHolder>
+            <% } %>
+            <div class="LayoutFooterSpacing"></div>
+        </div>
+        <div class="LayoutFooter">
+            <div class="LayoutLeft" <%= Utils.GetAccessibilityRoleAttribute("contentinfo") %>>
+                <div class="FooterInner">
+                    <div class="Separator Orange"></div>
+                    <div class="Version">
+                        Version: <%= Utils.GetVersionText() %>
+                    </div>
+                    <div class="Copyrights">
+                        Copyright &copy; 2006-<%=DateTime.Now.Year %>
+                        Developer Express Inc
+                    </div>
+                </div>
+            </div>
+            <div class="LayoutRight" <%= Utils.GetAccessibilityRoleAttribute("complementary") %>>
+                <div class="FooterInner">
+                    <div class="Separator"></div>
+                    <dx:FooterText ID="FooterText" runat="server" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

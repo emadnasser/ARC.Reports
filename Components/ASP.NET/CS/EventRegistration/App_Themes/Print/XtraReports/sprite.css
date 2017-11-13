@@ -1,0 +1,134 @@
+.dxXtraReports_BtnFirstPage_Print,
+.dxXtraReports_BtnFirstPageDisabled_Print,
+.dxXtraReports_BtnLastPage_Print,
+.dxXtraReports_BtnLastPageDisabled_Print,
+.dxXtraReports_BtnNextPage_Print,
+.dxXtraReports_BtnNextPageDisabled_Print,
+.dxXtraReports_BtnPrevPage_Print,
+.dxXtraReports_BtnPrevPageDisabled_Print,
+.dxXtraReports_BtnPrint_Print,
+.dxXtraReports_BtnPrintDisabled_Print,
+.dxXtraReports_BtnPrintPage_Print,
+.dxXtraReports_BtnPrintPageDisabled_Print,
+.dxXtraReports_BtnSave_Print,
+.dxXtraReports_BtnSaveDisabled_Print,
+.dxXtraReports_BtnSaveWindow_Print,
+.dxXtraReports_BtnSaveWindowDisabled_Print,
+.dxXtraReports_BtnSearch_Print,
+.dxXtraReports_BtnSearchDisabled_Print 
+{
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxXtraReports_BtnFirstPage_Print {
+    background-position: -16px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnFirstPageDisabled_Print {
+    background-position: -16px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPage_Print {
+    background-position: -32px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPageDisabled_Print {
+    background-position: -32px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPage_Print {
+    background-position: -64px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPageDisabled_Print {
+    background-position: -64px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPage_Print {
+    background-position: -48px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPageDisabled_Print {
+    background-position: -48px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrint_Print {
+    background-position: -80px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintDisabled_Print {
+    background-position: -80px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPage_Print {
+    background-position: -96px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPageDisabled_Print {
+    background-position: -96px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSave_Print {
+    background-position: -112px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveDisabled_Print {
+    background-position: -112px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindow_Print {
+    background-position: -128px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindowDisabled_Print {
+    background-position: -128px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearch_Print {
+    background-position: 0px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearchDisabled_Print {
+    background-position: 0px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+

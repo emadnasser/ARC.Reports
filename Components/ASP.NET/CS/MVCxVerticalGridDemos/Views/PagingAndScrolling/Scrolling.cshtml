@@ -1,0 +1,51 @@
+﻿@model IEnumerable
+           
+
+@functions{
+    IEnumerable GetScrollBarModeTypes() {
+        return Enum.GetValues(typeof(ScrollBarMode)); 
+    }
+}
+
+<script type="text/javascript">
+    function Submit(s, e) {
+        $("form").submit();
+    }
+</script>
+
+@using(Html.BeginForm()) {
+    <table class="OptionsTable BottomMargin">
+        <tr><td>
+            @Html.DevExpress().Label(settings => {
+                settings.Name = "HorizontalScrollBarModeLabel";
+                settings.Text = "Horizontal ScrollBar Mode:";
+                settings.AssociatedControlName = "HorzScrollBarMode";
+            }).GetHtml()
+        </td><td>
+            @Html.DevExpress().ComboBox(settings => {
+                settings.Name = "HorizontalScrollBarMode";
+                foreach(var item in GetScrollBarModeTypes())
+                    settings.Properties.Items.Add(item.ToString());
+                settings.Properties.ClientSideEvents.ValueChanged = "Submit";
+            }).Bind(ScrollingDemoHelper.Options.HorizontalScrollBarMode.ToString()).GetHtml()
+        </td></tr>
+        <tr><td>
+            @Html.DevExpress().Label(settings => {
+                settings.Name = "VerticalScrollBarModeLabel";
+                settings.Text = "Vertical ScrollBar Mode:";
+                settings.AssociatedControlName = "VertScrollBarMode";
+            }).GetHtml()
+        </td><td>
+            @Html.DevExpress().ComboBox(settings => {
+                settings.Name = "VerticalScrollBarMode";
+                foreach(var item in GetScrollBarModeTypes())
+                    settings.Properties.Items.Add(item.ToString());
+                settings.Properties.ClientSideEvents.ValueChanged = "Submit";
+            }).Bind(ScrollingDemoHelper.Options.VerticalScrollBarMode.ToString()).GetHtml()
+        </td></tr>
+    </table>
+    @Html.Partial("ScrollingPartial", Model)
+}
+
+
+

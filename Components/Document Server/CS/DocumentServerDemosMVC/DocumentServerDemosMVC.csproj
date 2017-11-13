@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E910ECAE-C6A5-4D58-89AB-AB186664E299}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevExpress.Web.Demos</RootNamespace>
+    <AssemblyName>DevExpress.Web.Demos.DocumentServerMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.DemoReports.v16.2, Version=16.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v16.2.Drawing">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Mvc5.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.Web">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2.Extensions">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>
+      </HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>
+      </HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\BarCodeVisualisation\BarCodeGenerator.cs" />
+    <Compile Include="Code\CellArt\DocumentGenerator.cs" />
+    <Compile Include="Code\CodeFormatter.cs" />
+    <Compile Include="Code\CustomFunction\DocumentGenerator.cs" />
+    <Compile Include="Code\DatabaseGenerator.cs" />
+    <Compile Include="Code\DemoGroupModel.cs" />
+    <Compile Include="Code\DemoHtmlHelper.cs" />
+    <Compile Include="Code\DemoModel.cs" />
+    <Compile Include="Code\DemoModelBase.cs" />
+    <Compile Include="Code\DemosModel.cs" />
+    <Compile Include="Code\DocumentServerDemoProperties.cs" />
+    <Compile Include="Code\DocumentServerDemoUtils.cs" />
+    <Compile Include="Code\EmailDataGenerator.cs" />
+    <Compile Include="Code\EmployeeInformation\DocumentGenerator.cs" />
+    <Compile Include="Code\ExpenseReport\DocumentGenerator.cs" />
+    <Compile Include="Code\ExternalDemoModel.cs" />
+    <Compile Include="Code\IntroFeatureModel.cs" />
+    <Compile Include="Code\IntroPageModel.cs" />
+    <Compile Include="Code\MailMerge\DocumentGenerator.cs" />
+    <Compile Include="Code\MultiplicationTable\DocumentGenerator.cs" />
+    <Compile Include="Code\OverviewPageModel.cs" />
+    <Compile Include="Code\PdfPageModel.cs" />
+    <Compile Include="Code\PersonDataGenerator.cs" />
+    <Compile Include="Code\PhotoUtils.cs" />
+    <Compile Include="Code\RichEditAPI\RichEditCodeResultViewer.cs" />
+    <Compile Include="Code\ShiftSchedule\DocumentGenerator.cs" />
+    <Compile Include="Code\SimpleLoanCalculator\DocumentGenerator.cs" />
+    <Compile Include="Code\SimplifiedMultiplicationTable\DocumentGenerator.cs" />
+    <Compile Include="Code\SourceCodeTreeHelper.cs" />
+    <Compile Include="Code\SportResults\DocumentGenerator.cs" />
+    <Compile Include="Code\SpreadsheetAPI\CodeExampleModel.cs" />
+    <Compile Include="Code\SpreadsheetAPI\ExampleModel.cs" />
+    <Compile Include="Code\SpreadsheetAPI\SpreadsheetCodeResultViewer.cs" />
+    <Compile Include="Code\SpreadsheetAPI\XLExportCSExampleCodeEvaluator.cs" />
+    <Compile Include="Code\SpreadsheetAPI\XLExportExampleCodeEvaluator.cs" />
+    <Compile Include="Code\SpreadsheetAPI\XLExportForbiddenCSVExamples.cs" />
+    <Compile Include="Code\ThemeGroupModel.cs" />
+    <Compile Include="Code\ThemeModel.cs" />
+    <Compile Include="Code\ThemeModelBase.cs" />
+    <Compile Include="Code\ThemesModel.cs" />
+    <Compile Include="Code\UploadFileInfo.cs" />
+    <Compile Include="Code\UploadingUtils.cs" />
+    <Compile Include="Code\Utils.cs" />
+    <Content Include="App_Data\EncodingFiles\chinese.txt" />
+    <Content Include="App_Data\EncodingFiles\english.txt" />
+    <Content Include="App_Data\EncodingFiles\german.txt" />
+    <Content Include="App_Data\EncodingFiles\greek.txt" />
+    <Content Include="App_Data\EncodingFiles\japanese.txt" />
+    <Content Include="App_Data\EncodingFiles\russian.txt" />
+    <Content Include="App_Data\EncodingFiles\spanish.txt" />
+    <Content Include="App_Data\Images\DevExpress.png" />
+    <Content Include="App_Data\Images\image1.jpg" />
+    <Content Include="App_Data\Pdf\Northwind.png" />
+    <Content Include="App_Data\Photo1.jpeg" />
+    <Content Include="App_Data\Photo2.jpeg" />
+    <Content Include="App_Data\Photo3.jpeg" />
+    <Content Include="App_Data\Photo4.jpeg" />
+    <Content Include="App_Data\Photo5.jpeg" />
+    <Content Include="App_Data\Photo6.jpeg" />
+    <Content Include="App_Data\Photo7.jpeg" />
+    <Content Include="App_Data\Photo8.jpeg" />
+    <Content Include="App_Data\Photo9.jpeg" />
+    <Content Include="Content\ApiExampleCode\CellActions.cs" />
+    <Content Include="Content\ApiExampleCode\FormattingActions.cs" />
+    <Content Include="Content\ApiExampleCode\FormulaActions.cs" />
+    <Content Include="Content\ApiExampleCode\RowAndColumnActions.cs" />
+    <Content Include="Content\ApiExampleCode\TableActions.cs" />
+    <Content Include="Content\ApiExampleCode\WorksheetActions.cs" />
+    <Content Include="Content\DemoIcons\BarCode.png" />
+    <Content Include="Content\DemoIcons\Compression.png" />
+    <Content Include="Content\DemoIcons\Export.png" />
+    <Content Include="Content\DemoIcons\ExportToPdf.png" />
+    <Content Include="Content\DemoIcons\FormFilling.png" />
+    <Content Include="Content\DemoIcons\LoanAmortizationSchedule.png" />
+    <Content Include="Content\DemoIcons\RichEditMailMerge.png" />
+    <Content Include="Content\DemoIcons\SpreadsheetCellArt.png" />
+    <Content Include="Content\DocumentServerDemo.css" />
+    <Content Include="Content\RichEditApiExampleCode\ParagraphsAndCharacters.cs" />
+    <Content Include="Content\RichEditApiExampleCode\SpecialFeatures.cs" />
+    <Content Include="Content\RichEditApiExampleCode\Tables.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\AxesActions.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\Charts.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\CreationAndDataActions.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\DataLabelsActions.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\LegendActions.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\SeriesActions.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\StyleActions.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\TitlesActions.cs" />
+    <Content Include="Content\ApiExampleCode\Charts\ViewOptionsActions.cs" />
+    <Content Include="Content\ApiExampleCode\ProtectionActions.cs" />
+    <Content Include="Content\ApiExampleCode\SortActions.cs" />
+    <Compile Include="Content\ApiExampleCode\AutoFilterActions.cs" />
+    <Content Include="Content\ApiExampleCode\ConditionalFormatting.cs" />
+    <Content Include="Content\ApiExampleCode\DataValidationActions.cs" />
+    <Compile Include="Content\ApiExampleCode\DocumentPropertiesActions.cs" />
+    <Content Include="Content\ApiExampleCode\ImportExportActions.cs" />
+    <Compile Include="Content\ApiExampleCode\Pivots\PivotCalculatedFieldActions.cs" />
+    <Compile Include="Content\ApiExampleCode\Pivots\PivotCalculatedItemActions.cs" />
+    <Compile Include="Content\ApiExampleCode\Pivots\PivotFieldActions.cs" />
+    <Compile Include="Content\ApiExampleCode\Pivots\PivotFieldGroupingActions.cs" />
+    <Compile Include="Content\ApiExampleCode\Pivots\PivotFormattingActions.cs" />
+    <Compile Include="Content\ApiExampleCode\Pivots\PivotLayoutActions.cs" />
+    <Compile Include="Content\ApiExampleCode\Pivots\PivotTableActions.cs" />
+    <Compile Include="Content\ApiExampleCode\Pivots\PivotTableFilterActions.cs" />
+    <Content Include="Content\ApiExampleCode\SearchActions.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\BasicActions.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\CellFormatting.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\ConditionalFormatting.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\DataActions.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\FormulaActions.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\Miscellaneous.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\PageViewAndLayout.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\Pictures.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\Sparklines.cs" />
+    <Content Include="Content\ApiExampleCode\XLExport\Tables.cs" />
+    <Compile Include="Controllers\BarCodeController.cs" />
+    <Compile Include="Controllers\BarCode\BarCodeController.BarCodeVisualization.cs" />
+    <Compile Include="Controllers\CompressionController.cs" />
+    <Compile Include="Controllers\Compression\CompressionController.Compress.cs" />
+    <Compile Include="Controllers\Compression\CompressionController.Decompress.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MiscellaneousController.cs" />
+    <Compile Include="Controllers\Miscellaneous\MiscellaneousController.EncodingDetection.cs" />
+    <Compile Include="Controllers\Miscellaneous\MiscellaneousController.NumberInWords.cs" />
+    <Compile Include="Controllers\Miscellaneous\MiscellaneousController.UnitConversion.cs" />
+    <Compile Include="Controllers\PdfController.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.FileAttachment.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.PasswordProtection.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.Signature.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.DocumentCreationAPI.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.FormFilling.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.PageDeletion.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.PageMerging.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.FormFlattening.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.TextExtraction.cs" />
+    <Compile Include="Controllers\Pdf\PdfController.TextSearch.cs" />
+    <Compile Include="Controllers\RichEditController.cs" />
+    <Compile Include="Controllers\RichEdit\RichEditController.Api.cs" />
+    <Compile Include="Controllers\RichEdit\RichEditController.Export.cs" />
+    <Compile Include="Controllers\RichEdit\RichEditController.FindAndReplace.cs" />
+    <Compile Include="Controllers\RichEdit\RichEditController.MailMerge.cs" />
+    <Compile Include="Controllers\SpreadsheetController.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.Api.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.BreakevenAnalysis.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.CellArt.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.ChartsApi.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.CustomFunction.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.EmployeeInformation.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.ExpenseReport.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.LoanAmortizationSchedule.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.MailMerge.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.MultiplicationTable.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.PivotApi.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.ShiftSchedule.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.SimplifiedMultiplicationTable.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.SportResults.cs" />
+    <Compile Include="Controllers\Spreadsheet\SpreadsheetController.XLExportApi.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BarCodeVisualizationModel.cs" />
+    <Compile Include="Models\LoanAmortizationScheduleModel.cs" />
+    <Compile Include="Models\MiscellaneousEncodingDetectionModel.cs" />
+    <Compile Include="Models\MiscellaneousNumberInWordsModel.cs" />
+    <Compile Include="Models\MiscellaneousUnitConversionModel.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\PdfFileAttachmentModel.cs" />
+    <Compile Include="Models\PdfPasswordProtectionModel.cs" />
+    <Compile Include="Models\PdfDocumentCreationAPIModel.cs" />
+    <Compile Include="Models\PdfSignatureModel.cs" />
+    <Compile Include="Models\PdfFormFillingModel.cs" />
+    <Compile Include="Models\PdfPageDeletionModel.cs" />
+    <Compile Include="Models\PdfPageMergingModel.cs" />
+    <Compile Include="Models\PdfModelBase.cs" />
+    <Compile Include="Models\PdfFormFlatteningModel.cs" />
+    <Compile Include="Models\PdfTextExtractionModel.cs" />
+    <Compile Include="Models\PdfTextSearchModel.cs" />
+    <Compile Include="Models\RichEditApiModel.cs" />
+    <Compile Include="Models\RichEditExportModel.cs" />
+    <Compile Include="Models\RichEditFindAndReplaceModel.cs" />
+    <Compile Include="Models\RichEditMailMergeModel.cs" />
+    <Compile Include="Models\RichEditModelBase.cs" />
+    <Compile Include="Models\SpreadsheetApiModel.cs" />
+    <Compile Include="Models\SpreadsheetBreakevenAnalysisModel.cs" />
+    <Compile Include="Models\SpreadsheetCellArtModel.cs" />
+    <Compile Include="Models\SpreadsheetChartsApiModel.cs" />
+    <Compile Include="Models\SpreadsheetCustomFunctionModel.cs" />
+    <Compile Include="Models\SpreadsheetEmployeeInformationModel.cs" />
+    <Compile Include="Models\SpreadsheetExpenseReportModel.cs" />
+    <Compile Include="Models\SpreadsheetMailMergeModel.cs" />
+    <Compile Include="Models\SpreadsheetMultiplicationTableModel.cs" />
+    <Compile Include="Models\SpreadsheetPivotApiModel.cs" />
+    <Compile Include="Models\SpreadsheetPreviewModel.cs" />
+    <Compile Include="Models\SpreadsheetShiftScheduleModel.cs" />
+    <Compile Include="Models\SpreadsheetSimplifiedMultiplicationTableModel.cs" />
+    <Compile Include="Models\SpreadsheetSportResultsModel.cs" />
+    <Compile Include="Models\SpreadsheetXLExportApiModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="App_Data\Demos.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\Themes.xml" />
+    <Content Include="Content\1x1.gif" />
+    <Content Include="Content\CodeFormatter.css" />
+    <Content Include="Content\Components.css" />
+    <Content Include="Content\ComponentsSpriteImage.png" />
+    <Content Include="Content\DevExpress.png" />
+    <Content Include="Content\Loading.gif" />
+    <Content Include="Content\Platform.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\sprite.png" />
+    <Content Include="Content\VideoBanner.png" />
+    <Content Include="Content\VideoButton.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\Demo.js" />
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Metropolis\Demo.skin" />
+    <Content Include="Views\Shared\SearchPartial.cshtml" />
+    <Content Include="Views\Shared\DemoTabsPartial.cshtml" />
+    <Content Include="Views\Shared\SearchListPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Billing_statement.xlsx" />
+    <Content Include="App_Data\BreakevenAnalysis.xlsx" />
+    <Content Include="Views\Shared\NavigationPartial.cshtml" />
+    <Content Include="Views\Shared\ThemeSelectorPartial.cshtml" />
+    <Content Include="Views\Shared\FooterTextPartial.cshtml" />
+    <Content Include="App_Themes\DevEx\Demo.skin" />
+    <Content Include="App_Themes\Aqua\Demo.skin" />
+    <Content Include="App_Themes\BlackGlass\Demo.skin" />
+    <Content Include="App_Themes\Glass\Demo.skin" />
+    <Content Include="App_Themes\Office2003Blue\Demo.skin" />
+    <Content Include="App_Themes\Office2003Olive\Demo.skin" />
+    <Content Include="App_Themes\Office2003Silver\Demo.skin" />
+    <Content Include="App_Themes\Office2010Black\Demo.skin" />
+    <Content Include="App_Themes\Office2010Blue\Demo.skin" />
+    <Content Include="App_Themes\Office2010Silver\Demo.skin" />
+    <Content Include="App_Themes\PlasticBlue\Demo.skin" />
+    <Content Include="App_Themes\RedWine\Demo.skin" />
+    <Content Include="App_Themes\SoftOrange\Demo.skin" />
+    <Content Include="App_Themes\Youthful\Demo.skin" />
+    <Content Include="Views\Shared\HeadPartial.cshtml" />
+    <Content Include="Views\Shared\CreateDatabasePartial.cshtml" />
+    <Content Include="Views\Shared\EventMonitor.cshtml" />
+    <Content Include="Views\Spreadsheet\Api.cshtml" />
+    <Content Include="App_Data\Document.xlsx" />
+    <Content Include="Views\Shared\ApiExampleTreeListPartial.cshtml" />
+    <Content Include="Views\Shared\SpreadsheetDocumentDownloaderPartial.cshtml" />
+    <Content Include="Views\Spreadsheet\LoanAmortizationSchedule.cshtml" />
+    <Content Include="Views\Shared\SpreadsheetPreviewPartial.cshtml" />
+    <Content Include="Views\Spreadsheet\MailMerge.cshtml" />
+    <Content Include="App_Data\EmployeeInformation_template.xlsx" />
+    <Content Include="Views\Spreadsheet\EmployeeInformation.cshtml" />
+    <Content Include="Views\Spreadsheet\ShiftSchedule.cshtml" />
+    <Content Include="Views\Spreadsheet\CustomFunction.cshtml" />
+    <Content Include="Views\Spreadsheet\ExpenseReport.cshtml" />
+    <Content Include="Views\Spreadsheet\MultiplicationTable.cshtml" />
+    <Content Include="Views\Spreadsheet\SimplifiedMultiplicationTable.cshtml" />
+    <Content Include="Content\UploadFolder\dirinfo" />
+    <Content Include="Views\Spreadsheet\CellArt.cshtml" />
+    <Content Include="Views\Spreadsheet\SportResults.cshtml" />
+    <Content Include="Views\RichEdit\Export.cshtml" />
+    <Content Include="Views\Shared\RichEditPreviewPartial.cshtml" />
+    <Content Include="Views\Shared\RichEditDocumentDownloaderPartial.cshtml" />
+    <Content Include="App_Data\MailMerge.rtf" />
+    <Content Include="App_Data\MovieRentals.docx" />
+    <Content Include="Views\RichEdit\MailMerge.cshtml" />
+    <Content Include="Views\RichEdit\Api.cshtml" />
+    <Content Include="Views\RichEdit\FindAndReplace.cshtml" />
+    <Content Include="App_Data\Search.rtf" />
+    <Content Include="Views\BarCode\BarCodeVisualization.cshtml" />
+    <Content Include="Views\Compression\Compress.cshtml" />
+    <Content Include="Views\Compression\CompressPartial.cshtml" />
+    <Content Include="Views\Compression\Decompress.cshtml" />
+    <Content Include="Views\Miscellaneous\EncodingDetection.cshtml" />
+    <Content Include="Views\Miscellaneous\NumberInWords.cshtml" />
+    <Content Include="Views\Miscellaneous\NumberInWordsTreeListPartial.cshtml" />
+    <Content Include="Views\Miscellaneous\UnitConversion.cshtml" />
+    <Content Include="Views\Miscellaneous\UnitConversionMassPartial.cshtml" />
+    <Content Include="Views\Miscellaneous\UnitConversionDistanceAndSquarePartial.cshtml" />
+    <Content Include="Views\Miscellaneous\UnitConversionTemperatureAndPressurePartial.cshtml" />
+    <Content Include="Views\Miscellaneous\UnitConversionForceAndPowerPartial.cshtml" />
+    <Content Include="Views\Spreadsheet\BreakevenAnalysis.cshtml" />
+    <Content Include="Views\Pdf\TextExtraction.cshtml" />
+    <Content Include="Views\Pdf\PageDeletion.cshtml" />
+    <Content Include="Views\Pdf\PageMerging.cshtml" />
+    <Content Include="Views\Pdf\TextSearch.cshtml" />
+    <Content Include="App_Data\Pdf\TextExtraction.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Pdf\TextSearch.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Pdf\PdfFileView.cshtml" />
+    <Content Include="Views\Pdf\PdfTextSearchResultPartial.cshtml" />
+    <Content Include="Views\Pdf\PdfTextExtractionResultPartial.cshtml" />
+    <Content Include="Views\Spreadsheet\ChartsApi.cshtml" />
+    <Content Include="App_Data\Pdf\Error.pdf" />
+    <Content Include="Views\Pdf\FormFilling.cshtml" />
+    <Content Include="Views\Pdf\PasswordProtection.cshtml" />
+    <Content Include="Views\Pdf\Signature.cshtml" />
+    <Content Include="Views\Pdf\DocumentCreationAPI.cshtml" />
+    <Content Include="App_Data\Pdf\SignDemo.pfx" />
+    <Content Include="App_Data\Pdf\PasswordProtectionDemo.pdf" />
+    <Content Include="App_Data\Pdf\SignatureDemo.pdf" />
+    <Content Include="Views\Spreadsheet\XLExportApi.cshtml" />
+    <Content Include="Views\Spreadsheet\PivotApi.cshtml" />
+    <Content Include="Views\Pdf\FileAttachment.cshtml" />
+    <Content Include="App_Data\Pdf\FileAttachment.pdf" />
+    <Content Include="App_Data\PivotTableTemplate.xlsx" />
+    <Content Include="App_Data\Pdf\FormDemo.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Pdf\PageDeletion.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Pdf\FormFlattening.cshtml" />
+    <Content Include="Views\Shared\ThemeParametersSelectorPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\CommonParts\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60461</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60461/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

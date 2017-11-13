@@ -1,0 +1,22 @@
+﻿.CustomTextBox, .CustomTextBox input[type='text'] {
+    padding: 0px;
+    border-width: 0px;
+    width: 0px;
+}
+.CustomTextBox input[type='text'] {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.dxucControl_Metropolis > tbody > tr > td > div {
+    display: none;
+}
+.dxucErrorCell_Metropolis {
+    display: block;
+}
+.dxucBrowseButton_Metropolis {
+    padding-bottom: 3px;
+    padding-top: 4px;
+}
+.dxucInputs_Metropolis {
+    height: 25px;
+}

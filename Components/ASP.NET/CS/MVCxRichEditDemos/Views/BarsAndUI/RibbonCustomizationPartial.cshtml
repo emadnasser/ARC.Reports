@@ -1,0 +1,21 @@
+﻿@{ RibbonCustomizationDemoOptions options = (RibbonCustomizationDemoOptions)Session["RibbonCustomizationOptions"]; }
+
+@Html.DevExpress().RichEdit(settings => {
+    settings.Name = "RichEdit";
+    settings.CallbackRouteValues = new { Controller = "BarsAndUI", Action = "RibbonCustomizationPartial" };
+
+    settings.Width = Unit.Percentage(100);
+
+    settings.ShowStatusBar = options.ShowStatusBar;
+    settings.RibbonMode = options.RibbonMode;
+    settings.AssociatedRibbonName = (options.IsExternalRibbonMode) ? "ExternalRibbon" : string.Empty;
+    
+    settings.ShowConfirmOnLosingChanges = false;
+
+    settings.PreRender = (s, e) => {
+        MVCxRichEdit richEdit = (MVCxRichEdit)s;
+        richEdit.Focus();
+    };
+    
+    settings.RibbonTabs.Add(RibbonCustomizationDemoHelper.GetCustomRibbonTab(false));
+}).GetHtml()

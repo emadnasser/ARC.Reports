@@ -1,0 +1,35 @@
+﻿@model HtmlEditorHtmlHighlightingDemoOptions
+@Html.DevExpress().HtmlEditor(
+    settings =>
+    {
+        settings.Name = "htmlEditor";
+        settings.CallbackRouteValues = new { Controller = "Features", Action = "HtmlHighlightingPartial" };
+        settings.Height = Unit.Pixel(562);
+        settings.Width = Unit.Pixel(694);
+        settings.ActiveView = HtmlEditorView.Html;
+        settings.Html = HtmlEditorFeaturesDemosHelper.GeHtmlContentByFileName("General.html");
+
+        if(Model != null) {
+            settings.Settings.SettingsHtmlView.ShowCollapseTagButtons = Model.ShowCollapseTagButtons;
+            settings.Settings.SettingsHtmlView.ShowLineNumbers = Model.ShowLineNumbers;
+            settings.Settings.SettingsHtmlView.HighlightActiveLine = Model.HighlightActiveLine;
+            settings.Settings.SettingsHtmlView.HighlightMatchingTags = Model.HighlightMatchingTags;
+            settings.Settings.SettingsHtmlView.EnableTagAutoClosing = Model.EnableTagAutoClosing;
+            settings.Settings.SettingsHtmlView.EnableAutoCompletion = Model.EnableAutoCompletion;
+            settings.Settings.SettingsHtmlView.Mode = Model.Mode;
+        }
+
+        settings.Toolbars.CreateDefaultToolbars();
+        settings.Toolbars[1].Items.RemoveAll(item => item.GetType() == typeof(ToolbarFontColorButton));
+
+        Action<object, FileManagerActionEventArgsBase> editHandler = (sender, e) =>
+        {
+            e.Cancel = Utils.IsSiteMode;
+            e.ErrorText = Utils.GetReadOnlyMessageText();
+        };
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemDeleting = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.FolderCreating = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.FileUploading = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemMoving = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemRenaming = (sender, e) => editHandler(sender, e);
+    }).GetHtml()

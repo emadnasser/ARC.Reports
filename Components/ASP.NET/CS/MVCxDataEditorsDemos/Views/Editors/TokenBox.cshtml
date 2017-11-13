@@ -1,0 +1,44 @@
+﻿<script type="text/javascript">
+    $(document).ready(function() {
+        $("#AllowCustomTokens, #ShowDropDownOnFocus, #IncrementalFilteringMode").change(
+            function() {
+                $("form").submit();
+            }
+        );
+    });
+</script>
+
+@{ var options = (TokenBoxOptions)ViewData["TokenBoxOptions"]; }
+
+@using(Html.BeginForm()) {
+    <div class="vertComponentContainer">
+        @Html.DevExpress().TokenBox(
+            settings => {
+                settings.Name = "tokenBox";
+                settings.Width = 450;
+                settings.Properties.AllowCustomTokens = options.AllowCustomTokens;
+                settings.Properties.IncrementalFilteringMode = options.IncrementalFilteringMode;
+                settings.Properties.ShowDropDownOnFocus = options.ShowDropDownOnFocus;
+                settings.Properties.TextField = "Name";
+                settings.Properties.ValueField = "Email";
+                settings.Properties.Tokens.Add("Julia Evans");
+                settings.Properties.Tokens.Add("Kevin Collins");
+                settings.Properties.Tokens.Add("Diana Martin");
+            }
+         ).BindToXML("~/App_Data/Contacts.xml", "//Contacts/*").GetHtml()
+    </div>
+    <div class="vertOptionsPanel" style="padding-left: 100px;">
+        <div>
+            <label for="AllowCustomTokens" style="width: 160px">AllowCustomTokens:</label>
+            @Html.CheckBox("AllowCustomTokens", options.AllowCustomTokens)
+        </div>
+        <div>
+            <label for="ShowDropDownOnFocus" style="width: 160px">ShowDropDownOnFocus:</label>
+            @Html.DropDownList("ShowDropDownOnFocus", typeof(ShowDropDownOnFocusMode), options.ShowDropDownOnFocus)
+        </div>
+        <div>
+            <label for="IncrementalFilteringMode" style="width: 160px">IncrementalFilteringMode:</label>
+            @Html.DropDownList("IncrementalFilteringMode", typeof(IncrementalFilteringMode), options.IncrementalFilteringMode)
+        </div>
+    </div>
+}

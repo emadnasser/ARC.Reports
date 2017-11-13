@@ -1,0 +1,8 @@
+﻿@model LoanAmortizationScheduleParameters
+
+@using(Html.BeginForm()) {
+    <div class="BottomMargin">
+        @Html.Partial("DynamicSheetGenerationOptionsPartial", Model)
+    </div>
+    @Html.Partial("DynamicSheetGenerationPartial")
+}

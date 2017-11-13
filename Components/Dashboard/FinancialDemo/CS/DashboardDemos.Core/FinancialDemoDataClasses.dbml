@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FinancialDemo" Class="FinancialDemoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\mssqllocaldb;Initial Catalog=FinancialDemo;Integrated Security=True" SettingsObjectName="DashboardDemos.Core.Properties.Settings" SettingsPropertyName="FinancialDemoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DailyData" Member="DailyDatas">
+    <Type Name="DailyData">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Open]" Member="Open" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="High" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Low" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="[Close]" Member="Close" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Volume" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ticker" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CalculateProfitLoss" Method="CalculateProfitLoss">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateHistoricalData" Method="UpdateHistoricalData">
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

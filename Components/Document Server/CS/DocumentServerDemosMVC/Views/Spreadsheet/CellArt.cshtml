@@ -1,0 +1,65 @@
+﻿@model SpreadsheetCellArtModel
+<script type="text/javascript">
+    // <![CDATA[
+    function Uploader_TextChanged() {
+        uploader.Upload();
+    }
+    function Uploader_FileUploadComplete(s, e) {
+        if (e.callbackData == "" || e.callbackData == null)
+            return;
+        $('#previewImage').attr('src', e.callbackData);
+        $('#ImageUrl').val(e.callbackData);
+    }
+    // ]]> 
+</script>
+
+
+@using (Html.BeginForm("CellArtExportTo", "Spreadsheet", FormMethod.Post, new { @style="width:100%;" })) {
+    <table class="OptionsTable" style="width:100%;">
+        <tr>
+            <td>
+                @Html.DevExpress().Label(
+                    settings => { 
+                        settings.Text = "Select&nbsp;image: ";
+                        settings.EncodeHtml = false;
+                        settings.AssociatedControlName = "uploader";
+                    }
+                ).GetHtml()
+            </td>
+            <td style="width:100%;">
+                @Html.DevExpress().UploadControl(
+                    settings => {
+                        settings.Name = "uploader";
+                        settings.CallbackRouteValues = new { Controller = "Spreadsheet", Action = "CallbacksImageUpload" };
+                        settings.ControlStyle.CssClass = "editorArea";
+                        settings.ShowProgressPanel = true;
+                        settings.NullText = "Click here to browse files...";
+                        settings.UploadMode = UploadControlUploadMode.Advanced;
+                        settings.ValidationSettings.AllowedFileExtensions = new string[] { ".jpg", ".jpeg", ".jpe", ".gif", ".png" }; ;
+                        settings.ValidationSettings.MaxFileSize = 1048576;
+                        settings.ClientSideEvents.TextChanged = "function(s, e) { Uploader_TextChanged();  } ";
+                        settings.ClientSideEvents.FileUploadComplete = "function(s,e) { Uploader_FileUploadComplete(s, e); }";
+                    }).GetHtml()
+            </td>
+            <td>
+                @Html.HiddenFor(model => model.ImageUrl)
+                @Html.Partial("SpreadsheetDocumentDownloaderPartial")
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="Note">
+                @Html.DevExpress().Label(
+                    settings => {
+                        settings.Text = "Maximum file size: 1MB";
+                        settings.Style.Add(HtmlTextWriterStyle.FontSize, "8pt");
+                    }
+                ).GetHtml()
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <br />
+    <img alt="" id="previewImage" src="@Model.ImageUrl" />    
+    
+}

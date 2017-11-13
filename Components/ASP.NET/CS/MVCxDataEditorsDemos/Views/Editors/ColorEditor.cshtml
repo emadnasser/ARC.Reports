@@ -1,0 +1,93 @@
+﻿@model RoundPanelAppearance
+
+@section AdditionalResources {
+    <style type="text/css">
+        .roundPanelOptions 
+        {
+            width: 500px;
+            float: left;
+        }
+        .roundPanelOptions > div
+        {
+	        float: left;
+	        clear: both;
+	        padding-bottom: 2px;
+            width: 320px;
+        }
+        .roundPanelOptions > div > label
+        {
+            display: block;
+            float: left;
+            width: 150px;    
+            padding: 4px 0px;
+        }
+    </style>
+}
+
+@using(Html.BeginForm()) {
+    <div class="roundPanelOptions BottomMargin">
+        <div>
+            <label>Header background:</label>
+            @Html.DevExpress().ColorEditFor(
+                model => model.HeaderBackgroundColor,
+                ColorEditorDemoHelper.ColorEditSettingsMethod
+             ).GetHtml() 
+        </div>
+        <div>
+            <label>Background color:</label>
+             @Html.DevExpress().ColorEditFor(
+                model => model.BackgroundColor,
+                ColorEditorDemoHelper.ColorEditSettingsMethod
+            ).GetHtml()
+        </div>
+        <div>
+            <label>Border color:</label>
+            @Html.DevExpress().ColorEditFor(
+                model => model.BorderColor,
+                ColorEditorDemoHelper.ColorEditSettingsMethod
+            ).GetHtml()
+        </div>
+        <div>
+            <label>Font color:</label>
+            @Html.DevExpress().ColorEditFor(
+                model => model.FontColor,
+                ColorEditorDemoHelper.ColorEditSettingsMethod
+            ).GetHtml()
+        </div>
+    </div>
+    
+    <div class="vertOptionsPanel BottomMargin" style="height: 170px">
+        <div>
+            <label for="EnableCustomColors">Enable Custom Colors:</label>
+            @Html.CheckBox("EnableCustomColors", ColorEditorDemoHelper.Options.EnableCustomColors)
+        </div>
+        <div>
+            <label for="ColumnCount">Column Count:</label>
+            @Html.DropDownList("ColumnCount", ColorEditorDemoHelper.GetColumnCountList(), new { style = "width:150px" } )
+        </div>
+        <div>
+            <label for="Palettes">Palettes:</label>
+            @Html.DropDownList("Palettes", ColorEditorDemoHelper.GetPalettes(), new { style = "width:150px" } )
+        </div>
+        <div>
+            <input type="submit" value="Apply" />
+        </div>
+    </div>
+    <br />
+    @Html.DevExpress().RoundPanel(
+        settings => {
+            settings.Name = "RoundePanel";
+            settings.HeaderText = "Header";
+            settings.ShowHeader = true;
+            settings.Width = 315;
+            settings.EnableTheming = false;
+            settings.ContentHeight = 60;
+            settings.Styles.Header.BackColor = Model.HeaderBackgroundColor;
+            settings.ControlStyle.BackColor = Model.BackgroundColor;
+            settings.ControlStyle.Border.BorderColor = Model.BorderColor;
+            settings.ControlStyle.ForeColor = Model.FontColor;
+            settings.ControlStyle.Border.BorderWidth = 1;
+            settings.ControlStyle.Border.BorderStyle = BorderStyle.Solid;
+            settings.SetContent("<div style=\"width: 250px; height: 60px;\">Content</div>");
+    }).GetHtml()
+}

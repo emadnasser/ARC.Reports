@@ -1,0 +1,56 @@
+﻿@{
+    PivotGridPagingDemoOptions demoOptions = ViewBag.DemoOptions ?? new PivotGridPagingDemoOptions();
+}
+
+@Html.DevExpress().PivotGrid(
+    settings => {
+        settings.Name = "pivotGrid";
+        settings.CallbackRouteValues = new { Controller = "PagingAndScrolling", Action = "PagingPartial" };
+        settings.Width = Unit.Percentage(100);
+
+        settings.OptionsPager.Position = demoOptions.Position;
+        settings.OptionsPager.PagerAlign = demoOptions.PagerAlign;
+        settings.OptionsPager.ShowDisabledButtons = demoOptions.ShowDisabledButtons;
+        settings.OptionsPager.ShowNumericButtons = demoOptions.ShowNumericButtons;
+        settings.OptionsPager.ShowSeparators = demoOptions.ShowSeparators;
+        settings.OptionsPager.Summary.Visible = demoOptions.ShowSummary;
+        settings.OptionsPager.PageSizeItemSettings.Visible = demoOptions.ShowPageSizeItem;
+        settings.OptionsPager.PageSizeItemSettings.Position = demoOptions.PageSizeItemPosition;
+        
+        settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto;
+
+        settings.Fields.Add(field => {
+            field.Area = PivotArea.FilterArea;
+            field.AreaIndex = 0;
+            field.Caption = "Product";
+            field.FieldName = "ProductName";
+        });
+        settings.Fields.Add(field => {
+            field.Area = PivotArea.RowArea;
+            field.AreaIndex = 0;
+            field.Caption = "Customer";
+            field.FieldName = "CompanyName";
+        });
+        settings.Fields.Add(field => {
+            field.Area = PivotArea.ColumnArea;
+            field.AreaIndex = 0;
+            field.Caption = "Year";
+            field.FieldName = "OrderDate";
+            field.GroupInterval = PivotGroupInterval.DateYear;
+        });
+        settings.Fields.Add(field => {
+            field.Area = PivotArea.DataArea;
+            field.AreaIndex = 0;
+            field.Caption = "Product Amount";
+            field.FieldName = "ProductAmount";
+            field.CellFormat.FormatString = "c";
+            field.CellFormat.FormatType = FormatType.Custom;
+        });
+        settings.Fields.Add(field => {
+            field.Area = PivotArea.FilterArea;
+            field.AreaIndex = 1;
+            field.Caption = "Quarter";
+            field.FieldName = "OrderDate";
+            field.GroupInterval = PivotGroupInterval.DateQuarter;
+        });
+    }).Bind(Model).GetHtml()

@@ -1,0 +1,11 @@
+﻿@model ReportsDemoModel
+@Html.DevExpress().DocumentViewer(
+    settings => {
+        settings.Name = "DocumentViewer";
+        settings.Report = Model.Report;
+        settings.Width = 700;
+        settings.SettingsSplitter.SidePaneVisible = false;
+        settings.StylesReportViewer.BookmarkSelectionBorder.BorderStyle = BorderStyle.None;
+        settings.CallbackRouteValues = new { Controller = "WebSpecificFeatures", Action = "ThumbnailsViewerPartial", ReportID = Model.ReportID };
+        settings.ExportRouteValues = new { Controller = "WebSpecificFeatures", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+    }).GetHtml()

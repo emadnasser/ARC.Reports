@@ -1,0 +1,33 @@
+body {
+    margin-top: 90px;
+    
+}
+
+.left-nav {
+    background-color: #2b3e50;
+}
+
+@media (min-width: 768px) {
+    .left-nav {
+        top: 40px;
+    }
+    body {
+        margin-top: 40px;
+    }
+}
+:target:before {
+    content: "";
+    display: block;
+    height: 45px; /* fixed header height*/
+    margin: -45px 0 0; /* negative fixed header height */
+}
+
+@media (max-width: 767px) {
+    #wrapper .navbar-brand {
+        max-width: calc(100% - 175px);
+    }
+    .top-menu {
+        right: 55px;
+        top: 1px;
+    }
+}

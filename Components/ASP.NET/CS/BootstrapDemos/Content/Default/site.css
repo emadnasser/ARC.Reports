@@ -1,0 +1,13 @@
+#page-wrapper {
+    background-color: #fff;
+}
+.left-nav {
+    background-color: #fff;
+}
+
+:target:before {
+    content: "";
+    display: block;
+    height: 55px; /* fixed header height*/
+    margin: -55px 0 0; /* negative fixed header height */
+}

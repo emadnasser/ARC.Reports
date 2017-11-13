@@ -1,0 +1,35 @@
+Imports Microsoft.VisualBasic
+Imports System
+Imports DevExpress.Web.ASPxScheduler
+
+Partial Public Class Customization_CustomAppointmentForm
+	Inherits System.Web.UI.Page
+	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
+'        
+'            The following code utilizes the DataHelper class, which is implemented
+'            solely for the ASPxScheduler Demo project.
+'            It is intended to hide unnecessary details and clarify the main idea.
+'            For the recommended data binding techniques, please refer to the
+'            Data Binding section modules:
+'              ~/DataBinding/BoundMode.aspx for MS Access database
+'              ~/DataBinding/ListBoundMode.aspx for the object with IBindingList interface.
+'              ~/DataBinding/XPOBoundMode.aspx for XPO data framework.
+'        
+		SchedulerDemoUtils.ApplyDefaults(Me, ASPxScheduler1)
+		SchedulerDemoUtils.ApplyWorkTime(Me, ASPxScheduler1)
+		DataHelper.SetupDefaultMappings(ASPxScheduler1)
+		DataHelper.ProvideRowInsertion(ASPxScheduler1, AppointmentDataSource)
+		DataHelper.SetupStatuses(ASPxScheduler1)
+		DataHelper.SetupLabels(ASPxScheduler1)
+		ASPxScheduler1.DataBind()
+	End Sub
+	Protected Sub ASPxScheduler1_AppointmentFormShowing(ByVal sender As Object, ByVal e As AppointmentFormEventArgs)
+		e.Container = New MyAppointmentFormTemplateContainer(CType(sender, ASPxScheduler))
+	End Sub
+	Protected Sub ASPxScheduler1_BeforeExecuteCallbackCommand(ByVal sender As Object, ByVal e As SchedulerCallbackCommandEventArgs)
+		If e.CommandId = SchedulerCallbackCommandId.AppointmentSave Then
+			e.Command = New MyAppointmentSaveCallbackCommand(CType(sender, ASPxScheduler))
+		End If
+	End Sub
+End Class
+

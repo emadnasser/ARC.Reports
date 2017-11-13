@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARC.Reports.DAL", "ARC.Reports.DAL\ARC.Reports.DAL.csproj", "{07D807A8-FCB1-4F9E-B7A9-D28EC0A7DF3D}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DX_Bootstrapped", "DX_Bootstrapped\DX_Bootstrapped.csproj", "{972182B3-A56C-4A3F-BC2A-C42ED39670FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_DAL", "EF_DAL\EF_DAL.csproj", "{CBD3B945-CF7B-4C18-A927-062FCAD84747}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevExpress", "DevExpress", "{F7714FE6-B5D2-4811-84BD-B1952118035C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

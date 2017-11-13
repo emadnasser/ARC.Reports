@@ -1,0 +1,123 @@
+﻿@Html.DevExpress().PivotGrid(
+    settings => {
+        settings.Name = "pivotGrid";
+        settings.CallbackRouteValues = new { Controller = "Features", Action = "DataBindingToLargeDatabasePartial" };
+        settings.Width = Unit.Percentage(100);
+            
+        settings.Fields.Add(f => {
+            f.FieldName = "OrderID";
+            f.DisplayFolder = "Order";
+            f.Visible = false;
+        });
+        settings.Fields.Add(f => {
+            f.Caption = "Revenue";
+            f.UnboundExpression = "[UnitPrice]*[Quantity]";
+            f.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            f.DisplayFolder = "Order";
+            f.CellFormat.FormatType = FormatType.Numeric;
+            f.CellFormat.FormatString = "c";
+            f.Area = PivotArea.DataArea;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "Quantity";
+            f.DisplayFolder = "Order";
+            f.Area = PivotArea.DataArea;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "UnitPrice";
+            f.Caption = "Unit Price";
+            f.DisplayFolder = "Order";
+            f.Area = PivotArea.DataArea;
+        });
+        
+        settings.Fields.Add(f => {
+            f.FieldName = "Order.Customer.CustomerName";
+            f.Caption = "Customer";
+            f.DisplayFolder = "Customer";
+            f.Visible = false;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "Order.CustomerID";
+            f.Caption = "CustomerID";
+            f.DisplayFolder = "Customer";
+            f.Visible = false;
+        });
+        
+        settings.Fields.Add(f => {
+            f.FieldName = "Order.OrderDate";
+            f.Caption = "Order Date";
+            f.DisplayFolder = "Order Date";
+            f.Visible = false;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "Order.OrderDate";
+            f.Caption = "Order Year";
+            f.DisplayFolder = "Order Date";
+            f.Area = PivotArea.ColumnArea;
+            f.GroupInterval = PivotGroupInterval.DateYear;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "Order.OrderDate";
+            f.Caption = "Order Quarter";
+            f.DisplayFolder = "Order Date";
+            f.Visible = false;
+            f.Area = PivotArea.ColumnArea;
+            f.GroupInterval = PivotGroupInterval.DateYear;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "Order.OrderDate";
+            f.Caption = "Order Month";
+            f.DisplayFolder = "Order Date";
+            f.Visible = false;
+            f.Area = PivotArea.ColumnArea;
+            f.GroupInterval = PivotGroupInterval.DateMonth;
+        });
+        
+        settings.Fields.Add(f => {
+            f.FieldName = "Product.ProductName";
+            f.Caption = "Product";
+            f.DisplayFolder = "Product";
+            f.Area = PivotArea.RowArea;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "ProductID";
+            f.DisplayFolder = "Product";
+            f.Visible = false;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "Product.Category.CategoryName";
+            f.Caption = "Category Name";
+            f.DisplayFolder = "Product";
+            f.Visible = false;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "Product.CategoryID";
+            f.Caption = "CategoryID";
+            f.DisplayFolder = "Product";
+            f.Visible = false;
+        });
+        
+        settings.Fields.Add(f => {
+            f.FieldName = "Order.SalesPerson.SalesPersonName";
+            f.Caption = "Sales Person";
+            f.DisplayFolder = "Sales Person";
+            f.Area = PivotArea.RowArea;
+        });
+        settings.Fields.Add(f => {
+            f.FieldName = "Order.SalesPersonID";
+            f.Caption = "SalesPersonID";
+            f.DisplayFolder = "Sales Person";
+            f.Visible = false;
+        });
+
+        settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto;
+        settings.OptionsCustomization.CustomizationFormStyle = CustomizationFormStyle.Excel2007;
+        settings.OptionsPager.RowsPerPage = 15;
+        settings.OptionsPager.ColumnsPerPage = 10;
+
+        settings.ClientSideEvents.Init = "function(s, e) { s.PerformCallback(); }";
+        settings.ClientSideEvents.BeginCallback = "function(s, e) { OnStartCallback(s, e); }";
+        settings.ClientSideEvents.EndCallback = "function(s, e) { OnEndCallback(s, e); }";
+    }).BindToLINQ(string.Empty, string.Empty, (s, e) => {
+        e.QueryableSource = PivotGridDemoDBProvider.Sales;
+    }).GetHtml()

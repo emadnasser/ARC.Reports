@@ -1,0 +1,53 @@
+﻿@Html.DevExpress().GridView(settings => {
+    settings.Name = "grid";
+    settings.CallbackRouteValues = new { Controller = "Accessibility", Action = "CompliancePartial" };
+    settings.Width = Unit.Percentage(100);
+    settings.AccessibilityCompliant = true;
+    settings.Caption = "Products";
+    settings.KeyFieldName = "ProductID";
+    settings.CommandColumn.VisibleIndex = 0;
+    settings.CommandColumn.ShowSelectCheckbox = true;
+    settings.CommandColumn.SelectAllCheckboxMode = GridViewSelectAllCheckBoxMode.Page;
+    settings.CommandColumn.Width = Unit.Pixel(50);
+    settings.Columns.Add("ProductName").Width = Unit.Pixel(200);
+
+    settings.Columns.Add(column => {
+        column.FieldName = "CategoryID";
+        column.Caption = "Category";
+        column.Width = Unit.Pixel(100);
+        column.ColumnType = MVCxGridViewColumnType.ComboBox;
+
+        var comboBoxProperties = column.PropertiesEdit as ComboBoxProperties;
+        comboBoxProperties.DataSource = NorthwindDataProvider.GetCategories();
+        comboBoxProperties.TextField = "CategoryName";
+        comboBoxProperties.ValueField = "CategoryID";
+        comboBoxProperties.ValueType = typeof(int);
+        comboBoxProperties.DropDownStyle = DropDownStyle.DropDown;
+    });
+
+    settings.Columns.Add("UnitsOnOrder").Width = Unit.Pixel(100);
+
+    settings.Columns.Add(column => {
+        column.FieldName = "Discontinued";
+        column.ColumnType = MVCxGridViewColumnType.CheckBox;
+        column.Width = Unit.Pixel(100);
+    });
+    
+    settings.Columns.Add("ReorderLevel").Width = Unit.Pixel(100);
+
+    settings.Columns.Add(column => {
+        column.FieldName = "UnboundDate";
+        column.ColumnType = MVCxGridViewColumnType.DateEdit;
+        column.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+        column.UnboundExpression = "AddMonths(AddDays(Today(), [ReorderLevel]), -1)";
+        column.Caption = "Order Date";
+        column.Width = Unit.Pixel(100);
+    });
+
+    settings.Settings.ShowFilterRow = true;
+    settings.Settings.ShowFilterRowMenu = true;
+    settings.SettingsPager.AllButton.Visible = true;
+    settings.SettingsPager.FirstPageButton.Visible = true;
+    settings.SettingsPager.LastPageButton.Visible = true;
+    settings.SettingsPager.PageSizeItemSettings.Visible = true;
+}).Bind(Model).GetHtml()

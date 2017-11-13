@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<totalinfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <controls>
+    <controlentry>
+      <control>
+        <name>seMaxDays</name>
+        <windowcaption>Max Days</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>seMaxHours</name>
+        <windowcaption>Max Hours</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>seMaxMinutes</name>
+        <windowcaption>Max Minutes</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>seMaxSeconds</name>
+        <windowcaption>Max Seconds</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>ceAllowEditDays</name>
+        <windowcaption>Allow Editing Days</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>ceAllowEditHours</name>
+        <windowcaption>Allow Editing Hours</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>ceAllowEditMinutes</name>
+        <windowcaption>Allow Editing Minutes</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>ceAllowEditSeconds</name>
+        <windowcaption>Allow Editing Seconds</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>cbDisplayFormat</name>
+        <windowcaption>Display Format</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>cbEditFormat</name>
+        <windowcaption>Edit Format</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>ceReadOnly</name>
+        <windowcaption>Read Only</windowcaption>
+        <description></description>
+        <memberlist></memberlist>
+        <dtimage></dtimage>
+      </control>
+    </controlentry>
+  </controls>
+  <hints>
+    <hint>
+      <name>timeEditSample</name>
+      <hinttext>
+        #Keyboard<newline></newline>UP, DOWN keys<newline></newline>#Mouse Wheel<newline></newline>Supported
+      </hinttext>
+    </hint>
+  </hints>
+</totalinfo>

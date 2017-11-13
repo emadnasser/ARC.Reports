@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Demos" type="DemosModel" />
+
+    <xs:complexType name="DemosModel">
+        <xs:sequence>
+            <xs:element name="DemoProduct" type="DemoProductModel" maxOccurs="unbounded" />
+            <xs:element name="Search" type="SearchModel" maxOccurs="1"></xs:element>
+            <xs:element name="GlobalHeader" type="GlobalHeaderModel" maxOccurs="1"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="ExpandAllDemosAtFirstTime" type="xs:boolean" use="optional" />
+        <xs:attribute name="DisableTextWrap" type="xs:boolean" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="DemoProductModel">
+        <xs:sequence>
+            <xs:element name="Keywords" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="DownloadUrl" type="xs:string" />
+            <xs:element name="BuyUrl" type="xs:string" />
+            <xs:element name="DocUrl" type="xs:string" />
+            <xs:element name="IntegrationImageUrl" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="IntegrationDescription" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="Intro" type="IntroPageModel"></xs:element>
+            <xs:element name="Overview" type="OverviewPageModel" />
+            <xs:element name="DemoGroup" type="DemoGroupModel" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Key" type="xs:string" use="required" />
+        <xs:attribute name="Url" type="xs:string" use="required" />
+        <xs:attribute name="Title" type="xs:string" use="required" />
+        <xs:attribute name="SeoTitle" type="xs:string" />
+        <xs:attribute name="NavItemTitle" type="xs:string" use="required"/>
+        <xs:attribute name="HideNavItem" type="xs:boolean"></xs:attribute>
+        <xs:attribute name="IsMvc" type="xs:boolean" />
+        <xs:attribute name="IsRootDemo" type="xs:boolean" />
+        <xs:attribute name="SupportsTheming" type="xs:boolean" />
+        <xs:attribute name="SupportsThemeParameters" type="xs:boolean" />
+        <xs:attribute name="OrderIndex" type="xs:integer" use="optional"></xs:attribute>
+        <xs:attribute name="IntegrationHighlighted" type="xs:boolean" use="optional"></xs:attribute>
+        <xs:attribute name="IsPreview" type="xs:boolean" use="optional"></xs:attribute>
+        <xs:attribute name="IsNew" type="xs:boolean" use="optional"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="DemoModelBase">
+        <xs:sequence>
+            <xs:element name="Keywords" type="xs:string" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Key" type="xs:string" use="required" />
+        <xs:attribute name="Title" type="xs:string" use="required" />
+        <xs:attribute name="SeoTitle" type="xs:string" />
+        <xs:attribute name="IsNew" type="xs:boolean" />
+        <xs:attribute name="IsUpdated" type="xs:boolean" />
+    </xs:complexType>
+
+    <xs:complexType name="DemoGroupModel">
+        <xs:complexContent mixed="false">
+            <xs:extension base="DemoModelBase">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element name="Overview" type="OverviewPageModel" />
+                    <xs:element name="Demo" type="DemoModel" />
+                </xs:choice>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DemoModel">
+        <xs:complexContent mixed="false">
+            <xs:extension base="DemoModelBase">
+                <xs:sequence>
+                    <xs:element name="Description" type="xs:string" />
+                    <xs:element name="HighlightedDescription" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                    <xs:element name="SeeAlso" type="SeeAlsoLinkModel" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="MetaDescription" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="SourceFile" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                </xs:sequence>                
+                <xs:attribute name="HideSourceCode" type="xs:boolean" />                
+                <xs:attribute name="HighlightedIndex" type="xs:int" />
+                <xs:attribute name="HighlightedImageUrl" type="xs:string" />
+                <xs:attribute name="HighlightedTitle" type="xs:string" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="IntroPageModel">
+        <xs:sequence>
+            <xs:element name="BannerTitle" type="xs:string" />
+            <xs:element name="BannerText" type="xs:string" />
+            <xs:element name="BannerImageUrl" type="xs:string" />
+            <xs:element name="BannerUrl" type="xs:string" />
+            <xs:element name="BannerVideoButtonImageUrl" type="xs:string" />
+            <xs:element name="BannerLinkText" type="xs:string" />
+            <xs:element name="DescriptionTitle" type="xs:string" />
+            <xs:element name="Description" type="xs:string" />
+            <xs:element name="DescriptionFooter" type="xs:string" minOccurs="0" />
+            <xs:element name="ExternalDemo" type="ExternalDemoModel" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Title" type="xs:string" use="required" />
+        <xs:attribute name="SeoTitle" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="ExternalDemoModel">
+        <xs:attribute name="ImageUrl" type="xs:string" use="required" />
+        <xs:attribute name="Url" type="xs:string" use="required" />
+        <xs:attribute name="Title" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="OverviewPageModel">
+      <xs:sequence>
+        <xs:element name="DescriptionTitle" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="Description" type="xs:string" />
+        <xs:element name="KeyFeature" type="KeyFeatureModel" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="Title" type="xs:string" use="required" />
+      <xs:attribute name="SeoTitle" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="KeyFeatureModel">
+      <xs:sequence>
+        <xs:element name="Description" type="xs:string" />
+      </xs:sequence>
+      <xs:attribute name="Name" type="xs:string" use="required" />
+      <xs:attribute name="DemoUrl" type="xs:string" />
+    </xs:complexType>
+  
+    <xs:complexType name="SearchModel">
+        <xs:sequence>
+            <xs:element name="Synonyms" maxOccurs="1" minOccurs="0" type="SearchModelSynonyms"></xs:element>
+            <xs:element name="Exclusions" maxOccurs="1" minOccurs="0" type="SearchModelExclusions"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GlobalHeaderModel">
+      <xs:attribute name="LogoPlatformSubject" type="xs:string" use="required" />
+      <xs:attribute name="LogoPlatformDescription" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="SearchModelSynonyms">
+        <xs:sequence>
+            <xs:element name="Group" minOccurs="0" type="xs:string" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SearchModelExclusions">
+        <xs:sequence>
+            <xs:element name="Words" minOccurs="0" type="xs:string"></xs:element>
+            <xs:element name="Prefixes" minOccurs="0" type="xs:string"></xs:element>
+            <xs:element name="Postfixes" minOccurs="0" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SeeAlsoLinkModel">
+        <xs:attribute name="Url" type="xs:string" use="required" />
+        <xs:attribute name="Title" type="xs:string" use="required" />
+    </xs:complexType>
+</xs:schema>

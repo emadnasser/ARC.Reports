@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectGuid>{28B35153-8AA4-496D-9C2A-A7B2C7BF5821}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>VertGridMainDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>Sub Main</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Images.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <Name>DevExpress.XtraEditors.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2">
+      <Name>DevExpress.XtraNavBar.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2">
+      <Name>DevExpress.XtraPrinting.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2">
+      <Name>DevExpress.XtraVerticalGrid.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Design"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DemoControls.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DemosRegistration.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dsNWindProducts.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNWindProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportForm.Designer.vb">
+      <DependentUpon>ExportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\About.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AlphaBlending.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AlphaBlending.Designer.vb">
+      <DependentUpon>AlphaBlending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Contacts.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw.Designer.vb">
+      <DependentUpon>CustomDraw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Customize.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Customize.Designer.vb">
+      <DependentUpon>Customize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FindPanel.Designer.vb">
+      <DependentUpon>FindPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FindPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FixedRows.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FixedRows.Designer.vb">
+      <DependentUpon>FixedRows.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Multiselect.Designer.vb">
+      <DependentUpon>Multiselect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Multiselect.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UnboundExpressions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UnboundExpressions.Designer.vb">
+      <DependentUpon>UnboundExpressions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UnboundField.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UnboundField.Designer.vb">
+      <DependentUpon>UnboundField.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Formats.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Formats.Designer.vb">
+      <DependentUpon>Formats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Layout.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Layout.Designer.vb">
+      <DependentUpon>Layout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Options.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Options.Designer.vb">
+      <DependentUpon>Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Properties.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Properties.Designer.vb">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PropertyGrid.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PropertyGrid.Designer.vb">
+      <DependentUpon>PropertyGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RowsCreator.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <EmbeddedResource Include="ExportForm.resx">
+      <DependentUpon>ExportForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Blue.jpg" />
+    <EmbeddedResource Include="Images\Green.jpg" />
+    <EmbeddedResource Include="Images\Pink.jpg" />
+    <EmbeddedResource Include="Images\World.jpg" />
+    <EmbeddedResource Include="Images\Yellow.jpg" />
+    <EmbeddedResource Include="Modules\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AlphaBlending.resx">
+      <DependentUpon>AlphaBlending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDraw.resx">
+      <DependentUpon>CustomDraw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Customize.resx">
+      <DependentUpon>Customize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FindPanel.resx">
+      <DependentUpon>FindPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FixedRows.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FixedRows.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Formats.resx">
+      <DependentUpon>Formats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Layout.resx">
+      <DependentUpon>Layout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Multiselect.resx">
+      <DependentUpon>Multiselect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Options.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Properties.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PropertyGrid.resx">
+      <DependentUpon>PropertyGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UnboundExpressions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UnboundExpressions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UnboundField.resx">
+      <DependentUpon>UnboundField.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="CodeInfo\UnboundField.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeInfo\Customize.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeInfo\FixedRows.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeInfo\Formats.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeInfo\Layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeInfo\Options.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeInfo\PropertyGrid.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeInfo\UnboundExpressions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

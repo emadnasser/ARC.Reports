@@ -1,0 +1,199 @@
+﻿@model PdfFormFillingModel
+<script type="text/javascript">
+    function FillForm() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("FillForm", "Pdf")',
+            data: {
+                firstName: tbFirstName.GetText(),
+                lastName: tbLastName.GetText(),
+                gender: rbMale.GetChecked(),
+                date: tbDate.GetText(),
+                passport: tbPassport.GetText(),
+                nationality: cbNationality.GetText(),
+                address: tbAddress.GetText(),
+                visa: tbVisa.GetText(),
+                flight : tbFlight.GetText(),
+            },
+            success: function () { PdfViewer.PerformCallback(); }
+        });
+    }
+</script>
+<table style="width:100%">
+    <tr>
+        <td style="width:100%">
+            @Html.Partial("PdfFileView")
+        </td>
+        <td style="vertical-align:top;width:100%">
+            <table class="OptionsTable" style="margin-top:28px">
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblFirstName";
+                       settings.Text = "First&nbsp;name:";
+                       settings.EncodeHtml = false;
+                   }).GetHtml()
+                    </td>
+                    <td>
+                        @Html.DevExpress().TextBox(settings => {
+                       settings.Name = "tbFirstName";
+                       settings.Text = "Janet";
+                       settings.Width = new Unit("100%");
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblLastName";
+                       settings.Text = "Last&nbsp;name:";
+                       settings.EncodeHtml = false;
+                   }).GetHtml()
+                    </td>
+                    <td>
+                        @Html.DevExpress().TextBox(settings => {
+                       settings.Name = "tbLastName";
+                       settings.Text = "Leverling";
+                       settings.Width = new Unit("100%");
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px;padding-top:19px">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblGender";
+                       settings.Text = "Gender:";
+                   }).GetHtml()
+                    </td>
+                    <td style="padding-top:19px">
+                        @Html.DevExpress().RadioButton(settings => {
+                       settings.Name = "rbMale";
+                       settings.GroupName = "Gender";
+                       settings.Text = "Male";
+                       settings.Width = new Unit("100%");
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="padding-bottom:19px">
+                        @Html.DevExpress().RadioButton(settings => {
+                       settings.Name = "rbFemale";
+                       settings.GroupName = "Gender";
+                       settings.Text = "Female";
+                       settings.Checked = true;
+                       settings.Width = new Unit("100%");
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px;">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblDate";
+                       settings.Text = "Date of Birth:";
+                       settings.Width = new Unit("70px");
+                   }).GetHtml()
+                    </td>
+                    <td>
+                        @Html.DevExpress().DateEdit(settings => {
+                       settings.Name = "tbDate";
+                       settings.Width = new Unit("100%");
+                       settings.Properties.EditFormat = EditFormat.Custom;
+                       settings.Properties.EditFormatString = "MM/dd/yyyy";
+                       settings.Date = new DateTime(1985, 8, 30);
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblPassport";
+                       settings.Text = "Passport No:";
+                   }).GetHtml()
+                    </td>
+                    <td>
+                        @Html.DevExpress().TextBox(settings => {
+                       settings.Name = "tbPassport";
+                       settings.Text = "31195855";
+                       settings.Width = new Unit("100%");
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblNationality";
+                       settings.Text = "Nationality:";
+                   }).GetHtml()
+                    </td>
+                    <td >
+                        @Html.DevExpress().ComboBox(
+                settings => {
+                    settings.Name = "cbNationality";
+                    settings.SelectedIndex = 0;
+                    settings.Properties.ValueType = typeof(string);
+                    settings.Width = new Unit("100%");
+                }).BindList(Model.NationalityList).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblAddress";
+                       settings.Text = "Address:";
+                   }).GetHtml()
+                    </td>
+                    <td>
+                        @Html.DevExpress().TextBox(settings => {
+                       settings.Name = "tbAddress";
+                       settings.Text = "98033, 722 Moss Bay Blvd., Kirkland, WA, USA";
+                       settings.Width = new Unit("100%");
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblVisa";
+                       settings.Text = "Visa No:";
+                   }).GetHtml()
+                    </td>
+                    <td>
+                        @Html.DevExpress().TextBox(settings => {
+                       settings.Name = "tbVisa";
+                       settings.Text = "73203393";
+                       settings.Width = new Unit("100%");
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;padding-left:30px">
+                        @Html.DevExpress().Label(settings => {
+                       settings.Name = "lblFlight";
+                       settings.Text = "Flight No:";
+                   }).GetHtml()
+                    </td>
+                    <td>
+                        @Html.DevExpress().TextBox(settings => {
+                       settings.Name = "tbFlight";
+                       settings.Text = "(KL) KLM 876";
+                       settings.Width = new Unit("100%");
+                   }).GetHtml()
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="padding-top:22px;padding-left:30px">
+                        @Html.DevExpress().Button(settings => {
+                       settings.Name = "btnFillForm";
+                       settings.Text = "Submit";
+                       settings.Height = new Unit("25px");
+                       settings.Width = new Unit("100%");
+                       settings.ClientSideEvents.Click = "function(s, e) {FillForm();}";
+                   }).GetHtml()
+                   </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

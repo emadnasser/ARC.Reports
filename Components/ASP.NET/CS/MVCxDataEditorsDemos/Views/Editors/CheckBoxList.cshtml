@@ -1,0 +1,59 @@
+﻿@using DevExpress.Web.Demos
+
+@{
+    CheckListDemoOptions options = (CheckListDemoOptions)ViewData["Options"]; 
+}
+
+@using (Html.BeginForm()) {
+    <table>
+        <tr>
+            <td style="width: 900px">
+                 @Html.DevExpress().CheckBoxList(
+                    settings =>
+                    {
+                        settings.Name = "checkBoxList1";
+                        settings.Properties.ValueField = "ID";
+                        settings.Properties.TextField = "Name";
+                        settings.Properties.RepeatLayout = options.RepeatLayout;
+                        settings.Properties.RepeatDirection = options.RepeatDirection;
+                        settings.Properties.RepeatColumns = options.RepeatColumns; 
+                    }).BindToXML(HttpContext.Current.Server.MapPath("~/App_Data/ProgLanguages.xml"), "//Language").GetHtml()
+            </td>
+            <td class="vertOptionsCell" style="vertical-align: top; padding: 0px 0px 0px 20px">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="RepeatLayout">Layout:</label>
+                        </td>
+                        <td>
+                            @Html.DropDownList("RepeatLayout", CheckListDemoHelper.GetRepeatLayouts(), new { style = "width:100px" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="RepeatDirection">Direction:</label>
+                        </td>
+                        <td>
+                            @Html.DropDownList("RepeatDirection", CheckListDemoHelper.GetRepeatDirections(), new { style = "width:100px" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="RepeatColumns">Repeat Columns:</label>
+                        </td>
+                        <td>
+                            @Html.DropDownList("RepeatColumns", CheckListDemoHelper.GetRepeatColumns(), new { style = "width:100px" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <input type="submit" value="Apply" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+}

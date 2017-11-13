@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{5434F67C-572F-483F-B87F-6D9BDA51E1D6}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LayoutMainDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>DevExpress.XtraLayout.Demos</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility"><Private>False</Private></Reference>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.CodeParser.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Office.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Sparkline.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Xpo.v16.2">
+      <Name>DevExpress.Xpo.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <Name>DevExpress.XtraEditors.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2">
+      <Name>DevExpress.XtraLayout.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2">
+      <Name>DevExpress.XtraNavBar.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraTreeList.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations"><Private>False</Private></Reference>
+    <Reference Include="System.Configuration"><Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions"><Private>False</Private></Reference>
+    <Reference Include="System.Data.Linq"><Private>False</Private></Reference>
+    <Reference Include="System.Deployment"><Private>False</Private></Reference>
+    <Reference Include="System.Design"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Runtime.Serialization"><Private>False</Private></Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap"><Private>False</Private></Reference>
+    <Reference Include="System.Security"><Private>False</Private></Reference>
+    <Reference Include="System.Transactions"><Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.RichEdit.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2.Extensions"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System.Xml.Linq"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="CodeExamples.Resouces\SimpleClass.cs" />
+    <EmbeddedResource Include="CodeExamples.Resouces\TableLayout.cs" />
+    <Compile Include="CodeExamples\SimpleClass.cs" />
+    <Compile Include="CodeExamples\TableLayout.cs" />
+    <Compile Include="dsOrder.Designer.cs">
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Modules\BlogBoardLayout\UserComment.cs" />
+    <Compile Include="Modules\BlogBoardLayout\UserComment.Designer.cs">
+      <DependentUpon>UserComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Browser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Browser.Designer.cs">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DemosRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dsCategories.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCategories.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsEmployees.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEmployees.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BaseControl.Designer.cs">
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Cars.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Cars.Designer.cs">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CodeFirstDemo\CodeFirstModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Multilanguage\MultilanguageFormLoader.cs" />
+    <Compile Include="Modules\ContentImagesInLayoutGroups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DragDrop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DragDropLayoutControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DragDropLayoutControl.Designer.cs">
+      <DependentUpon>DragDropLayoutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Employees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\frmPassword.Designer.cs">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\imageLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\imageLayout.Designer.cs">
+      <DependentUpon>imageLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ItemsVisibility.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Layout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Layout.Designer.cs">
+      <DependentUpon>Layout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LayoutInteractivePrinting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\LayoutInteractivePrinting.Designer.cs">
+      <DependentUpon>LayoutInteractivePrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LayoutPrinting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\LayoutPrinting.Designer.cs">
+      <DependentUpon>LayoutPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LayoutWaybill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\LayoutWaybill.Designer.cs">
+      <DependentUpon>LayoutWaybill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MasterDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MasterDetail.Designer.cs">
+      <DependentUpon>MasterDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Multilanguage\Multilanguage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Multilanguage\Multilanguage.Designer.cs">
+      <DependentUpon>Multilanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Multilanguage\MultilanguageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Multilanguage\MultilanguageForm.Designer.cs">
+      <DependentUpon>MultilanguageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\NwindXpoGeneratedClasses.cs" />
+    <Compile Include="Modules\OneNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OneNote.Designer.cs">
+      <DependentUpon>OneNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TechnoLayout\FacesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\TechnoLayout\FacesUserControl.Designer.cs">
+      <DependentUpon>FacesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TechnoLayout\TechnoLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\TechnoLayout\TechnoLayout.Designer.cs">
+      <DependentUpon>TechnoLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UserDetailsEditViewForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UserDetailsEditViewForm.Designer.cs">
+      <DependentUpon>UserDetailsEditViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BlogBoardLayout\UserFeedbackControl.cs" />
+    <Compile Include="Modules\BlogBoardLayout\UserFeedbackControl.Designer.cs">
+      <DependentUpon>UserFeedbackControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BlogBoardLayout\UsersFeedback.cs" />
+    <Compile Include="Modules\BlogBoardLayout\UsersFeedback.Designer.cs">
+      <DependentUpon>UsersFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Validating.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Validating.Designer.cs">
+      <DependentUpon>Validating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resources\Logo.png" />
+    <EmbeddedResource Include="Modules\TechnoLayout\FacesUserControl.resx">
+      <DependentUpon>FacesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Striper28%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper27%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper26%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper25%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper24%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper22%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper21%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper20%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper19%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper18%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper16%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper15%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper14%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper13%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper12%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper10%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper9%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper8%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper7%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper6%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper5%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper4%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper3%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper2%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper1%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Striper0%281%29.jpg" />
+    <EmbeddedResource Include="Resources\Image1.bmp" />
+    <EmbeddedResource Include="Images\contentImage1.png" />
+    <EmbeddedResource Include="Images\contentimage2.png" />
+    <EmbeddedResource Include="Images\contentimage3.png" />
+    <EmbeddedResource Include="Images\image2.bmp" />
+    <EmbeddedResource Include="Images\image3.bmp" />
+    <EmbeddedResource Include="Images\image1.bmp" />
+    <EmbeddedResource Include="Images\content.png" />
+    <EmbeddedResource Include="Images\avatar-1.jpg" />
+    <EmbeddedResource Include="Images\avatar-2.jpg" />
+    <EmbeddedResource Include="Images\avatar-3.jpg" />
+    <EmbeddedResource Include="Images\avatar-4.jpg" />
+    <EmbeddedResource Include="Images\avatar-5.jpg" />
+    <EmbeddedResource Include="Images\avatar-6.jpg" />
+    <EmbeddedResource Include="Images\avatar-7.jpg" />
+    <EmbeddedResource Include="Images\avatar-8.jpg" />
+    <EmbeddedResource Include="Images\icon-blogboard.png" />
+    <EmbeddedResource Include="Images\icon-map.png" />
+    <EmbeddedResource Include="AppIcon.ico" />
+    <Content Include="dsCategories.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCategories.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="dsEmployees.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEmployees.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Images\contentImages_Background1.PNG" />
+    <EmbeddedResource Include="Images\contentImages_Monitor.png" />
+    <EmbeddedResource Include="Images\contentImages_smallPic.png" />
+    <EmbeddedResource Include="Images\contentImages_Welcome.png" />
+    <EmbeddedResource Include="Images\move.ico" />
+    <EmbeddedResource Include="Images\copy.ico" />
+    <EmbeddedResource Include="Images\delete.ico" />
+    <EmbeddedResource Include="Images\bc11.jpg" />
+    <EmbeddedResource Include="Images\bc12.jpg" />
+    <EmbeddedResource Include="Images\911.jpg" />
+    <EmbeddedResource Include="Images\Boxster.jpg" />
+    <EmbeddedResource Include="Images\Cayenne.jpg" />
+    <EmbeddedResource Include="Images\cayman.jpg" />
+    <EmbeddedResource Include="Images\film1-de.png" />
+    <EmbeddedResource Include="Images\film1-en.png" />
+    <EmbeddedResource Include="Images\film2-de.png" />
+    <EmbeddedResource Include="Images\film2-en.png" />
+    <EmbeddedResource Include="Images\film3-de.png" />
+    <EmbeddedResource Include="Images\film3-en.png" />
+    <EmbeddedResource Include="Modules\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BaseControl.resx">
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Browser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Cars.resx">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ContentImagesInLayoutGroups.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ContentImagesInLayoutGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DragDrop.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DragDrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DragDropLayoutControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DragDropLayoutControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmPassword.resx">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\imageLayout.resx">
+      <DependentUpon>imageLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ItemsVisibility.resx">
+      <DependentUpon>ItemsVisibility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Layout.resx">
+      <DependentUpon>Layout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\LayoutInteractivePrinting.resx">
+      <DependentUpon>LayoutInteractivePrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\LayoutPrinting.resx">
+      <DependentUpon>LayoutPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\LayoutWaybill.resx">
+      <DependentUpon>LayoutWaybill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MasterDetail.resx">
+      <DependentUpon>MasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Multilanguage\Multilanguage.resx">
+      <DependentUpon>Multilanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Multilanguage\MultilanguageForm.de.resx">
+      <DependentUpon>MultilanguageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Multilanguage\MultilanguageForm.en.resx">
+      <DependentUpon>MultilanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Multilanguage\MultilanguageForm.resx">
+      <DependentUpon>MultilanguageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OneNote.resx">
+      <DependentUpon>OneNote.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\TechnoLayout\TechnoLayout.resx">
+      <DependentUpon>TechnoLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UserDetailsEditViewForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserDetailsEditViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Validating.resx">
+      <DependentUpon>Validating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

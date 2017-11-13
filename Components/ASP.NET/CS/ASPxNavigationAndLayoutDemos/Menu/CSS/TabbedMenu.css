@@ -1,0 +1,151 @@
+﻿.TabbedMenuTableSide
+{
+    width: 1px;
+    height: 28px;
+    background-image: url('../Images/TabbedMenu/LeftSideSeparators.gif');
+    overflow: hidden;
+}
+
+.TabbedMenu,
+.TabbedMenuSubMenu
+{
+    color: black;
+    font: 8pt Tahoma;
+    text-decoration: none;
+}
+
+.TabbedMenu
+{
+    background-color: transparent!important;
+    border: 0!important;
+    padding: 0!important;
+}
+
+.TabbedMenu .rootText
+{
+    color: black;
+    font: 8pt Tahoma;
+}
+
+.TabbedMenu a *
+{
+    color: black;
+    text-decoration: none;
+}
+
+.TabbedMenu .rootItem
+{
+    background: transparent url('../Images/TabbedMenu/RootItemSeparator.gif') no-repeat right;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.TabbedMenu .rootItem > div
+{
+    padding: 0!important;
+}
+
+.TabbedMenu .rootItem .dx-tm table
+{
+    background-image: url('../Images/TabbedMenu/ItemBackground.gif');
+}
+
+.TabbedMenu .rootItemHover
+{
+    background-color: transparent!important;
+    border: 0;
+    padding: 0;
+}
+
+.TabbedMenu .rootItemHover .dx-tm table
+{
+    background: url('../Images/TabbedMenu/ItemBackgroundHover.gif');
+}
+
+.TabbedMenu .rootItemSelected
+{
+    background-color: transparent!important;
+    border: 0;
+    padding: 0;
+}
+.TabbedMenu .rootItemSelected .dx-tm table
+{
+    background: url('../Images/TabbedMenu/ItemBackgroundSelected.gif');
+}
+.TabbedMenu .rootItem div.dx-tm, .TabbedMenu .rootItemHover div.dx-tm, .TabbedMenu .rootItemSelected div.dx-tm
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.TabbedMenu .rootItem div.dx-tm
+{
+    height: 26px;
+    border-top: solid 1px #D8D8D8;
+    border-bottom: solid 1px #A3A3A3;
+}
+.TabbedMenuSideBorders
+{
+    border-bottom: solid 1px #A3A3A3;
+    height: 27px !important;
+    width: 10px !important;
+}
+
+.TabbedMenu .rootItemHover div.dx-tm, .TabbedMenu .rootItemSelected div.dx-tm
+{
+    height: 27px;
+    border-top: none;
+}
+.TabbedMenu .rootItem .dx-tm table, .TabbedMenu .rootItemHover .dx-tm table, .TabbedMenu .rootItemSelected .dx-tm table
+{
+    border-collapse: collapse;
+    border-width: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-repeat: repeat-x;
+    background-position: top;
+}
+.TabbedMenu .rootItem .dx-tm th, .TabbedMenu .rootItemHover .dx-tm th, .TabbedMenu .rootItemSelected .dx-tm th
+{
+    padding: 7px;
+    padding-top: 6px;
+    white-space: nowrap;
+    font-weight: normal;
+}
+.TabbedMenu .rootItemHover .dx-tm th, .TabbedMenu .rootItemSelected .dx-tm th
+{
+    padding-top: 7px;
+}
+.TabbedMenuSubMenu
+{
+    background: white;
+    border: 1px solid #919191;
+    padding: 1px;
+}
+.TabbedMenuSubMenu .subItem
+{
+    color: black;
+    font: 8pt Tahoma;
+    border: 0;
+}
+.TabbedMenuSubMenu .subItem > div
+{
+    padding: 5px 7px!important;
+    white-space: nowrap;
+}
+.TabbedMenuSubMenu .subItem img
+{
+    padding-left: 12px;
+}
+.TabbedMenuSubMenu .subItemHover
+{
+    background: #EDEDED;
+}
+.TabbedMenu .WhiteBorderRight
+{
+    border-right: solid 1px White;
+}
+.TabbedMenu .rootItemSelected div.dx-tm
+{
+    border-bottom: 0px;
+}

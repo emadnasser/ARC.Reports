@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Smilies>
+  <Smile ImageUrl="~/Content/Smilies/11.png" Value="11#Smile#:)" Tooltip="Smile"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/1.png" Value="1#Angry#:@" Tooltip="Angry"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/2.png" Value="2#Embarrassed#:$" Tooltip="Embarrassed"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/3.png" Value="3#Cool#H" Tooltip="Cool"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/4.png" Value="4#Crying#:'(" Tooltip="Crying"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/5.png" Value="5#Unsatisfied#=/" Tooltip="Unsatisfied"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/6.png" Value="6#Scared#6" Tooltip="Scared"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/7.png" Value="7#Angel#A" Tooltip="Angel"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/8.png" Value="8#Big Smile#:D" Tooltip="Big Smile"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/9.png" Value="9#Kisses#:*" Tooltip="Kisses"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/10.png" Value="10#Sleep#|-)" Tooltip="Sleep"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/12.png" Value="12#Sad#:(" Tooltip="Sad"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/13.png" Value="13#Surprise#:O" Tooltip="Surprise"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/14.png" Value="14#Stick out tongue#:P" Tooltip="Stick out tongue"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/15.png" Value="15#Huh?#:^" Tooltip="Huh?"></Smile>
+  <Smile ImageUrl="~/Content/Smilies/16.png" Value="16#Wink#;)" Tooltip="Wink"></Smile>
+</Smilies>

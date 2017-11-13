@@ -1,0 +1,122 @@
+﻿@model IList
+<script type="text/javascript">
+    $(window).load(UpdateLabelOptionsDisabled);
+
+    function SetLabelOptionsEnabled() {
+        $("#valueAsPercent")[0].disabled = false;
+    }
+    function UpdateLabelOptionsDisabled() {
+        $("#valueAsPercent")[0].disabled = !($("#showLabels")[0].checked);
+    }
+</script>
+@using (Html.BeginForm()) {
+    ChartBarFullStacked3DDemoOptions options = (ChartBarFullStacked3DDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+    
+    <div class="chartOptionsPanel" style="height:auto; font-size:12px;">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    @Html.CheckBox("showFacet", options.ShowFacet)
+                </td>
+                <td class="NoWrap">
+                    <label for="showFacet" style="width:auto">Show Facet</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td><div class="Spacer" style="width: 195px;"></div></td>
+                <td class="NoWrap"><label>Bar 3D Model</label></td>
+                <td><div class="Spacer" style="width: 6px;"></div></td>
+                <td>
+                    @Html.DropDownList("bar3DModelString", ChartDemoHelper.GetBar3DModel())
+                </td>
+                <td><div class="Spacer" style="width: 10px;"></div></td>
+                <td class="NoWrap"><label>Transparency</label></td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td>
+                    @Html.DropDownList("transparency", ChartDemoHelper.GetTransparency("45"))
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><div class="Spacer" style="width: 100%; height: 5px;"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.CheckBox("showLabels", options.ShowLabels, new { onclick = "UpdateLabelOptionsDisabled()" })
+                </td>
+                <td class="NoWrap">
+                    <label for="showLabels" style="width:auto">Show Labels</label>
+                </td>
+                <td>
+                    @Html.CheckBox("valueAsPercent", options.ValueAsPercent)
+                </td>
+                <td class="NoWrap" style="width: 120px;">
+                    <label for="valueAsPercent" style="width:auto">Value As Percent</label>
+                </td>
+                <td><div class="Spacer" style="width: 195px;"></div></td>
+                <td class="NoWrap"><label>Perspective Angle</label></td>
+                <td><div class="Spacer" style="width: 6px;"></div></td>
+                <td>
+                    @Html.DropDownList("perspectiveAngle", ChartDemoHelper.GetPerspectiveAngle())
+                </td>
+                <td><div class="Spacer" style="width: 10px;"></div></td>
+                <td class="NoWrap"><label>Zoom Percent</label></td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td>
+                    @Html.DropDownList("zoomPercent", ChartDemoHelper.GetZoomPercent())
+                </td>
+                <td><div class="Spacer" style="width: 1px;"></div></td>
+                <td>
+                    <input style="float: right;" type="submit" value="Apply" onclick="SetLabelOptionsEnabled()" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    @Html.DevExpress().Chart(settings => {
+        settings.Name = "chart";
+        settings.Width = 920;
+        settings.Height = 500;
+        settings.BorderOptions.Visibility = DefaultBoolean.False;
+        settings.CrosshairEnabled = options.ShowLabels ? DefaultBoolean.False : DefaultBoolean.True;
+
+        settings.Legends.Default(l => {
+            l.AlignmentHorizontal = LegendAlignmentHorizontal.Center;
+            l.AlignmentVertical = LegendAlignmentVertical.BottomOutside;
+            l.Direction = LegendDirection.LeftToRight;
+            l.Border.Visibility = DefaultBoolean.False;
+        });
+
+        settings.Series.Template(t => {
+            t.Views().FullStackedBar3DSeriesView(v => {
+                v.ShowFacet = options.ShowFacet;
+                v.Model = (Bar3DModel)Enum.Parse(typeof(Bar3DModel), options.Bar3DModelString);
+                v.Transparency = options.Transparency;
+                v.SeriesLabel(l => {
+                    l.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+                    l.TextPattern = options.ValueAsPercent ? "{VP:P0}" : "{V}";
+                    l.Font = new Font("Tahoma", 8, FontStyle.Bold);
+                });
+            });
+            t.SetDataMembers("Region", "Sales");
+            t.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+        });
+
+        settings.XYDiagram3D(d => {
+            d.AxisY.Interlaced = true;
+            d.AxisY.Label.TextPattern = "{V:P0}";
+            d.AxisY.NumericScaleOptions.GridSpacing = 0.2;
+            d.RotationType = RotationType.UseAngles;
+            d.RotationOrder = RotationOrder.XYZ;
+            d.VerticalScrollPercent = 4;
+            d.PerspectiveAngle = options.PerspectiveAngle;
+            d.ZoomPercent = options.ZoomPercent;
+
+        });
+
+        settings.Titles.Add(new ChartTitle() {
+            Text = "DevAV Sales Mix by Region"
+        });
+    }).Bind(Model, seriesDataMember: "ProductCategory").GetHtml()
+}

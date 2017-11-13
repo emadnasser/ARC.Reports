@@ -1,0 +1,133 @@
+﻿<script type="text/javascript">
+    $(window).load(UpdateLabelCheckBoxes);
+
+    function SetLabelOptionsEnabled() {
+        $("#valueAsPercent")[0].disabled = false;
+        $("#labelPosition")[0].disabled = false;
+    }
+    function UpdateLabelOptionsDisabled() {
+        $("#valueAsPercent")[0].disabled = !($("#showLabels")[0].checked);
+        $("#labelPosition")[0].disabled = !($("#showLabels")[0].checked);
+    }
+    function UpdateHeightToWidthOptionsDisabled() {
+        $("#heightToWidthRatio")[0].disabled = ($("#heightToWidthRatioAuto")[0].checked);
+    }
+    function UpdateLabelCheckBoxes() {
+        $("#valueAsPercent")[0].disabled = !($("#showLabels")[0].checked);
+        $("#labelPosition")[0].disabled = !($("#showLabels")[0].checked);
+        $("#heightToWidthRatio")[0].disabled = ($("#heightToWidthRatioAuto")[0].checked);
+    }
+</script>
+@using (Html.BeginForm()) {
+    ChartFunnel2DDemoOptions options = (ChartFunnel2DDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+    <div class="chartOptionsPanel" style="height:auto; font-size:12px">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    @Html.CheckBox("showLabels", options.ShowLabels, new { onclick = "UpdateLabelOptionsDisabled()" })
+                </td>
+                <td class="NoWrap">
+                    <label for="showLabels" style="width:auto">Show Labels</label>
+                </td>
+                <td class="NoWrap">
+                    <label>Label Position</label>
+                </td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td>
+                    @Html.DropDownList("labelPosition", ChartDemoHelper.GetFunnelLabelPositions())
+                </td>
+                <td><div class="Spacer" style="width: 210px;"></div></td>
+                <td class="NoWrap"><label>Point Distance:</label></td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td>
+                    @Html.DevExpress().SpinEdit(set => {
+                        set.Name = "distance";
+                        set.Properties.MinValue = 1;
+                        set.Properties.MaxValue = 30;
+                        set.Number = options.Distance;
+                        set.Width = 60;
+                    }).GetHtml()
+                </td>
+                <td><div class="Spacer" style="width: 10px;"></div></td>
+                <td>
+                    @Html.CheckBox("alignToCenter", options.AlignToCenter)
+                </td>
+                <td class="NoWrap" style="width: 120px;">
+                    <label for="alignToCenter" style="width:auto">Align To Center</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><div class="Spacer" style="width: 100%;height: 5px"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.CheckBox("valueAsPercent", options.ValueAsPercent)
+                </td>
+                <td class="NoWrap" style="width: 120px;">
+                    <label for="valueAsPercent" style="width:auto">Value As Percent</label>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="Spacer" style="width: 210px;"></div>
+                </td>
+                <td class="NoWrap">
+                    <label>Height/Width</label>
+                </td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td>
+                    @Html.DropDownList("heightToWidthRatio", ChartDemoHelper.GetHeightToWidthRatio(), new { style = "width:60px" })
+                </td>
+                <td><div class="Spacer" style="width: 10px;"></div></td>
+                <td>
+                    @Html.CheckBox("heightToWidthRatioAuto", options.HeightToWidthRatioAuto, new { onclick = "UpdateHeightToWidthOptionsDisabled()" })
+                </td>
+                <td class="NoWrap" style="width: 120px;">
+                    <label for="heightToWidthRatioAuto" style="width:auto">Auto</label>
+                </td>
+                <td>
+                    <input type="submit" value="Apply" onclick="UpdateLabelOptionsDisabled()" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    @Html.DevExpress().Chart(settings => {
+        settings.Name = "chart";
+        settings.BorderOptions.Visibility = DefaultBoolean.False;
+        settings.Height = 500;
+        settings.Width = 920;
+
+        settings.Legends.Default(l => {
+            l.Margins.Top = 30;
+            l.AlignmentHorizontal = LegendAlignmentHorizontal.Left;
+            l.AlignmentVertical = LegendAlignmentVertical.Bottom;
+            l.HorizontalIndent = 12;
+            l.Border.Visibility = DefaultBoolean.False;
+        });
+    
+        settings.Series.Add(s => {
+            s.Name = "WebSiteVisitors";
+            s.SetDataMembers("Caption", "Count");
+            s.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+            s.LegendTextPattern = "{A}: {V}";
+            s.Views().FunnelSeriesView(v => {
+                v.AlignToCenter = options.AlignToCenter;
+                v.HeightToWidthRatioAuto = options.HeightToWidthRatioAuto;
+                v.HeightToWidthRatio = options.HeightToWidthRatio;
+                v.PointDistance = options.Distance;
+                v.SeriesLabel(l => { 
+                    l.Position = options.LabelPosition;
+                    l.TextPattern = options.ValueAsPercent ? "{VP:P0}" : "{V}";
+                });
+            });
+        });
+    
+        settings.Titles.Add(new ChartTitle() {
+            Font = new Font("Tahoma", 18),
+            Text = "Website Visitors Trend"
+        });    
+    }).Bind(Model).GetHtml()
+}

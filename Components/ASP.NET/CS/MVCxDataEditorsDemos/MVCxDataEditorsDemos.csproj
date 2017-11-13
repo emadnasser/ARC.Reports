@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BB1171A-3E02-4E3D-BD54-442B1CC597DC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevExpress.Web.Demos</RootNamespace>
+    <AssemblyName>DevExpress.Web.Demos.MVCxDataEditorsDemos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Mvc5.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\CodeFormatter.cs" />
+    <Compile Include="Code\DatabaseGenerator.cs" />
+    <Compile Include="Code\DemoGroupModel.cs" />
+    <Compile Include="Code\DemoHtmlHelper.cs" />
+    <Compile Include="Code\DemoModel.cs" />
+    <Compile Include="Code\DemoModelBase.cs" />
+    <Compile Include="Code\DemosModel.cs" />
+    <Compile Include="Code\EmailDataGenerator.cs" />
+    <Compile Include="Code\ExternalDemoModel.cs" />
+    <Compile Include="Code\Helpers\CheckListHelper.cs" />
+    <Compile Include="Code\Helpers\ColorEditorHelper.cs" />
+    <Compile Include="Code\HiddenHtmlFormAdapter.cs" />
+    <Compile Include="Code\IntroFeatureModel.cs" />
+    <Compile Include="Code\IntroPageModel.cs" />
+    <Compile Include="Code\OverviewPageModel.cs" />
+    <Compile Include="Code\PersonDataGenerator.cs" />
+    <Compile Include="Code\PhotoUtils.cs" />
+    <Compile Include="Code\ThemeGroupModel.cs" />
+    <Compile Include="Code\ThemeModel.cs" />
+    <Compile Include="Code\ThemeModelBase.cs" />
+    <Compile Include="Code\ThemesModel.cs" />
+    <Compile Include="Code\UploadingUtils.cs" />
+    <Compile Include="Code\Utils.cs" />
+    <Compile Include="Controllers\AccessibilityController.cs" />
+    <Compile Include="Controllers\Accessibility\AccessibilityController.Compliance.cs" />
+    <Compile Include="Controllers\Accessibility\AccessibilityController.LinkedControls.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.ComboBoxItemAppearanceCustomization.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.ComboBoxItemTemplate.cs" />
+    <Compile Include="Models\AjaxFormValidationData.cs" />
+    <Compile Include="Models\BuiltInValidationData.cs" />
+    <Compile Include="Models\ContextBase.cs" />
+    <Compile Include="Models\CustomerInfo.cs" />
+    <Compile Include="Models\EditorTemplatesData.cs" />
+    <Compile Include="Models\JQueryValidationData.cs" />
+    <Compile Include="Models\NorthwindModel.cs" />
+    <Compile Include="Models\Options\BinaryImageOptions.cs" />
+    <Compile Include="Models\Options\CalendarOptions.cs" />
+    <Compile Include="Models\Options\CaptchaOptions.cs" />
+    <Compile Include="Models\Options\CheckListOptions.cs" />
+    <Compile Include="Models\Options\ColorEditorOptions.cs" />
+    <Compile Include="Code\Helpers\ListBoxHelper.cs" />
+    <Compile Include="Models\Options\TokenBoxOptions.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\Common\CommonController.AjaxForm.cs" />
+    <Compile Include="Controllers\Common\CommonController.Caption.cs" />
+    <Compile Include="Controllers\Common\CommonController.EditorTemplates.cs" />
+    <Compile Include="Controllers\Common\CommonController.jQueryValidation.cs" />
+    <Compile Include="Controllers\Common\CommonController.ModelValidation.cs" />
+    <Compile Include="Controllers\Common\CommonController.UnobtrusiveValidation.cs" />
+    <Compile Include="Controllers\Common\CommonController.BuiltInValidation.cs" />
+    <Compile Include="Controllers\DbGenController.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\EditorsController.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.BinaryImage.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.Button.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.Captcha.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.CheckBoxList.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.ColorEditor.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.DateRangePicker.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.ListBox.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.RadioButtonList.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.TokenBox.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.TrackBar.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.Calendar.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.ComboBox.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.DateEdit.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.DropDownEdit.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.LargeDataComboBox.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.SpinEdit.cs" />
+    <Compile Include="Controllers\Editors\EditorsController.TextBox.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OverviewController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataContextExtensions\LargeDatabaseDataContextExt.cs" />
+    <Compile Include="Models\DateRangePickerModel.cs" />
+    <Compile Include="Models\LargeDatabase.cs" />
+    <Compile Include="Models\LargeDatabase.designer.cs">
+      <DependentUpon>LargeDatabase.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Models\MaskedData.cs" />
+    <Compile Include="Models\Northwind.cs" />
+    <Compile Include="Models\RoundPanelAppearance.cs" />
+    <Compile Include="Models\UnobtrusiveValidationData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\ModelValidationData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Components.xml" />
+    <Content Include="App_Data\Contacts.xml" />
+    <Content Include="App_Data\Demos.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\LargeDatabase.mdf" />
+    <Content Include="App_Data\PhoneModels.xml" />
+    <Content Include="App_Data\ProgLanguages.xml" />
+    <Content Include="App_Data\Languages.xml" />
+    <Content Include="App_Data\NWind.mdf" />
+    <Content Include="App_Data\Themes.xml" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="Content\1x1.gif" />
+    <Content Include="Content\CodeFormatter.css" />
+    <Content Include="Content\Components.css" />
+    <Content Include="Content\ComponentsSpriteImage.png" />
+    <Content Include="Content\DemoIcons\BinaryImage.jpg" />
+    <Content Include="Content\DemoIcons\Caption.png" />
+    <Content Include="Content\DemoIcons\ComboboxItemTemplate.png" />
+    <Content Include="Content\DemoIcons\DateRange.png" />
+    <Content Include="Content\DemoIcons\Combobox.png" />
+    <Content Include="Content\DemoIcons\UnobtrusiveValidation.png" />
+    <Content Include="Content\Editors\BinaryImage\Css\BinaryImage.css" />
+    <Content Include="Content\Editors\BinaryImage\Thumbs\people_1200px.jpg" />
+    <Content Include="Content\Editors\Button\Css\Appearance.css" />
+    <Content Include="Content\Editors\Button\Images\BlueBall.png" />
+    <Content Include="Content\Editors\Button\Images\Icq.png" />
+    <Content Include="Content\Editors\Button\Images\Mail.png" />
+    <Content Include="Content\Editors\Button\Images\Search.png" />
+    <Content Include="Content\Editors\Button\Images\Wine.png" />
+    <Content Include="Content\FeatureIcons\Ajax.png" />
+    <Content Include="Content\FeatureIcons\Appearance.png" />
+    <Content Include="Content\FeatureIcons\ClientSide.png" />
+    <Content Include="Content\FeatureIcons\CrossBrowser.png" />
+    <Content Include="Content\FeatureIcons\DataBinding.png" />
+    <Content Include="Content\FeatureIcons\Native.png" />
+    <Content Include="Content\FeatureIcons\Performance.png" />
+    <Content Include="Content\FeatureIcons\Power.png" />
+    <Content Include="Content\Images\Contacts\Alberto_Alonso.jpg" />
+    <Content Include="Content\Images\Contacts\Alfredo_Gomez.jpg" />
+    <Content Include="Content\Images\Contacts\Andrew_Lee.jpg" />
+    <Content Include="Content\Images\Contacts\Angela_Murphy.jpg" />
+    <Content Include="Content\Images\Contacts\Clarence_Nath.jpg" />
+    <Content Include="Content\Images\Contacts\Colin_He.jpg" />
+    <Content Include="Content\Images\Contacts\Connor_Jenkins.jpg" />
+    <Content Include="Content\Images\Contacts\Connor_Lopez.jpg" />
+    <Content Include="Content\Images\Contacts\Destiny_Clark.jpg" />
+    <Content Include="Content\Images\Contacts\Diana_Martin.jpg" />
+    <Content Include="Content\Images\Contacts\Gary_Rubio.jpg" />
+    <Content Include="Content\Images\Contacts\Heidi_Lopez.jpg" />
+    <Content Include="Content\Images\Contacts\Jesse_Gonzalez.jpg" />
+    <Content Include="Content\Images\Contacts\Jessie_She.jpg" />
+    <Content Include="Content\Images\Contacts\Julia_Bell.jpg" />
+    <Content Include="Content\Images\Contacts\Julia_Evans.jpg" />
+    <Content Include="Content\Images\Contacts\Katelyn_Lopez.jpg" />
+    <Content Include="Content\Images\Contacts\Kevin_Collins.jpg" />
+    <Content Include="Content\Images\Contacts\Logan_Hernandez.jpg" />
+    <Content Include="Content\Images\Contacts\Maria_Hernandez.jpg" />
+    <Content Include="Content\Images\Contacts\Martha_Gao.jpg" />
+    <Content Include="Content\Images\Contacts\Megan_Sanchez.jpg" />
+    <Content Include="Content\Images\Contacts\Miguel_Jones.jpg" />
+    <Content Include="Content\Images\Contacts\Naomi_Moreno.jpg" />
+    <Content Include="Content\Images\Contacts\Nathan_Bryant.jpg" />
+    <Content Include="Content\Images\Contacts\Rafael_Raje.jpg" />
+    <Content Include="Content\Images\Contacts\Rebekah_Raman.jpg" />
+    <Content Include="Content\Images\Contacts\Shannon_Sanz.jpg" />
+    <Content Include="Content\Images\Contacts\Xavier_Richardson.jpg" />
+    <Content Include="Content\Loading.gif" />
+    <Content Include="Content\Platform.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\sprite.png" />
+    <Content Include="Content\VideoBanner.png" />
+    <Content Include="Content\VideoButton.png" />
+    <Content Include="Content\WAVE.png" />
+    <Content Include="css\LinkedControlsStyles.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\Demo.js" />
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\NotificationBridge.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Editors\Calendar.cshtml" />
+    <Content Include="Views\Editors\TrackBar.cshtml" />
+    <Content Include="Views\Editors\CheckBoxList.cshtml" />
+    <Content Include="Views\Editors\RadioButtonList.cshtml" />
+    <Content Include="Views\Editors\Captcha.cshtml" />
+    <Content Include="Views\Editors\CaptchaPartial.cshtml" />
+    <Content Include="Views\Shared\SearchPartial.cshtml" />
+    <Content Include="Views\Shared\DemoTabsPartial.cshtml" />
+    <Content Include="Views\Shared\SearchListPartial.cshtml" />
+    <Content Include="Views\Common\AjaxForm.cshtml" />
+    <Content Include="Views\Common\AjaxFormPartial.cshtml" />
+    <Content Include="Views\Common\EditorTemplates.cshtml" />
+    <Content Include="Views\Common\EditorTemplates\FuelType.cshtml" />
+    <Content Include="Views\Common\EditorTemplates\Mileage.cshtml" />
+    <Content Include="Views\Common\EditorTemplates\String.cshtml" />
+    <Content Include="Views\Common\jQueryValidation.cshtml" />
+    <Content Include="Views\Common\ModelValidation.cshtml" />
+    <Content Include="Views\Common\UnobtrusiveValidation.cshtml" />
+    <Content Include="Views\Common\ValidationSuccess.cshtml" />
+    <Content Include="Views\Common\ValidationSuccessPartial.cshtml" />
+    <Content Include="Models\LargeDatabase.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LargeDatabase.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Common\BuiltInValidation.cshtml" />
+    <Content Include="Views\Editors\ColorEditor.cshtml" />
+    <Content Include="Views\Overview\Overview.cshtml" />
+    <Content Include="Views\Overview\CaptchaPartial.cshtml" />
+    <Content Include="Views\Editors\TokenBox.cshtml" />
+    <Content Include="Views\Editors\ListBox.cshtml" />
+    <Content Include="Views\Editors\ListBoxPartial.cshtml" />
+    <Content Include="Views\Editors\Button.cshtml" />
+    <Content Include="Views\Common\Caption.cshtml" />
+    <Content Include="Views\Shared\ErrorMessage.cshtml" />
+    <Content Include="Views\Editors\DateRangePicker.cshtml" />
+    <Content Include="Views\Editors\BinaryImage.cshtml" />
+    <Content Include="Views\Editors\BinaryImagePartial.cshtml" />
+    <Content Include="Views\Accessibility\Compliance.cshtml" />
+    <Content Include="Views\Accessibility\LinkedControls.cshtml" />
+    <Content Include="Views\Shared\SkipRepetitiveNavigationLinks.cshtml" />
+    <Content Include="Views\Shared\AccessibilityValidatorLink.cshtml" />
+    <Content Include="Views\Accessibility\LinkedControlsPartial.cshtml" />
+    <Content Include="Views\Editors\ComboBoxItemTemplatePartial.cshtml" />
+    <Content Include="Views\Editors\ComboBoxItemTemplate.cshtml" />
+    <Content Include="Content\Fonts\CustomFont0.woff" />
+    <Content Include="Content\Fonts\CustomFont1.woff" />
+    <Content Include="Content\Fonts\CustomFont2.woff" />
+    <Content Include="Views\Editors\ComboBoxItemAppearanceCustomization.cshtml" />
+    <Content Include="Views\Editors\ComboBoxItemAppearanceCustomizationPartial.cshtml" />
+    <Content Include="Views\Shared\ThemeParametersSelectorPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\LargeDatabase.dbml.layout">
+      <DependentUpon>LargeDatabase.dbml</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\NavigationPartial.cshtml" />
+    <Content Include="Views\Shared\ThemeSelectorPartial.cshtml" />
+    <Content Include="Views\Shared\FooterTextPartial.cshtml" />
+    <Content Include="Views\Shared\HeadPartial.cshtml" />
+    <Content Include="Views\Shared\CreateDatabasePartial.cshtml" />
+    <Content Include="Views\Shared\EventMonitor.cshtml" />
+    <Content Include="Views\Editors\ComboBox.cshtml" />
+    <Content Include="Views\Editors\ComboBoxPartial.cshtml" />
+    <Content Include="Views\Editors\DateEdit.cshtml" />
+    <Content Include="Views\Editors\DropDownEdit.cshtml" />
+    <Content Include="Views\Editors\MultiColumnComboBoxPartial.cshtml" />
+    <Content Include="Views\Editors\SpinEdit.cshtml" />
+    <Content Include="Views\Editors\TextBox.cshtml" />
+    <Content Include="Views\Editors\LargeDataComboBox.cshtml" />
+    <Content Include="Views\Editors\LargeDataComboBoxPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60461</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

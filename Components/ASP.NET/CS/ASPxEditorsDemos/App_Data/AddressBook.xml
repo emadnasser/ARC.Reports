@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Addresses>
+  <Address Text="Michael Bootsman" Value="boot@machine.com" />
+  <Address Text="Val Abrhaham" Value="var@domain.com" />
+  <Address Text="Ophelia Lory" Value="loop@domain.com" />
+  <Address Text="Anna Lapton" Value="lan@domain.com" />
+  <Address Text="Sergio Tammial" Value="serial@domain.com" />
+  <Address Text="Lee Tan" Value="1337@domain.com" />
+  <Address Text="Victoria Ellroy" Value="vi@domain.com" />
+  <Address Text="Corry Putter" Value="cpu@domain.com" />
+  <Address Text="Arthur Spock" Value="tos@domain.com" />
+  <Address Text="Ronald Armstrong" Value="ram@domain.com" />
+</Addresses>

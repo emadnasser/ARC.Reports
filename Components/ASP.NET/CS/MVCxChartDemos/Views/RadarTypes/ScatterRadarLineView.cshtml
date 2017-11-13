@@ -1,0 +1,106 @@
+﻿@model IList
+<script type="text/javascript">
+    $(window).load(UpdateMarkersDisabled);
+
+    function SetShowMarkersEnabled() {
+        $("#showMarkers")[0].disabled = false;
+    }
+    function UpdateMarkersDisabled() {
+        $("#markerKindString")[0].disabled = !($("#showMarkers")[0].checked);
+        $("#markerSize")[0].disabled = !($("#showMarkers")[0].checked);
+    }
+</script>
+@using (Html.BeginForm()) {
+    ChartRadarDemoOptions options = (ChartRadarDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+    
+    <div class="chartOptionsPanel" style="height:auto; font-size:12px;">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    @Html.CheckBox("showLabels", options.ShowLabels)
+                </td>
+                <td class="NoWrap">
+                    <label for="showLabels" style="width:auto">Show Labels</label>
+                </td>
+                <td><div class="Spacer" style="width: 10px;"></div></td>
+                <td class="NoWrap"><label for="markerKindString">Marker Kind:</label></td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td style="width: 100%;">
+                    @Html.DropDownList("markerKindString", ChartDemoHelper.GetMarkerKinds(), new { style = "width:130px" })
+                </td>
+                <td class="NoWrap"><label for="scatterFunction">Function Type:</label></td>
+                <td><div class="Spacer" style="width: 7px;"></div></td>
+                <td>
+                    @Html.DropDownList("scatterFunction", ChartDemoHelper.GetScatterRadarFunctions(), new { style = "width:140px" })
+                </td>
+            </tr>
+            <tr>
+                <td><div class="Spacer" style="width: 100%; height: 5px;"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.CheckBox("showMarkers", options.ShowMarkers, new { onclick = "UpdateMarkersDisabled()" })
+                </td>
+                <td class="NoWrap">
+                    <label for="showMarkers" style="width:auto">Show Markers</label>
+                </td>
+                <td><div class="Spacer" style="width: 10px;"></div></td>
+                <td class="NoWrap"><label for="markerSize">Marker Size:</label></td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td style="width: 100%;">
+                    @Html.DropDownList("markerSize", ChartDemoHelper.GetMarkerSize("8"), new { style = "width:130px;" })
+                </td>
+                <td></td>
+                <td></td>
+                <td><input style="float: right;" type="submit" value="Apply" onclick="SetShowMarkersEnabled()" /></td>
+            </tr>
+        </table>
+    </div>
+
+    @Html.DevExpress().Chart(settings => {
+        settings.Name = "chart";
+        settings.BorderOptions.Visibility = DefaultBoolean.False;
+        settings.Height = 500;
+        settings.Width = 920;
+    
+        settings.Legends.Default(l => {
+            l.Visibility = DefaultBoolean.False;
+        });
+
+        settings.Series.Add(s => {
+            s.Name = options.ScatterFunction.ToString();
+            s.ArgumentScaleType = ScaleType.Numerical;
+            s.ArgumentDataMember = "X";
+            s.ValueDataMembers[0] = "Y";
+            s.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+            s.Label.ResolveOverlappingMode = ResolveOverlappingMode.HideOverlapped;
+            s.Label.TextPattern = "{V:N2}";
+            s.ToolTipEnabled = options.ShowLabels ? DefaultBoolean.False : DefaultBoolean.True;
+            s.ToolTipPointPattern = "{A:F2}: {V:F2}";
+
+            s.Views().ScatterRadarLineSeriesView(v => {
+                v.MarkerVisibility = options.ShowMarkers ? DefaultBoolean.True : DefaultBoolean.False;
+                v.PointMarkerOptions.Kind = (MarkerKind)Enum.Parse(typeof(MarkerKind), options.MarkerKindString);
+                v.PointMarkerOptions.Size = options.MarkerSize;
+                if (v.PointMarkerOptions.Kind == MarkerKind.Star)
+                    v.PointMarkerOptions.StarPointCount = options.StarPointCount;
+                v.Closed = false;
+            });
+        });
+    
+        settings.RadarDiagram(d => {
+            d.DrawingStyle = options.DiagramStyle;
+            d.AxisX.Label.TextPattern = "{A:0.##}";
+            d.AxisX.NumericScaleOptions.AutoGrid = false;
+            d.AxisX.NumericScaleOptions.GridSpacing = 0.523598;
+            d.AxisX.WholeRange.Auto = false;
+            d.AxisX.WholeRange.AutoSideMargins = false;
+            d.AxisX.WholeRange.MaxValue = 6.28;
+            d.AxisX.WholeRange.MinValue = 0;
+            d.AxisX.WholeRange.SideMarginsValue = 0;
+            d.AxisY.WholeRange.AutoSideMargins = false;
+            d.AxisY.WholeRange.SideMarginsValue = 0;
+            d.StartAngleInDegrees = 270;
+        });
+    }).Bind(Model).GetHtml()
+}

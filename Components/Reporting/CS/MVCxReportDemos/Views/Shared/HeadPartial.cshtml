@@ -1,0 +1,31 @@
+﻿@{
+    bool isClassicAspViewer = Request.Params[ViewerSelectorState.Key] == ViewerSelectorState.ClassicViewer 
+        || Request.Path.IndexOf("CustomToolbarReport") != -1
+        || Request.Path.IndexOf("Thumbnails") != -1;
+        
+    ExtensionType viewerExtensionType = isClassicAspViewer
+        ? ExtensionType.DocumentViewer
+        : ExtensionType.WebDocumentViewer;
+}
+
+@if(!isClassicAspViewer) {
+    <link href="@Url.Content("~/Content/jquery-ui-1.11.4.custom.min.css")" rel="stylesheet" />
+}
+@Html.DevExpress().GetStyleSheets(ASPxWebClientUIControl.ColorSchemeLight,
+    // Default theme for some demos
+    new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout, Theme = "Default" },
+    new StyleSheet { ExtensionSuite = ExtensionSuite.Icons },
+    new StyleSheet { ExtensionType = viewerExtensionType }
+)
+
+@if(!isClassicAspViewer) {
+    <script src="@Url.Content("~/Scripts/jquery-1.11.3.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.11.4.custom.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/globalize.js")"></script>
+    <script src="@Url.Content("~/Scripts/knockout.js")"></script>
+}
+@Html.DevExpress().GetScripts(
+    new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+    new Script { ExtensionSuite = ExtensionSuite.Icons },
+    new Script { ExtensionType = viewerExtensionType }
+)

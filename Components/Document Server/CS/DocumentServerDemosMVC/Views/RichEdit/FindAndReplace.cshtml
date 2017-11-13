@@ -1,0 +1,102 @@
+﻿@model RichEditFindAndReplaceModel
+<script type="text/javascript">
+    // <![CDATA[
+    function UpdatePreview(action, e) {
+        var txbFindValue = Find.GetValue();
+        var txbReplaceValue = Replace.GetValue();
+        e.processOnServer = false;
+        var args = "Find=" + encodeURIComponent(txbFindValue) +
+                "&Replace=" + encodeURIComponent(txbReplaceValue) +
+                "&ActionToExec=" + encodeURIComponent(action);
+        RichEditPreview.Update(args);
+        $("#ActionToExec").val(action);
+    }
+    // ]]> 
+</script>
+@using (Html.BeginForm("FindAndReplaceExportTo", "RichEdit", FormMethod.Post)) {
+    <div class="Separator SingleSeparator"></div>
+    <br />
+    @Html.Hidden("ActionToExec");
+    <table style="width: 100%;">
+        <tr>
+            <td>
+                <table style="height: 40px;">
+                    <tr>
+                        <td style="height: 26px;">
+                            @Html.DevExpress().Label(
+                                settings => {
+                                    settings.Text = "Find: ";
+                                    settings.AssociatedControlName = "Find";
+                                }).GetHtml()
+                        </td>
+                        <td colspan="2">
+                            @Html.DevExpress().TextBoxFor(model => model.Find,
+                                settings => {
+                                    settings.Name = "Find";
+                                    settings.Width = Unit.Pixel(230);
+                                }).GetHtml()
+                        </td>
+                        <td style="text-align: right"></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 26px; width: 80px;">
+                            @Html.DevExpress().Label(
+                                settings => {
+                                    settings.Text = "Replace with:";
+                                    settings.AssociatedControlName = "Replace";
+                                    settings.Style.Add(HtmlTextWriterStyle.MarginRight, "7px");
+                                }).GetHtml()
+                        </td>
+                        <td colspan="2">
+                            @Html.DevExpress().TextBoxFor(model => model.Replace,
+                                settings => {
+                                    settings.Name = "Replace";
+                                    settings.Width = Unit.Pixel(230);
+                                }).GetHtml()
+                        </td>
+                        <td style="text-align: right"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @Html.DevExpress().Button(
+                                settings => {
+                                    settings.Name = "btnFindAll";
+                                    settings.Text = "Find All";
+                                    settings.ClientSideEvents.Click = "function(s, e) { UpdatePreview('find',e); }";
+                                }).GetHtml()
+                        </td>
+                        <td style="text-align: right">
+                            @Html.DevExpress().Button(
+                                settings =>
+                                {
+                                    settings.Name = "btnReplaceAll";
+                                    settings.Text = "Replace All";
+                                    settings.ClientSideEvents.Click = "function(s, e) { UpdatePreview('replace',e); }";
+                                }).GetHtml()
+                        </td>
+                </table>
+            </td>
+            <td style="text-align: right">
+                <table style="height: 40px;">
+                    <tr>
+                        <td style="height: 26px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 26px;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.Partial("RichEditDocumentDownloaderPartial")
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div class="Separator SingleSeparator"></div>
+    <br />
+    
+    @Html.Partial("RichEditPreviewPartial", Model.PreviewModel)
+}

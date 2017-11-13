@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core">
+  <dx:Format x:Key="positiveRowFormat" Background="#FFD2E3DF"/>
+  <dx:Format x:Key="negativeRowFormat" Background="#FFE6D2D8"/>
+  <dx:Format x:Key="positiveCellFormat" Foreground="#FF03B089"/>
+  <dx:Format x:Key="negativeCellFormat" Foreground="#FFC90541"/>
+</ResourceDictionary>

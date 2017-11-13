@@ -1,0 +1,14 @@
+﻿@model IEnumerable
+
+@using(Html.BeginForm("ExportDetailsTo", "Exporting")) {
+    @Html.Partial("ToolbarExport", GridViewExportDemoHelper.ExportFormatsInfo.Keys)
+    <div style="padding: 10px;">
+        <label for="ExportMode">Details Export Mode:&nbsp;</label>
+        @Html.DropDownList("ExportMode", typeof(GridViewDetailExportMode), GridViewDetailExportMode.Expanded)
+    </div>
+    @Html.Partial("ExportDetailsMasterPartial", Model)
+    <br />
+    <p class="Note">
+        <strong>Note:</strong> If you export grouped data to RTF, be sure to open the resulting file with an editor that fully supports RTF, including tables. For instance, Microsoft WordPad does not support this feature, and thus the file may appear corrupt.
+    </p>
+}

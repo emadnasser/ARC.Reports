@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Controls>
+  <Control Name="ASPxGauges" Value="4.2" NavigateUrl="javascript:void(0);" Description="The ASPxGauges Suite ships with over 150 built-in presets and is extremely easy to use...so easy in fact, that all you need to do is drop a control onto a form" />
+  <Control Name="ASPxGridView" Value="5" NavigateUrl="javascript:void(1);" Description="The ASPxGridView can make advanced UI features such as sorting, grouping, and summary computations available without bringing your server to its knees" />
+  <Control Name="ASPxHtmlEditor" Value="4.3" NavigateUrl="javascript:void(2);" Description="The ASPxHTML Editor allows you to deliver web applications with rich text editing functionality. You simply drop the control onto a form and instantly have access to a text editor with an intuitive user interface that resembles Microsoft® Word (with similar toolbars and the same keyboard shortcuts)" />
+  <Control Name="ASPxSpellChecker" Value="4" NavigateUrl="javascript:void(3)" Description="The ASPxSpellChecker provides you a straightforward way in which to add Microsoft® Office® style spell checking capabilities into your next ASP.NET application and offers you built in suggestion forms that replicate corresponding forms found in Microsoft Outlook®" />
+  <Control Name="ASPxTreeList" Value="4.5" NavigateUrl="javascript:void(4);" Description="The ASPxTreeList is a multi-purpose data visualization system that can display information as a TREE, a GRID, or a combination of both - in either data bound or unbound mode" />
+</Controls>

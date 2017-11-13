@@ -1,0 +1,10 @@
+﻿@Html.DevExpress().GridView(settings => {
+    settings.Name = "gvOverview";
+    settings.CallbackRouteValues = new { Controller = "Overview", Action = "OverviewPartial" };
+    settings.Width = Unit.Percentage(100);
+    settings.Columns.Add("ShipName");
+    settings.Columns.Add("ShipCity");
+    settings.Columns.Add("ShipPostalCode");
+    settings.Columns.Add("ShipCountry");
+    settings.SettingsPager.NumericButtonCount = 6;
+}).Bind(Model).GetHtml()

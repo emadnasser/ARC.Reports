@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NWind" Class="NorthwindDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\NWind.mdf;Integrated Security=True;Connect Timeout=120;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="NWindConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[Sales by Category]" Member="Sales_by_Categories">
+    <Type Name="Sales_by_Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductSales" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Employees">
+    <Type Name="Employees">
+      <Column Member="FirstName" Type="System.String" CanBeNull="false" />
+      <Column Member="LastName" Type="System.String" CanBeNull="false" />
+      <Column Member="City" Type="System.String" CanBeNull="false" />
+      <Column Member="TitleOfCourtesy" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

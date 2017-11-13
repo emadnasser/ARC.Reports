@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<totalinfo>
+	<controls>
+		<controlentry>
+			<control>
+				<name>icbSalesPerson</name>
+				<windowcaption>Sales Person Format</windowcaption>
+				<description>Specifies the format of Sales Person field values.</description>
+        <memberlist>PivotGridField.UnboundExpression</memberlist>
+				<dtimage/>
+			</control>
+		</controlentry>
+
+    <controlentry>
+      <control>
+        <name>btnAddBonus</name>
+        <windowcaption>Add Bonus</windowcaption>
+        <description>Creates a new field, specifies its data type binding mode using the PivotGridFieldBase.UnboundType property, and provides data for this field using the PivotGridFieldBase.UnboundExpression property.</description>
+        <memberlist>PivotGridFieldBase.UnboundType, PivotGridField.UnboundExpression, PivotGridFieldOptionsEx.ShowUnboundExpressionMenu</memberlist>
+        <dtimage/>
+      </control>
+    </controlentry>
+	</controls>
+</totalinfo>

@@ -1,0 +1,135 @@
+﻿<local:ChartsDemoModule
+    x:Class="ChartsDemo.BarSideBySide2DControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+    xmlns:local="clr-namespace:ChartsDemo"
+    ModuleAppear="ChartsDemoModule_ModuleAppear">
+    <local:ChartsDemoModule.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/ChartsDemo;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <local:DemoValuesProvider
+                x:Key="DemoValuesProvider" />
+            <local:Bar2DKindToBar2DModelConverter
+                x:Key="Bar2DKindToBar2DModelConverter" />
+            <local:Bar2DKindToTickmarksLengthConverter
+                x:Key="Bar2DKindToTickmarksLengthConverter" />
+            <dxmvvm:BooleanNegationConverter
+                x:Key="InvertedBoolConverter" />
+        </ResourceDictionary>
+    </local:ChartsDemoModule.Resources>
+    <dxdb:DemoModuleControl
+        SupressGroupFramePaddingInOptions="False">
+        <dxdb:DemoModuleControl.OptionsContent>
+            <StackPanel
+                MinWidth="120">
+                <dxe:CheckEdit
+                    Margin="0,0,0,2"
+                    Content="Show Labels"
+                    IsChecked="True"
+                    Name="chbVisible" />
+                <dx:GroupFrame
+                    Margin="0,10,0,10"
+                    Header="Label Position">
+                    <dxe:ListBoxEdit
+                        Background="{x:Null}"
+                        IsEnabled="{Binding ElementName=chbVisible, Path=IsChecked}"
+                        ItemsSource="{Binding Bar2DLabelPositions, Source={StaticResource DemoValuesProvider}}"
+                        Name="lbPosition"
+                        SelectedIndex="0"
+                        ShowBorder="False">
+                        <dxe:ListBoxEdit.StyleSettings>
+                            <dxe:RadioListBoxEditStyleSettings />
+                        </dxe:ListBoxEdit.StyleSettings>
+                    </dxe:ListBoxEdit>
+                </dx:GroupFrame>
+                <dx:GroupFrame
+                    Margin="0,2,0,10"
+                    Header="Model">
+                    <dxe:ListBoxEdit
+                        Background="{x:Null}"
+                        ItemsSource="{Binding PredefinedBar2DKinds, Source={StaticResource DemoValuesProvider}}"
+                        Name="lbModel"
+                        SelectedIndex="0"
+                        ShowBorder="False">
+                        <dxe:ListBoxEdit.StyleSettings>
+                            <dxe:RadioListBoxEditStyleSettings />
+                        </dxe:ListBoxEdit.StyleSettings>
+                    </dxe:ListBoxEdit>
+                </dx:GroupFrame>
+            </StackPanel>
+        </dxdb:DemoModuleControl.OptionsContent>
+        <Grid>
+            <dxc:ChartControl
+                AnimationMode="OnLoad"
+                BorderThickness="0"
+                CrosshairEnabled="{Binding ElementName=chbVisible, Path=IsChecked, Converter={StaticResource InvertedBoolConverter}}"
+                Name="chart"
+                DataSource="{Binding Data}">
+                <dxc:ChartControl.DataContext>
+                    <local:DevAVSalesByYear />
+                </dxc:ChartControl.DataContext>
+                <dxc:ChartControl.CrosshairOptions>
+                    <dxc:CrosshairOptions
+                        CrosshairLabelMode="ShowForNearestSeries" />
+                </dxc:ChartControl.CrosshairOptions>
+                <dxc:ChartControl.Diagram>
+                    <dxc:XYDiagram2D
+                        BarDistance="0.04"
+                        SeriesDataMember="Year">
+                        <dxc:XYDiagram2D.DefaultPane>
+                            <dxc:Pane
+                                MirrorHeight="100.0" />
+                        </dxc:XYDiagram2D.DefaultPane>
+                        <dxc:XYDiagram2D.AxisX>
+                            <dxc:AxisX2D
+                                TickmarksLength="{Binding ElementName=lbModel, Path=SelectedItem, Converter={StaticResource Bar2DKindToTickmarksLengthConverter}}" />
+                        </dxc:XYDiagram2D.AxisX>
+                        <dxc:XYDiagram2D.AxisY>
+                            <dxc:AxisY2D>
+                                <dxc:AxisY2D.Title>
+                                    <dxc:AxisTitle
+                                        Content="Millions of Dollars" />
+                                </dxc:AxisY2D.Title>
+                            </dxc:AxisY2D>
+                        </dxc:XYDiagram2D.AxisY>
+                        <dxc:XYDiagram2D.SeriesTemplate>
+                            <dxc:BarSideBySideSeries2D
+                                AnimationAutoStartMode="SetStartState"
+                                Model="{Binding ElementName=lbModel, Path=SelectedItem, Converter={StaticResource Bar2DKindToBar2DModelConverter}}"
+                                ArgumentDataMember="Region"
+                                ValueDataMember="Sales"
+                                LabelsVisibility="{Binding ElementName=chbVisible, Path=IsChecked}"
+                                CrosshairLabelPattern="Year: {S}&#10;Sales: {V:0.000}">
+                                <dxc:BarSideBySideSeries2D.Label>
+                                    <dxc:SeriesLabel
+                                        ConnectorThickness="1"
+                                        dxc:BarSideBySideSeries2D.LabelPosition="{Binding ElementName=lbPosition, Path=SelectedItem}"
+                                        Indent="20"
+                                        ResolveOverlappingMode="Default" />
+                                </dxc:BarSideBySideSeries2D.Label>
+                            </dxc:BarSideBySideSeries2D>
+                        </dxc:XYDiagram2D.SeriesTemplate>
+                    </dxc:XYDiagram2D>
+                </dxc:ChartControl.Diagram>
+                <dxc:ChartControl.Legend>
+                    <dxc:Legend
+                        UseCheckBoxes="True" />
+                </dxc:ChartControl.Legend>
+                <dxc:ChartControl.Titles>
+                    <dxc:Title
+                        HorizontalAlignment="Center"
+                        Dock="Top">DevAV Sales by Regions</dxc:Title>
+                </dxc:ChartControl.Titles>
+            </dxc:ChartControl>
+        </Grid>
+    </dxdb:DemoModuleControl>
+</local:ChartsDemoModule>

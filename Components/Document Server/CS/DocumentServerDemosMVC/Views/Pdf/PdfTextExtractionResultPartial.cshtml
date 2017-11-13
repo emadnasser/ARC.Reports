@@ -1,0 +1,21 @@
+﻿@Html.DevExpress().PopupControl(settings => {
+    settings.Name = "resultWindow";
+    settings.HeaderText = "Text extraction";
+    settings.Modal = true;
+    settings.PopupHorizontalAlign = PopupHorizontalAlign.WindowCenter;
+    settings.PopupVerticalAlign = PopupVerticalAlign.WindowCenter;
+    settings.Width = new Unit("600px");
+    settings.CallbackRouteValues = new {
+        conroller = "Pdf",
+        Action = "TextExtractResult"
+    };
+    settings.SetContent(() => {
+        Html.DevExpress().Memo(memoSettings => {
+            memoSettings.Name = "Result";
+            memoSettings.Height = new Unit("529px");
+            memoSettings.Width = new Unit("100%");
+            memoSettings.ReadOnly = true;
+            memoSettings.Text = Model.ExtractText();
+        }).Render();
+    });
+}).GetHtml()

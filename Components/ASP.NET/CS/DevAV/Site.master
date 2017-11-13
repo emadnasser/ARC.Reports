@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.Master.cs" Inherits="SiteMaster" MasterPageFile="~/Root.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeaderHolder" Runat="Server" />
+<asp:Content ID="Content2" ContentPlaceHolderID="RootPlaceHolder" Runat="Server">
+<div class="mainSplitterContainer">
+    <dx:ASPxSplitter ID="Splitter" runat="server" FullscreenMode="True" Height="100%" Orientation="Vertical" Width="100%" AllowResize="False" EnableHierarchyRecreation="false"
+        SeparatorVisible="False" CssClass="mainSplitter" ClientInstanceName="splitter">
+        <Panes>
+            <dx:SplitterPane>
+                <Panes>
+                    <dx:SplitterPane Size="210px" MinSize="210px" PaneStyle-CssClass="logoPane">
+                        <ContentCollection>
+                            <dx:SplitterContentControl>
+                                <dx:ASPxImage ID="MainLogo" runat="server" ShowLoadingImage="true" ImageUrl="~/Content/Images/MainLogo.png"></dx:ASPxImage>
+                                <dx:ASPxMenu ID="NavigationMenu" runat="server" CssClass="navigationMenu" ShowPopOutImages="True">
+                                    <HorizontalPopOutImage Url="Content/Images/LogoMenuIcons/PopOutIcon.png"></HorizontalPopOutImage>
+                                    <SubMenuStyle CssClass="navigationPopupMenu" />
+                                    <Items>
+                                        <dx:MenuItem Text="">
+                                            <Items>
+                                                <dx:MenuItem Text="Dashboard" NavigateUrl="Dashboard.aspx"></dx:MenuItem>
+                                                <dx:MenuItem Text="Customers" NavigateUrl="Customers.aspx"></dx:MenuItem>
+                                                <dx:MenuItem Text="Employees" NavigateUrl="Employees.aspx"></dx:MenuItem>
+                                                <dx:MenuItem Text="Tasks" NavigateUrl="Tasks.aspx"></dx:MenuItem>
+                                                <dx:MenuItem Text="Products" NavigateUrl="Products.aspx"></dx:MenuItem>
+                                            </Items>
+                                        </dx:MenuItem>
+                                    </Items>
+                                </dx:ASPxMenu>
+                                <dx:ASPxNavBar ID="FilterNavBar" ClientInstanceName="filterNavBar" runat="server" AllowExpanding="False" ShowExpandButtons="False" AllowSelectItem="True" Width="100%">
+                                    <Groups>
+                                        <dx:NavBarGroup Text="STATUS" Name="Favorites" />
+                                        <dx:NavBarGroup Text="CUSTOM FILTERS" Name="Custom" />
+                                    </Groups>
+                                    <ClientSideEvents Init="DevAV.FilterNavBar_Init" ItemClick="DevAV.FilterNavBar_ItemClick" />
+                                </dx:ASPxNavBar>
+                            </dx:SplitterContentControl>
+                        </ContentCollection>
+                    </dx:SplitterPane>
+                    <dx:SplitterPane MinSize="300px">
+                        <Panes>
+                            <dx:SplitterPane Size="60px" PaneStyle-CssClass="toolbarPane">
+                                <ContentCollection>
+                                    <dx:SplitterContentControl runat="server">
+                                        <dx:ASPxMenu ID="ToolbarMenu" runat="server" ClientInstanceName="toolbarMenu" ShowAsToolbar="True" AutoPostBack="false" DataSourceID="ToolbarMenuDataSource" 
+                                            OnItemDataBound="ToolbarMenu_ItemDataBound" OnCustomJSProperties="ToolbarMenu_CustomJSProperties">
+                                            <ClientSideEvents ItemClick="DevAV.ToolbarMenu_ItemClick" />
+                                        </dx:ASPxMenu>
+                                        <dx:ASPxButtonEdit ID="SearchBox" runat="server" NullText="Type to Search..." CssClass="searchBox" ClientInstanceName="searchBox" Width="200">
+                                            <Buttons>
+                                                <dx:EditButton>
+                                                    <Image>
+                                                        <SpriteProperties CssClass="sprite" HottrackedCssClass="hover" PressedCssClass="pressed" />
+                                                    </Image>
+                                                </dx:EditButton>
+                                            </Buttons>
+                                            <ButtonStyle CssClass="button" />
+                                            <NullTextStyle Font-Italic="true" />
+                                        </dx:ASPxButtonEdit>
+                                    </dx:SplitterContentControl>
+                                </ContentCollection>
+                            </dx:SplitterPane>
+                            <dx:SplitterPane Name="MainContentPane" ScrollBars="None" PaneStyle-CssClass="mainContentPane">
+                                <ContentCollection>
+                                    <dx:SplitterContentControl ID="SplitterContentControl2" runat="server">
+                                        <dx:ASPxCallbackPanel ID="MainCallbackPanel" runat="server" ClientInstanceName="mainCallbackPanel" OnCallback="MainCallbackPanel_Callback" CssClass="mainCallbackPanel">
+                                            <PanelCollection>
+                                                <dx:PanelContent>
+                                                    <dx:ASPxHiddenField ID="HiddenField" runat="server" ClientInstanceName="hiddenField" OnInit="HiddenField_Init" />
+                                                    <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server" />
+                                                    <dx:ASPxPopupControl ID="FilterPopup" runat="server" ClientInstanceName="filterPopup" Width="450px" PopupHorizontalAlign="WindowCenter" PopupAnimationType="Fade"
+                                                        PopupVerticalAlign="WindowCenter" AllowDragging="True" CssClass="filterPopup" ShowCloseButton="false" HeaderText="Create Custom Filter" CloseAction="None" CloseOnEscape="true" Modal="true">
+                                                        <ContentCollection>
+                                                            <dx:PopupControlContentControl runat="server">
+                                                                <dx:ASPxFilterControl ID="FilterControl" ClientInstanceName="filterControl" CssClass="filterControl" runat="server" Width="100%" Height="150px">
+                                                                    <ClientSideEvents Applied="DevAV.FilterControl_Applied" />
+                                                                </dx:ASPxFilterControl>
+                                                               
+                                                                <dx:ASPxCheckBox ID="SaveCustomFilterCheckBox" ClientInstanceName="saveCustomFilterCheckBox" runat="server" CheckState="Unchecked" Text="Save for future use">
+                                                                    <ClientSideEvents CheckedChanged="DevAV.SaveCustomFilterCheckBox_CheckedChanged" />
+                                                                </dx:ASPxCheckBox>
+                                                                <dx:ASPxTextBox ID="CustomFilterTextBox" ClientInstanceName="customFilterTextBox" runat="server" NullText="Enter a name for your custom filter..." Width="100%" MaxLength="50" OnLoad="CustomFilterTextBox_Load">
+                                                                    <ValidationSettings ErrorDisplayMode="None" />
+                                                                    <ClientSideEvents Validation="DevAV.CustomFilterTextBox_Validation" />
+                                                                </dx:ASPxTextBox>
+                                                                <dx:ASPxButton ID="CancelFilterButton" runat="server" AutoPostBack="False" UseSubmitBehavior="False" Text="Cancel">
+                                                                    <ClientSideEvents Click="DevAV.CancelFilterButton_Click" />
+                                                                </dx:ASPxButton>
+                                                                <dx:ASPxButton ID="SaveFilterButton" runat="server" AutoPostBack="False" UseSubmitBehavior="False" Text="OK" Width="82" OnClick="SaveFilterButton_Click">
+                                                                    <ClientSideEvents Click="DevAV.SaveFilterButton_Click" />
+                                                                </dx:ASPxButton>
+                                                            </dx:PopupControlContentControl>
+                                                        </ContentCollection>
+                                                    </dx:ASPxPopupControl>
+                                                </dx:PanelContent>
+                                            </PanelCollection>
+                                            <ClientSideEvents EndCallback="DevAV.MainCallbackPanel_EndCallback" />
+                                        </dx:ASPxCallbackPanel>
+                                    </dx:SplitterContentControl>
+                                </ContentCollection>
+                            </dx:SplitterPane>
+                        </Panes>
+                    </dx:SplitterPane>
+                </Panes>
+            </dx:SplitterPane>
+            <dx:SplitterPane Size="90px">
+                <Panes>
+                    <dx:SplitterPane Size="210px" PaneStyle-CssClass="footerImagePane">
+                        <ContentCollection>
+                            <dx:SplitterContentControl ID="SplitterContentControl5" runat="server">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    <dx:ASPxHyperLink ID="hlLogo" runat="server" ImageUrl="~/Content/Images/FooterLogo.png" NavigateUrl="http://devexpress.com"></dx:ASPxHyperLink>
+                                </asp:ContentPlaceHolder>
+                            </dx:SplitterContentControl>
+                        </ContentCollection>
+                    </dx:SplitterPane>
+                    <dx:SplitterPane PaneStyle-CssClass="footerTextPane">
+                        <ContentCollection>
+                            <dx:SplitterContentControl ID="SplitterContentControl6" runat="server">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                    <div>
+                                        Powered by DevExpress ASP.NET Controls<br />
+                                        <a href="https://go.devexpress.com/Demo_2013_DownloadTrial.aspx">Download your free 30-day trial</a>
+                                    </div>
+                                </asp:ContentPlaceHolder>
+                            </dx:SplitterContentControl>
+                        </ContentCollection>
+                    </dx:SplitterPane>
+                </Panes>
+            </dx:SplitterPane>
+        </Panes>
+        <ClientSideEvents PaneResized="DevAV.Splitter_PaneResized" />
+    </dx:ASPxSplitter>
+</div>
+<dx:ASPxPopupControl ID="PageViewerPopup" runat="server" ClientInstanceName="pageViewerPopup" Width="1000" Height="840" CssClass="pageViewerPopup"
+    PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter"
+    AllowDragging="true" DragElement="Header" PopupAnimationType="Fade" Modal="true" CloseAction="CloseButton" CloseOnEscape="true" OnCustomJSProperties="PageViewerPopup_CustomJSProperties">
+    <ClientSideEvents Shown="DevAV.PageViewerPopup_Shown" CloseUp="DevAV.PageViewerPopup_CloseUp" />
+</dx:ASPxPopupControl>
+<dx:ASPxLoadingPanel ID="LoadingPanel" ClientInstanceName="loadingPanel" runat="server" Modal="true"></dx:ASPxLoadingPanel>
+<dx:ASPxPopupControl ID="ReadOnlyPopup" runat="server" ClientInstanceName="readOnlyPopup" Width="500" ShowCloseButton="False"
+    HeaderText="Data modifications are not allowed in the online demo."
+    PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
+    AllowDragging="True" DragElement="Window" PopupAnimationType="Fade" CloseOnEscape="true" Modal="True" CloseAction="OuterMouseClick">
+    <ContentCollection>
+        <dx:PopupControlContentControl runat="server">
+            <div class="aboutDialog">
+                If you need to test data editing functionality, 
+                please install DevExpress components on your machine and run the demo locally.
+            </div>
+        </dx:PopupControlContentControl>
+    </ContentCollection>
+    <ContentStyle Paddings-PaddingBottom="20" /> <%--TODO try to use css instead--%>
+</dx:ASPxPopupControl>
+<dx:ASPxPopupControl ID="EditMessagePopup" runat="server" ClientInstanceName="editMessagePopup" Width="600" 
+    PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter"
+    ShowHeader="false" CloseOnEscape="true" Modal="true" OnCustomJSProperties="EditMessagePopup_CustomJSProperties" />
+<asp:XmlDataSource ID="ToolbarMenuDataSource" runat="server" DataFile="~/App_Data/Menu.xml" OnInit="ToolbarMenuDataSource_Init" />
+</asp:Content>

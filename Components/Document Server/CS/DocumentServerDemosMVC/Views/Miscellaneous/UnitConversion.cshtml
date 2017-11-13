@@ -1,0 +1,123 @@
+﻿@model MiscellaneousUnitConversionModel
+
+<script type="text/javascript">
+    // <![CDATA[
+    function OnBeginUpdate() {
+        loadingPanel.Show();
+        document.unitConversionLock = true;
+    }
+    function OnEndUpdate() {
+        document.unitConversionLock = false;
+        loadingPanel.Hide();
+    }
+    // ]]>
+</script>
+
+@Html.DevExpress().PageControl(
+    settings => {
+        settings.Name = "mainPageControl";
+        settings.ActiveTabIndex = 0;
+        settings.Width = Unit.Percentage(100);
+        settings.ControlStyle.BorderRight.BorderWidth = Unit.Pixel(0);
+        settings.ControlStyle.BorderRight.BorderStyle = BorderStyle.None;
+        settings.Styles.Content.Paddings.PaddingTop = Unit.Pixel(21);
+        settings.Styles.Content.Paddings.PaddingRight = Unit.Pixel(0);
+        settings.Styles.Content.Paddings.PaddingBottom = Unit.Pixel(1);
+
+        MVCxTabPage tabPageMass = new MVCxTabPage();
+        tabPageMass.Name = "TPMass";
+        tabPageMass.Text = "Weight and Mass";
+        tabPageMass.SetContent(() => {
+            using (Ajax.BeginForm("UnitConversionMassForm", "Miscellaneous",
+                    new AjaxOptions {
+                        HttpMethod = "POST",
+                        OnBegin = "function(){ OnBeginUpdate(); }",
+                        OnComplete = "function(){ OnEndUpdate(); }",
+                        UpdateTargetId = "TPMassContainer",
+                        InsertionMode = InsertionMode.Replace
+                    },
+                    new {
+                        id = "UnitConversionMassForm",
+                    })) {
+                ViewContext.Writer.Write("<div id=\"TPMassContainer\">");
+                Html.RenderPartial("UnitConversionMassPartial", Model.MassModel);
+                ViewContext.Writer.Write("</div>");
+            }
+        });
+        settings.TabPages.Add(tabPageMass);
+
+        MVCxTabPage tabPageDistanceAndSquare = new MVCxTabPage();
+        tabPageDistanceAndSquare.Name = "TPDistanceAndSquare";
+        tabPageDistanceAndSquare.Text = "Distance and Square";
+        tabPageDistanceAndSquare.SetContent(() => {
+            using (Ajax.BeginForm("UnitConversionDistanceAndSquareForm", "Miscellaneous",
+                    new AjaxOptions {
+                        HttpMethod = "POST",
+                        OnBegin = "function(){ OnBeginUpdate(); }",
+                        OnComplete = "function(){ OnEndUpdate(); }",
+                        UpdateTargetId = "TPDistanceAndSquareContainer",
+                        InsertionMode = InsertionMode.Replace
+                    },
+                    new {
+                        id = "UnitConversionDistanceAndSquareForm",
+                    })) {
+                ViewContext.Writer.Write("<div id=\"TPDistanceAndSquareContainer\">");
+                Html.RenderPartial("UnitConversionDistanceAndSquarePartial", Model.DistanceAndSquareModel);
+                ViewContext.Writer.Write("</div>");
+            }
+        });
+        settings.TabPages.Add(tabPageDistanceAndSquare);
+
+        MVCxTabPage tabPageTemperatureAndPressure = new MVCxTabPage();
+        tabPageTemperatureAndPressure.Name = "TPTemperatureAndPressure";
+        tabPageTemperatureAndPressure.Text = "Temperature and Pressuree";
+        tabPageTemperatureAndPressure.SetContent(() => {
+            using (Ajax.BeginForm("UnitConversionTemperatureAndPressureForm", "Miscellaneous",
+                    new AjaxOptions {
+                        HttpMethod = "POST",
+                        OnBegin = "function(){ OnBeginUpdate(); }",
+                        OnComplete = "function(){ OnEndUpdate(); }",
+                        UpdateTargetId = "TPTemperatureAndPressureContainer",
+                        InsertionMode = InsertionMode.Replace
+                    },
+                    new {
+                        id = "UnitConversionTemperatureAndPressureForm",
+                    })) {
+                ViewContext.Writer.Write("<div id=\"TPTemperatureAndPressureContainer\">");
+                Html.RenderPartial("UnitConversionTemperatureAndPressurePartial", Model.TemperatureAndPressureModel);
+                ViewContext.Writer.Write("</div>");
+            }
+        });
+        settings.TabPages.Add(tabPageTemperatureAndPressure);
+
+        MVCxTabPage tabPageForceAndPower = new MVCxTabPage();
+        tabPageForceAndPower.Name = "TPForceAndPower";
+        tabPageForceAndPower.Text = "Force and Power";
+        tabPageForceAndPower.SetContent(() => {
+            using (Ajax.BeginForm("UnitConversionForceAndPowerForm", "Miscellaneous",
+                    new AjaxOptions {
+                        HttpMethod = "POST",
+                        OnBegin = "function(){ OnBeginUpdate(); }",
+                        OnComplete = "function(){ OnEndUpdate(); }",
+                        UpdateTargetId = "TPForceAndPowerContainer",
+                        InsertionMode = InsertionMode.Replace
+                    },
+                    new {
+                        id = "UnitConversionForceAndPowerForm",
+                    })) {
+                ViewContext.Writer.Write("<div id=\"TPForceAndPowerContainer\">");
+                Html.RenderPartial("UnitConversionForceAndPowerPartial", Model.ForceAndPowerModel);
+                ViewContext.Writer.Write("</div>");
+            }
+        });
+        settings.TabPages.Add(tabPageForceAndPower);
+    }
+).GetHtml()
+
+@Html.DevExpress().LoadingPanel(
+    settings => {
+        settings.Name = "loadingPanel";
+        settings.Modal = true;
+        settings.ContainerElementID = "mainPageControl";
+        settings.Styles.LoadingDiv.BackColor = Color.White;
+    }).GetHtml()

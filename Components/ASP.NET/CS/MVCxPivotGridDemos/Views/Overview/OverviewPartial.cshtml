@@ -1,0 +1,11 @@
+﻿@Html.DevExpress().PivotGrid(settings => {
+    settings.Name = "pivotGrid";
+    settings.CallbackRouteValues = new { Controller = "Overview", Action = "OverviewPartial" };
+    settings.Width = Unit.Percentage(100);
+    settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto;
+
+    settings.Fields.Add("Extended_Price", PivotArea.DataArea);
+    settings.Fields.Add("CategoryName", PivotArea.RowArea);
+    settings.Fields.Add("Country", PivotArea.ColumnArea);
+    settings.Fields.Add("ProductName", PivotArea.FilterArea);
+}).Bind(Model).GetHtml()

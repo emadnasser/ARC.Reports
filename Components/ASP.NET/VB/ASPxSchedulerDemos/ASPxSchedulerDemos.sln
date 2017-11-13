@@ -1,0 +1,42 @@
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ASPxSchedulerDemos", ".\", "{E500E80A-7E01-4171-BB41-4C7F5EA572E7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/ASPxSchedulerDemos"
+		Debug.AspNetCompiler.PhysicalPath = ".\"
+		Debug.AspNetCompiler.TargetPath = "..\PrecompiledWeb\ASPxSchedulerDemos\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ASPxSchedulerDemos"
+		Release.AspNetCompiler.PhysicalPath = ".\"
+		Release.AspNetCompiler.TargetPath = "..\PrecompiledWeb\ASPxSchedulerDemos\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = ".\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E500E80A-7E01-4171-BB41-4C7F5EA572E7}.Debug|.NET.ActiveCfg = Debug|.NET
+		{E500E80A-7E01-4171-BB41-4C7F5EA572E7}.Debug|.NET.Build.0 = Debug|.NET
+		{E500E80A-7E01-4171-BB41-4C7F5EA572E7}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{E500E80A-7E01-4171-BB41-4C7F5EA572E7}.Release|.NET.ActiveCfg = Debug|.NET
+		{E500E80A-7E01-4171-BB41-4C7F5EA572E7}.Release|.NET.Build.0 = Debug|.NET
+		{E500E80A-7E01-4171-BB41-4C7F5EA572E7}.Release|Any CPU.ActiveCfg = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+		StartPage="Default.aspx"
+	EndGlobalSection
+EndGlobal

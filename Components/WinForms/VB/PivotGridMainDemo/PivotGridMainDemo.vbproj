@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ProjectGuid>{1F53D8D8-E994-418A-B11A-52CD7368047A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PivotGridMainDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.DemoData.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Charts.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <Name>DevExpress.XtraEditors.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2">
+      <Name>DevExpress.XtraNavBar.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v16.2">
+      <Name>DevExpress.XtraPivotGrid.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core">
+      <Name>DevExpress.PivotGrid.v16.2.Core</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions"><Private>False</Private></Reference>
+    <Reference Include="System.Data.Linq"><Private>False</Private></Reference>
+    <Reference Include="System.Design"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Web"><Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DemoControls.vb" />
+    <Compile Include="DemosRegistration.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dsReports.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSalesPerson.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSalesPerson.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportForm.Designer.vb">
+      <DependentUpon>ExportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\OLAPConfigurator.vb" />
+    <Compile Include="Modules\About.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AsyncMode.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AsyncMode.Designer.vb">
+      <DependentUpon>AsyncMode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AsyncModeHelper.vb" />
+    <Compile Include="Modules\CellInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CellInfo.Designer.vb">
+      <DependentUpon>CellInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartGeneralOptions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartGeneralOptions.Designer.vb">
+      <DependentUpon>ChartGeneralOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AddNewBonus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\AddNewBonus.Designer.vb">
+      <DependentUpon>AddNewBonus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomChartData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomChartData.Designer.vb">
+      <DependentUpon>CustomChartData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ConditionalSortBySummary.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ConditionalSortBySummary.Designer.vb">
+      <DependentUpon>ConditionalSortBySummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ConditionItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ConditionItem.Designer.vb">
+      <DependentUpon>ConditionItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CompactLayout.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CompactLayout.Designer.vb">
+      <DependentUpon>CompactLayout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomCellValue.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomCellValue.Designer.vb">
+      <DependentUpon>CustomCellValue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DatabaseHelper.vb" />
+    <Compile Include="Modules\FilterPopup.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FilterPopup.Designer.vb">
+      <DependentUpon>FilterPopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FormatRules.Designer.vb">
+      <DependentUpon>FormatRules.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FormatRules.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmSQLConnector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\frmSQLConnector.Designer.vb">
+      <DependentUpon>frmSQLConnector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ServerMode.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ServerMode.Designer.vb">
+      <DependentUpon>ServerMode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UnboundExpressions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UnboundExpressions.Designer.vb">
+      <DependentUpon>UnboundExpressions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDrawEvents.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDrawEvents.Designer.vb">
+      <DependentUpon>CustomDrawEvents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomerReports.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomerReports.Designer.vb">
+      <DependentUpon>CustomerReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomGroupInterval.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomGroupInterval.Designer.vb">
+      <DependentUpon>CustomGroupInterval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\InplaceEditors.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\InplaceEditors.Designer.vb">
+      <DependentUpon>InplaceEditors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OLAPDrillDown.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OLAPDrillDown.Designer.vb">
+      <DependentUpon>OLAPDrillDown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FieldsCustomization.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FieldsCustomization.Designer.vb">
+      <DependentUpon>FieldsCustomization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmStyleConditions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\frmStyleConditions.Designer.vb">
+      <DependentUpon>frmStyleConditions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GroupInterval.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\GroupInterval.Designer.vb">
+      <DependentUpon>GroupInterval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Groups.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Groups.Designer.vb">
+      <DependentUpon>Groups.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HeadersAreaInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\HeadersAreaInfo.Designer.vb">
+      <DependentUpon>HeadersAreaInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HitInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\HitInfo.Designer.vb">
+      <DependentUpon>HitInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MultipleTotals.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MultipleTotals.Designer.vb">
+      <DependentUpon>MultipleTotals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OLAP.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OLAP.Designer.vb">
+      <DependentUpon>OLAP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OLAPCustomTotals.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OLAPCustomTotals.Designer.vb">
+      <DependentUpon>OLAPCustomTotals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OLAPKPI.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OLAPKPI.Designer.vb">
+      <DependentUpon>OLAPKPI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OrderReports.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OrderReports.Designer.vb">
+      <DependentUpon>OrderReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Prefilter.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Prefilter.Designer.vb">
+      <DependentUpon>Prefilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProductReports.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ProductReports.Designer.vb">
+      <DependentUpon>ProductReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RunningTotal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RunTimeChangeSummaryType.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RunTimeChangeSummaryType.Designer.vb">
+      <DependentUpon>RunTimeChangeSummaryType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SingleTotal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SingleTotal.Designer.vb">
+      <DependentUpon>SingleTotal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SortBySummary.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SortBySummary.Designer.vb">
+      <DependentUpon>SortBySummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SummaryVariation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SummaryVariation.Designer.vb">
+      <DependentUpon>SummaryVariation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TopValues.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\TopValues.Designer.vb">
+      <DependentUpon>TopValues.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TotalsLocation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\TotalsLocation.Designer.vb">
+      <DependentUpon>TotalsLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ucValidation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ucValidation.designer.vb">
+      <DependentUpon>ucValidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UnboundColumns.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UnboundColumns.Designer.vb">
+      <DependentUpon>UnboundColumns.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Validation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Validation.Designer.vb">
+      <DependentUpon>Validation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ValueInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ValueInfo.Designer.vb">
+      <DependentUpon>ValueInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OLAPConnectionDesigner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\OLAPConnectionDesigner.Designer.vb">
+      <DependentUpon>OLAPConnectionDesigner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RunningTotal.Designer.vb">
+      <DependentUpon>RunningTotal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PivotGridDemoDB.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PivotGridDemoDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="ProgressForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.vb">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsDescriptions.vb" />
+    <EmbeddedResource Include="CodeInfo\AsyncMode.xml" />
+    <EmbeddedResource Include="CodeInfo\ChartGeneralOptions.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeInfo\CompactLayout.xml" />
+    <EmbeddedResource Include="CodeInfo\ConditionalSortBySummary.xml" />
+    <EmbeddedResource Include="CodeInfo\CustomCellValue.xml" />
+    <EmbeddedResource Include="CodeInfo\CustomChartData.xml" />
+    <EmbeddedResource Include="CodeInfo\CustomDrawEvents.xml" />
+    <EmbeddedResource Include="CodeInfo\CustomerReports.xml" />
+    <EmbeddedResource Include="CodeInfo\CustomGroupInterval.xml" />
+    <EmbeddedResource Include="CodeInfo\FieldsCustomization.xml" />
+    <EmbeddedResource Include="CodeInfo\FilterPopup.xml" />
+    <EmbeddedResource Include="CodeInfo\GroupInterval.xml" />
+    <EmbeddedResource Include="CodeInfo\Groups.xml" />
+    <EmbeddedResource Include="CodeInfo\HitInfo.xml" />
+    <EmbeddedResource Include="CodeInfo\InplaceEditors.xml" />
+    <EmbeddedResource Include="CodeInfo\MultipleTotals.xml" />
+    <EmbeddedResource Include="CodeInfo\OLAP.xml" />
+    <EmbeddedResource Include="CodeInfo\OlapCustomTotals.xml" />
+    <EmbeddedResource Include="CodeInfo\OLAPDrillDown.xml" />
+    <EmbeddedResource Include="CodeInfo\OLAPKPI.xml" />
+    <EmbeddedResource Include="CodeInfo\OrderReports.xml" />
+    <EmbeddedResource Include="CodeInfo\Prefilter.xml" />
+    <EmbeddedResource Include="CodeInfo\ProductReports.xml" />
+    <EmbeddedResource Include="CodeInfo\RunningTotal.xml" />
+    <EmbeddedResource Include="CodeInfo\RunTimeChangeSummaryType.xml" />
+    <EmbeddedResource Include="CodeInfo\SingleTotal.xml" />
+    <EmbeddedResource Include="CodeInfo\SortBySummary.xml" />
+    <EmbeddedResource Include="CodeInfo\SummaryVariation.xml" />
+    <EmbeddedResource Include="CodeInfo\TopValues.xml" />
+    <EmbeddedResource Include="CodeInfo\TotalsLocation.xml" />
+    <EmbeddedResource Include="CodeInfo\UnboundColumns.xml" />
+    <EmbeddedResource Include="CodeInfo\UnboundExpressions.xml" />
+    <EmbeddedResource Include="CodeInfo\Validation.xml" />
+    <EmbeddedResource Include="AppIcon.ico" />
+    <EmbeddedResource Include="CodeInfo\ServerMode.xml" />
+    <EmbeddedResource Include="CodeInfo\FormatRules.xml" />
+    <Content Include="dsReports.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReports.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="dsSalesPerson.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalesPerson.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Images\XtraPivotGrid.png" />
+    <EmbeddedResource Include="Images\XtraPivotGrid_light.png" />
+    <EmbeddedResource Include="ExportForm.resx">
+      <DependentUpon>ExportForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\categories.bmp" />
+    <EmbeddedResource Include="Images\headers.bmp" />
+    <EmbeddedResource Include="Modules\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AsyncMode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AsyncMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CellInfo.resx">
+      <DependentUpon>CellInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartGeneralOptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChartGeneralOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AddNewBonus.resx">
+      <DependentUpon>AddNewBonus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomChartData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomChartData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ConditionalSortBySummary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConditionalSortBySummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ConditionItem.resx">
+      <DependentUpon>ConditionItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CompactLayout.resx">
+      <DependentUpon>CompactLayout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomCellValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomCellValue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDrawEvents.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomDrawEvents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomerReports.resx">
+      <DependentUpon>CustomerReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomGroupInterval.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomGroupInterval.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FieldsCustomization.resx">
+      <DependentUpon>FieldsCustomization.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FilterPopup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FilterPopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FormatRules.resx">
+      <DependentUpon>FormatRules.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmSQLConnector.resx">
+      <DependentUpon>frmSQLConnector.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmStyleConditions.resx">
+      <DependentUpon>frmStyleConditions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GroupInterval.resx">
+      <DependentUpon>GroupInterval.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Groups.resx">
+      <DependentUpon>Groups.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\HeadersAreaInfo.resx">
+      <DependentUpon>HeadersAreaInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\HitInfo.resx">
+      <DependentUpon>HitInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\InplaceEditors.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InplaceEditors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MultipleTotals.resx">
+      <DependentUpon>MultipleTotals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OLAP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OLAP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OLAPConnectionDesigner.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OLAPConnectionDesigner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OLAPCustomTotals.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OLAPCustomTotals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OLAPDrillDown.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OLAPDrillDown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OLAPKPI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OLAPKPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OrderReports.resx">
+      <DependentUpon>OrderReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Prefilter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Prefilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ProductReports.resx">
+      <DependentUpon>ProductReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RunningTotal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RunningTotal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RunTimeChangeSummaryType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RunTimeChangeSummaryType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ServerMode.resx">
+      <DependentUpon>ServerMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SingleTotal.resx">
+      <DependentUpon>SingleTotal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SortBySummary.resx">
+      <DependentUpon>SortBySummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SummaryVariation.resx">
+      <DependentUpon>SummaryVariation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\TopValues.resx">
+      <DependentUpon>TopValues.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\TotalsLocation.resx">
+      <DependentUpon>TotalsLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ucValidation.resx">
+      <DependentUpon>ucValidation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UnboundColumns.resx">
+      <DependentUpon>UnboundColumns.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UnboundExpressions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UnboundExpressions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Validation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Validation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ValueInfo.resx">
+      <DependentUpon>ValueInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    
+    
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

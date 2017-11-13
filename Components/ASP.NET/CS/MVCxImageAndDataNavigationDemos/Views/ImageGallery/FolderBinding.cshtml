@@ -1,0 +1,26 @@
+﻿@model ImageGalleryFolderBindingDemoOptions
+<script type="text/javascript">
+    function onOptionsChanged() {
+        $("form").submit();
+    }
+</script>
+@using(Html.BeginForm()) {
+    
+    @Html.DevExpress().FormLayout(settings => {
+        settings.Name = "settingsFormLayout";
+        settings.Items.Add(m => m.ImageSourceFolder, item => {
+            item.NestedExtension().ComboBox(comboBox => {
+                comboBox.Properties.ClientSideEvents.ValueChanged = "onOptionsChanged"; 
+                comboBox.Properties.DataSource = Model.ImageSourceFolders; 
+            });
+        });
+        settings.Items.Add(m => m.ApplyWatermark, item => { 
+            item.RequiredMarkDisplayMode = FieldRequiredMarkMode.Hidden;
+            item.NestedExtension().CheckBox(checkBox => {
+                checkBox.Properties.ClientSideEvents.CheckedChanged = "onOptionsChanged";
+            }); 
+        });
+    }).GetHtml()
+
+    @Html.Partial("FolderBindingPartial", Model)
+}

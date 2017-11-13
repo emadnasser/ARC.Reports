@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Templates>
+  <Template>
+    <Name>Hello,</Name>
+    <Text><![CDATA[Hello,<br />]]></Text>
+    <ToolTip>Hello,</ToolTip>
+  </Template>
+  <Template>
+    <Name>Hi,</Name>
+    <Text>
+      <![CDATA[Hi,<br />]]>
+    </Text>
+    <ToolTip>Hi,</ToolTip>
+  </Template>
+  <Template>
+    <Name>Dear Sir or Madam</Name>
+    <Text>
+      <![CDATA[Dear Sir or Madam<br />]]>
+    </Text>
+    <ToolTip>Dear Sir or Madam</ToolTip>
+  </Template>
+  <Template>
+    <Name>Regards,</Name>
+    <Text>
+      <![CDATA[Regards,<br />]]>
+    </Text>
+    <ToolTip>Regards,</ToolTip>
+    <BeginGroup>true</BeginGroup>
+  </Template>
+  <Template>
+    <Name>Best regards,</Name>
+    <Text>
+      <![CDATA[Best regards,]]>
+    </Text>
+    <ToolTip>Best regards,</ToolTip>
+  </Template>
+  <Template>
+    <Name>Sincerely yours,</Name>
+    <Text>
+      <![CDATA[Sincerely yours,]]>
+    </Text>
+    <ToolTip>Sincerely yours,</ToolTip>
+  </Template>
+  <Template>
+    <Name>Thanks,</Name>
+    <Text>
+      <![CDATA[Thanks,]]>
+    </Text>
+    <ToolTip>Thanks,</ToolTip>
+  </Template>
+  
+  <Template>
+  <Name>Signature</Name>
+    <Text>
+      <![CDATA[<br /><span style="color:#555555; font-style: italic;">
+      -- 
+      <br />
+      John,
+      <br />
+      Doe Corp. 
+      <br />
+      </span>
+      ]]>
+    </Text>
+    <ToolTip>Signature</ToolTip>
+    <BeginGroup>true</BeginGroup>
+  </Template>
+
+  <Template>
+    <Name>Post scriptum</Name>
+    <Text>
+      <![CDATA[<br /><i>P.S. To learn more about DevExpress ASP.NET product line, visit <a href="http://devexpress.com/Products/NET/Controls/ASP/">http://devexpress.com/Products/NET/Controls/ASP/</a></i>
+      ]]>
+  </Text>
+  <ToolTip>Post scriptum</ToolTip>
+  <BeginGroup>true</BeginGroup>
+</Template>
+</Templates>

@@ -1,0 +1,28 @@
+<Application
+    x:Class="FeatureDemo.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Core="using:DevExpress.Core"
+    xmlns:Common="using:FeatureDemo.Common"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <Core:SystemColorsSchemeDictionaryLoader x:Key="SystemColorsSchemeDictionaryLoader"/>
+                </ResourceDictionary>
+                <Common:CommonStyles />
+                <ResourceDictionary Source="RibbonDemo/RibbonDemoCommonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <x:String x:Key="AppName">FeatureDemo</x:String>
+            <x:String x:Key="ColorSchemesIconData">
+                [F#FFFFFF M0,0 L5,0 L5,5 L0,5z][F#C0C0C0 M7,0 L12,0 L12,5 L7,5z][F#909090 M14,0 L19,0 L19,5 L14,5z]
+                [F#C0C0C0 M0,7 L5,7 L5,12 L0,12z][F#707070 M7,7 L12,7 L12,12 L7,12z][F#C0C0C0 M14,7 L19,7 L19,12 L14,12z]
+                [F#909090 M0,14 L5,14 L5,19 L0,19z][F#C0C0C0 M7,14 L12,14 L12,19 L7,19z][F#FFFFFF M14,14 L19,14 L19,19 L14,19z]</x:String>
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

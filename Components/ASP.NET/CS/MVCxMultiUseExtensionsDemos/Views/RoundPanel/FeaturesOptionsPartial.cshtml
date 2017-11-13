@@ -1,0 +1,87 @@
+﻿@{ RoundPanelFeaturesDemoOptions options = (RoundPanelFeaturesDemoOptions)ViewData["Options"]; }
+<div style="padding: 0px 20px 20px 40px; display: inline-block;">
+    @Html.DevExpress().FormLayout(settings => {
+        settings.Name = "formLayout";
+        bool isGroupBoxView = options.View == DevExpress.Web.View.GroupBox;
+        var viewSettings = settings.Items.AddGroupItem(groupSettings => {
+            groupSettings.GroupBoxDecoration = GroupBoxDecoration.None;
+        });
+
+        viewSettings.Items.Add(itemSetting => {
+            itemSetting.Caption = "View";
+            itemSetting.CaptionCellStyle.Paddings.Padding = 0;
+        });
+        viewSettings.Items.AddGroupItem(groupSettings => {
+            groupSettings.GroupBoxDecoration = GroupBoxDecoration.None;
+            groupSettings.Items.Add(item => {
+                item.ShowCaption = DefaultBoolean.False;
+            }).SetNestedContent(() => {
+                Html.DevExpress().RadioButtonList(rblSettings => {
+                    rblSettings.Name = "View";
+                    rblSettings.Properties.Items.Add(new ListEditItem() {
+                        Selected = !isGroupBoxView, Text = "Standart", Value = "Standart"
+                    });
+                    rblSettings.Properties.Items.Add(new ListEditItem() {
+                        Selected = isGroupBoxView, Text = "GroupBox", Value = "GroupBox"
+                    });
+                    rblSettings.ControlStyle.Border.BorderColor = Color.Transparent;
+                }).Render();
+            });
+        });
+        var commonSettings = settings.Items.AddGroupItem(groupSettings => {
+            groupSettings.GroupBoxDecoration = GroupBoxDecoration.None;
+        });
+        commonSettings.Items.Add(itemSettings => {
+            itemSettings.ShowCaption = DefaultBoolean.False;
+        }).SetNestedContent(() => {
+            Html.DevExpress().CheckBox(cbSettings => {
+                cbSettings.Text = "Show Header";
+                cbSettings.Width = 200;
+                cbSettings.Checked = options.ShowHeader;
+                cbSettings.Name = "ShowHeader";
+            }).Render();
+        });
+        commonSettings.Items.AddGroupItem(groupSettings => {
+            groupSettings.GroupBoxDecoration = GroupBoxDecoration.None;
+
+            groupSettings.Items.Add(itemSettings => {
+                itemSettings.ShowCaption = DefaultBoolean.False;
+            }).SetNestedContent(() => {
+                Html.DevExpress().CheckBox(cbSettings => {
+                    cbSettings.Text = "AllowCollapsingByHeaderClick";
+                    cbSettings.Checked = options.AllowCollapsingByHeaderClick;
+                    cbSettings.Name = "AllowCollapsingByHeaderClick";
+                }).Render();
+            });
+
+            groupSettings.Items.Add(itemSettings => {
+                itemSettings.ShowCaption = DefaultBoolean.False;
+            }).SetNestedContent(() => {
+                Html.DevExpress().CheckBox(cbSettings => {
+                    cbSettings.Text = "ShowCollapseButton";
+                    cbSettings.Checked = options.ShowCollapseButton;
+                    cbSettings.Name = "ShowCollapseButton";
+                }).Render();
+            });
+
+            groupSettings.Items.Add(itemSettings => {
+                itemSettings.ShowCaption = DefaultBoolean.False;
+            }).SetNestedContent(() => {
+                Html.DevExpress().CheckBox(cbSettings => {
+                    cbSettings.Text = "EnableAnimation";
+                    cbSettings.Checked = options.EnableAnimation;
+                    cbSettings.Name = "EnableAnimation";
+                }).Render();
+            });
+        });
+        commonSettings.Items.Add(itemSettings => {
+            itemSettings.ShowCaption = DefaultBoolean.False;
+        }).SetNestedContent(() => {
+            Html.DevExpress().Button(buttonSetting => {
+                buttonSetting.Name = "submitButton";
+                buttonSetting.Text = "Apply";
+                buttonSetting.UseSubmitBehavior = true;
+            }).Render();
+        });
+    }).GetHtml()
+</div>

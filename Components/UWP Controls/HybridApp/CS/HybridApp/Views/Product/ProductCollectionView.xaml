@@ -1,0 +1,123 @@
+<Page
+    x:Class="HybridApp.Views.ProductCollectionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Model="using:HybridApp.HybridAppService"
+    xmlns:ViewModel="using:HybridApp.ViewModels"
+    xmlns:local="using:HybridApp.Views"
+    xmlns:Core="using:DevExpress.Core"
+    xmlns:Common="using:HybridApp.Common"
+    xmlns:Grid="using:DevExpress.UI.Xaml.Grid"
+    xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    xmlns:dxmvvmui="using:DevExpress.Mvvm.UI"
+    xmlns:dxmvvmi="using:DevExpress.Mvvm.UI.Interactivity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    NavigationCacheMode="Enabled"
+    Transitions="{StaticResource CollectionViewTransitions}"
+    mc:Ignorable="d">
+    <dxmvvmi:Interaction.Behaviors>
+        <dxmvvmui:EventToCommand EventName="Loaded" Command="{x:Bind ViewModel.LoadedCommand}"/>
+    </dxmvvmi:Interaction.Behaviors>
+    <local:CollectionControl>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1350" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="sales.Visible" Value="True" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="backorder.Visible" Value="True" />
+                        <Setter Target="sales.Visible" Value="False" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="cost.Visible" Value="True" />
+                        <Setter Target="salePrice.Visible" Value="True" />
+                        <Setter Target="backorder.Visible" Value="False" />
+                        <Setter Target="sales.Visible" Value="False" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="cost.Visible" Value="False" />
+                        <Setter Target="salePrice.Visible" Value="False" />
+                        <Setter Target="backorder.Visible" Value="False" />
+                        <Setter Target="sales.Visible" Value="False" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <local:CollectionControl.Header>
+            <local:HybridAppHeader LeftHeader="PRODUCT" RightHeader="Categories" Margin="20,0,0,0"/>
+        </local:CollectionControl.Header>
+        <local:CollectionControl.LeftCollapsibleContent>
+            <local:StaticFiltersPanel/>
+        </local:CollectionControl.LeftCollapsibleContent>
+        <local:CollectionControl.MainContent>
+            <Grid:GridControl Name="gridControl" NavigationStyle="Row"
+                        ItemsSource="{x:Bind ViewModel.Entities, Mode=OneWay}"
+                        SelectedItem="{x:Bind ViewModel.SelectedEntity, Mode=TwoWay, Converter={StaticResource simpleConverter}}"
+                        SelectionMode="RowExtended" ShowSearchPanelMode="Never"
+                        AllowEditing="False" AutoWidth="True" ShowGroupPanel="False"
+                        AllowColumnMoving="False" ShowTotalSummary="True"
+                        SearchString="{x:Bind searchBox.Text, Mode=OneWay}" CustomSummary="CustomSummary">
+                <dxmvvmi:Interaction.Behaviors>
+                    <dxmvvmui:EventToCommand EventName="DoubleTapped" Command="{Binding EditCommand}" PassEventArgsToCommand="True" EventArgsConverter="{StaticResource GridControlEventArgsConverter}"/>
+                </dxmvvmi:Interaction.Behaviors>
+                <Grid:GridControl.Columns>
+                    <Grid:GridTextColumn x:Name="name" FieldName="Name" MinWidth="150" Width="350"/>
+                    <Grid:GridTextColumn x:Name="cost" FieldName="Cost" MinWidth="80" Width="80"/>
+                    <Grid:GridTextColumn x:Name="salePrice" FieldName="SalePrice" MinWidth="110" Width="110"/>
+                    <Grid:GridTextColumn x:Name="retailPrice" FieldName="RetailPrice" MinWidth="120" Width="120"/>
+                    <Grid:GridTextColumn x:Name="inventory" FieldName="CurrentInventory" Header="Inventory" MinWidth="130" Width="130" TotalSummaryContentStyle="{StaticResource inventoryColumnTotalSummaryContentStyle}"/>
+                    <Grid:GridTextColumn x:Name="backorder" FieldName="Backorder" MinWidth="115" Width="115"/>
+                    <Grid:GridTemplateColumn x:Name="sales" FieldName="MonthlySales" Header="Monthly Sales (FY2013)" Width="300" FixedWidth="True" TotalSummaryContentStyle="{StaticResource monthlySalesColumnTotalSummaryContentStyle}">
+                        <Grid:GridTemplateColumn.CellTemplate>
+                            <DataTemplate x:DataType="Model:Product">
+                                <Common:WaitIndicator ActiveObject="{x:Bind MonthlySales}">
+                                    <local:DemoSparkColumnChart Scale="25000" Points="{x:Bind MonthlySales}" Fill="#FF2F51A5" MinWidth="200"/>
+                                </Common:WaitIndicator>
+                            </DataTemplate>
+                        </Grid:GridTemplateColumn.CellTemplate>
+                    </Grid:GridTemplateColumn>
+                </Grid:GridControl.Columns>
+                <Grid:GridControl.TotalSummary>
+                    <Grid:GridSummaryItem SummaryType="Sum" FieldName="CurrentInventory" DisplayFormat="{}{0}" />
+                    <Grid:GridSummaryItem SummaryType="Custom" FieldName="MonthlySales" DisplayFormat="{}{0:c}" />
+                </Grid:GridControl.TotalSummary>
+            </Grid:GridControl>
+        </local:CollectionControl.MainContent>
+        <local:CollectionControl.Footer>
+            <AppBar HorizontalAlignment="Stretch" Grid.Row="2">
+                <local:BottomPanel>
+                    <local:BottomPanel.CentralColumn>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                            <AppBarButton Label="New" Command="{x:Bind ViewModel.NewCommand}" HorizontalAlignment="Center" Common:AppBarExtensions.ImageSource="ms-appx:/Resources/Toolbar/New.png"/>
+                            <AppBarButton Label="Edit" Click="{x:Bind ViewModel.EditEntity}"
+                                          CommandParameter="{x:Bind ViewModel.SelectedEntity, Mode=OneWay}" HorizontalAlignment="Center" Common:AppBarExtensions.ImageSource="ms-appx:/Resources/Toolbar/Edit.png"/>
+                        </StackPanel>
+                    </local:BottomPanel.CentralColumn>
+                    <local:BottomPanel.RightColumn>
+                        <AutoSuggestBox x:Name="searchBox" QueryIcon="Find" Grid.Column="2" IsSuggestionListOpen="False"  Width="280"/>
+                    </local:BottomPanel.RightColumn>
+                </local:BottomPanel>
+            </AppBar>
+        </local:CollectionControl.Footer>
+    </local:CollectionControl>
+</Page>

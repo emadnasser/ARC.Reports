@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectGuid>{522B4F22-AD9B-4631-A062-5303861DBA1A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>RibbonSimplePad</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <Name>DevExpress.XtraEditors.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BackstageViewLabel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColorBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExportControl.Designer.vb">
+      <DependentUpon>ExportControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExportControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmFind.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFind.Designer.vb">
+      <DependentUpon>frmFind.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPad.Designer.vb">
+      <DependentUpon>frmPad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReplace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReplace.Designer.vb">
+      <DependentUpon>frmReplace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HelpControl.Designer.vb">
+      <DependentUpon>HelpControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HelpControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MRUArrayList.vb" />
+    <Compile Include="My Project\Resources.Designer.vb" />
+    <Compile Include="My Project\Resources1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Office.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintControl.Designer.vb">
+      <DependentUpon>PrintControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="RecentItemsControl.Designer.vb">
+      <DependentUpon>RecentItemsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecentItemsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RibbonApplicationUserControl.Designer.vb">
+      <DependentUpon>RibbonApplicationUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonApplicationUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.vb">
+      <DependentUpon>frmSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="ExportControl.resx">
+      <DependentUpon>ExportControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFind.resx">
+      <DependentUpon>frmFind.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPad.resx">
+      <DependentUpon>frmPad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReplace.resx">
+      <DependentUpon>frmReplace.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpControl.resx">
+      <DependentUpon>HelpControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="online.gif" />
+    <EmbeddedResource Include="PrintControl.resx">
+      <DependentUpon>PrintControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecentItemsControl.resx">
+      <DependentUpon>RecentItemsControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonApplicationUserControl.resx">
+      <DependentUpon>RibbonApplicationUserControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppIcon.ico" />
+    <Content Include="Resources\Code_Central.png" />
+    <Content Include="Resources\ColorMixer_16x16.png" />
+    <Content Include="Resources\ColorMixer_32x32.png" />
+    <Content Include="Resources\Contact_Us.png" />
+    <Content Include="Resources\ExportCsvLarge.png" />
+    <Content Include="Resources\ExportGraphicLarge.png" />
+    <Content Include="Resources\ExportHtmLarge.png" />
+    <Content Include="Resources\ExportMhtLarge.png" />
+    <Content Include="Resources\ExportPdfLarge.png" />
+    <Content Include="Resources\ExportRtfLarge.png" />
+    <Content Include="Resources\ExportTxtLarge.png" />
+    <Content Include="Resources\ExportXlsLarge.png" />
+    <Content Include="Resources\ExportXlsxLarge.png" />
+    <Content Include="Resources\MultiplePagesLarge.png" />
+    <Content Include="Resources\Online_Help.png" />
+    <Content Include="Resources\PageMarginsModerate.png" />
+    <Content Include="Resources\PageMarginsNarrow.png" />
+    <Content Include="Resources\PageMarginsNormal.png" />
+    <Content Include="Resources\PageMarginsWide.png" />
+    <Content Include="Resources\PageOrientationLandscape.png" />
+    <Content Include="Resources\PageOrientationPortrait.png" />
+    <Content Include="Resources\PaperKind_A3.png" />
+    <Content Include="Resources\PaperKind_A4.png" />
+    <Content Include="Resources\PaperKind_A5.png" />
+    <Content Include="Resources\PaperKind_A6.png" />
+    <Content Include="Resources\PaperKind_Executive.png" />
+    <Content Include="Resources\PaperKind_Legal.png" />
+    <Content Include="Resources\PaperKind_Letter.png" />
+    <Content Include="Resources\PaperKind_Tabloid.png" />
+    <Content Include="Resources\PaperSize.png" />
+    <Content Include="Resources\PaperSizeLarge.png" />
+    <Content Include="Resources\PrintDirectLarge.png" />
+    <Content Include="Resources\XtraBars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

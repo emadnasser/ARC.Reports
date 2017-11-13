@@ -1,0 +1,122 @@
+﻿@model LoanAmortizationScheduleModel
+<script type="text/javascript">
+    function UpdatePreview() {
+        var LoanAmountValue = LoanAmount.GetValue();
+        var PeriodInYearsValue = PeriodInYears.GetValue();
+        var InterestRateValue = InterestRate.GetValue();
+        var StartDateOfLoanValue = StartDateOfLoan.GetInputElement().value;
+        var previewFrame = document.getElementById("previewFrame");
+        var params = "LoanAmount=" + encodeURIComponent(LoanAmountValue) +
+                                                "&PeriodInYears=" + encodeURIComponent(PeriodInYearsValue) +
+                                                "&InterestRate=" + encodeURIComponent(InterestRateValue) +
+                                                "&StartDateOfLoan=" + encodeURIComponent(StartDateOfLoanValue);
+        SpreadsheetPreview.Update(params);
+    }
+</script>
+
+@using (Html.BeginForm("LoanAmortizationScheduleExportTo", "Spreadsheet", FormMethod.Post)) {
+
+    <table class="OptionsTable">
+        <tr>
+            <td>
+                @Html.DevExpress().Label(
+                            settings => {
+                                settings.Text = "Loan&nbsp;Amount: ";
+                                settings.EncodeHtml = false;
+                                settings.AssociatedControlName = "LoanAmount";
+                            }).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().SpinEditFor(model => model.LoanAmount,
+                            settings => {
+                                settings.Name = "LoanAmount";
+                                settings.Properties.MinValue = 100;
+                                settings.Properties.MaxValue = 200000;
+                                settings.Properties.Increment = 100;
+                                settings.Properties.LargeIncrement = 1000;
+                                settings.Properties.AllowNull = false;
+                                settings.Properties.NumberType = SpinEditNumberType.Integer;
+                                settings.Height = Unit.Pixel(19);
+                                settings.Width = Unit.Pixel(80);
+                                settings.Properties.ClientSideEvents.ValueChanged = "function(s,e) { UpdatePreview(); }";
+                            }
+            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().Label(
+                            settings => {
+                                settings.Text = "Loan&nbsp;Period&nbsp;in&nbsp;Years:";
+                                settings.EncodeHtml = false;
+                                settings.AssociatedControlName = "PeriodInYears";
+                            }
+            ).GetHtml()
+            </td>
+            <td style="width: 100%">
+                @Html.DevExpress().SpinEditFor(model => model.PeriodInYears,
+                            settings => {
+                                settings.Name = "PeriodInYears";
+                                settings.Properties.MinValue = 1;
+                                settings.Properties.MaxValue = 10;
+                                settings.Properties.AllowNull = false;
+                                settings.Properties.NumberType = SpinEditNumberType.Integer;
+                                settings.Width = Unit.Pixel(90);
+                                settings.Height = Unit.Pixel(19);
+                                settings.Properties.ClientSideEvents.ValueChanged = "function(s,e) { UpdatePreview(); }";
+                            }
+            ).GetHtml()
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DevExpress().Label(
+                            settings => {
+                                settings.Text = "Annual&nbsp;Interest&nbsp;Rate: ";
+                                settings.EncodeHtml = false;
+                                settings.AssociatedControlName = "InterestRate";
+                            }
+            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().SpinEditFor(model => model.InterestRate,
+                            settings => {
+                                settings.Name = "InterestRate";
+                                settings.Properties.MinValue = 0.0001M;
+                                settings.Properties.MaxValue = 1;
+                                settings.Properties.Increment = 0.0001M;
+                                settings.Properties.LargeIncrement = 0.1M;
+                                settings.Properties.DisplayFormatString = "p";
+                                settings.Properties.AllowNull = false;
+                                settings.Height = Unit.Pixel(19);
+                                settings.Width = Unit.Pixel(80);
+                                settings.Properties.ClientSideEvents.ValueChanged = "function(s,e) { UpdatePreview(); }";
+                            }
+            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().Label(
+                            settings => {
+                                settings.Text = "Start&nbsp;Date&nbsp;of&nbsp;Loan: ";
+                                settings.EncodeHtml = false;
+                                settings.AssociatedControlName = "StartDateOfLoan";
+                            }
+            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().DateEditFor(model => model.StartDateOfLoan,
+                            settings => {
+                                settings.Name = "StartDateOfLoan";
+                                settings.Width = Unit.Pixel(90);
+                                settings.Properties.ClientSideEvents.ValueChanged = "function(s,e) { UpdatePreview(); }";
+                            }
+            ).GetHtml()
+            </td>
+            <td style="vertical-align: bottom;">
+                @Html.Partial("SpreadsheetDocumentDownloaderPartial")
+            </td>
+        </tr>
+    </table>
+
+}
+
+@Html.Partial("SpreadsheetPreviewPartial", Model.PreviewModel)

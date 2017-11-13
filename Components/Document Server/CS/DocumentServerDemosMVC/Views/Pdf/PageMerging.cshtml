@@ -1,0 +1,237 @@
+﻿@model PdfPageMergingModel
+<script type="text/javascript">
+    var fileNumber = 0;
+    var fileName = "";
+    var startDate = null;
+    function UpdateUploadedFiles() {
+        var fl = uploader.cpFilesList;
+        if (fl) {
+            btnMerge.SetEnabled(true);
+            fl.forEach(function (i) { AddFileToContainer(i) });
+        }
+        else
+            btnMerge.SetEnabled(false);
+
+    }
+    function ClearFileContainer() {
+        $("#fileContainer").empty();
+    }
+    function Uploader_OnFileUploadStart() {
+        startDate = new Date();
+        ClearProgressInfo();
+        pcProgress.Show();
+    }
+    function AddFileToContainer(callbackData) {
+        var data = callbackData.split('|');
+        var file = data[0];
+        var url = data[1];
+        $("<a></a>")
+            .attr("target", "_blank")
+            .attr("href", url)
+            .text(file)
+            .click(function (evt) {
+                return DXDemo.ShowScreenshotWindow(evt, this);
+            })
+            .appendTo($("#fileContainer"));
+        $("<br />").appendTo($("#fileContainer"));
+    }
+    function Uploader_OnFilesUploadComplete(e) {
+        pcProgress.Hide();
+        UpdateUploadButton();
+    }
+    function Uploader_ProgressChanged(args) {
+        if (!pcProgress.IsVisible())
+            return;
+        if (args.currentFileName != fileName) {
+            fileName = args.currentFileName;
+            fileNumber++;
+        }
+        SetCurrentFileUploadingProgress(args.currentFileName, args.currentFileUploadedContentLength, args.currentFileContentLength);
+        progressFile.SetPosition(args.currentFileProgress);
+        SetTotalUploadingProgress(fileNumber, args.fileCount, args.uploadedContentLength, args.totalContentLength);
+        progressAll.SetPosition(args.progress);
+        UpdateProgressStatus(args.uploadedContentLength, args.totalContentLength);
+    }
+    function UpdateUploadButton() {
+        btnUpload.SetEnabled(uploader.GetText(0) != "");
+    }
+
+    function ClearProgressInfo() {
+        SetCurrentFileUploadingProgress("", 0, 0);
+        progressFile.SetPosition(0);
+        SetTotalUploadingProgress(0, 0, 0, 0);
+        progressAll.SetPosition(0);
+        $("#lblProgressStatus").html("Elapsed time: 00:00:00 &ensp; Estimated time: 00:00:00 &ensp; Speed: " + GetContentLengthString(0) + "/s");
+        fileNumber = 0;
+        fileName = "";
+    }
+    function SetCurrentFileUploadingProgress(fileName, uploadedLength, fileLength) {
+        $("#lblFileName").text("Current file progress: " + fileName).attr("title", fileName);
+        $("#lblCurrentUploadedFileLength").text(GetContentLengthString(uploadedLength) + " / " + GetContentLengthString(fileLength));
+    }
+    function SetTotalUploadingProgress(number, count, uploadedLength, totalLength) {
+        $("#lblUploadedFiles").text("Total progress: " + number + ' of ' + count + " file(s)");
+        $("#lblUploadedFileLength").text(GetContentLengthString(uploadedLength) + " / " + GetContentLengthString(totalLength));
+    }
+    function UpdateProgressStatus(uploadedLength, totalLength) {
+        var currentDate = new Date();
+        var timeDiff = new Date(currentDate - startDate);
+        var speed = uploadedLength / (timeDiff.valueOf() / 1000);
+
+        var elapsedDate = timeDiff;
+        elapsedDate.setHours(elapsedDate.getHours() + elapsedDate.getTimezoneOffset() / 60);
+        var elapsedTime = GetTimeString(elapsedDate);
+
+        var estimatedMilliseconds = Math.floor((totalLength - uploadedLength) / speed) * 1000;
+        var estimatedDate = new Date(estimatedMilliseconds);
+        estimatedDate.setHours(estimatedDate.getHours() + estimatedDate.getTimezoneOffset() / 60);
+        var estimatedTime = GetTimeString(estimatedDate);
+
+        $("#lblProgressStatus").html("Elapsed time: " + elapsedTime + " &ensp; Estimated time: " + estimatedTime + " &ensp; Speed: " + GetContentLengthString(speed) + "/s");
+    }
+    function GetContentLengthString(contentLength) {
+        var sizeDimensions = ['bytes', 'KB', 'MB', 'GB', 'TB'];
+        var index = 0;
+
+        var length = contentLength;
+        var postfix = sizeDimensions[index];
+
+        while (length > 1024) {
+            length = length / 1024;
+            postfix = sizeDimensions[++index];
+        }
+
+        var numberRegExpPattern = /[-+]?[0-9]*(?:\.|\,)[0-9]{0,2}|[0-9]{0,2}/;
+        var results = numberRegExpPattern.exec(length);
+        length = results ? results[0] : Math.floor(length);
+
+        return length.toString() + ' ' + postfix;
+    }
+    function GetTimeString(date) {
+        var timeRegExpPattern = /\d{1,2}:\d{1,2}:\d{1,2}/;
+        var results = timeRegExpPattern.exec(date.toTimeString());
+        return results ? results[0] : "00:00:00";
+    }
+</script>
+<table style="width: 480px;" class="OptionsTable">
+    <tr>
+        <td class="NoWrap">
+            @Html.DevExpress().Label(settings => {
+           settings.Name = "lblSelectMultipleFiles";
+           settings.Text = "Select multiple files:";
+       }).GetHtml()
+        </td>
+        <td style="width: 100%;">
+            @using (Html.BeginForm("MergeUploadFiles", "Pdf", FormMethod.Post)) {
+                @Html.DevExpress().UploadControl(settings => {
+               settings.Name = "uploader";
+               settings.Width = new Unit("100%");
+               settings.AdvancedModeSettings.EnableMultiSelect = true;
+               settings.NullText = "Click here to browse files...";
+               settings.ClientSideEvents.FilesUploadStart = "function(s, e) { ClearFileContainer(); Uploader_OnFileUploadStart(); }";
+               settings.ClientSideEvents.FileUploadComplete = "function(s,e) { if(e.callbackData != '') AddFileToContainer(e.callbackData); }";
+               settings.ClientSideEvents.FilesUploadComplete = "function(s, e) { Uploader_OnFilesUploadComplete(e); btnMerge.SetEnabled(true); }";
+               settings.ClientSideEvents.UploadingProgressChanged = "function(s, e) { Uploader_ProgressChanged(e); }";
+               settings.ClientSideEvents.TextChanged = "function(s, e) { UpdateUploadButton(); }";
+               settings.ValidationSettings.Assign(PdfController.MergeValidationSettings);
+               settings.CustomJSProperties = (s, e) => {
+                   e.Properties["cpFilesList"] = ViewBag.FileList;
+               };
+
+           }).GetHtml()
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td class="note">
+            @Html.DevExpress().Label(settings => {
+           settings.Name = "lblMaxFileSize";
+           settings.Text = "Maximum file size: 4Mb";
+           settings.ControlStyle.Font.Size = new FontUnit("8pt");
+       }).GetHtml()
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align:center" class="TopPadding">
+            @Html.DevExpress().Button(setting => {
+           setting.Name = "btnUpload";
+           setting.Text = "Upload";
+           setting.Width = new Unit("100px");
+           setting.ClientEnabled = false;
+           setting.ClientSideEvents.Click = "function(s, e) { uploader.Upload(); }";
+       }).GetHtml()
+        </td>
+    </tr>
+</table>
+<fieldset style="margin: 5px 0px; border: solid 1px gray; width: 480px;">
+    <legend style="margin-left: 20px;">Uploaded Files</legend>
+    <div id="fileContainer" style="height: 200px; padding: 5px 10px; overflow: auto;">
+    </div>
+</fieldset>
+<p class="Note">
+    <b>Note</b>: All files uploaded to this demo will be automatically deleted in 5
+    minutes.
+</p>
+<br />
+@Html.DevExpress().Button(settings => {
+    settings.Name = "btnMerge";
+    settings.Text = "Merge files and download";
+    settings.ClientSideEvents.Click = String.Format("function (s, e) {{ document.location.href = '{0}'; }}", Url.Action("MergeAndDownload", "Pdf"));
+    settings.ClientSideEvents.Init = "function (s, e) { UpdateUploadedFiles();}";
+}).GetHtml()
+@Html.DevExpress().PopupControl(settings => {
+    settings.Name = "pcProgress";
+    settings.HeaderText = "Uploading";
+    settings.Modal = true;
+    settings.PopupAnimationType = AnimationType.None;
+    settings.CloseAction = CloseAction.None;
+    settings.AllowDragging = false;
+    settings.ShowPageScrollbarWhenModal = true;
+    settings.ShowCloseButton = false;
+    settings.PopupVerticalAlign = PopupVerticalAlign.WindowCenter;
+    settings.PopupHorizontalAlign = PopupHorizontalAlign.WindowCenter;
+    settings.ShowFooter = true;
+    settings.SetContent(() => {
+        ViewContext.Writer.Write("<table style=\"width: 100%;\"> <tr> <td style=\"width: 100%;\"> <div style=\"overflow: hidden; width: 280px;\">");
+        @Html.DevExpress().Label(lblSettings => {
+            lblSettings.Name = "lblFileName";
+            lblSettings.Text = "";
+        }).Render();
+        ViewContext.Writer.Write("</div></td><td class=\"NoWrap\" style=\"text-align:right;\">");
+        @Html.DevExpress().Label(lblSettings => {
+            lblSettings.Name = "lblCurrentUploadedFileLength";
+            lblSettings.Text = "";
+        }).Render();
+        ViewContext.Writer.Write("</td></tr><tr><td colspan=\"2\" class=\"TopPadding\">");
+        @Html.DevExpress().ProgressBar(pbSettings => {
+            pbSettings.Name = "progressFile";
+            pbSettings.Height = new Unit("21px");
+            pbSettings.Width = new Unit("100%");
+        }).Render();
+        ViewContext.Writer.Write("</td> </tr> <tr> <td colspan=\"2\"> <div class=\"Spacer\" style=\"height: 12px;\"> </div> </td> </tr> <tr> <td style=\"width: 100%;\">");
+        @Html.DevExpress().Label(lblSettings => {
+            lblSettings.Name = "lblUploadedFiles";
+            lblSettings.Text = "";
+        }).Render();
+        ViewContext.Writer.Write("</td><td class=\"NoWrap\" style=\"text-align:right;\">");
+        @Html.DevExpress().Label(lblSettings => {
+            lblSettings.Name = "lblUploadedFileLength";
+            lblSettings.Text = "";
+        }).Render();
+        ViewContext.Writer.Write("</td></tr><tr><td colspan=\"2\" class=\"TopPadding\">");
+        @Html.DevExpress().ProgressBar(pbSettings => {
+            pbSettings.Name = "progressAll";
+            pbSettings.Height = new Unit("21px");
+            pbSettings.Width = new Unit("100%");
+            pbSettings.ControlStyle.CssClass = "BottomMargin";
+        }).Render();
+        ViewContext.Writer.Write("</td> </tr> <tr> <td colspan=\"2\"> <div class=\"Spacer\" style=\"height: 12px;\"> </div> </td> </tr> <tr> <td colspan=\"2\">");
+        @Html.DevExpress().Label(lblSettings => {
+            lblSettings.Name = "lblProgressStatus";
+            lblSettings.Text = "";
+        }).Render();
+        ViewContext.Writer.Write("</td> </tr> </table>");
+    });
+}).GetHtml()

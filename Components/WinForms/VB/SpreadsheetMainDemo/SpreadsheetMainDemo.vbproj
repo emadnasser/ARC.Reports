@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FC73700-23FB-4E8D-B117-F8DBD4FD4139}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SpreadsheetMainDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <RootNamespace></RootNamespace>
+    <StartupObject></StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <Name>DevExpress.BonusSkins.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.DataAccess.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.DataAccess.v16.2.UI">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.RichEdit.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Spreadsheet.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Docs.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Charts.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <Name>DevExpress.XtraEditors.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Office.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraTreeList.v16.2">
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2">
+      <Name>DevExpress.XtraNavBar.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="Microsoft.Build"><Private>False</Private></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration"><Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions"><Private>False</Private></Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="CodeExamples\AutoFilterActions.vb" />
+    <Compile Include="CodeExamples\CellActions.vb" />
+    <Compile Include="CodeExamples\Charts\AxesActions.vb" />
+    <Compile Include="CodeExamples\Charts\Charts.vb" />
+    <Compile Include="CodeExamples\Charts\CreationAndDataActions.vb" />
+    <Compile Include="CodeExamples\Charts\DataLabelsActions.vb" />
+    <Compile Include="CodeExamples\Charts\LegendActions.vb" />
+    <Compile Include="CodeExamples\Charts\SeriesActions.vb" />
+    <Compile Include="CodeExamples\Charts\StyleActions.vb" />
+    <Compile Include="CodeExamples\Charts\TitlesActions.vb" />
+    <Compile Include="CodeExamples\Charts\ViewOptionsActions.vb" />
+    <Compile Include="CodeExamples\ConditionalFormatting.vb" />
+    <Compile Include="CodeExamples\DataValidationActions.vb" />
+    <Compile Include="CodeExamples\DocumentPropertiesActions.vb" />
+    <Compile Include="CodeExamples\GroupingAndOutlineActions.vb" />
+    <Compile Include="CodeExamples\Pivots\PivotCalculatedFieldActions.vb" />
+    <Compile Include="CodeExamples\Pivots\PivotCalculatedItemActions.vb" />
+    <Compile Include="CodeExamples\Pivots\PivotFieldActions.vb" />
+    <Compile Include="CodeExamples\Pivots\PivotFieldGroupingActions.vb" />
+    <Compile Include="CodeExamples\Pivots\PivotTableFilterActions.vb" />
+    <Compile Include="CodeExamples\Pivots\PivotLayoutActions.vb" />
+    <Compile Include="CodeExamples\Pivots\PivotFormattingActions.vb" />
+    <Compile Include="CodeExamples\Pivots\PivotTableActions.vb" />
+    <Compile Include="CodeExamples\SearchActions.vb" />
+    <Compile Include="CodeExamples\FormattingActions.vb" />
+    <Compile Include="CodeExamples\FormulaActions.vb" />
+    <Compile Include="CodeExamples\ImportExportActions.vb" />
+    <Compile Include="CodeExamples\ProtectionActions.vb" />
+    <Compile Include="CodeExamples\SortActions.vb" />
+    <Compile Include="CodeExamples\TableActions.vb" />
+    <Compile Include="CodeExamples\PrintingActions.vb" />
+    <Compile Include="CodeExamples\RowAndColumnActions.vb" />
+    <Compile Include="CodeExamples\WorksheetActions.vb" />
+    <Compile Include="Modules\AddTransactionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\AddTransactionForm.Designer.vb">
+      <DependentUpon>AddTransactionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AutoFilter.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AutoFilter.Designer.vb">
+      <DependentUpon>AutoFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataBinding\nwindOrdersDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nwindOrdersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataEntryForm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataEntryForm.designer.vb">
+      <DependentUpon>DataEntryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataSourceToRange.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataSourceToRange.Designer.vb">
+      <DependentUpon>DataSourceToRange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Encryption.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Encryption.Designer.vb">
+      <DependentUpon>Encryption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PrintTitles.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PrintTitles.Designer.vb">
+      <DependentUpon>PrintTitles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PivotTableModule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PivotTableModule.Designer.vb">
+      <DependentUpon>PivotTableModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BreakevenAnalysis.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BreakevenAnalysis.Designer.vb">
+      <DependentUpon>BreakevenAnalysis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartAPIModule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Comments.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Comments.Designer.vb">
+      <DependentUpon>Comments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ConditionalFormatting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ConditionalFormatting.Designer.vb">
+      <DependentUpon>ConditionalFormatting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ConditionalFormatting\TopTradingPartners.vb" />
+    <Compile Include="Modules\CustomInplaceEditors.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomInplaceEditors.Designer.vb">
+      <DependentUpon>CustomInplaceEditors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataValidation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataValidation.Designer.vb">
+      <DependentUpon>DataValidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DocumentProperties.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DocumentProperties.Designer.vb">
+      <DependentUpon>DocumentProperties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HeaderFooter.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\HeaderFooter.Designer.vb">
+      <DependentUpon>HeaderFooter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MailMergeDataSets\FallCatalogDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FallCatalogDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MailMergeDataSets\InvoiceDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MailMergeFallCatalog.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MailMergeInvoice.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OperationRestrictions\BehaviorOptionsProvider.vb" />
+    <Compile Include="Modules\OutlineGroupingSubtotal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PivotTableAPIModule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Protection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Protection.designer.vb">
+      <DependentUpon>Protection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RangeAsDataSourceModule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\StatisticFunctions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\StatisticFunctions.Designer.vb">
+      <DependentUpon>StatisticFunctions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TwoWayBindingModule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\WeatherInCalifornia.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\WeatherInCalifornia.Designer.vb">
+      <DependentUpon>WeatherInCalifornia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\WeatherInCalifornia\WeatherInCalifornia.vb" />
+    <Compile Include="Modules\CustomDraw.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw.Designer.vb">
+      <DependentUpon>CustomDraw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\DocumentGenerator.vb" />
+    <Compile Include="Modules\CustomFunction\DocumentGenerator.vb" />
+    <Compile Include="Modules\CustomTooltip.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomTooltip.Designer.vb">
+      <DependentUpon>CustomTooltip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DocumentThemes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DocumentThemes.Designer.vb">
+      <DependentUpon>DocumentThemes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CellPropertyViewer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CellPropertyViewer.Designer.vb">
+      <DependentUpon>CellPropertyViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DemosRegistration.vb" />
+    <Compile Include="DemoUtils.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\About.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DocumentThemes\DocumentGenerator.vb" />
+    <Compile Include="Modules\EmployeeInformation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\EmployeeInformation.Designer.vb">
+      <DependentUpon>EmployeeInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\EmployeeInformation\DocumentGenerator.vb" />
+    <Compile Include="Modules\CodeExampleModel.vb" />
+    <Compile Include="Modules\ExpenseReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ExpenseReport.Designer.vb">
+      <DependentUpon>ExpenseReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ExpenseReport\DocumentGenerator.vb" />
+    <Compile Include="Modules\HighlightText.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\HighlightText.Designer.vb">
+      <DependentUpon>HighlightText.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HighlightText\DocumentGenerator.vb" />
+    <Compile Include="Modules\HomeAccounting\DocumentGenerator.vb" />
+    <Compile Include="Modules\Invoice\DocumentGenerator.vb" />
+    <Compile Include="Modules\MailMergeDataSets\MasterDetailDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterDetailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MailMergeDataSets\TableDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TableDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MailMergePictures.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MailMergeMasterDetail.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MailMergeModuleBase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MailMergeModuleBase.Designer.vb">
+      <DependentUpon>MailMergeModuleBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MailMergeTableReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Minesweeper.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Minesweeper.Designer.vb">
+      <DependentUpon>Minesweeper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SpreadsheetApiModuleUtils.vb" />
+    <Compile Include="Modules\SpreadsheetEventViewer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SpreadsheetEventViewer.Designer.vb">
+      <DependentUpon>SpreadsheetEventViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HomeAccounting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\HomeAccounting.Designer.vb">
+      <DependentUpon>HomeAccounting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Hyperlinks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Hyperlinks.designer.vb">
+      <DependentUpon>Hyperlinks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\InvoiceWithTotal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\InvoiceWithTotal.Designer.vb">
+      <DependentUpon>InvoiceWithTotal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LoanAmortizationSchedule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\LoanAmortizationSchedule.Designer.vb">
+      <DependentUpon>LoanAmortizationSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomFunction.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomFunction.Designer.vb">
+      <DependentUpon>CustomFunction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LoanAmortizationSchedule\DocumentGenerator.vb" />
+    <Compile Include="Modules\OperationRestrictions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OperationRestrictions.Designer.vb">
+      <DependentUpon>OperationRestrictions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ShiftSchedule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ShiftSchedule.Designer.vb">
+      <DependentUpon>ShiftSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ShiftSchedule\DocumentGenerator.vb" />
+    <Compile Include="Modules\SportResults.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SportResults.designer.vb">
+      <DependentUpon>SportResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SportResults\DocumentGenerator.vb" />
+    <Compile Include="Modules\SpreadsheetAPIModule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SpreadsheetCodeResultViewer.vb" />
+    <Compile Include="Modules\SyntaxHightlight.vb" />
+    <Compile Include="Modules\UnitConverter.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UnitConverter.Designer.vb">
+      <DependentUpon>UnitConverter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="nwindDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nwindDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutlineGroupingSubtotal.Designer.vb">
+      <DependentUpon>OutlineGroupingSubtotal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SpreadsheetPreview.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpreadsheetPreview.designer.vb">
+      <DependentUpon>SpreadsheetPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SpreadsheetRibbonTutorialControlBase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpreadsheetRibbonTutorialControlBase.Designer.vb">
+      <DependentUpon>SpreadsheetRibbonTutorialControlBase.vb</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\DataEntryForm.resx">
+      <DependentUpon>DataEntryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataSourceToRange.resx">
+      <DependentUpon>DataSourceToRange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Encryption.resx">
+      <DependentUpon>Encryption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PrintTitles.resx">
+      <DependentUpon>PrintTitles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PivotTableModule.resx">
+      <DependentUpon>PivotTableModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BreakevenAnalysis.resx">
+      <DependentUpon>BreakevenAnalysis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartAPIModule.resx">
+      <DependentUpon>ChartAPIModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Comments.resx">
+      <DependentUpon>Comments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ConditionalFormatting.resx">
+      <DependentUpon>ConditionalFormatting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataValidation.resx">
+      <DependentUpon>DataValidation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\HeaderFooter.resx">
+      <DependentUpon>HeaderFooter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OutlineGroupingSubtotal.resx">
+      <DependentUpon>OutlineGroupingSubtotal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PivotTableAPIModule.resx">
+      <DependentUpon>PivotTableAPIModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Protection.resx">
+      <DependentUpon>Protection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RangeAsDataSourceModule.resx">
+      <DependentUpon>RangeAsDataSourceModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\TwoWayBindingModule.resx">
+      <DependentUpon>TwoWayBindingModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\WeatherInCalifornia.resx">
+      <DependentUpon>WeatherInCalifornia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDraw.resx">
+      <DependentUpon>CustomDraw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomTooltip.resx">
+      <DependentUpon>CustomTooltip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DocumentThemes.resx">
+      <DependentUpon>DocumentThemes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CellPropertyViewer.resx">
+      <DependentUpon>CellPropertyViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\EmployeeInformation.resx">
+      <DependentUpon>EmployeeInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ExpenseReport.resx">
+      <DependentUpon>ExpenseReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\HighlightText.resx">
+      <DependentUpon>HighlightText.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\HomeAccounting.resx">
+      <DependentUpon>HomeAccounting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Hyperlinks.resx">
+      <DependentUpon>Hyperlinks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\InvoiceWithTotal.resx">
+      <DependentUpon>InvoiceWithTotal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\LoanAmortizationSchedule.resx">
+      <DependentUpon>LoanAmortizationSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomFunction.resx">
+      <DependentUpon>CustomFunction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MailMergeModuleBase.resx">
+      <DependentUpon>MailMergeModuleBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MailMergeTableReport.resx">
+      <DependentUpon>MailMergeTableReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Minesweeper.resx">
+      <DependentUpon>Minesweeper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OperationRestrictions.resx">
+      <DependentUpon>OperationRestrictions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ShiftSchedule.resx">
+      <DependentUpon>ShiftSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SportResults.resx">
+      <DependentUpon>SportResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SpreadsheetAPIModule.resx">
+      <DependentUpon>SpreadsheetAPIModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SpreadsheetEventViewer.resx">
+      <DependentUpon>SpreadsheetEventViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UnitConverter.resx">
+      <DependentUpon>UnitConverter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="connectionStrings.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Modules\MailMergeDataSets\FallCatalogDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FallCatalogDataSet.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Modules\MailMergeDataSets\InvoiceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceDataSet.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Modules\MailMergeDataSets\MasterDetailDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MasterDetailDataSet.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Modules\MailMergeDataSets\TableDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TableDataSet.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="nwindDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nwindDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SpreadsheetPreview.resx">
+      <DependentUpon>SpreadsheetPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpreadsheetRibbonTutorialControlBase.resx">
+      <DependentUpon>SpreadsheetRibbonTutorialControlBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraSpreadsheet.png" />
+    <EmbeddedResource Include="XtraSpreadsheet_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\Flag.png" />
+    <EmbeddedResource Include="Modules\Mine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+  </PropertyGroup>
+</Project>

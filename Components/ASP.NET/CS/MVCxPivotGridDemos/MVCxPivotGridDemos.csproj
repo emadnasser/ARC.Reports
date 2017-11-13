@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BB1171A-3E02-4E3D-BD54-442B1CC597DC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevExpress.Web.Demos</RootNamespace>
+    <AssemblyName>DevExpress.Web.Demos.MVCxPivotGridDemos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Mvc5.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.Web">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\CodeFormatter.cs" />
+    <Compile Include="Code\DatabaseGenerator.cs" />
+    <Compile Include="Code\DemoGroupModel.cs" />
+    <Compile Include="Code\DemoHtmlHelper.cs" />
+    <Compile Include="Code\DemoModel.cs" />
+    <Compile Include="Code\DemoModelBase.cs" />
+    <Compile Include="Code\DemosModel.cs" />
+    <Compile Include="Code\ExternalDemoModel.cs" />
+    <Compile Include="Code\Helpers\PivotGridDataOutputHelper.cs" />
+    <Compile Include="Code\Helpers\PivotGridFeaturesHelper.cs" />
+    <Compile Include="Code\Helpers\PivotGridLayoutHelper.cs" />
+    <Compile Include="Code\Helpers\PivotGridOLAPHelper.cs" />
+    <Compile Include="Code\Helpers\PivotGridSampleReportsHelper.cs" />
+    <Compile Include="Code\HiddenHtmlFormAdapter.cs" />
+    <Compile Include="Code\IntroFeatureModel.cs" />
+    <Compile Include="Code\IntroPageModel.cs" />
+    <Compile Include="Code\OverviewPageModel.cs" />
+    <Compile Include="Code\PhotoUtils.cs" />
+    <Compile Include="Code\PivotGridServerModeDataGenerator.cs" />
+    <Compile Include="Code\ThemeGroupModel.cs" />
+    <Compile Include="Code\ThemeModel.cs" />
+    <Compile Include="Code\ThemeModelBase.cs" />
+    <Compile Include="Code\ThemesModel.cs" />
+    <Compile Include="Code\UploadingUtils.cs" />
+    <Compile Include="Code\Utils.cs" />
+    <Compile Include="Controllers\DataOutputController.cs" />
+    <Compile Include="Controllers\DbGenController.cs" />
+    <Compile Include="Controllers\Features\FeaturesController.DataBindingToLargeDatabase.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\FeaturesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
+    <Compile Include="Controllers\OLAPController.cs" />
+    <Compile Include="Controllers\DataOutput\DataOutputController.ChartsIntegration.cs" />
+    <Compile Include="Controllers\Layout\LayoutController.CompactLayout.cs" />
+    <Compile Include="Controllers\Features\FeaturesController.DrillDown.cs" />
+    <Compile Include="Controllers\DataOutput\DataOutputController.Export.cs" />
+    <Compile Include="Controllers\Features\FeaturesController.FieldsCustomization.cs" />
+    <Compile Include="Controllers\Features\FeaturesController.Groups.cs" />
+    <Compile Include="Controllers\OLAP\OLAPController.OLAP.cs" />
+    <Compile Include="Controllers\OverviewController.cs" />
+    <Compile Include="Controllers\PagingAndScrollingController.cs" />
+    <Compile Include="Controllers\PagingAndScrolling\PagingAndScrollingController.Paging.cs" />
+    <Compile Include="Controllers\PagingAndScrolling\PagingAndScrollingController.VirtualScrolling.cs" />
+    <Compile Include="Controllers\SampleReportsController.cs" />
+    <Compile Include="Controllers\SampleReports\SampleReportsController.SampleReports.cs" />
+    <Compile Include="Controllers\Features\FeaturesController.SortBySummary.cs" />
+    <Compile Include="Controllers\TemplatesController.cs" />
+    <Compile Include="Controllers\Templates\TemplatesController.Templates.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContextBase.cs" />
+    <Compile Include="Models\DataContextExtensions\PivotGridDemoDBDataContextExt.cs" />
+    <Compile Include="Models\Northwind.cs" />
+    <Compile Include="Models\NorthwindModel.cs" />
+    <Compile Include="Models\Options\PivotGridChartIntegrationOptions.cs" />
+    <Compile Include="Models\Options\PivotGridExportOptions.cs" />
+    <Compile Include="Models\Options\PivotGridFieldsCustomizationOptions.cs" />
+    <Compile Include="Models\Options\PivotGridPagingOptions.cs" />
+    <Compile Include="Models\Options\PivotGridReportsOptions.cs" />
+    <Compile Include="Models\PivotGridDemoDB.cs">
+    </Compile>
+    <Compile Include="Models\PivotGridDemoDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PivotGridDemoDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Components.xml" />
+    <Content Include="App_Data\Demos.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\NWind.mdf" />
+    <Content Include="App_Data\Northwind.cub" />
+    <Content Include="App_Data\PivotGridDemoDB.mdf" />
+    <Content Include="App_Data\Themes.xml" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="Content\1x1.gif" />
+    <Content Include="Content\CodeFormatter.css" />
+    <Content Include="Content\Components.css" />
+    <Content Include="Content\ComponentsSpriteImage.png" />
+    <Content Include="Content\DemoIcons\CellTemplate.png" />
+    <Content Include="Content\DemoIcons\Chart.png" />
+    <Content Include="Content\DemoIcons\DrillDown.png" />
+    <Content Include="Content\DemoIcons\ServerMode.png" />
+    <Content Include="Content\FeatureIcons\Ajax.png" />
+    <Content Include="Content\FeatureIcons\Appearance.png" />
+    <Content Include="Content\FeatureIcons\ClientSide.png" />
+    <Content Include="Content\FeatureIcons\CrossBrowser.png" />
+    <Content Include="Content\FeatureIcons\DataBinding.png" />
+    <Content Include="Content\FeatureIcons\Native.png" />
+    <Content Include="Content\FeatureIcons\Performance.png" />
+    <Content Include="Content\FeatureIcons\Power.png" />
+    <Content Include="Content\Loading.gif" />
+    <Content Include="Content\PivotGrid\Error.gif" />
+    <Content Include="Content\Platform.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\sprite.png" />
+    <Content Include="Content\VideoBanner.png" />
+    <Content Include="Content\VideoButton.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\Demo.js" />
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\DataOutput\Export.cshtml" />
+    <Content Include="Views\DataOutput\ExportPartial.cshtml" />
+    <Content Include="Views\Features\FieldsCustomization.cshtml" />
+    <Content Include="Views\Features\FieldsCustomizationPartial.cshtml" />
+    <Content Include="Views\Features\Groups.cshtml" />
+    <Content Include="Views\Features\GroupsPartial.cshtml" />
+    <Content Include="Views\OLAP\OLAP.cshtml" />
+    <Content Include="Views\OLAP\OLAPPartial.cshtml" />
+    <Content Include="Views\SampleReports\SampleReports.cshtml" />
+    <Content Include="Views\SampleReports\SampleReportsPartial.cshtml" />
+    <Content Include="Views\Features\SortBySummary.cshtml" />
+    <Content Include="Views\Features\SortBySummaryPartial.cshtml" />
+    <Content Include="Views\Templates\Templates.cshtml" />
+    <Content Include="Views\Templates\TemplatesPartial.cshtml" />
+    <Content Include="Views\DataOutput\ChartsIntegration.cshtml" />
+    <Content Include="Views\DataOutput\ChartsIntegrationChartPartial.cshtml" />
+    <Content Include="Views\DataOutput\ChartsIntegrationPivotPartial.cshtml" />
+    <Content Include="Views\Features\DrillDown.cshtml" />
+    <Content Include="Views\Features\DrillDownGridViewPartial.cshtml" />
+    <Content Include="Views\Features\DrillDownPivotGridPartial.cshtml" />
+    <Content Include="Views\Layout\CompactLayout.cshtml" />
+    <Content Include="Views\Layout\CompactLayoutPartial.cshtml" />
+    <Content Include="App_Themes\Metropolis\Demo.skin" />
+    <Content Include="Views\Shared\SearchPartial.cshtml" />
+    <Content Include="Views\Shared\DemoTabsPartial.cshtml" />
+    <Content Include="Views\Shared\SearchListPartial.cshtml" />
+    <Content Include="Views\Overview\Overview.cshtml" />
+    <Content Include="Views\Overview\OverviewPartial.cshtml" />
+    <Content Include="Views\Shared\ErrorMessage.cshtml" />
+    <Content Include="Views\Features\DataBindingToLargeDatabase.cshtml" />
+    <Content Include="Views\Features\DataBindingToLargeDatabasePartial.cshtml" />
+    <Content Include="Models\PivotGridDemoDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PivotGridDemoDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\CreateDatabasePartial.cshtml" />
+    <Content Include="Views\PagingAndScrolling\VirtualScrolling.cshtml" />
+    <Content Include="Views\PagingAndScrolling\VirtualScrollingPartial.cshtml" />
+    <Content Include="Views\PagingAndScrolling\Paging.cshtml" />
+    <Content Include="Views\PagingAndScrolling\PagingPartial.cshtml" />
+    <Content Include="Views\PagingAndScrolling\PagingOptionsPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\PivotGridDemoDB.dbml.layout">
+      <DependentUpon>PivotGridDemoDB.dbml</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\NavigationPartial.cshtml" />
+    <Content Include="Views\Shared\ThemeSelectorPartial.cshtml" />
+    <Content Include="Views\Shared\FooterTextPartial.cshtml" />
+    <Content Include="App_Themes\DevEx\Demo.skin" />
+    <Content Include="App_Themes\Aqua\Demo.skin" />
+    <Content Include="App_Themes\BlackGlass\Demo.skin" />
+    <Content Include="App_Themes\Glass\Demo.skin" />
+    <Content Include="App_Themes\Office2003Blue\Demo.skin" />
+    <Content Include="App_Themes\Office2003Olive\Demo.skin" />
+    <Content Include="App_Themes\Office2003Silver\Demo.skin" />
+    <Content Include="App_Themes\Office2010Black\Demo.skin" />
+    <Content Include="App_Themes\Office2010Blue\Demo.skin" />
+    <Content Include="App_Themes\Office2010Silver\Demo.skin" />
+    <Content Include="App_Themes\PlasticBlue\Demo.skin" />
+    <Content Include="App_Themes\RedWine\Demo.skin" />
+    <Content Include="App_Themes\SoftOrange\Demo.skin" />
+    <Content Include="App_Themes\Youthful\Demo.skin" />
+    <Content Include="Views\Shared\HeadPartial.cshtml" />
+    <Content Include="Views\Shared\EventMonitor.cshtml" />
+    <Content Include="Content\Fonts\CustomFont0.woff" />
+    <Content Include="Content\Fonts\CustomFont1.woff" />
+    <Content Include="Content\Fonts\CustomFont2.woff" />
+    <Content Include="Views\Shared\ThemeParametersSelectorPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60461</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

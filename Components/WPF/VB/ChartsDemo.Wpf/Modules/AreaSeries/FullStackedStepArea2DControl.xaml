@@ -1,0 +1,306 @@
+﻿<local:ChartsDemoModule
+    x:Class="ChartsDemo.FullStackedStepArea2DControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
+    xmlns:local="clr-namespace:ChartsDemo"
+    ModuleAppear="ChartsDemoModule_ModuleAppear">
+    <local:ChartsDemoModule.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/ChartsDemo;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <dxmvvm:BooleanNegationConverter
+                x:Key="InvertedBoolConverter" />
+        </ResourceDictionary>
+    </local:ChartsDemoModule.Resources>
+    <dxdb:DemoModuleControl
+        SupressGroupFramePaddingInOptions="False">
+        <dxdb:DemoModuleControl.OptionsContent>
+            <StackPanel
+                Orientation="Vertical"
+                MinWidth="120">
+                <dxe:CheckEdit
+                    Name="chbInvertedStep"
+                    Content="Inverted Step"
+                    IsChecked="False"
+                    Margin="0,0,0,5" />
+                <dxe:CheckEdit
+                    Name="chbVisible"
+                    Content="Show Labels"
+                    IsChecked="True" />
+                <dxe:CheckEdit
+                    Name="chbPercent"
+                    Margin="0,3,0,12"
+                    Content="Values as Percent"
+                    Checked="chbPercent_Checked"
+                    Unchecked="chbPercent_UnChecked"
+                    IsChecked="True"
+                    IsEnabled="{Binding ElementName=chbVisible, Path=IsChecked}" />
+                <dx:GroupFrame
+                    Header="Transparency">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                Grid.Column="0"
+                                Text="0"
+                                HorizontalAlignment="Left" />
+                            <TextBlock
+                                Grid.Column="1"
+                                Text="0.5"
+                                HorizontalAlignment="Center" />
+                            <TextBlock
+                                Grid.Column="2"
+                                Text="1"
+                                HorizontalAlignment="Right" />
+                        </Grid>
+                        <dxe:TrackBarEdit
+                            Name="slTransparency"
+                            Value="0.3"
+                            Minimum="0"
+                            Maximum="1"
+                            SmallStep="0.01"
+                            LargeStep="0.1"
+                            TickPlacement="None" />
+                    </StackPanel>
+                </dx:GroupFrame>
+            </StackPanel>
+        </dxdb:DemoModuleControl.OptionsContent>
+        <Grid>
+            <dxc:ChartControl
+                Name="chart"
+                BorderThickness="0"
+                ToolTipEnabled="False"
+                CrosshairEnabled="{Binding ElementName=chbVisible, Path=IsChecked, Converter={StaticResource InvertedBoolConverter}}"
+                AnimationMode="OnLoad">
+                <dxc:ChartControl.Diagram>
+                    <dxc:XYDiagram2D
+                        InvertedStep="{Binding ElementName=chbInvertedStep, Path=IsChecked}">
+                        <dxc:XYDiagram2D.AxisY>
+                            <dxc:AxisY2D>
+                                <dxc:AxisY2D.WholeRange>
+                                    <dxc:Range
+                                        MinValue="0"
+                                        MaxValue="1"
+                                        SideMarginsValue="0" />
+                                </dxc:AxisY2D.WholeRange>
+                                <dxc:AxisY2D.NumericOptions>
+                                    <dxc:NumericOptions
+                                        Format="Percent"
+                                        Precision="0" />
+                                </dxc:AxisY2D.NumericOptions>
+                            </dxc:AxisY2D>
+                        </dxc:XYDiagram2D.AxisY>
+                        <dxc:XYDiagram2D.AxisX>
+                            <dxc:AxisX2D>
+                                <dxc:AxisX2D.WholeRange>
+                                    <dxc:Range />
+                                </dxc:AxisX2D.WholeRange>
+                                <dxc:AxisX2D.DateTimeScaleOptions>
+                                    <dxc:ManualDateTimeScaleOptions
+                                        MeasureUnit="Month" />
+                                </dxc:AxisX2D.DateTimeScaleOptions>
+                                <dxc:AxisX2D.Label>
+                                    <dxc:AxisLabel
+                                        TextPattern="{}{A:MMMM}" />
+                                </dxc:AxisX2D.Label>
+                            </dxc:AxisX2D>
+                        </dxc:XYDiagram2D.AxisX>
+                        <dxc:XYDiagram2D.Series>
+                            <dxc:AreaStepFullStackedSeries2D
+                                x:Name="Negative"
+                                DisplayName="Negative"
+                                Transparency="{Binding ElementName=slTransparency, Path=Value}"
+                                AnimationAutoStartMode="SetStartState">
+                                <dxc:AreaStepFullStackedSeries2D.SeriesAnimation>
+                                    <dxc:Area2DGrowUpAnimation />
+                                </dxc:AreaStepFullStackedSeries2D.SeriesAnimation>
+                                <dxc:AreaStepFullStackedSeries2D.PointAnimation>
+                                    <dxc:AreaStacked2DFadeInAnimation />
+                                </dxc:AreaStepFullStackedSeries2D.PointAnimation>
+                                <dxc:AreaStepFullStackedSeries2D.Label>
+                                    <dxc:SeriesLabel
+                                        Visible="{Binding ElementName=chbVisible, Path=IsChecked}"
+                                        ResolveOverlappingMode="Default"
+                                        TextPattern="{}{VP:P0}" />
+                                </dxc:AreaStepFullStackedSeries2D.Label>
+                                <dxc:AreaStepFullStackedSeries2D.Points>
+                                    <dxc:SeriesPoint
+                                        Argument="01/01/2016"
+                                        Value="13" />
+                                    <dxc:SeriesPoint
+                                        Argument="02/01/2016"
+                                        Value="16" />
+                                    <dxc:SeriesPoint
+                                        Argument="03/01/2016"
+                                        Value="12" />
+                                    <dxc:SeriesPoint
+                                        Argument="04/01/2016"
+                                        Value="23" />
+                                    <dxc:SeriesPoint
+                                        Argument="05/01/2016"
+                                        Value="19" />
+                                    <dxc:SeriesPoint
+                                        Argument="06/01/2016"
+                                        Value="19" />
+                                    <dxc:SeriesPoint
+                                        Argument="07/01/2016"
+                                        Value="7" />
+                                    <dxc:SeriesPoint
+                                        Argument="08/01/2016"
+                                        Value="34" />
+                                    <dxc:SeriesPoint
+                                        Argument="09/01/2016"
+                                        Value="21" />
+                                    <dxc:SeriesPoint
+                                        Argument="10/01/2016"
+                                        Value="9" />
+                                    <dxc:SeriesPoint
+                                        Argument="11/01/2016"
+                                        Value="5" />
+                                    <dxc:SeriesPoint
+                                        Argument="12/01/2016"
+                                        Value="3" />
+                                </dxc:AreaStepFullStackedSeries2D.Points>
+                            </dxc:AreaStepFullStackedSeries2D>
+                            <dxc:AreaStepFullStackedSeries2D
+                                x:Name="Neutral"
+                                DisplayName="Neutral"
+                                Transparency="{Binding ElementName=slTransparency, Path=Value}"
+                                AnimationAutoStartMode="SetStartState">
+                                <dxc:AreaStepFullStackedSeries2D.SeriesAnimation>
+                                    <dxc:Area2DGrowUpAnimation />
+                                </dxc:AreaStepFullStackedSeries2D.SeriesAnimation>
+                                <dxc:AreaStepFullStackedSeries2D.PointAnimation>
+                                    <dxc:AreaStacked2DFadeInAnimation />
+                                </dxc:AreaStepFullStackedSeries2D.PointAnimation>
+                                <dxc:AreaStepFullStackedSeries2D.Label>
+                                    <dxc:SeriesLabel
+                                        Visible="{Binding ElementName=chbVisible, Path=IsChecked}"
+                                        ResolveOverlappingMode="Default"
+                                        TextPattern="{}{VP:P0}" />
+                                </dxc:AreaStepFullStackedSeries2D.Label>
+                                <dxc:AreaStepFullStackedSeries2D.Points>
+                                    <dxc:SeriesPoint
+                                        Argument="01/01/2016"
+                                        Value="120" />
+                                    <dxc:SeriesPoint
+                                        Argument="02/01/2016"
+                                        Value="101" />
+                                    <dxc:SeriesPoint
+                                        Argument="03/01/2016"
+                                        Value="91" />
+                                    <dxc:SeriesPoint
+                                        Argument="04/01/2016"
+                                        Value="85" />
+                                    <dxc:SeriesPoint
+                                        Argument="05/01/2016"
+                                        Value="101" />
+                                    <dxc:SeriesPoint
+                                        Argument="06/01/2016"
+                                        Value="143" />
+                                    <dxc:SeriesPoint
+                                        Argument="07/01/2016"
+                                        Value="145" />
+                                    <dxc:SeriesPoint
+                                        Argument="08/01/2016"
+                                        Value="150" />
+                                    <dxc:SeriesPoint
+                                        Argument="09/01/2016"
+                                        Value="111" />
+                                    <dxc:SeriesPoint
+                                        Argument="10/01/2016"
+                                        Value="134" />
+                                    <dxc:SeriesPoint
+                                        Argument="11/01/2016"
+                                        Value="107" />
+                                    <dxc:SeriesPoint
+                                        Argument="12/01/2016"
+                                        Value="103" />
+                                </dxc:AreaStepFullStackedSeries2D.Points>
+                            </dxc:AreaStepFullStackedSeries2D>
+                            <dxc:AreaStepFullStackedSeries2D
+                                x:Name="Positive"
+                                DisplayName="Positive"
+                                Transparency="{Binding ElementName=slTransparency, Path=Value}"
+                                AnimationAutoStartMode="SetStartState">
+                                <dxc:AreaStepFullStackedSeries2D.SeriesAnimation>
+                                    <dxc:Area2DGrowUpAnimation />
+                                </dxc:AreaStepFullStackedSeries2D.SeriesAnimation>
+                                <dxc:AreaStepFullStackedSeries2D.PointAnimation>
+                                    <dxc:AreaStacked2DFadeInAnimation />
+                                </dxc:AreaStepFullStackedSeries2D.PointAnimation>
+                                <dxc:AreaStepFullStackedSeries2D.Label>
+                                    <dxc:SeriesLabel
+                                        Visible="{Binding ElementName=chbVisible, Path=IsChecked}"
+                                        ResolveOverlappingMode="Default"
+                                        TextPattern="{}{VP:P0}" />
+                                </dxc:AreaStepFullStackedSeries2D.Label>
+                                <dxc:AreaStepFullStackedSeries2D.Points>
+                                    <dxc:SeriesPoint
+                                        Argument="01/01/2016"
+                                        Value="47" />
+                                    <dxc:SeriesPoint
+                                        Argument="02/01/2016"
+                                        Value="77" />
+                                    <dxc:SeriesPoint
+                                        Argument="03/01/2016"
+                                        Value="45" />
+                                    <dxc:SeriesPoint
+                                        Argument="04/01/2016"
+                                        Value="49" />
+                                    <dxc:SeriesPoint
+                                        Argument="05/01/2016"
+                                        Value="63" />
+                                    <dxc:SeriesPoint
+                                        Argument="06/01/2016"
+                                        Value="58" />
+                                    <dxc:SeriesPoint
+                                        Argument="07/01/2016"
+                                        Value="56" />
+                                    <dxc:SeriesPoint
+                                        Argument="08/01/2016"
+                                        Value="77" />
+                                    <dxc:SeriesPoint
+                                        Argument="09/01/2016"
+                                        Value="105" />
+                                    <dxc:SeriesPoint
+                                        Argument="10/01/2016"
+                                        Value="80" />
+                                    <dxc:SeriesPoint
+                                        Argument="11/01/2016"
+                                        Value="91" />
+                                    <dxc:SeriesPoint
+                                        Argument="12/01/2016"
+                                        Value="89" />
+                                </dxc:AreaStepFullStackedSeries2D.Points>
+                            </dxc:AreaStepFullStackedSeries2D>
+                        </dxc:XYDiagram2D.Series>
+                    </dxc:XYDiagram2D>
+                </dxc:ChartControl.Diagram>
+                <dxc:ChartControl.Legend>
+                    <dxc:Legend
+                        HorizontalPosition="Right"
+                        VerticalPosition="TopOutside"
+                        Orientation="Horizontal"
+                        ReverseItems="True" />
+                </dxc:ChartControl.Legend>
+                <dxc:ChartControl.Titles>
+                    <dxc:Title
+                        Dock="Top"
+                        HorizontalAlignment="Center">Statistics comments in the past month</dxc:Title>
+                </dxc:ChartControl.Titles>
+            </dxc:ChartControl>
+        </Grid>
+    </dxdb:DemoModuleControl>
+</local:ChartsDemoModule>

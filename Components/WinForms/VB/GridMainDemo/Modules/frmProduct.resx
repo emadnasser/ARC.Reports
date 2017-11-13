@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"></assembly>
+  <data name="ceDiscontinued.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 98</value>
+  </data>
+  <data name="ceDiscontinued.Properties.Caption" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+  <data name="ceDiscontinued.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 19</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></assembly>
+  <data name="ceDiscontinued.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ceDiscontinued.Name" xml:space="preserve">
+    <value>ceDiscontinued</value>
+  </data>
+  <data name="&gt;&gt;ceDiscontinued.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;ceDiscontinued.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ceDiscontinued.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="teQuantityPerUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 74</value>
+  </data>
+  <data name="teQuantityPerUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 20</value>
+  </data>
+  <data name="teQuantityPerUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;teQuantityPerUnit.Name" xml:space="preserve">
+    <value>teQuantityPerUnit</value>
+  </data>
+  <data name="&gt;&gt;teQuantityPerUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;teQuantityPerUnit.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;teQuantityPerUnit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="seUnitPrice.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="seUnitPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 50</value>
+  </data>
+  <data name="seUnitPrice.Properties.Mask.EditMask" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="seUnitPrice.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="seUnitPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 20</value>
+  </data>
+  <data name="seUnitPrice.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <metadata name="dxValidationProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>127, 17</value>
+  </metadata>
+  <data name="&gt;&gt;seUnitPrice.Name" xml:space="preserve">
+    <value>seUnitPrice</value>
+  </data>
+  <data name="&gt;&gt;seUnitPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;seUnitPrice.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;seUnitPrice.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="icbCategory.EditValue" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="icbCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 26</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v16.2" name="DevExpress.Utils.v16.2"></assembly>
+  <data name="icbCategory.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="icbCategory.Properties.Items" xml:space="preserve">
+    <value>Beverages</value>
+  </data>
+  <data name="icbCategory.Properties.Items1" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="icbCategory.Properties.Items2" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="icbCategory.Properties.Items3" xml:space="preserve">
+    <value>Condiments</value>
+  </data>
+  <data name="icbCategory.Properties.Items4" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="icbCategory.Properties.Items5" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="icbCategory.Properties.Items6" xml:space="preserve">
+    <value>Confections</value>
+  </data>
+  <data name="icbCategory.Properties.Items7" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="icbCategory.Properties.Items8" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="icbCategory.Properties.Items9" xml:space="preserve">
+    <value>Dairy Products</value>
+  </data>
+  <data name="icbCategory.Properties.Items10" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="icbCategory.Properties.Items11" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="icbCategory.Properties.Items12" xml:space="preserve">
+    <value>Grains/Cereals</value>
+  </data>
+  <data name="icbCategory.Properties.Items13" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="icbCategory.Properties.Items14" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="icbCategory.Properties.Items15" xml:space="preserve">
+    <value>Meat/Poultry</value>
+  </data>
+  <data name="icbCategory.Properties.Items16" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="icbCategory.Properties.Items17" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="icbCategory.Properties.Items18" xml:space="preserve">
+    <value>Produce</value>
+  </data>
+  <data name="icbCategory.Properties.Items19" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="icbCategory.Properties.Items20" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="icbCategory.Properties.Items21" xml:space="preserve">
+    <value>Seafood</value>
+  </data>
+  <data name="icbCategory.Properties.Items22" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="icbCategory.Properties.Items23" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB+
+        HgAAAk1TRnQBSQFMAgEBCAEAAQwBAAEMAQABEAEAARABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABMAMAAQEBAAEYBgABJP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AJAAAgUBvgEGAQQBugEGAQMBuQEI
+        AQIBt0wAAUEBawEAATUBWQEAAScBSQEAARwBOAQAAWcBkAEAAUEBZwEAASIBQQEAAQ4BJEgAAQkBEAHD
+        AQkBEAHGARMBHAHYARMBEQHVARUBDAHLARIBBgHAAQkBAgG3AQkBAQG0QwABbQGaAQABowHlAQABnQHi
+        AQABlwHgAQABLQFQAwABFwGeAcgBBwG7AfoBAAGjAeoBAAGRAdsBAAEXATBCAAELARkBxgEaATYB3gEe
+        ATcB7AEdASwB7gEYARoB5wEbAREB2gEdAQ0BzgEYAQYBwQEUAQMBtQEIAQEBsTwAAR0BqwHOAR0BzAH6
+        AREBwwH1AQMBtQHvAQABpwHqAQABQwFrAwABOAHTAfsBHQHWAf8BAQHCAf8BAAGmAe0BAAGTAdwBAAEc
+        ATcGAAEBAQYBGwEBAQQBEwEBAQMBDQEAAQEBBwIAAQIqAAEQASQBzQEjAUsB8AEkAUMB9QEfAS8B8AEZ
+        AR8B6gEZARMB4gEeAQ4B1gEgAQoBywEZAQUBvQEIAQEBswkAAbcBWgEOLQABXgHrAfwBUAH4Af8BQQH1
+        Af8BKQHmAf8BEgHMAfwBAQG4AfUBAAFbAYcDAAFYAfIB/wE3AegB/wEXAd0B/wEAAcIB/wEAAagB7wEA
+        AZIB2gEAASABPAMAAQMBJwGIAQUBLAGRAQUBKgGNAQQBKAGKAQMBJgGGAQMBJAGDAQABAQEEIQABEwEu
+        Ac8BJAFUAe0BKAFXAfoBJQFHAfYBIAE1AfIBGwEiAewBHQEXAecBIQEQAdsBIAEKAdABHAEHAcQBFAED
+        AbYBCAEBAbEGAAHRAW0BGAG7AV0BEAwAAbgBZgEdAa8BXAEWAagBVQEQAaIBUAEMAZ0BTAEJAd0BhwFA
+        AdoBgAE1CQABjAL/AW4C/wFRAv8BOwH4Af8BHgHgAf8BAAGOAboJAAFOAe8B/wErAeYB/wERAdoB/wEA
+        AcAB/wEAAacB6wEAAUABZwMAAQQBKwGOAQoBOgGmAQgBNAGfAQcBMQGZAQYBLQGTAQUBKQGMAQMBJgGH
+        AQMBJAGDAQABAQEHDAABeAEzAQQBeAEzAQQJAAEPASQBygEsAWMB9AFBAW4B/AErAVAB+AEiAToB9AEd
+        AScB7wEbARgB6QEgARIB4AEjAQwB1AEhAQkBxwEXAQQBuAEGAQEBswYAAdkBfAEoAdMBcgEdAb4BYQES
+        AwAB0wGFATcBzQF9ATAB9wGjAUoB8AGXAUAB6AGKATQBuQFiARgB7wGxAXoB9AG7AYcB8gGzAXwB4wGR
+        AU0GAAGmAv8BhQL/AWIC/wFCAf0B/wEhAcwB7QcAAV0BmAYAAUMB7AH/ASMB4wH/AQkB0gH/AQABuAH6
+        AQABZwGYAwABBwEyAZgBEQFNAcEBDwFGAbkBDAFAAbEBCgE5AagBCAEzAZ0BBgEtAZMBBAEoAYoBAwEl
+        AYQBAQEDARAGAAGLAU4BIgH9AeMBsQH7Ac8BfAF4ATMBBAYAARABJQHKAUUBdwH1AbIBxgH/AVkBeQH7
+        ASgBQgH1AR8BLAHxAhoB7AEfARUB5gEiAQ8B2QEhAQoBywEWAQQBuQEGAQEBswYAAeQBkgFAAdwBhAEw
+        AdUBdgEiAeYBowFTAf0BugFkAfwBtQFfAfoBsQFaAfcBqQFSAfABmgFFAc4BeAEpAfoBzgGjAfgByAGa
+        AfYBwQGQAfUBugGGAewBpQFoAwABwgL/AZ4C/wF7Av8BUAH6Af8HAAGFAcoBAAGTAeUBAAFRAYYGAAE5
+        AesB/wEcAd0B/wEAAb4B9wEAAZEBywMAAQsBOwGiARYBXAHSARUBWAHPARMBUgHKARABSwHCAQ0BQwG2
+        AQoBOAGmAQcBMAGXAQQBKQGMAQIBCAElAcwBrgGUAbsBlAF0Af4B8wHdAf4B8AHVAf0B4AGrAXsBNwEH
+        BgABFQEyAc8BRgF2AfAB3QHmAf8BywHWAf4BQAFcAfgBIgEzAfQBHAEiAe8BHgEXAekBJAETAeABHwEM
+        Ac0BEwEEAbkBCAEBAbEGAAHwAa4BYQHmAZsBTAHcAYYBNAH/AcoBegH+AcYBdQH+AcMBcAH9Ab4BagH7
+        AbkBZQH2Aa0BWAHkAZUBQgH8AdsBtwH+Ae4B2AH+Ae4B2AH+Ae4B2AH3AcABjAH0AbUBfg8AAQEBswHx
+        AQIBvQH3AQABrgH1AQABlwHnAQABQgFwEgABDgFFAa0BGQFkAdcBGAFgAdQBFwFdAdIBFQFYAdABEwFT
+        AcwBDwFJAb0BCwE9AasBBwExAZkBAgEOAT4B/wH7AfQB/gH5Ae4B/gH2AecB/gH0Ad8BnAFkATYMAAEx
+        AUgB1QHLAdkB/QHdAeUB/wFGAWUB+wEjATkB9gEeAScB8QEbARkB7AEhARUB4wEZAQsByAEIAQIBtgkA
+        AfkByQGFAe4BsQFoAeEBlAFFAf8B0QGJAf8B0AGGAf8BzgGBAf4BywF8Af4BxgF4Af0BwgFyAfQBsAFf
+        Af0B5gHJAfYBwQGQAZEBRQEHAf4B7gHYAfkBzgGhEgABKAHgAf8BIgHwAf8BBgHOAf8BAAGnAfEBAAFN
+        AYASAAETAVIBuAEdAW4B2wEbAWoB2QEZAWUB1wEYAWEB1QEWAVwB0gEUAVUByQEQAUoBugELAT0BpwEF
+        ARgBWQHVAb8BrgHVAb0BqgH/AfoB8AH+AfcB6gH+Ae0BzQGTAVUBIgkAARoBNQHQAVcBfgHwAbEBwgH8
+        AUIBZgH7ASUBQQH4ASABMAH0ARwBHgHvARsBEwHbARUBCgHFAQkBAgG1CQAB+wHSAZcB7wG3AXQB4gGZ
+        AVADAAH/AdUBkwH/AdQBkAH/AdMBjAH/AdABiAH+AcwBgwH6AcIBdwH+Ae4B2AH2AcEBkAH2AcEBkAH+
+        Ae4B2BUAAVgC/wE8Av8BEwHiAf8BAAG3AfoBAAFdAZISAAEYAWIBxAEgAXgB3wEfAXMB3QEdAW8B2wEb
+        AWsB2gEaAWYB1wEYAWAB0gEUAVYBxgEQAUoBtQEIASQBdgYAAcIBoQGKAf8B+QHuAf0B6gHGAZgBWwEn
+        DAABGQEyAdIBKgE9AdYBJQFLAe0BIQFAAfABHgEwAewBFwEbAeABCQEHAcQBCAEEAb0MAAH3Ac4BmQHs
+        AbMBdQkAAf8B2gGfAf8B2AGbAf8B1wGXAf8B1QGTAf8B0wGPAf4BzgGJAf4B8QHfAf4B7gHYGAABeQL/
+        AVUC/wEjAesB/wEAAcUB/wEAAW4BoxIAAR8BdgHQASYBhwHkASQBgQHiASIBewHgAR8BdQHeAR0BbwHc
+        ARwBawHaARgBYgHPAQ4BOgGZDAABogFvAUgBnwFmATcVAAEQASQB0QEMARcByQEKAREBxwELAQ8ByRIA
+        AfABwQGODwAB/wHeAaoB/wHdAaYB/wHbAaMB/wHaAZ8B/wHYAZoB/wH2AekbAAGaAv8BcQL/ATcB8AH/
+        AQsBzQH/AQABfQG2EgABJwGMAdsBKwGXAegBKQGRAecBJwGLAeUBJQGEAeMBIwF+AeEBGgFhAcIBFwFW
+        AbcwAAEDASsBUgwAAQQBYQEwGwAB8AG3AXoB6QGkAWEB4gGSAUkhAAG7Av8BkgL/AVIB8wH/ARgB0wH/
+        AQABiwHFEgABMwGsAewBMQGmAesBLgGdAecBKwGVAeIBKAGLAd0BJQGBAdczAAEGASgBdQEFASkBZQYA
+        AQcBhAFGAQUBfgFBAQQBYAEwGwAB7AGuAW4B5QGbAVUnAAGzAv8BbgH4Af8BJgHKAfpXAAEGASgBdQYA
+        ARMBqgFpAQ8BngFdAQsBkAFQAQcBhAFGAQQBYAEvSwABjgH8Af9dAAEPAZkBYgEMAYQBTwEIAXIBPwEG
+        AWcBNQEEAWEBMQEEAV8BL0gAAcoBigFCAcwBjwFHAcsBjQFEAcEBgwE7AbMBdAExAaMBZAElFQABGQFY
+        Aa0BHAFaAawBGwFYAacBFgFRAaABDgFIAZcBCQE/AY0BBgE4AYUBBAEzAX8BAwEwAXsBAwEuAXcBAwEt
+        AXUJAAEyAYgBywEoAXwBxAEgAXMBvAEYAWgBtQEVAWABrwETAVkBqAEPAVIBogENAUwBnAELAUYBlwEJ
+        AUEBkgEIAT0BjQEHAToBiQEGATcBhgEFATUBggEFATQBfwEEATIBfDwAAdABlQFNAdYBoAFZAdsBqAFh
+        AdkBpAFdAcwBlQFQAbwBgwFAAakBbwEvAZcBXAEgEgABIgFfAbIBUQGYAeABVgGhAecBVQGlAesBRgGb
+        AeYBOAGRAeIBLAGHAd0BIQF9AdgBGQF0AdIBEwFrAc0BAwEuAXYJAAE8AZUB0wFCAaoB7QE3AaAB6QEt
+        AZYB5AEmAY0B4AEjAYYB3AEgAX8B2AEdAXcB1AEaAW8B0AEXAWcBzQEUAV8ByQESAVgBxQEQAVABwgEO
+        AUkBvwEMAUMBvAEFATUBfwGFAdMB8QFxAckB7gFdAb4B6wFMAbIB5wE9AaYB4wEwAZsB4AEkAZEB3AEc
+        AYYB2AEVAX4B1AESAXYB0QEQAXABzQEOAWoByQEMAWQBxgELAV8BwgEJAVoBvwEIAVYBvAwAAdsBqAFg
+        AfoBxwFBAfwB3QGHAfwB8QHQAfwB3gGKAfsBwQEyAfkBrAEYAZsBYgEmEgABLQFnAbcBZQGkAeMBbgGt
+        AekBbQGyAe0BWgGnAekBSQGbAeUBOAGPAd4BKwGEAdkBIAF5AdMBFwFvAc4BAwEvAXgJAAFGAZ4B2wFJ
+        Aa8B7wE/AakB7QE1AaIB6gEtAZwB5gEnAZIB4gEkAYsB3gEiAYUB2gEeAX0B1gEbAXYB0gEZAW4BzwEW
+        AWYBywETAV8BxwERAVcBxAEPAVABwQEGATkBgwGLAdcB8gGTAe0B/wGBAekB/wFuAeEB/wFdAdoB/gFO
+        AdIB/gE/AcoB/gEzAcIB/gEoAboB/QElAbUB/QEkAbEB/QEhAawB/QEfAagB/AEdAaUB/AEcAaIB/AEI
+        AVgBvQwAAeQBtwFxAfoBxwFBAfwB3QGHAfwB8QHQAfwB3gGKAfsBwQEyAfkBrAEYAZ0BaAEsEgABOQFw
+        Ab0BewGuAeYBhwG5AewBhwG/AfABcQGzAewBXAGlAecBSAGYAeEBNwGLAdsBKAF+AdUBHQFzAc4BAwEv
+        AXoJAAFPAaYB4QFRAbQB8gFHAa4B7wE9AagB7AEzAaEB6gEsAZwB5gEoAZcB5AElAZAB4AEjAYoB3AEf
+        AYMB2AEdAXwB1AEaAXQB0QEXAW0BzQEUAWYByQESAV4BxgEHAT4BiAGXAdoB8wGbAfAB/wGIAewB/wF3
+        AeYB/wEbAUwBjwEFAYEB5AEmAcYB+wE4AcgB/gEtAcEB/gEpAbsB/gEmAbYB/QEkAbIB/QEiAa0B/QEf
+        AakB/QEdAaYB/AEJAVoBvgwAAeoBwgF8AfoBxwFBAfwB3QGHAfwB8QHQAfwB3gGKAfsBwQEyAfkBrAEY
+        AZ8BagEvEgABQwF5AcIBjQG5AegBngHFAe4BoQHMAfMBigG/Ae8BbwGwAeoBWAGhAeMBRAGSAd0BMQGE
+        AdYBIwF4AdABAwExAXwJAAn/AfkB/gH/AfMB/QH/AeoB/AH+AeEB+wH+AdcB+QH9AcwB+AH9AcAB9gH9
+        AbQB9QH8AagB8wH8AZsB8QH7AY8B7wH7AYMB7gH6AXcB7AH6AaMB3gH0AakB8gH/AZQB7gH/AX8B6QH/
+        AQYBDQFDAQABLAGFAQEBpAH7AT0BzwH+ATIBxwH+ASwBwQH+ASkBvAH+ASYBtwH9ASQBsgH9ASIBrgH9
+        AR8BqQH9AQoBWwG+DAAB6gHCAXwB+gHHAUEB/AHdAYcB/AHxAdAB/AHeAYoB+wHBATIB+QGsARgBnwFq
+        AS8SAAFPAYEBxgGdAcEB6gGvAdAB8QG0AdcB9QGcAckB8QGBAboB6wFnAakB5QFPAZkB3wE5AYgB1wEp
+        AXsB0QEEATIBfgkAAWQBuAHsAWIBvwH2AVcBuQH0AU0BsgHyAUIBrAHvATkBpgHsATABoAHpASoBmwHm
+        ASgBlwHkASYBkwHhASQBkAHeASEBjAHbAR4BhQHXARwBfwHUARkBeAHQAQoBSwGSAbEB4QH0AbkB9QH/
+        AaQB8gH/AY4B7QH/AT4BdgGbAQkBGQFUARQBcQHDAUIB1AH/ATYBzgH+ASkBsgHsARMBiQHeARQBugH8
+        AR4BvwH8ASABswH9ASIBrgH9AQoBXQG/DAAB6gHCAXwB+gHHAUEB/AHdAYcB/AHxAdAB/AHeAYoB+wHB
+        ATIB+QGsARgBnwFqAS8SAAFZAYkBygGtAcoB7AHAAdgB8wHEAd8B+AGqAdIB8wGNAcAB7QFwAa4B5gFX
+        AZ0B4AFBAYwB2QEvAX4B0gEEATMBgQkAAXABwAHwAWsBwwH4AWABvgH2AVQBuAH0AUoBsQHyAT8BqwHu
+        ATYBpQHsAS4BnwHpASoBmwHmASgBlwHkASYBkwHhASQBkAHeASEBjAHbAR8BiAHYAR0BgwHWAQwBUQGY
+        Ab4B4wH1AccB9wH/AbUB9AH/AaEB8AH/AYsB7QH/AXUB5wH/AV0B4AH/AUoB2QH/ATsB0gH/ARYBZQGl
+        AQABPQGdAQABogH7ASQByAH7ASEBvwH8ASQBsgH9AQwBYAHADAAB6gHCAXwB+gHHAUEB/AHdAYcB/AHx
+        AdAB/AHeAYoB+wHBATIB+QGsARgBnwFqAS8SAAFjAZEBzwG2Ac8B7QHLAd4B9AHOAeUB+QG2AdgB9QGZ
+        AccB7wF6AbQB6AFfAaIB4AFGAZEB2QE0AYEB0wEFATUBhAkAAXkBxgH0AXMByAH5AWgBwgH3AV0BvAH1
+        AVEBtwH0AUgBsAHyAT4BqgHuATUBpAHsAS0BngHpASoBmwHmASgBlwHkASYBkwHhASQBkAHeASEBjAHb
+        AR8BiAHYAQ8BWAGeAcoB5wH2AdUB+QH/AcUB9wH/AYQBvAHdATUBwgH8AWYB3gH+AXIB5wH/AVwB4AH/
+        AUUB2AH/AQsBLQFkAQABDQFXAQABXQHAAQ8BtQH7AScBxgH8AScBtwH9AQwBYgHBDAAB6gHCAXwB+gHH
+        AUEB/AHdAYcB/AHxAdAB/AHeAYoB+wHBATIB+QGsARgBnwFqAS8SAAFoAZYB0QG6AdIB7gHUAeMB9QHZ
+        AeoB+gHAAd0B9gGjAcwB8AGEAbkB6QFoAacB4gFNAZQB2gE5AYUB0wEGATcBhwkAAYQBzQH3AXsBywH5
+        AXABxwH5AWUBwQH3AVkBuwH1AU4BtQH0AUUBrwHxATsBqQHuATMBowHrASwBngHpASoBmwHmASgBlwHk
+        ASYBkwHhASQBkAHeASEBjAHbAREBXQGjAdQB6gH2AeIB+wH/AdUB+QH/AUIBUwGAAQABYAG+AUQBzwH8
+        AYkB6wH/AXIB5gH/AVsB3wH/AR0BWgGIAgABNQEAAR8BcgEAAYEB5AEQAbAB/AEpAb0B/gEOAWUBwgwA
+        AeoBwgF8AfoBxwFBAfwB3QGHAfwB8QHQAfwB3gGKAfsBwQEyAfkBrAEYAZ8BagEvEgABnQHAAeUBjgGx
+        Ad0BqQHBAeMBtAHIAeQBqQHBAd4BjwGuAdIBaAGSAcIBSAF4AbMBLQFhAaUBGgFPAZgBDQFBAY4JAAn/
+        AfkB/gH/AfMB/QH/AeoB/AH+AeEB+wH+AdcB+QH9AcwB+AH9AcAB9gH9AbQB9QH8AagB8wH8AZsB8QH7
+        AY8B7wH7AYMB7gH6AXcB7AH6Ad0B7AH3AewB/QH/AeMB/AH/AZsBtAHFAUYBZQGXAYIB1AH6AaEB8AH/
+        AYwB6wH/AXUB5gH/AVABwAHjAR8BWwGJAQ0BNQFzARUBgAHNAScBvAH9ASsBwQH+AQ8BaAHDDAAB6gHC
+        AXwB+gHHAUEB/AHdAYcB/AHxAdAB/AHeAYoB+wHBATIB+QGsARgBnwFqAS8SAAGfAcIB5QHyAfsH/wH0
+        AfwB/wHmAfcB/wHRAfEB/QG8AecB/AGkAd0B+gGNAdMB+QEQAUUBkwkAAZMBpwHAAYUBnAG4AXkBkgGw
+        AW4BiQGqAWUBggGlAWIBfwGjAWIBfwGjAWIBfgGhAWIBfQGeAWEBewGbAWEBeAGWAWEBdgGRAWEBdQGO
+        AWEBdAGMAWEBcwGLAWEBcwGLAeUB7gH4AfUB/gH/Ae8B/QH/AeUB/AH/AdgB+gH/AcoB9wH/AbkB9AH/
+        AaUB8AH/AY8B7AH/AXkB5gH/AWUB4AH/AVQB2gH/AUMB0wH+ATMBywH+AS0BxQH+ARABagHEDAAB6gHC
+        AXwB+gHHAUEB/AHdAYcB/AHxAdAB/AHeAYoB+wHBATIB+QGsARgBnwFqAS8SAAGiAcQB5gHyAfsB/wED
+        AS4BdgP/AfgB/QH/AQMBLgF2AdgB8wH+AcIB6QH9AQMBLgF2AZMB1gH5ARQBSwGYDAABdgGPAa8BYwF/
+        AaMBUQFxAZkBQQFkAZABNAFZAYgBKgFRAYIBKgFRAYIBKgFQAYABKgFOAXwBKQFLAXUBKQFHAW4BKAFF
+        AWgBKAFDAWQBKAFBAWIBKAFBAWEDAAEIAVABtgEKAVYBugENAV4BwAEPAWUBxQERAW0BzAETAXQB0wEU
+        AXsB2QEVAX8B4AEVAYMB5gEUAYYB7QETAYIB7AEQAXoB5gEOAXAB3AEKAWMBzgEIAVcBwAwAAeoBwgF8
+        Af8B8QHHAf8B+QHoBP8B/QH2Af8B+gHrAf8B9wHdAZ8BagEvEgABowHFAecB8gH7B/8B+AH9Af8B7QH6
+        Af8B3AH1Af4ByAHsAf0BsAHjAfwBmQHZAfoBGQFRAZ0SAAFRAXIBmgE7AWABjQEoAVABgQEWAUEBdwEI
+        ATYBbwEDATIBbAEDATABaQEDAS0BYQECASgBWQEBASQBUAEBASIBSwEBASABRwwAAQwBWwG9AQ8BYwHC
+        ASIBmwHtASIBnQHwASABnwH0AR8BngH3ARwBnAH6ARoBmQH7ARgBkwH6ARYBjwH6ARQBjAH6AQwBawHW
+        DwAB6gHCAXwB/wHxAccB/wH5AegE/wH9AfYB/wH6AesB/wH3Ad0BnwFqAS8SAAGlAccB6AHyAfsE/wEc
+        AVoBrAH4Af0B/wHvAfoB/wHiAfcB/gEDAS4BdgG3AeUB/AGfAdsB+wEfAVcBoxgAAUYBaQGTATEBWAGH
+        AR8BSQF8AQ8BPAFzAQMBMgFsAQMBLwFlAQMBKgFdAQIBJgFUAQEBIwFNFQABEQFqAcYBEwFyAcwBJAGj
+        AfQBIgGkAfcBIAGhAfkBHQGdAfoBGgGYAfsBFwGSAfoBEQF9AegSAAHqAcIBfAH/AfEBxwH/AfkB6AT/
+        Af0B9gH/AfoB6wH/AfcB3QGfAWoBLxUAAc0B3gHyBv8B+AH9Af8BDQFBAY4B5QH4Af4B1AHwAf0BvAHo
+        AfwBPgF1AbchAAE7AWABjQEoAVABgQEWAUEBdwEIATQBawEDASwBYQECASgBVx4AARYBeQHQARgBfwHX
+        ASMBpwH5ASABowH7AR0BnQH7ARUBiAHuFQAB6gHCAXwB9gHZAZQB/wHoAaQB+wHgAZwB6AHIAYQB0QGo
+        AWcBtwGHAUkBnwFqAS8YAAHtAfIB+QH9Av4B+AH9Af8B3QHrAfcBugHUAeoBlAG3AdwBawGZAc0qAAEx
+        AVgBhwEfAUcBeQEPATcBaicAARkBhQHaARoBiQHhARkBiwHmDAABQgFNAT4HAAE+AwABKAMAAUADAAEw
+        AwABAQEAAQEFAAGAAQEWAAP/gQAE/wH8AT8C/wHhAQ8C/wHwAQ8C/wHBAQcC/wHgAQcC/wGBAgMB/wHg
+        AQcBfwH/AgEBAAH/AcABAwE8AQcBAwGBAQABeQHAAQMBEAEDAQYBwQEAATABwAEDAQABAQEMAWECAAHA
+        AQMCAAH4AT8BAAEBAeABBwEAAQEB+AE/AgAB4AEHARABAwH4AT8BAAEwAfABDwE4AQcB+AE/AQABeQH8
+        AT8BfAEPAfgBPwEAAv8BewH+AT8B+AE/AQMB/wH+AWMB/gF/AfwBfwL/Af0BgwL/Af4D/wH+AQcC/wH4
+        AR8BwAEHAgAC/wHwAQ8BwAEHBAAB8AEPAcABBwQAAfABDwHAAQcEAAHwAQ8BwAEHBAAB8AEPAcABBwQA
+        AfABDwHAAQcEAAHwAQ8BwAEHBAAB8AEPAcABBwQAAfABDwHAAQcEAAHwAQ8BwAEHBAAB8AEPAcABBwGA
+        AQABgAEAAfABDwHAAQcB4AEBAeABAQHwAQ8BwAEHAfgBAwH4AQMB8AEPAeABDwH+AQcB/gEHAfABDwHw
+        AR8B/wGPAf8Bjws=
+</value>
+  </data>
+  <data name="icbCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 20</value>
+  </data>
+  <data name="icbCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;icbCategory.Name" xml:space="preserve">
+    <value>icbCategory</value>
+  </data>
+  <data name="&gt;&gt;icbCategory.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ImageComboBoxEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;icbCategory.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;icbCategory.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 168</value>
+  </data>
+  <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 22</value>
+  </data>
+  <data name="simpleButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="simpleButton2.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Name" xml:space="preserve">
+    <value>simpleButton2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="teProductName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 2</value>
+  </data>
+  <data name="teProductName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 20</value>
+  </data>
+  <data name="teProductName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;teProductName.Name" xml:space="preserve">
+    <value>teProductName</value>
+  </data>
+  <data name="&gt;&gt;teProductName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;teProductName.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;teProductName.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 168</value>
+  </data>
+  <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 22</value>
+  </data>
+  <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="simpleButton1.Text" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Name" xml:space="preserve">
+    <value>simpleButton1</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></assembly>
+  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="layoutControlGroup1.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="lciProductName.CustomizationFormText" xml:space="preserve">
+    <value>Product Name:</value>
+  </data>
+  <data name="lciProductName.Text" xml:space="preserve">
+    <value>Product Name:</value>
+  </data>
+  <data name="emptySpaceItem1.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="emptySpaceItem1.Text" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="lciOK.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="lciOK.Text" xml:space="preserve">
+    <value>lciOK</value>
+  </data>
+  <data name="lciCancel.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="lciCancel.Text" xml:space="preserve">
+    <value>lciCancel</value>
+  </data>
+  <data name="emptySpaceItem2.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem2</value>
+  </data>
+  <data name="emptySpaceItem2.Text" xml:space="preserve">
+    <value>emptySpaceItem2</value>
+  </data>
+  <data name="emptySpaceItem3.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem3</value>
+  </data>
+  <data name="emptySpaceItem3.Text" xml:space="preserve">
+    <value>emptySpaceItem3</value>
+  </data>
+  <data name="lciCategory.CustomizationFormText" xml:space="preserve">
+    <value>Category:</value>
+  </data>
+  <data name="lciCategory.Text" xml:space="preserve">
+    <value>Category:</value>
+  </data>
+  <data name="lciUnitPrice.CustomizationFormText" xml:space="preserve">
+    <value>Unit Price:</value>
+  </data>
+  <data name="lciUnitPrice.Text" xml:space="preserve">
+    <value>Unit Price:</value>
+  </data>
+  <data name="lciQuantityPerUnit.CustomizationFormText" xml:space="preserve">
+    <value>Quantity Per Unit: </value>
+  </data>
+  <data name="lciQuantityPerUnit.Text" xml:space="preserve">
+    <value>Quantity Per Unit: </value>
+  </data>
+  <data name="lciDiscontinued.CustomizationFormText" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="lciDiscontinued.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 192</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.Text" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>317, 212</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Add New Product</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;lciProductName.Name" xml:space="preserve">
+    <value>lciProductName</value>
+  </data>
+  <data name="&gt;&gt;lciProductName.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;lciOK.Name" xml:space="preserve">
+    <value>lciOK</value>
+  </data>
+  <data name="&gt;&gt;lciOK.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;lciCancel.Name" xml:space="preserve">
+    <value>lciCancel</value>
+  </data>
+  <data name="&gt;&gt;lciCancel.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem2.Name" xml:space="preserve">
+    <value>emptySpaceItem2</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem3.Name" xml:space="preserve">
+    <value>emptySpaceItem3</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;lciCategory.Name" xml:space="preserve">
+    <value>lciCategory</value>
+  </data>
+  <data name="&gt;&gt;lciCategory.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;lciUnitPrice.Name" xml:space="preserve">
+    <value>lciUnitPrice</value>
+  </data>
+  <data name="&gt;&gt;lciUnitPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;lciQuantityPerUnit.Name" xml:space="preserve">
+    <value>lciQuantityPerUnit</value>
+  </data>
+  <data name="&gt;&gt;lciQuantityPerUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;lciDiscontinued.Name" xml:space="preserve">
+    <value>lciDiscontinued</value>
+  </data>
+  <data name="&gt;&gt;lciDiscontinued.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;dxValidationProvider1.Name" xml:space="preserve">
+    <value>dxValidationProvider1</value>
+  </data>
+  <data name="&gt;&gt;dxValidationProvider1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmProduct</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v16.2</value>
+  </data>
+</root>

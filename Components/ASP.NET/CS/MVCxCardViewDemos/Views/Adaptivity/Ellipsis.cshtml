@@ -1,0 +1,18 @@
+﻿@model IEnumerable
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#EnableEllipsis").change(function(){
+            cardView.PerformCallback();
+        });
+    });
+    function OnCardViewBeginCallback(s, e){
+        e.customArgs["EnableEllipsis"] = $("#EnableEllipsis").is(":checked");
+    }
+</script>
+
+<div class="horizOptionsPanel" style="height: 35px;">
+    @Html.CheckBox("EnableEllipsis", true)
+    <label for="EnableEllipsis" class="checkBox">Enable Ellipsis in text</label>
+</div>
+@Html.Action("EllipsisPartial", Model)

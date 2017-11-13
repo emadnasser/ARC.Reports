@@ -1,0 +1,7 @@
+﻿@model SpreadsheetSportResultsModel
+
+@using (Html.BeginForm("SportResultsExportTo", "Spreadsheet", FormMethod.Post)) {
+    @Html.Partial("SpreadsheetDocumentDownloaderPartial")
+    <br />
+    @Html.Partial("SpreadsheetPreviewPartial", Model.PreviewModel)    
+}

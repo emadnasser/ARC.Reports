@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XCRM>
+  <Item Title="WorkPlace">
+    <Item Title="Calendar"></Item>
+    <Item Title="Sales Dashboard"></Item>
+  </Item>
+  <Item Title="Sales">
+    <Item Title="Leads"></Item>
+    <Item Title="Opportunities"></Item>
+    <Item Title="Accounts"></Item>
+    <Item Title="Contacts"></Item>
+    <Item Title="Products"></Item>
+    <Item Title="Category"></Item>
+    <Item Title="Orders"></Item>
+    <Item Title="Invoices"></Item>
+  </Item>
+  <Item Title="Administration">
+    <Item Title="User"></Item>
+    <Item Title="Role"></Item>
+    <Item Title="My Details"></Item>
+  </Item>
+  <Item Title="KPI">
+    <Item Title="Definition"></Item>
+    <Item Title="Scorecard"></Item>
+  </Item>
+  <Item Title="Reports">
+    <Item Title="Analysis Invoices"></Item>
+    <Item Title="Reports"></Item>
+  </Item>
+</XCRM>

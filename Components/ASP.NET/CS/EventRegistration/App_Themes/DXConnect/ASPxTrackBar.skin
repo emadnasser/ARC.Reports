@@ -1,0 +1,3 @@
+<dx:ASPxTrackBar runat="server" CssPostfix="DXConnect" CssFilePath="~/App_Themes/DXConnect/{0}/styles.css" SpriteCssFilePath="~/App_Themes/DXConnect/{0}/sprite.css" >
+  
+</dx:ASPxTrackBar>

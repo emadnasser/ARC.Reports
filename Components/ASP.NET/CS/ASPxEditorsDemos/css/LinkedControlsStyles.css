@@ -1,0 +1,11 @@
+.layoutItemCell {
+    width: 33%;
+    vertical-align: top;
+}
+.lbCategories {
+    width: 150px;
+    height: 250px;
+}
+.gvProducts {
+    width: 350px;
+}

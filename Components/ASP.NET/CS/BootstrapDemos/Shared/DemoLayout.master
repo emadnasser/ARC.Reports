@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DemoLayout.master.cs" EnableViewState="false" Inherits="DemoLayout" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><asp:ContentPlaceHolder ID="PageTitle" runat="server" /></title>
+    <link rel="stylesheet" type="text/css" id="themeLink" href="<%# Page.ResolveClientUrl("~/Content/" + DemoUtils.CurrentTheme + "/bootstrap.min.css") %>" />
+    <link rel="stylesheet" type="text/css" href="~/Content/site.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/highlightjs.default.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/FontAwesome/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" id="themeSiteLink" href="<%# Page.ResolveClientUrl("~/Content/" + DemoUtils.CurrentTheme + "/site.css") %>" />
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/jquery-3.1.1.min.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/jquery.qrcode.min.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/jquery.bootstrap-autohidingnavbar.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/URI.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/bootstrap.min.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/clipboard.min.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/highlight.pack.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/demo.js") %>"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <form id="form1" role="form" runat="server">
+            <nav class="navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".left-nav-container">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a runat="server" id="Brand" class="navbar-brand" href="../Default.aspx" target="_top">
+                        <asp:ContentPlaceHolder ID="PageHeader" runat="server" /></a>
+                </div>
+                <dx:BootstrapMenu ID="TopMenu" runat="server" ShowPopOutImages="True" ItemAutoWidth="false" ClientInstanceName="topMenu">
+                    <ClientSideEvents ItemClick="dxBootstrapDemo.onTopMenuItemClick" Init="dxBootstrapDemo.onTopMenuInit" />
+                    <CssClasses Control="top-menu" Menu="navbar-nav" />
+                    <Items>
+                        <dx:BootstrapMenuItem Text="" Name="Themes" IconCssClass="fa fa-paint-brush">
+                        </dx:BootstrapMenuItem>
+                        <dx:BootstrapMenuItem Name="Resolution" Text="" IconCssClass="fa fa-desktop">
+                            <Items>
+                                <dx:BootstrapMenuItem BeginGroup="true">
+                                    <Template>
+                                        <a runat="server" class="qrcode" href="<%# DemoUtils.QRCodeLinkUrl %>" target="_top">
+                                        </a>
+                                    </Template>
+                                </dx:BootstrapMenuItem>
+                            </Items>
+                        </dx:BootstrapMenuItem>
+                    </Items>
+                </dx:BootstrapMenu>
+                <div class="collapse navbar-collapse left-nav-container">
+                    <dx:BootstrapTreeView ID="BSDemoTree" ClientInstanceName="BSDemoTree" runat="server" DataSourceID="XmlDemoData" ShowExpandButtons="false"
+                        OnDataBound="BSDemoTree_DataBound" OnNodeDataBound="BSDemoTree_NodeDataBound" Target="_top" SyncSelectionMode="None">
+                        <CssClasses Control="left-nav" />
+                    </dx:BootstrapTreeView>
+                </div>
+            </nav>
+            <div id="page-wrapper">
+                <div class="container-fluid page-content">
+                    <asp:ContentPlaceHolder ID="Content" runat="server" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid"><div class="footer-content">
+        <div id="Copyright" class="copyright">
+                Copyright © 2017 Developer Express Inc.<br />
+                All trademarks or registered trademarks are property of their respective owners.
+            </div>
+            <a href="http://devexpress.com" target="_blank" class="logo"></a>
+      </div></div>
+    </footer>
+    <asp:XmlDataSource ID="XmlDemoData" runat="server" DataFile="~/App_Data/Demos.xml"
+        XPath="/demos/*"></asp:XmlDataSource>
+    <script type="text/javascript">
+        $(".navbar-fixed-top")
+            .autoHidingNavbar({
+                showOnBottom: false,
+                disableAutohide: !(ASPxClientUtils.androidPlatform || ASPxClientUtils.iOSPlatform)
+            })
+            .on("show.autoHidingNavbar", function() {
+                $("#page-wrapper").toggleClass("navbar-autohidden", false);
+            })
+            .on("hide.autoHidingNavbar", function() {
+                $("#page-wrapper").toggleClass("navbar-autohidden", true);
+            });
+    </script>
+</body>
+</html>

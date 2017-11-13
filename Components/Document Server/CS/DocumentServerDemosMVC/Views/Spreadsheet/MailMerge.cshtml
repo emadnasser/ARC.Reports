@@ -1,0 +1,221 @@
+﻿@model SpreadsheetMailMergeModel
+<script type="text/javascript">
+    function UpdatePreview() {
+        var StatementNumberValue = StatementNumber.GetValue();
+        var StreetValue = Street.GetValue();
+        var ZIPValue = ZIP.GetValue();
+        var CustomerIdValue = CustomerId.GetValue();
+        var CityValue = City.GetValue();
+        var PhoneValue = Phone.GetValue();
+        var CustomerNameValue = CustomerName.GetValue();
+        var StateValue = State.GetValue();
+        var EmailValue = Email.GetValue();
+
+        var previewFrame = document.getElementById("previewFrame");
+        var params = "statementNumber=" + encodeURIComponent(StatementNumberValue) +
+                                                        "&streetAddress=" + encodeURIComponent(StreetValue) +
+                                                        "&zipCode=" + encodeURIComponent(ZIPValue) +
+                                                        "&CustomerID=" + encodeURIComponent(CustomerIdValue) +
+                                                        "&city=" + encodeURIComponent(CityValue) +
+                                                        "&phone=" + encodeURIComponent(PhoneValue) +
+                                                        "&customerName=" + encodeURIComponent(CustomerNameValue) +
+                                                        "&state=" + encodeURIComponent(StateValue) +
+                                                        "&email=" + encodeURIComponent(EmailValue);
+        SpreadsheetPreview.Update(params);
+    }
+</script>
+
+@using (Html.BeginForm("MaileMergeExportTo", "Spreadsheet", FormMethod.Post)) {
+    <table class="OptionsTable">
+        <tr>
+            <td>
+                @Html.DevExpress().Label(
+                                    settings => {
+                                        settings.Text = "Statement&nbsp;Number:";
+                                        settings.EncodeHtml = false;
+                                        settings.AssociatedControlName = "StatementNumber";
+                                    }
+                            ).GetHtml()
+            </td>
+            <td class="column2Style">
+                @Html.DevExpress().TextBoxFor(model => model.StatementNumber,
+                                settings => {
+                                    settings.Name = "StatementNumber";
+                                    settings.Height = Unit.Pixel(20);
+                                    settings.Width = Unit.Pixel(145);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().Label(
+                                settings => {
+                                    settings.AssociatedControlName = "Street";
+                                    settings.EncodeHtml = false;
+                                    settings.Text = "Street&nbsp;Address:";
+                                }
+                            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().TextBoxFor(model => model.Street,
+                                settings => {
+                                    settings.Name = "Street";
+                                    settings.Height = Unit.Pixel(20);
+                                    settings.Width = Unit.Pixel(155);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+            <td rowspan="5" style="vertical-align: top; text-align: right">
+                @Html.Partial("SpreadsheetDocumentDownloaderPartial")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DevExpress().Label(
+                                settings => {
+                                    settings.AssociatedControlName = "CustomerId";
+                                    settings.EncodeHtml = false;
+                                    settings.Text = "Customer&nbsp;ID:";
+                                    settings.Height = Unit.Pixel(13);
+                                    settings.Width = Unit.Pixel(94);
+                                    settings.Style.Add(HtmlTextWriterStyle.MarginTop, "0px");
+                                }
+                            ).GetHtml()
+            </td>
+            <td class="column2Style">
+                @Html.DevExpress().TextBoxFor(model => model.CustomerId,
+                                settings => {
+                                    settings.Name = "CustomerId";
+                                    settings.Height = Unit.Pixel(20);
+                                    settings.Width = Unit.Pixel(145);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().Label(
+                                settings => {
+                                    settings.AssociatedControlName = "City";
+                                    settings.EncodeHtml = false;
+                                    settings.Text = "City:";
+                                }
+                            ).GetHtml()
+            </td>
+            <td>
+                 @Html.DevExpress().TextBoxFor(model => model.City,
+                                settings => {
+                                    settings.Name = "City";
+                                    settings.Width = Unit.Pixel(155);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DevExpress().Label(
+                                settings => {
+                                    settings.AssociatedControlName = "CustomerName";
+                                    settings.EncodeHtml = false;
+                                    settings.Text = "Customer Name:";
+                                }
+                            ).GetHtml()
+            </td>
+            <td class="column2Style">
+                @Html.DevExpress().TextBoxFor(model => model.CustomerName,
+                                settings => {
+                                    settings.Name = "CustomerName";
+                                    settings.Width = Unit.Pixel(145);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().Label(
+                                settings => {
+                                    settings.AssociatedControlName = "State";
+                                    settings.EncodeHtml = false;
+                                    settings.Text = "State:";
+                                }
+                            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().TextBoxFor(model => model.State,
+                                settings => {
+                                    settings.Name = "State";
+                                    settings.Width = Unit.Pixel(155);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 @Html.DevExpress().Label(
+                                settings => {
+                                    settings.AssociatedControlName = "Email";
+                                    settings.EncodeHtml = false;
+                                    settings.Text = "E-mail:";
+                                }
+                            ).GetHtml()
+            </td>
+            <td class="column2Style">
+                @Html.DevExpress().TextBoxFor(model => model.Email,
+                                settings => {
+                                    settings.Name = "Email";
+                                    settings.Width = Unit.Pixel(145);
+                                    //settings.Height = Unit.Pixel(17);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+            <td>
+                @Html.DevExpress().Label(
+                                settings => {
+                                    settings.AssociatedControlName = "ZIP";
+                                    settings.EncodeHtml = false;
+                                    settings.Width = Unit.Pixel(76);
+                                    settings.Height = Unit.Pixel(13);
+                                    settings.Text = "ZIP&nbsp;Code:";
+                                }
+                            ).GetHtml()
+            </td>
+            <td style="width: 100%">
+                @Html.DevExpress().TextBoxFor(model => model.ZIP,
+                                settings => {
+                                    settings.Name = "ZIP";
+                                    settings.Width = Unit.Pixel(155);
+                                    settings.Height = Unit.Pixel(20);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DevExpress().Label(
+                                settings => {
+                                    settings.AssociatedControlName = "Phone";
+                                    settings.EncodeHtml = false;
+                                    settings.Text = "Phone:";
+                                }
+                            ).GetHtml()
+            </td>
+            <td class="column2Style">
+                @Html.DevExpress().TextBoxFor(model => model.Phone,
+                                settings => {
+                                    settings.Name = "Phone";
+                                    settings.Width = Unit.Pixel(145);
+                                    settings.Properties.ClientSideEvents.ValueChanged = "function(s, e) { UpdatePreview(); }";
+                                }
+                            ).GetHtml()
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+}
+<br />
+@Html.Partial("SpreadsheetPreviewPartial", Model.PreviewModel)

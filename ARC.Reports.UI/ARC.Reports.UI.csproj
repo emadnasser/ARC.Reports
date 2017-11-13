@@ -92,7 +92,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\nwind.mdb" />
     <Content Include="Content\Images\Panner3.png" />
     <Content Include="Controls\MarketChannelsGraphs_D.ascx" />
     <Content Include="Controls\MarketChannelsGraphs_M.ascx" />
@@ -815,7 +814,9 @@
       <Name>ARC.Reports.DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

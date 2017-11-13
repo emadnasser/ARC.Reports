@@ -1,0 +1,22 @@
+﻿@model HtmlEditorToolbarMode
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#ToolbarMode").change(function() { $("form").submit(); });
+    });
+</script>
+
+@using (Html.BeginForm()){
+    <div style="margin-bottom: 20px">
+        <label style="padding-right: 10px">Toolbar Mode:</label>
+        @Html.DropDownList("ToolbarMode", 
+            new SelectList(
+                new List<ListItem> { 
+                    new ListItem { Text = "Menu", Value = "0"},
+                    new ListItem { Text = "Ribbon", Value = "1"},
+                    new ListItem { Text = "None", Value = "3"}
+                }
+            ),
+            new { style = "width: 100px;" })
+    </div>
+    @Html.Partial("ToolbarModePartial", Model)
+}

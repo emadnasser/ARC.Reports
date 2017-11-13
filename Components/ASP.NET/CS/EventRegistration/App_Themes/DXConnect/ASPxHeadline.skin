@@ -1,0 +1,10 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dx:ASPxHeadline runat="server" CssFilePath="{0}/styles.css" DateVerticalPosition="Top"
+	SpriteCssFilePath="{0}/sprite.css" CssPostfix="DXConnect">
+    <DateStyle Spacing="0" />
+    <ContentStyle LineHeight="14" />
+    <LeftPanelStyle Spacing="37">
+        <Paddings PaddingTop="3" />
+    </LeftPanelStyle>
+</dx:ASPxHeadline>

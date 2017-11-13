@@ -1,0 +1,22 @@
+﻿@Html.DevExpress().CheckBoxList(listSettings => {
+    listSettings.Name = "ProtectionOptionsList";
+    listSettings.Properties.Caption = "Actions allowed in the protected worksheet:";
+    listSettings.Properties.RepeatColumns = 4;
+    listSettings.Properties.CaptionSettings.Position = EditorCaptionPosition.Top;
+    listSettings.Width = Unit.Percentage(100);
+    listSettings.ControlStyle.CssClass = "optionsList";
+    listSettings.Properties.ValueType = typeof(string);
+    listSettings.Properties.ClientSideEvents.SelectedIndexChanged = "function (s, e) { ApplyProtectionSettings(); }";
+
+    listSettings.Properties.Items.Add("Format cells", "FormatCells");
+    listSettings.Properties.Items.Add("Format columns", "FormatColumns");
+    listSettings.Properties.Items.Add("Format rows", "FormatRows");
+    listSettings.Properties.Items.Add("Insert columns", "InsertColumns");
+    listSettings.Properties.Items.Add("Insert rows", "InsertRows");
+    listSettings.Properties.Items.Add("Insert hyperlinks", "InsertHyperlinks");
+    listSettings.Properties.Items.Add("Delete columns", "DeleteColumns");
+    listSettings.Properties.Items.Add("Delete rows", "DeleteRows");
+    listSettings.Properties.Items.Add("Sort", "Sort");
+    listSettings.Properties.Items.Add("Use AutoFilter", "AutoFilters");
+    listSettings.Properties.Items.Add("Edit objects", "Objects");
+}).GetHtml()

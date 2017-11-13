@@ -1,0 +1,110 @@
+﻿<local:ChartsDemoModule
+    x:Class="ChartsDemo.ErrorBarsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:ChartsDemo">
+    <local:ChartsDemoModule.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/ChartsDemo;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <dxe:RadioListBoxEditStyleSettings
+                x:Key="radioStyle" />
+        </ResourceDictionary>
+    </local:ChartsDemoModule.Resources>
+    <dxdb:DemoModuleControl>
+        <dxdb:DemoModuleControl.OptionsContent>
+            <StackPanel>
+                <dx:GroupFrame
+                    Header="Indicator">
+                    <dxe:ListBoxEdit
+                        x:Name="lbeIndicator"
+                        ShowBorder="False"
+                        SelectedIndex="0"
+                        SelectedIndexChanged="lbeIndicator_SelectedIndexChanged"
+                        StyleSettings="{StaticResource radioStyle}">
+                        <dxe:ListBoxEdit.Items>
+                            <sys:String>Fixed Values</sys:String>
+                            <sys:String>Percentage</sys:String>
+                            <sys:String>Standard Deviation(s)</sys:String>
+                            <sys:String>Standard Error</sys:String>
+                            <sys:String>Data Source</sys:String>
+                        </dxe:ListBoxEdit.Items>
+                    </dxe:ListBoxEdit>
+                </dx:GroupFrame>
+                <dx:GroupFrame
+                    Header="Series">
+                    <dxe:ListBoxEdit
+                        x:Name="lbeSeries"
+                        ShowBorder="False"
+                        SelectedIndex="0"
+                        SelectedIndexChanged="lbeSeries_SelectedIndexChanged"
+                        StyleSettings="{StaticResource radioStyle}">
+                        <dxe:ListBoxEdit.Items>
+                            <sys:String>Bar</sys:String>
+                            <sys:String>Point</sys:String>
+                        </dxe:ListBoxEdit.Items>
+                    </dxe:ListBoxEdit>
+                </dx:GroupFrame>
+                <dx:GroupFrame
+                    Header="Direction">
+                    <dxe:ListBoxEdit
+                        x:Name="lbeDirection"
+                        ShowBorder="False"
+                        SelectedIndex="0"
+                        StyleSettings="{StaticResource radioStyle}"
+                        SelectedIndexChanged="lbeDirection_SelectedIndexChanged">
+                        <dxe:ListBoxEdit.Items>
+                            <dxe:ListBoxEditItem
+                                Content="Both"
+                                Tag="{x:Static dxc:ErrorBarDirection.Both}" />
+                            <dxe:ListBoxEditItem
+                                Content="Minus"
+                                Tag="{x:Static dxc:ErrorBarDirection.Minus}" />
+                            <dxe:ListBoxEditItem
+                                Content="Plus"
+                                Tag="{x:Static dxc:ErrorBarDirection.Plus}" />
+                        </dxe:ListBoxEdit.Items>
+                    </dxe:ListBoxEdit>
+                </dx:GroupFrame>
+                <dx:GroupFrame
+                    Header="End Style">
+                    <dxe:ListBoxEdit
+                        x:Name="lbeEndStyle"
+                        ShowBorder="False"
+                        SelectedIndex="0"
+                        StyleSettings="{StaticResource radioStyle}"
+                        SelectedIndexChanged="lbeEndStyle_SelectedIndexChanged">
+                        <dxe:ListBoxEdit.Items>
+                            <dxe:ListBoxEditItem
+                                Content="Cap"
+                                Tag="{x:Static dxc:ErrorBarEndStyle.Cap}" />
+                            <dxe:ListBoxEditItem
+                                Content="No Cap"
+                                Tag="{x:Static dxc:ErrorBarEndStyle.NoCap}" />
+                        </dxe:ListBoxEdit.Items>
+                    </dxe:ListBoxEdit>
+                </dx:GroupFrame>
+            </StackPanel>
+        </dxdb:DemoModuleControl.OptionsContent>
+        <Grid>
+            <dxc:ChartControl
+                Name="chart"
+                BorderThickness="0"
+                CrosshairEnabled="True"
+                ToolTipEnabled="False">
+                <dxc:ChartControl.Diagram>
+                    <dxc:XYDiagram2D
+                        x:Name="diagram" />
+                </dxc:ChartControl.Diagram>
+            </dxc:ChartControl>
+        </Grid>
+    </dxdb:DemoModuleControl>
+</local:ChartsDemoModule>

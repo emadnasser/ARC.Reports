@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HotelBooking" EntityNamespace="HotelBooking" ContextNamespace="HotelBooking" Class="HotelBookingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Cities" Member="Cities">
+    <Type Name="City">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="City_Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="State_Province" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Offer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City_Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Metro_Area_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="City_Hotel" Member="Hotels" ThisKey="ID" OtherKey="City_ID" Type="Hotel" />
+      <Association Name="Metro_Area_City" Member="Metro_Area" ThisKey="Metro_Area_ID" OtherKey="ID" Type="Metro_Area" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rooms" Member="Rooms">
+    <Type Name="Room">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Hotel_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Room_Type" Member="Room_Type_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Room_Short_Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Nighly_Rate" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Room_Image1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Room_Image2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Room_Image3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Room_Image4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Room_image5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Room_Picture" Member="Pictures" ThisKey="ID" OtherKey="Room_ID" Type="Picture" />
+      <Association Name="Room_Reservation" Member="Reservations" ThisKey="ID" OtherKey="Room_ID" Type="Reservation" />
+      <Association Name="Room_Room_Feature" Member="Room_Features" ThisKey="ID" OtherKey="Room_ID" Type="Room_Feature" />
+      <Association Name="Hotel_Room" Member="Hotel" ThisKey="Hotel_ID" OtherKey="ID" Type="Hotel" IsForeignKey="true" />
+      <Association Name="Room_Type_Room" Member="Room_Type" ThisKey="Room_Type_ID" OtherKey="ID" Type="Room_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Features_List" Member="Features_Lists">
+    <Type Name="Features_List">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Feature_Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Guests" Member="Guests">
+    <Type Name="Guest">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Postal_Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Phone_Number" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hotel_Features" Member="Hotel_Features">
+    <Type Name="Hotel_Feature">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Hotel_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Hotel_Hotel_Feature" Member="Hotel" ThisKey="Hotel_ID" OtherKey="ID" Type="Hotel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hotel_Images" Member="Hotel_Images">
+    <Type Name="Hotel_Image">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Hotel_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image_Id" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Hotel_Hotel_Image" Member="Hotel" ThisKey="Hotel_ID" OtherKey="ID" Type="Hotel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hotels" Member="Hotels">
+    <Type Name="Hotel">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Hotel_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Hotel_Class" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Room_Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_Rating" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Avg_Customer_Rating" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Our_Rating" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Postal_Code" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Metro_Area" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Hotel_Room" Member="Rooms" ThisKey="ID" OtherKey="Hotel_ID" Type="Room" />
+      <Association Name="Hotel_Hotel_Feature" Member="Hotel_Features" ThisKey="ID" OtherKey="Hotel_ID" Type="Hotel_Feature" />
+      <Association Name="Hotel_Hotel_Image" Member="Hotel_Images" ThisKey="ID" OtherKey="Hotel_ID" Type="Hotel_Image" />
+      <Association Name="Hotel_Picture" Member="Pictures" ThisKey="ID" OtherKey="Hotel_ID" Type="Picture" />
+      <Association Name="Hotel_Review" Member="Reviews" ThisKey="ID" OtherKey="Hotel_ID" Type="Review" />
+      <Association Name="City_Hotel" Member="City" Storage="_City1" ThisKey="City_ID" OtherKey="ID" Type="City" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pictures" Member="Pictures">
+    <Type Name="Picture">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Picture_Id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Hotel_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Room_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Hotel_Picture" Member="Hotel" ThisKey="Hotel_ID" OtherKey="ID" Type="Hotel" IsForeignKey="true" />
+      <Association Name="Room_Picture" Member="Room" ThisKey="Room_ID" OtherKey="ID" Type="Room" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reservations" Member="Reservations">
+    <Type Name="Reservation">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Room_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Check_In" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Check_Out" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Amount_Due" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Amount_Paid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Reservation_Satus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Number_Of_Adults" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Number_Of_Children" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Special_Requests" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Room_Reservation" Member="Room" ThisKey="Room_ID" OtherKey="ID" Type="Room" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reviews" Member="Reviews">
+    <Type Name="Review">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Hotel_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Review_Text" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Posted_On" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Reviewer_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Hotel_Review" Member="Hotel" ThisKey="Hotel_ID" OtherKey="ID" Type="Hotel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Room_Features" Member="Room_Features">
+    <Type Name="Room_Feature">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Room_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Feature_Image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Room_Room_Feature" Member="Room" ThisKey="Room_ID" OtherKey="ID" Type="Room" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Room_Types" Member="Room_Types">
+    <Type Name="Room_Type">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type_Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Room_Type_Room" Member="Rooms" ThisKey="ID" OtherKey="Room_Type_ID" Type="Room" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Metro_Areas" Member="Metro_Areas">
+    <Type Name="Metro_Area">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Area_Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Map_Image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Metro_Area_City" Member="Cities" ThisKey="ID" OtherKey="Metro_Area_ID" Type="City" />
+    </Type>
+  </Table>
+</Database>

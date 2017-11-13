@@ -1,0 +1,24 @@
+﻿@Html.DevExpress().TreeList(settings => {
+    settings.Name = "treeList";
+    settings.CallbackRouteValues = new { Controller = "Overview", Action = "OverviewPartial" };
+    settings.Width = Unit.Percentage(100);
+
+    settings.KeyFieldName = "ID";
+    settings.ParentFieldName = "ParentID";
+    settings.RootValue = 0;
+    settings.Settings.ScrollableHeight = 250;
+    settings.Settings.VerticalScrollBarMode = ScrollBarMode.Auto;
+    
+    settings.Columns.Add("Name", "Department");
+    settings.Columns.Add(
+        column => {
+            column.FieldName = "Budget";
+            column.PropertiesEdit.DisplayFormatString = "{0:C}";
+        }
+    );
+    settings.Columns.Add("Location");
+
+    settings.PreRender = (sender, e) => {
+        ((MVCxTreeList)sender).ExpandToLevel(2);
+    };
+}).Bind(Model).GetHtml()

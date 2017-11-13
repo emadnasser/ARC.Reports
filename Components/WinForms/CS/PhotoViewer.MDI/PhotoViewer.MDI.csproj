@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectGuid>{50071A30-4A98-451B-8863-BD2A2809D294}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhotoViewer</RootNamespace>
+    <AssemblyName>PhotoViewer.MDI</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="System.Data"><Private>False</Private></Reference>
+    <Reference Include="System.Deployment"><Private>False</Private></Reference>
+    <Reference Include="System.Design"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing"><Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms"><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AlbumGalleryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FolderGalleryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewData\PhotoViewerDataController.cs" />
+    <Compile Include="Forms\BaseGalleryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseGalleryForm.Designer.cs">
+      <DependentUpon>BaseGalleryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupCaptions\AlbumGroupCaptionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupCaptions\AlbumGroupCaptionControl.Designer.cs">
+      <DependentUpon>AlbumGroupCaptionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DateFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DateFilter.Designer.cs">
+      <DependentUpon>DateFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterHelper.cs" />
+    <Compile Include="GroupCaptions\FolderGroupCaptionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupCaptions\FolderGroupCaptionControl.Designer.cs">
+      <DependentUpon>FolderGroupCaptionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageCollectionViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageCollectionViewer.Designer.cs">
+      <DependentUpon>ImageCollectionViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupCaptions\PhotoGroupCaptionControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupCaptions\PhotoGroupCaptionControlBase.Designer.cs">
+      <DependentUpon>PhotoGroupCaptionControlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlbumPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlbumPropertiesForm.Designer.cs">
+      <DependentUpon>AlbumPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewData\PhotoViewerData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Controls\ProgressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProgressControl.Designer.cs">
+      <DependentUpon>ProgressControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\BaseGalleryForm.resx">
+      <DependentUpon>BaseGalleryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupCaptions\AlbumGroupCaptionControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AlbumGroupCaptionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DateFilter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DateFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupCaptions\FolderGroupCaptionControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FolderGroupCaptionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ImageCollectionViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImageCollectionViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupCaptions\PhotoGroupCaptionControlBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PhotoGroupCaptionControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlbumPropertiesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AlbumPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProgressControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProgressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProgressForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SimpleFilterParams.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SimpleFilterParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrackBarFilterParams.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TrackBarFilterParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controls\SimpleFilterParams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SimpleFilterParams.Designer.cs">
+      <DependentUpon>SimpleFilterParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThumbnailHelper.cs" />
+    <Compile Include="Controls\TrackBarFilterParams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TrackBarFilterParams.Designer.cs">
+      <DependentUpon>TrackBarFilterParams.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+    <Content Include="Icon\ColorMixer_16x16.png" />
+    <Content Include="Icon\ColorMixer_32x32.png" />
+    <Content Include="Icon\Library_16x16.png" />
+    <Content Include="Resources\ColorMixer_32x32.png" />
+    <Content Include="Resources\ColorMixer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\Library_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\View_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\View_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\Remove_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\Album_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\Album_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\AddToAlbum_16x16.png" />
+    <Content Include="Icon\AddToAlbum_32x32.png" />
+    <Content Include="Icon\Collage_32x32.png" />
+    <Content Include="Icon\AddFolder_16x16.png" />
+    <Content Include="Icon\AddFolder_32x32.png" />
+    <Content Include="Icon\AddFile_16x16.png" />
+    <Content Include="Icon\AddFile_32x32.png" />
+    <Content Include="Icon\AddToLibrary_16x16.png" />
+    <Content Include="Icon\AddToLibrary_32x32.png" />
+    <Content Include="Icon\Cancel_16x16.png" />
+    <Content Include="Icon\Cancel_32x32.png" />
+    <Content Include="Icon\Export_16x16.png" />
+    <Content Include="Icon\Export_32x32.png" />
+    <Content Include="Icon\EMail_16x16.png" />
+    <Content Include="Icon\EMail_32x32.png" />
+    <Content Include="Icon\Edit_32x32.png" />
+    <Content Include="Icon\Edit_16x16.png" />
+    <Content Include="Icon\Collage_16x16.png" />
+    <Content Include="Icon\Back_16x16.png" />
+    <Content Include="Icon\Back_32x32.png" />
+    <Content Include="Icon\Close_16x16.png" />
+    <Content Include="Icon\Close_32x32.png" />
+    <Content Include="Icon\Film_16x16.png" />
+    <Content Include="Icon\Film_32x32.png" />
+    <Content Include="Icon\Filter_16x16.png" />
+    <Content Include="Icon\Filter_32x32.png" />
+    <Content Include="Icon\NewAlbum_16x16.png" />
+    <Content Include="Icon\NewAlbum_32x32.png" />
+    <Content Include="Icon\Mark_16x16.png" />
+    <Content Include="Icon\Mark_32x32.png" />
+    <Content Include="Icon\GenerateData_32x32.png" />
+    <Content Include="Icon\GenerateData_16x16.png" />
+    <Content Include="Icon\Print_16x16.png" />
+    <Content Include="Icon\Print_32x32.png" />
+    <Content Include="Icon\Help_16x16.png" />
+    <Content Include="Icon\Help_32x32.png" />
+    <Content Include="Icon\Folder_16x16.png" />
+    <Content Include="Icon\Folder_32x32.png" />
+    <Content Include="Icon\Forward_32x32.png" />
+    <Content Include="Icon\Forward_16x16.png" />
+    <Content Include="Icon\FilterSample.png" />
+    <Content Include="Icon\ItemMarked_16x16.png" />
+    <Content Include="Icon\ItemMarked_32x32.png" />
+    <Content Include="Icon\Other_32x32.png" />
+    <Content Include="Icon\Other_16x16.png" />
+    <Content Include="Icon\RemoveFromAlbum_16x16.png" />
+    <Content Include="Icon\RemoveFromAlbum_32x32.png" />
+    <Content Include="Icon\RemoveFolder_16x16.png" />
+    <Content Include="Icon\RemoveFolder_32x32.png" />
+    <Content Include="Icon\RemoveAlbum_16x16.png" />
+    <Content Include="Icon\RemoveAlbum_32x32.png" />
+    <Content Include="Icon\Save_16x16.png" />
+    <Content Include="Icon\Save_32x32.png" />
+    <Content Include="Icon\SelectAllMarked_16x16.png" />
+    <Content Include="Icon\SelectAllMarked_32x32.png" />
+    <Content Include="Icon\Slideshow_16x16.png" />
+    <Content Include="Icon\Slideshow_32x32.png" />
+    <Content Include="Icon\Tile.png" />
+    <Content Include="Icon\Undo_16x16.png" />
+    <Content Include="Icon\Undo_32x32.png" />
+    <Content Include="Icon\UnmarkAll_32x32.png" />
+    <Content Include="Icon\Unmark_16x16.png" />
+    <Content Include="Icon\Unmark_32x32.png" />
+    <Content Include="Icon\UnmarkAll_16x16.png" />
+    <Content Include="Icon\Upload_32x32.png" />
+    <Content Include="Icon\Upload_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

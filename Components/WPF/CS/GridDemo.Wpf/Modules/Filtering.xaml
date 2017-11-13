@@ -1,0 +1,119 @@
+﻿<local:GridDemoModule x:Class="GridDemo.Filtering"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+ xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:local="clr-namespace:GridDemo"
+    xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+ xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxdd="clr-namespace:DevExpress.DemoData"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="800">
+    <local:GridDemoModule.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/GridDemo;component/Themes/generic.xaml" />
+                <ResourceDictionary Source="/GridDemo;component/ModuleResources/FilteringTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <local:FilteringViewModel x:Key="ViewModel"/>
+            <dxdd:NWindDataLoader x:Key="NWindDataLoader" />
+        </ResourceDictionary>
+    </local:GridDemoModule.Resources>
+    <dxdb:DemoModuleControl SupressGroupFramePaddingInOptions="False">
+        <dxdb:DemoModuleControl.OptionsContent>
+            <StackPanel>
+                <StackPanel DataContext="{StaticResource ViewModel}" MinWidth="240">
+                    <dxe:CheckEdit Margin="0,0,0,4" IsChecked="{Binding Path=AllowColumnFiltering, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="allowFilteringCheckEdit" Content="Allow Filtering" />
+                    <dxe:CheckEdit Margin="0,0,0,4" IsChecked="{Binding Path=AllowFilterEditor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="allowFilterEditor" Content="Allow Filter Editor" />
+                    <dxe:CheckEdit Margin="0,0,0,4" IsChecked="{Binding Path=ColumnFilterPopupMode, Mode=TwoWay, Converter={StaticResource ColumnFilterPopupModeConverter}, UpdateSourceTrigger=PropertyChanged}" Name="columnFilterPopupMode" Content="Use Excel Style Filtering by Default" />
+                    <dx:GroupFrame Header="Column's FilterPopupMode" Margin="0,0,0,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock VerticalAlignment="Center" Text="Country:" Margin="0,0,5,5"/>
+                            <dxe:ComboBoxEdit Grid.Column="1" SelectedItem="{Binding Path=FilterPopupMode, ElementName=colCountry, Mode=TwoWay}" Margin="0,0,0,5" ItemsSource="{StaticResource colCountryFilterModeList}" IsTextEditable="False"/>
+                            <TextBlock VerticalAlignment="Center" Grid.Row="1" Text="Order Date:" Margin="0,0,5,5"/>
+                            <dxe:ComboBoxEdit Grid.Row="1" Grid.Column="1" SelectedItem="{Binding Path=FilterPopupMode, ElementName=colOrderDate, Mode=TwoWay}" Margin="0,0,0,5" ItemsSource="{StaticResource colOrderDateFilterModeList}" IsTextEditable="False"/>
+                            <TextBlock VerticalAlignment="Center" Grid.Row="2" Text="Quantity:" Margin="0,0,5,0"/>
+                            <dxe:ComboBoxEdit Grid.Row="2" Grid.Column="1" SelectedItem="{Binding Path=FilterPopupMode, ElementName=colQuantity, Mode=TwoWay}" ItemsSource="{StaticResource colQuantityFilterModeList}" IsTextEditable="False"/>
+                        </Grid>
+                    </dx:GroupFrame>
+                    <dx:GroupFrame Header="Immediately Update Filter" Margin="0,0,0,12">
+                        <StackPanel>
+                            <dxe:CheckEdit Margin="0,0,0,4" IsChecked="{Binding Path=ImmediateUpdateColumnFilter, Mode=TwoWay, ElementName=colCountry}" Name="immediateUpdateCountryColumnFilterCheckEdit" Content="Country Column"/>
+                            <dxe:CheckEdit Margin="0,0,0,0" IsChecked="{Binding Path=ImmediateUpdateColumnFilter, Mode=TwoWay, ElementName=colQuantity}" Name="immediateUpdateQuantityColumnFilterCheckEdit" Content="Quantity Column"/>
+                        </StackPanel>
+                    </dx:GroupFrame>
+                    <dxe:CheckEdit Margin="0,0,0,4" IsChecked="{Binding Path=IncrementalSearchMode, Mode=TwoWay, Converter={StaticResource incrementalSearchModeToBoolConverter}, UpdateSourceTrigger=PropertyChanged}" Name="enableIncrementalSearch" Content="Enable Incemental Search" />
+                    <dx:GroupFrame Header="Incremental Search Clear Delay (ms.)" Margin="0,0,0,12">
+                        <dxe:SpinEdit x:Name="seIncrementalSearchClearDelay" MinValue="1000" MaxValue="5000" Increment="500" Value="{Binding IncrementalSearchClearDelay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding Path=IsChecked, ElementName=enableIncrementalSearch}"/>
+                    </dx:GroupFrame>
+                    <dx:GroupFrame Header="View Type" Margin="0,0,0,12">
+                        <dxe:ListBoxEdit Background="{x:Null}" ShowBorder="False" x:Name="viewsListBox" SelectedItem="{Binding Path=CurrentView, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{StaticResource viewsList}" StyleSettings="{dxe:RadioListBoxEditStyleSettings}"/>
+                    </dx:GroupFrame>
+                </StackPanel>
+            </StackPanel>
+        </dxdb:DemoModuleControl.OptionsContent>
+        <dxg:GridControl Name="grid" DataContext="{StaticResource ViewModel}"
+                         ItemsSource="{Binding Path=Invoices, Source={StaticResource NWindDataLoader}}"
+                         View="{Binding CurrentView, Source={StaticResource ViewModel}, Converter={StaticResource ViewNameToResourceConverter}}">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn Name="colCountry"
+                                FieldName="Country"
+                                FilterPopupMode="CheckedList"
+                                Style="{StaticResource WideColumn}"
+                                />
+                <dxg:GridColumn FieldName="Region"
+                                Style="{StaticResource NarrowColumn}"
+                                />
+                <dxg:GridColumn FieldName="City"
+                                Style="{StaticResource NarrowColumn}"
+                                />
+                <dxg:GridColumn FieldName="UnboundOrderDate"
+                                Name="colOrderDate"
+                                Header="Order Date"
+                                UnboundType="DateTime"
+                                UnboundExpression="AddYears([OrderDate], GetYear(Today()) - 1 - 1996)"
+                                FilterPopupMode="Default"
+                                Style="{StaticResource NarrowColumn}"
+                                >
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:DateEditSettings DisplayFormat="d" />
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+                <dxg:GridColumn FieldName="UnitPrice"
+                                Style="{StaticResource NarrowColumn}"
+                                >
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:TextEditSettings DisplayFormat="$0.00" MaskType="Numeric" />
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+                <dxg:GridColumn Name="colQuantity"
+                                FieldName="Quantity"
+                                FilterPopupMode="Custom"
+                                CustomColumnFilterPopupTemplate="{StaticResource quantityColumnFilterPopupTemplate}"
+                                Style="{StaticResource WideColumn}"
+                                />
+            </dxg:GridControl.Columns>
+
+            <dxg:GridControl.GroupSummary>
+                <dxg:GridSummaryItem SummaryType="Count" />
+            </dxg:GridControl.GroupSummary>
+
+            <dxg:GridControl.TotalSummary>
+                <dxg:GridSummaryItem SummaryType="Count" Alignment="Right"/>
+            </dxg:GridControl.TotalSummary>
+        </dxg:GridControl>
+    </dxdb:DemoModuleControl>
+</local:GridDemoModule>

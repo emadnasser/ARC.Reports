@@ -1,0 +1,23 @@
+﻿@model HyperlinksAndBookmarksDemoOptions
+           
+@using(Html.BeginForm()) {
+    @Html.DevExpress().FormLayout(s => {
+        s.Name = "FormLayoutOptions";
+        s.RequiredMarkDisplayMode = RequiredMarkMode.None;
+        s.UseDefaultPaddings = false;
+        s.ColCount = 2;
+        s.Items.Add(m => m.ShowBookmarks, i => i.NestedExtensionType = FormLayoutNestedExtensionItemType.CheckBox);
+        s.Items.Add(m => m.BookmarkColor, i => i.NestedExtensionType = FormLayoutNestedExtensionItemType.ColorEdit);
+        s.Items.Add(i => {
+            i.ColSpan = 2;
+            i.ShowCaption = DefaultBoolean.False;
+            i.NestedExtension().Button(b => {
+                b.Name = "ApplyButton";
+                b.Text = "Apply Changes";
+                b.UseSubmitBehavior = true;
+            });
+        });
+    }).GetHtml();
+    <br />
+    @Html.Partial("HyperlinksPartial", Model)
+}

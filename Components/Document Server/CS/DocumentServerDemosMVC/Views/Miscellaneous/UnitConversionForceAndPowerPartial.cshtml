@@ -1,0 +1,117 @@
+﻿@model UnitConversionForceAndPowerModel
+<script type="text/javascript">
+    // <![CDATA[
+    function SubmitConversionForceAndPowerForm(activeEditorId) {
+        if (document.unitConversionLock)
+            return;
+        $('#TPForceAndPowerContainer>#ForceAndPowerEditorId').val(activeEditorId);
+        $('#TPForceAndPowerContainer>#submitButton').trigger('submit');
+    }
+    // ]]>
+</script>
+
+@Html.HiddenFor(model => model.ForceAndPowerEditorId, new { id = "ForceAndPowerEditorId" })
+@Html.DevExpress().Label(
+                settings => {
+                    settings.Name = "ASPxLabel25";
+                    settings.Text = "FORCE AND POWER";
+                    settings.ControlStyle.Font.Size = FontUnit.Parse("30px");
+                }).GetHtml()
+
+<table class="UnitConversionLayoutTable">
+    <tr>
+        <td>
+            @Html.DevExpress().SpinEditFor(model => model.Newton,
+                settings => {
+                    settings.Name = "Newton";
+                    settings.TabIndex = 1;
+                    settings.Width = Unit.Pixel(113);
+                    settings.ControlStyle.HorizontalAlign = HorizontalAlign.Right;
+                    settings.Properties.ClientSideEvents.NumberChanged = String.Format("function(s,e) {{ SubmitConversionForceAndPowerForm('{0}'); }}", ForceAndPowerEditorId.Newton);
+                }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().Label(
+                settings => {
+                    settings.Name = "ASPxLabel26";
+                    settings.Text = "Newton";
+                }).GetHtml()
+        </td>
+        <td class="UnitConversionAlignedColumn">
+            @Html.DevExpress().SpinEditFor(model => model.Horsepower,
+                settings => {
+                    settings.Name = "Horsepower";
+                    settings.TabIndex = 5;
+                    settings.Width = Unit.Pixel(113);
+                    settings.ControlStyle.HorizontalAlign = HorizontalAlign.Right;
+                    settings.Properties.ClientSideEvents.NumberChanged = String.Format("function(s,e) {{ SubmitConversionForceAndPowerForm('{0}'); }}", ForceAndPowerEditorId.Horsepower);
+                }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().Label(
+                settings => {
+                    settings.Name = "ASPxLabel27";
+                    settings.Text = "Horsepower";
+                }).GetHtml()
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DevExpress().SpinEditFor(model => model.Dyne,
+                settings => {
+                    settings.Name = "Dyne";
+                    settings.TabIndex = 2;
+                    settings.Width = Unit.Pixel(113);
+                    settings.ControlStyle.HorizontalAlign = HorizontalAlign.Right;
+                    settings.Properties.ClientSideEvents.NumberChanged = String.Format("function(s,e) {{ SubmitConversionForceAndPowerForm('{0}'); }}", ForceAndPowerEditorId.Dyne);
+                }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().Label(
+                settings => {
+                    settings.Name = "ASPxLabel28";
+                    settings.Text = "Dyne";
+                }).GetHtml()
+        </td>
+        <td class="UnitConversionAlignedColumn">
+            @Html.DevExpress().SpinEditFor(model => model.Watt,
+                settings => {
+                    settings.Name = "Watt";
+                    settings.TabIndex = 6;
+                    settings.Width = Unit.Pixel(113);
+                    settings.ControlStyle.HorizontalAlign = HorizontalAlign.Right;
+                    settings.Properties.ClientSideEvents.NumberChanged = String.Format("function(s,e) {{ SubmitConversionForceAndPowerForm('{0}'); }}", ForceAndPowerEditorId.Watt);
+                }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().Label(
+                settings => {
+                    settings.Name = "ASPxLabel29";
+                    settings.Text = "Watt";
+                }).GetHtml()
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DevExpress().SpinEditFor(model => model.PoundForce,
+                settings => {
+                    settings.Name = "PoundForce";
+                    settings.TabIndex = 3;
+                    settings.Width = Unit.Pixel(113);
+                    settings.ControlStyle.HorizontalAlign = HorizontalAlign.Right;
+                    settings.Properties.ClientSideEvents.NumberChanged = String.Format("function(s,e) {{ SubmitConversionForceAndPowerForm('{0}'); }}", ForceAndPowerEditorId.PoundForce);
+                }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().Label(
+                settings => {
+                    settings.Name = "ASPxLabel30";
+                    settings.Text = "Pound force";
+                }).GetHtml()
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<button id="submitButton2" type="submit" style="display: none;"></button>

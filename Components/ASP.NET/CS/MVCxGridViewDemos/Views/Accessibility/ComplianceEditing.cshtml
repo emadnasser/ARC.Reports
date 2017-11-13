@@ -1,0 +1,38 @@
+﻿@model IEnumerable
+
+<script type="text/javascript">
+    function OnEditModeChanged(s, e) {
+        $("form").submit();
+    }
+</script>
+
+@section CustomTopAreaHolder {
+    @Html.Partial("SkipRepetitiveNavigationLinks")
+}
+
+@using (Html.BeginForm()){
+    @Html.DevExpress().FormLayout(settings => {
+        settings.Name = "flEditing";
+
+        settings.Items.Add(i => {
+            i.Caption = "Edit Mode:";
+            i.CaptionSettings.Location = LayoutItemCaptionLocation.Left;
+            i.NestedExtension().RadioButtonList(s => {
+                s.Name = "editMode";
+                s.Properties.RepeatDirection = RepeatDirection.Horizontal;
+                s.Properties.Items.Add(GridViewEditingMode.Batch.ToString()).Selected = GridViewAccessibilityDemoHelper.IsBatchEditing;
+                s.Properties.Items.Add(GridViewEditingMode.EditForm.ToString()).Selected = !GridViewAccessibilityDemoHelper.IsBatchEditing;
+                s.ControlStyle.Border.BorderStyle = BorderStyle.None;
+                s.Properties.ClientSideEvents.ValueChanged = "OnEditModeChanged";
+            });
+        });
+        settings.Items.Add(i => {
+            i.ShowCaption = DefaultBoolean.False;
+            i.SetNestedContent(() => {
+                Html.RenderPartial("ComplianceEditingPartial", Model);
+            });
+        });
+    }).GetHtml()
+}
+
+@Html.Partial("AccessibilityValidatorLink")

@@ -1,0 +1,297 @@
+﻿html, body, h2, h3, p
+{
+    font-family: 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, Sans-serif;
+    font-size: 12px;
+    color: #5d5d5d;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+body
+{
+    padding: 0 30px;
+}
+a
+{
+    color: #ff8400;
+}
+p
+{
+    padding-bottom: 8px;
+}
+.Container
+{
+    width: 1130px;
+    margin: 0 auto;
+    padding: 0;
+}
+.Header
+{
+    float: left;
+    width: 1130px;
+    padding: 18px 0 8px;
+}
+.MenuContainer
+{
+    float: left;
+    width: 1130px;
+    padding: 7px 0 8px;
+}
+.MenuContainer > div:first-child
+{
+    float: left;
+    font-size: 14px!important;
+    color: #acacac!important;
+    padding: 5px 0;
+    margin-left: -1px;
+
+    position: relative;
+    position: static\9;    
+    z-index: 0;
+}
+.Header div
+{
+    float: left;
+    width: 900px;
+    margin-left: -5px;
+}
+.Header img
+{
+    float: right;    
+    margin: 26px 0;
+    border-width:0
+}
+.Header h2
+{
+    font-family: 'Segoe UI Light', 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, Sans-serif;
+    font-size: 36px;
+    font-weight: lighter;
+    line-height: 100%;
+}
+.Header h3
+{
+    font-size: 14px;
+    line-height: 100%;
+    color: #acacac;
+    padding: 5px 4px;
+}
+.Content
+{
+    float: left;
+    width: 1130px;
+}
+.Content .GridContainer
+{
+    margin-right: 292px;    
+    min-height: 370px;
+}
+.Content .LeftPanel
+{
+    float: right;
+    width: 270px;
+    height: 100%;
+    border-top: solid 2px #e0e0e0;
+}
+.Content .LeftPanel .Title
+{
+    font-size: 14px;
+    color: #797979;
+    padding: 12px 0;
+}
+.Content .LeftPanel .Value
+{
+    font-family: 'Segoe UI Light', 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, Sans-serif;
+    font-size: 100px;
+    font-weight: lighter;
+    background-color: #ff8400;
+    color: white;
+    height: 114px;
+    padding: 0 12px;
+}
+.Content .LeftPanel .Value span
+{
+    line-height: 100%;
+}
+.Content .LeftPanel .Value span:first-child + span
+{
+    font-size: 50px;
+}
+.Content .BottomLine
+{
+    border-bottom: solid 2px #e0e0e0;
+    float: right;
+    width: 270px;
+    margin-top: -2px;
+}
+.LinksContainer
+{
+    float: left;
+    width: 1130px;
+    padding: 40px 0 48px;
+}
+.LinksContainer a
+{
+    display: block;
+    float: left;
+    width: 270px;
+    padding-left: 66px;
+    margin-right: 61px;
+    outline: 0;
+    text-decoration: none;
+}
+.LinksContainer a:hover.L1 .Head,
+.LinksContainer a:hover.L2 .Head
+{
+    text-decoration: underline;
+}
+.LinksContainer a.L1
+{
+    background: url('1.png') no-repeat 0 12px;
+}
+.LinksContainer a.L2
+{
+    background: url('2.png') no-repeat 0 12px;
+}
+.LinksContainer a.L3
+{
+    background: url('3.png') no-repeat 0 12px;
+    margin-right: 0;
+}
+.LinksContainer span
+{
+    display: block;
+    color: #7b7b7b;
+}
+.LinksContainer span.Head
+{
+    font-size: 16px;
+    color: #ff8400;
+    padding: 8px 0 4px;
+}
+.Footer
+{
+    float: left;
+    font-size: 14px;
+    width: 1130px;
+    padding: 4px 0 12px;
+    text-align: right;
+}
+.Footer a
+{
+    font-size: 18px;
+}
+/* Menu */
+.MainMenu
+{
+    background-color: transparent!important;
+    border: 0!important;
+    padding: 0!important;
+    margin-left: -8px!important;
+
+    position: relative;
+    position: static\9;    
+    z-index: 1;
+}
+.MainMenuItem
+{
+    font-family: 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, Sans-serif!important;
+    font-size: 14px!important;
+    border-width: 0!important;
+    color: #323232!important;
+}
+.MainMenuItem > div
+{
+    padding: 5px 0px 5px 18px!important;  
+}
+.MainMenuItem > div:first-child + div
+{
+    padding: 10px 5px!important;  
+}
+.MainMenuHoverItem
+{
+    background-color: White!important;
+    border-width: 1px!important;
+    border-color: #bfbfbf!important;
+}
+.MainMenuHoverItem > div
+{
+    padding: 4px 0px 4px 17px!important;  
+}
+.MainMenuHoverItem > div:first-child + div
+{
+    border: 0px!important;
+    padding: 9px 5px 9px 6px!important;  
+}
+.MainManuPopout
+{
+    background: url('sprite.png') no-repeat -34px 0;
+    width: 17px;
+    height: 7px;
+}
+.SubMenu
+{
+    border-color: #bfbfbf!important;
+    box-shadow: 0 10px 12px rgba(0,0,0,0.2)!important;
+	-webkit-box-shadow: 0 10px 12px rgba(0,0,0,0.2)!important;
+	-moz-box-shadow: 0 10px 12px rgba(0,0,0,0.2)!important;
+    color: #323232!important;
+    font-family: 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, Sans-serif!important;
+    font-size: 12px!important;
+    padding: 20px 30px 16px!important;
+}
+/* Button */
+.Button > tbody > tr > td:first-child
+{
+    background: #dfdfdf url('ButtonBack.png') repeat-x 0 0!important;
+    border: Solid 1px rgba(0,0,0,0.1)!important;
+    border-radius: 4px!important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1)!important;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1)!important;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1)!important;
+    font-family: 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, Sans-serif!important;
+    font-size: 14px!important;
+    color: #323232!important;
+	
+	background-clip: padding-box;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;    
+}
+.ButtonHover > tbody > tr > td:first-child
+{
+    color: #323232!important;
+}
+.ButtonPressed > tbody > tr > td:first-child
+{
+    color: #323232!important;
+}
+.ButtonDisabled > tbody > tr > td:first-child
+{
+    color: #d3d3d3!important;
+}
+/* Video popup */
+.VideoPopup
+{
+    height: 600px;
+}
+.VideoPopup > div
+{
+    border-color: #bfbfbf!important;
+    box-shadow: 0 10px 12px rgba(0,0,0,0.2)!important;
+	-webkit-box-shadow: 0 10px 12px rgba(0,0,0,0.2)!important;
+	-moz-box-shadow: 0 10px 12px rgba(0,0,0,0.2)!important;
+}
+.VideoPopupContent
+{
+    padding: 12px!important;
+}
+.VideoPopupContent .BtnPanel
+{
+    padding: 24px 12px;
+    height: 12px;
+}
+.VideoPopupBackground
+{
+    background-color: White!important;
+	opacity: 0.85!important;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=85)!important;
+}

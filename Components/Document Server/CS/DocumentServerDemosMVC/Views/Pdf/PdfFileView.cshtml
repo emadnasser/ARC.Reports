@@ -1,0 +1,29 @@
+﻿@model PdfModelBase
+@Html.DevExpress().DataView(settings => {
+    settings.Name = "PdfViewer";
+    settings.SettingsTableLayout.RowsPerPage = 1;
+    settings.SettingsTableLayout.ColumnCount = 1;
+    settings.CallbackRouteValues = new {
+        Controller = "Pdf",
+        Action = "DocumentViewPartial"
+    };
+    settings.AlwaysShowPager = true;
+    settings.PagerSettings.AllButton.Visible = false;
+    settings.PagerSettings.FirstPageButton.Visible = true;
+    settings.PagerSettings.LastPageButton.Visible = true;
+    settings.PagerSettings.ShowMoreItemsText = "123";
+    settings.PagerSettings.Position = PagerPosition.Top;
+    settings.PagerAlign = PagerAlign.Left;
+    settings.Width = new Unit("100%");
+    settings.SetItemTemplateContent(c => {
+        PdfPageModel model = c.DataItem as PdfPageModel;
+        Html.DevExpress().BinaryImage(imageSettings => {
+            imageSettings.Width = new Unit("100%");
+        }).Bind(model.GetPageImageBytes()).Render();
+    });
+    settings.CustomJSProperties = (s, e) => {
+        e.Properties["cpSessionKey"] = ViewBag.CurrentSessionKey;
+    };
+    settings.ClientSideEvents.BeginCallback = "function(s,e){ e.customArgs['sessionKey'] = s.cpSessionKey; }";
+
+}).Bind(Model).GetHtml()

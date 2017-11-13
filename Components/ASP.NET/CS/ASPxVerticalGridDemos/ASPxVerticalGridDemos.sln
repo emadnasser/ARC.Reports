@@ -1,0 +1,42 @@
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ASPxVerticalGridDemos", ".\", "{9C492250-B43C-438A-BB7E-52D2EDC36F97}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/ASPxVerticalGridDemos"
+		Debug.AspNetCompiler.PhysicalPath = ".\"
+		Debug.AspNetCompiler.TargetPath = "..\PrecompiledWeb\ASPxVerticalGridDemos\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ASPxVerticalGridDemos"
+		Release.AspNetCompiler.PhysicalPath = ".\"
+		Release.AspNetCompiler.TargetPath = "..\PrecompiledWeb\ASPxVerticalGridDemos\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = ".\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C492250-B43C-438A-BB7E-52D2EDC36F97}.Debug|.NET.ActiveCfg = Debug|.NET
+		{9C492250-B43C-438A-BB7E-52D2EDC36F97}.Debug|.NET.Build.0 = Debug|.NET
+		{9C492250-B43C-438A-BB7E-52D2EDC36F97}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{9C492250-B43C-438A-BB7E-52D2EDC36F97}.Release|.NET.ActiveCfg = Debug|.NET
+		{9C492250-B43C-438A-BB7E-52D2EDC36F97}.Release|.NET.Build.0 = Debug|.NET
+		{9C492250-B43C-438A-BB7E-52D2EDC36F97}.Release|Any CPU.ActiveCfg = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+		StartPage="Default.aspx"
+	EndGlobalSection
+EndGlobal

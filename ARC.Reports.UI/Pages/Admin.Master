@@ -162,13 +162,13 @@
                                         </a>
                                         <b class="arrow"></b>
                                     </li>
-                                    <li class="">
+<%--                                    <li class="">
                                         <a href="<%= ResolveUrl("~/Pages/SummaryCommissionPortfolio.aspx") %>">
                                             <i class="menu-icon fa fa-caret-right"></i>
                                             Summary Commission Portfolio
                                         </a>
                                         <b class="arrow"></b>
-                                    </li>
+                                    </li>--%>
                                 </ul>
                             </li>
                         </ul>

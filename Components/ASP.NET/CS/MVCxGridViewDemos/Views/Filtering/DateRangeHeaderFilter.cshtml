@@ -1,0 +1,37 @@
+﻿@model GridHeaderFilterMode
+
+<script type="text/javascript">
+function OnHeaderFilterModeChanged(){
+    loadingPanel.Show();
+    $.ajax({
+        url: '@Url.Action("DateRangeHeaderFilterPartial")',
+        data: { headerFilterMode: headerFilterMode.GetValue() },
+        success: function(response){
+            $("#grid-wrapper").html(response);
+            loadingPanel.Hide();
+        }
+    });
+}
+</script>
+@(Html.DevExpress().ComboBox(
+    settings => {
+        settings.Name = "headerFilterMode";
+        settings.Properties.Caption = "Header filter mode";
+        settings.Properties.ValueType = typeof(GridHeaderFilterMode);
+        settings.Properties.ClientSideEvents.ValueChanged = "OnHeaderFilterModeChanged";
+    })
+    .BindList(new[] { GridHeaderFilterMode.DateRangePicker, GridHeaderFilterMode.DateRangeCalendar })
+    .Bind(Model)
+    .GetHtml())
+<br />
+<div id="grid-wrapper">
+    @Html.Action("DateRangeHeaderFilterPartial", new { headerFilterMode = Model })
+</div>
+
+@Html.DevExpress().LoadingPanel(
+    settings => {
+        settings.Name = "loadingPanel";
+        settings.Modal = true;
+        settings.ContainerElementID = "grid-wrapper";
+        settings.Styles.LoadingDiv.BackColor = Color.White;
+    }).GetHtml()

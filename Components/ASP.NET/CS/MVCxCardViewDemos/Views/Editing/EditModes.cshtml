@@ -1,0 +1,20 @@
+﻿@model IEnumerable
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#editMode").change(function(){
+            CardView.PerformCallback({ editMode: $("#editMode").val() });
+        });
+    });
+</script>
+
+<div>
+    <div style="padding-bottom:15px;">
+        <label for="editMode">Edit Mode:</label>
+        @Html.DropDownList("editMode", new SelectList(EditingDemosHelper.AvailableEditModesList, EditingDemosHelper.EditMode), new { style = "width: 200px;" })
+    </div>
+</div>
+
+@using (Html.BeginForm()){
+    @Html.Partial("EditModesPartial", Model)
+}

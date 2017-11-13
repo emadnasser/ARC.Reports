@@ -1,0 +1,87 @@
+﻿@section AdditionalResources {
+    <style type="text/css">
+        .layoutItemCell {
+            width: 33%;
+            vertical-align: top;
+        }
+        .menuLayoutItemCell {
+            padding-bottom: 15px!important;
+        }
+    </style>
+}
+
+@section CustomTopAreaHolder {
+    @Html.Partial("SkipRepetitiveNavigationLinks")
+}
+
+@Html.DevExpress().FormLayout(settings => {
+    settings.Name = "FormLayout1";
+    settings.Width = Unit.Percentage(100);
+    settings.ColCount = 3;
+    settings.SettingsItemCaptions.Location = LayoutItemCaptionLocation.Top;
+    settings.Styles.LayoutGroup.Cell.CssClass = "layoutItemCell";
+    
+    settings.Items.Add(itemSettings => {
+        itemSettings.Caption = "Menu";
+        itemSettings.ColSpan = 3;
+        itemSettings.ParentContainerStyle.CssClass = "menuLayoutItemCell";
+        itemSettings.SetNestedContent(() => {
+            ViewContext.Writer.Write("<div class='dxAIFE' tabindex='0'>main content</div>");
+            Html.DevExpress().Menu(menu => {
+                menu.Name = "menu";
+                menu.ShowPopOutImages = DefaultBoolean.True;
+                menu.AccessibilityCompliant = true;
+            }).BindToXML(Server.MapPath("~/App_Data/SimpleMenu.xml"), "/mainmenu/item").GetHtml();
+        });
+    });
+
+    settings.Items.Add(itemSettings => {
+        itemSettings.Caption = "NavBar";
+        itemSettings.SetNestedContent(() => {
+            Html.DevExpress().NavBar(navBar => {
+                navBar.Name = "navBar";
+                navBar.AccessibilityCompliant = true;
+            }).BindToXML(Server.MapPath("~/App_Data/SimpleNavBar.xml"), "/groups/group").GetHtml();
+        });
+    });
+
+    settings.Items.Add(itemSettings => {
+        itemSettings.Caption = "TreeView";
+        itemSettings.SetNestedContent(() => {
+            Html.DevExpress().TreeView(treeView => {
+                treeView.Name = "treeView";
+                treeView.AllowCheckNodes = true;
+                treeView.AccessibilityCompliant = true;
+                treeView.PreRender = (s, e) => {
+                    ASPxTreeView tree = (ASPxTreeView)s;
+                    tree.ExpandAll();
+                };
+            }).BindToXML(Server.MapPath("~/App_Data/SimpleTreeView.xml"), "/nodes/node").GetHtml();
+        });
+    });
+
+    settings.Items.Add(itemSettings => {
+        itemSettings.Caption = "PopupMenu";
+        itemSettings.SetNestedContent(() => {
+            Html.DevExpress().Button(button => {
+                button.Name = "button";
+                button.Text = "Click to open popup menu";
+                button.ClientSideEvents.Click = "function(s, e) { popupMenu.Show(); }";
+                button.AccessibilityCompliant = true;
+            }).GetHtml();
+        });
+    });
+}).GetHtml()
+
+@Html.DevExpress().PopupMenu(settings => {
+    settings.Name = "popupMenu";
+    settings.Width = Unit.Percentage(100);
+    settings.ShowPopOutImages = DefaultBoolean.True;
+    settings.PopupElementID = "button";
+    settings.PopupAction = PopupAction.LeftMouseClick;
+    settings.AccessibilityCompliant = true;
+    settings.PopupHorizontalAlign = PopupHorizontalAlign.OutsideRight;
+    settings.PopupVerticalAlign = PopupVerticalAlign.TopSides;
+}).BindToXML(Server.MapPath("~/App_Data/SimpleMenu.xml"), "/mainmenu/item").GetHtml()
+
+@Html.Partial("AccessibilityValidatorLink")

@@ -1,0 +1,16 @@
+﻿@model HtmlEditorContentElementFilteringOptions
+
+<script type="text/javascript">
+    function onResetHtmlDocumentButtonClick(s, e) {
+        HtmlEditor.PerformDataCallback();
+    }
+    function onCustomDataCallbackHandler(s, e) {
+        s.SetHtml(e.result);
+    }
+</script>
+@using (Html.BeginForm()){
+    <div style="padding-bottom: 20px; margin-left: -8px;">
+        @Html.Partial("ContentElementFilteringOptionsPartial", Model)
+    </div>
+    @Html.Partial("ContentElementFilteringPartial", Model)
+}

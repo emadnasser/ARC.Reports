@@ -1,0 +1,111 @@
+<Page
+    x:Class="HybridApp.Views.CustomerCollectionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ViewModels="using:HybridApp.ViewModels"
+    xmlns:local="using:HybridApp.Views"
+    xmlns:Common="using:HybridApp.Common"
+    xmlns:Core="using:DevExpress.Core"
+    xmlns:Grid="using:DevExpress.UI.Xaml.Grid"
+    xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    xmlns:dxmvvmui="using:DevExpress.Mvvm.UI"
+    xmlns:dxmvvmi="using:DevExpress.Mvvm.UI.Interactivity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    NavigationCacheMode="Enabled"
+    x:Name="page"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <ViewModels:CustomerCollectionViewModel/>
+    </Page.DataContext>
+    <dxmvvmi:Interaction.Behaviors>
+        <dxmvvmui:EventToCommand EventName="Loaded" Command="{Binding LoadedCommand}"/>
+    </dxmvvmi:Interaction.Behaviors>
+
+    <Grid x:Name="grid" VerticalAlignment="Stretch" >
+        <Layout:PivotContainer HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Layout:PivotContainerItem Header="Customers">
+                <Grid:GridControl x:Name="gridControl" ItemsSource="{Binding Entities}" SelectedItem="{Binding SelectedEntity, Mode=TwoWay}" ShowColumnHeaders="False"
+                                      ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <dxmvvmi:Interaction.Behaviors>
+                        <dxmvvmui:EventToCommand EventName="Tapped" Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}"/>
+                    </dxmvvmi:Interaction.Behaviors>
+                    <Grid:GridControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="18,15,18,20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.ColumnSpan="2" Text="{Binding Name}" Style="{StaticResource DashboardChartHeader}"/>
+                                <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding HomeOffice.CityLine}" Margin="0,-3,0,12" Style="{StaticResource EmployeeAddressLine}"/>
+                                <TextBlock Grid.Row="2" Text="PHONE" Style="{StaticResource TaskTitles}" Margin="0,3,0,-3"/>
+                                <TextBlock Grid.Row="2" Grid.Column="1" Text="FAX" Style="{StaticResource TaskTitles}" Margin="0,3,0,-3"/>
+                                <TextBlock Grid.Row="3" Text="{Binding Phone}" Style="{StaticResource TaskText}"/>
+                                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Fax}" Style="{StaticResource TaskText}"/>
+                                <local:DemoSparkColumnChart Grid.Row="4" Grid.ColumnSpan="2" Margin="-2,15,0,0" Loaded="DemoSparkColumnChart_Loaded"
+                                           Offset="2" FractionOffsetColumn="0.9" HorizontalAlignment="Center" AutoScale="True" Height="24" Points="{Binding ExpandedMonthlySales}" Fill="{StaticResource BlueForegroundBrush}">
+                                </local:DemoSparkColumnChart>
+                                <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Text="MONTHLY SALES" HorizontalAlignment="Right" Style="{StaticResource TaskTitles}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </Grid:GridControl.ItemTemplate>
+                </Grid:GridControl>
+            </Layout:PivotContainerItem>
+            <Layout:PivotContainerItem Header="Contacts">
+                <Grid:GridControl ItemsSource="{Binding CustomerEmployeeDetails}" SelectionMode="None" ShowColumnHeaders="False"
+                      ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0" ItemContainerStyle="{StaticResource BorderlessRowControl}">
+                    <Grid:GridControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="10" Loaded="Card_Loaded">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" BorderBrush="{StaticResource PivotContainerHeaderBrush}" BorderThickness="1">
+                                    <local:BytesImage Stretch="UniformToFill" Height="100" Width="80" Margin="4" BytesSource="{Binding Path=Picture}"/>
+                                </Border>
+                                <StackPanel Grid.Column="1" Margin="25,0,0,0">
+                                    <TextBlock Text="{Binding FullName}" Style="{StaticResource EmployeeFullName}" TextWrapping="WrapWholeWords" Margin="0,5,0,0"/>
+                                    <TextBlock DataContext="{Binding Path=DataContext, ElementName=page}" Text="{Binding SelectedEntity.Name}" Style="{StaticResource EmployeeTitle}" TextWrapping="WrapWholeWords"/>
+                                    <TextBlock Text="{Binding Position}" Style="{StaticResource EmployeeAddressLine}" TextWrapping="WrapWholeWords" Margin="0,15,0,0"/>
+                                    <TextBlock Text="{Binding Address.CityLine}" Style="{StaticResource EmployeeAddressLine}" TextWrapping="WrapWholeWords"/>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </Grid:GridControl.ItemTemplate>
+                </Grid:GridControl>
+            </Layout:PivotContainerItem>
+            <Layout:PivotContainerItem Header="Stores">
+                <Grid:GridControl ItemsSource="{Binding CustomerStoreDetails}" SelectionMode="None" BorderThickness="0" ItemContainerStyle="{StaticResource BorderlessRowControl}">
+                    <Grid:GridControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="10" Loaded="Card_Loaded">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" BorderBrush="{StaticResource PivotContainerHeaderBrush}" BorderThickness="1">
+                                    <local:BytesImage Stretch="UniformToFill" Height="96" Width="96" Margin="4" BytesSource="{Binding Crest.LargeImage}"/>
+                                </Border>
+                                <StackPanel Grid.Column="1" Margin="25,0,0,0">
+                                    <TextBlock Text="{Binding Address.City}" Style="{StaticResource EmployeeFullName}" TextWrapping="WrapWholeWords" Margin="0,5,0,0"/>
+                                    <TextBlock DataContext="{Binding Path=DataContext, ElementName=page}" Text="{Binding SelectedEntity.Name}" Style="{StaticResource EmployeeTitle}" TextWrapping="WrapWholeWords"/>
+                                    <TextBlock Text="{Binding AddressLine}" Style="{StaticResource EmployeeAddressLine}" TextWrapping="WrapWholeWords" Margin="0,15,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </Grid:GridControl.ItemTemplate>
+                </Grid:GridControl>
+            </Layout:PivotContainerItem>
+        </Layout:PivotContainer>
+    </Grid>
+</Page>

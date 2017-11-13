@@ -1,0 +1,301 @@
+﻿<?xml version="1.0"?>
+<Testimonials>
+  <Testimonial FirstName="Paul" LastName="Jacoby" Tags="XAF" Photo="Paul_Jacoby.png" Company="Iatric Systems, Inc." Occupation="Senior Internet/Web Developer"
+ Quote="My company recently decided to do more development using the DevExpress XAF/XPO framework. We have worked with DevExpress controls for many other business needs to ease the burden on developing in .NET, so it was pretty straight forward to move to XAF/XPO. There is a learning curve, but for the most part the tutorials and demos answer many questions. However, on a couple occasions I just couldn't get it figured out. I contacted the DevExpress support, expecting at least a few days delay, if not weeks. However, I was pleasantly surprised in the quickness of their responses. The answers were quick, and to the point to allow me to easily implement what was needed."
+ Highlight="It's a joy to work with DevExpress controls, and now, it's been a joy to work with their support team! Thanks to DevExpress a lot of the frustrations in software development are removed.">
+  </Testimonial>
+  <Testimonial FirstName="Godwin" LastName="Mathias" Tags="XAF" Photo="Godwin_Mathias.png"
+ Quote="I call DevExpress development tools the wonders of software development in this present age and ages to come. The tools are so amazing and excellent ranging from the UI Presentation Components to Reporting Tools to IDE to Productivity tools and business Application Framework. 
+ Also if you run into trouble, the DevExpress support team are simply the best you can find anywhere in the world, they ensure that you do not have problems that will bring your project to a standstill. From my experience with the DevExpress (XAF) support team they are amazing and incredibly great and I have observed and experienced that they behave like a family. DevExpress tools are simply a one stop shop for any expert, advanced, intermediate, or newbie software developer or programmer."
+ Highlight="Thanks a lot DevExpress, with you, life has become easier.">
+  </Testimonial>
+  <Testimonial FirstName="IPLAN2Work" Company="MindPuzzle" Tags="XAF" Photo="Mind_Puzzle.png" CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/MindPuzzle/"
+ Quote="XAF is an asset of MindPuzzle. We develop fast with agility and adaptation to customers' needs without changing our &quot;style&quot;. We continue working with XAF, taking advantage of the following:
+MVC Architecture, Unit Testing capability, XPO integration, DevExpress Components, Win and Web solutions, Security, Localization Tool, High ROI, Help and Support."
+ Highlight="We were amazed by the power of XAF and the speed in the constructing process, compared from previous experience, we were 3 times faster and our costs decreased.
+After 3 months of construction we had a fully functional software. Our customers loved the stylish working environment, the adaptation of the components in each role, and the ability to extend or customize the business logic using the Model Editor.">
+  </Testimonial>
+  <Testimonial FirstName="Muris" LastName="Hadzimejlic" Tags="XPO" Photo="Muris_Hadzimejlic.png"
+ Quote="Back in 2009 I was facing a new project where I had to choose a component library. My first thought was that choice will be hard. In the end I quickly narrowed it to only few libraries. Even then, DevExpress was easy choice. Ever since, I was in luck that companies that I worked for had purchased DevExpress library, and used it for their projects.
+Speed of development (after quickly getting used to DevExpress component library), is very very fast. Beside components, there is a whole bunch of other projects which are also very good, like DevExtreme, CodeRush and others. I must mention that CodeRush will further more increase effectiveness of developer, even allowing them to very easily extend it and implement their custom plugins. I use it and would recommend it to every developer to give it a try."
+ Highlight="Support is also very good. Answers we get are very fast and usually very helpful and problem solving. Sometimes some things are misunderstood, but after a demo we get the directions what to do. I had very positive experience where I submitted a ticket for the area, I'm sure, that few are using. DevExpress support made an exception and squeezed in this fix in next release. I use this opportunity to say thank you guys once again.">
+  </Testimonial>
+  <Testimonial FirstName="David" LastName="Landry" Tags="XAF" Photo="David_Landry.png"
+ Quote="I stumbled across DevExpress and tried out the XAF framework. To say I was blown away would be an understatement! I was simply amazed at the ability to define my data model and have the basic UI for CRUD created automatically. With every new feature I discovered, I was more amazed. I worked my way through the online comprehensive tutorial, which was great, and quickly gained knowledge that I was able to use immediately on some of my personal projects that I have been working on for years."
+ Highlight="Great tool! I am hoping to become a DevExpress expert and utilize the controls in all of my personal projects.">
+  </Testimonial>
+  <Testimonial FirstName="Geoffrey" LastName="Jones" Company="Code21 Solutions Pty Ltd" Occupation="Director/Software Designer" Tags="XAF" Photo="Geoffrey_Jones.png"
+ Quote="We have been using DevExpress products for over 5 years and been delighted with the results. DevExpress have helped us to develop an enterprise-ready labour management solution with Winforms and ASP.NET modules. As a small team, it would not have been possible for us to develop an application with a polished UI, highly scalable architecture and flexible customisation options without the assistance of DevExpress.
+The broad range of DevExpress products allows us to provide solutions for a wide variety of scenarios within our products:
+Winforms components such as XtraGrid, XtraLayout and data editors. Report Server for client reporting. XPO ORM for our datalayer. XAF for our ASP.NET solution.
+In addition to the cutting-edge products, the DevExpress Support Team exhibits a high level of understanding and professionalism. We find that our queries are promptly responded to with helpful comments and solutions."
+ Highlight="As a bit of background, we use XAF for an ASP.NET Employee Self-Service module of our labour management solution and XAF helped us to develop this new module in record time (3 months for the first beta version from December 2014-February 2015). Both the ASP.NET and the Winforms components use XPO and share the same database, therefore updates between the two applications are real-time. The XAF website has proved to be very solid and reliable. In general, it has been well received by our end-users too.">
+  </Testimonial>
+  <Testimonial FirstName="Anthony" LastName="Butterworth" Company="Ron Law Central Heating Services Ltd" Occupation="Technical Director" Tags="XAF" Photo="Anthony_Butterworth.png"
+ Quote="DevExpress provide the best controls and support in the world.  If you ever have an issue or a problem you can’t solve in relation to their controls a simple support request is sent and you have your response back within a few hours, sometimes even quicker.  They don’t just refer you the help file either.  They give go the extra mile by giving you guidance on what needs to happen to make your project work &amp; even if you don’t fully understand initially they are quite happy to explain the solution a different way and on occasions will even write some sample code for you to follow.
+ I can’t fault them and the product and on-going support is worth every penny!"
+ Highlight="My special thanks go out to all the DevExpress team and especially Dennis, Alexey and Anatol who are true legends!">
+  </Testimonial>
+  <Testimonial FirstName="Bruce" LastName="Scheffler" Company="Air Force at Cape Canaveral" Tags="XPO" Photo="Bruce_Scheffler.png"
+ Quote="A few years ago when we started using Visual Studio for our programming tools my boss told me to go look for tools to help us write in Visual Studio. After visiting several different sites to learn more about their products I found yours. I could not believe a company would have so much concern for their customers to not only help them but to constantly improve their own products and never with an attitude of arrogance (as I saw in many other products) but with the idea that we work together as a team. Hence we keep on using your tools. Besides the tools being terrific in them selves your support is beyond comparison.
+ I have never felt looked down on or not important. That means a lot to us."
+ Highlight="You guys are terrific! Thanks so much for all that you have done and continue to do for us out here in the field. Thank you for all your support and help. Without it I would never get the projects done. That is why we love your products. (Besides the fact that they are the greatest!!!)">
+  </Testimonial>
+  <Testimonial FirstName="Bram" LastName="Essers" Company="Flextronics" Tags="XAF" Photo="Bram_Essers.png"
+ Quote="I would like to take the opportunity to compliment you Dennis and your colleagues at DevExpress Support. I have worked / work with many support organizations and your support really stands out: it is outstanding.
+I have mainly been in contact with you and Anatol and it is always a pleasure to work with you guys. Keep up the good work!">
+  </Testimonial>
+  <Testimonial FirstName="Sven" LastName="Stening" Company="PSSP GmbH" Tags="XAF" Photo="Sven_Stening.png"
+ Quote="I believe the real power of XAF is your special way of handling the MVC pattern. Adding a property to a BO - no matter of doing it in code or with the Application Model Editor - any possible type of view can show these new values: Detail View, List View, Reports, Statistics, etc. This is really stunning and flabbergasts me every time I see it. You've really done a great job. To be honest I've developed something very similar in the past and used it now for a long time for my projects. But XAF is much more powerful and easier to use. Not to mention your great UI components.">
+  </Testimonial>
+  <Testimonial FirstName="Wangbei" Tags="XAF" Photo="Wangbei.png"
+ Quote="I can rely on your XAF support team. I can get effective replies, which always give me the right solution. I always announce to my clients, I have a very good supplier (DevExpress), so no need to worry about any problems. My supplier, DevExpress, will give us help we need.">
+  </Testimonial>
+  <Testimonial FirstName="Jason" Tags="XAF" Company="One Healthcare Solution, Inc." CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/M5/" Photo="Jason-Onehealthcaresolution.png"
+ Quote="M5 is built on top of the eXpress Application Framework (XAF) by Developer Express.
+XAF allows the developer to define the &quot;domain objects&quot; (in my case patients, appointments, etc) in the form of business classes and then the framework builds the data schema (mapping the classes to database tables) and both web and windows applications. The developer can customize the application at almost any level by applying .NET attributes to classes, properties and methods, or by writing code in custom controllers.
+The developer can customize the application at almost any level by applying .NET attributes to classes, properties and methods, or by writing code in custom controllers."
+ Highlight="XAF is powerful, because it allows developers to quickly add functionality. For example, adding a field in a standard project would require adding the field to the user interfaces (there may be several), adding the field to the database, and then writing the field into all the plumbing code that moves the field's data from database to client to user interface and back. With XAF, this process takes about 10 seconds.               
+The generated applications come with the full force of DevExpress's award-winning Windows and web controls, and this all puts the developer in control of the machine that is DevEx, including their vast library of data-aware controls and their in-house high-performance object-relational mapper, eXpress persistent Objects (XPO). 
+The true power of XAF comes from an extensive XML model that allows customizations at any level (i.e. role, user etc.) and not just by programmers, but by anyone!">
+  </Testimonial>
+  <Testimonial FirstName="Dario" LastName="Cavallaro" Tags="XAF"
+ Quote="Choosing a component vendor isn't a simple task: you have to carefully evaluate the components, study the documentation, test the customer support, etc. Well, I think that DevExpress is absolutely the best in all these aspects.
+You can't go wrong with DevExpress: from desktop, to server side, to mobile, you get the best controls on the market. Productivity tools like CodeRush and frameworks like XPO and XAF are a huge help for a developer: you have to try it yourself to believe it. But it doesn't end there. The documentation is extensive and accurate. Customer support is fast, professional and available to clear up any doubt that you may have about the controls."
+ Highlight="In conclusion, I think that Universal subscription, which offers all their .NET and mobile components and tools, is the best investment that a developer can do for his career.">
+  </Testimonial>
+  <Testimonial FirstName="Leon" LastName="Schwerin" Tags="XAF"
+ Quote="XAF has come a long way since it was first introduced. It is serving as a great way for me to transfer from Delphi/Pascal over to VS/C# and an excellent intro to the smorgasbord of DevExpress product offerings. Despite claims of XAF having a steep learning curve, the DevExpress online documentation, videos, knowledge base articles, FAQs, etc have served me well - I haven't yet needed to lodge any support tickets for my project. A testimony to the quality of DevExpress products and their user support.">
+  </Testimonial>
+  <Testimonial FirstName="Ray" LastName="Clifton" Tags="XAF" Photo="Ray-Clifton.png" Company="Datasoft Technologies Pty Ltd"
+ Quote="I have been using DevExpress library for more than ten years now and in particular XAF framework, what a great addition this is to the library. I find this software tool to be effective to assist me in developing my products because the tools in this program are more efficient in generating and supporting the software. For example I no longer need to be concerned with the UI of my program; (although this can be customised if you need to); I can concentrate on my business logic in the software to get my software to market quicker. This in turn makes my business more efficient and cost effective and reduces development costs.">
+  </Testimonial>
+  <Testimonial FirstName="Michael" LastName="Michalis" Tags="XAF" Photo="Michael-Michalis.png"
+   Quote="Thank you very much for contributing to DevExpress excellence. 
+To be fair to the DevExpress support team, the DevExpress XAF/XPO support has been outstanding from day one!
+On ticket Q504083 Konstantin answered in a clear and yet informative way, provided an example but he also took it one step further by providing information that would help me in my next step of development based on that question. His answer had covered all the areas I had doubts, it was like he was in my mind and knew what was troubling me."
+Highlight="Sometimes even words are not enough to describe it, that's how much pleased I am with DevExpress support (Dennis, Anatol, Michael, Konstantin, Alex, Elliot, I believe I have forgotten a few sorry). Hopefully they will continue to be like this.">
+  </Testimonial>
+  <Testimonial FirstName="Santiago" LastName="Moscoso" Tags="XAF" Photo="Santiago-Moscoso.png"
+   Quote="I have become a UI superhero mainly by the powerful XtraGrid features, users are fascinated of how easy it is to filter, group, add summaries, move columns around, and XAF makes it easy to get columns from related objects which has saved a lot of time on the creation of custom views, every user can create their custom views, and that makes them feel smart.">
+  </Testimonial>
+  <Testimonial FirstName="Yahya" LastName="Edhie N. Kwando" Tags="XAF" Photo="Yahya-Edhie-N-Kwando.png"
+     Quote="DevExpress XAF, XPO, DC, these are amazing stuff you can use to speed things up developing application, web or windows. What else you want to expect if someone can give you more time to do other things in life?">
+  </Testimonial>
+  <Testimonial FirstName="Marco" LastName="Fuykschot" Tags="XAF;ASP.NET;XPO" Photo="Marco-Fuykschot.png"
+       Quote="Before DevExpress I used to build most solutions from scratch, this was manageable because the technology to build on wasn't that diverse. Then the internet applications started and the solutions I built, needed to support more and more technologies hence most of mine time shifted from functionality building to technology build and support. The breaking point for this was in 2008/2009 when I started using DevExpress ASP.net, XPO and XAF technologies. It took me about 3 years to completely transfer the application for telemarketing to an application toolkit which is capable to completely model/configure web based applications. With this toolkit the telemarketing application has been rebuilt and is now operational at two companies in the Netherlands. 
+DevExpress tools solved for me the problem of spending too much time working, building and maintaining technology instead of focusing on customer functionality.
+ The speed at which I can deliver end user applications is back again too acceptable levels.">
+  </Testimonial>
+  <Testimonial FirstName="Julio" LastName="Cachay" Company="Neo-Turf Systems, Inc." Occupation="C.E.O."  Tags="XAF"
+     Quote="I have been using devexpress xaf for over 2 years. In general, XAF is just amazing, very stable (never had an issue) and very well documented. I am anxious to see what's coming next. Thanks.">
+  </Testimonial>
+
+  <Testimonial FirstName="German" LastName="De Perosanz" Company="DPS" Tags="XAF" Photo="German_De_Perosanz.png"
+		 Quote="DPS chosen eXpressApp Framework as their main tool for the new ERP for advertising agency called SAS (SmarAdSys) . With XAF we can really focus on our core business. It is the most powerful tool I've ever programmed with, it’s nice and easy to use. I should also say that the support team is excellent. 100% recommended!">
+  </Testimonial>
+
+  <Testimonial FirstName="Martin" LastName="Brekhof" Company="BCH bv, Netherlands"  Tags="XAF" Photo="Martin_Brekhof.png"
+		Quote="I use XAF from DevExpress because it actually takes me less time to create a fully functional maintenance program for a couple of tables than entering and checking the data by hand in Management Studio. I actually spend more time extending a existing maintenance program with 3 data entry screens in Winforms than it took me to reverse engineer the whole 15 data-entry screens program in XAF. As a bonus I got rid of the bugs, had reporting included and a consistent user-interface and code base. Windows and Web based!
+		As an independent contract I like the extra capabilities the whole DevExpress suite gives me, in combination with the excellent support it is like being able to do the job with a team instead of alone. My customers like the ease with which all 'extras' can be easily realized."
+		Highlight="It is not only the excellent components that make DevExpress components worthwhile. Especially the fast support, always going the extra mile, the examples etc. makes it a no-brainer if you do development for a living.">
+  </Testimonial>
+
+  <Testimonial FirstName="Alexander" LastName="Burgard" Company="Galaktika Corp" Occupation="Vice President" Tags="XAF" Photo="Alexander_Burgard.png" CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/XAFARI/"
+		Quote="As the leader and curator of Galaktika EAM, I can confirm that the DevExpress XAF platform is very comfortable, modern and advanced, can really quickly build solutions, and in addition, a lot of changes in the system can be made by the end-users, even without programming, but simply by configuring forms, algorithms and business processes. Finally, I want to say that in addition to the existing systems the Galaktika Corporation will develop its new products on the XAFARI platform.”">
+  </Testimonial>
+
+  <Testimonial FirstName="Sergey" LastName="Zaycev" Company="Galaktika Corp"  Occupation="Head of Development, the XAFARI platform" Tags="XAF" Photo="Sergey_Zaycev.png" CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/XAFARI/"
+		Quote="I think that we use 100% of the XAF capabilities while implementing our projects. We mainly deliver Windows and Web solutions to our clients, and actively use the multi-database systems support provided by XAF and XPO. In particular, we deploy our solutions on Microsoft SQL Server and Oracle, while also using in-memory database support for creating demo versions of our apps. I want to note that the XAF’s architecture is well-thought in terms of the expansion the standard features of the platform – these are simply countess extensibility points and methods. Proper use of design patterns developed into the XAF platform itself allowed us to create a large number of custom modules and components that are easily and naturally integrated into the framework. It’s also worth mentioning that the XAF Workflow module allowed us to simplify the Microsoft WF integration (we use this in some of our projects) and served as a base for our custom tailored workflow solution for organizing documents flow. 
+Separately, it should be said about the Domain Components (DC) technology. The proposed concept of describing data model together with the idea of the modular construction of the final application, allows us to fully realize our ideas, absolutely. Defining business objects through interfaces instead of classes allowed us to use multiple inheritance, which is my opinion, is the key when implementing large projects with a large number of applications built on the same platform."
+		Highlight="In general, the use XAF platform has significantly cut our costs and, in particular, to give up the need to develop our own  ORM system and framework. I hope to prepare a case-study in the future, to provide more technical details and information on our experience with DevExpress.">
+  </Testimonial>
+
+  <Testimonial FirstName="Mohsen" LastName="Benkhellat" Company="Costlink Systems"  Tags="XAF" Photo="Mohsen_Benkhellat.png"
+		Quote="When Costlink decided to replace its aging C2 software, we made a thorough comparison of available tools and we decided to go the XAF way. A few years after that decision, we are really amazed at how much time it saved us in terms of what features we (or more precisely our customers) got versus how much we coded."
+		Highlight="The most crucial point is that it helped us have a very configurable software that can be heavily customized for each customer. I have to say that support is also fast and very helpful. Thanks DX and all of you guys">
+  </Testimonial>
+
+  <Testimonial FirstName="Robert" LastName="Anderson" Company="Coprocess, ZeroSharp"  Tags="XAF" Photo="Robert_Anderson.png"
+		Quote="We have used XAF since 2007 to develop a web-based treasury application. It is currently in use by over 100 large multinational corporates with over 5000 users in about 100 countries. It has passed security audits by global banks."
+		Highlight="Using the framework has allowed us concentrate on rapidly implementing new features while being confident that the core elements such as security, data access and front-end design are reliable and efficient.">
+  </Testimonial>
+
+  <Testimonial FirstName="Dionisis" LastName="Soldatos" Company="Exelixis Software"  Tags="XAF" Photo="Dionisis_Soldatos.png" CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/ExelixisSoftware/"
+		Quote="We love the XAF Code it, Run it, Customize it before Lunch slogan, and take great pride in our Smart (also based in XAF) slogan – Take a case from a customer, customize Smart, provide a solution, finish your work today."
+		Highlight="Thanks to DevExpress' eXpress Application Framework, I can sleep well at night knowing that my customers' needs are so fully met!">
+  </Testimonial>
+
+  <Testimonial FirstName="Arjan" LastName="van Dijk" Company="Distel Software B.V." Occupation="Technical Director"  Tags="XAF" Photo="Arjan_van_Dijk.png"
+		Quote="My company benefits heavily on the tools and expertise of DevExpress and their responsive support for many years now. Using their application framework (XAF) together with the DevExpress tools it’s easy to create fully functional (custom) business applications within a very short time span giving us a major competitive advantage."
+		Highlight="We just couldn’t live without!">
+  </Testimonial>
+
+  <Testimonial FirstName="Jascha" LastName="Gordon" Company="Line of Business Systems Ltd"  Occupation="business owner" Tags="XAF" Photo="Jascha_Gordon.png" CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/LineOfBusinessSystems/"
+		Quote="XAF architecture is designed to allow built-in functionality to be altered / extended where necessary, saving the effort of “reinventing“ the wheel"
+		Highlight="To summarise, if you are in the market for a fully-featured application framework from a leading vendor that targets data-centric win and web UI's and you would rather avoid expending time and money developing and maintaining your own framework then XAF may well represent an excellent addition to your tool set.">
+  </Testimonial>
+
+  <Testimonial FirstName="Roman" LastName="Shelomanov" Company="DevPark"  Tags="XAF" Photo="Roman_Shelomanov.png" CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/DevPark/, https://www.devexpress.com/Home/Case-Studies/Fitness365/"
+		Quote="Using XAF is like hiring a team of professional developers, analysts and graphical designers to design our program. It also gives us testers for free, because XAF ships with a built-in functional testing framework">
+  </Testimonial>
+
+  <Testimonial FirstName="Hakan" LastName="Çelik" Company="Helios IT Solutions Ltd. Co." Occupation="Deputy General Manager" Tags="XAF"
+		Quote="I've been using DevExpress products for more than 2 years to create business applications for enterprises. I'm very satisfied with BOTH the products and the support of DevExpress. Universal subscription has everything we need to create great enterprise level line of business applications. And, your support is top notch and very very quick (especially Dennis, Anatol, Michael and Dan).">
+  </Testimonial>
+
+  <Testimonial FirstName="Michael" LastName="Lang" Company="CTL Computertechnik Lang" Tags="XAF" Photo="Michael_Lang.png"
+		Quote="The eXpressApp Framework of DevExpress is the most powerful tool I ever programed with. All other DevExpress tool​s are very good as well, but XAF is an outstanding product that every business application programmer makes his life very much easier. The best thing about DevExpress is the support that is unparalleled in the software industry. It is staffed by people only that are in heart and mind in the matter they consider it as their duty to help the customer.">
+  </Testimonial>
+
+  <Testimonial FirstName="Jens" LastName="Burkersrode" Company="KBS Kommunalberatung GmbH" Tags="XAF"
+		Quote="While using the trial version of eXpressApp Framework I converted one of our applications almost completely to an XAF-Application without heavy problems. It’s incredible!!! And why? It’s the power of XAF that helped me! Thanks for this product! And special thanks to all the employees working in online-support (especially to Denis) because support really helped me better understand the use of XAF.">
+  </Testimonial>
+  <Testimonial FirstName="Mario" LastName="Blataric" Company="Logon Ltd." Tags="XAF" Photo="Mario_Blataric.png"
+		Quote="Today my first XAF project went into production stage and it's now being used by 200 people. Five months ago when I was starting this and chose XAF as technology for the project, I had no idea how that will turn out. Didn't know XAF, didn't do large web projects before, my Domain Model skills where non-existent (which just proved how flexible XAF is since I used it in very non-optimal way, refactoring is the next step) - but it worked quite well (heavily customized web scheduler application) mostly because DevExpress support guys were really, well supportive :) and full of patience (I'm sure they have my account printed out as darts target :)) since I sometimes behave like spoiled brat that wanted everything and now :). Neither XAF nor support are perfect, but I'd say they are both as good as it gets.
+So, thank you for everything, DevExpress Support. I'm definitely renewing and starting two more projects and I just wanted you to know that my annoyances until now were just a beginning :)"
+		Highlight="To all people not sure whether to take XAF or not - take it. It's not like there is any comparable alternative and DevExpress guys will help you out through just about any obstacle you hit.">
+  </Testimonial>
+  <Testimonial FirstName="Kevin" LastName="L McDonald" Occupation="Information Systems Manager" Tags="XAF" Photo="Kevin_Mc_Donald.png"
+		Quote="As far as DevExpress and the support goes it is simple incredible. I am basically the only person here in IT for a 65 or so employee company so between purchasing, configuring, installing, setting up and maintaining the entire IT infrastructure it does not give me a lot of free time. However using your development tool have simple made it possible. I can create quality programs here for the Quality and Engineering departments to control all their daily work. It would not be possible without their products and support and I recommend DevExpress to everyone out there developing programs.">
+  </Testimonial>
+  <Testimonial FirstName="BJ" LastName="Baek" Company="VSL Korea" Occupation="IT Administrator" Tags="XAF" Photo="Bj_Baek.png"
+		Quote="The 3-Tier architecture with the application server was a very expensive technology before. And XAF new security system is also a perfect feature which is not easy to implement without XAF. So I feel lucky to choose XAF for my project platform. I love XAF, it helps me to develop nice business applications really quick.">
+  </Testimonial>
+
+  <Testimonial FirstName="Mark" LastName="Hamilton" Tags="XAF"
+		Quote="I downloaded your suite last night to trial your eXpress Applicaton Framework, loving how much donkey work it can save with regards to wiring up the UI and basic CRUD operations!">
+  </Testimonial>
+
+  <Testimonial FirstName="Kim" LastName="Maxwell" Company="Mawson West Ltd." Occupation="Group Database &amp; GIS Manager" Tags="XAF"
+		Quote="I have used eXpessApp Framework for 5 years. I developed a large data driven application for a company offering managed investment into tree farming. It was a multi-user, mission critical application that managed in excess of $550 million of investors' funds.">
+  </Testimonial>
+
+  <Testimonial FirstName="Alistair" LastName="Thacker" Tags="XAF"
+		Quote="I run a small business and for years I had ideas for internal line of business applications which would make things so much better for us. However we just never had the time to create them - you have to keep focussed on the client projects to keep paying the bills.
+			I discovered XAF and I was stunned. It is incredible what you can achieve in just a few hours. Just incredible. Now I have an idea on a Friday, I spend a few hours tinkering on a Saturday morning, and then I launch the new app to the team on a Monday morning.
+			Now our business is running like a well oiled machine, and a lot of the credit has to go to XAF. The ability to make changes to the system and have the database update automatically is great for allowing apps to 'Evolve'
+
+			I must mention the support team too. They are the best I've ever dealt with. Just post any question, even a bit of code you are working on, and they get right on it and come back with a detailed, helpful response. I've posted questions and had responses back on a Saturday morning when I'm trying something out. You just don't get that with other companies."
+		Highlight="I discovered XAF and I was stunned. It is incredible what you can achieve in just a few hours. Just incredible. Now our business is running like a well oiled machine, and a lot of the credit has to go to XAF. The ability to make changes to the system and have the database update automatically is great for allowing apps to 'Evolve' over time with the minimum of fuss.
+			I must mention the support team too. They are the best I've ever dealt with.">
+  </Testimonial>
+
+  <Testimonial FirstName="Aytaç" LastName="Aşan" Company="Halis Petrol A.Ş." Occupation="IT Director" Tags="XAF"
+		Quote="Since 2000, I have used Devexpress products in various businesses and with different types of projects.
+			Another reason for choosing DevExpress is its highly professional customer support. In some cases, this fact alone can be more important than any other.
+			Thanks to the DevExpress development and support teams!"
+		Highlight="I remember that I first learned about the eXpressApp Framework in 2005 from the Devexpress web site, and I said to myself, 'it is magnificent!' I can now develop more robust, rapid and professional software products. In fact, the Devexpress product line is so comprehensive that I don't need any other third party products.">
+  </Testimonial>
+
+  <Testimonial FirstName="Praxmarer" LastName="Martin" Company="PraKom Software GmbH" Tags="XAF" Photo="Martin_Praxmarer.png"
+		Quote="We were in the situation to completely start from scratch with a new ERP Software. We switched to .NET and after evaluating a few different component packages we decided to go with DevExpress WinForms Controls. We started to extend an existing .NET Winforms Application, but we have seen that too much man power is needed to get a running product. Finally we discovered DevExpress eXpressApp Framework and eXpressPersistent Objects, and after some tests we started to go with XAF. Its flexibility and the speed of gettng basic things up and running was outstanding. Another point was the fantastic support we got from the DevExpress support team!
+			One of the challenges we faced was application flexibility. We needed our customers to be free to modify our software according to their requirements. With the help of Xpand - an Open Source framework - we made the application model completely customizable at runtime, allowed custom members to be created at runtime, and much more. Even loading custom XAF modules, based on the customers needs is no problem with XAF out of the box.
+			To sum up, working with XAF helps us deliver a highly flexible and stable product, deliver new functionality in short time with a relatively small team. It also enables us to utilize cutting-edge technologies:
+				- Deliver an application which runs on both WinForms and ASP.NET
+				- Integrated Windows Workflow (Runtime Designer and Workflow Server)
+				- An outstanding Report Designer
+				- Fully-Customizable Layouts
+				- An Comprehensive Pivot / Analysis Module, Dashboards
+				- And so much more!">
+  </Testimonial>
+
+  <Testimonial FirstName="Vassilis" LastName="Pallis" Tags="XAF" Photo="Pallis_Vassilios.png"
+		Quote="I am using DevExpress for years now, and I am totally satisfied. All your products are awesome and support is fast and brilliant, every time I need it.
+
+			Previously, I didn't pay attention to XAF and I was wrong about that. A friend and collague of mine showed me a demo and the potentials of the eXpressApp Framework. Now I have completed 90% of my XAF-based application and I believe that it's going to be a hit in our market.
+
+			XAF and XPO are the masterpieces in your awesome product line. Be well and keep up the good job.">
+  </Testimonial>
+
+  <Testimonial FirstName="Jeremy" LastName="Hobbs" Company="PetroMetric, LLC." Tags="XAF"
+		Quote="eXpressApp Framework was a perfect solution for what we needed. It supplied a simple and streamlined interface so that our users could quickly and efficiently edit the data.  The users that primarily did daily reporting could login to the web interface and easily access the data.  This allowed our clients to work in a more real-time manner with their outside firms and allowed them to be more efficient throughout the month.
+			We saved an enormous amount of time and man power by using the eXpressApp Framework. XAF had the audit feature already built into it. It was also able to create the application and web interfaces at the same time from the modeler which saved considerable cost in the interface development and gave the needed functionally to our users. We have been extremely happy with Devexpress products and especially XAF. We will be using it with any future products we release."
+		Highlight="We saved an enormous amount of time and man power by using the eXpressApp Framework. XAF had the audit feature already built into it. It was also able to create the application and web interfaces at the same time from the modeler which saved considerable cost in the interface development and gave the needed functionally to our users. We have been extremely happy with Devexpress products and especially XAF. We will be using it with any future products we release.">
+  </Testimonial>
+
+  <Testimonial FirstName="Nathaniel" LastName="Laff" Company="REV23 Development" Tags="XAF" Photo="Nathaniel_Laff.png" CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/REV23/"
+		Quote="eXpressApp Framework's WF module saves me an incredible amount of time. I think it is intimidating to some people. It was to me at first. But once you really sit down with it, it's really quick and easy to learn.
+			I believe the Workflow Module has made me money. What's better for business than that? :)">
+  </Testimonial>
+
+  <Testimonial FirstName="Dima" LastName="Janzen" Company="Mash2" Tags="XAF" Photo="Dima_Janzen.png"
+		Quote="Mash2 is a startup company in Germany. We are very satisfied with the features and flexibility of eXpressApp Framework. We have been using XAF in our e-commerce business. XAF has become a strategic tool for us that facilitate our expansion to new product groups and new markets.">
+  </Testimonial>
+
+  <Testimonial FirstName="Willem" LastName="de Vries" Tags="XAF" Photo="Willem_de_Vries.png"
+		Quote="I was already charmed by (a far) predecessor of XAF, a.k.a. Step6 in the VCLennium. We have used it as a stepping stone in many of our solutions.
+			When re-entering the software development market, XAF was the logical choice for me because a .NET oriented solution provider was more likely to find interesting and valuable projects. And DevExpress components, that I was already familiar with, would give me an advantage in solution functionality and richness.
+			The framework allowed me to skip a lot of the plumbing activities to implement the low-level aspects of a software solution and concentrate on functionality and model coherence."
+		Highlight="When re-entering the software development market, XAF was the logical choice for me because a .NET oriented solution provider was more likely to find interesting and valuable projects. And DevExpress components, that I was already familiar with, would give me an advantage in solution functionality and richness.
+			The framework allowed me to skip a lot of the plumbing activities to implement the low-level aspects of a software solution and concentrate on functionality and model coherence.">
+  </Testimonial>
+
+  <Testimonial FirstName="Willem" LastName="de Vries" Tags="XAF" Photo="Willem_ de_Vries.png"
+		Quote="I'm SO impressed by the level of your support and the ever emerging new possibilities (for me at least) of the eXpressApp Framework!!!!!
+			Will study it shortly, but thanks for the answer, gives me a lot of peace of mind for the (near) future development of the application!">
+  </Testimonial>
+  <Testimonial FirstName="Chris" LastName="Pitt" Company="Devbrit Consultants" Tags="XAF" Photo="Chris_Pitt.png"
+		Quote="I have found the DevExpress components, and particularly the framework, to be the most viable solution for developing robust, feature-rich applications for my business applications. As a freelance consultant I can, with the framework available inside DevExpress, produce great looking and functioning solutions for my clients in an affordable timeframe without the need to code every detail. This equates to faster end products and solutions with less capital outlay to my clients, and a significant cost saving to them.  I will not be coding without DevExpress in the future."
+		Highlight="I have found the DevExpress components, and particularly the framework, to be the most viable solution for developing robust, feature-rich applications for my business applications. As a freelance consultant I can, with the framework available inside DevExpress, produce great looking and functioning solutions for my clients in an affordable timeframe without the need to code every detail. This equates to faster end products and solutions with less capital outlay to my clients, and a significant cost saving to them.">
+  </Testimonial>
+
+  <Testimonial FirstName="Jake" LastName="Markhus" Tags="XAF;CodeRush"
+		Quote="When I get an idea, I use CodeRush to code it, I drag and drop some DevExpress controls and hey presto – solution! With tools like XPO, XAF and the very predictable and consistent controls, I rarely have to debug. In fact, I can spend an entire day just typing code and laying out UIs without once pressing F5 to “see if it will run”. Other vendors have nearly everything that DevExpress does, but the problem is each are simply standalone products and they don’t all gel together. DevExpress is so consistent and reliable that all I have to do is have the idea and implement my plans.
+			At the end of the day, the choice is a matter of preference, experience and good taste. My preference is DevExpress."
+		Highlight="When I get an idea, I use CodeRush to code it, I drag and drop some DevExpress controls and hey presto – solution! With tools like XPO, XAF and the very predictable and consistent controls, I rarely have to debug. In fact, I can spend an entire day just typing code and laying out UIs without once pressing F5 to “see if it will run”. Other vendors have nearly everything that DevExpress does, but the problem is each are simply standalone products and they don’t all gel together. DevExpress is so consistent and reliable that all I have to do is have the idea and implement my plans.">
+  </Testimonial>
+
+  <Testimonial FirstName="Preetham" LastName="Reddy" Tags="XAF" Photo="Preetham_Reddy.png"
+		Quote="If you want to develop business applications, XAF can cut down development time by 80%... Seriously, try it. You will never look back.
+			The soon to be released Domain Component Technology (In BETA now) for XAF and pure XPO will be invaluable to developers... I started playing with it and loving every bit of it."
+		Highlight="If you want to develop business applications, XAF can cut down development time by 80%... Seriously, try it. You will never look back.">
+  </Testimonial>
+
+  <Testimonial FirstName="Kobus" LastName="Smit" Tags="XAF"
+		Quote="I’m a happy customer using the eXpress App Framework. I found that it kick starts my project having a consistent professional customisable user interface, validation, security system, reporting and localisation already in place. With XAF I can focus on the business logic and features important for my end user without wasting time on the “plumbing”.
+
+			Their documentation is good; there are lots of useful examples and videos. There is a bit of a learning curve to XAF but thereafter you can be very productive. When considering an application framework such as XAF I was concerned that I’ll run into lots of limitations. So far I’ve been pleasantly surprised to find solutions and workarounds for my questions.
+
+			Well done to the development, management, documentation, support teams and everyone else involved. I must indeed complement the support team. I’ve dealt with Dennis, Roman, Michael, Anatol and Konstantin and found them to be competent, friendly and helpful. Their response times were decent and their assistance with answers, code samples and test projects helped me resolve my questions/issues.
+
+			Thanks again DevExpress for great products and impressive customer service."
+		Highlight="I’m a happy customer using the eXpress App Framework. I found that it kick starts my project having a consistent professional customisable user interface, validation, security system, reporting and localisation already in place. With XAF I can focus on the business logic and features important for my end user without wasting time on the “plumbing”.">
+  </Testimonial>
+  <Testimonial FirstName="Mark" LastName="" Company="Amtech Software" Tags="XAF"
+		Quote="We evaluated many .NET toolsets for our continued development projects. Developer Express and the eXpressApp Framework allows us to develop 'Feature-Rich' applications quickly with their extendable framework. The ability to develop both Web and Forms applications within the same source framework is a great benefit. We look forward to Developer Express Framework enhancements that continue to extend functionality.">
+  </Testimonial>
+  <Testimonial FirstName="Dave" LastName="Hesketh" Company="Osnium Software" Tags="XAF" Photo="Dave_Hesketh.png"
+		Quote="Your products are the absolute best I have ever seen. Our company was formed because of XAF - and we are successful because of DevExpress, your staff, and your products. Thanks again!">
+  </Testimonial>
+
+  <Testimonial FirstName="Kervin" LastName="Pierre" Tags="XAF"
+		Quote="I am an independent C++/C# developer.  I first started using DevExpress tools when a potential client required a calendar control for an
+			application they'd like to develop.  They were very impressed when my research came up with XtraScheduler.  Its flexibility allowed me to
+			customize the application to the exact customer specifications often without any code at all.  This allowed me to deliver the application at a much
+			better rate to the client.  Because of this.  I would like to use the entire eXpressApp Framework to develop all applications that I develop, both for
+			the web and desktop.  With my experience with DevExpress I expect that this will allow be to deliver much faster and reliable prototypes.
+
+			As a developer I like the stability and flexibility of the controls.   Also, the online support area, documentation, and searchable knowledgebase
+			are very good.  That has saved me from contacting customer support quite a few times.  Which is great for weekend and late night questions.
+			Support staff is knowledgeable and responds in 24 hours typically, so that's very good as well.
+
+			I really like the idea behind eXpressApp, and I am excited to use it.  I hope the framework is expanded even more in the future.  I would love
+			to have a basic authorization/licensing and updating components ( eg. ClickOnce helper/extender ) included.  Though I'm not sure if that
+			fits in your feature plans.  At any rate it already seems like it is a worthy investment.
+
+			I have had an excellent experience using DevExpress products, and I look forward to using even more of the products and services that you provide."
+		Highlight="As a developer I like the stability and flexibility of the controls.   Also, the online support area, documentation, and searchable knowledgebase
+			are very good.  That has saved me from contacting customer support quite a few times.  Which is great for weekend and late night questions.
+			Support staff is knowledgeable and responds in 24 hours typically, so that's very good as well.
+
+			I have had an excellent experience using DevExpress products, and I look forward to using even more of the products and services that you provide.">
+  </Testimonial>
+
+  <Testimonial FirstName="Peter" LastName="van de Put" Company="Pravesoftware" Tags="XAF" Photo="Peter-van-de-Put.png" CaseStudyUrl="https://www.devexpress.com/Home/Case-Studies/Prave/"
+		Quote="In the summer of 2007, we have intensively evaluated DevExpress eXpressApp Framework™ which was not released at that moment, together with other technology providers.
+The big test we performed was to completely redevelop our CRM application that was build on our own core framework from scratch using the eXpressApp Framework.
+After reading most of the documentation, we started with great enthusiasm building domain objects instead of table and SQL procedures. After the first compile we where presently surprised to see the GUI being created and also a complete web interface."
+    Highlight="Thanks to the excellent support organization, the questions we had where all answered most often the same day, including working sample solutions. So far we have never faced an issue that could not be resolved out of the box.">
+  </Testimonial>
+</Testimonials>

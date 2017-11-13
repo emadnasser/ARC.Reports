@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectGuid>{AD985D9C-70A3-43B1-919F-BDEC68AEF04F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>VertGridTutorials</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VertGridTutorials</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <Name>DevExpress.Printing.v16.2.Core</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <Name>DevExpress.XtraEditors.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2">
+      <Name>DevExpress.XtraVerticalGrid.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs" />
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CategoryRowButtons\CategoryRowButtons.cs" />
+    <Compile Include="CategoryRowButtons\CategoryRowButtons.Designer.cs">
+      <DependentUpon>CategoryRowButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls.cs" />
+    <Compile Include="DataMode\DataMode.cs" />
+    <Compile Include="DataMode\DataMode.Designer.cs">
+      <DependentUpon>DataMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DragDrop\DragDrop.cs" />
+    <Compile Include="DragDrop\DragDrop.Designer.cs">
+      <DependentUpon>DragDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Editors.cs" />
+    <Compile Include="Editors\Editors.Designer.cs">
+      <DependentUpon>Editors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HitInfo\HitInfo.cs" />
+    <Compile Include="HitInfo\HitInfo.Designer.cs">
+      <DependentUpon>HitInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutAndPaintStyles\LayoutAndPaintStyles.cs" />
+    <Compile Include="LayoutAndPaintStyles\LayoutAndPaintStyles.Designer.cs">
+      <DependentUpon>LayoutAndPaintStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiEditorsRow\MultiEditorsRow.cs" />
+    <Compile Include="MultiEditorsRow\MultiEditorsRow.Designer.cs">
+      <DependentUpon>MultiEditorsRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\Options.cs" />
+    <Compile Include="Options\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Resizing\Resizing.cs" />
+    <Compile Include="Resizing\Resizing.Designer.cs">
+      <DependentUpon>Resizing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RowAlignment\RowAlignment.cs" />
+    <Compile Include="RowAlignment\RowAlignment.Designer.cs">
+      <DependentUpon>RowAlignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RowCustomization\RowCustomization.cs" />
+    <Compile Include="RowCustomization\RowCustomization.Designer.cs">
+      <DependentUpon>RowCustomization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RowFormat\RowFormat.Designer.cs">
+      <DependentUpon>RowFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RowFormat\RowFormatClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RowFormat\RowFormat.cs" />
+    <Compile Include="RowsNavigation\RowsNavigation.cs" />
+    <Compile Include="RowsNavigation\RowsNavigation.Designer.cs">
+      <DependentUpon>RowsNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScrollVisibility\ScrollVisibility.cs" />
+    <Compile Include="ScrollVisibility\ScrollVisibility.Designer.cs">
+      <DependentUpon>ScrollVisibility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleAlphaBlending\SimpleAlphaBlending.cs" />
+    <Compile Include="SimpleAlphaBlending\SimpleAlphaBlending.Designer.cs">
+      <DependentUpon>SimpleAlphaBlending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleMode\SimpleMode.Designer.cs">
+      <DependentUpon>SimpleMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleMode\SimpleModeClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimpleMode\SimpleMode.cs" />
+    <Compile Include="StyleConditions\StyleConditions.cs" />
+    <Compile Include="StyleConditions\StyleConditions.Designer.cs">
+      <DependentUpon>StyleConditions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StyleFormats\StyleFormats.cs" />
+    <Compile Include="StyleFormats\StyleFormats.Designer.cs">
+      <DependentUpon>StyleFormats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorialRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnboundMode\UnboundMode.Designer.cs">
+      <DependentUpon>UnboundMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnboundMode\UnboundModeClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnboundMode\UnboundMode.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryRowButtons\CategoryRowButtons.resx">
+      <DependentUpon>CategoryRowButtons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataMode\DataMode.resx">
+      <DependentUpon>DataMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DragDrop\DragDrop.resx">
+      <DependentUpon>DragDrop.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Editors.resx">
+      <DependentUpon>Editors.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HitInfo\HitInfo.resx">
+      <DependentUpon>HitInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutAndPaintStyles\LayoutAndPaintStyles.resx">
+      <DependentUpon>LayoutAndPaintStyles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiEditorsRow\MultiEditorsRow.resx">
+      <DependentUpon>MultiEditorsRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resizing\Resizing.resx">
+      <DependentUpon>Resizing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RowAlignment\RowAlignment.resx">
+      <DependentUpon>RowAlignment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RowCustomization\RowCustomization.resx">
+      <DependentUpon>RowCustomization.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RowFormat\RowFormat.resx">
+      <DependentUpon>RowFormat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RowsNavigation\RowsNavigation.resx">
+      <DependentUpon>RowsNavigation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrollVisibility\ScrollVisibility.resx">
+      <DependentUpon>ScrollVisibility.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleAlphaBlending\SimpleAlphaBlending.resx">
+      <DependentUpon>SimpleAlphaBlending.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleMode\SimpleMode.resx">
+      <DependentUpon>SimpleMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleConditions\StyleConditions.resx">
+      <DependentUpon>StyleConditions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleFormats\StyleFormats.resx">
+      <DependentUpon>StyleFormats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnboundMode\UnboundMode.resx">
+      <DependentUpon>UnboundMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,182 @@
+<Page
+    x:Class="HybridApp.Views.CustomerCollectionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ViewModels="using:HybridApp.ViewModels"
+    xmlns:local="using:HybridApp.Views"
+    xmlns:Common="using:HybridApp.Common"
+    xmlns:Core="using:DevExpress.Core"
+    xmlns:Grid="using:DevExpress.UI.Xaml.Grid"
+    xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    xmlns:dxmvvmui="using:DevExpress.Mvvm.UI"
+    xmlns:dxmvvmi="using:DevExpress.Mvvm.UI.Interactivity"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    NavigationCacheMode="Enabled"
+    Transitions="{StaticResource CollectionViewTransitions}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Core:TypeTemplateSelector x:Key="slideViewTemplateSelector" FindDescendants="True">
+            <Core:TypeTemplateSelector.Templates>
+                <DataTemplate x:Key="CustomerEmployee">
+                    <Border Background="Transparent">
+                        <Grid Margin="0,0,16,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <local:BytesImage Height="120" Width="120" BytesSource="{Binding Picture}"/>
+                            <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="0,5,0,0">
+                                <TextBlock Text="{Binding FullName}" HorizontalAlignment="Center" Foreground="{StaticResource darkGrayForegroundBrush}" FontSize="12"/>
+                                <TextBlock Text="{Binding Position}" HorizontalAlignment="Center" Foreground="{StaticResource grayForegroundBrush}" FontSize="12"/>
+                                <TextBlock Text="{Binding Address.City, Converter={StaticResource StringFormatConverter}, ConverterParameter='({0})'}" HorizontalAlignment="Center" Foreground="{StaticResource grayForegroundBrush}" FontSize="12"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+                <DataTemplate x:Key="CustomerStore">
+                    <Border Background="Transparent">
+                        <Grid Margin="0,0,16,0" Width="120">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <local:BytesImage Height="120" BytesSource="{Binding Crest.LargeImage}"/>
+                            <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="0,5,0,0">
+                                <TextBlock Text="{Binding Address.City}" HorizontalAlignment="Center" Foreground="{StaticResource darkGrayForegroundBrush}" FontSize="12"/>
+                                <TextBlock Text="{Binding AddressLine}" HorizontalAlignment="Center" Foreground="{StaticResource grayForegroundBrush}" TextAlignment="Center" TextWrapping="Wrap" FontSize="12"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </Core:TypeTemplateSelector.Templates>
+        </Core:TypeTemplateSelector>
+    </Page.Resources>
+    <Page.DataContext>
+        <ViewModels:CustomerCollectionViewModel/>
+    </Page.DataContext>
+
+    <dxmvvmi:Interaction.Behaviors>
+        <dxmvvmui:EventToCommand EventName="Loaded" Command="{Binding LoadedCommand}"/>
+    </dxmvvmi:Interaction.Behaviors>
+    <local:CollectionControl>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1200" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MonthlySales.Visible" Value="True" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1000" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MonthlySales.Visible" Value="False" />
+                        <Setter Target="Fax.Visible" Value="True" />
+                        <Setter Target="Phone.Visible" Value="True" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MonthlySales.Visible" Value="False" />
+                        <Setter Target="Fax.Visible" Value="False" />
+                        <Setter Target="Phone.Visible" Value="False" />
+                        <Setter Target="ZipCode.Visible" Value="True" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MonthlySales.Visible" Value="False" />
+                        <Setter Target="Fax.Visible" Value="False" />
+                        <Setter Target="Phone.Visible" Value="False" />
+                        <Setter Target="ZipCode.Visible" Value="False" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <local:CollectionControl.Header>
+            <local:HybridAppHeader RightHeader="CUSTOMERS"/>
+        </local:CollectionControl.Header>
+        <local:CollectionControl.MainContent>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid:GridControl ItemsSource="{Binding Entities}" SelectedItem="{Binding SelectedEntity, Mode=TwoWay}" Name="grid" AutoWidth="True" SearchString="{Binding Text, ElementName=searchBox}" ShowTotalSummary="True" CustomSummary="CustomSummary">
+                    <dxmvvmi:Interaction.Behaviors>
+                        <dxmvvmui:EventToCommand EventName="DoubleTapped" Command="{Binding EditCommand}" PassEventArgsToCommand="True" EventArgsConverter="{StaticResource GridControlEventArgsConverter}"/>
+                    </dxmvvmi:Interaction.Behaviors>
+                    <Grid:GridControl.Columns>
+                        <Grid:GridTextColumn FieldName="Name"  TotalSummaryContentStyle="{StaticResource nameColumnTotalSummaryContentStyle}"/>
+                        <Grid:GridTextColumn FieldName="HomeOffice.Line" Name="Line" Header="Address"/>
+                        <Grid:GridTextColumn FieldName="HomeOffice.City" Name="City" Header="City" Width="130"/>
+                        <Grid:GridTextColumn FieldName="HomeOffice.State" Name="State" Header="State" MinWidth="80" Width="80"/>
+                        <Grid:GridTextColumn FieldName="HomeOffice.ZipCode" Name="ZipCode" Header="ZipCode" MinWidth="100" Width="100"/>
+                        <Grid:GridTextColumn FieldName="Phone" Name="Phone" MinWidth="120" Width="120"/>
+                        <Grid:GridTextColumn FieldName="Fax" Name="Fax" MinWidth="120" Width="120"/>
+                        <Grid:GridTemplateColumn FieldName="MonthlySales" Name="MonthlySales" Header="Monthly Sales (FY2013)" Width="350" FixedWidth="True" TotalSummaryContentStyle="{StaticResource monthlySalesColumnTotalSummaryContentStyle}">
+                            <Grid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Common:WaitIndicator ActiveObject="{Binding MonthlySales}">
+                                        <local:DemoSparkColumnChart Scale="25000" Points="{Binding MonthlySales}" Fill="#FF2F51A5" MinWidth="350"/>
+                                    </Common:WaitIndicator>
+                                </DataTemplate>
+                            </Grid:GridTemplateColumn.CellTemplate>
+                        </Grid:GridTemplateColumn>
+                    </Grid:GridControl.Columns>
+                    <Grid:GridControl.TotalSummary>
+                        <Grid:GridSummaryItem SummaryType="Count" FieldName="Name" DisplayFormat="{}{0}" />
+                        <Grid:GridSummaryItem SummaryType="Custom" FieldName="MonthlySales" DisplayFormat="{}{0:c}"/>
+                    </Grid:GridControl.TotalSummary>
+                </Grid:GridControl>
+                <StackPanel Orientation="Horizontal" Height="45" Grid.Row="1">
+                    <TextBlock Text="{Binding SelectedEntity.Name}" VerticalAlignment="Center" Foreground="{StaticResource blueForegroundBrush}" FontSize="17" Margin="3,1,3,0"/>
+                    <ComboBox x:Name="customerDetailsComboBoxEdit" Foreground="#FF806464" FontSize="17" HorizontalContentAlignment="Center" VerticalAlignment="Center" Width="115" SelectedItem="{Binding CustomerDetailsType}" Style="{StaticResource ComboBoxStyle1}">
+                        <dxmvvmi:Interaction.Behaviors>
+                            <local:EnumItemsSourceBehavior EnumType="HybridApp.ViewModels.CustomerDetailsType" SelectedItem="{Binding CustomerDetailsType, Mode=TwoWay}"/>
+                        </dxmvvmi:Interaction.Behaviors>
+                    </ComboBox>
+                </StackPanel>
+                <ListView Grid.Row="2"
+                          ItemsSource="{Binding CustomerDetails}"
+                          ItemTemplateSelector="{StaticResource slideViewTemplateSelector}"
+                          ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                          ScrollViewer.HorizontalScrollMode="Auto"
+                          ScrollViewer.IsHorizontalRailEnabled="True">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+            </Grid>
+        </local:CollectionControl.MainContent>
+        <local:CollectionControl.Footer>
+            <AppBar>
+                <local:BottomPanel>
+                    <local:BottomPanel.CentralColumn>
+                        <StackPanel Orientation="Horizontal">
+                            <AppBarButton Label="New" HorizontalAlignment="Center" Command="{Binding NewCommand}" Common:AppBarExtensions.ImageSource="ms-appx:/Resources/Toolbar/New.png"/>
+                            <AppBarButton Label="Edit" HorizontalAlignment="Center"  Command="{Binding EditCommand}" CommandParameter="{Binding SelectedEntity}" Common:AppBarExtensions.ImageSource="ms-appx:/Resources/Toolbar/Edit.png"/>
+                        </StackPanel>
+                    </local:BottomPanel.CentralColumn>
+                    <local:BottomPanel.RightColumn>
+                        <AutoSuggestBox x:Name="searchBox" IsSuggestionListOpen="False" QueryIcon="Find" Width="280"/>
+                    </local:BottomPanel.RightColumn>
+                </local:BottomPanel>
+            </AppBar>
+        </local:CollectionControl.Footer>
+    </local:CollectionControl>
+</Page>

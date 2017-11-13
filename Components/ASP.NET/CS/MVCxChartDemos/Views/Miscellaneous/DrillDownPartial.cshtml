@@ -1,0 +1,49 @@
+﻿@{
+    ChartDrillDownDemoOptions options = (ChartDrillDownDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+    if (options != null) {
+        @Html.DevExpress().Chart(settings => {
+            settings.Name = "chart";
+            settings.Width = 920;
+            settings.Height = 500;
+            settings.BorderOptions.Visibility = DefaultBoolean.False;
+       
+            settings.EnableClientSideAPI = true;
+            settings.CallbackRouteValues = new { Controller = "Miscellaneous", Action = "DrillDownPartial" };
+            settings.ClientSideEvents.ObjectHotTracked = "function (settings, e) { chart.SetCursor(e.hitInfo.inSeries ? 'pointer' : 'default'); }";
+            settings.ClientSideEvents.ObjectSelected = "function (settings, e) { if(e.hitInfo.inSeriesPoint) { document.location = '" + DevExpressHelper.GetUrl(new { Controller = "Miscellaneous", Action = "DrillDown" }) + "?category=' + e.hitInfo.seriesPoint.argument; } }";
+
+            settings.Legends.Default(l => {
+                l.AlignmentHorizontal = LegendAlignmentHorizontal.Center;
+                l.AlignmentVertical = LegendAlignmentVertical.BottomOutside;
+                l.MaxHorizontalPercentage = 50;
+                l.Direction = LegendDirection.LeftToRight;
+                l.Border.Visibility = DefaultBoolean.False;
+            });
+       
+            settings.Titles.Add(t => {
+                t.Font = new Font("Tahoma", 18);
+                t.Text = "Northwind Traders: " + options.SummaryFunction.ToString() + " Product Prices by Categories";
+            });    
+               
+            settings.Series.Add(s => {
+                s.LegendTextPattern = "{A}";
+                s.SeriesPointsSorting = SortingMode.Ascending;
+                s.ArgumentDataMember = "CategoryName";
+                s.ValueDataMembers[0] = "AvgPrice";
+                s.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+                s.Views().PieSeriesView(v => {
+                    v.ExplodeMode = PieExplodeMode.All;
+                    v.SeriesLabel(l => {
+                        l.Position = PieSeriesLabelPosition.Inside;
+                        l.Font = new Font("Tahoma", 8, FontStyle.Bold);
+                        l.TextColor = Color.Black;
+                        l.BackColor = Color.Transparent;
+                        l.Border.Visibility = DefaultBoolean.False;
+                        l.TextPattern = "${V:F1}";
+                    });
+                });
+            });
+        }).Bind(Model).GetHtml()
+    }
+}
+

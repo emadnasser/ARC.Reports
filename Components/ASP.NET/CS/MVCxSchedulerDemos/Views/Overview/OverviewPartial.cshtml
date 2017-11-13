@@ -1,0 +1,19 @@
+﻿@using DevExpress.XtraScheduler;
+
+@Html.DevExpress().Scheduler(settings => {
+    settings.Name = "scheduler";
+    settings.CallbackRouteValues = new { Controller = "Overview", Action = "OverviewPartial" };
+    settings.EditAppointmentRouteValues = new { Controller = "Overview", Action = "OverviewPartialEditAppointment" };
+    settings.Start = new DateTime(2014, 5, 23);
+
+    settings.Storage.Resources.Assign(SchedulerDemoHelper.DefaultResourceStorage);
+    settings.Storage.Appointments.Assign(SchedulerDemoHelper.DefaultAppointmentStorage);
+
+    settings.Views.DayView.Styles.ScrollAreaHeight = Unit.Pixel(300);
+    settings.Views.WeekView.Styles.DateCellBody.Height = Unit.Pixel(250);
+    settings.Views.FullWeekView.Styles.ScrollAreaHeight = Unit.Pixel(300);
+    settings.Views.WeekView.Enabled = false;
+    settings.Views.FullWeekView.Enabled = true;
+    settings.Views.TimelineView.Enabled = false;
+    settings.Views.WorkWeekView.Enabled = false;
+}).Bind(Model.Appointments, Model.Resources).GetHtml()

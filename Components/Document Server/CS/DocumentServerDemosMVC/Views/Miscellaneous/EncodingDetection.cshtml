@@ -1,0 +1,127 @@
+﻿@model MiscellaneousEncodingDetectionModel
+<script type="text/javascript">
+    // <![CDATA[
+    function Uploader_OnFileUploadComplete(s, e) {
+        var model = eval("(" + s.callbackData + ")");
+        UpdateControls(model);
+    }
+    function OnActivePredefinedFileNameValueChanged(s, e) {
+        var queryData = {};
+        queryData.ActivePredefinedFileName = ActivePredefinedFileName.GetValue();;
+        $.ajax({
+            url: '@Url.Action("EncodingDetectionUseDefaultFile", "Miscellaneous")',
+            data: queryData,
+            traditional: true,
+            success: OnSuccess,
+        });
+    }
+    OnSuccess = function (model) {
+        UpdateControls(model);
+    }
+    function UpdateControls(model) {
+        ActivePredefinedFileName.SetValue(model.ActivePredefinedFileName);
+        lblEncoding.SetText(model.EncodingName);
+        memoNoEncoding.SetText(model.TextWithoutEncodingDetection);
+        memoEncoding.SetText(model.TextWithEncodingDetection);
+        var currentFile = (model.ActivePredefinedFileName) ? model.ActivePredefinedFileName : model.ActiveFileName;
+        lblCurrentFile.SetText(currentFile);
+    }
+    // ]]> 
+</script>
+@using (Html.BeginForm("Decompress", "EncodingDetection", FormMethod.Post, new { @style = "width:100%;"})) {
+<table id="OptionsTable">
+    <tr>
+        <td colspan="3" style="height: 2px; padding-bottom: 3px;">
+            <label>Load file:&nbsp;</label>
+        </td>
+    </tr>
+    <tr style="text-align: right">
+        <td>
+            @Html.DevExpress().ComboBoxFor(model => model.ActivePredefinedFileName,
+                    settings => {
+                        settings.Name = "ActivePredefinedFileName";
+                        settings.Properties.ClientSideEvents.ValueChanged = "function(s,e) { OnActivePredefinedFileNameValueChanged(); }";
+                        settings.Height = Unit.Pixel(25);
+                        settings.Width = Unit.Pixel(165);
+                    }).BindList(Model.DefaultFileNames).GetHtml()
+        </td>
+        <td style="padding: 0 9px 0 10px;">
+            <label>or</label>
+        </td>
+        <td>
+            @Html.DevExpress().UploadControl(
+                    settings => {
+                        settings.Name = "uploader";
+                        settings.CallbackRouteValues = new { Controller = "Miscellaneous", Action = "EncodingDetectionUploadFile" };
+                        settings.ControlStyle.CssClass = "editorArea";
+
+                        settings.Width = Unit.Pixel(380);
+                        settings.AdvancedModeSettings.EnableMultiSelect = false;
+                        settings.NullText = "Click here to browse files...";
+                        settings.ShowUploadButton = false;
+
+                        settings.ValidationSettings.AllowedFileExtensions = new string[] { ".txt" }; ;
+                        settings.ValidationSettings.MaxFileSize = 1048576;
+
+                        settings.ClientSideEvents.FileUploadComplete = "function(s, e) { Uploader_OnFileUploadComplete(e); }";
+                        settings.ClientSideEvents.TextChanged = "function(s, e) { uploader.UploadFile(); }";
+                    }).GetHtml()
+        </td>
+    </tr>
+</table>
+<div style="margin-bottom: 16px; padding-top: 20px">
+    @Html.DevExpress().Label(
+        settings => {
+            settings.Name = "lblCurrentFile";
+            settings.Text = "English.txt";
+            settings.Style.Add(HtmlTextWriterStyle.FontSize, "X-Large");
+            settings.Properties.EnableClientSideAPI = true;
+        }).GetHtml()
+    <table style="width: 100%">
+        <tr>
+            <td style="padding-right: 15px;">
+                @Html.DevExpress().Label(
+                    settings => {
+                        settings.Name = "ASPxLabel3";
+                        settings.Text = "No Encoding Detection";
+                    }).GetHtml()
+            </td>
+            <td style="padding-left: 15px;">
+                @Html.DevExpress().Label(
+                    settings => {
+                        settings.Name = "ASPxLabel4";
+                        settings.Text = "Encoding";
+                    }).GetHtml()
+                @Html.DevExpress().Label(
+                    settings => {
+                        settings.Name = "lblEncoding";
+                        settings.Text = String.Empty;
+                        settings.Properties.EnableClientSideAPI = true;
+                    }).GetHtml()
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; padding-right: 15px; padding-top: 5px;">
+                @Html.DevExpress().MemoFor( model => model.TextWithoutEncodingDetection,
+                    settings => {
+                        settings.Name = "memoNoEncoding";
+                        settings.Height = Unit.Pixel(290);
+                        settings.Width = Unit.Percentage(100);
+                        settings.Properties.ClientSideEvents.Init = "function(s, e) { s.GetInputElement().style.overflowY='auto'; }";
+                        settings.ReadOnly = true;
+                    }).GetHtml()
+            </td>
+            <td style="width: 50%; padding-left: 15px; padding-top: 5px;">
+                @Html.DevExpress().MemoFor( model => model.TextWithEncodingDetection,
+                    settings => {
+                        settings.Name = "memoEncoding";
+                        settings.Height = Unit.Pixel(290);
+                        settings.Width = Unit.Percentage(100);
+                        settings.Properties.ClientSideEvents.Init = "function(s, e) { s.GetInputElement().style.overflowY='auto'; }";
+                        settings.ReadOnly = true;
+                    }).GetHtml()
+            </td>
+        </tr>
+    </table>
+</div>
+}

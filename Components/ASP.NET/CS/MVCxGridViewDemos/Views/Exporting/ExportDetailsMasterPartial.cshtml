@@ -1,0 +1,9 @@
+﻿@{
+    GridViewSettings settings = GridViewExportDemoHelper.CreateGeneralMasterGridSettings();
+    settings.CallbackRouteValues = new { Action = "ExportDetailsMasterPartial", Controller = "Exporting" };
+    settings.SetDetailRowTemplateContent(c => {
+        Html.RenderAction("ExportDetailsDetailPartial", new { CategoryID = DataBinder.Eval(c.DataItem, "CategoryID") });
+    });
+}
+
+@Html.DevExpress().GridView(settings).Bind(Model).GetHtml()

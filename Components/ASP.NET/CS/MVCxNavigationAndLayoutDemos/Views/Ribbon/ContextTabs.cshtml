@@ -1,0 +1,124 @@
+﻿@section AdditionalResources {
+<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Ribbon/Galleries/Galleries.css")" /> 
+<style type="text/css">
+    .container {
+        vertical-align: top;
+        border-right: 1px solid #c8ccd1;
+        border-bottom: 1px solid #c8ccd1;
+        padding: 50px 50px 25px;
+        background: url(@Url.Content("~/Content/Ribbon/editor.png")) no-repeat;
+        text-align: center;
+    }
+    .categoryItem {
+        height: 40px;
+        width: 40%;
+        background: #F4F4F4;
+        margin-right: 3px;
+    }
+    .categoryItemChecked {
+        background: #DBDBDB;
+    }
+    .hintItem {
+        margin-bottom: 15px;
+    }
+</style>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".OptionsTable")
+            .find("input[type=checkbox]")
+            .change(function () { $("form").submit(); });
+    });
+    function OnWindowResize(s, e) {
+        ribbon.AdjustControl();
+    }
+    function OnCommandExecuted(s, e) {
+        var text = e.item.name;
+        if (e.parameter !== null)
+            text += ": " + e.parameter;
+        label.SetText(text);
+    }
+    function OnFileTabClicked(s, e) {
+        label.SetText("File Tab");
+    }
+    function OnDialogBoxLauncherClicked(s, e) {
+        label.SetText("Show a dialog for the " + e.group.name + " group");
+    }
+    function onCheckedChanged(active, categoryName) {
+        ribbon.SetContextTabCategoryVisible(categoryName, active);
+    }
+</script>
+@using(Html.BeginForm()) {
+    <div id="popupContainer" style="height: 420px; margin-top: 10px;"></div>
+    
+    @Html.DevExpress().PopupControl(
+        settings => {
+            settings.Name = "popup";
+            settings.PopupElementID = "popupContainer";
+            settings.ShowShadow = false;
+            settings.AllowResize = true;
+            settings.AllowDragging = false;
+            settings.CloseAction = CloseAction.None;
+            settings.ShowSizeGrip = ShowSizeGrip.True;
+            settings.PopupAction = PopupAction.None;
+            settings.ShowHeader = false;
+            settings.ShowFooter = true;
+            settings.FooterText = "";
+            settings.PopupAlignCorrection = PopupAlignCorrection.Disabled;
+            settings.PopupAnimationType = AnimationType.None;
+            settings.ShowOnPageLoad = true;
+            settings.MaxWidth = Unit.Pixel(850);
+            settings.MinWidth = Unit.Pixel(320);
+            settings.Width = Unit.Pixel(750);
+            settings.MaxHeight = Unit.Pixel(293);
+            settings.MinHeight = Unit.Pixel(293);
+            settings.Height = Unit.Pixel(293);
+            settings.ControlStyle.Border.BorderWidth = 0;
+            settings.Styles.Content.Paddings.Padding = 0;
+            settings.Styles.Footer.HorizontalAlign = HorizontalAlign.Right;
+            settings.ClientSideEvents.AfterResizing = "OnWindowResize";
+        
+            settings.SetContent(() => {
+                ViewContext.Writer.Write(
+                @"<table id=""editor"" style=""width:100%;"">
+                    <tr style=""height: 1px"">
+                        <td>"
+                );
+                            Html.RenderPartial("ContextTabsPartial");
+                ViewContext.Writer.Write(
+                        @"</td>
+                    </tr>
+                    <tr>
+                        <td class=""container"" id=""container"">
+                            <div class=""hintItem"">Click the 'Image' and 'Table' buttons in the client region to show/hide ribbon context tabs.</div>"
+                );
+                Html.DevExpress().Button(b => {
+                    b.Name = "ImageButton";
+                    b.Text = "";
+                    b.GroupName = "G1";
+                    b.ControlStyle.CssClass = "categoryItem";
+                    b.Styles.Style.CheckedStyle.CssClass = "categoryItemChecked";
+                    b.ToolTip = "Image";
+                    b.Images.Image.IconID = IconID.ContentImage32x32;
+                    b.ClientSideEvents.CheckedChanged = "function(s, e) { onCheckedChanged(s.GetChecked(), 'Picture tools'); }";
+                    b.Checked = true;
+                }).Render();
+                Html.DevExpress().Button(b => {
+                    b.Name = "TableButton";
+                    b.Text = "";
+                    b.GroupName = "G2";
+                    b.ControlStyle.CssClass = "categoryItem";
+                    b.Styles.Style.CheckedStyle.CssClass = "categoryItemChecked";
+                    b.ToolTip = "Image";
+                    b.Images.Image.IconID = IconID.GridGrid32x32;
+                    b.ClientSideEvents.CheckedChanged = "function(s, e) { onCheckedChanged(s.GetChecked(), 'Table tools'); }";
+                    b.Checked = true;
+                }).Render();
+                ViewContext.Writer.Write(
+                        @"</td>
+                    </tr>
+                </table>"
+                );
+            });
+    }).GetHtml()
+}

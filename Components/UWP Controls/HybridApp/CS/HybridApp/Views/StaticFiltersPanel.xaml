@@ -1,0 +1,21 @@
+<Page
+    x:Class="HybridApp.Views.StaticFiltersPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HybridApp.Views"
+    xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxmvvmui="using:DevExpress.Mvvm.UI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <dxmvvmui:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <dxmvvmui:ObjectToBooleanConverter x:Key="ObjectToBooleanConverter"/>
+    </Page.Resources>
+    <Layout:TileBar
+        SelectedIndex="0"
+        ItemsSource="{Binding FilterTreeViewModel.StaticFilters}"
+        SelectedItem="{Binding FilterTreeViewModel.StaticFilters.SelectedItem, Mode=TwoWay}"
+        ItemContainerStyle="{StaticResource LeftPanelTileItemStyle}"
+        Style="{StaticResource LeftPanelTileBartyle}"/>
+</Page>

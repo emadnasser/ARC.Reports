@@ -1,0 +1,1324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></assembly>
+  <data name="splitContainerControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"></assembly>
+  <data name="splitContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="filterControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="filterControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="filterControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 179</value>
+  </data>
+  <data name="gridControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="gridColumnOrder.Caption" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></assembly>
+  <data name="gridColumnOrder.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnOrder.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumnOrder.Width" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="gridColumnProduct.Caption" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v16.2" name="DevExpress.Utils.v16.2, Culture=neutral"></assembly>
+  <data name="repositoryItemLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns" xml:space="preserve">
+    <value>ProductName</value>
+  </data>
+  <data name="repositoryItemLookUpEdit1.Columns1" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+  <data name="gridColumnProduct.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAApdEVYdFRpdGxlAFByb2R1Y3RzO1ZpZXdQcm9kdWN0cztQcm9kdWN0c1ZpZXc70x4fKgAAAFhJ
+        REFUOE+1jVsKACAIBDu7eO8NPwqljez1MaCLOxYAV9Bwh7CICDL4zlvBCWFh3xi+MwhUlRFu2mz0wXgi
+        aJKZLCWYlY2lgJU8/wUZfCcITqDhDjTMg1IBpLHPEW/rMn4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="gridColumnProduct.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumnProduct.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnProduct.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumnProduct.Width" type="System.Int32, mscorlib">
+    <value>225</value>
+  </data>
+  <data name="gridColumnUnitPrice.Caption" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="repositoryItemCalcEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemCalcEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="gridColumnUnitPrice.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnUnitPrice.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gridColumnUnitPrice.Width" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="gridColumnQuantity.Caption" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="repositoryItemSpinEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemSpinEdit1.Mask.EditMask" xml:space="preserve">
+    <value>N00</value>
+  </data>
+  <data name="gridColumnQuantity.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnQuantity.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gridColumnQuantity.Width" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="gridColumnDiscount.Caption" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="gridColumnDiscount.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnDiscount.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gridColumnDiscount.Width" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <assembly alias="DevExpress.Data.v16.2" name="DevExpress.Data.v16.2, Culture=neutral"></assembly>
+  <data name="gridView1.GroupSummary" type="DevExpress.Data.SummaryItemType, DevExpress.Data.v16.2">
+    <value>Count</value>
+  </data>
+  <data name="gridView1.GroupSummary1" xml:space="preserve">
+    <value>OrderID</value>
+  </data>
+  <data name="gridView1.GroupSummary2" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value></value>
+  </data>
+  <data name="gridView1.GroupSummary3" xml:space="preserve">
+    <value></value>
+  </data>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABQ
+        CQAAAk1TRnQBSQFMAgEBBAEAARQBAAEUAQABEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABIAMAAQEBAAEQBgABEP8A/wD/AP8A/wD/AP8A/wAnAAFcAQABXAEAAVwBAQFYUgABKQElASkBJQEp
+        ASUBKQElASkBJQEpASUBKQElASkBJQEpASUBKQElASkBJQEpASUBKQElCAABQQFgAUEBYAFiAWwBQgFo
+        ASIBZAECAWABAQFYAQEBWE4AAZQBUgFaAWsBWgFrAVoBawFaAWsBWgFrAVoBawFaAWsBWgFrAVoBawFa
+        AWsBWgFrASkBJQYAAWEBYAHDAWwBwwF0AaMBdAFjAXABQwFsASMBZAEDAWABAgFYAQEBWBQAAcABDRQA
+        AaUBWAGlAVgQAAGMAV0BIQFICgABlAFSAf8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/
+        Af8BfwFaAWsBKQElBgABggFkASQBeQEEAXkBowF4AWMBdAFDAXABIwFoASQBZAEDAVwBAQFYEgABQAEW
+        AYABFgHgARESAAHGAVgBhAFYAcYBWAwAAQgBWQEhAUwBIQFMCgABlAFSAf8BfwH/AX8B/wF/Af8BfwH/
+        AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwFaAWsBKQElBAABogFkAUQBdQFFAX0BBAF5AcQBeAGDAXQBQwFw
+        AUQBbAEkAWgBAwFgAQIBWAEBAVgOAAFgARYBwAEaAaABGgFAARYBAAESEgABpQFYAWMBWAHGAVgIAAHG
+        AVQBIQFMASEBTAwAAZQBUgH/AX8B/wF/AZQBUgGUAVIBlAFSAZQBUgGUAVIBlAFSAf8BfwH/AX8BWgFr
+        ASkBJQQAAYEBZAGFAXkBqAF9AUUBfQHkAXgBgwF0AWMBdAFEAXABJAFoASQBYAECAVwBAAFYDAABggEe
+        AQUBKwGiAR4BwQEaAaABGgEAARIUAAGlAVwBYwFYAecBXAQAAYQBVAEhAVABIQFMDgABlAFSAf8BfwH/
+        AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwFaAWsBKQElBAABggFkAcgBeQEWAX8B6wF9
+        AQUBeQGjAXgBYwF0AUMBcAEkAWwBJAFkAQIBXAEAAVgKAAGjASIBTAFHAeYBLgHGASoBowEiAcIBIgFg
+        ARYBAAESFAABpQFcAUIBVAHGAVwBQgFUASEBUAEhAVAQAAGUAVIB/wF/Af8BfwGUAVIBlAFSAZQBUgGU
+        AVIBlAFSAZQBUgH/AX8B/wF/AVoBawEpASUEAAHCAWQByAF5AZsBfwFZAX8BaAF9AcQBeAGDAXQBQwF0
+        AUQBcAEjAWQBAgFcAQEBWAgAAeQBJgGRAVcBKgE7ASsBPwIAAaUBKgHlASoB5AEqAUABFhYAAYQBWAFC
+        AVQBIQFUASEBVBIAAZQBUgH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8BWgFr
+        ASkBJQYAASYBaQF5AX8BmwF/AYgBfQHkAXgBgwF4AWMBdAFEAXABIwFkAQEBWAgAAQYBLwG0AV8BbgFL
+        ASsBPwYAAYIBHgEpATsB5QEuAQABEhIAARABbgFjAVgBQgFYASEBVAEIAWEMAAHpAX8BWgFrAgABlAFS
+        Af8BfwHpAX8BlAFSAZQBUgGUAVIBlAFSAZQBUgGUAVIB/wF/Af8BfwFaAWsBKQElBgABwwFoAeoBeQEW
+        AX8BiAF9AQQBfQHEAXgBYwF0AUMBbAEiAWABAQFYBgABcAFPAU4BSwGTAVsBKQE7CAABKwE/AQgBNwFM
+        AUcBpAEmAQABEg4AAc4BaQGEAWABYwFcAUIBWAGlAVwBIQFUAa0BZQoAAZQBUgH/AX8BWgFrAZQBUgHp
+        AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8B/wF/Af8BfwH/AX8BWgFrASkBJQgAAcMBaAHlAWgBJAF1
+        AQQBeQHDAXQBYgFwAQEBYAEBAVwKAAEJATcBBwEzDAABowEiAW8BUwFNAUsBAAESDAABrQFpAcYBYAGl
+        AWABhAFcBAAB5wFgASEBWAHvAWkMAAHpAX8BlAFSAf8BfwH/AX8BlAFSAZQBUgGUAVIBlAFSAZQBUgGU
+        AVIB/wF/Af8BfwFaAWsBKQElDAABggFoAUEBZAFBAWABIQFkHgABcwFXAQgBNwGzAV8BCQE7AQABEggA
+        AYwBaQEIAWUB5wFkAaUBYAgAASkBYQEhAVgBMQFuBgABlAFSAZQBUgGUAVIB/wF/AekBfwHpAX8B/wF/
+        Af8BfwH/AX8B/wF/Af8BfwH/AX8BKQElASkBJQEpASUBKQElEAABoAEoCAABgAEZGAAB5wEuAZIBWwHF
+        ASYKAAFKAWkBKQFpAecBZAwAAUoBZQEhAVgBlAFyBAAB6QF/Af8BfwGUAVIB6QF/Af8BfwGUAVIB6QF/
+        Af8BfwH/AX8B/wF/Af8BfwH/AX8BlAFSAf8BfwGUAVIQAAGgATgBoAEwBQABIgHgASEBgAEZGgABxAEm
+        DgABKQFpEAABjAFlAbUBcgYAAZQBUgHpAX8BlAFSAekBfwFaAWsBlAFSAekBfwH/AX8B/wF/Af8BfwH/
+        AX8BlAFSAZQBUhAAAaABOAQAAaIBNgFhAS4BQQEqAQABIgGAARVEAAGUAVIB6QF/AVoBawGUAVIB/wF/
+        AgABWgFrAZQBUgGUAVIBlAFSAZQBUgGUAVIBlAFSFAABYQEyAQEBJgHBAR0BgAEZAYABGQFgARVGAAHp
+        AX8BWgFrAgABlAFSAekBfwQAAVoBaxAAAUIBTQE+BwABPgMAASgDAAFAAwABIAMAAQEBAAEBBgABARYA
+        A/+BAAH8AT8E/wHgAQAB8AEPBP8B4AEAAeABBwH+Af8BzwHzAeABAAHgAQcB/AF/AccB4wHgAQABwAED
+        AfgBPwHjAccB4AEAAcABAwHwAT8B8QGPAeABAAHAAQMB4AEfAfgBHwHgAQABwAEDAcIBHwH8AT8B4AEA
+        AeABBwGHAQ8B+AE/ASABAAHgAQcBDwEHAfABHwIAAfABDwGfAYcB4QGPAcABAAH8AT8B/wGDAcMBxwIA
+        Af8BewH/AscB4wEAAQEB/gFjAf8C7wHzAYABAwH9AYME/wEEAQcB/gEHBP8BJgH/Cw==
+</value>
+  </data>
+  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 152</value>
+  </data>
+  <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
+    <value>gridControl1</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="filterControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="filterControl1.Text" xml:space="preserve">
+    <value>filterControl1</value>
+  </data>
+  <data name="&gt;&gt;filterControl1.Name" xml:space="preserve">
+    <value>filterControl1</value>
+  </data>
+  <data name="&gt;&gt;filterControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.FilterControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;filterControl1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;filterControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 4</value>
+  </data>
+  <data name="panelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>8, 179</value>
+  </data>
+  <data name="panelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelControl2.Name" xml:space="preserve">
+    <value>panelControl2</value>
+  </data>
+  <data name="&gt;&gt;panelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;panelControl2.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;panelControl2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="xtraTabControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v16.2" name="DevExpress.XtraEditors.v16.2, Culture=neutral"></assembly>
+  <data name="xtraTabControl2.HeaderLocation" type="DevExpress.XtraTab.TabHeaderLocation, DevExpress.XtraEditors.v16.2">
+    <value>Left</value>
+  </data>
+  <data name="xtraTabControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>366, 4</value>
+  </data>
+  <data name="ceToolTips.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 112</value>
+  </data>
+  <data name="ceToolTips.Properties.Caption" xml:space="preserve">
+    <value>Show Tool Tips</value>
+  </data>
+  <data name="ceToolTips.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 19</value>
+  </data>
+  <data name="ceToolTips.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;ceToolTips.Name" xml:space="preserve">
+    <value>ceToolTips</value>
+  </data>
+  <data name="&gt;&gt;ceToolTips.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;ceToolTips.Parent" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;ceToolTips.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ceOperandTypeIcon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 88</value>
+  </data>
+  <data name="ceOperandTypeIcon.Properties.Caption" xml:space="preserve">
+    <value>Show Operand Type Icon</value>
+  </data>
+  <data name="ceOperandTypeIcon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 19</value>
+  </data>
+  <data name="ceOperandTypeIcon.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;ceOperandTypeIcon.Name" xml:space="preserve">
+    <value>ceOperandTypeIcon</value>
+  </data>
+  <data name="&gt;&gt;ceOperandTypeIcon.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;ceOperandTypeIcon.Parent" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;ceOperandTypeIcon.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ceGroupCommandsIcon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 64</value>
+  </data>
+  <data name="ceGroupCommandsIcon.Properties.Caption" xml:space="preserve">
+    <value>Show Group Commands Icon</value>
+  </data>
+  <data name="ceGroupCommandsIcon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 19</value>
+  </data>
+  <data name="ceGroupCommandsIcon.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ceGroupCommandsIcon.Name" xml:space="preserve">
+    <value>ceGroupCommandsIcon</value>
+  </data>
+  <data name="&gt;&gt;ceGroupCommandsIcon.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;ceGroupCommandsIcon.Parent" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;ceGroupCommandsIcon.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="seSeparatorHeight.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="seSeparatorHeight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 32</value>
+  </data>
+  <data name="seSeparatorHeight.Properties.Mask.EditMask" xml:space="preserve">
+    <value>N00</value>
+  </data>
+  <data name="seSeparatorHeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="seSeparatorHeight.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;seSeparatorHeight.Name" xml:space="preserve">
+    <value>seSeparatorHeight</value>
+  </data>
+  <data name="&gt;&gt;seSeparatorHeight.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;seSeparatorHeight.Parent" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;seSeparatorHeight.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 32</value>
+  </data>
+  <data name="labelControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 13</value>
+  </data>
+  <data name="labelControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="labelControl7.Text" xml:space="preserve">
+    <value>Node Separator Height:</value>
+  </data>
+  <data name="&gt;&gt;labelControl7.Name" xml:space="preserve">
+    <value>labelControl7</value>
+  </data>
+  <data name="&gt;&gt;labelControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;labelControl7.Parent" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;labelControl7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="seLevelIndent.EditValue" type="System.Decimal, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="seLevelIndent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 8</value>
+  </data>
+  <data name="seLevelIndent.Properties.Mask.EditMask" xml:space="preserve">
+    <value>N00</value>
+  </data>
+  <data name="seLevelIndent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="seLevelIndent.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;seLevelIndent.Name" xml:space="preserve">
+    <value>seLevelIndent</value>
+  </data>
+  <data name="&gt;&gt;seLevelIndent.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;seLevelIndent.Parent" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;seLevelIndent.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 8</value>
+  </data>
+  <data name="labelControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="labelControl6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelControl6.Text" xml:space="preserve">
+    <value>Level Indent:</value>
+  </data>
+  <data name="&gt;&gt;labelControl6.Name" xml:space="preserve">
+    <value>labelControl6</value>
+  </data>
+  <data name="&gt;&gt;labelControl6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;labelControl6.Parent" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;labelControl6.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="xtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 173</value>
+  </data>
+  <data name="xtraTabPage3.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage3.Name" xml:space="preserve">
+    <value>xtraTabPage3</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage3.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage3.Parent" xml:space="preserve">
+    <value>xtraTabControl2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 179</value>
+  </data>
+  <data name="xtraTabControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ceValue.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value></value>
+  </data>
+  <data name="ceValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 104</value>
+  </data>
+  <data name="ceValue.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="ceValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="ceValue.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ceValue.Name" xml:space="preserve">
+    <value>ceValue</value>
+  </data>
+  <data name="&gt;&gt;ceValue.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ColorEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;ceValue.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;ceValue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ceOperator.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value></value>
+  </data>
+  <data name="ceOperator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="ceOperator.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="ceOperator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="ceOperator.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ceOperator.Name" xml:space="preserve">
+    <value>ceOperator</value>
+  </data>
+  <data name="&gt;&gt;ceOperator.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ColorEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;ceOperator.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;ceOperator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ceGroupOperator.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value></value>
+  </data>
+  <data name="ceGroupOperator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 56</value>
+  </data>
+  <data name="ceGroupOperator.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="ceGroupOperator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="ceGroupOperator.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ceGroupOperator.Name" xml:space="preserve">
+    <value>ceGroupOperator</value>
+  </data>
+  <data name="&gt;&gt;ceGroupOperator.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ColorEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;ceGroupOperator.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;ceGroupOperator.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ceFieldName.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value></value>
+  </data>
+  <data name="ceFieldName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 32</value>
+  </data>
+  <data name="ceFieldName.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="ceFieldName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="ceFieldName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ceFieldName.Name" xml:space="preserve">
+    <value>ceFieldName</value>
+  </data>
+  <data name="&gt;&gt;ceFieldName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ColorEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;ceFieldName.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;ceFieldName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ceEmptyValue.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value></value>
+  </data>
+  <data name="ceEmptyValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 8</value>
+  </data>
+  <data name="ceEmptyValue.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="ceEmptyValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="ceEmptyValue.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ceEmptyValue.Name" xml:space="preserve">
+    <value>ceEmptyValue</value>
+  </data>
+  <data name="&gt;&gt;ceEmptyValue.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ColorEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;ceEmptyValue.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;ceEmptyValue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 104</value>
+  </data>
+  <data name="labelControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="labelControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labelControl5.Text" xml:space="preserve">
+    <value>Value Color:</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Name" xml:space="preserve">
+    <value>labelControl5</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 80</value>
+  </data>
+  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="labelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="labelControl4.Text" xml:space="preserve">
+    <value>Operator Color:</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Name" xml:space="preserve">
+    <value>labelControl4</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 56</value>
+  </data>
+  <data name="labelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 13</value>
+  </data>
+  <data name="labelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelControl3.Text" xml:space="preserve">
+    <value>Group Operator Color:</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.Name" xml:space="preserve">
+    <value>labelControl3</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 32</value>
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>Field Name Color:</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
+    <value>labelControl2</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 8</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>Empty Value Color:</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="xtraTabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 173</value>
+  </data>
+  <data name="xtraTabPage4.Text" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Name" xml:space="preserve">
+    <value>xtraTabPage4</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.Parent" xml:space="preserve">
+    <value>xtraTabControl2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl2.Name" xml:space="preserve">
+    <value>xtraTabControl2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl2.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="sbApply.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 4</value>
+  </data>
+  <data name="sbApply.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 24</value>
+  </data>
+  <data name="sbApply.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="sbApply.Text" xml:space="preserve">
+    <value>Apply Filter</value>
+  </data>
+  <data name="&gt;&gt;sbApply.Name" xml:space="preserve">
+    <value>sbApply</value>
+  </data>
+  <data name="&gt;&gt;sbApply.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;sbApply.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;sbApply.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 183</value>
+  </data>
+  <data name="panelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 28</value>
+  </data>
+  <data name="panelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Name" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Parent" xml:space="preserve">
+    <value>splitContainerControl1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="splitContainerControl1.Panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="splitContainerControl1.Panel1.Text" xml:space="preserve">
+    <value>splitContainerControl1_Panel1</value>
+  </data>
+  <data name="splitContainerControl1.Panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="splitContainerControl1.Panel2.Text" xml:space="preserve">
+    <value>splitContainerControl1_Panel2</value>
+  </data>
+  <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>674, 380</value>
+  </data>
+  <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl1.Text" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Name" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.Parent" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainerControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="filterControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="filterControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="filterControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 125</value>
+  </data>
+  <data name="filterControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="filterControl2.Text" xml:space="preserve">
+    <value>filterControl2</value>
+  </data>
+  <data name="&gt;&gt;filterControl2.Name" xml:space="preserve">
+    <value>filterControl2</value>
+  </data>
+  <data name="&gt;&gt;filterControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.FilterControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;filterControl2.Parent" xml:space="preserve">
+    <value>splitContainerControl2.Panel1</value>
+  </data>
+  <data name="&gt;&gt;filterControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="sbReset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 4</value>
+  </data>
+  <data name="sbReset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 24</value>
+  </data>
+  <data name="sbReset.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="sbReset.Text" xml:space="preserve">
+    <value>Reset Filter</value>
+  </data>
+  <data name="&gt;&gt;sbReset.Name" xml:space="preserve">
+    <value>sbReset</value>
+  </data>
+  <data name="&gt;&gt;sbReset.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;sbReset.Parent" xml:space="preserve">
+    <value>panelControl3</value>
+  </data>
+  <data name="&gt;&gt;sbReset.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="sbApplyFilter2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 4</value>
+  </data>
+  <data name="sbApplyFilter2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 24</value>
+  </data>
+  <data name="sbApplyFilter2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="sbApplyFilter2.Text" xml:space="preserve">
+    <value>Apply Filter</value>
+  </data>
+  <data name="&gt;&gt;sbApplyFilter2.Name" xml:space="preserve">
+    <value>sbApplyFilter2</value>
+  </data>
+  <data name="&gt;&gt;sbApplyFilter2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;sbApplyFilter2.Parent" xml:space="preserve">
+    <value>panelControl3</value>
+  </data>
+  <data name="&gt;&gt;sbApplyFilter2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 129</value>
+  </data>
+  <data name="panelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 28</value>
+  </data>
+  <data name="panelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelControl3.Name" xml:space="preserve">
+    <value>panelControl3</value>
+  </data>
+  <data name="&gt;&gt;panelControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;panelControl3.Parent" xml:space="preserve">
+    <value>splitContainerControl2.Panel1</value>
+  </data>
+  <data name="&gt;&gt;panelControl3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerControl2.Panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="splitContainerControl2.Panel1.Text" xml:space="preserve">
+    <value>splitContainerControl2_Panel1</value>
+  </data>
+  <data name="gridControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="gridColumnID.Caption" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="gridColumnID.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnID.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumnID.Width" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="gridColumnSubject.Caption" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="gridColumnSubject.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnSubject.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumnSubject.Width" type="System.Int32, mscorlib">
+    <value>316</value>
+  </data>
+  <data name="gridColumnImplemented.Caption" xml:space="preserve">
+    <value>Implemented</value>
+  </data>
+  <data name="gridColumnImplemented.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnImplemented.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gridColumnImplemented.Width" type="System.Int32, mscorlib">
+    <value>171</value>
+  </data>
+  <data name="gridColumnSuspended.Caption" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="gridColumnSuspended.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumnSuspended.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gridColumnSuspended.Width" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="resource.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Strikeout</value>
+  </data>
+  <data name="resource.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Gray</value>
+  </data>
+  <data name="gridControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 206</value>
+  </data>
+  <data name="gridControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gridControl2.Name" xml:space="preserve">
+    <value>gridControl2</value>
+  </data>
+  <data name="&gt;&gt;gridControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridControl2.Parent" xml:space="preserve">
+    <value>splitContainerControl2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;gridControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl2.Panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="splitContainerControl2.Panel2.Text" xml:space="preserve">
+    <value>splitContainerControl2_Panel2</value>
+  </data>
+  <data name="splitContainerControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>674, 380</value>
+  </data>
+  <data name="splitContainerControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl2.Text" xml:space="preserve">
+    <value>splitContainerControl2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl2.Name" xml:space="preserve">
+    <value>splitContainerControl2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl2.Parent" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>674, 380</value>
+  </data>
+  <data name="xtraTabPage1.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Name" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>680, 408</value>
+  </data>
+  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>674, 380</value>
+  </data>
+  <data name="xtraTabPage2.Text" xml:space="preserve">
+    <value>Custom Filter Control Binding</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Name" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>680, 408</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnOrder.Name" xml:space="preserve">
+    <value>gridColumnOrder</value>
+  </data>
+  <data name="&gt;&gt;gridColumnOrder.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnProduct.Name" xml:space="preserve">
+    <value>gridColumnProduct</value>
+  </data>
+  <data name="&gt;&gt;gridColumnProduct.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit1.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnUnitPrice.Name" xml:space="preserve">
+    <value>gridColumnUnitPrice</value>
+  </data>
+  <data name="&gt;&gt;gridColumnUnitPrice.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemCalcEdit1.Name" xml:space="preserve">
+    <value>repositoryItemCalcEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemCalcEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnQuantity.Name" xml:space="preserve">
+    <value>gridColumnQuantity</value>
+  </data>
+  <data name="&gt;&gt;gridColumnQuantity.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSpinEdit1.Name" xml:space="preserve">
+    <value>repositoryItemSpinEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSpinEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnDiscount.Name" xml:space="preserve">
+    <value>gridColumnDiscount</value>
+  </data>
+  <data name="&gt;&gt;gridColumnDiscount.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridView2.Name" xml:space="preserve">
+    <value>gridView2</value>
+  </data>
+  <data name="&gt;&gt;gridView2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnID.Name" xml:space="preserve">
+    <value>gridColumnID</value>
+  </data>
+  <data name="&gt;&gt;gridColumnID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnSubject.Name" xml:space="preserve">
+    <value>gridColumnSubject</value>
+  </data>
+  <data name="&gt;&gt;gridColumnSubject.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnImplemented.Name" xml:space="preserve">
+    <value>gridColumnImplemented</value>
+  </data>
+  <data name="&gt;&gt;gridColumnImplemented.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemProgressBar1.Name" xml:space="preserve">
+    <value>repositoryItemProgressBar1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemProgressBar1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemProgressBar, DevExpress.XtraEditors.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;gridColumnSuspended.Name" xml:space="preserve">
+    <value>gridColumnSuspended</value>
+  </data>
+  <data name="&gt;&gt;gridColumnSuspended.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2, Culture=neutral</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FilterControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Demos.TutorialControl, GridMainDemo, Culture=neutral</value>
+  </data>
+</root>

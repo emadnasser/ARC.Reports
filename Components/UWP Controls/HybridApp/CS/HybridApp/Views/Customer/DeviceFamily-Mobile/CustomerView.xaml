@@ -1,0 +1,253 @@
+<Page
+    x:Class="HybridApp.Views.CustomerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HybridApp.Views"
+    xmlns:ViewModels="using:HybridApp.ViewModels"
+    xmlns:dxmvvmi="using:DevExpress.Mvvm.UI.Interactivity"
+    xmlns:dxmvvmui="using:DevExpress.Mvvm.UI"
+    xmlns:Common="using:HybridApp.Common"
+    xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    xmlns:Grid="using:DevExpress.UI.Xaml.Grid"
+    xmlns:Editors="using:DevExpress.UI.Xaml.Editors"
+    xmlns:Controls="using:DevExpress.UI.Xaml.Controls"
+    xmlns:Map="using:DevExpress.UI.Xaml.Map"
+    xmlns:Xaml="using:DevExpress.UI.Xaml"
+    NavigationCacheMode="Enabled"
+    Name="root"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <ViewModels:CustomerViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <dxmvvmui:ObjectToObjectConverter x:Key="StringToVisibilityConverter" DefaultTarget="Visible">
+            <dxmvvmui:MapItem Source="Profile" Target="Collapsed" />
+        </dxmvvmui:ObjectToObjectConverter>
+    </Page.Resources>
+    <dxmvvmi:Interaction.Behaviors>
+        <dxmvvmui:EventToCommand EventName="Loaded" Command="{Binding LoadedCommand}"/>
+    </dxmvvmi:Interaction.Behaviors>
+    <Grid x:Name="grid" Background="{StaticResource AppBackground}" Margin="0,-60,0,0">
+        <Layout:PageAdornerControl x:Name="adorner" Margin="0,5,0,0">
+            <Layout:PageAdornerControl.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Customers" Style="{StaticResource ViewsHeader}" VerticalAlignment="Center"/>
+                </DataTemplate>
+            </Layout:PageAdornerControl.HeaderTemplate>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Layout:PivotContainer x:Name="container" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,7,0,0" IsHitTestVisible="{Binding Manipulation,Converter={StaticResource booleanNegationConverter}}">
+                    <Layout:PivotContainerItem Header="Profile">
+                        <Layout:LayoutControl HorizontalScrollBarVisibility="Disabled" Background="{StaticResource PageBackgroundBrush}" BorderBrush="{StaticResource PivotContainerHeaderBrush}" BorderThickness="1" >
+                            <dxmvvmi:Interaction.Behaviors>
+                                <local:ItemsValidationBehavior HasValid="{Binding HasValidData, Mode=TwoWay}"/>
+                            </dxmvvmi:Interaction.Behaviors>
+                            <Layout:LayoutGroup Orientation="Vertical" Margin="17,12,17,12" VerticalItemSpacing="5">
+                                <Layout:LayoutItem Header="NAME"  >
+                                    <Editors:TextEdit EditValue="{Binding Entity.Name, Mode=TwoWay}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="{}[a-zA-Z0-9,. -]{3,40}" MaskType="RegEx" IgnoreBlank="False" SaveLiteral="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="ADDRESS">
+                                    <Editors:TextEdit EditValue="{Binding Entity.HomeOffice.Line, Mode=TwoWay}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="{}[a-zA-Z0-9,. -]{3,50}" MaskType="RegEx" IgnoreBlank="True" SaveLiteral="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="CITY" >
+                                    <Editors:TextEdit EditValue="{Binding Entity.HomeOffice.City, Mode=TwoWay}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="{}[a-zA-Z ]{3,20}" MaskType="RegEx" IgnoreBlank="True" SaveLiteral="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="STATE">
+                                    <ComboBox>
+                                        <dxmvvmi:Interaction.Behaviors>
+                                            <local:EnumItemsSourceBehavior SelectedItem="{Binding Entity.HomeOffice.State, Mode=TwoWay}" EnumType="HybridApp.HybridAppService.StateEnum"/>
+                                        </dxmvvmi:Interaction.Behaviors>
+                                    </ComboBox>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="ZIPCODE">
+                                    <Editors:TextEdit EditValue="{Binding Entity.HomeOffice.ZipCode, Mode=TwoWay}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="00000" MaskType="Simple" SaveLiteral="True" IgnoreBlank="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="PHONE">
+                                    <Editors:TextEdit EditValue="{Binding Entity.Phone, Mode=TwoWay}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="(999)000-00-00"  MaskType="Simple" SaveLiteral="True" IgnoreBlank="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="FAX" >
+                                    <Editors:TextEdit EditValue="{Binding Entity.Fax, Mode=TwoWay}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="(999)000-00-00"  MaskType="Simple" SaveLiteral="True" IgnoreBlank="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="BILLING ADDRESS">
+                                    <Editors:TextEdit EditValue="{Binding Entity.BillingAddress.Line}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="{}[a-zA-Z0-9,. -]{3,50}" MaskType="RegEx" IgnoreBlank="True" SaveLiteral="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="CITY">
+                                    <Editors:TextEdit EditValue="{Binding Entity.BillingAddress.City, Mode=TwoWay}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="{}[a-zA-Z ]{3,20}" MaskType="RegEx" IgnoreBlank="True" SaveLiteral="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="STATE">
+                                    <ComboBox>
+                                        <dxmvvmi:Interaction.Behaviors>
+                                            <local:EnumItemsSourceBehavior SelectedItem="{Binding Entity.BillingAddress.State, Mode=TwoWay}" EnumType="HybridApp.HybridAppService.StateEnum"/>
+                                        </dxmvvmi:Interaction.Behaviors>
+                                    </ComboBox>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="ZIPCODE">
+                                    <Editors:TextEdit EditValue="{Binding Entity.BillingAddress.ZipCode, Mode=TwoWay}">
+                                        <Editors:TextEdit.TextInputSettings>
+                                            <Editors:TextInputMaskSettings Mask="00000" MaskType="Simple" SaveLiteral="True" IgnoreBlank="True"/>
+                                        </Editors:TextEdit.TextInputSettings>
+                                    </Editors:TextEdit>
+                                </Layout:LayoutItem>
+                                <Layout:LayoutItem Header="PROFILE">
+                                    <Editors:TextEdit EditValue="{Binding Entity.Profile, Mode=TwoWay}" TextWrapping="Wrap"/>
+                                </Layout:LayoutItem>
+                            </Layout:LayoutGroup>
+                        </Layout:LayoutControl>
+                    </Layout:PivotContainerItem>
+                    <Layout:PivotContainerItem Header="Orders">
+                        <Grid:GridControl ItemsSource="{Binding OrderCollectionViewModel.Entities}" SelectionMode="None">
+                            <Grid:GridControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="17,5,13,14">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="{Binding TotalAmount, Converter={StaticResource FinancialConverter}}" Style="{StaticResource SalesTotalAmount}"/>
+                                        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                                            <TextBlock Text="PO#" Style="{StaticResource TaskText}" Margin="0,0,7,0"/>
+                                            <TextBlock Text="{Binding PONumber}" Style="{StaticResource TaskText}"/>
+                                        </StackPanel>
+                                        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding OrderDate, Converter={StaticResource DateConverter}}" Style="{StaticResource CardDate}" HorizontalAlignment="Right"/>
+                                        <TextBlock Grid.Row="2" Text="SUB TOTAL" Style="{StaticResource TaskTitles}" Margin="0,2,0,-2"/>
+                                        <TextBlock Grid.Row="2" Grid.Column="1" Text="SHIPPING" Style="{StaticResource TaskTitles}" Margin="0,2,0,-2"/>
+                                        <TextBlock Grid.Row="3" Text="{Binding SaleAmount, Converter={StaticResource FinancialConverter}}" Style="{StaticResource TaskText}"/>
+                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding ShippingAmount, Converter={StaticResource FinancialConverter}}" Style="{StaticResource TaskText}"/>
+                                        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Text="{Binding Store.City}" Style="{StaticResource EmployeeTitle}" VerticalAlignment="Bottom" Margin="0,5,0,0"/>
+                                        <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,0,0">
+                                            <TextBlock Text="INVOICE#" Style="{StaticResource TaskText}" Margin="0,0,7,0"/>
+                                            <TextBlock Text="{Binding InvoiceNumber}" Style="{StaticResource TaskText}"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </Grid:GridControl.ItemTemplate>
+                        </Grid:GridControl>
+                    </Layout:PivotContainerItem>
+                    <Layout:PivotContainerItem Header="Map">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Map:MapControl
+                                CenterPoint="{Binding OrderCollectionViewModel.CenterPoint}"
+                                SelectionMode="Single" ZoomLevel="4" IsTabStop="False"
+                                UseLayoutRounding="True">
+                                <dxmvvmi:Interaction.Behaviors>
+                                    <local:ManipulationBehavior Manipulation="{Binding Manipulation, Mode=TwoWay}"/>
+                                </dxmvvmi:Interaction.Behaviors>
+                                <Map:MapControl.NavigationPanelOptions>
+                                    <Map:NavigationPanelOptions ShowZoomTrackbar="False" ShowCoordinates="False" ShowScrollButtons="False" ShowKilometersScale="False" ShowMilesScale="False"/>
+                                </Map:MapControl.NavigationPanelOptions>
+                                <Map:VectorFileLayer>
+                                    <Map:ShapefileReader>
+                                        <Map:MapPackageFileSource FileName="Resources\NorthAmerica.shp" />
+                                    </Map:ShapefileReader>
+                                </Map:VectorFileLayer>
+                                <Map:VectorItemsLayer Name="itemsLayer">
+                                    <dxmvvmi:Interaction.Behaviors>
+                                        <local:MapVectorItemsLayerBehavior ItemsSource="{Binding OrderCollectionViewModel.GroupedStores}" SelectedItem="{Binding OrderCollectionViewModel.SelectedItem, Mode=TwoWay}"
+                                     LatitudeDataMember="Address.Latitude" LongitudeDataMember="Address.Longitude">
+                                            <local:MapVectorItemsLayerBehavior.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border Name="border" BorderThickness="1" CornerRadius="50" Height="{Binding AbsSize, Converter={StaticResource QuoteAbsoluteToLocalConverter}}" Width="{Binding AbsSize, Converter={StaticResource QuoteAbsoluteToLocalConverter}}"
+                                                Background="{Binding IsSelected, Converter={StaticResource MapOpportunityElementBackgroundConverter}}">
+                                                        <Border.RenderTransform>
+                                                            <TranslateTransform X="{Binding ElementName=border, Path=ActualWidth, Converter={StaticResource NegativeHalfValueConverter}}" Y="{Binding ElementName=border, Path=ActualHeight, Converter={StaticResource NegativeHalfValueConverter}}"/>
+                                                        </Border.RenderTransform>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </local:MapVectorItemsLayerBehavior.ItemTemplate>
+                                        </local:MapVectorItemsLayerBehavior>
+                                    </dxmvvmi:Interaction.Behaviors>
+                                </Map:VectorItemsLayer>
+                            </Map:MapControl>
+                            <StackPanel Grid.Row="1" Margin="0,17,0,0">
+                                <TextBlock Text="TOTAL SALES" Style="{StaticResource EmployeeTitle}" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding Path=DataContext.OrderCollectionViewModel.SelectedItem.TotalSales, ElementName=root, Converter={StaticResource FinancialConverter}}" Margin="0,-5,0,0" HorizontalAlignment="Center" Style="{StaticResource MapOpportunity}"/>
+                                <TextBlock Text="{Binding Path=DataContext.OrderCollectionViewModel.SelectedItem.Address.City, ElementName=root}" Style="{StaticResource EmployeeTitle}" HorizontalAlignment="Center"/>
+                                <Border Height="1" Margin="0,13,0,0" BorderBrush="{StaticResource ExtraLightGrayForegroundBrush}"/>
+                            </StackPanel>
+                        </Grid>
+                    </Layout:PivotContainerItem>
+                </Layout:PivotContainer>
+                <CommandBar Grid.Row="1">
+                    <AppBarButton Label="Save" Command="{Binding SaveAndCloseCommand}" Content="{StaticResource SaveIconPath}"/>
+                    <AppBarSeparator Visibility="{Binding ElementName=container, Path=SelectedItem.Header, Converter={StaticResource StringToVisibilityConverter}}"/>
+                    <AppBarButton Label="Options" Command="{Binding OptionsCommand}" CommandParameter="True" Content="{StaticResource OptionsIconPath}"
+                                  Visibility="{Binding ElementName=container, Path=SelectedItem.Header, Converter={StaticResource StringToVisibilityConverter}}"/>
+                </CommandBar>
+            </Grid>
+        </Layout:PageAdornerControl>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource AppBackground}">
+            <dxmvvmi:Interaction.Behaviors>
+                <Common:PaneAnimationBehavior PaneVisibility="{Binding OptionsPaneVisible, Converter={StaticResource BoolToVisibilityConverter}}" Duration="0:0:0.3"/>
+            </dxmvvmi:Interaction.Behaviors>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Margin="0,3.5,0,15">
+                <Layout:BackButton Command="{Binding OptionsCommand}" CommandParameter="False" VerticalAlignment="Center" Margin="22,5,5,0"/>
+                <TextBlock Text="Customer" Style="{StaticResource ViewsHeader}" Margin="0,3,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Border Grid.Row="1" Background="{StaticResource PageBackgroundBrush}" BorderThickness="0"/>
+            <Layout:LayoutControl Grid.RowSpan="2" VerticalAlignment="Center">
+                <Layout:LayoutGroup Orientation="Vertical" Margin="17,0,17,10" VerticalItemSpacing="12">
+                    <Layout:LayoutItem Header="START DATE">
+                        <Editors:DateEdit EditValue="{Binding OrderCollectionViewModel.FilterTreeViewModel.SelectionStartDate, Mode=TwoWay}"/>
+                    </Layout:LayoutItem>
+                    <Layout:LayoutItem Header="END DATE">
+                        <Editors:DateEdit EditValue="{Binding OrderCollectionViewModel.FilterTreeViewModel.SelectionEndDate, Mode=TwoWay}"/>
+                    </Layout:LayoutItem>
+                </Layout:LayoutGroup>
+            </Layout:LayoutControl>
+        </Grid>
+    </Grid>
+</Page>

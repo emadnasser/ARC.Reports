@@ -1,0 +1,39 @@
+﻿@Html.DevExpress().Chart(settings => {
+    settings.Name = "chart";
+    settings.Width = 920;
+    settings.Height = 500;
+    settings.BorderOptions.Visibility = DefaultBoolean.False;
+
+    settings.EnableClientSideAPI = true;
+    settings.CallbackRouteValues = new { Controller = "Miscellaneous", Action = "DrillDownPartial" };
+    settings.ClientSideEvents.ObjectHotTracked = "function (s, e) { chart.SetCursor(e.hitInfo.inChartTitle ? 'pointer' : 'default'); }";
+    settings.ClientSideEvents.ObjectSelected = "function (s, e) { if(e.hitInfo.inChartTitle) { document.location = '" + DevExpressHelper.GetUrl(new { Controller = "Miscellaneous", Action = "DrillDown" }) + "'; } }";
+
+    settings.Legends.Default(l => {
+        l.AlignmentHorizontal = LegendAlignmentHorizontal.Left;
+        l.AlignmentVertical = LegendAlignmentVertical.Top;
+    });
+
+    settings.Titles.Add(new ChartTitle() {
+        Text = "Back to the main view...",
+        Font = new Font("Tahoma", 10, FontStyle.Underline),
+        TextColor = Color.Blue,
+        Alignment = StringAlignment.Near,
+        EnableAntialiasing = DefaultBoolean.False
+    });
+
+    settings.Series.Add(s => {
+        s.Name = ViewData[ChartDemoHelper.CategoryKey].ToString();
+        s.SeriesPointsSortingKey = SeriesPointKey.Value_1;
+        s.SeriesPointsSorting = SortingMode.Ascending;
+        s.SetDataMembers("ProductName", "UnitPrice");
+        ChartDrillDownDemoOptions options = (ChartDrillDownDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+        s.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+    });
+
+    settings.XYDiagram(d => {
+        d.AxisY.Title.Visibility = DefaultBoolean.True;
+        d.AxisY.Title.Text = "Price, USD";
+        d.AxisX.Label.Angle = 30;
+    });
+}).Bind(Model).GetHtml();

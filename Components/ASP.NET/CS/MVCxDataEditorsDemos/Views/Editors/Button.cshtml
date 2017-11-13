@@ -1,0 +1,126 @@
+﻿@section AdditionalResources {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Editors/Button/Css/Appearance.css")" />
+}
+<div class="buttonsPanel">
+    <div>
+        @Html.DevExpress().Button(
+            settings => {
+                settings.Name = "btnImageAndText";
+                settings.Width = 90;
+                settings.Text = "Cancel";
+                settings.Images.Image.IconID = IconID.ActionsCancel16x16;
+        }).GetHtml()
+    </div>
+    <label>
+        RenderMode = Button<br />
+        Text = "Cancel"<br />
+        Images.Image.IconID = IconID.ActionsCancel16x16
+    </label>
+</div>
+<div class="buttonsPanel">
+    <div>
+        @Html.DevExpress().Button(
+            settings => {
+                settings.Name = "btnLinkImageAndText";
+                settings.Width = 90;
+                settings.Height = 25;
+                settings.RenderMode = ButtonRenderMode.Link;
+                settings.Text = "Refresh";
+                settings.ImagePosition = ImagePosition.Right;
+                settings.Images.Image.IconID = IconID.ActionsRefresh16x16gray;
+        }).GetHtml()
+    </div>
+    <label>
+        RenderMode = Link<br />
+        Text = "Refresh"<br />
+        Images.Image.IconID = IconID.ActionsRefresh16x16gray<br />
+        ImagePosition = Right<br />
+    </label>
+</div>
+<div class="buttonsPanel">
+    <div>
+        @Html.DevExpress().Button(
+            settings => {
+                settings.Name = "btnNative";
+                settings.Width = 90;
+                settings.Height = 25;
+                settings.Text = "OK";
+                settings.Styles.Native = true;
+            }
+        ).GetHtml()
+    </div>
+    <label>
+        Styles.Native = true<br />
+        Text = "OK"
+    </label>
+</div>
+<div class="buttonsPanel">
+    <div>
+        @Html.DevExpress().Button(
+            settings => {
+                settings.Name = "btnIcq";
+                settings.EnableTheming = false;
+                settings.Text = "Send a message";
+                settings.AllowFocus = false;
+                settings.ImagePosition = ImagePosition.Right;
+                settings.ControlStyle.CssClass = "icq";
+                settings.Styles.Style.HoverStyle.CssClass = "icqHovered";
+                settings.Styles.Style.PressedStyle.CssClass = "icqPressed";
+                settings.Images.Image.Url = Url.Content("~/Content/Editors/Button/Images/Icq.png");
+                settings.Images.Image.Height = 16;
+                settings.Images.Image.Width = 16;
+        }).GetHtml()
+    </div>
+    <label>
+        EnableTheming = false<br />
+        Text = "Send&nbsp;a&nbsp;message"<br />
+        Images.Image.Url = "Images/Icq.png"<br />
+        ImagePosition = Right<br />
+        ControlStyle.CssClass = "icq"<br />
+        Styles.Style.HoverStyle.CssClass = "icqHovered"<br />
+        Styles.Style.PressedStyle.CssClass = "icqPressed"<br />
+    </label>
+</div>
+<div class="buttonsPanel">
+    <div>
+        @Html.DevExpress().Button(
+            settings => {
+                settings.Name = "btnWine";
+                settings.EnableTheming = false;
+                settings.Text = "Submit";
+                settings.AllowFocus = false;
+                settings.ControlStyle.CssClass = "wine";
+                settings.Styles.Style.HoverStyle.CssClass = "wineHottracked";
+                settings.Styles.Style.PressedStyle.CssClass = "winePressed";
+        }).GetHtml()
+    </div>
+    <label>
+        EnableTheming = false<br />
+        Text = "Submit"<br />
+        ControlStyle.CssClass = "wine"<br />
+        Styles.Style.HoverStyle.CssClass = "wineHottracked"<br />
+        Styles.Style.PressedStyle.CssClass = "winePressed"<br />
+    </label>
+</div>
+<div class="buttonsPanel">
+    <div>
+        @Html.DevExpress().Button(
+            settings => {
+                settings.Name = "btnBlueBall";
+                settings.EnableTheming = false;
+                settings.Text = "";
+                settings.AllowFocus = false;
+                settings.RenderMode = ButtonRenderMode.Link;
+                settings.Images.Image.SpriteProperties.CssClass = "blueBall";
+                settings.Images.Image.SpriteProperties.HottrackedCssClass = "blueBallHottracked";
+                settings.Images.Image.SpriteProperties.PressedCssClass = "blueBallPressed";
+        }).GetHtml()
+    </div>
+    <label>
+        EnableTheming = false<br />
+        RenderMode = Link<br />
+        Images.Image.SpriteProperties.CssClass = "blueBall"<br />
+        Images.Image.SpriteProperties.HottrackedCssClass = "blueBallHottracked"<br />
+        Images.Image.SpriteProperties.PressedCssClass = "blueBallPressed"
+    </label>
+</div>

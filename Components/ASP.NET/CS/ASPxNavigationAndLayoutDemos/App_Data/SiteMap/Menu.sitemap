@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="javascript:void(200);" title="Home">
+    <siteMapNode url="javascript:void(101);" title="ASPxMenu">
+      <siteMapNode url="javascript:void(1);" title="Appearance" />
+      <siteMapNode url="javascript:void(2);" title="DataBinding" />
+      <siteMapNode url="javascript:void(3);" title="Features" />
+      <siteMapNode url="javascript:void(4);" title="ItemLinkMode" />
+      <siteMapNode url="javascript:void(5);" title="Templates" />
+      <siteMapNode url="javascript:void(6);" title="Popup Menu" />
+      <siteMapNode url="javascript:void(7);" title="Client-Side Events" />
+      <siteMapNode url="javascript:void(8);" title="Client-Side Functionality" />
+      <siteMapNode url="javascript:void(9);" title="Server-Side Functionality" />
+    </siteMapNode>
+    <siteMapNode url="javascript:void(102);" title="ASPxNavBar">
+      <siteMapNode url="javascript:void(10);" title="Appearance" />
+      <siteMapNode url="javascript:void(11);" title="DataBinding" />
+      <siteMapNode url="javascript:void(12);" title="Features" />
+      <siteMapNode url="javascript:void(13);" title="ItemLinkMode" />
+      <siteMapNode url="javascript:void(14);" title="Callbacks (AJAX)" />
+      <siteMapNode url="javascript:void(15);" title="Templates" />
+      <siteMapNode url="javascript:void(16);" title="Client-Side Events" />
+      <siteMapNode url="javascript:void(17);" title="Client-Side Functionality" />
+      <siteMapNode url="javascript:void(18);" title="Server-Side Functionality" />
+    </siteMapNode>
+    <siteMapNode url="javascript:void(103);" title="ASPxSiteMapControl">
+      <siteMapNode url="javascript:void(19);" title="Appearance" />
+      <siteMapNode url="javascript:void(20);" title="DataBinding" />
+      <siteMapNode url="javascript:void(21);" title="Features" />
+      <siteMapNode url="javascript:void(22);" title="Composite SiteMap" />
+      <siteMapNode url="javascript:void(23);" title="Unbound Mode" />
+      <siteMapNode url="javascript:void(24);" title="Templates" />
+    </siteMapNode>
+    <siteMapNode url="javascript:void(104);" title="ASPxTabControl">
+      <siteMapNode url="javascript:void(25);" title="Appearance" />
+      <siteMapNode url="javascript:void(26);" title="Features" />
+      <siteMapNode url="javascript:void(27);" title="Multi-row" />
+      <siteMapNode url="javascript:void(28);" title="Tab Scrolling" />
+      <siteMapNode url="javascript:void(29);" title="Callbacks (AJAX)" />
+      <siteMapNode url="javascript:void(30);" title="Templates" />
+      <siteMapNode url="javascript:void(31);" title="Client-Side Events" />
+      <siteMapNode url="javascript:void(32);" title="Client-Side Functionality" />
+      <siteMapNode url="javascript:void(33);" title="Server-Side Functionality" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

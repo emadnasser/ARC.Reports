@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="gsw-FR">
+  <Title Text="EU Trade Overview 2015" />
+  <DataSources>
+    <ExtractFileDataSource ComponentName="dashboardExtractDataSource1" Name="Extract Data Source 1">
+      <CalculatedFields>
+        <CalculatedField Name="Export_Value" Expression="Iif([FLOW] = 'EXPORT', [VALUE], 0)" DataType="Auto" />
+        <CalculatedField Name="Import_Value" Expression="Iif([FLOW] = 'IMPORT', [VALUE], 0)" DataType="Auto" />
+      </CalculatedFields>
+      <FileName>|DataDirectory|\EUTradeOverview.dat</FileName>
+      <Parameters />
+      <SavedSchema>
+        <Column>
+          <Name>FLOW</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Partner</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Product_Group</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Product</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>PERIOD</Name>
+          <Type>System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>VALUE</Name>
+          <Type>System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+      </SavedSchema>
+    </ExtractFileDataSource>
+  </DataSources>
+  <Items>
+    <Treemap ComponentName="treeMapTradeOverviewDetails" Name="Product" DataSource="dashboardExtractDataSource1">
+      <ColoringOptions MeasuresColoringMode="None" />
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="Export_Value" Name="Export" DefaultId="DataItem3">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Measure DataMember="Import_Value" Name="Import" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Dimension DataMember="Product_Group" Name="Product Group" GroupChildValues="true" DefaultId="DataItem1" />
+        <Dimension DataMember="Product" DefaultId="DataItem2" />
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem3" />
+        <Value DefaultId="DataItem0" />
+      </Values>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+    </Treemap>
+    <ListBox ComponentName="listBoxFilterPartner" Name="Partner" DataSource="dashboardExtractDataSource1" ListBoxType="Radio">
+      <DataItems>
+        <Dimension DataMember="Partner" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxFilterProductGroup" Name="Product Group" DataSource="dashboardExtractDataSource1">
+      <DataItems>
+        <Dimension DataMember="Product_Group" Name="Product Group" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Pie ComponentName="pieImportVsExport" Name="Import vs Export" ShowCaption="false" DataSource="dashboardExtractDataSource1" LabelContentType="Argument">
+      <DataItems>
+        <Measure DataMember="Import_Value" Name="Import" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Measure DataMember="Export_Value" Name="Export" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="22.329162656400385">
+        <LayoutItem DashboardItem="listBoxFilterPartner" Weight="44.062947067238916" />
+        <LayoutItem DashboardItem="listBoxFilterProductGroup" Weight="28.755364806866954" />
+        <LayoutItem DashboardItem="pieImportVsExport" Weight="27.181688125894134" />
+      </LayoutGroup>
+      <LayoutItem DashboardItem="treeMapTradeOverviewDetails" Weight="77.670837343599615" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

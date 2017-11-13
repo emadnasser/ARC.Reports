@@ -1,0 +1,10 @@
+﻿@model ReportsDemoModel
+@Html.DevExpress().DocumentViewer(
+    settings => {
+        settings.Name = "DocumentViewer";
+        settings.Report = Model.Report;
+        settings.Width = 720;
+        settings.SettingsSplitter.SidePaneVisible = false;
+        settings.CallbackRouteValues = new { Controller = "ReportControls", Action = "RichTextViewerPartial", ReportID = Model.ReportID };
+        settings.ExportRouteValues = new { Controller = "ReportControls", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+    }).GetHtml()

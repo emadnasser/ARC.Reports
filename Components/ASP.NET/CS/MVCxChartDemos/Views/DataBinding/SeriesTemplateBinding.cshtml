@@ -1,0 +1,72 @@
+﻿@using (Html.BeginForm()) {
+    ChartSeriesTemplateBindingDemoOptions options = (ChartSeriesTemplateBindingDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+    <div class="chartOptionsPanel" style="height:auto;">
+        <table>
+            <tr>
+                <td>
+                    @Html.CheckBox("ShowLabels", options.ShowLabels)
+                </td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td class="NoWrap">
+                    <label for="ShowLabels">Show Labels</label>
+                </td>
+                <td><div class="Spacer" style="width: 506px"></div></td>
+                <td class="NoWrap"><label for="SeriesDataMember">Series Data Member:</label></td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td>
+                    @Html.DropDownList("SeriesDataMember", ChartDemoHelper.GetSeriesDataMembers())
+                </td>
+                <td><div class="Spacer" style="width: 14px;"></div></td>
+                <td><input style="float: right;" type="submit" value="Apply" /></td>
+            </tr>
+        </table>
+    </div>
+    
+    @Html.DevExpress().Chart(settings => {
+        settings.Name = "chart";
+        settings.Width = 920;
+        settings.Height = 500;
+        settings.BorderOptions.Visibility = DefaultBoolean.False;
+        settings.CrosshairEnabled = options.ShowLabels ? DefaultBoolean.False : DefaultBoolean.True;
+        settings.CrosshairOptions.CrosshairLabelTextOptions.Font = new Font("Tahoma", 10);
+        settings.CrosshairOptions.GroupHeaderTextOptions.Font = new Font("Tahoma", 10, FontStyle.Bold);
+
+        settings.Legends.Default(l => {
+            l.AlignmentHorizontal = LegendAlignmentHorizontal.Center;
+            l.AlignmentVertical = LegendAlignmentVertical.BottomOutside;
+            l.MaxHorizontalPercentage = 50;
+            l.HorizontalIndent = 12;
+            l.Direction = LegendDirection.LeftToRight;
+            l.Border.Visibility = DefaultBoolean.False;
+        });
+        
+        settings.Series.Template(t => {
+            t.SetDataMembers(options.ArgumentDataMember, "Product");
+            t.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+            t.ArgumentScaleType = ScaleType.Qualitative;
+            t.CrosshairLabelPattern = "{S} : {V:F3}";
+            t.Views().SideBySideBarSeriesView(v => {
+                v.SeriesLabel(l => {
+                    l.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+                    l.TextPattern = "{V:F2}";
+                });
+            });
+        });
+    
+        settings.XYDiagram(d => {
+            d.AxisX.Label.Staggered = options.ArgumentDataMember == ChartSeriesTemplateBindingDemoOptions.Country;
+            d.AxisY.GridLines.MinorVisible = true;
+        });
+    
+        settings.Titles.Add(new ChartTitle() {
+            Text = "G7 GDP, billions of US$",
+        });
+        settings.Titles.Add(new ChartTitle() {
+            Text = "The World Bank: GDP (current US$)",
+            Font = new Font("Tahoma", 8),
+            TextColor = Color.Gray,
+            Alignment = StringAlignment.Far,
+            Dock = ChartTitleDockStyle.Bottom
+        });
+    }).Bind(Model, options.SeriesDataMember).GetHtml()
+}

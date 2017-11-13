@@ -1,0 +1,90 @@
+﻿<local:LayoutModuleBase
+    x:Class="DiagramDemo.TreeLayoutModule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
+        xmlns:local="clr-namespace:DiagramDemo"
+        xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:dxdiag="http://schemas.devexpress.com/winfx/2008/xaml/diagram"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="800" d:DesignHeight="600">
+    <dxdb:DemoModuleControl>
+        <dxdb:DemoModuleControl.OptionsContent>
+            <StackPanel Orientation="Vertical" MinWidth="200">
+                <StackPanel.Resources>
+                    <Style TargetType="dxe:TrackBarEdit">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="SmallStep" Value="5"/>
+                        <Setter Property="LargeStep" Value="15"/>
+                        <Setter Property="TickFrequency" Value="10"/>
+                        <Setter Property="Minimum" Value="0"/>
+                        <Setter Property="Maximum" Value="150"/>
+                        <Setter Property="TickPlacement" Value="None"/>
+                        <Setter Property="IsSnapToTickEnabled" Value="True"/>
+                    </Style>
+                    <Style TargetType="dx:GroupFrame">
+                        <Setter Property="Margin" Value="0,0,0,12"/>
+                    </Style>
+                    <Style TargetType="dxe:ListBoxEdit">
+                        <Setter Property="ShowBorder" Value="False"/>
+                        <Setter Property="Background" Value="{x:Null}"/>
+                    </Style>
+                </StackPanel.Resources>
+                <dx:GroupFrame Header="Direction">
+                    <dxe:ListBoxEdit
+                        x:Name="directionListBox"
+                        SelectedIndexChanged="SelectedIndexChanged"
+                        EditValue="{Binding ElementName=diagramControl, Path=TreeLayoutDirection, Mode=TwoWay}">
+                        <dxmvvm:Interaction.Behaviors>
+                            <dxmvvm:EnumItemsSourceBehavior EnumType="{x:Type dxdiag:LayoutDirection}"/>
+                        </dxmvvm:Interaction.Behaviors>
+                        <dxe:ListBoxEdit.StyleSettings>
+                            <dxe:RadioListBoxEditStyleSettings />
+                        </dxe:ListBoxEdit.StyleSettings>
+                    </dxe:ListBoxEdit>
+                </dx:GroupFrame>
+                <dx:GroupFrame Header="Alignment">
+                    <dxe:ListBoxEdit
+                        x:Name="alignmentListBox"
+                        SelectedIndexChanged="SelectedIndexChanged"
+                        EditValue="{Binding ElementName=diagramControl, Path=TreeLayoutAlignment, Mode=TwoWay}">
+                        <dxmvvm:Interaction.Behaviors>
+                            <dxmvvm:EnumItemsSourceBehavior EnumType="{x:Type dxdiag:Alignment}"/>
+                        </dxmvvm:Interaction.Behaviors>
+                        <dxe:ListBoxEdit.StyleSettings>
+                            <dxe:RadioListBoxEditStyleSettings/>
+                        </dxe:ListBoxEdit.StyleSettings>
+                    </dxe:ListBoxEdit>
+                </dx:GroupFrame>
+                <dx:GroupFrame Header="Horizontal Spacing">
+                    <dxe:TrackBarEdit
+                        x:Name="horSpacingTrackBar"
+                        EditValue="{Binding ElementName=diagramControl, Path=TreeLayoutHorizontalSpacing, Mode=TwoWay}"
+                        Minimum="20"
+                        EditValueChanged="EditValueChanged"/>
+                </dx:GroupFrame>
+                <dx:GroupFrame Header="Vertical Spacing">
+                    <dxe:TrackBarEdit
+                        x:Name="vertSpacingTrackBar"
+                        EditValue="{Binding ElementName=diagramControl, Path=TreeLayoutVerticalSpacing, Mode=TwoWay}"
+                        Minimum="20"
+                        EditValueChanged="EditValueChanged"/>
+                </dx:GroupFrame>
+            </StackPanel>
+        </dxdb:DemoModuleControl.OptionsContent>
+        <Grid>
+            <dxdiag:DiagramDesignerControl x:Name="diagramControl"
+                                           DockPanel.Dock="Right"
+                                           Theme="Linear"
+                                           ToolboxVisibility="Compact"
+                                           SelectedStencils="BasicShapes,ArrowShapes"
+                                           ZoomFactor="0.65"
+                                           LineJumpStyle="Bow"/>
+        </Grid>
+    </dxdb:DemoModuleControl>
+</local:LayoutModuleBase>

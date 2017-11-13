@@ -1,0 +1,16 @@
+﻿<script type="text/javascript" src="@Url.Content("~/Scripts/ManualPasteFormatting.js")"></script>
+
+@using (Html.BeginForm()){
+    HtmlEditorManualPasteFormattingDemoOptions options = Session["Options"] as HtmlEditorManualPasteFormattingDemoOptions;
+    if (options == null) {
+        options = new HtmlEditorManualPasteFormattingDemoOptions();
+    }
+    
+    @Html.Partial("ManualPasteFormattingPartial")
+    <div class="Note">
+        Copy a part of the editor content and paste it with the specified formatting.
+    </div>
+    <div style="margin-left: -14px; padding-top: 20px;">
+        @Html.Partial("ManualPasteFormattingOptionsPartial", options)
+    </div>
+}

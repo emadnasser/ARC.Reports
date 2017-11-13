@@ -1,0 +1,8 @@
+﻿@model IEnumerable
+
+@{
+    PivotGridPagingDemoOptions demoOptions = ViewBag.DemoOptions ?? new PivotGridPagingDemoOptions();
+}
+@Html.Partial("PagingOptionsPartial", demoOptions)
+<br />
+@Html.Partial("PagingPartial", Model)

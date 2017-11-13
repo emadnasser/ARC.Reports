@@ -1,0 +1,80 @@
+﻿@model PdfTextSearchModel
+<table class="OptionsTable">
+    <tr>
+        <td>
+            @Html.DevExpress().Label(settings => {
+           settings.Name = "labelSelectDocument";
+           settings.Text = "Select document: ";
+       }).GetHtml()
+        </td>
+        <td>
+            @using (Html.BeginForm("TextSearchUploadFiles", "Pdf", FormMethod.Post)) {
+                @Html.DevExpress().UploadControl(settings => {
+               settings.Name = "uploader";
+               settings.ControlStyle.CssClass = "CustomTextBox";
+               settings.ValidationSettings.Assign(PdfController.ValidationSettings);
+               settings.AdvancedModeSettings.EnableMultiSelect = false;
+               settings.ShowClearFileSelectionButton = false;
+               settings.FileInputSpacing = new Unit("0");
+               settings.Height = new Unit("25px");
+               settings.BrowseButton.Text = "Open...";
+               settings.ClientSideEvents.TextChanged = "function(s, e) { uploader.Upload();}";
+               settings.ClientSideEvents.FilesUploadComplete = "function(s, e) { PdfViewer.PerformCallback(); }";
+           }).GetHtml()
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td class="note">
+            @Html.DevExpress().Label(settings => {
+           settings.Name = "labelMaxFileSize";
+           settings.Text = "Maximum file size: 10Mb";
+           settings.ControlStyle.Font.Size = new FontUnit("8pt");
+       }).GetHtml()
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DevExpress().Label(settings => {
+           settings.Name = "lblTextToFind";
+           settings.Text = "Text to Find:";
+       }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().TextBox(settings => {
+           settings.Name = "textBoxTextToFind";
+           settings.Text = "Customer:";
+           settings.Width = new Unit("100%");
+       }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().Label(settings => {
+           settings.Name = "lblWordCount";
+           settings.Text = "Word Count:";
+       }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().SpinEdit(settings => {
+           settings.Name = "spinEditWordCount";
+           settings.Properties.MinValue = 1;
+           settings.Properties.MaxValue = 100;
+           settings.Number = 2;
+           settings.Properties.NumberType = SpinEditNumberType.Integer;
+           settings.Width = new Unit("50px");
+       }).GetHtml()
+        </td>
+        <td style="vertical-align:baseline">
+            @Html.DevExpress().Button(settings => {
+           settings.Name = "btnSearchText";
+           settings.Text = "Search...";
+           settings.Width = new Unit("25px");
+           settings.ClientSideEvents.Click = "function(s, e) { resultWindow.PerformCallback(); resultWindow.Show();}";
+       }).GetHtml()
+        </td>
+    </tr>
+</table>
+<br />
+@Html.Partial("PdfFileView")
+@Html.Partial("PdfTextSearchResultPartial")

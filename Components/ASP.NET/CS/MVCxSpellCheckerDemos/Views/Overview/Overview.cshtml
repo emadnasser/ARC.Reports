@@ -1,0 +1,16 @@
+﻿@model string
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#checkSpellingButton").click(function(){
+        spellChecker.Check();
+    });
+});
+</script>
+
+@Html.Partial("OverviewPartial")
+
+<input id="checkSpellingButton" type="button" value = "Check Spelling ..." />
+<br />
+<br />
+@Html.TextArea("textBox", Model, new { style = "width: 100%; height: 150px;"})

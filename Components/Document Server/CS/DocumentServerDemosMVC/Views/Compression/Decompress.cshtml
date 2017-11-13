@@ -1,0 +1,56 @@
+﻿<script type="text/javascript">
+    function Uploader_OnFileUploadComplete(e) {
+        if (e.callbackData != "") {
+            var data = e.callbackData.substring(1).split('#');
+            var length = data.length;
+            for (var i = 0; i < length; i++) {
+                AddFileToContainer(data[i]);
+            }
+        }
+    }
+    function AddFileToContainer(callbackData) {
+        var data = callbackData.split('|');
+        var file = data[0];
+        var url = data[1];
+
+        var link = document.createElement('A');
+        var $link = $(link);
+        $link.attr("target", "_blank");
+        $link.attr("href", url);
+        $link.html(file);
+        
+        var $fileContainer = $("#fileContainer");
+        $fileContainer.append($link);
+        $fileContainer.append(document.createElement('BR'));
+    }
+</script>
+
+@using (Html.BeginForm("Decompress", "Compression", FormMethod.Post, new { @style = "width:100%;", @class = "compress" })) {
+    
+    @Html.DevExpress().UploadControl(
+        settings => {
+            settings.Name = "uploader";
+            settings.CallbackRouteValues = new { Controller = "Compression", Action = "DecompressUploadFiles" };
+            settings.ControlStyle.CssClass = "editorArea";
+
+            settings.Width = Unit.Pixel(380);
+            settings.AdvancedModeSettings.EnableMultiSelect = false;
+            settings.NullText = "Select file to decompress...";
+            settings.ShowUploadButton = false;
+
+            settings.ValidationSettings.AllowedFileExtensions = new string[] { ".zip" }; ;
+            settings.ValidationSettings.MaxFileSize = 4194304;
+
+            settings.ClientSideEvents.FileUploadComplete = "function(s, e) { Uploader_OnFileUploadComplete(e); }";
+            settings.ClientSideEvents.TextChanged = "function(s, e) { uploader.UploadFile(); }";
+        }).GetHtml()
+    
+    <label>&nbsp;</label>
+    <fieldset>
+        <legend>Archive Content</legend>
+        <div id="fileContainer" class="fileContainer"></div>
+    </fieldset>
+    <p class="Note">
+        <b>Note</b>: All files uploaded to this demo will be automatically deleted in 5 minutes.
+    </p>
+}

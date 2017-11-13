@@ -1,0 +1,155 @@
+﻿<local:RichEditDemoModule
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"
+    xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:local="clr-namespace:RichEditDemo" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+    x:Class="RichEditDemo.CustomDraw" Height="400" Width="800"
+    >
+    <local:RichEditDemoModule.Resources>
+        <ResourceDictionary>
+            <dxre:RichEditUICommand x:Key="commands" />
+            <dxre:RichEditStringIdConverter x:Key="stringIdConverter"/>
+            <dxre:DefaultBarItemDataTemplates x:Key="defaultBarItemTemplates"/>
+        </ResourceDictionary>
+    </local:RichEditDemoModule.Resources>
+
+    <dxdb:DemoModuleControl SupressGroupFramePaddingInOptions="False" Margin="0,0,0,0">
+        <dxdb:DemoModuleControl.OptionsContent>
+            <dxlc:GroupBox Header="Search Panel">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <dxe:ButtonEdit x:Name="searchTextBox" Margin="0,6,0,6" Grid.Row="0" AllowDefaultButton="False" KeyDown="searchTextBox_KeyDown" EditValueChanged="searchTextBox_EditValueChanged" MaxLength="255">
+                        <dxe:ButtonInfo GlyphKind="Cancel" Click="ButtonInfo_Click"/>
+                    </dxe:ButtonEdit>
+
+                    <Grid Grid.Row="1" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width= "Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="labelResultCount" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" />
+                        <dxe:ButtonEdit x:Name="navigationButtonEdit" Grid.Row="0" Grid.Column="1" AllowDefaultButton="False" ShowBorder="False" ShowText="False"  HorizontalAlignment="Right">
+                            <dxe:ButtonInfo GlyphKind="Up" Click="ButtonUpInfo_Click"/>
+                            <dxe:ButtonInfo GlyphKind="Down" Click="ButtonDownInfo_Click"/>
+                        </dxe:ButtonEdit>
+                    </Grid>
+                    <dxlc:GroupBox x:Name ="gcSearchOptions" Margin="0,6,0,6" Grid.Row="2" Header="Search Options">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <dxe:CheckEdit x:Name="edtMatchCase" Margin="0,6,0,6" Content="Match Case" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="0" EditValueChanged="matchCase_ValueChanged"/>
+                            <dxe:CheckEdit x:Name="edtFindWholeWordsOnly" Margin="0,6,0,6" Content="Find Whole Words Only" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" EditValueChanged="findWholeWordsOnly_ValueChanged" />
+                        </Grid>
+                    </dxlc:GroupBox>
+
+
+                    <dxlc:GroupBox x:Name ="gcHighlight"  Grid.Row="3" Margin="0,6,0,6" Header="Highlight Options">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Text Highlight Color" Margin="0,6,6,6" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0"/>
+                            <dxe:PopupColorEdit x:Name="colorEdit" Margin="0,6,0,6" Grid.Row="0" Grid.Column="1" Color="Yellow" IsTextEditable="False" EditValueChanged="colorEdit_EditValueChanged"/>
+                            <dxe:CheckEdit x:Name="edtHighlightRow" Margin="0,6,6,6" Content="Highlight Row " VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="0" IsChecked ="True" EditValueChanged="edtHighlightRow_EditValueChanged"/>
+                            <dxe:PopupColorEdit x:Name="colorEditLine" Margin="0,6,0,6" Grid.Row="1" Grid.Column="1" Color="RoyalBlue" IsTextEditable="False" EditValueChanged="colorEditLine_EditValueChanged" />
+                            <dxe:CheckEdit x:Name="edtHighlightNumberingList" Margin="0,6,6,6" Content="Highlight Line Numbering" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" IsChecked ="True" EditValueChanged="edtHighlightNumberingList_EditValueChanged"/>
+                            <dxe:PopupColorEdit x:Name="colorEditHighlightNumbering" Margin="0,6,0,6" Grid.Row="2" Grid.Column="1" Color="Gainsboro" EditValueChanged="colorEditHighlightNumbering_EditValueChanged" IsTextEditable="False" />
+                        </Grid>
+                    </dxlc:GroupBox>
+
+
+
+
+                </Grid>
+
+            </dxlc:GroupBox>
+        </dxdb:DemoModuleControl.OptionsContent>
+        <Grid>
+            <dxb:BarManager x:Name="barManager1" ToolbarGlyphSize="Small">
+                <dxb:BarManager.Items>
+                    <dxb:BarButtonItem x:Name="biFileNew" Command="{Binding FileNew, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biFileOpen" Command="{Binding FileOpen, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biFileSave" Command="{Binding FileSave, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biFileSaveAs" Command="{Binding FileSaveAs, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biFileQuickPrint" Command="{Binding FileQuickPrint, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biFilePrint" Command="{Binding FilePrint, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biFilePrintPreview" Command="{Binding FilePrintPreview, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biEditUndo" Command="{Binding EditUndo, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biEditRedo" Command="{Binding EditRedo, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biEditPaste" Command="{Binding EditPaste, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biEditCut" Command="{Binding EditCut, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biEditCopy" Command="{Binding EditCopy, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biCheckSpelling" Command="{Binding CheckSpelling, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biReviewProtectDocument" Command="{Binding ReviewProtectDocument, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biReviewEditPermissionRange" Command="{Binding ReviewEditPermissionRange, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biReviewUnprotectDocument" Command="{Binding ReviewUnprotectDocument, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biReviewNewComment" Command="{Binding ReviewNewComment, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarSubItem x:Name="biReviewDeleteCommentsPlaceholder" Command="{Binding ReviewDeleteCommentsPlaceholder, Mode=OneTime, Source={StaticResource commands}}">
+                        <dxb:BarSubItem.ItemLinks>
+                            <dxb:BarButtonItemLink BarItemName="biReviewDeleteOneComment"/>
+                            <dxb:BarButtonItemLink BarItemName="biReviewDeleteAllCommentsShown"/>
+                            <dxb:BarButtonItemLink BarItemName="biReviewDeleteAllComments"/>
+                        </dxb:BarSubItem.ItemLinks>
+                    </dxb:BarSubItem>
+                    <dxb:BarButtonItem x:Name="biReviewDeleteOneComment" Command="{Binding ReviewDeleteOneComment, Mode=OneTime, Source={StaticResource commands}}" GlyphSize="Large"/>
+                    <dxb:BarButtonItem x:Name="biReviewDeleteAllCommentsShown" Command="{Binding ReviewDeleteAllCommentsShown, Mode=OneTime, Source={StaticResource commands}}" GlyphSize="Large"/>
+                    <dxb:BarButtonItem x:Name="biReviewDeleteAllComments" Command="{Binding ReviewDeleteAllComments, Mode=OneTime, Source={StaticResource commands}}" GlyphSize="Large"/>
+                    <dxb:BarButtonItem x:Name="biReviewPreviousComment" Command="{Binding ReviewPreviousComment, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biReviewNextComment" Command="{Binding ReviewNextComment, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biReviewViewComment" Command="{Binding ReviewViewComment, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxre:ReviewersBarSubItem x:Name="biReviewReviewers" Command="{Binding ReviewReviewers, Mode=OneTime, Source={StaticResource commands}}" RichEditControl="{Binding ElementName=richEdit}"/>
+                    <dxb:BarCheckItem x:Name="biReviewReviewingPane" Command="{Binding ReviewReviewingPane, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biFileDocumentProperties" Command="{Binding FileDocumentProperties, Mode=OneTime, Source={StaticResource commands}}"/>
+                </dxb:BarManager.Items>
+                <DockPanel>
+                    <dxr:RibbonControl x:Name="ribbonControl1" DockPanel.Dock="Top" ToolbarShowMode="Hide">
+                        <dxr:RibbonDefaultPageCategory>
+                            <dxr:RibbonPage x:Name="pageFile" Caption="{Binding ConverterParameter=Caption_PageFile, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}">
+                                <dxr:RibbonPageGroup x:Name="grpFileCommon" Caption="{Binding ConverterParameter=Caption_GroupCommon, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}" ShowCaptionButton="False">
+                                    <dxr:RibbonPageGroup.ItemLinks>
+                                        <dxb:BarButtonItemLink BarItemName="biFileNew"/>
+                                        <dxb:BarButtonItemLink BarItemName="biFileOpen"/>
+                                        <dxb:BarButtonItemLink BarItemName="biFileSave"/>
+                                        <dxb:BarButtonItemLink BarItemName="biFileSaveAs"/>
+                                        <dxb:BarButtonItemLink BarItemName="biFileQuickPrint"/>
+                                        <dxb:BarButtonItemLink BarItemName="biFilePrint"/>
+                                        <dxb:BarButtonItemLink BarItemName="biFilePrintPreview"/>
+                                        <dxb:BarButtonItemLink BarItemName="biEditUndo"/>
+                                        <dxb:BarButtonItemLink BarItemName="biEditRedo"/>
+                                    </dxr:RibbonPageGroup.ItemLinks>
+                                </dxr:RibbonPageGroup>
+                                <dxr:RibbonPageGroup x:Name="grpFileInfo" Caption="{Binding ConverterParameter=Caption_GroupInfo, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}" ShowCaptionButton="False">
+                                    <dxr:RibbonPageGroup.ItemLinks>
+                                        <dxb:BarButtonItemLink BarItemName="biFileDocumentProperties"/>
+                                    </dxr:RibbonPageGroup.ItemLinks>
+                                </dxr:RibbonPageGroup>
+                            </dxr:RibbonPage>
+                        </dxr:RibbonDefaultPageCategory>
+                    </dxr:RibbonControl>
+                    <dxre:RichEditControl x:Name="richEdit" VerticalAlignment="Stretch"  ShowBorder="False" BarManager="{Binding ElementName=barManager1, Mode=OneTime}" Ribbon="{Binding ElementName=ribbonControl1, Mode=OneTime}" Loaded="richEdit_Loaded"/>
+                </DockPanel>
+            </dxb:BarManager>
+        </Grid>
+    </dxdb:DemoModuleControl>
+</local:RichEditDemoModule>

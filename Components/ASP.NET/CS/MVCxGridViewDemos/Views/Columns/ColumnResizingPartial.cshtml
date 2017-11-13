@@ -1,0 +1,29 @@
+﻿@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Columns", Action = "ColumnResizingPartial" };
+        settings.Width = Unit.Pixel(600);
+
+        settings.SettingsResizing.ColumnResizeMode = ColumnResizingDemoHelper.Options.ColumnResizeMode;
+        settings.SettingsResizing.Visualization = ColumnResizingDemoHelper.Options.Visualization;
+        settings.SettingsBehavior.AllowEllipsisInText = true;
+
+        settings.Columns.Add(col => {
+            col.FieldName = "ContactName";
+            col.Width = 100;
+        });
+        settings.Columns.Add(col => {
+            col.FieldName = "CompanyName";
+            col.Width = 200;
+        });
+        settings.Columns.Add(col => {
+            col.FieldName = "City";
+            col.Width = 100;
+        });
+        settings.Columns.Add(col => {
+            col.FieldName = "Region";
+            col.Width = 70;
+        });
+        settings.Columns.Add("Country");
+    }).Bind(Model).GetHtml()

@@ -1,0 +1,70 @@
+﻿@model IList
+
+@using (Html.BeginForm()) {
+    ChartStepAreaDemoOptions options = (ChartStepAreaDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+    <div class="chartOptionsPanel" style="height:auto; font-size:12px">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    @Html.CheckBox("showLabels", options.ShowLabels)
+                </td>
+                <td class="NoWrap">
+                    <label for="showLabels" style="width:auto">Show Labels</label>
+                </td>
+                <td><div class="Spacer" style="width: 15px;"></div></td>
+                <td>
+                    @Html.CheckBox("inverted", options.Inverted)
+                </td>
+                <td><div class="Spacer" style="width: 5px;"></div></td>
+                <td class="NoWrap" style="width: 100%;">
+                    <label class="checkBox" for="inverted">Inverted Steps</label>
+                </td>
+                <td>
+                    <input style="float: right;" type="submit" value="Apply" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    @Html.DevExpress().Chart(settings => {
+        settings.Name = "chart";
+        settings.Width = 920;
+        settings.Height = 500;
+        settings.BorderOptions.Visibility = DefaultBoolean.False;
+        settings.CrosshairEnabled = options.ShowLabels ? DefaultBoolean.False : DefaultBoolean.True;
+
+        settings.Legends.Default(l => {
+            l.AlignmentHorizontal = LegendAlignmentHorizontal.Center;
+            l.AlignmentVertical = LegendAlignmentVertical.BottomOutside;
+            l.Direction = LegendDirection.LeftToRight;
+            l.Border.Visibility = DefaultBoolean.False;
+        });
+    
+        settings.Titles.Add(new ChartTitle() {
+            Text = "Statistics comments in the past month"
+        });
+
+        settings.Series.Template(t => {
+            t.Views().StackedStepAreaSeriesView(v => {
+                v.InvertedStep = options.Inverted;
+                v.SeriesLabel(l => {
+                    l.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+                });
+            });
+            t.SetDataMembers("Date", "Value");
+            t.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+        });
+            
+        settings.XYDiagram(d => {
+            d.AxisX.DateTimeScaleOptions.MeasureUnit = DateTimeMeasureUnit.Month;
+            d.AxisX.DateTimeScaleOptions.GridAlignment = DateTimeGridAlignment.Month;
+            d.AxisX.DateTimeScaleOptions.AutoGrid = false;
+            d.AxisX.DateTimeScaleOptions.GridSpacing = 1;
+            d.AxisX.Label.TextPattern = "{A:MMMM}";
+            
+            d.AxisY.Title.Text = "Count";
+            d.AxisY.Title.Visibility = DefaultBoolean.True;
+            d.AxisY.Interlaced = true;
+        });
+    }).Bind(Model, seriesDataMember: "Type").GetHtml()
+}

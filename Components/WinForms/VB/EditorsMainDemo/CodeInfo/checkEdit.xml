@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<totalinfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<controls>
+		<controlentry>
+			<control>
+				<name>btnToggleState</name>
+				<windowcaption>Toggle State button</windowcaption>
+				<description>This button toggles the check editor's state.</description>
+				<memberlist>CheckEdit.Checked</memberlist>
+				<dtimage>
+					<?xm-replace_text {dtimage}?>
+				</dtimage>
+			</control>
+		</controlentry>
+		<controlentry>
+			<control>
+				<name>checkEditAllowGrayed</name>
+				<windowcaption>AllowGrayed check box</windowcaption>
+				<description>This check box allows or prohibits the indeterminate state in the sample check box.</description>
+				<memberlist>RepositoryItemCheckEdit.AllowGrayed</memberlist>
+				<dtimage>
+					<?xm-replace_text {dtimage}?>
+				</dtimage>
+			</control>
+		</controlentry>
+		<controlentry>
+			<control>
+				<name>comboCheckState</name>
+				<windowcaption>Check State combo box</windowcaption>
+				<description>This combo box lets you apply one of three check box states.</description>
+				<memberlist>CheckEdit.CheckState</memberlist>
+				<dtimage>
+					<?xm-replace_text {dtimage}?>
+				</dtimage>
+			</control>
+		</controlentry>
+		<controlentry>
+			<control>
+				<name>comboAlign</name>
+				<windowcaption>Check Box Alignment combo box</windowcaption>
+				<description>This combo box lets you change the check box's alignment within the editor.</description>
+				<memberlist>RepositoryItemCheckEdit.GlyphAlign</memberlist>
+				<dtimage>
+					<?xm-replace_text {dtimage}?>
+				</dtimage>
+			</control>
+		</controlentry>
+		<controlentry>
+			<control>
+				<name>editorStyleSwitcher</name>
+				<windowcaption>Style Switcher editor</windowcaption>
+				<description>By clicking this editor's button you can see all the predefined styles provided for the check editor.</description>
+				<memberlist>RepositoryItemCheckEdit.CheckStyle</memberlist>
+				<dtimage>
+					<?xm-replace_text {dtimage}?>
+				</dtimage>
+			</control>
+		</controlentry>
+		<controlentry>
+			<control>
+				<name>popupCustomImages</name>
+				<windowcaption>Custom Images dropdown</windowcaption>
+				<description>This editor allows you to provide custom images for the checked, unchecked and indeterminate check box states.</description>
+				<memberlist>RepositoryItemCheckEdit.PictureChecked, RepositoryItemCheckEdit.PictureUnchecked, RepositoryItemCheckEdit.PictureGrayed, RepositoryItemCheckEdit.CheckStyle</memberlist>
+				<dtimage>
+					<?xm-replace_text {dtimage}?>
+				</dtimage>
+			</control>
+		</controlentry>
+		<controlentry>
+			<control>
+				<name>checkEditRadioGroup</name>
+				<windowcaption>Is Radio Group check editor</windowcaption>
+				<description>This check box switches the dynamically created check editors from individual check boxes to radio groups and vice versa.</description>
+				<memberlist>RepositoryItemCheckEdit.RadioGroupIndex, RepositoryItemCheckEdit.CheckStyle</memberlist>
+				<dtimage>
+					<?xm-replace_text {dtimage}?>
+				</dtimage>
+			</control>
+		</controlentry>
+		<controlentry>
+			<control>
+				<name>checkEditApplyRadioStyle</name>
+				<windowcaption>Apply Radio Style check box</windowcaption>
+				<description>Toggle this check box to switch check editors between standard and radio button styles. Note that this check box automatically changes its state when toggling the Radio group? check box.</description>
+				<memberlist>RepositoryItemCheckEdit.CheckStyle</memberlist>
+				<dtimage>
+					<?xm-replace_text {dtimage}?>
+				</dtimage>
+			</control>
+		</controlentry>
+    <controlentry>
+      <control>
+        <name>checkEditAllowMnemonics</name>
+        <windowcaption>Allow mnemonics</windowcaption>
+        <description>Mnemonics allow your end-users to switch a Check Edit state via keyboard hot-keys. In this demo you can press 'S' to toggle Check Edit state.</description>
+        <memberlist>CheckEdit.Text</memberlist>
+        <dtimage>
+          <?xm-replace_text {dtimage}?>
+        </dtimage>
+      </control>
+    </controlentry>
+    <controlentry>
+      <control>
+        <name>ceAllowHTMLString</name>
+        <windowcaption>Allow HTML formatting</windowcaption>
+        <description>Check Edit controls allow you to format their display text using the Hyper Text Markup Language (HTML). HTML formatted text contains markup tags, which define text appearance.</description>
+        <memberlist>RepositoryItem.AllowHtmlDraw, HTML Text Formatting</memberlist>
+        <dtimage>
+          <?xm-replace_text {dtimage}?>
+        </dtimage>
+      </control>
+    </controlentry>
+	</controls>
+	<hints>
+		<hint>
+			<name>checkEditSample</name>
+			<hinttext>#Mouse Operations<newline></newline>Click caption or check box<newline></newline>#Keyboard<newline></newline>Press SPACE or use mnemonics</hinttext>
+		</hint>
+	</hints>
+</totalinfo>

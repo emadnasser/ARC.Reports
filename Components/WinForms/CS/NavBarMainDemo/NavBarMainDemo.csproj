@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectGuid>{30A6FA7B-9FF1-430F-9D66-DF4181537752}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NavBarMainDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NavBarMainDemo</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Images.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.DemoData.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="System.Data"><Private>False</Private></Reference>
+    <Reference Include="System.Design"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing"><Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms"><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGroups\AddGroups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddGroups\AddGroups.Designer.cs">
+      <DependentUpon>AddGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddItemLinks\AddItemLinks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddItemLinks\AddItemLinks.Designer.cs">
+      <DependentUpon>AddItemLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomDraw\CustomDraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomDraw\CustomDraw.Designer.cs">
+      <DependentUpon>CustomDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizableDistances\CustomizableDistances.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizableDistances\CustomizableDistances.Designer.cs">
+      <DependentUpon>CustomizableDistances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizableDistances\DistanceChanger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizableDistances\DistanceChanger.Designer.cs">
+      <DependentUpon>DistanceChanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupContainer\GroupContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupContainer\GroupContainer.Designer.cs">
+      <DependentUpon>GroupContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupStyles\GroupStyles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupStyles\GroupStyles.Designer.cs">
+      <DependentUpon>GroupStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HitInfo\HitInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HitInfo\HitInfo.Designer.cs">
+      <DependentUpon>HitInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BusinessModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BusinessModule.Designer.cs">
+      <DependentUpon>BusinessModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ctrlAlphaBlending.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ctrlAlphaBlending.Designer.cs">
+      <DependentUpon>ctrlAlphaBlending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomCheckedListBoxControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\frmLinkProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\frmLinkProperties.Designer.cs">
+      <DependentUpon>frmLinkProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmNavBarBlending.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmNavBarBlending.Designer.cs">
+      <DependentUpon>frmNavBarBlending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmNavBarDragDrop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmNavBarDragDrop.Designer.cs">
+      <DependentUpon>frmNavBarDragDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmNavBarNavigationPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmNavBarNavigationPane.Designer.cs">
+      <DependentUpon>frmNavBarNavigationPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmNavBarProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmNavBarProperties.Designer.cs">
+      <DependentUpon>frmNavBarProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MultimediaModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MultimediaModule.Designer.cs">
+      <DependentUpon>MultimediaModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutlookStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OutlookStyle.Designer.cs">
+      <DependentUpon>OutlookStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavBarHints\NavBarHints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavBarHints\NavBarHints.Designer.cs">
+      <DependentUpon>NavBarHints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavBarInfo\NavBarInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavBarInfo\NavBarInfo.Designer.cs">
+      <DependentUpon>NavBarInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewStyles\ViewStyles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewStyles\ViewStyles.Designer.cs">
+      <DependentUpon>ViewStyles.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGroups\AddGroups.resx">
+      <DependentUpon>AddGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddItemLinks\AddItemLinks.resx">
+      <DependentUpon>AddItemLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomDraw\CustomDraw.resx">
+      <DependentUpon>CustomDraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizableDistances\CustomizableDistances.resx">
+      <DependentUpon>CustomizableDistances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizableDistances\DistanceChanger.resx">
+      <DependentUpon>DistanceChanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupContainer\GroupContainer.resx">
+      <DependentUpon>GroupContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupStyles\GroupStyles.resx">
+      <DependentUpon>GroupStyles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HitInfo\HitInfo.resx">
+      <DependentUpon>HitInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BusinessModule.resx">
+      <DependentUpon>BusinessModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ctrlAlphaBlending.resx">
+      <DependentUpon>ctrlAlphaBlending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Description.rtf" />
+    <EmbeddedResource Include="Modules\frmLinkProperties.resx">
+      <DependentUpon>frmLinkProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmNavBarBlending.resx">
+      <DependentUpon>frmNavBarBlending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmNavBarDragDrop.resx">
+      <DependentUpon>frmNavBarDragDrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmNavBarNavigationPane.resx">
+      <DependentUpon>frmNavBarNavigationPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmNavBarProperties.resx">
+      <DependentUpon>frmNavBarProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MultimediaModule.resx">
+      <DependentUpon>MultimediaModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OutlookStyle.resx">
+      <DependentUpon>OutlookStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavBarHints\NavBarHints.resx">
+      <DependentUpon>NavBarHints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavBarInfo\NavBarInfo.resx">
+      <DependentUpon>NavBarInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStyles\ViewStyles.resx">
+      <DependentUpon>ViewStyles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

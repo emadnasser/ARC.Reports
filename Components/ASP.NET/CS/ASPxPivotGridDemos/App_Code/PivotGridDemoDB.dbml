@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PivotGridDemoDB" Class="PivotGridDemoDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\PivotGridDemoDB.mdf;Integrated Security=True;Connect Timeout=120;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PivotGridServerModeDemoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Categories" Member="PgdCategories">
+    <Type Name="PgdCategory">
+      <Column Name="OID" Member="CategoryID" Storage="_OID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="PgdCategory_PgdProduct" Member="PgdProducts" Storage="_Products" ThisKey="CategoryID" OtherKey="CategoryID" Type="PgdProduct" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalesPeople" Member="PgdSalesPersons">
+    <Type Name="PgdSalesPerson">
+      <Column Name="OID" Member="SalesPersonID" Storage="_OID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalesPersonName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="PgdSalesPerson_PgdOrder" Member="PgdOrders" Storage="_Orders" ThisKey="SalesPersonID" OtherKey="SalesPersonID" Type="PgdOrder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customers" Member="PgdCustomers">
+    <Type Name="PgdCustomer">
+      <Column Name="OID" Member="CustomerID" Storage="_OID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="PgdCustomer_PgdOrder" Member="PgdOrders" Storage="_Orders" ThisKey="CustomerID" OtherKey="CustomerID" Type="PgdOrder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="PgdOrders">
+    <Type Name="PgdOrder">
+      <Column Name="OID" Member="OrderID" Storage="_OID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalesPerson" Member="SalesPersonID" Storage="_SalesPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Customer" Member="CustomerID" Storage="_Customer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PgdOrder_PgdSale" Member="PgdSales" Storage="_Sales" ThisKey="OrderID" OtherKey="OrderID" Type="PgdSale" />
+      <Association Name="PgdCustomer_PgdOrder" Member="PgdCustomer" Storage="_Customer1" ThisKey="CustomerID" OtherKey="CustomerID" Type="PgdCustomer" IsForeignKey="true" />
+      <Association Name="PgdSalesPerson_PgdOrder" Member="PgdSalesPerson" Storage="_SalesPeople" ThisKey="SalesPersonID" OtherKey="SalesPersonID" Type="PgdSalesPerson" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="PgdProducts">
+    <Type Name="PgdProduct">
+      <Column Name="OID" Member="ProductID" Storage="_OID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Category" Member="CategoryID" Storage="_Category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PgdProduct_PgdSale" Member="PgdSales" Storage="_Sales" ThisKey="ProductID" OtherKey="ProductID" Type="PgdSale" />
+      <Association Name="PgdCategory_PgdProduct" Member="PgdCategory" Storage="_Category1" ThisKey="CategoryID" OtherKey="CategoryID" Type="PgdCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sales" Member="PgdSales">
+    <Type Name="PgdSale">
+      <Column Name="OID" Member="SaleID" Storage="_OID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Order]" Member="OrderID" Storage="_Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Product" Member="ProductID" Storage="_Product" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="PgdOrder_PgdSale" Member="PgdOrder" Storage="_Order1" ThisKey="OrderID" OtherKey="OrderID" Type="PgdOrder" IsForeignKey="true" />
+      <Association Name="PgdProduct_PgdSale" Member="PgdProduct" Storage="_Product1" ThisKey="ProductID" OtherKey="ProductID" Type="PgdProduct" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

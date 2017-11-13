@@ -1,0 +1,8 @@
+﻿@model ReportsDemoModel
+@Html.DevExpress().DocumentViewer(
+    settings => {
+        settings.Name = "DocumentViewer";
+        settings.Report = Model.Report;
+        settings.CallbackRouteValues = new { Controller = "ReportTypes", Action = "MultiColumnViewerPartial", ReportID = Model.ReportID };
+        settings.ExportRouteValues = new { Controller = "ReportTypes", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+    }).GetHtml()

@@ -1,0 +1,22 @@
+﻿@using DevExpress.Web.Demos.Code.Designer
+@model ReportsDemoModel
+@Html.DevExpress().DocumentViewer(
+    settings => {
+        settings.Name = "DocumentViewer";
+        settings.Report = Model.Report;
+        settings.SettingsSplitter.DocumentMapCollapsed = true;
+        settings.CallbackRouteValues = new { Controller = "ReportTypes", Action = "TableReportViewerPartial", ReportID = Model.ReportID };
+        settings.ExportRouteValues = new { Controller = "ReportTypes", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+        settings.SetCustomParameter("OrderIdParameter", x => {
+            x.ParameterType = MVCxDocumentViewerParameterEditorType.SpinEdit;
+            var props = (SpinEditProperties)x.PropertiesEdit;
+            props.MinValue = 10248;
+            props.MaxValue = 11077;
+        });
+        settings.SetCustomParameter("MaxRowCountParameter", x => {
+            x.ParameterType = MVCxDocumentViewerParameterEditorType.SpinEdit;
+            var props = (SpinEditProperties)x.PropertiesEdit;
+            props.MinValue = 1;
+            props.MaxValue = 13;
+        });
+    }).GetHtml()

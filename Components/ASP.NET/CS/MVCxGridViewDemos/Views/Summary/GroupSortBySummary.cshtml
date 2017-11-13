@@ -1,0 +1,18 @@
+﻿@model IEnumerable
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#SummarySortOrder").change(function() {
+            $("form").submit();
+        });
+    });
+</script>
+
+@using(Html.BeginForm()) {
+    <div>
+        <label for="SummarySortOrder">Sort by summary mode:</label>
+        @Html.DropDownList("SummarySortOrder", typeof(DevExpress.Data.ColumnSortOrder), (object)ViewBag.SummarySortOrder)
+    </div>
+    <br />
+    @Html.Partial("GroupSortBySummaryPartial", Model)
+}

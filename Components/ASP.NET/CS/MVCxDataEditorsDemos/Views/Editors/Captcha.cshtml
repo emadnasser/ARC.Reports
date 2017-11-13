@@ -1,0 +1,43 @@
+﻿<script type="text/javascript">
+    $(document).ready(function() {
+        $("#apply").click(function(){
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("CaptchaPartial", "Editors")',
+                data: {
+                    characterSet: $("#CharacterSet").val(), 
+                    codeLength: $("#CodeLength option:selected").text(),
+                    isApplyOptions: true
+                },
+                success: function(response) {
+                    $("#content").html(response);
+                }
+            });
+        })
+    });
+</script>
+
+@{
+    var options = Session["CaptchaOptions"] != null ? (CaptchaDemoOptions)Session["CaptchaOptions"] : CaptchaDemoOptions.Default;
+}
+
+@using (Html.BeginForm()){
+    <div style="padding-right: 25px; float:left;">
+        <div id="content">
+            @Html.Partial("CaptchaPartial")
+        </div>
+        <input type="submit" value="Submit" />
+    </div>
+    
+    <div class="chartOptionsPanel horizOptionsPanel"  style="float:left;">
+        <div>
+            <label for="CharacterSet">Character set:</label>
+            @Html.TextBox("CharacterSet", options.CharacterSet)
+        </div>
+        <div>
+            <label for="CodeLength">Code length:</label>
+            @Html.DropDownList("CodeLength", CaptchaDemoOptions.GetCodeLengthRange(options.CodeLength))
+        </div>
+        <input id="apply" name="apply" type="button" value="Apply" />
+    </div>
+}

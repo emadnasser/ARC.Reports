@@ -1,0 +1,11 @@
+﻿<script type="text/javascript">
+    function OnFileManagerEndCallback(s, e) {
+        $("#EventLog").load('@(Url.Action("CloudProviderLogPartial", "FileManager", new { type = FileManagerProviderType.Amazon }, Request.Url.Scheme))');
+    }
+</script>
+
+@using(Html.BeginForm()) {
+    @Html.Action("CloudProviderPartial", new { type = FileManagerProviderType.Amazon });
+    <br />
+    @Html.Action("CloudProviderLog", new { type = FileManagerProviderType.Amazon });
+}

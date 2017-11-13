@@ -1,0 +1,40 @@
+﻿@Html.DevExpress().Menu(settings => {
+    settings.Name = "Menu";
+    settings.Width = Unit.Percentage(100);
+    settings.ControlStyle.HorizontalAlign = HorizontalAlign.Center;
+    
+    settings.EnableAdaptivity = true;
+    
+    settings.Items.Add(i => {
+        i.Text = "Home";
+        i.NavigateUrl = "javascript:void(0)";
+        i.AdaptivePriority = 1;
+    });
+    settings.Items.Add(i => {
+        i.Text = "Products";
+        i.NavigateUrl = "javascript:void(1)";
+    });
+    settings.Items.Add(i => {
+        i.Text = "Customers";
+        i.NavigateUrl = "javascript:void(2)";
+    });
+    settings.Items.Add(i => {
+        i.Text = "Employees";
+        i.NavigateUrl = "javascript:void(3)";
+    });
+    settings.Items.Add(i => {
+        i.Text = "Support";
+        i.NavigateUrl = "javascript:void(4)";
+        i.AdaptivePriority = 1;
+    });
+    settings.Items.Add(i => {
+        i.Text = "My Account";
+        i.NavigateUrl = "javascript:void(5)";
+        i.AdaptivePriority = 1;
+    });
+    settings.Items.Add(i => {
+        i.Text = "About Us";
+        i.NavigateUrl = "javascript:void(6)";
+        i.AdaptivePriority = 1;
+    });
+}).GetHtml()

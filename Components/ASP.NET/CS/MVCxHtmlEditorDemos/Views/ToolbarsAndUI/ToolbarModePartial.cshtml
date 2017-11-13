@@ -1,0 +1,31 @@
+﻿@model HtmlEditorToolbarMode
+           
+@Html.DevExpress().HtmlEditor(
+    settings =>
+    {
+        settings.Name = "heToolbarMode";
+        settings.CallbackRouteValues = new { Controller = "ToolbarsAndUI", Action = "ToolbarModePartial", toolbarMode = Model};
+        settings.Width = Unit.Percentage(100);
+        settings.Height = Unit.Pixel(440);
+
+        settings.ToolbarMode = Model;
+        
+        string htmlContentPath = HttpContext.Current.Server.MapPath("~/Content/HtmlEditor/DemoHtml/ComboBox.html");
+        settings.Html = System.IO.File.ReadAllText(htmlContentPath);
+
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageUpload.FileSystemSettings.Assign(HtmlEditorFeaturesDemosHelper.FileSaveSettings.FileSystemSettings);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageUpload.ValidationSettings.Assign(HtmlEditorFeaturesDemosHelper.ImageUploadValidationSettings);
+
+        HtmlEditorFeaturesDemosHelper.SetHtmlEditorImageSelectorSettings(settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector);
+
+        Action<object, FileManagerActionEventArgsBase> editHandler = (sender, e) => {
+            e.Cancel = Utils.IsSiteMode;
+            e.ErrorText = Utils.GetReadOnlyMessageText();
+        };
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemDeleting = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.FolderCreating = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.FileUploading = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemMoving = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemRenaming = (sender, e) => editHandler(sender, e);
+    }
+).GetHtml()

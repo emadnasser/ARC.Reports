@@ -1,0 +1,12 @@
+﻿@Html.DevExpress().HtmlEditor(settings => {
+    settings.Name = "htmlEditor";
+    settings.CallbackRouteValues = new { Controller = "Overview", Action = "OverviewPartial" };
+    settings.Width = Unit.Pixel(631);
+    settings.Height = Unit.Pixel(465);
+    
+    string htmlContentPath = HttpContext.Current.Server.MapPath("~/Content/HtmlEditor/DemoHtml/Blueberry.htm");
+    settings.Html = System.IO.File.ReadAllText(htmlContentPath);
+    
+    settings.Toolbars.CreateDefaultToolbars();
+    settings.Toolbars[1].Items.RemoveAll(item => item.GetType() == typeof(ToolbarParagraphFormattingEdit));
+}).GetHtml()

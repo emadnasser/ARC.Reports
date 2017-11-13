@@ -1,0 +1,1475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73BB869A-89D2-4F66-A433-FD9857E2D8BD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>ChartsMainDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DevExpress.XtraCharts.Demos</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2">
+      <Name>DevExpress.XtraCharts.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard">
+      <Name>DevExpress.XtraCharts.v16.2.Wizard</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.Charts.v16.2.Core">
+      <Name>DevExpress.Charts.v16.2.Core</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI">
+      <Name>DevExpress.XtraCharts.v16.2.UI</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <Name>DevExpress.XtraEditors.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2">
+      <Name>DevExpress.XtraNavBar.v16.2</Name>
+      <Private>False</Private>
+    <HintPath></HintPath></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions"><Private>False</Private></Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BarExportToImageItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChartRibbonMenuManager.cs" />
+    <Compile Include="Modules\AdvancedViews\CandleStick.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\CandleStick.Designer.cs">
+      <DependentUpon>CandleStick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\Gantt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\Gantt.Designer.cs">
+      <DependentUpon>Gantt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\GanttSideBySide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\GanttSideBySide.Designer.cs">
+      <DependentUpon>GanttSideBySide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\Stock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Annotations\AnnotationLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Annotations\AnnotationLayout.Designer.cs">
+      <DependentUpon>AnnotationLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Annotations\ImageAnnotation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Annotations\ImageAnnotation.Designer.cs">
+      <DependentUpon>ImageAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Annotations\TextAnnotation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Annotations\TextAnnotation.Designer.cs">
+      <DependentUpon>TextAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DArea.Designer.cs">
+      <DependentUpon>3DArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DFullStackedArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DFullStackedArea.Designer.cs">
+      <DependentUpon>3DFullStackedArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DFullStackedSplineArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DFullStackedSplineArea.Designer.cs">
+      <DependentUpon>3DFullStackedSplineArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DSplineArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DSplineArea.Designer.cs">
+      <DependentUpon>3DSplineArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DStackedArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DStackedArea.Designer.cs">
+      <DependentUpon>3DStackedArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DStackedSplineArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DStackedSplineArea.Designer.cs">
+      <DependentUpon>3DStackedSplineArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DStepArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DStepArea.Designer.cs">
+      <DependentUpon>3DStepArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\Area.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\Area.Designer.cs">
+      <DependentUpon>Area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\FullStackedArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\FullStackedArea.Designer.cs">
+      <DependentUpon>FullStackedArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\FullStackedSplineArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\FullStackedSplineArea.Designer.cs">
+      <DependentUpon>FullStackedSplineArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\SplineArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\SplineArea.Designer.cs">
+      <DependentUpon>SplineArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\FullStackedStepArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\FullStackedStepArea.Designer.cs">
+      <DependentUpon>FullStackedStepArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\StackedStepArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\StackedStepArea.Designer.cs">
+      <DependentUpon>StackedStepArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\StackedArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\StackedArea.Designer.cs">
+      <DependentUpon>StackedArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\StackedSplineArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\StackedSplineArea.Designer.cs">
+      <DependentUpon>StackedSplineArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\StepArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\StepArea.Designer.cs">
+      <DependentUpon>StepArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DBar.Designer.cs">
+      <DependentUpon>3DBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DFullStackedBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DFullStackedBar.Designer.cs">
+      <DependentUpon>3DFullStackedBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DFullStackedBarSideBySide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DFullStackedBarSideBySide.Designer.cs">
+      <DependentUpon>3DFullStackedBarSideBySide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DManhattanBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DManhattanBar.Designer.cs">
+      <DependentUpon>3DManhattanBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DStackedBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DStackedBar.Designer.cs">
+      <DependentUpon>3DStackedBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DStackedBarSideBySide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\3DStackedBarSideBySide.Designer.cs">
+      <DependentUpon>3DStackedBarSideBySide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\Bar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\Bar.Designer.cs">
+      <DependentUpon>Bar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\FullStackedBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\FullStackedBar.Designer.cs">
+      <DependentUpon>FullStackedBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\FullStackedBarSideBySide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\FullStackedBarSideBySide.Designer.cs">
+      <DependentUpon>FullStackedBarSideBySide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\StackedBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\StackedBar.Designer.cs">
+      <DependentUpon>StackedBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BarViews\StackedBarSideBySide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BarViews\StackedBarSideBySide.Designer.cs">
+      <DependentUpon>StackedBarSideBySide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartElements\ChartTitles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartElements\ChartTitles.Designer.cs">
+      <DependentUpon>ChartTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartElements\CheckBoxesInLegend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartElements\CheckBoxesInLegend.Designer.cs">
+      <DependentUpon>CheckBoxesInLegend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartElements\HorizontalPanes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartElements\HorizontalPanes.Designer.cs">
+      <DependentUpon>HorizontalPanes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartElements\Legend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartElements\Legend.Designer.cs">
+      <DependentUpon>Legend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartElements\ScaleBreaks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartElements\ScaleBreaks.Designer.cs">
+      <DependentUpon>ScaleBreaks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartElements\SecondaryAxes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartElements\SecondaryAxes.Designer.cs">
+      <DependentUpon>SecondaryAxes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartElements\SeriesTitles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartElements\SeriesTitles.Designer.cs">
+      <DependentUpon>SeriesTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartElements\VerticalPanes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartElements\VerticalPanes.Designer.cs">
+      <DependentUpon>VerticalPanes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\AxisLabels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\AxisLabels.Designer.cs">
+      <DependentUpon>AxisLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\LegendItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\LegendItems.Designer.cs">
+      <DependentUpon>LegendItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\PolarDiagramCustomPaint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\PolarDiagramCustomPaint.Designer.cs">
+      <DependentUpon>PolarDiagramCustomPaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\SeriesPoints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\SeriesPoints.Designer.cs">
+      <DependentUpon>SeriesPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\XYDiagramCustomPaint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw\XYDiagramCustomPaint.Designer.cs">
+      <DependentUpon>XYDiagramCustomPaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAggregation\CurrencyExchangeRates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAggregation\CurrencyExchangeRates.Designer.cs">
+      <DependentUpon>CurrencyExchangeRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAggregation\DateTimeDataAggregation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAggregation\DateTimeDataAggregation.Designer.cs">
+      <DependentUpon>DateTimeDataAggregation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAggregation\NumericDataAggregation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAggregation\NumericDataAggregation.Designer.cs">
+      <DependentUpon>NumericDataAggregation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\ErrorBars.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\ErrorBars.Designer.cs">
+      <DependentUpon>ErrorBars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\Oscillators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\Oscillators.Designer.cs">
+      <DependentUpon>Oscillators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\PriceIndicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\PriceIndicators.Designer.cs">
+      <DependentUpon>PriceIndicators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\TrendIndicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\TrendIndicators.Designer.cs">
+      <DependentUpon>TrendIndicators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\FibonacciIndicators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\FibonacciIndicators.Designer.cs">
+      <DependentUpon>FibonacciIndicators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\MovingAverage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\MovingAverage.Designer.cs">
+      <DependentUpon>MovingAverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\RegressionLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\RegressionLine.Designer.cs">
+      <DependentUpon>RegressionLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\Trendlines.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataAnalysis\Trendlines.Designer.cs">
+      <DependentUpon>Trendlines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataBinding\BindingIndividualSeries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataBinding\BindingIndividualSeries.Designer.cs">
+      <DependentUpon>BindingIndividualSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataBinding\Colorizer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataBinding\Colorizer.Designer.cs">
+      <DependentUpon>Colorizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataBinding\Summarization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataBinding\Summarization.Designer.cs">
+      <DependentUpon>Summarization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataBinding\TagProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataBinding\TagProperty.Designer.cs">
+      <DependentUpon>TagProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DataBinding\UsingSeriesTemplates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataBinding\UsingSeriesTemplates.Designer.cs">
+      <DependentUpon>UsingSeriesTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FunnelViews\3DFunnel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FunnelViews\3DFunnel.Designer.cs">
+      <DependentUpon>3DFunnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FunnelViews\Funnel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FunnelViews\Funnel.Designer.cs">
+      <DependentUpon>Funnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\Animation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\Animation.Designer.cs">
+      <DependentUpon>Animation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\DateTimeScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\DateTimeScale.Designer.cs">
+      <DependentUpon>DateTimeScale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\DisplayPatterns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\DisplayPatterns.Designer.cs">
+      <DependentUpon>DisplayPatterns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\DrillDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\DrillDown.Designer.cs">
+      <DependentUpon>DrillDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\EmptyPoints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\EmptyPoints.Designer.cs">
+      <DependentUpon>EmptyPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\EqualSizeForPiesDoughnuts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\EqualSizeForPiesDoughnuts.Designer.cs">
+      <DependentUpon>EqualSizeForPiesDoughnuts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\HitTesting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\HitTesting.Designer.cs">
+      <DependentUpon>HitTesting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\LogarithmicScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\LogarithmicScale.Designer.cs">
+      <DependentUpon>LogarithmicScale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\ScrollingAndZooming.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\ScrollingAndZooming.Designer.cs">
+      <DependentUpon>ScrollingAndZooming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\Selection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\Selection.Designer.cs">
+      <DependentUpon>Selection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\ToolTips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\ToolTips.Designer.cs">
+      <DependentUpon>ToolTips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\TopNAndOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Miscellaneous\TopNAndOthers.Designer.cs">
+      <DependentUpon>TopNAndOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\3DDoughnut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\3DDoughnut.Designer.cs">
+      <DependentUpon>3DDoughnut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\3DPie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\3DPie.Designer.cs">
+      <DependentUpon>3DPie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\Doughnut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\Doughnut.Designer.cs">
+      <DependentUpon>Doughnut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\NestedDoughnut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\NestedDoughnut.Designer.cs">
+      <DependentUpon>NestedDoughnut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\Pie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PieDoughnutViews\Pie.Designer.cs">
+      <DependentUpon>Pie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DFullStackedLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DFullStackedLine.Designer.cs">
+      <DependentUpon>3DFullStackedLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DLine.Designer.cs">
+      <DependentUpon>3DLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DSpline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DSpline.Designer.cs">
+      <DependentUpon>3DSpline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DStackedLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DStackedLine.Designer.cs">
+      <DependentUpon>3DStackedLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DStepLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\3DStepLine.Designer.cs">
+      <DependentUpon>3DStepLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\Bubble.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\Bubble.Designer.cs">
+      <DependentUpon>Bubble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\ChartDemoLineBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\ChartDemoLineBase.Designer.cs">
+      <DependentUpon>ChartDemoLineBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\ChartDemoPointBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\ChartDemoPointBase.Designer.cs">
+      <DependentUpon>ChartDemoPointBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\FullStackedLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\FullStackedLine.Designer.cs">
+      <DependentUpon>FullStackedLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\Line.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\Line.Designer.cs">
+      <DependentUpon>Line.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\Point.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\Point.Designer.cs">
+      <DependentUpon>Point.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\ScatterLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\ScatterLine.Designer.cs">
+      <DependentUpon>ScatterLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\Spline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\Spline.Designer.cs">
+      <DependentUpon>Spline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\StackedLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\StackedLine.Designer.cs">
+      <DependentUpon>StackedLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\StepLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PointLineViews\StepLine.Designer.cs">
+      <DependentUpon>StepLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\PolarArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\PolarArea.Designer.cs">
+      <DependentUpon>PolarArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\PolarLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\PolarLine.Designer.cs">
+      <DependentUpon>PolarLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\PolarPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\PolarPoint.Designer.cs">
+      <DependentUpon>PolarPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\RadarArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\RadarArea.Designer.cs">
+      <DependentUpon>RadarArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\RadarLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\RadarLine.Designer.cs">
+      <DependentUpon>RadarLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\RadarPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\RadarPoint.Designer.cs">
+      <DependentUpon>RadarPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ScatterPolarLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ScatterPolarLine.Designer.cs">
+      <DependentUpon>ScatterPolarLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ScatterRadarLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ScatterRadarLine.Designer.cs">
+      <DependentUpon>ScatterRadarLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RangeViews\PolarRangeArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RangeViews\PolarRangeArea.Designer.cs">
+      <DependentUpon>PolarRangeArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RangeViews\RadarRangeArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RangeViews\RadarRangeArea.Designer.cs">
+      <DependentUpon>RadarRangeArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RangeViews\RangeArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RangeViews\RangeArea.Designer.cs">
+      <DependentUpon>RangeArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RangeViews\3DRangeArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RangeViews\3DRangeArea.Designer.cs">
+      <DependentUpon>3DRangeArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RangeViews\RangeBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RangeViews\RangeBar.Designer.cs">
+      <DependentUpon>RangeBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RangeViews\SideBySideRangeBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RangeViews\SideBySideRangeBar.Designer.cs">
+      <DependentUpon>SideBySideRangeBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingFor3DPie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingFor3DPie.Designer.cs">
+      <DependentUpon>ResolveOverlappingFor3DPie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingForLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingForLine.Designer.cs">
+      <DependentUpon>ResolveOverlappingForLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingOfAxisLabels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingOfAxisLabels.Designer.cs">
+      <DependentUpon>ResolveOverlappingOfAxisLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SwiftPlotView\LargeDatasource.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SwiftPlotView\LargeDatasource.Designer.cs">
+      <DependentUpon>LargeDatasource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SwiftPlotView\RealTimeChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SwiftPlotView\RealTimeChart.Designer.cs">
+      <DependentUpon>RealTimeChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ViewCombinations\2DBarAndLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ViewCombinations\2DBarAndLine.Designer.cs">
+      <DependentUpon>2DBarAndLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ViewCombinations\3DBarAndArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ViewCombinations\3DBarAndArea.Designer.cs">
+      <DependentUpon>3DBarAndArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorialControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DemosRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\Annotations\AnnotationDemoBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Annotations\AnnotationDemoBase.Designer.cs">
+      <DependentUpon>AnnotationDemoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartDemoBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartDemoBase.Designer.cs">
+      <DependentUpon>ChartDemoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartDemoBase2D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartDemoBase2D.Designer.cs">
+      <DependentUpon>ChartDemoBase2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChartDemoBase3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChartDemoBase3D.Designer.cs">
+      <DependentUpon>ChartDemoBase3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\FinancialSeriesViewModuleBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdvancedViews\FinancialSeriesViewModuleBase.Designer.cs">
+      <DependentUpon>FinancialSeriesViewModuleBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DAreaDemoBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AreaViews\3DAreaDemoBase.Designer.cs">
+      <DependentUpon>3DAreaDemoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ChartDemoRadarPolarBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ChartDemoRadarPolarBase.Designer.cs">
+      <DependentUpon>ChartDemoRadarPolarBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ChartDemoPolarBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ChartDemoPolarBase.Designer.cs">
+      <DependentUpon>ChartDemoPolarBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DataGenerator.cs" />
+    <Compile Include="Utils\Markers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\Menu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ChartDemoRadarBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RadarPolarViews\ChartDemoRadarBase.Designer.cs">
+      <DependentUpon>ChartDemoRadarBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\PolarDiagramPointsGenerator.cs" />
+    <Compile Include="Utils\SeriesGenerator.cs" />
+    <Compile Include="Utils\Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Data\GasPrices.xml" />
+    <EmbeddedResource Include="Data\GoogleStock.xml" />
+    <EmbeddedResource Include="Data\Population.xml" />
+    <EmbeddedResource Include="Data\HPI.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdvancedViews\CandleStick.resx">
+      <DependentUpon>CandleStick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdvancedViews\Gantt.resx">
+      <DependentUpon>Gantt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdvancedViews\GanttSideBySide.resx">
+      <DependentUpon>GanttSideBySide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdvancedViews\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Annotations\AnnotationLayout.resx">
+      <DependentUpon>AnnotationLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Annotations\TextAnnotation.resx">
+      <DependentUpon>TextAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\3DArea.resx">
+      <DependentUpon>3DArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\3DFullStackedArea.resx">
+      <DependentUpon>3DFullStackedArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\3DFullStackedSplineArea.resx">
+      <DependentUpon>3DFullStackedSplineArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\3DSplineArea.resx">
+      <DependentUpon>3DSplineArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\3DStackedArea.resx">
+      <DependentUpon>3DStackedArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\3DStackedSplineArea.resx">
+      <DependentUpon>3DStackedSplineArea.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\3DStepArea.resx">
+      <DependentUpon>3DStepArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\Area.resx">
+      <DependentUpon>Area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\FullStackedArea.resx">
+      <DependentUpon>FullStackedArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\FullStackedSplineArea.resx">
+      <DependentUpon>FullStackedSplineArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\SplineArea.resx">
+      <DependentUpon>SplineArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\FullStackedStepArea.resx">
+      <DependentUpon>FullStackedStepArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\StackedStepArea.resx">
+      <DependentUpon>StackedStepArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\StackedArea.resx">
+      <DependentUpon>StackedArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\StackedSplineArea.resx">
+      <DependentUpon>StackedSplineArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\StepArea.resx">
+      <DependentUpon>StepArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\3DBar.resx">
+      <DependentUpon>3DBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\3DFullStackedBar.resx">
+      <DependentUpon>3DFullStackedBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\3DFullStackedBarSideBySide.resx">
+      <DependentUpon>3DFullStackedBarSideBySide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\3DManhattanBar.resx">
+      <DependentUpon>3DManhattanBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\3DStackedBar.resx">
+      <DependentUpon>3DStackedBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\3DStackedBarSideBySide.resx">
+      <DependentUpon>3DStackedBarSideBySide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\Bar.resx">
+      <DependentUpon>Bar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\FullStackedBar.resx">
+      <DependentUpon>FullStackedBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\FullStackedBarSideBySide.resx">
+      <DependentUpon>FullStackedBarSideBySide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\StackedBar.resx">
+      <DependentUpon>StackedBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BarViews\StackedBarSideBySide.resx">
+      <DependentUpon>StackedBarSideBySide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartElements\ChartTitles.resx">
+      <DependentUpon>ChartTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartElements\CheckBoxesInLegend.resx">
+      <DependentUpon>CheckBoxesInLegend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartElements\HorizontalPanes.resx">
+      <DependentUpon>HorizontalPanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartElements\Legend.resx">
+      <DependentUpon>Legend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartElements\ScaleBreaks.resx">
+      <DependentUpon>ScaleBreaks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartElements\SecondaryAxes.resx">
+      <DependentUpon>SecondaryAxes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartElements\SeriesTitles.resx">
+      <DependentUpon>SeriesTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartElements\VerticalPanes.resx">
+      <DependentUpon>VerticalPanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDraw\AxisLabels.resx">
+      <DependentUpon>AxisLabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDraw\LegendItems.resx">
+      <DependentUpon>LegendItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDraw\PolarDiagramCustomPaint.resx">
+      <DependentUpon>PolarDiagramCustomPaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDraw\SeriesPoints.resx">
+      <DependentUpon>SeriesPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDraw\XYDiagramCustomPaint.resx">
+      <DependentUpon>XYDiagramCustomPaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAggregation\CurrencyExchangeRates.resx">
+      <DependentUpon>CurrencyExchangeRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAggregation\DateTimeDataAggregation.resx">
+      <DependentUpon>DateTimeDataAggregation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAggregation\NumericDataAggregation.resx">
+      <DependentUpon>NumericDataAggregation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalysis\ErrorBars.resx">
+      <DependentUpon>ErrorBars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalysis\Oscillators.resx">
+      <DependentUpon>Oscillators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalysis\PriceIndicators.resx">
+      <DependentUpon>PriceIndicators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalysis\TrendIndicators.resx">
+      <DependentUpon>TrendIndicators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalysis\FibonacciIndicators.resx">
+      <DependentUpon>FibonacciIndicators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalysis\MovingAverage.resx">
+      <DependentUpon>MovingAverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalysis\RegressionLine.resx">
+      <DependentUpon>RegressionLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataAnalysis\Trendlines.resx">
+      <DependentUpon>Trendlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataBinding\BindingIndividualSeries.resx">
+      <DependentUpon>BindingIndividualSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataBinding\Colorizer.resx">
+      <DependentUpon>Colorizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataBinding\Summarization.resx">
+      <DependentUpon>Summarization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataBinding\TagProperty.resx">
+      <DependentUpon>TagProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataBinding\UsingSeriesTemplates.resx">
+      <DependentUpon>UsingSeriesTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FunnelViews\3DFunnel.resx">
+      <DependentUpon>3DFunnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FunnelViews\Funnel.resx">
+      <DependentUpon>Funnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\Animation.resx">
+      <DependentUpon>Animation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\DateTimeScale.resx">
+      <DependentUpon>DateTimeScale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\DisplayPatterns.resx">
+      <DependentUpon>DisplayPatterns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\DrillDown.resx">
+      <DependentUpon>DrillDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\EmptyPoints.resx">
+      <DependentUpon>EmptyPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\EqualSizeForPiesDoughnuts.resx">
+      <DependentUpon>EqualSizeForPiesDoughnuts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\HitTesting.resx">
+      <DependentUpon>HitTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\LogarithmicScale.resx">
+      <DependentUpon>LogarithmicScale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\ScrollingAndZooming.resx">
+      <DependentUpon>ScrollingAndZooming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\Selection.resx">
+      <DependentUpon>Selection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\ToolTips.resx">
+      <DependentUpon>ToolTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Miscellaneous\TopNAndOthers.resx">
+      <DependentUpon>TopNAndOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PieDoughnutViews\3DDoughnut.resx">
+      <DependentUpon>3DDoughnut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PieDoughnutViews\3DPie.resx">
+      <DependentUpon>3DPie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PieDoughnutViews\Doughnut.resx">
+      <DependentUpon>Doughnut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PieDoughnutViews\NestedDoughnut.resx">
+      <DependentUpon>NestedDoughnut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PieDoughnutViews\Pie.resx">
+      <DependentUpon>Pie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\3DFullStackedLine.resx">
+      <DependentUpon>3DFullStackedLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\3DLine.resx">
+      <DependentUpon>3DLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\3DSpline.resx">
+      <DependentUpon>3DSpline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\3DStackedLine.resx">
+      <DependentUpon>3DStackedLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\3DStepLine.resx">
+      <DependentUpon>3DStepLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\Bubble.resx">
+      <DependentUpon>Bubble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\ChartDemoLineBase.resx">
+      <DependentUpon>ChartDemoLineBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\ChartDemoPointBase.resx">
+      <DependentUpon>ChartDemoPointBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\FullStackedLine.resx">
+      <DependentUpon>FullStackedLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\Line.resx">
+      <DependentUpon>Line.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\Point.resx">
+      <DependentUpon>Point.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\ScatterLine.resx">
+      <DependentUpon>ScatterLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\Spline.resx">
+      <DependentUpon>Spline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\StackedLine.resx">
+      <DependentUpon>StackedLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PointLineViews\StepLine.resx">
+      <DependentUpon>StepLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\PolarArea.resx">
+      <DependentUpon>PolarArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\PolarLine.resx">
+      <DependentUpon>PolarLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\PolarPoint.resx">
+      <DependentUpon>PolarPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\RadarArea.resx">
+      <DependentUpon>RadarArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\RadarLine.resx">
+      <DependentUpon>RadarLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\RadarPoint.resx">
+      <DependentUpon>RadarPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\ScatterPolarLine.resx">
+      <DependentUpon>ScatterPolarLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\ScatterRadarLine.resx">
+      <DependentUpon>ScatterRadarLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RangeViews\PolarRangeArea.resx">
+      <DependentUpon>PolarRangeArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RangeViews\RadarRangeArea.resx">
+      <DependentUpon>RadarRangeArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RangeViews\RangeArea.resx">
+      <DependentUpon>RangeArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RangeViews\3DRangeArea.resx">
+      <DependentUpon>3DRangeArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RangeViews\RangeBar.resx">
+      <DependentUpon>RangeBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RangeViews\SideBySideRangeBar.resx">
+      <DependentUpon>SideBySideRangeBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingFor3DPie.resx">
+      <DependentUpon>ResolveOverlappingFor3DPie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingForLine.resx">
+      <DependentUpon>ResolveOverlappingForLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ResolveLabelsOverlapping\ResolveOverlappingOfAxisLabels.resx">
+      <DependentUpon>ResolveOverlappingOfAxisLabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SwiftPlotView\LargeDatasource.resx">
+      <DependentUpon>LargeDatasource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SwiftPlotView\RealTimeChart.resx">
+      <DependentUpon>RealTimeChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ViewCombinations\2DBarAndLine.resx">
+      <DependentUpon>2DBarAndLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ViewCombinations\3DBarAndArea.resx">
+      <DependentUpon>3DBarAndArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorialControl.resx">
+      <DependentUpon>TutorialControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartDemoBase.resx">
+      <DependentUpon>ChartDemoBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartDemoBase2D.resx">
+      <DependentUpon>ChartDemoBase2D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ChartDemoBase3D.resx">
+      <DependentUpon>ChartDemoBase3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdvancedViews\FinancialSeriesViewModuleBase.resx">
+      <DependentUpon>FinancialSeriesViewModuleBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\ChartDemoRadarBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChartDemoRadarBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AreaViews\3DAreaDemoBase.resx">
+      <DependentUpon>3DAreaDemoBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\ChartDemoRadarPolarBase.resx">
+      <DependentUpon>ChartDemoRadarPolarBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RadarPolarViews\ChartDemoPolarBase.resx">
+      <DependentUpon>ChartDemoPolarBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppIcon.ico" />
+    <EmbeddedResource Include="Data\EurUsdRate.xml" />
+    <EmbeddedResource Include="Data\GbpUsdRate.xml" />
+    <EmbeddedResource Include="Data\AppleStock.xml" />
+    <Content Include="Data\DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\DS1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\DS2.xsc">
+      <DependentUpon>DS2.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\DS2.xss">
+      <DependentUpon>DS2.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS.xsc">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS.xss">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS1.xsc">
+      <DependentUpon>DS1.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS1.xss">
+      <DependentUpon>DS1.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS3.xsc">
+      <DependentUpon>DS3.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS3.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\DS3.xss">
+      <DependentUpon>DS3.xsd</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Mars.png" />
+    <EmbeddedResource Include="Modules\Annotations\AnnotationDemoBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AnnotationDemoBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\AnnotationMaximum.png" />
+    <EmbeddedResource Include="Images\AnnotationMinimum.png" />
+    <EmbeddedResource Include="Images\Bug.png" />
+    <EmbeddedResource Include="Images\NoBug.png" />
+    <EmbeddedResource Include="Images\CrossCursor.cur" />
+    <EmbeddedResource Include="Images\Appearance_16x16.png" />
+    <EmbeddedResource Include="Images\Appearance_32x32.png" />
+    <EmbeddedResource Include="Images\Palette_16x16.png" />
+    <EmbeddedResource Include="Images\Palette_32x32.png" />
+    <EmbeddedResource Include="Images\Wizard_16x16.png" />
+    <EmbeddedResource Include="Images\Wizard_32x32.png" />
+    <EmbeddedResource Include="Data\GDPofG7.xml" />
+    <Content Include="Data\DS4.xsc">
+      <DependentUpon>DS4.xsd</DependentUpon>
+    </Content>
+    <Content Include="Data\DS4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS4.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\DS4.xss">
+      <DependentUpon>DS4.xsd</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+    <EmbeddedResource Include="Data\AUDUSDDaily.csv" />
+    
+    
+    
+    <EmbeddedResource Include="Data\USDJPYDaily.csv" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

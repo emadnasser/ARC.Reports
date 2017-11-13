@@ -1,0 +1,42 @@
+﻿@section AdditionalResources {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/ImageSlider/NavigationBarMode.css")" />
+}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#VisibleItemsCount").change(function() {
+            $('form').submit();
+        });
+    });
+</script>
+
+@using(Html.BeginForm()) {
+    <div class="BottomMargin">
+        <label for="VisibleItemsCount">VisibleItemsCount:</label>
+        @Html.DropDownList("VisibleItemsCount", ImageSliderDemoHelper.GetVisibleItemsCount(), new { style = "width:50px" })
+    </div>
+    
+    @Html.DevExpress().ImageSlider(
+        settings => {
+            settings.Name = "imageSlider";
+            settings.EnableTheming = false;
+            settings.ShowImageArea = false;
+
+            settings.SettingsBehavior.ExtremeItemClickMode = ExtremeItemClickMode.Select;
+            settings.SettingsNavigationBar.VisibleItemsCount = (int)ViewData["VisibleItemsCount"];
+            settings.SettingsNavigationBar.ThumbnailsModeNavigationButtonVisibility = ElementVisibilityMode.Always;
+            settings.SettingsNavigationBar.PagingMode = NavigationBarPagingMode.Single;
+            settings.SettingsNavigationBar.ThumbnailsNavigationButtonPosition = ThumbnailNavigationBarButtonPosition.Outside;
+
+            settings.SetItemThumbnailTemplateContent(c => {
+                var name = c.EvalDataItem("Name");
+                ViewContext.Writer.Write(
+                    "<a class=\"url\" href='" + c.EvalDataItem("Link") + "' target=\"_blank\">" +
+                        "<img alt='" + name + "' src='" + Url.Content(c.EvalDataItem("ImageUrl").ToString()) + "' />" +
+                        "<span class=\"name\">" + name + "</span>" +
+                    "</a>"
+                );
+            });
+        }
+    ).BindToXML(Server.MapPath("~/App_Data/persons.xml"), "//items/*").GetHtml()
+}

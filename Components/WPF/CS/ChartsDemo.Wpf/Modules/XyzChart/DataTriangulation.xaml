@@ -1,0 +1,121 @@
+﻿<local:ChartsDemoModule
+    x:Class="ChartsDemo.DataTriangulation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:ChartsDemo">
+    <dxdb:DemoModuleControl>
+        <dxdb:DemoModuleControl.OptionsContent>
+            <StackPanel Orientation="Vertical">
+                <dx:GroupFrame
+                    Header="Number of Data Points"
+                    Margin="0,0,0,5">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                Grid.Column="0"
+                                Text="100"
+                                HorizontalAlignment="Left" />
+                            <TextBlock
+                                Grid.Column="1"
+                                Text="2700"
+                                HorizontalAlignment="Right" />
+                        </Grid>
+                        <dxe:TrackBarEdit
+                            Name="slMaxDrawingPoints"
+                            Margin="7,3,7,15"
+                            Value="1400"
+                            Minimum="100"
+                            Maximum="2700"
+                            SmallStep="50"
+                            LargeStep="200"
+                            TickFrequency="100"
+                            TickPlacement="TopLeft" />
+                    </StackPanel>
+                </dx:GroupFrame>
+            </StackPanel>
+        </dxdb:DemoModuleControl.OptionsContent>
+        <Grid>
+            <dxc:Chart3DControl
+                x:Name="chart"
+                BorderThickness="0">
+                <dxc:Series3DStorage>
+                    <dxc:Series3D
+                        DisplayName="Function">
+                        <dxc:SeriesPoint3DDataSourceAdapter
+                            DataSource="{Binding Points}"
+                            XArgumentDataMember="X"
+                            YArgumentDataMember="Y"
+                            ValueDataMember="Z" />
+                        <dxc:Series3D.View>
+                            <dxc:SurfaceSeriesView
+                                MarkerVisible="True"
+                                MarkerSize="5.5"
+                                VisualizationMode="Triangulation"
+                                MaxDrawingPointCount="{Binding ElementName=slMaxDrawingPoints, Path=Value}">
+                                <dxc:SurfaceSeriesView.FillStyle>
+                                    <dxc:GradientFillStyle
+                                        LegendTextPattern="{}{V:F2}">
+                                        <dxc:GradientFillStyle.ColorStops>
+                                            <dxc:ColorStop
+                                                Offset="0%" />
+                                            <dxc:ColorStop
+                                                Offset="25%" />
+                                            <dxc:ColorStop
+                                                Offset="50%" />
+                                            <dxc:ColorStop
+                                                Offset="75%" />
+                                            <dxc:ColorStop
+                                                Offset="100%" />
+                                        </dxc:GradientFillStyle.ColorStops>
+                                    </dxc:GradientFillStyle>
+                                </dxc:SurfaceSeriesView.FillStyle>
+                            </dxc:SurfaceSeriesView>
+                        </dxc:Series3D.View>
+                    </dxc:Series3D>
+                </dxc:Series3DStorage>
+
+                <dxc:Chart3DControl.Legends>
+                    <dxc:Legend
+                        Visible="True"
+                        BorderThickness="0"
+                        HorizontalPosition="Right"
+                        VerticalPosition="Top" />
+                </dxc:Chart3DControl.Legends>
+                <dxc:Chart3DControl.XAxis>
+                    <dxc:XAxis3D>
+                        <dxc:XAxis3D.CrosshairAxisLabelOptions>
+                            <dxc:CrosshairAxisLabelOptions
+                                Pattern="{}{V:F3}" />
+                        </dxc:XAxis3D.CrosshairAxisLabelOptions>
+                    </dxc:XAxis3D>
+                </dxc:Chart3DControl.XAxis>
+                <dxc:Chart3DControl.YAxis>
+                    <dxc:YAxis3D>
+                        <dxc:YAxis3D.CrosshairAxisLabelOptions>
+                            <dxc:CrosshairAxisLabelOptions
+                                Pattern="{}{V:F3}" />
+                        </dxc:YAxis3D.CrosshairAxisLabelOptions>
+                    </dxc:YAxis3D>
+                </dxc:Chart3DControl.YAxis>
+                <dxc:Chart3DControl.ZAxis>
+                    <dxc:ZAxis3D>
+                        <dxc:ZAxis3D.CrosshairAxisLabelOptions>
+                            <dxc:CrosshairAxisLabelOptions
+                                Pattern="{}{V:F3}" />
+                        </dxc:ZAxis3D.CrosshairAxisLabelOptions>
+                    </dxc:ZAxis3D>
+                </dxc:Chart3DControl.ZAxis>
+            </dxc:Chart3DControl>
+        </Grid>
+    </dxdb:DemoModuleControl>
+</local:ChartsDemoModule>

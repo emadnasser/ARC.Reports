@@ -1,0 +1,82 @@
+﻿@section AdditionalResources {
+    <style type="text/css">
+        .cellWithEditor {
+            width: 400px;
+            padding-bottom: 30px;
+        }
+        .cellWithDescription {
+            padding-bottom: 30px;
+        }
+    </style>
+}
+<table>
+    <tr>
+        <td class="cellWithEditor">
+            @Html.DevExpress().TextBox(settings => {
+                settings.Name = "textBox";
+                settings.Properties.Caption = "Text Box";
+                settings.Width = 120;
+            }).Bind("Text").GetHtml()
+        </td>
+        <td class="cellWithDescription">
+            settings.Properties.Caption = "Text Box"
+        </td>
+    </tr>
+    <tr>
+        <td class="cellWithEditor">
+            @Html.DevExpress().ComboBox(settings => {
+                settings.Name = "comboBox";
+                settings.Properties.Caption = "Combo Box";                           
+                for (int i = 1; i < 4; i++) {
+			        settings.Properties.Items.Add(String.Format("Item {0}", i), i);
+			    }
+                settings.Properties.ValidationSettings.RequiredField.IsRequired = true;
+                settings.Properties.CaptionSettings.Position = EditorCaptionPosition.Top;
+                settings.Properties.DropDownStyle = DropDownStyle.DropDown;
+                settings.SelectedIndex = 0;
+            }).GetHtml()
+        </td>
+        <td class="cellWithDescription">
+            settings.Properties.Caption = "Combo Box"<br />
+            settings.Properties.CaptionSettings.RequiredMarkDisplayMode = EditorRequiredMarkMode.Auto (default value)<br />
+            settings.Properties.CaptionSettings.RequiredMark = "*" (default value)<br />
+            settings.Properties.CaptionSettings.Position = EditorCaptionPosition.Top<br />
+            settings.Properties.ValidationSettings.RequiredField.IsRequired = true
+        </td>
+    </tr>
+    <tr>
+        <td class="cellWithEditor">
+            @Html.DevExpress().Memo(settings => {
+                settings.Name = "memo";                   
+                settings.Width = 170;
+                settings.Height = 71;
+                settings.Properties.Caption = "Memo";
+                settings.Properties.CaptionSettings.Position = EditorCaptionPosition.Top;
+                settings.Properties.CaptionSettings.RequiredMarkDisplayMode = EditorRequiredMarkMode.Optional;
+                settings.Properties.CaptionSettings.OptionalMark = " (optional)";
+            }).Bind("Text").GetHtml()
+                
+        </td>
+        <td class="cellWithDescription">
+            settings.Properties.Caption = "Memo"<br />
+            settings.Properties.CaptionSettings.Position = EditorCaptionPosition.Top<br />
+            settings.Properties.CaptionSettings.RequiredMarkDisplayMode = EditorRequiredMarkMode.Optional<br />
+            settings.Properties.CaptionSettings.OptionalMark = " (optional)"
+        </td>
+    </tr>
+    <tr>
+        <td class="cellWithEditor">
+            @Html.DevExpress().RadioButtonList(settings => {
+                settings.Name = "radioButtonList";                  
+                settings.Properties.Items.Add("Item 1", 1); 
+                settings.Properties.Items.Add("Item 2", 2);
+                settings.Properties.Caption = "Radio Button List";
+                settings.Properties.CaptionSettings.VerticalAlign = EditorCaptionVerticalAlign.Middle;
+            }).GetHtml()
+        </td>
+        <td class="cellWithDescription">
+            settings.Properties.Caption = "Radio Button List"<br />
+            settings.Properties.CaptionSettings.VerticalAlign = EditorCaptionVerticalAlign.Middle
+        </td>
+    </tr>
+</table>

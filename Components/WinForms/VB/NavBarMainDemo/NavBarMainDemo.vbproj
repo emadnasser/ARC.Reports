@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30A6FA7B-9FF1-430F-9D66-DF4181537752}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NavBarMainDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>Sub Main</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.DemoData.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="System.Data"><Private>False</Private></Reference>
+    <Reference Include="System.Design"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing"><Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms"><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddGroups\AddGroups.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddGroups\AddGroups.Designer.vb">
+      <DependentUpon>AddGroups.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddItemLinks\AddItemLinks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddItemLinks\AddItemLinks.Designer.vb">
+      <DependentUpon>AddItemLinks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomDraw\CustomDraw.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomDraw\CustomDraw.Designer.vb">
+      <DependentUpon>CustomDraw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizableDistances\CustomizableDistances.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizableDistances\CustomizableDistances.Designer.vb">
+      <DependentUpon>CustomizableDistances.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizableDistances\DistanceChanger.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizableDistances\DistanceChanger.Designer.vb">
+      <DependentUpon>DistanceChanger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GroupContainer\GroupContainer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupContainer\GroupContainer.Designer.vb">
+      <DependentUpon>GroupContainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GroupStyles\GroupStyles.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupStyles\GroupStyles.Designer.vb">
+      <DependentUpon>GroupStyles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HitInfo\HitInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HitInfo\HitInfo.Designer.vb">
+      <DependentUpon>HitInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BusinessModule.Designer.vb">
+      <DependentUpon>BusinessModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BusinessModule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ctrlAlphaBlending.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ctrlAlphaBlending.Designer.vb">
+      <DependentUpon>ctrlAlphaBlending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomCheckedListBoxControl.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\frmLinkProperties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\frmLinkProperties.Designer.vb">
+      <DependentUpon>frmLinkProperties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmNavBarBlending.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmNavBarBlending.Designer.vb">
+      <DependentUpon>frmNavBarBlending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmNavBarDragDrop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmNavBarDragDrop.Designer.vb">
+      <DependentUpon>frmNavBarDragDrop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmNavBarNavigationPane.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmNavBarNavigationPane.Designer.vb">
+      <DependentUpon>frmNavBarNavigationPane.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmNavBarProperties.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\frmNavBarProperties.Designer.vb">
+      <DependentUpon>frmNavBarProperties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MultimediaModule.Designer.vb">
+      <DependentUpon>MultimediaModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MultimediaModule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OutlookStyle.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OutlookStyle.Designer.vb">
+      <DependentUpon>OutlookStyle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavBarHints\NavBarHints.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavBarHints\NavBarHints.Designer.vb">
+      <DependentUpon>NavBarHints.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavBarInfo\NavBarInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavBarInfo\NavBarInfo.Designer.vb">
+      <DependentUpon>NavBarInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="Registration.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewStyles\ViewStyles.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewStyles\ViewStyles.Designer.vb">
+      <DependentUpon>ViewStyles.vb</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGroups\AddGroups.resx">
+      <DependentUpon>AddGroups.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddItemLinks\AddItemLinks.resx">
+      <DependentUpon>AddItemLinks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomDraw\CustomDraw.resx">
+      <DependentUpon>CustomDraw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizableDistances\CustomizableDistances.resx">
+      <DependentUpon>CustomizableDistances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizableDistances\DistanceChanger.resx">
+      <DependentUpon>DistanceChanger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupContainer\GroupContainer.resx">
+      <DependentUpon>GroupContainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupStyles\GroupStyles.resx">
+      <DependentUpon>GroupStyles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HitInfo\HitInfo.resx">
+      <DependentUpon>HitInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BusinessModule.resx">
+      <DependentUpon>BusinessModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ctrlAlphaBlending.resx">
+      <DependentUpon>ctrlAlphaBlending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Description.rtf" />
+    <EmbeddedResource Include="Modules\frmLinkProperties.resx">
+      <DependentUpon>frmLinkProperties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmNavBarBlending.resx">
+      <DependentUpon>frmNavBarBlending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmNavBarDragDrop.resx">
+      <DependentUpon>frmNavBarDragDrop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmNavBarNavigationPane.resx">
+      <DependentUpon>frmNavBarNavigationPane.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmNavBarProperties.resx">
+      <DependentUpon>frmNavBarProperties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MultimediaModule.resx">
+      <DependentUpon>MultimediaModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OutlookStyle.resx">
+      <DependentUpon>OutlookStyle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavBarHints\NavBarHints.resx">
+      <DependentUpon>NavBarHints.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavBarInfo\NavBarInfo.resx">
+      <DependentUpon>NavBarInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStyles\ViewStyles.resx">
+      <DependentUpon>ViewStyles.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

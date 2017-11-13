@@ -1,0 +1,24 @@
+﻿@Html.DevExpress().FileManager(
+    settings => {
+        settings.Name = "fileManager";
+        settings.CallbackRouteValues = new { Controller = "FileManager", Action = "CloudProviderPartial", Type = Model };
+        settings.DownloadRouteValues = new { Controller = "FileManager", Action = "CloudProviderDownload", Type = Model };
+
+        settings.Settings.ThumbnailFolder = Url.Content("~/Content/FileManager/Thumbnails");
+        settings.Settings.AllowedFileExtensions = FileManagerDemoHelper.AllowedFileExtensions;
+        settings.ClientSideEvents.EndCallback = "OnFileManagerEndCallback";
+
+        settings.SettingsEditing.AllowRename = true;
+        settings.SettingsEditing.AllowMove = true;
+        settings.SettingsEditing.AllowCopy = true;
+        settings.SettingsEditing.AllowDelete = true;
+        settings.SettingsEditing.AllowDownload = true;
+
+        settings.FileUploading = (s, e) => { FileManagerDemoHelper.ValidateSiteEdit(e); };
+        settings.FolderCreating = (s, e) => { FileManagerDemoHelper.ValidateSiteEdit(e); };
+        settings.ItemRenaming = (s, e) => { FileManagerDemoHelper.ValidateSiteEdit(e); };
+        settings.ItemDeleting = (s, e) => { FileManagerDemoHelper.ValidateSiteEdit(e); };
+        settings.ItemMoving = (s, e) => { FileManagerDemoHelper.ValidateSiteEdit(e); };
+        settings.ItemCopying = (s, e) => { FileManagerDemoHelper.ValidateSiteEdit(e); };    
+    }
+).BindToFileSystemProvider(CloudProviderHelper.CreateCloudProvider(Model)).GetHtml()

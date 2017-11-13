@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>News</title>
+    <link></link>
+    <description>1</description>
+    <language>en-US</language>
+    <webMaster></webMaster>
+    <lastBuildDate></lastBuildDate>
+    <ttl>60</ttl>
+    <item>
+      <title>Soviets Launch First Man in Space</title>
+      <link>javascript:void(0)</link>
+      <description>
+        Major Yuri Alexeyevich Gagarin was fired from the Baikonur launch pad in Kazakhstan, Soviet central Asia, in the space craft Vostok (East).
+        Gagarin orbited the Earth for 108 minutes travelling at more than 17,000 miles per hour (27,000 kilometres per hour) before landing at an undisclosed location.
+      </description>
+      <category>Space</category>
+      <pubDate>12 April 1961</pubDate>
+      <image>
+        <url>~/NewsControl/Images/gagarin.jpg</url>
+        <title>Mars</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+    <item>
+      <title>Manchester Utd win European Cup</title>
+      <link>javascript:void(0)</link>
+      <description>
+        Manchester United have become the first English club to win the European Cup beating Portuguese side Benfica by four goals to one.
+        Ten years after the Munich air crash, which killed eight of Matt Busby's young team, Manchester United have reached the pinnacle of European football.
+      </description>
+      <category>Sport</category>
+      <pubDate>29 May 1968</pubDate>
+      <image>
+        <url>~/NewsControl/Images/manchester.jpg</url>
+        <title>greece</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+    <item>
+      <title>Astronaut Neil Armstrong's Speech on the Moon</title>
+      <link>javascript:void(0)</link>
+      <description>
+        The first human journey to the surface of the Moon began at Pad A, Launch Complex 39, Kennedy Space Center, Florida with the liftoff of Apollo 11 on a Saturn V booster at 9:32 a.m. EDT (13:32 UT) on a clear sunny Wednesday, 16 July 1969.
+        The footprints left by the astronauts in the Sea of Tranquility are more permanent than most solid structures on Earth. Barring a chance meteorite impact, these impressions in the lunar soil will probably last for millions of years.
+      </description>
+      <category>Space</category>
+      <pubDate>16 July 1969</pubDate>
+      <image>
+        <url>~/NewsControl/Images/earthrise.jpg</url>
+        <title>Astronaut</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+    <item>
+      <title>Muhammad Ali wins 'Thrilla in Manila'</title>
+      <link>javascript:void(0)</link>
+      <description>
+        US boxer Muhammad Ali has retained the world heavyweight boxing championship after defeating his arch-rival, Joe Frazier, in their third and arguably greatest fight.
+        The so-called "Thrilla in Manilla" lasted 14 rounds before Frazier's trainer, Eddie Futch, finally persuaded him to call it a day.
+      </description>
+      <category>Sport</category>
+      <pubDate>1 October 1975</pubDate>
+      <image>
+        <url>~/NewsControl/Images/muhammad.jpg</url>
+        <title>muhammad</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+    <item>
+      <title>Johnson stripped of Olympic gold</title>
+      <link>javascript:void(0)</link>
+      <description>
+        Sprinter Ben Johnson has been sent home from the Seoul Olympic Games in disgrace.
+        The Canadian has also been stripped of his 100m gold medal after testing positive for drugs
+      </description>
+      <category>Sport</category>
+      <pubDate>27 September 1988</pubDate>
+      <image>
+        <url>~/NewsControl/Images/johnson.jpg</url>
+        <title>johnson</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+    <item>
+      <title>Scientists Clone Sheep</title>
+      <link>javascript:void(0)</link>
+      <description>
+        Dolly the sheep, who became famous as the first mammal to be cloned from an adult cell. Dolly was named after the country-western singer Dolly Parton, made headlines worldwide in 1996 when she became the first mammal to be cloned with DNA taken from an adult cell.
+      </description>
+      <category>Science</category>
+      <pubDate>29 October 2001</pubDate>
+      <image>
+        <url>~/NewsControl/Images/dolly.jpg</url>
+        <title>sheep</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+    <item>
+      <title>The Terminator takes on California</title>
+      <link>javascript:void(0)</link>
+      <description>
+        The film star Arnold Schwarzenegger has been elected governor of California, ousting the incumbent, Gray Davis, three years before his term was due to end.
+        It is the first time in the state's history that a governor has been sacked mid-term.
+        With most of the ballots counted, Mr Schwarzenegger has won almost 48% of the vote.
+      </description>
+      <category>Elections</category>
+      <pubDate>8 October 2003</pubDate>
+      <image>
+        <url>~/NewsControl/Images/terminator.jpg</url>
+        <title>Terminator</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+    <item>
+      <title>Greece bids Games farewell</title>
+      <link>javascript:void(0)</link>
+      <description>
+        The 2004 Olympic Games officially came to an end in Athens with a spectacular closing ceremony on Sunday.
+        Greek music and dance kicked off an evening of celebration before the flame was extinguished and the flag lowered.
+        A firework display welcomed the athletes into the Olympic Stadium, with double gold-medallist Kelly Holmes carrying Great Britain's flag.
+      </description>
+      <category>Sport</category>
+      <pubDate>29 August 2004</pubDate>
+      <image>
+        <url>~/NewsControl/Images/greece.jpg</url>
+        <title>greece</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+    <item>
+      <title>Mars's Water Could Be Below Surface</title>
+      <link>javascript:void(0)</link>
+      <description>
+        Scientifics determined that, of the water and carbon dioxide that once existed on the planet, only a small amount was likely lost to the effects of solar wind over the past 3.5 billion years.
+        Scientifics suggest that water and carbon dioxide reservoirs may therefore still exist on or below the Martian surface.
+        Further research into the planet's subsurface and atmosphere could reveal critical information about Mars's climate.
+      </description>
+      <category>Space</category>
+      <pubDate>25 January 2006</pubDate>
+      <image>
+        <url>~/NewsControl/Images/mars.jpg</url>
+        <title>Mars</title>
+        <link>javascript:void(0)</link>
+      </image>
+    </item>
+  </channel>
+</rss>

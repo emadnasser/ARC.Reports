@@ -1,0 +1,7 @@
+﻿@section AdditionalResources {
+    <script src="@Url.Content("~/Scripts/InitEventMonitor.js")" type="text/javascript"></script>
+}
+@using(Html.BeginForm()) {
+    @Html.Partial("ClientSideEventsPartial")
+    @Html.Partial("EventMonitor")
+}

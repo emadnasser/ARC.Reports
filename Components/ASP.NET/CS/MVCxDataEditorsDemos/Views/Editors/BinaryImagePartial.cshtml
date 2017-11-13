@@ -1,0 +1,13 @@
+﻿@{
+    BinaryImageDemoOptions demoOptions = ViewBag.DemoOptions;
+}
+@Html.DevExpress().BinaryImage(biSettings =>
+{
+    biSettings.Width = demoOptions.Width;
+    biSettings.Height = demoOptions.Height;
+    biSettings.Properties.ImageSizeMode = demoOptions.ImageSizeMode;
+    biSettings.Name = "BinaryImage";
+    biSettings.ControlStyle.CssClass = "biClass";
+    biSettings.Properties.EnableServerResize = true;
+}).Bind(Model).GetHtml()
+   

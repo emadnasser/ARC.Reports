@@ -1,0 +1,46 @@
+﻿body, form
+{
+    padding: 0;
+    margin: 0;
+}
+.topPanel
+{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.titleContainer,
+.dataView
+{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+}
+.titleContainer
+{
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+.dataViewContent
+{
+    border: 0!important;
+    padding: 16px!important;
+}
+.dataViewContent > table
+{
+    margin: 0!important;
+}
+.dataViewItem
+{
+    margin: 0!important;
+    padding: 12px!important;
+    width: 200px!important;
+    height: 260px!important;
+}
+.dataViewItem > table
+{
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    white-space: nowrap;
+}

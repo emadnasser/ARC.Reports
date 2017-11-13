@@ -133,23 +133,23 @@ namespace ARC.Reports.Pages
                 else if (Type.SelectedIndex == 0 && myOption.SelectedIndex == 1)
                 {
                     MarketShareGraphs_D_0.MarketType = 0;
-                    MarketShareGraphs_D_0.MarketType = 1;
+                    MarketShareGraphs_D_1.MarketType = 1;
                     MarketShareGraphs_D_0.Visible = true;
-                    MarketShareGraphs_D_0.Visible = true;
+                    MarketShareGraphs_D_1.Visible = true;
                 }
                 else if (Type.SelectedIndex == 0 && myOption.SelectedIndex == 2)
                 {
                     MarketShareGraphs_M_0.MarketType = 0;
-                    MarketShareGraphs_M_0.MarketType = 1;
+                    MarketShareGraphs_M_1.MarketType = 1;
                     MarketShareGraphs_M_0.Visible = true;
-                    MarketShareGraphs_M_0.Visible = true;
+                    MarketShareGraphs_M_1.Visible = true;
                 }
                 else if (Type.SelectedIndex == 0 && myOption.SelectedIndex == 3)
                 {
                     MarketShareGraphs_Y_0.MarketType = 0;
-                    MarketShareGraphs_Y_0.MarketType = 1;
+                    MarketShareGraphs_Y_1.MarketType = 1;
                     MarketShareGraphs_Y_0.Visible = true;
-                    MarketShareGraphs_Y_0.Visible = true;
+                    MarketShareGraphs_Y_1.Visible = true;
                 }
 
                 else if (Type.SelectedIndex == 1 && myOption.SelectedIndex == 0)

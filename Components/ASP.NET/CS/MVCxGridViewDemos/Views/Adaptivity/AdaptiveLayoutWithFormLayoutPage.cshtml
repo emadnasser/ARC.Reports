@@ -1,0 +1,54 @@
+﻿@{ Layout = null; } 
+@model IEnumerable
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>Adaptive Layout with Form Layout - ASP.NET MVC GridView Extension</title>
+     <style>
+        body, form
+        {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            min-height: 200px;
+            min-width: 400px;
+        }
+    </style>
+    <script type="text/javascript">
+        function UpdateGridHeight() {
+            GridView.SetHeight(0);
+            var containerHeight = ASPxClientUtils.GetDocumentClientHeight();
+            if (document.body.scrollHeight > containerHeight)
+                containerHeight = document.body.scrollHeight;
+            GridView.SetHeight(containerHeight);
+        }
+    </script>
+    @Html.DevExpress().GetStyleSheets(
+        new StyleSheet { ExtensionSuite = ExtensionSuite.GridView },
+        new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout }
+    )
+    @Html.DevExpress().GetScripts(
+        new Script { ExtensionSuite = ExtensionSuite.GridView },
+        new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout }
+    )
+</head>
+<body>
+    @using(Html.BeginForm()) {
+        @Html.Partial("AdaptiveLayoutWithFormLayoutPagePartial", Model)
+    }
+    <script type="text/javascript">
+        ASPxClientControl.GetControlCollection().ControlsInitialized.AddHandler(function (s, e) {
+            UpdateGridHeight();
+        });
+        ASPxClientControl.GetControlCollection().BrowserWindowResized.AddHandler(function (s, e) {
+            UpdateGridHeight();
+        });
+        ASPxClientControl.GetControlCollection().EndCallback.AddHandler(function(s,e){
+            UpdateGridHeight();
+        });
+    </script>
+</body>
+</html>

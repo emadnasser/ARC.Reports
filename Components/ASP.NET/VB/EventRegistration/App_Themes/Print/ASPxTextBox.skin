@@ -1,0 +1,5 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dx:ASPxTextBox runat="server" Height="28px" SpriteCssFilePath="~/App_Themes/Print/{0}/sprite.css" CssPostfix="Print" CssFilePath="~/App_Themes/Print/{0}/styles.css" >
+    <Paddings PaddingLeft="7px"></Paddings>
+</dx:ASPxTextBox>

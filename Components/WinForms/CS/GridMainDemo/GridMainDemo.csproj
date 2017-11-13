@@ -1,0 +1,1343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73BB869A-89D2-4F66-A433-FD9857E2D8BD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GridMainDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>DevExpress.XtraGrid.Demos</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility"><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Docs.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Images.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Map.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Mvvm.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.RichEdit.v16.2.Core">
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Snap.v16.2">
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Snap.v16.2.Core">
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Snap.v16.2.Extensions">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Sparkline.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Charts.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Spreadsheet.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.DemoData.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGauges.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGauges.v16.2.Win"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraMap.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Office.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.RichEdit.v16.2.Core"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2.Extensions">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2.Extensions">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraTreeList.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="devexpress.xtraverticalgrid.v16.2"><HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations"><Private>False</Private></Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data.Linq"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Web.Extensions"><Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveDemo\ActiveActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActiveDemo\ActiveDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActiveDemo\ActiveGridDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DemoControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DemosRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dsContacts.cs">
+      <DependentUpon>dsContacts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsContacts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContacts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsIssueList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIssueList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNWindCategories.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNWindCategories.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNWindCustomers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNWindCustomers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNWindOrders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNWindOrders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNWindProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNWindProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNWindSupplier.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNWindSupplier.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsVehicles.cs">
+      <DependentUpon>dsVehicles.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsVehicles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVehicles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KanbanModule\Data.cs" />
+    <Compile Include="KanbanModule\KanbanBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KanbanModule\KanbanBoard.Designer.cs">
+      <DependentUpon>KanbanBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KanbanModule\KanbanEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KanbanModule\KanbanEditControl.Designer.cs">
+      <DependentUpon>KanbanEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesAnyControl\AnyChartEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModulesAnyControl\ChartEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesAnyControl\ChartEditor.Designer.cs">
+      <DependentUpon>ChartEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesAnyControl\GaugeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesAnyControl\GaugeEditor.Designer.cs">
+      <DependentUpon>GaugeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesLayoutView\LayoutViewFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesLayoutView\LayoutViewFilter.Designer.cs">
+      <DependentUpon>LayoutViewFilter.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdvancedEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AdvancedEditForm.Designer.cs">
+      <DependentUpon>AdvancedEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ContextButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ContextButtons.Designer.cs">
+      <DependentUpon>ContextButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\EditFormOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\EditFormOptions.Designer.cs">
+      <DependentUpon>EditFormOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Clipboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Clipboard.Designer.cs">
+      <DependentUpon>Clipboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ExcelFiltering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ExcelFiltering.Designer.cs">
+      <DependentUpon>ExcelFiltering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FormatRules.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FormatRules.Designer.cs">
+      <DependentUpon>FormatRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\InlineGrouping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\InlineGrouping.Designer.cs">
+      <DependentUpon>InlineGrouping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\TileView.Designer.cs">
+      <DependentUpon>TileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\WinExplorerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\WinExplorerView.Designer.cs">
+      <DependentUpon>WinExplorerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GridLookUpEditWithGlyph.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\GridEditForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\GridEditForm.Designer.cs">
+      <DependentUpon>GridEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MasterDetailSimple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MasterDetailSimple.Designer.cs">
+      <DependentUpon>MasterDetailSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sparklines.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Sparklines.Designer.cs">
+      <DependentUpon>Sparklines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ExpressionConditionsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ExpressionConditionsEditor.Designer.cs">
+      <DependentUpon>ExpressionConditionsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModulesLayoutView\AdvancedGridEditing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesLayoutView\AdvancedGridEditing.Designer.cs">
+      <DependentUpon>AdvancedGridEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesLayoutView\BaseLayoutModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesLayoutView\CardSizing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesLayoutView\CardSizing.Designer.cs">
+      <DependentUpon>CardSizing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesLayoutView\Layout3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesLayoutView\Layout3D.Designer.cs">
+      <DependentUpon>Layout3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesLayoutView\MDLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesLayoutView\MDLayout.Designer.cs">
+      <DependentUpon>MDLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModulesLayoutView\NWindLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModulesLayoutView\NWindLayout.Designer.cs">
+      <DependentUpon>NWindLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AlphaBlending.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AlphaBlending.Designer.cs">
+      <DependentUpon>AlphaBlending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Appearances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Appearances.Designer.cs">
+      <DependentUpon>Appearances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AutoFilterRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\AutoFilterRow.Designer.cs">
+      <DependentUpon>AutoFilterRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CardViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CardViewControl.Designer.cs">
+      <DependentUpon>CardViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CellMerging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CellMerging.Designer.cs">
+      <DependentUpon>CellMerging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CellSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CellSelection.Designer.cs">
+      <DependentUpon>CellSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ColumnCustomization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ColumnCustomization.Designer.cs">
+      <DependentUpon>ColumnCustomization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ConditionsEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ConditionsEditor.Designer.cs">
+      <DependentUpon>ConditionsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ConditionsItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ConditionsItem.Designer.cs">
+      <DependentUpon>ConditionsItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Controls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\FindFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FindFilter.Designer.cs">
+      <DependentUpon>FindFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GridAnimations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\GridAnimations.Designer.cs">
+      <DependentUpon>GridAnimations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RealTimeSource.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RealTimeSource.Designer.cs">
+      <DependentUpon>RealTimeSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SearchLookUpEditDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SearchLookUpEditDemo.Designer.cs">
+      <DependentUpon>SearchLookUpEditDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SearchLookUpEditWithGlyph.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\SearchLookUpProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SearchLookUpProperties.Designer.cs">
+      <DependentUpon>SearchLookUpProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutlookMailTimer.cs" />
+    <Compile Include="Modules\RTFData.cs" />
+    <Compile Include="Modules\RTFView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RTFView.Designer.cs">
+      <DependentUpon>RTFView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDataSummaries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDataSummaries.Designer.cs">
+      <DependentUpon>CustomDataSummaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomDraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomDraw.Designer.cs">
+      <DependentUpon>CustomDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Data.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\DataSummaries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DataSummaries.Designer.cs">
+      <DependentUpon>DataSummaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Directories.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\EditPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\EditPopupForm.Designer.cs">
+      <DependentUpon>EditPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FilesDir.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FilesDir.Designer.cs">
+      <DependentUpon>FilesDir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FilterControl.Designer.cs">
+      <DependentUpon>FilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Filtering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Filtering.Designer.cs">
+      <DependentUpon>Filtering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FixedBands.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FixedBands.Designer.cs">
+      <DependentUpon>FixedBands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FixedColumns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\FixedColumns.Designer.cs">
+      <DependentUpon>FixedColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Grid100000Records.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Grid100000Records.Designer.cs">
+      <DependentUpon>Grid100000Records.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GridFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\GridFolder.Designer.cs">
+      <DependentUpon>GridFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GridLookUpEditDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\GridLookUpEditDemo.Designer.cs">
+      <DependentUpon>GridLookUpEditDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GridSheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\GridSheet.Designer.cs">
+      <DependentUpon>GridSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GridTetris.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\GridTetris.Designer.cs">
+      <DependentUpon>GridTetris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GridTetrisClasses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\GroupInterval.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\GroupInterval.Designer.cs">
+      <DependentUpon>GroupInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\InplaceEditors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\InplaceEditors.Designer.cs">
+      <DependentUpon>InplaceEditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LookUpProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\LookUpProperties.Designer.cs">
+      <DependentUpon>LookUpProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MasterDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MasterDetail.Designer.cs">
+      <DependentUpon>MasterDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MasterDetailGrouping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MasterDetailGrouping.Designer.cs">
+      <DependentUpon>MasterDetailGrouping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MultiEditors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MultiEditors.Designer.cs">
+      <DependentUpon>MultiEditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MultipleGrouping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\MultipleGrouping.Designer.cs">
+      <DependentUpon>MultipleGrouping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Navigator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\NWindNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\NWindNavigator.Designer.cs">
+      <DependentUpon>NWindNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutlookStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\OutlookStyle.Designer.cs">
+      <DependentUpon>OutlookStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Preview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Preview.Designer.cs">
+      <DependentUpon>Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Products.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\RowHeight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RowHeight.Designer.cs">
+      <DependentUpon>RowHeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SortingBySummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SortingBySummary.Designer.cs">
+      <DependentUpon>SortingBySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SplitPresentation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SplitPresentation.Designer.cs">
+      <DependentUpon>SplitPresentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\StyleConditions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\StyleConditions.Designer.cs">
+      <DependentUpon>StyleConditions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\TableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\TableView.Designer.cs">
+      <DependentUpon>TableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Tasks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\ucFindOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ucFindOptions.Designer.cs">
+      <DependentUpon>ucFindOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ucMailViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ucMailViewer.Designer.cs">
+      <DependentUpon>ucMailViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ucValidation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ucValidation.Designer.cs">
+      <DependentUpon>ucValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\UnboundExpression.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\UnboundExpression.Designer.cs">
+      <DependentUpon>UnboundExpression.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Validation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Validation.Designer.cs">
+      <DependentUpon>Validation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ViewStyles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ViewStyles.Designer.cs">
+      <DependentUpon>ViewStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\WebStyleColumnSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\WebStyleColumnSelection.Designer.cs">
+      <DependentUpon>WebStyleColumnSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\WinExplorerViewDatabaseBinding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\WinExplorerViewDatabaseBinding.Designer.cs">
+      <DependentUpon>WinExplorerViewDatabaseBinding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nwindDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nwindDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMode\Console.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServerMode\LookUpInstantFeedbackUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerMode\LookUpInstantFeedbackUI.Designer.cs">
+      <DependentUpon>LookUpInstantFeedbackUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMode\GridInstantFeedbackUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerMode\GridInstantFeedbackUI.Designer.cs">
+      <DependentUpon>GridInstantFeedbackUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMode\LookupServerMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerMode\LookupServerMode.Designer.cs">
+      <DependentUpon>LookupServerMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMode\GridServerMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerMode\GridServerMode.Designer.cs">
+      <DependentUpon>GridServerMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMode\frmSQLConnector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerMode\frmSQLConnector.Designer.cs">
+      <DependentUpon>frmSQLConnector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerMode\Objects.cs" />
+    <Compile Include="VoteModule\ColorUtils.cs" />
+    <Compile Include="VoteModule\Helpers.cs" />
+    <Compile Include="VoteModule\Map.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VoteModule\Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteModule\MapColorizer.cs" />
+    <Compile Include="VoteModule\Results.cs" />
+    <Compile Include="VoteModule\VotesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VoteModule\VotesPanel.Designer.cs">
+      <DependentUpon>VotesPanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="KanbanModule\KanbanBoard.resx">
+      <DependentUpon>KanbanBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KanbanModule\KanbanEditControl.resx">
+      <DependentUpon>KanbanEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoteModule\Census\counties.txt" />
+    <EmbeddedResource Include="VoteModule\Census\states.txt" />
+    <EmbeddedResource Include="CodeInfo\ChartEditor.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeInfo\GaugeEditor.xml" />
+    <EmbeddedResource Include="CodeInfo\FilteringUI.xml" />
+    <EmbeddedResource Include="Images\CheckImage.svg" />
+    <Content Include="Resources\VideosSmall.png" />
+    <EmbeddedResource Include="VoteModule\Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoteModule\VotesPanel.resx">
+      <DependentUpon>VotesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    
+    
+    <Content Include="Resources\ExtraLarge.png" />
+    <Content Include="Resources\Large.png" />
+    <Content Include="Resources\Medium.png" />
+    <Content Include="Resources\List.png" />
+    <Content Include="Resources\Content.png" />
+    <Content Include="Resources\CopyLarge.png" />
+    <Content Include="Resources\CopyPathSmall.png" />
+    <Content Include="Resources\CopyToLarge.png" />
+    <Content Include="Resources\CutSmall.png" />
+    <Content Include="Resources\DeleteLarge.png" />
+    <Content Include="Resources\DesktopSmall.png" />
+    <Content Include="Resources\DocumentsSmall.png" />
+    <Content Include="Resources\DownloadsSmall.png" />
+    <Content Include="Resources\EditSmall.png" />
+    <Content Include="Resources\FavoritesSmall.png" />
+    <Content Include="Resources\HideSelectedItemsLarge.png" />
+    <Content Include="Resources\InvertSelectionSmall.png" />
+    <Content Include="Resources\LibrarySmall.bmp" />
+    <Content Include="Resources\MoveToLarge.png" />
+    <Content Include="Resources\MusicSmall.png" />
+    <Content Include="Resources\NavigationPaneLarge.png" />
+    <Content Include="Resources\NewFolderSmall.png" />
+    <Content Include="Resources\NewItemSmall.png" />
+    <Content Include="Resources\OpenSmall.png" />
+    <Content Include="Resources\OptionsLarge.png" />
+    <Content Include="Resources\PasteLarge.png" />
+    <Content Include="Resources\PropertiesLarge.bmp" />
+    <Content Include="Resources\HelpSmall.png" />
+    <Content Include="Resources\properties_32x32.png" />
+    <EmbeddedResource Include="CodeInfo\GridEditForm.xml" />
+    <EmbeddedResource Include="CodeInfo\WebStyleColumnSelection.xml" />
+    <Content Include="Resources\RecentPlacesSmall.png" />
+    <Content Include="Resources\RenameLarge.png" />
+    <Content Include="Resources\sale-16x16.png" />
+    
+    
+    
+    <Content Include="Resources\Small.png" />
+    <Content Include="Resources\Tiles.png" />
+    <Content Include="Resources\SelectedAllSmall.png" />
+    <Content Include="Resources\SelectedNoneSmall.png" />
+    <Content Include="Resources\Unknown-user.png" />
+    <Content Include="Resources\Forward.png" />
+    <Content Include="Resources\ReplyAll.png" />
+    <Content Include="Resources\Reply.png" />
+    <EmbeddedResource Include="CodeInfo\TableView.xml" />
+    <EmbeddedResource Include="CodeInfo\CellMerging.xml" />
+    <EmbeddedResource Include="CodeInfo\CardViewControl.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeInfo\FixedBands.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeInfo\FixedColumns.xml" />
+    <EmbeddedResource Include="CodeInfo\RowHeight.xml" />
+    <EmbeddedResource Include="CodeInfo\ColumnCustomization.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeInfo\ViewStyles.xml" />
+    <EmbeddedResource Include="CodeInfo\CellSelection.xml" />
+    <EmbeddedResource Include="CodeInfo\GridInstantFeedbackUI.xml" />
+    <EmbeddedResource Include="CodeInfo\LookUpInstantFeedbackUI.xml" />
+    <EmbeddedResource Include="CodeInfo\FilesDir.xml" />
+    <EmbeddedResource Include="CodeInfo\AutoFilterRow.xml" />
+    <EmbeddedResource Include="CodeInfo\CustomDataSummaries.xml" />
+    <EmbeddedResource Include="CodeInfo\CustomDraw.xml" />
+    <EmbeddedResource Include="CodeInfo\DataSummaries.xml" />
+    <EmbeddedResource Include="CodeInfo\FilterControl.xml" />
+    <EmbeddedResource Include="CodeInfo\Filtering.xml" />
+    <EmbeddedResource Include="CodeInfo\FindFilter.xml" />
+    <EmbeddedResource Include="CodeInfo\Grid100000Records.xml" />
+    <EmbeddedResource Include="CodeInfo\GridAnimations.xml" />
+    <EmbeddedResource Include="CodeInfo\GridFolder.xml" />
+    <EmbeddedResource Include="CodeInfo\GridLookUpEditDemo.xml" />
+    <EmbeddedResource Include="CodeInfo\GridSheet.xml" />
+    <EmbeddedResource Include="CodeInfo\GridTetris.xml" />
+    <EmbeddedResource Include="CodeInfo\GroupInterval.xml" />
+    <EmbeddedResource Include="CodeInfo\InplaceEditors.xml" />
+    <EmbeddedResource Include="CodeInfo\MasterDetail.xml" />
+    <EmbeddedResource Include="CodeInfo\MasterDetailGrouping.xml" />
+    <EmbeddedResource Include="CodeInfo\NWindNavigator.xml" />
+    <EmbeddedResource Include="CodeInfo\OutlookStyle.xml" />
+    <EmbeddedResource Include="CodeInfo\Preview.xml" />
+    <EmbeddedResource Include="CodeInfo\RealTimeSource.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeInfo\RTFView.xml" />
+    <EmbeddedResource Include="CodeInfo\SearchLookUpEditDemo.xml" />
+    <EmbeddedResource Include="CodeInfo\SortingBySummary.xml" />
+    <EmbeddedResource Include="CodeInfo\SplitPresentation.xml" />
+    <EmbeddedResource Include="CodeInfo\StyleConditions.xml" />
+    <EmbeddedResource Include="CodeInfo\Styles.xml" />
+    <EmbeddedResource Include="CodeInfo\UnboundExpression.xml" />
+    <EmbeddedResource Include="CodeInfo\Validation.xml" />
+    <EmbeddedResource Include="CodeInfo\AdvancedGridEditing.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeInfo\CardSizing.xml" />
+    <EmbeddedResource Include="CodeInfo\Layout3D.xml" />
+    <EmbeddedResource Include="CodeInfo\MDLayout.xml" />
+    <EmbeddedResource Include="CodeInfo\NWindLayout.xml" />
+    <EmbeddedResource Include="CodeInfo\GridServerMode.xml" />
+    <EmbeddedResource Include="CodeInfo\LookupServerMode.xml" />
+    <EmbeddedResource Include="CodeInfo\MultiEditors.xml" />
+    <EmbeddedResource Include="CodeInfo\MultipleGrouping.xml" />
+    <EmbeddedResource Include="CodeInfo\Sparklines.xml" />
+    <EmbeddedResource Include="AppIcon.ico" />
+    <EmbeddedResource Include="CodeInfo\MasterDetailSimple.xml" />
+    <Content Include="dsContacts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContacts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="dsIssueList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIssueList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="dsNWindCustomers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNWindCustomers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="dsNWindOrders.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNWindOrders.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="dsNWindProducts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNWindProducts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="dsNWindSupplier.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNWindSupplier.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Images\Blending.png" />
+    <Content Include="Resources\attach-16x16.png" />
+    <Content Include="Resources\contact-16x16.png" />
+    <Content Include="Resources\delete-16x16.png" />
+    <EmbeddedResource Include="ModulesAnyControl\ChartEditor.resx">
+      <DependentUpon>ChartEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModulesAnyControl\GaugeEditor.resx">
+      <DependentUpon>GaugeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModulesLayoutView\LayoutViewFilter.resx">
+      <DependentUpon>LayoutViewFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AdvancedEditForm.resx">
+      <DependentUpon>AdvancedEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ContextButtons.resx">
+      <DependentUpon>ContextButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\EditFormOptions.resx">
+      <DependentUpon>EditFormOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Clipboard.resx">
+      <DependentUpon>Clipboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ExcelFiltering.resx">
+      <DependentUpon>ExcelFiltering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FormatRules.resx">
+      <DependentUpon>FormatRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\InlineGrouping.resx">
+      <DependentUpon>InlineGrouping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\TileView.resx">
+      <DependentUpon>TileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\WinExplorerView.resx">
+      <DependentUpon>WinExplorerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GridEditForm.resx">
+      <DependentUpon>GridEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MasterDetailSimple.resx">
+      <DependentUpon>MasterDetailSimple.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sparklines.resx">
+      <DependentUpon>Sparklines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ExpressionConditionsEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExpressionConditionsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\mail.png" />
+    <EmbeddedResource Include="ModulesLayoutView\Images\contact-info.png" />
+    <EmbeddedResource Include="ModulesLayoutView\Images\notes.png" />
+    <EmbeddedResource Include="ModulesLayoutView\Images\record.png" />
+    <EmbeddedResource Include="ModulesLayoutView\AdvancedGridEditing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdvancedGridEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModulesLayoutView\DefaultLayout.xml" />
+    <EmbeddedResource Include="ModulesLayoutView\SingleRecordLayout.xml" />
+    <EmbeddedResource Include="Images\high.gif" />
+    <EmbeddedResource Include="Images\low.gif" />
+    <EmbeddedResource Include="BackGrounds\1.jpg" />
+    <EmbeddedResource Include="BackGrounds\2.jpg" />
+    <EmbeddedResource Include="BackGrounds\3.jpg" />
+    <EmbeddedResource Include="BackGrounds\4.jpg" />
+    <EmbeddedResource Include="BackGrounds\5.jpg" />
+    <EmbeddedResource Include="BackGrounds\6.jpg" />
+    <EmbeddedResource Include="BackGrounds\7.jpg" />
+    <EmbeddedResource Include="Images\Blue.jpg" />
+    <EmbeddedResource Include="Images\Green.jpg" />
+    <EmbeddedResource Include="Images\Pink.jpg" />
+    <EmbeddedResource Include="Images\product1.jpg" />
+    <EmbeddedResource Include="Images\product2.jpg" />
+    <EmbeddedResource Include="Images\product3.jpg" />
+    <EmbeddedResource Include="Images\World.jpg" />
+    <EmbeddedResource Include="Images\Yellow.jpg" />
+    <EmbeddedResource Include="ModulesLayoutView\CardSizing.resx">
+      <DependentUpon>CardSizing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModulesLayoutView\Layout3D.resx">
+      <DependentUpon>Layout3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModulesLayoutView\NWindLayout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NWindLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AlphaBlending.resx">
+      <DependentUpon>AlphaBlending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Appearances.resx">
+      <DependentUpon>Appearances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\AutoFilterRow.resx">
+      <DependentUpon>AutoFilterRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CardViewControl.resx">
+      <DependentUpon>CardViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CellMerging.resx">
+      <DependentUpon>CellMerging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CellSelection.resx">
+      <DependentUpon>CellSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ColumnCustomization.resx">
+      <DependentUpon>ColumnCustomization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ConditionsEditor.resx">
+      <DependentUpon>ConditionsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ConditionsItem.resx">
+      <DependentUpon>ConditionsItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FindFilter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\frmProduct.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GridAnimations.resx">
+      <DependentUpon>GridAnimations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RealTimeSource.resx">
+      <DependentUpon>RealTimeSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SearchLookUpEditDemo.resx">
+      <DependentUpon>SearchLookUpEditDemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SearchLookUpProperties.resx">
+      <DependentUpon>SearchLookUpProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RTFView.resx">
+      <DependentUpon>RTFView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDataSummaries.resx">
+      <DependentUpon>CustomDataSummaries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\CustomDraw.resx">
+      <DependentUpon>CustomDraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DataSummaries.resx">
+      <DependentUpon>DataSummaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\EditPopupForm.resx">
+      <DependentUpon>EditPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FilesDir.resx">
+      <DependentUpon>FilesDir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FilterControl.resx">
+      <DependentUpon>FilterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Filtering.resx">
+      <DependentUpon>Filtering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FixedBands.resx">
+      <DependentUpon>FixedBands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FixedColumns.resx">
+      <DependentUpon>FixedColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Grid100000Records.resx">
+      <DependentUpon>Grid100000Records.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GridFolder.resx">
+      <DependentUpon>GridFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GridLookUpEditDemo.resx">
+      <DependentUpon>GridLookUpEditDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GridSheet.resx">
+      <DependentUpon>GridSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GridTetris.resx">
+      <DependentUpon>GridTetris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\GroupInterval.resx">
+      <DependentUpon>GroupInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\InplaceEditors.resx">
+      <DependentUpon>InplaceEditors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\LookUpProperties.resx">
+      <DependentUpon>LookUpProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MasterDetail.resx">
+      <DependentUpon>MasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MasterDetailGrouping.resx">
+      <DependentUpon>MasterDetailGrouping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MultiEditors.resx">
+      <DependentUpon>MultiEditors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\MultipleGrouping.resx">
+      <DependentUpon>MultipleGrouping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\NWindNavigator.resx">
+      <DependentUpon>NWindNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\OutlookStyle.resx">
+      <DependentUpon>OutlookStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Preview.resx">
+      <DependentUpon>Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RowHeight.resx">
+      <DependentUpon>RowHeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SortingBySummary.resx">
+      <DependentUpon>SortingBySummary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SplitPresentation.resx">
+      <DependentUpon>SplitPresentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\StyleConditions.resx">
+      <DependentUpon>StyleConditions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\TableView.resx">
+      <DependentUpon>TableView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ucFindOptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ucFindOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ucMailViewer.resx">
+      <DependentUpon>ucMailViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ucValidation.resx">
+      <DependentUpon>ucValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\UnboundExpression.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UnboundExpression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Validation.resx">
+      <DependentUpon>Validation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ViewStyles.resx">
+      <DependentUpon>ViewStyles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\WebStyleColumnSelection.resx">
+      <DependentUpon>WebStyleColumnSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\WinExplorerViewDatabaseBinding.resx">
+      <DependentUpon>WinExplorerViewDatabaseBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerMode\LookUpInstantFeedbackUI.resx">
+      <DependentUpon>LookUpInstantFeedbackUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerMode\GridInstantFeedbackUI.resx">
+      <DependentUpon>GridInstantFeedbackUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerMode\LookupServerMode.resx">
+      <DependentUpon>LookupServerMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerMode\GridServerMode.resx">
+      <DependentUpon>GridServerMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerMode\frmSQLConnector.resx">
+      <DependentUpon>frmSQLConnector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

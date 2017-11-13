@@ -1,0 +1,10 @@
+﻿@model ReportsDemoModel
+@Html.DevExpress().DocumentViewer(
+    settings => {
+        settings.Name = "DocumentViewer";
+        settings.Report = Model.Report;
+        settings.Width = 940;
+        settings.SettingsSplitter.SidePaneVisible = false;
+        settings.CallbackRouteValues = new { Controller = "ReportTypes", Action = "ReportMergingViewerPartial", ReportID = Model.ReportID };
+        settings.ExportRouteValues = new { Controller = "ReportTypes", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+    }).GetHtml()

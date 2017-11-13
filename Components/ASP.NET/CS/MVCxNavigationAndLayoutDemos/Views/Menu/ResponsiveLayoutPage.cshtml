@@ -1,0 +1,33 @@
+﻿@model IEnumerable
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Layout - ASP.NET MVC Menu Extension</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Menu/ResponsiveLayout.css")" />    
+    @Html.DevExpress().GetStyleSheets(
+        new StyleSheet { ExtensionType = ExtensionType.Panel },
+        new StyleSheet { ExtensionType = ExtensionType.Menu },
+        new StyleSheet { ExtensionType = ExtensionType.DataView}        
+    )
+    <script src="@Url.Content("~/Scripts/jquery-1.11.3.min.js")" type="text/javascript"></script>
+    @Html.DevExpress().GetScripts(
+        new Script { ExtensionType = ExtensionType.Panel },
+        new Script { ExtensionType = ExtensionType.Menu },
+        new Script { ExtensionType = ExtensionType.DataView }        
+    )
+</head>
+<body>
+    @Html.DevExpress().Panel(settings => {
+        settings.Name = "TopPanel";
+        settings.ControlStyle.CssClass = "topPanel";
+        settings.FixedPosition = PanelFixedPosition.WindowTop;
+        settings.SetContent(() => {
+            ViewContext.Writer.Write("<div class='titleContainer'>");
+            Html.RenderPartial("ResponsiveLayoutMenuPartial");
+            ViewContext.Writer.Write("</div>");
+        });
+    }).GetHtml()
+    @Html.Action("ResponsiveLayoutDataViewPartial")
+</body>
+</html>

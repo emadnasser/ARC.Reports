@@ -1,0 +1,42 @@
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Documents", ".\", "{1ED12BD3-86CE-4B6C-A2C8-22C75F5353D2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Documents"
+		Debug.AspNetCompiler.PhysicalPath = ".\"
+		Debug.AspNetCompiler.TargetPath = "..\PrecompiledWeb\Documents\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Documents"
+		Release.AspNetCompiler.PhysicalPath = ".\"
+		Release.AspNetCompiler.TargetPath = "..\PrecompiledWeb\Documents\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = ".\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ED12BD3-86CE-4B6C-A2C8-22C75F5353D2}.Debug|.NET.ActiveCfg = Debug|.NET
+		{1ED12BD3-86CE-4B6C-A2C8-22C75F5353D2}.Debug|.NET.Build.0 = Debug|.NET
+		{1ED12BD3-86CE-4B6C-A2C8-22C75F5353D2}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{1ED12BD3-86CE-4B6C-A2C8-22C75F5353D2}.Release|.NET.ActiveCfg = Debug|.NET
+		{1ED12BD3-86CE-4B6C-A2C8-22C75F5353D2}.Release|.NET.Build.0 = Debug|.NET
+		{1ED12BD3-86CE-4B6C-A2C8-22C75F5353D2}.Release|Any CPU.ActiveCfg = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+		StartPage="default.htm"
+	EndGlobalSection
+EndGlobal

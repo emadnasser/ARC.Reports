@@ -1,0 +1,37 @@
+﻿@Html.DevExpress().Chart(settings => {
+    settings.Name = "chart";
+    settings.Width = 550;
+    settings.Height = 300;
+    settings.BorderOptions.Visibility = DefaultBoolean.False;
+
+    settings.Legends.Default(l => { 
+        l.AlignmentHorizontal = LegendAlignmentHorizontal.Left;
+    });
+      
+    settings.Titles.Add(new ChartTitle() {
+        Font = new Font("Tahoma", 18),
+        Text = "Historic, current and future population"
+    });
+    settings.Titles.Add(new ChartTitle() {
+        Alignment = StringAlignment.Far,
+        Dock = ChartTitleDockStyle.Bottom,
+        Font = new Font("Tahoma", 8),
+        TextColor = Color.Gray,
+        Text = "From www.geohive.com"
+    });
+
+    settings.Series.Add(s => {
+        s.Name = "Africa";
+        s.Views().AreaSeriesView(v => {
+            v.MarkerVisibility = DefaultBoolean.False;
+            v.Transparency = 100;
+        });
+        s.SetDataMembers("Year", "Population");
+    });
+
+    settings.XYDiagram(d => {
+        d.AxisY.Title.Text = "Population mid-year";
+        d.AxisY.Title.Visibility = DefaultBoolean.True;
+        d.AxisY.Label.TextPattern = "{V}M";
+    });
+}).Bind(Model).GetHtml()

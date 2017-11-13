@@ -1,0 +1,42 @@
+﻿@{ 
+    var grid = Html.DevExpress().GridView(settings => {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Accessibility", Action = "RightToLeftPartial" };
+        settings.Width = Unit.Percentage(100);
+        settings.RightToLeft = DefaultBoolean.True;
+        settings.EnableRowsCache = false;
+
+        settings.KeyFieldName = "CustomerID";
+        settings.CommandColumn.ShowEditButton = true;
+        settings.CommandColumn.VisibleIndex = 0;
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Accessibility", Action = "RightToLeftUpdatePartial" };
+        
+        settings.Columns.Add(column => {
+            column.FieldName = "ContactName";
+            column.SortIndex = 0;
+            column.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+        });
+        settings.Columns.Add("CompanyName");
+        settings.Columns.Add(column => {
+            column.FieldName = "Country";
+            column.GroupIndex = 0;
+        });
+        settings.Columns.Add("City");
+        settings.Columns.Add("Region");
+
+        settings.Settings.ShowGroupPanel = true;
+        settings.SettingsBehavior.AutoExpandAllGroups = true;
+        settings.SettingsPopup.EditForm.Width = 600;
+        settings.SettingsPager.Summary.Visible = false;
+
+        settings.PreRender = (sender, e) => {
+            ((MVCxGridView)sender).StartEdit(2);
+        };
+    });
+    
+    if(ViewData["EditError"] != null) {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+    }
+}
+
+@grid.Bind(Model).GetHtml()

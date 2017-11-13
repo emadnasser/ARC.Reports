@@ -1,0 +1,48 @@
+<!--
+    This file contains Runtime Directives used by .NET Native. The defaults here are suitable for most
+    developers. However, you can modify these parameters to modify the behavior of the .NET Native
+    optimizer.
+
+    Runtime Directives are documented at http://go.microsoft.com/fwlink/?LinkID=391919
+
+    To fully enable reflection for App1.MyClass and all of its public/private members
+    <Type Name="App1.MyClass" Dynamic="Required All"/>
+
+    To enable dynamic creation of the specific instantiation of AppClass<T> over System.Int32
+    <TypeInstantiation Name="App1.AppClass" Arguments="System.Int32" Activate="Required Public" />
+
+    Using the Namespace directive to apply reflection policy to all the types in a particular namespace
+    <Namespace Name="DataClasses.ViewModels" Seralize="All" />
+-->
+
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+  <Application>
+    <!--
+      An Assembly element with Name="*Application*" applies to all assemblies in
+      the application package. The asterisks are not wildcards.
+    -->
+    
+    <Namespace Name="HybridApp.ViewModels" Browse="Required Public"/>
+
+    <Type Name="HybridApp.ModuleViewModel{}" Browse="Required Public"/>
+    <Type Name="HybridApp.ViewModels.CustomerDetailsType[]" Browse="Required Public"/>
+    <Type Name="HybridApp.HybridAppService.PersonPrefix[]" Browse="Required Public"/>
+    <Type Name="HybridApp.HybridAppService.StateEnum[]" Browse="Required Public"/>
+    <Type Name="HybridApp.HybridAppService.EmployeeDepartment[]" Browse="Required Public"/>
+    <Type Name="HybridApp.HybridAppService.EmployeeStatus[]" Browse="Required Public"/>
+    <Type Name="HybridApp.HybridAppService.EmployeeTaskStatus[]" Browse="Required Public"/>
+    <Type Name="HybridApp.HybridAppService.EmployeeTaskPriority[]" Browse="Required Public"/>
+    <Type Name="HybridApp.HybridAppService.ProductCategory[]" Browse="Required Public"/>
+        
+    <Type Name="System.Func{System.Object,System.Nullable{System.DateTime}}" Browse="Required Public"/>
+
+    <Assembly Name="DevExpress.UI.Xaml.Grid.v15.2" Dynamic="Required All"/>
+
+    <Type Name="HybridApp.DataModel.SummaryItem" Dynamic="Required Public"/>
+    <Type Name="HybridApp.DataModel.SalesSummaryItem" Dynamic="Required Public"/>
+    <Type Name="HybridApp.DataModel.CostAverageItem" Dynamic="Required Public"/>
+
+    <Type Name="DevExpress.UI.Xaml.Layout.TileBarItem" Dynamic="Required Public"/>
+
+  </Application>
+</Directives>

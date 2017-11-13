@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<totalinfo>
+	<controls>
+		<controlentry>
+			<control>
+				<name>sbCustomizationForm</name>
+				<windowcaption>Customization Form</windowcaption>
+				<description>Invokes/closes the customization form using PivotGridControl.FieldsCustomization and PivotGridControl.DestroyCustomization methods respectively.</description>
+        <memberlist>PivotGridControl.FieldsCustomization, PivotGridControl.DestroyCustomization</memberlist>
+				<dtimage/>
+			</control>
+		</controlentry>
+
+    <controlentry>
+      <control>
+        <name>icbHideFields</name>
+        <windowcaption>Allow Hiding Fields</windowcaption>
+        <description>Specifies whether fields can be hidden by end-users.</description>
+        <memberlist>PivotGridOptionsCustomization.AllowHideFields</memberlist>
+        <dtimage/>
+      </control>
+    </controlentry>
+
+    <controlentry>
+      <control>
+        <name>icbCustomizationStyle</name>
+        <windowcaption>Customization Style</windowcaption>
+        <description>Specifies the customization form style.</description>
+        <memberlist>PivotGridOptionsCustomization.CustomizationFormStyle</memberlist>
+        <dtimage/>
+      </control>
+    </controlentry>
+	</controls>
+</totalinfo>

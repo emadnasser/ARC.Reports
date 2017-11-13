@@ -1,0 +1,113 @@
+﻿@model IList
+<script type="text/javascript">
+    $(window).load(UpdateLabelOptionsDisabled);
+
+    function SetLabelOptionsEnabled() {
+        $("#labelPositionString")[0].disabled = false;
+        $("#textOrientationString")[0].disabled = false;
+    }
+    function UpdateLabelOptionsDisabled() {
+        $("#labelPositionString")[0].disabled = !($("#showLabels")[0].checked);
+        $("#textOrientationString")[0].disabled = !($("#showLabels")[0].checked);
+        OnLabelPositionSelectedIndexChanged();
+        if ($("#labelPositionString")[0].value == "TopInside" || $("#labelPositionString")[0].value == "BottomInside")
+            labelIndent.SetEnabled($("#showLabels")[0].checked);
+    }
+    function OnLabelPositionSelectedIndexChanged() {
+        if (($("#labelPositionString")[0].value != "TopInside" && $("#labelPositionString")[0].value != "BottomInside") || !($("#showLabels")[0].checked))
+            labelIndent.SetEnabled(false);
+        else
+            labelIndent.SetEnabled(true);
+    }
+</script>
+@using (Html.BeginForm()) {
+    ChartBarDemoOptions options = (ChartBarDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+    
+    <div class="chartOptionsPanel" style="height:auto; font-size:12px">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    @Html.CheckBox("showLabels", options.ShowLabels, new { onclick = "UpdateLabelOptionsDisabled()" })
+                </td>
+                <td class="NoWrap">
+                    <label for="showLabels" style="width:auto">Show Labels</label>
+                </td>
+                <td><div class="Spacer" style="width: 251px;"></div></td>
+                <td class="NoWrap">
+                    <label>Label Position</label>
+                </td>
+                <td>
+                    @Html.DropDownList("labelPositionString", ChartDemoHelper.GetBarLabelPositions(false), new { style = "width: 108px", onchange = "OnLabelPositionSelectedIndexChanged()" })
+                </td>
+                <td class="NoWrap">
+                    <label>Text Orientation</label>
+                </td>
+                <td>
+                    @Html.DropDownList("textOrientationString", ChartDemoHelper.GetTextOrientations(), new { style = "width: 108px" })
+                </td>
+            </tr>
+            <tr>
+                <td><div class="Spacer" style="width: 100%;height: 5px"></div></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><div class="Spacer" style="width: 1px;"></div></td>
+                <td class="NoWrap">
+                    <label>Label Indent</label>
+                </td>
+                <td>
+                    @Html.DevExpress().SpinEdit(set => {
+                        set.Name = "labelIndent";
+                        set.Properties.MinValue = 1;
+                        set.Properties.MaxValue = 10000;
+                        set.Number = options.LabelIndent;
+                        set.Width = 108;
+                        set.Height = 21;
+                    }).GetHtml()
+                </td>
+                <td>
+                    <input type="submit" value="Apply" onclick="UpdateLabelOptionsDisabled()" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    @Html.DevExpress().Chart(settings => {
+        settings.Name = "chart";
+        settings.Width = 920;
+        settings.Height = 500;
+        settings.BorderOptions.Visibility = DefaultBoolean.False;
+        settings.CrosshairEnabled = options.ShowLabels ? DefaultBoolean.False : DefaultBoolean.True;
+
+        settings.Legends.Default(l => {
+            l.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
+        });
+
+        settings.Series.Template(t => {
+            t.Views().SideBySideBarSeriesView(v => {
+                v.SeriesLabel(l => {
+                    l.Position = (BarSeriesLabelPosition)Enum.Parse(typeof(BarSeriesLabelPosition), options.LabelPositionString);
+                    l.TextOrientation = (TextOrientation)Enum.Parse(typeof(TextOrientation), options.TextOrientationString);
+                    l.Indent = options.LabelIndent;
+                    l.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+                });
+            });
+            t.SetDataMembers("Region", "Sales");
+            t.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+        });
+
+        settings.XYDiagram(d => {
+            d.AxisY.Interlaced = true;
+            d.AxisY.Title.Text = "Millions of Dollars";
+            d.AxisY.Title.Visibility = DefaultBoolean.True;
+        });
+
+        settings.Titles.Add(new ChartTitle() {
+            Font = new Font("Tahoma", 18),
+            Text = "DevAV Sales by Regions"
+        });
+    }).Bind(Model, seriesDataMember: "Year").GetHtml()
+}

@@ -1,0 +1,7 @@
+﻿@model SpreadsheetExpenseReportModel
+
+@using (Html.BeginForm("ExpenseReportExportTo", "Spreadsheet", FormMethod.Post)) {
+    @Html.Partial("SpreadsheetDocumentDownloaderPartial")
+    <br />
+    @Html.Partial("SpreadsheetPreviewPartial", Model.PreviewModel)    
+}

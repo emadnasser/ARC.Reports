@@ -1,0 +1,126 @@
+﻿@{ ImageSliderFeaturesDemoOptions options = (ImageSliderFeaturesDemoOptions)TempData["Options"]; }
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        if(!$("#ShowNavigationBar").is(':checked')) {
+            $('#SettingsNavigationBar_Position, #SettingsNavigationBar_Mode, #SettingsNavigationBar_ThumbnailsModeNavigationButtonVisibility, #SettingsNavigationBar_ThumbnailsNavigationButtonPosition').attr('disabled', 'disabled');
+        } 
+        $('form :input:checkbox, select').not('#PredefinedScenario').change(
+            function() {
+                $('#PredefinedScenario').val(null);
+            }
+        );
+        $('#PredefinedScenario').change(
+            function() {
+                if($(this).val())
+                    $('form').submit();
+            }
+        );
+    });
+</script>
+
+@using(Html.BeginForm()) {
+    <div class="BottomMargin">
+        <label for="PredefinedScenario">Predefined Scenarios:</label>
+        @Html.DropDownList("PredefinedScenario", ImageSliderDemoHelper.GetPredefinedScenarios(options.PredefinedScenario), "(Custom)")
+    </div>
+    @Html.DevExpress().ImageSlider(
+        settings => {
+            settings.Name = "imageSlider";
+            settings.EnableTheming = false;
+
+            settings.ShowNavigationBar = options.ShowNavigationBar;
+            settings.SettingsImageArea.Assign(options.SettingsImageArea);
+            settings.SettingsNavigationBar.Assign(options.SettingsNavigationBar);
+            settings.SettingsBehavior.Assign(options.SettingsBehavior);
+
+            settings.ClientSideEvents.Init = "function(s, e) { s.Focus(); }";
+        }
+    ).BindToXML(Server.MapPath("~/App_Data/people.xml"), "//items/*").GetHtml()
+    <br />
+    <div class="imageSliderFeaturesPanel">
+        <div class="vertOptionsPanel BottomMargin">
+            <div class="BottomMargin"><b>Image Area Settings:</b></div>
+            <div>
+                @Html.CheckBox("SettingsImageArea.EnableLoopNavigation", options.SettingsImageArea.EnableLoopNavigation, new { @class = "leftMost" })
+                <label class="checkBox" for="SettingsImageArea_EnableLoopNavigation">EnableLoopNavigation</label>
+            </div>
+            <div>
+                <label class="select" for="SettingsImageArea_ImageSizeMode">ImageSizeMode:</label>
+                @Html.DropDownList("SettingsImageArea.ImageSizeMode", typeof(ImageSizeMode), options.SettingsImageArea.ImageSizeMode)
+            </div>
+            <div>
+                <label class="select" for="SettingsImageArea_AnimationType">AnimationType:</label>
+                @Html.DropDownList("SettingsImageArea.AnimationType", typeof(AnimationType), options.SettingsImageArea.AnimationType)
+            </div>
+            <div>
+                <label class="select" for="SettingsImageArea_NavigationDirection">NavigationDirection:</label>
+                @Html.DropDownList("SettingsImageArea.NavigationDirection", typeof(NavigationDirection), options.SettingsImageArea.NavigationDirection)
+            </div>
+            <div>
+                <label class="select" for="SettingsImageArea_ItemTextVisibility">ItemTextVisibility:</label>
+                @Html.DropDownList("SettingsImageArea.ItemTextVisibility", typeof(ElementVisibilityMode), options.SettingsImageArea.ItemTextVisibility)
+            </div>
+            <div>
+                <label class="select" for="SettingsImageArea_NavigationButtonVisibility">NavigationButtonVisibility:</label>
+                @Html.DropDownList("SettingsImageArea.NavigationButtonVisibility", typeof(ElementVisibilityMode), options.SettingsImageArea.NavigationButtonVisibility)
+            </div>
+        </div>
+        <div class="vertOptionsPanel navigationBar BottomMargin">
+            <div class="BottomMargin"><b>Navigation Bar Settings:</b></div>
+            <div>
+                <label class="select" for="SettingsNavigationBar_Position">Position:</label>
+                @Html.DropDownList("SettingsNavigationBar.Position", typeof(NavigationBarPosition), options.SettingsNavigationBar.Position)
+            </div>
+            <div>
+                <label class="select" for="SettingsNavigationBar_Mode">Mode:</label>
+                @Html.DropDownList("SettingsNavigationBar.Mode", typeof(NavigationBarMode), options.SettingsNavigationBar.Mode)
+            </div>
+            <div>
+                <label class="select" for="SettingsNavigationBar_ThumbnailsModeNavigationButtonVisibility">ThumbnailsModeNavigationButtonVisibility:</label>
+                @Html.DropDownList("SettingsNavigationBar.ThumbnailsModeNavigationButtonVisibility",
+                    typeof(ElementVisibilityMode), options.SettingsNavigationBar.ThumbnailsModeNavigationButtonVisibility)
+            </div>
+            <div>
+                <label class="select" for="SettingsNavigationBar_ThumbnailsNavigationButtonPosition">ThumbnailsNavigationButtonPosition:</label>
+                @Html.DropDownList("SettingsNavigationBar.ThumbnailsNavigationButtonPosition",
+                    typeof(ThumbnailNavigationBarButtonPosition), options.SettingsNavigationBar.ThumbnailsNavigationButtonPosition)
+            </div>
+            <div>
+                <label class="select" for="SettingsNavigationBar_PagingMode">PagingMode:</label>
+                @Html.DropDownList("SettingsNavigationBar.PagingMode",
+                    typeof(NavigationBarPagingMode), options.SettingsNavigationBar.PagingMode)
+            </div>
+        </div>
+        <div class="vertOptionsPanel BottomMargin" style="clear: both">
+            <div class="BottomMargin"><b>Behavior Settings:</b></div>
+            <div>
+                @Html.CheckBox("SettingsBehavior.AllowMouseWheel", options.SettingsBehavior.AllowMouseWheel, new { @class = "leftMost" })
+                <label class="checkBox" for="SettingsBehavior_AllowMouseWheel">AllowMouseWheel</label>
+            </div>
+            <div>
+                @Html.CheckBox("SettingsBehavior.EnablePagingGestures", options.SettingsBehavior.EnablePagingGestures, new { @class = "leftMost" })
+                <label class="checkBox" for="SettingsBehavior_EnablePagingGestures">EnablePagingGestures</label>
+            </div>
+            <div>
+                <label class="select" for="SettingsBehavior_EnablePagingByClick">EnablePagingByClick:</label>
+                @Html.DropDownList("SettingsBehavior.EnablePagingByClick", typeof(AutoBoolean), options.SettingsBehavior.EnablePagingByClick)
+            </div>
+            <div>
+                <label class="select" for="SettingsBehavior_ImageLoadMode">ImageLoadMode:</label>
+                @Html.DropDownList("SettingsBehavior.ImageLoadMode", typeof(ImageLoadMode), options.SettingsBehavior.ImageLoadMode)
+            </div>
+            <div>
+                <label class="select" for="SettingsBehavior_ExtremeItemClickMode">ExtremeItemClickMode:</label>
+                @Html.DropDownList("SettingsBehavior.ExtremeItemClickMode", typeof(ExtremeItemClickMode), options.SettingsBehavior.ExtremeItemClickMode)
+            </div>
+            <input type="submit" value="Apply" />
+        </div>
+        <div class="vertOptionsPanel BottomMargin">
+            <div class="BottomMargin"><b>Appearance:</b></div>
+            @Html.CheckBox("ShowNavigationBar", options.ShowNavigationBar, new { @class = "leftMost" })
+            <label class="checkBox" for="ShowNavigationBar">ShowNavigationBar</label>
+        </div>
+    </div>
+}
+ 

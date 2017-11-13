@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<themes>
+  <theme Name="default" Text="Default"></theme>
+  <theme Name="cerulean" Text="Cerulean"></theme>
+  <theme Name="cosmo" Text="Cosmo"></theme>
+  <theme Name="cyborg" Text="Cyborg"></theme>
+  <theme Name="darkly" Text="Darkly"></theme>
+  <theme Name="flatly" Text="Flatly"></theme>
+  <theme Name="journal" Text="Journal"></theme>
+  <theme Name="lumen" Text="Lumen"></theme>
+  <theme Name="paper" Text="Paper"></theme>
+  <theme Name="readable" Text="Readable"></theme>
+  <theme Name="sandstone" Text="Sandstone"></theme>
+  <theme Name="simplex" Text="Simplex"></theme>
+  <theme Name="slate" Text="Slate"></theme>
+  <theme Name="spacelab" Text="Spacelab"></theme>
+  <theme Name="superhero" Text="Superhero"></theme>
+  <theme Name="united" Text="United"></theme>
+  <theme Name="yeti" Text="Yeti"></theme>
+</themes>

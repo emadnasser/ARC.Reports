@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4FFC1082-E22F-4E11-86D9-C4DE925CC9D0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GridTutorials</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GridTutorials</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <Name>DevExpress.Data.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <Name>DevExpress.Tutorials.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <Name>DevExpress.Utils.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <Name>DevExpress.XtraBars.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <Name>DevExpress.XtraEditors.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2">
+      <Name>DevExpress.XtraGrid.v16.2</Name>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridAddNewRowInGroupedMode\GridAddNewRowInGroupedMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridAddNewRowInGroupedMode\GridAddNewRowInGroupedMode.Designer.cs">
+      <DependentUpon>GridAddNewRowInGroupedMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridAlphaBlending\GridAlphaBlending.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridAlphaBlending\GridAlphaBlending.Designer.cs">
+      <DependentUpon>GridAlphaBlending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridAndControlNavigator\GridAndControlNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridAndControlNavigator\GridAndControlNavigator.Designer.cs">
+      <DependentUpon>GridAndControlNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridBandedViewNavigation\GridBandedViewNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridBandedViewNavigation\GridBandedViewNavigation.Designer.cs">
+      <DependentUpon>GridBandedViewNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridCalcRowHeight\GridCalcRowHeight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridCalcRowHeight\GridCalcRowHeight.Designer.cs">
+      <DependentUpon>GridCalcRowHeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridCardView\GridCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridCardView\GridCardView.Designer.cs">
+      <DependentUpon>GridCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridColumnAlignment\GridColumnAlignment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridColumnAlignment\GridColumnAlignment.Designer.cs">
+      <DependentUpon>GridColumnAlignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridColumnCustomization\GridColumnCustomization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridColumnCustomization\GridColumnCustomization.Designer.cs">
+      <DependentUpon>GridColumnCustomization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridColumnFormat\GridColumnFormatClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridColumnFormat\GridColumnFormat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridColumnFormat\GridColumnFormat.Designer.cs">
+      <DependentUpon>GridColumnFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridCustomDraw\GridCustomDraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridCustomDraw\GridCustomDraw.Designer.cs">
+      <DependentUpon>GridCustomDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridCustomFilterDialog\GridCustomFilterDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridCustomFilterDialog\GridCustomFilterDialog.Designer.cs">
+      <DependentUpon>GridCustomFilterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridCustomMenu\GridCustomMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridCustomMenu\GridCustomMenu.Designer.cs">
+      <DependentUpon>GridCustomMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridCustomMenu\GridViewColumnButtonMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridCustomTooltips\GridCustomTooltips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridCustomTooltips\GridCustomTooltips.Designer.cs">
+      <DependentUpon>GridCustomTooltips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridDoubleClickRow\GridDoubleClickRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridDoubleClickRow\GridDoubleClickRow.Designer.cs">
+      <DependentUpon>GridDoubleClickRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridDragDropExternal\GridDragDropExternal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridDragDropExternal\GridDragDropExternal.Designer.cs">
+      <DependentUpon>GridDragDropExternal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridDragDropInternal\GridDragDropInternal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridDragDropInternal\GridDragDropInternal.Designer.cs">
+      <DependentUpon>GridDragDropInternal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridDrawColumnObjects\GridDrawColumnObjects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridDrawColumnObjects\GridDrawColumnObjects.Designer.cs">
+      <DependentUpon>GridDrawColumnObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridEditDataInPopupForm\GridEditDataInPopupForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridEditDataInPopupForm\GridEditDataInPopupForm.Designer.cs">
+      <DependentUpon>GridEditDataInPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridEditDataInPopupForm\PopupFormGridEditDataInPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridEditDataInPopupForm\PopupFormGridEditDataInPopupForm.Designer.cs">
+      <DependentUpon>PopupFormGridEditDataInPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridEditorsExternalRepository\GridEditorsExternalRepository.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridEditorsExternalRepository\GridEditorsExternalRepository.Designer.cs">
+      <DependentUpon>GridEditorsExternalRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridEditorShowMode\GridEditorShowMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridEditorShowMode\GridEditorShowMode.Designer.cs">
+      <DependentUpon>GridEditorShowMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridEditorsInternalRepository\GridEditorsInternalRepository.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridEditorsInternalRepository\GridEditorsInternalRepository.Designer.cs">
+      <DependentUpon>GridEditorsInternalRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridFilterPopupDate\GridFilterPopupDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridFilterPopupDate\GridFilterPopupDate.Designer.cs">
+      <DependentUpon>GridFilterPopupDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridFilterPopupDate\GridFilterPopupDateClass.cs" />
+    <Compile Include="GridUnboundErrorNotificationAdv\GridUnboundErrorNotificationClassAdv.cs" />
+    <Compile Include="GridUnboundErrorNotificationAdv\GridUnboundErrorNotificationAdv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridUnboundErrorNotificationAdv\GridUnboundErrorNotificationAdv.Designer.cs">
+      <DependentUpon>GridUnboundErrorNotificationAdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridExport\GridExport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridExport\GridExport.Designer.cs">
+      <DependentUpon>GridExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridFieldAutoHeight\GridFieldAutoHeight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridFieldAutoHeight\GridFieldAutoHeight.Designer.cs">
+      <DependentUpon>GridFieldAutoHeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridFilteredView\GridFilteredViewClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GridFilteredView\GridFilteredView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridFilteredView\GridFilteredView.Designer.cs">
+      <DependentUpon>GridFilteredView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridFocusedRow\GridFocusedRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridFocusedRow\GridFocusedRow.Designer.cs">
+      <DependentUpon>GridFocusedRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridGroupLevelStyle\GridGroupLevelStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridGroupLevelStyle\GridGroupLevelStyle.Designer.cs">
+      <DependentUpon>GridGroupLevelStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridHitInfo\GridHitInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridHitInfo\GridHitInfo.Designer.cs">
+      <DependentUpon>GridHitInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridIBindingList\GridIBindingListClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridIBindingList\GridIBindingList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridIBindingList\GridIBindingList.Designer.cs">
+      <DependentUpon>GridIBindingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridIncrementalSearch\GridIncrementalSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridIncrementalSearch\GridIncrementalSearch.Designer.cs">
+      <DependentUpon>GridIncrementalSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridIndicator\GridIndicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridIndicator\GridIndicator.Designer.cs">
+      <DependentUpon>GridIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridLookAndFeel\GridLookAndFeel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridLookAndFeel\GridLookAndFeel.Designer.cs">
+      <DependentUpon>GridLookAndFeel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridMasterDetail\dsParents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsParents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GridMasterDetail\GridMasterDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridMasterDetail\GridMasterDetail.Designer.cs">
+      <DependentUpon>GridMasterDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridMultiEditors\GridMultiEditorsClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridMultiEditors\GridMultiEditors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridMultiEditors\GridMultiEditors.Designer.cs">
+      <DependentUpon>GridMultiEditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridMultiSelect\GridMultiSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridMultiSelect\GridMultiSelect.Designer.cs">
+      <DependentUpon>GridMultiSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridNewItemRow\GridNewItemRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridNewItemRow\GridNewItemRow.Designer.cs">
+      <DependentUpon>GridNewItemRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridOptions\GridOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridOptions\GridOptions.Designer.cs">
+      <DependentUpon>GridOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridPopulation\GridPopulation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridPopulation\GridPopulation.Designer.cs">
+      <DependentUpon>GridPopulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridPreview\GridPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridPreview\GridPreview.Designer.cs">
+      <DependentUpon>GridPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridRealTime\GridRealTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridRealTime\GridRealTime.Designer.cs">
+      <DependentUpon>GridRealTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridRelations\GridRelations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridRelations\GridRelations.Designer.cs">
+      <DependentUpon>GridRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridRowCellStyle\GridRowCellStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridRowCellStyle\GridRowCellStyle.Designer.cs">
+      <DependentUpon>GridRowCellStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridRowFilterEvent\GridRowFilterEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridRowFilterEvent\GridRowFilterEvent.Designer.cs">
+      <DependentUpon>GridRowFilterEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridRunTimeGrouping\GridRunTimeGrouping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridRunTimeGrouping\GridRunTimeGrouping.Designer.cs">
+      <DependentUpon>GridRunTimeGrouping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridRunTimeUsing\GridRunTimeUsingClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridRunTimeUsing\GridRunTimeUsing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridRunTimeUsing\GridRunTimeUsing.Designer.cs">
+      <DependentUpon>GridRunTimeUsing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridSeveralDataViewsOneDataTable\GridSeveralDataViewsOneDataTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridSeveralDataViewsOneDataTable\GridSeveralDataViewsOneDataTable.Designer.cs">
+      <DependentUpon>GridSeveralDataViewsOneDataTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridSimpleMode\Contacts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridSimpleMode\GridSimpleMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridSimpleMode\GridSimpleMode.Designer.cs">
+      <DependentUpon>GridSimpleMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridSkins\GridSkins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridSkins\GridSkins.Designer.cs">
+      <DependentUpon>GridSkins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridStyleCondition\GridStyleCondition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridStyleCondition\GridStyleCondition.Designer.cs">
+      <DependentUpon>GridStyleCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridStyleFormats\GridStyleFormats.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridStyleFormats\GridStyleFormats.Designer.cs">
+      <DependentUpon>GridStyleFormats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridSummaries\GridSummaries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridSummaries\GridSummaries.Designer.cs">
+      <DependentUpon>GridSummaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridUnboundColumns\GridUnboundColumns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridUnboundColumns\GridUnboundColumns.Designer.cs">
+      <DependentUpon>GridUnboundColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridUnboundErrorNotification\GridUnboundErrorNotificationClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridUnboundErrorNotification\GridUnboundErrorNotification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridUnboundErrorNotification\GridUnboundErrorNotification.Designer.cs">
+      <DependentUpon>GridUnboundErrorNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridUnboundMasterViewDynamic\GridUnboundMasterViewDynamicClass1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridUnboundMasterViewDynamic\GridUnboundMasterViewDynamicClass2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridUnboundMasterViewDynamic\GridUnboundMasterViewDynamic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridUnboundMasterViewDynamic\GridUnboundMasterViewDynamic.Designer.cs">
+      <DependentUpon>GridUnboundMasterViewDynamic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridUnboundMasterView\GridUnboundMasterViewClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridUnboundMasterView\GridUnboundMasterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridUnboundMasterView\GridUnboundMasterView.Designer.cs">
+      <DependentUpon>GridUnboundMasterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridUnboundModeViaCollection\GridUnboundModeViaCollectionClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridUnboundModeViaCollection\GridUnboundModeViaCollection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridUnboundModeViaCollection\GridUnboundModeViaCollection.Designer.cs">
+      <DependentUpon>GridUnboundModeViaCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridUnboundModeViaDataTable\GridUnboundModeViaDataTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridUnboundModeViaDataTable\GridUnboundModeViaDataTable.Designer.cs">
+      <DependentUpon>GridUnboundModeViaDataTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridValidatingControl\GridValidatingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridValidatingControl\GridValidatingControl.Designer.cs">
+      <DependentUpon>GridValidatingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridVerticalHeaders\GridVerticalHeaders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridVerticalHeaders\GridVerticalHeaders.Designer.cs">
+      <DependentUpon>GridVerticalHeaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridVirtualDataDynamic\GridVirtualDataDynamicClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridVirtualDataDynamic\GridVirtualDataDynamic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridVirtualDataDynamic\GridVirtualDataDynamic.Designer.cs">
+      <DependentUpon>GridVirtualDataDynamic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridVirtualData\GridVirtualDataClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridVirtualData\GridVirtualData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridVirtualData\GridVirtualData.Designer.cs">
+      <DependentUpon>GridVirtualData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridXMLReader\GridXMLReader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridXMLReader\GridXMLReader.Designer.cs">
+      <DependentUpon>GridXMLReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="TutorialRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridAddNewRowInGroupedMode\GridAddNewRowInGroupedMode.resx">
+      <DependentUpon>GridAddNewRowInGroupedMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridAlphaBlending\GridAlphaBlending.resx">
+      <DependentUpon>GridAlphaBlending.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridAndControlNavigator\GridAndControlNavigator.resx">
+      <DependentUpon>GridAndControlNavigator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridBandedViewNavigation\GridBandedViewNavigation.resx">
+      <DependentUpon>GridBandedViewNavigation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridCalcRowHeight\Employees.xml" />
+    <EmbeddedResource Include="GridCalcRowHeight\GridCalcRowHeight.resx">
+      <DependentUpon>GridCalcRowHeight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridCardView\GridCardView.resx">
+      <DependentUpon>GridCardView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridColumnAlignment\GridColumnAlignment.resx">
+      <DependentUpon>GridColumnAlignment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridColumnCustomization\GridColumnCustomization.resx">
+      <DependentUpon>GridColumnCustomization.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridColumnFormat\GridColumnFormat.resx">
+      <DependentUpon>GridColumnFormat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridCustomDraw\GridCustomDraw.resx">
+      <DependentUpon>GridCustomDraw.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridCustomFilterDialog\GridCustomFilterDialog.resx">
+      <DependentUpon>GridCustomFilterDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridCustomMenu\GridCustomMenu.resx">
+      <DependentUpon>GridCustomMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridCustomTooltips\GridCustomTooltips.resx">
+      <DependentUpon>GridCustomTooltips.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridDoubleClickRow\GridDoubleClickRow.resx">
+      <DependentUpon>GridDoubleClickRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridDragDropExternal\GridDragDropExternal.resx">
+      <DependentUpon>GridDragDropExternal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridDragDropInternal\GridDragDropInternal.resx">
+      <DependentUpon>GridDragDropInternal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridDrawColumnObjects\GridDrawColumnObjects.resx">
+      <DependentUpon>GridDrawColumnObjects.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridEditDataInPopupForm\GridEditDataInPopupForm.resx">
+      <DependentUpon>GridEditDataInPopupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridEditDataInPopupForm\PopupFormGridEditDataInPopupForm.resx">
+      <DependentUpon>PopupFormGridEditDataInPopupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridEditorsExternalRepository\GridEditorsExternalRepository.resx">
+      <DependentUpon>GridEditorsExternalRepository.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridEditorShowMode\GridEditorShowMode.resx">
+      <DependentUpon>GridEditorShowMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridEditorsInternalRepository\GridEditorsInternalRepository.resx">
+      <DependentUpon>GridEditorsInternalRepository.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridFilterPopupDate\GridFilterPopupDate.resx">
+      <DependentUpon>GridFilterPopupDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridUnboundErrorNotificationAdv\GridUnboundErrorNotificationAdv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GridUnboundErrorNotificationAdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridExport\GridExport.resx">
+      <DependentUpon>GridExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridFieldAutoHeight\GridFieldAutoHeight.resx">
+      <DependentUpon>GridFieldAutoHeight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridFilteredView\GridFilteredView.resx">
+      <DependentUpon>GridFilteredView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridFocusedRow\GridFocusedRow.resx">
+      <DependentUpon>GridFocusedRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridGroupLevelStyle\GridGroupLevelStyle.resx">
+      <DependentUpon>GridGroupLevelStyle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridHitInfo\GridHitInfo.resx">
+      <DependentUpon>GridHitInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridIBindingList\GridIBindingList.resx">
+      <DependentUpon>GridIBindingList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridIncrementalSearch\GridIncrementalSearch.resx">
+      <DependentUpon>GridIncrementalSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridIndicator\GridIndicator.resx">
+      <DependentUpon>GridIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridLookAndFeel\GridLookAndFeel.resx">
+      <DependentUpon>GridLookAndFeel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridMasterDetail\GridMasterDetail.resx">
+      <DependentUpon>GridMasterDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridMasterDetail\Parents.xml" />
+    <EmbeddedResource Include="GridMultiEditors\GridMultiEditors.resx">
+      <DependentUpon>GridMultiEditors.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridMultiSelect\GridMultiSelect.resx">
+      <DependentUpon>GridMultiSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridNewItemRow\GridNewItemRow.resx">
+      <DependentUpon>GridNewItemRow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridOptions\GridOptions.resx">
+      <DependentUpon>GridOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridPopulation\GridPopulation.resx">
+      <DependentUpon>GridPopulation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridPreview\GridPreview.resx">
+      <DependentUpon>GridPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridRealTime\GridRealTime.resx">
+      <DependentUpon>GridRealTime.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridRelations\GridRelations.resx">
+      <DependentUpon>GridRelations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridRowCellStyle\GridRowCellStyle.resx">
+      <DependentUpon>GridRowCellStyle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridRowFilterEvent\GridRowFilterEvent.resx">
+      <DependentUpon>GridRowFilterEvent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridRunTimeGrouping\GridRunTimeGrouping.resx">
+      <DependentUpon>GridRunTimeGrouping.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridRunTimeUsing\GridRunTimeUsing.resx">
+      <DependentUpon>GridRunTimeUsing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridSeveralDataViewsOneDataTable\GridSeveralDataViewsOneDataTable.resx">
+      <DependentUpon>GridSeveralDataViewsOneDataTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridSimpleMode\GridSimpleMode.resx">
+      <DependentUpon>GridSimpleMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridSkins\GridSkins.resx">
+      <DependentUpon>GridSkins.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridStyleCondition\GridStyleCondition.resx">
+      <DependentUpon>GridStyleCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridStyleFormats\GridStyleFormats.resx">
+      <DependentUpon>GridStyleFormats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridSummaries\GridSummaries.resx">
+      <DependentUpon>GridSummaries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridUnboundColumns\GridUnboundColumns.resx">
+      <DependentUpon>GridUnboundColumns.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridUnboundErrorNotification\GridUnboundErrorNotification.resx">
+      <DependentUpon>GridUnboundErrorNotification.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridUnboundMasterViewDynamic\GridUnboundMasterViewDynamic.resx">
+      <DependentUpon>GridUnboundMasterViewDynamic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridUnboundMasterView\GridUnboundMasterView.resx">
+      <DependentUpon>GridUnboundMasterView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridUnboundModeViaCollection\GridUnboundModeViaCollection.resx">
+      <DependentUpon>GridUnboundModeViaCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridUnboundModeViaDataTable\GridUnboundModeViaDataTable.resx">
+      <DependentUpon>GridUnboundModeViaDataTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridValidatingControl\GridValidatingControl.resx">
+      <DependentUpon>GridValidatingControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridVerticalHeaders\GridVerticalHeaders.resx">
+      <DependentUpon>GridVerticalHeaders.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridVirtualDataDynamic\GridVirtualDataDynamic.resx">
+      <DependentUpon>GridVirtualDataDynamic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridVirtualData\GridVirtualData.resx">
+      <DependentUpon>GridVirtualData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridXMLReader\GridXMLReader.resx">
+      <DependentUpon>GridXMLReader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="AppIcon.ico" />
+    <Content Include="GridMasterDetail\dsParents.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsParents.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    
+    
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    
+    
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,112 @@
+﻿<script type="text/javascript">
+    $(document).ready(function() {
+        $("input[type='checkbox']").change(
+            function() {
+                $("form").submit();
+    }
+        );
+    });
+    function SaveSelectedDates(s, e) {
+        var selectedDates = s.GetSelectedDates();
+        var calendarSelectedDates = [];
+        for(var i = 0; i < selectedDates.length; i++) {
+            var day = selectedDates[i].getDate();
+            var month = selectedDates[i].getMonth() + 1;
+            var year = selectedDates[i].getFullYear();
+            calendarSelectedDates.push([
+                (month < 10 ? "0" : "") + month.toString(),
+                (day < 10 ? "0" : "") + day.toString(),
+                year.toString()
+            ].join("/"));
+        }
+        $("#selectedDates").val(calendarSelectedDates.join());
+    }
+    function CustomDisabledDates(s, e) {
+        if(e.date.getDay() == 3)
+            e.isDisabled = true;
+    }
+</script>
+@{ var options = (CalendarDemoOptions)ViewData["Options"]; }
+@using(Html.BeginForm()) {
+    <div class="vertComponentContainer">
+        @Html.DevExpress().Calendar(
+            settings => {
+                settings.Name = "calendar";
+                settings.Properties.HighlightToday = options.HighlightToday;
+                settings.Properties.HighlightWeekends = options.HighlightWeekends;
+                settings.Properties.ShowClearButton = options.ShowClearButton;
+                settings.Properties.ShowTodayButton = options.ShowTodayButton;
+                settings.Properties.ShowDayHeaders = options.ShowDayHeaders;
+                settings.Properties.ShowHeader = options.ShowHeader;
+                settings.Properties.ShowWeekNumbers = options.ShowWeekNumbers;
+                settings.Properties.EnableMultiSelect = options.EnableMultiSelect;
+                settings.Properties.ClientSideEvents.SelectionChanged = "SaveSelectedDates";
+                settings.Properties.ClientSideEvents.Init = "SaveSelectedDates";
+
+                if(ViewData["SelectedDates"] != null) {
+                    settings.SelectedDates.Add((DateTime[])ViewData["SelectedDates"]);
+                }
+
+                if(options.DisableDates) {
+                    settings.Properties.DisabledDates.AddRange((List<DateTime>)ViewData["DisabledDates"]);
+                    settings.Properties.ClientSideEvents.CustomDisabledDate = "CustomDisabledDates";
+                }
+                
+                settings.PreRender = (s, e) => {
+                    MVCxCalendar calendar = (MVCxCalendar)s;
+                    if(!calendar.EnableMultiSelect) {
+                        calendar.SelectedDates.Clear();
+                    }
+                    else if(calendar.SelectedDates.Count < 2) {
+                        int visibleDaysCount = (calendar.GetLastVisibleDate() - calendar.GetFirstVisibleDate()).Days;
+                        Random rnd = new Random();
+                        for(int i = 0; i < 5; i++) {
+                            DateTime selectedDate = calendar.GetFirstVisibleDate().AddDays(rnd.Next(visibleDaysCount));
+                            calendar.SelectedDates.Add(selectedDate);
+                        }
+                    }
+                };
+        }).GetHtml()
+        <input type="hidden" name="selectedDates" id="selectedDates" />
+    </div>
+    <div class="vertOptionsPanel">
+        <div>
+            @Html.CheckBox("HighlightToday", options.HighlightToday)
+            <label for="HighlightToday" class="checkBox">HighlightToday</label> 
+        </div>
+        <div>
+            @Html.CheckBox("HighlightWeekends", options.HighlightWeekends)
+            <label for="HighlightWeekends" class="checkBox">HighlightWeekends</label>
+        </div>
+        <div>
+            @Html.CheckBox("ShowClearButton", options.ShowClearButton)
+            <label for="ShowClearButton" class="checkBox">ShowClearButton</label>
+        </div>
+        <div>
+            @Html.CheckBox("ShowTodayButton", options.ShowTodayButton)
+            <label for="ShowTodayButton" class="checkBox">ShowTodayButton</label>
+        </div>
+        <div>
+            @Html.CheckBox("ShowDayHeaders", options.ShowDayHeaders)
+            <label for="ShowDayHeaders" class="checkBox">ShowDayHeaders</label>
+        </div>
+        <div>
+            @Html.CheckBox("ShowHeader", options.ShowHeader)
+            <label for="ShowHeader" class="checkBox">ShowHeader</label>
+        </div>
+        <div>
+            @Html.CheckBox("ShowWeekNumbers", options.ShowWeekNumbers)
+            <label for="ShowWeekNumbers" class="checkBox">ShowWeekNumbers</label>
+        </div>
+        <div>
+            @Html.CheckBox("EnableMultiSelect", options.EnableMultiSelect)
+            <label for="EnableMultiSelect" class="checkBox">EnableMultiSelect</label>
+        </div>
+        <div>
+            @Html.CheckBox("DisableDates", options.DisableDates)
+            <label for="DisableDates" class="checkBox">Disable dates</label>
+        </div>
+    </div>
+}
+
+

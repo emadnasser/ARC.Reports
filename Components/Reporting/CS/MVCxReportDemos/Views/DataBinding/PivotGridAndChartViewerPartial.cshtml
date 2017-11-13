@@ -1,0 +1,11 @@
+﻿@using DevExpress.Web.Demos.Code.Designer
+@model ReportsDemoModel
+@Html.DevExpress().DocumentViewer(
+    settings => {
+        settings.Name = "DocumentViewer";
+        settings.Report = Model.Report;
+        settings.Width = 1200;
+        settings.StylesSplitter.SidePaneWidth = 240;
+        settings.CallbackRouteValues = new { Controller = "DataBinding", Action = "PivotGridAndChartViewerPartial", ReportID = Model.ReportID };
+        settings.ExportRouteValues = new { Controller = "DataBinding", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+    }).GetHtml()

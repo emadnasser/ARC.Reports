@@ -1,0 +1,31 @@
+﻿@Html.DevExpress().GridView(
+    settings => {
+        settings.Name = "gvSummary";
+        settings.CallbackRouteValues = new { Controller = "Summary", Action = "GroupSortBySummaryPartial", SummarySortOrder = ViewBag.SummarySortOrder };
+        settings.Width = Unit.Percentage(100);
+
+        settings.KeyFieldName = "OrderID";
+        settings.Columns.Add("CompanyName");
+        settings.Columns.Add("City").GroupIndex = 1;
+        settings.Columns.Add("Region");
+        settings.Columns.Add("Country").GroupIndex = 0;
+        settings.Columns.Add("UnitPrice").PropertiesEdit.DisplayFormatString = "c";
+        settings.Columns.Add("Quantity");
+        settings.Columns.Add(column => {
+            column.FieldName = "Total";
+            column.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            column.PropertiesEdit.DisplayFormatString = "c";
+        });
+
+        settings.CustomUnboundColumnData = (sender, e) => {
+            if (e.Column.FieldName == "Total") {
+                decimal price = (decimal)e.GetListSourceFieldValue("UnitPrice");
+                int quantity = Convert.ToInt32(e.GetListSourceFieldValue("Quantity"));
+                e.Value = price * quantity;
+            }
+        };
+            
+        settings.GroupSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Total").DisplayFormat= "c";
+        if(ViewBag.SummarySortOrder != DevExpress.Data.ColumnSortOrder.None)
+            settings.GroupSummarySortInfo.AddRange(new ASPxGroupSummarySortInfo("Country", settings.GroupSummary["Total"], ViewBag.SummarySortOrder));
+    }).Bind(Model).GetHtml()

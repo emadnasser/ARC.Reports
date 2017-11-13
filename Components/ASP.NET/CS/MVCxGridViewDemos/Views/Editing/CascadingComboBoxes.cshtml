@@ -1,0 +1,14 @@
+﻿@model IEnumerable
+
+<script type="text/javascript">
+    function OnSelectedCountryChanged() {
+        GridView.GetEditor("City").PerformCallback();
+    }
+    function CityComboBox_BeginCallback(s, e) {
+        e.customArgs["CountryName"] = GridView.GetEditor("Country").GetValue();
+    }
+</script>
+
+@using(Html.BeginForm()) {
+    @Html.Partial("CascadingComboBoxesPartial", Model)
+}

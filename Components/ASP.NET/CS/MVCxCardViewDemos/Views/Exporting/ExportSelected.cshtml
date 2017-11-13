@@ -1,0 +1,8 @@
+﻿@model IEnumerable
+
+@using(Html.BeginForm("ExportSelectedResult", "Exporting", FormMethod.Post)) {
+    <div style="padding: 10px 0;">
+        @Html.Partial("ToolbarExport", CardViewExportDemoHelper.ExportFormatsInfo.Keys)
+    </div>
+    @Html.Partial("ExportSelectedPartial", Model)
+}

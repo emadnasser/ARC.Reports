@@ -1,0 +1,38 @@
+﻿@model Mail
+
+<div class="line">
+    <div class="cell label">
+        @Html.DevExpress().LabelFor(model => model.Email).GetHtml()
+    </div>
+    <div class="cell">
+        @Html.DevExpress().TextBoxFor(model => model.Email, ContentUrlDemoHelper.TextBoxSettingsMethod).GetHtml()
+    </div>
+</div>
+<div class="line">
+    <div class="cell label">
+        @Html.DevExpress().LabelFor(model => model.Subject).GetHtml()
+    </div>
+    <div class="cell">
+        @Html.DevExpress().TextBoxFor(model => model.Subject, ContentUrlDemoHelper.TextBoxSettingsMethod).GetHtml()
+    </div>
+</div>
+<div class="line" style="height: 70%">
+    <div class="cell label">
+        @Html.DevExpress().LabelFor(model => model.Message).GetHtml()
+    </div>
+    <div class="cell">
+        @Html.DevExpress().MemoFor(model => model.Message, ContentUrlDemoHelper.MemoSettingsMethod).GetHtml()
+    </div>
+</div>
+<div class="line">
+    <div class="cell"></div>
+    <div class="cell">
+        @Html.DevExpress().Button(
+            settings => {
+                settings.Name = "btnSend";
+                settings.ControlStyle.CssClass = "button";
+                settings.Text = "Send";
+                settings.UseSubmitBehavior = true;
+            }).GetHtml()
+    </div>
+</div>

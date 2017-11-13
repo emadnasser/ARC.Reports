@@ -1,0 +1,27 @@
+﻿@using DevExpress.Web.Mvc
+
+@model ReportsDemoModel
+
+@Html.DevExpress().DocumentViewer(settings => {
+    settings.Name = "DocumentViewer";
+    settings.Report = Model.Report;
+    settings.CallbackRouteValues = new { Controller = "ReportTypes", Action = "SubreportsViewerPartial", ReportID = Model.ReportID };
+    settings.ExportRouteValues = new { Controller = "ReportTypes", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
+
+    Action<MVCxDocumentViewerParameter> configureParameterEditor = x => {
+        x.ParameterType = MVCxDocumentViewerParameterEditorType.DateEdit;
+        var properties = (MVCxDateEditProperties)x.PropertiesEdit;
+        properties.CalendarProperties.ShowTodayButton = false;
+        properties.MinDate = new DateTime(2016, 1, 1);
+        properties.MaxDate = new DateTime(2016, 12, 31);
+        properties.ValidationSettings.ErrorText = "The end date should be grater than the start date.";
+        properties.ClientInstanceName = x.ParameterName;
+        x.EditorID = x.ParameterName;
+        properties.ClientSideEvents.Init = "editorInitialized";
+        if(x.ParameterName == "toDateParameter") {
+            properties.DateRangeSettings.StartDateEditID = "fromDateParameter";
+        }
+    };
+    settings.SetCustomParameter("fromDateParameter", configureParameterEditor);
+    settings.SetCustomParameter("toDateParameter", configureParameterEditor);
+}).GetHtml()

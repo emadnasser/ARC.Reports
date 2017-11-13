@@ -1,0 +1,66 @@
+﻿@model EditableEmployee
+           
+@Html.DevExpress().FormLayout(settings => {
+    settings.Name = "formLayout";
+    settings.AlignItemCaptionsInAllGroups = true;
+    
+    settings.Items.Add(m => m.EmployeeID, i => { 
+        i.Caption = "Select record";
+        
+        i.NestedExtension().ComboBox(s => {
+            s.Properties.ClientSideEvents.ValueChanged = "UpdateLayoutForm";
+            s.Properties.ValueType = typeof(int);
+            for(var j = 1; j <= 5; j++) {
+                s.Properties.Items.Add("Employee #" + j, j);
+            }
+        });
+    });
+    
+    settings.Items.AddEmptyItem();
+    
+    settings.Items.AddGroupItem(g => {
+        g.Caption = "Personal Information";
+        g.ColCount = 2;
+        g.Items.Add(m => m.FirstName, i => {
+            i.NestedExtension().TextBox(tb => {
+                tb.Width = Unit.Pixel(170);
+                tb.ShowModelErrors = true;
+                tb.Properties.ValidationSettings.Display = Display.Dynamic;
+                tb.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.None;
+            });
+        });
+        g.Items.Add(m => m.LastName, i => {
+            i.NestedExtension().TextBox(tb => {
+                tb.Width = Unit.Pixel(170);
+                tb.ShowModelErrors = true;
+                tb.Properties.ValidationSettings.Display = Display.Dynamic;
+                tb.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.None;
+            });
+        });
+        g.Items.Add(m => m.BirthDate);
+    });
+    
+    settings.Items.AddGroupItem(g => {
+        g.Caption = "Work Information";
+        g.ColCount = 2;
+        g.Items.Add(m => m.Title, i => i.NestedExtensionSettings.Width = Unit.Pixel(170));
+        g.Items.Add(m => m.HireDate);
+        g.Items.Add(m => m.Notes, i => {
+            i.ColSpan = 2;
+            i.NestedExtensionType = FormLayoutNestedExtensionItemType.Memo;
+            i.NestedExtensionSettings.Width = Unit.Percentage(100);
+            i.NestedExtensionSettings.Height = Unit.Pixel(71);
+        });
+    });
+    
+    settings.Items.Add(i => {
+        i.ShowCaption = DefaultBoolean.False;
+        i.HorizontalAlign = FormLayoutHorizontalAlign.Right;
+        i.Width = 150;
+        i.NestedExtension().Button(s => {
+            s.Name = "applyButton";
+            s.Text = "Update Record";
+            s.UseSubmitBehavior = true;
+        });
+    });
+}).GetHtml()

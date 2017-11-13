@@ -1,0 +1,151 @@
+﻿@model IList
+<script type="text/javascript">
+    $(window).load(UpdateLabelOptionsDisabled);
+
+    function SetLabelOptionsEnabled() {
+        $("#labelPosition")[0].disabled = false;
+    }
+    function UpdateLabelOptionsDisabled() {
+        $("#labelPosition")[0].disabled = !($("#showLabels")[0].checked);
+    }
+</script>
+@using (Html.BeginForm()) {
+    ChartBubbleDemoOptions options = (ChartBubbleDemoOptions)ViewData[ChartDemoHelper.OptionsKey];
+    
+    <div class="chartOptionsPanel" style="height:auto; font-size:12px">
+        <table class="OptionsTable">
+            <tr>
+                <td class="NoWrap">
+                    <label>Transparency</label>
+                </td>
+                <td>
+                    @Html.DropDownList("transparency", ChartDemoHelper.GetTransparency("90"), new { style = "width:120px" })
+                </td>
+                <td class="NoWrap">
+                    <label>Max Bubble Size</label>
+                </td>
+                <td>
+                    @Html.DevExpress().SpinEdit(set => {
+                        set.Name = "maxBubbleSize";
+                        set.Properties.MinValue = 3.1M;
+                        set.Properties.MaxValue = 6M;
+                        set.Properties.Increment = 0.1M;
+                        set.Number = options.MaxBubbleSize;
+                        set.Width = 54;
+                    }).GetHtml()
+                </td>
+                <td><div class="Spacer" style="width: 230px;"></div></td>
+                <td class="NoWrap">
+                    <label for="labelPosition">Label Position</label>
+                </td>
+                <td>
+                    @Html.DropDownList("labelPosition", ChartDemoHelper.GetPointLabelPositions(false), new { style = "width:80px" })
+                </td>
+            </tr>
+            <tr>
+                <td class="NoWrap">
+                    <label>Marker Kind</label>
+                </td>
+                <td>
+                    @Html.DropDownList("markerKindString", ChartDemoHelper.GetMarkerKinds(), new { style = "width:120px" })
+                </td>
+                <td class="NoWrap">
+                    <label>Min Bubble Size</label>
+                </td>
+                <td>
+                    @Html.DevExpress().SpinEdit(set => {
+                        set.Name = "minBubbleSize";
+                        set.Properties.MinValue = 0.1M;
+                        set.Properties.MaxValue = 3M;
+                        set.Properties.Increment = 0.1M;
+                        set.Number = options.MinBubbleSize;
+                        set.Width = 54;
+                    }).GetHtml()
+                </td>
+                <td><div class="Spacer" style="width: 230px;"></div></td>
+                <td class="nowrap">
+                    @Html.CheckBox("showLabels", options.ShowLabels, new { onclick = "UpdateLabelOptionsDisabled()" })
+                    <label for="showLabels" style="width:auto; margin-left:5px">Show Labels</label>
+                </td>
+                <td><div class="Spacer" style="width: 15px;"></div></td>
+                <td>
+                    <input type="submit" value="Apply" onclick="UpdateLabelOptionsDisabled()" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    @Html.DevExpress().Chart(settings => {
+        settings.Name = "chart";
+        settings.BorderOptions.Visibility = DefaultBoolean.False;
+        settings.Height = 500;
+        settings.Width = 920;
+        settings.CrosshairEnabled = DefaultBoolean.False;
+        settings.ToolTipEnabled = options.ShowLabels ? DefaultBoolean.False : DefaultBoolean.True;
+
+        settings.Legends.Default(l => {
+            l.AlignmentHorizontal = LegendAlignmentHorizontal.Center;
+            l.AlignmentVertical = LegendAlignmentVertical.BottomOutside;
+            l.Direction = LegendDirection.LeftToRight;
+            l.Border.Visibility = DefaultBoolean.False;
+            l.HorizontalIndent = 12;
+            l.Margins.Left = 60;
+        });
+
+        settings.Titles.Add(new ChartTitle() {
+            Font = new Font("Tahoma", 18),
+            Text = "Highest-Grossing Films by Year"
+        });
+        settings.Titles.Add(new ChartTitle() {
+            Alignment = StringAlignment.Far,
+            Dock = ChartTitleDockStyle.Bottom,
+            Font = new Font("Tahoma", 8),
+            TextColor = Color.Gray,
+            Text = "From www.boxofficemojo.com"
+        });
+    
+        settings.Series.Add(s => {
+            s.Name = "Top 10 Films by Worldwide Grosses";
+            s.ArgumentScaleType = ScaleType.DateTime;
+            s.SetBubbleDataMembers("Year", "Budget", "Grosses");
+            s.LabelsVisibility = options.ShowLabels ? DefaultBoolean.True : DefaultBoolean.False;
+            s.ToolTipPointPattern = "Production budget: ${V}M<br/>Worldwide grosses: ${W}B";
+            s.Views().BubbleSeriesView(v => {
+                v.Transparency = options.Transparency;
+                v.ColorEach = true;
+                v.AutoSize = false;
+                v.MaxSize = (double)options.MaxBubbleSize;
+                v.MinSize = (double)options.MinBubbleSize;
+                v.BubbleMarkerOptions.Kind = (MarkerKind)Enum.Parse(typeof(MarkerKind), options.MarkerKindString);
+                if (v.BubbleMarkerOptions.Kind == MarkerKind.Star)
+                    v.BubbleMarkerOptions.StarPointCount = options.StarPointCount;
+                v.SeriesLabel(l => {
+                    l.Position = options.LabelPosition;
+                    l.TextPattern = "${W}B";
+                    l.LineVisibility = DefaultBoolean.True;
+                });
+            });
+        });
+    
+        settings.XYDiagram(d => {
+            d.AxisY.Interlaced = true;
+            d.AxisX.DateTimeScaleOptions.GridAlignment = DateTimeGridAlignment.Year;
+            d.AxisX.DateTimeScaleOptions.MeasureUnit = DateTimeMeasureUnit.Year;
+            d.AxisX.DateTimeScaleOptions.AggregateFunction = AggregateFunction.None;
+            d.AxisX.Interlaced = true;
+            d.AxisX.Tickmarks.MinorVisible = false;
+            d.AxisX.GridLines.Visible = true;
+            d.AxisX.WholeRange.AutoSideMargins = true;
+            d.AxisX.Label.TextPattern = "{A:yyyy}";
+            d.AxisY.Title.Text = "Production Budget";
+            d.AxisY.Title.Visibility = DefaultBoolean.True;
+            d.AxisY.Label.TextPattern = "${V}M";
+            d.AxisY.WholeRange.SetMinMaxValues(130, 310);
+            d.AxisY.WholeRange.AutoSideMargins = true;
+        });
+    
+        settings.CustomDrawSeriesPoint = (sender, e) => {
+            e.LegendText = ((BubbleDataItem)e.SeriesPoint.Tag).Title;
+        };
+    }).Bind(Model).GetHtml()
+}

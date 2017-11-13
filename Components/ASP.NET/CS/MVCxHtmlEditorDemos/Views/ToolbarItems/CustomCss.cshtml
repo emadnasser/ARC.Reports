@@ -1,0 +1,7 @@
+﻿@section AdditionalResources {
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/HtmlEditor/DemoCss/PreviewCustomCss.css")" />
+}
+
+@using(Html.BeginForm()) {
+    Html.RenderPartial("CustomCssPartial");
+}

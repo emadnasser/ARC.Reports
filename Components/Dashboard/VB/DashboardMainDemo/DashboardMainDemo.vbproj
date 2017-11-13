@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F40917EE-27A4-4F8C-BA7C-CC58C66E4BB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>DashboardMainDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.BonusSkins.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Charts.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.CodeParser.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Dashboard.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Dashboard.v16.2.Win">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.DataAccess.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.DataAccess.v16.2.UI">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.RichEdit.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Tutorials.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Utils.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGauges.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGauges.v16.2.Win">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2.Extensions">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraTreeList.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.XtraWizard.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Office.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Private>False</Private></Reference>
+    <Reference Include="System.Data"><Private>False</Private></Reference>
+    <Reference Include="System.Deployment"><Private>False</Private></Reference>
+    <Reference Include="System.Drawing"><Private>False</Private></Reference>
+    <Reference Include="System.Windows.Forms"><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DashboardDesignerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardDesignerForm.Designer.vb">
+      <DependentUpon>DashboardDesignerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\EUTradeOverview.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\EUTradeOverview.Designer.vb">
+      <DependentUpon>EUTradeOverview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\ChampionsLeagueStatistics.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\ChampionsLeagueStatistics.Designer.vb">
+      <DependentUpon>ChampionsLeagueStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\EnergyConsumption.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\EnergyConsumption.Designer.vb">
+      <DependentUpon>EnergyConsumption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\EnergyStatistics.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\EnergyStatistics.Designer.vb">
+      <DependentUpon>EnergyStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\CustomerSupport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\CustomerSupport.Designer.vb">
+      <DependentUpon>CustomerSupport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\HumanResources.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\HumanResources.Designer.vb">
+      <DependentUpon>HumanResources.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\ProductDetails.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\ProductDetails.Designer.vb">
+      <DependentUpon>ProductDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\RevenueAnalysis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\RevenueAnalysis.Designer.vb">
+      <DependentUpon>RevenueAnalysis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\SalesDetails.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\SalesDetails.Designer.vb">
+      <DependentUpon>SalesDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\SalesOverview.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\SalesOverview.Designer.vb">
+      <DependentUpon>SalesOverview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\SalesPerformance.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\SalesPerformance.Designer.vb">
+      <DependentUpon>SalesPerformance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\RevenueByIndustry.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\RevenueByIndustry.Designer.vb">
+      <DependentUpon>RevenueByIndustry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboards\WebsiteStatistics.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboards\WebsiteStatistics.designer.vb">
+      <DependentUpon>WebsiteStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ChampionsLeagueStatistics.vb" />
+    <Compile Include="Data\EnergyConsumption.vb" />
+    <Compile Include="Data\EnergyStatictics.vb" />
+    <Compile Include="Data\RevenueByIndustry.vb" />
+    <Compile Include="Data\SalesDataGenerator.vb" />
+    <Compile Include="Data\SalesDetails.vb" />
+    <Compile Include="Data\CustomerSupport.vb" />
+    <Compile Include="Data\DataHelpers.vb" />
+    <Compile Include="Data\DataLoader.vb" />
+    <Compile Include="Data\HumanResources.vb" />
+    <Compile Include="Data\RevenueAnalysis.vb" />
+    <Compile Include="Data\SalesOverview.vb" />
+    <Compile Include="Data\SalesPerformance.vb" />
+    <Compile Include="Data\WebsiteStatistics.vb" />
+    <Compile Include="DemosRegistration.vb" />
+    <Compile Include="Forms\SalesDetailsPopupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalesDetailsPopupForm.Designer.vb">
+      <DependentUpon>SalesDetailsPopupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\About.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\EUTradeOverview.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\EUTradeOverview.Designer.vb">
+      <DependentUpon>EUTradeOverview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ChampionsLeagueStatistics.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ChampionsLeagueStatistics.Designer.vb">
+      <DependentUpon>ChampionsLeagueStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\EnergyConsumption.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\EnergyConsumption.Designer.vb">
+      <DependentUpon>EnergyConsumption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\EnergyStatistics.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\EnergyStatistics.Designer.vb">
+      <DependentUpon>EnergyStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProductDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\ProductDetails.Designer.vb">
+      <DependentUpon>ProductDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SalesDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SalesDetails.Designer.vb">
+      <DependentUpon>SalesDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CustomerSupport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\CustomerSupport.Designer.vb">
+      <DependentUpon>CustomerSupport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DashboardTutorialControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\DashboardTutorialControl.Designer.vb">
+      <DependentUpon>DashboardTutorialControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HumanResources.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\HumanResources.Designer.vb">
+      <DependentUpon>HumanResources.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RevenueAnalysis.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RevenueAnalysis.Designer.vb">
+      <DependentUpon>RevenueAnalysis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SalesOverview.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SalesOverview.Designer.vb">
+      <DependentUpon>SalesOverview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SalesPerformance.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SalesPerformance.Designer.vb">
+      <DependentUpon>SalesPerformance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RevenueByIndustry.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\RevenueByIndustry.Designer.vb">
+      <DependentUpon>RevenueByIndustry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\WebsiteStatistics.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\WebsiteStatistics.designer.vb">
+      <DependentUpon>WebsiteStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <EmbeddedResource Include="DashboardDesignerForm.resx">
+      <DependentUpon>DashboardDesignerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\EUTradeOverview.resx">
+      <DependentUpon>EUTradeOverview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\ChampionsLeagueStatistics.resx">
+      <DependentUpon>ChampionsLeagueStatistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\EnergyConsumption.resx">
+      <DependentUpon>EnergyConsumption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\EnergyStatistics.resx">
+      <DependentUpon>EnergyStatistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\CustomerSupport.resx">
+      <DependentUpon>CustomerSupport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\HumanResources.resx">
+      <DependentUpon>HumanResources.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\ProductDetails.resx">
+      <DependentUpon>ProductDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\RevenueAnalysis.resx">
+      <DependentUpon>RevenueAnalysis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\SalesDetails.resx">
+      <DependentUpon>SalesDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\SalesOverview.resx">
+      <DependentUpon>SalesOverview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\SalesPerformance.resx">
+      <DependentUpon>SalesPerformance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\RevenueByIndustry.resx">
+      <DependentUpon>RevenueByIndustry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboards\WebsiteStatistics.resx">
+      <DependentUpon>WebsiteStatistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalesDetailsPopupForm.resx">
+      <DependentUpon>SalesDetailsPopupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\DashboardTutorialControl.resx">
+      <DependentUpon>DashboardTutorialControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Data\EUTradeOverview.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Logo-Light.png" />
+    <EmbeddedResource Include="Images\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

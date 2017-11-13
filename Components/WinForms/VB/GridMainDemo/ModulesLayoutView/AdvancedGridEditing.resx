@@ -1,0 +1,1648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"></assembly>
+  <data name="detailShowHideBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>432, 24</value>
+  </data>
+  <data name="detailShowHideBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></assembly>
+  <data name="detailShowHideBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="detailShowHideBtn.Text" xml:space="preserve">
+    <value>Edit Order...</value>
+  </data>
+  <data name="&gt;&gt;detailShowHideBtn.Name" xml:space="preserve">
+    <value>detailShowHideBtn</value>
+  </data>
+  <data name="&gt;&gt;detailShowHideBtn.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;detailShowHideBtn.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;detailShowHideBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbMasterTablePosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 27</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v16.2" name="DevExpress.Utils.v16.2"></assembly>
+  <data name="cbMasterTablePosition.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="cbMasterTablePosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 20</value>
+  </data>
+  <data name="cbMasterTablePosition.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cbMasterTablePosition.Name" xml:space="preserve">
+    <value>cbMasterTablePosition</value>
+  </data>
+  <data name="&gt;&gt;cbMasterTablePosition.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ImageComboBoxEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;cbMasterTablePosition.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;cbMasterTablePosition.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="masterGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 69</value>
+  </data>
+  <data name="employesLayoutView.Appearance.CardCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="colLastName.Caption" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="colFirstName.Caption" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="colPhoto.Caption" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="colFullName.Caption" xml:space="preserve">
+    <value>colFullName</value>
+  </data>
+  <data name="layoutViewCard1.CustomizationFormText" xml:space="preserve">
+    <value>layoutViewTemplateCard</value>
+  </data>
+  <data name="layoutViewCard1.Text" xml:space="preserve">
+    <value>TemplateCard</value>
+  </data>
+  <data name="masterGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 287</value>
+  </data>
+  <data name="masterGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;masterGrid.Name" xml:space="preserve">
+    <value>masterGrid</value>
+  </data>
+  <data name="&gt;&gt;masterGrid.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;masterGrid.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;masterGrid.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="detailGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 69</value>
+  </data>
+  <data name="colOrderID.Caption" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <data name="colCustomerID.Caption" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="colEmployeeID1.Caption" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <data name="colOrderDate.Caption" xml:space="preserve">
+    <value>Order Date</value>
+  </data>
+  <data name="colOrderDate.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colOrderDate.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colRequiredDate.Caption" xml:space="preserve">
+    <value>Required Date</value>
+  </data>
+  <data name="colShippedDate.Caption" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+  <data name="colShipVia.Caption" xml:space="preserve">
+    <value>Ship Via</value>
+  </data>
+  <data name="colFreight.Caption" xml:space="preserve">
+    <value>Freight</value>
+  </data>
+  <data name="colFreight.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colFreight.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="colShipName.Caption" xml:space="preserve">
+    <value>Ship Name</value>
+  </data>
+  <data name="colShipAddress.Caption" xml:space="preserve">
+    <value>Ship Address</value>
+  </data>
+  <data name="colShipCity.Caption" xml:space="preserve">
+    <value>Ship City</value>
+  </data>
+  <data name="colShipCity.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colShipCity.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="colShipRegion.Caption" xml:space="preserve">
+    <value>Ship Region</value>
+  </data>
+  <data name="colShipPostalCode.Caption" xml:space="preserve">
+    <value>Ship Postal Code</value>
+  </data>
+  <data name="colShipCountry.Caption" xml:space="preserve">
+    <value>Ship Country</value>
+  </data>
+  <data name="colShipCountry.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colShipCountry.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items1" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items2" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items3" xml:space="preserve">
+    <value>United Package</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items4" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items5" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items6" xml:space="preserve">
+    <value>Federal Shipping</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items7" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="repositoryItemImageComboBox1.Items8" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="repositoryItemComboBox1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemComboBox1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items1" xml:space="preserve">
+    <value>Austria</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items2" xml:space="preserve">
+    <value>Belgium</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items3" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items4" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items5" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items6" xml:space="preserve">
+    <value>Finland</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items7" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items8" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items9" xml:space="preserve">
+    <value>Ireland</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items10" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items11" xml:space="preserve">
+    <value>Mexico</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items12" xml:space="preserve">
+    <value>Norway</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items13" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items14" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items15" xml:space="preserve">
+    <value>Spain</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items16" xml:space="preserve">
+    <value>Sweden</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items17" xml:space="preserve">
+    <value>Switzerland</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items18" xml:space="preserve">
+    <value>UK</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items19" xml:space="preserve">
+    <value>USA</value>
+  </data>
+  <data name="repositoryItemComboBox1.Items20" xml:space="preserve">
+    <value>Venezuela</value>
+  </data>
+  <data name="repositoryItemComboBox2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemComboBox2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items" xml:space="preserve">
+    <value>01-012</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items1" xml:space="preserve">
+    <value>01307</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items2" xml:space="preserve">
+    <value>02389-673</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items3" xml:space="preserve">
+    <value>02389-890</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items4" xml:space="preserve">
+    <value>04179</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items5" xml:space="preserve">
+    <value>04876-786</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items6" xml:space="preserve">
+    <value>05021</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items7" xml:space="preserve">
+    <value>05022</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items8" xml:space="preserve">
+    <value>05023</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items9" xml:space="preserve">
+    <value>05033</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items10" xml:space="preserve">
+    <value>05432-043</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items11" xml:space="preserve">
+    <value>05442-030</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items12" xml:space="preserve">
+    <value>05454-876</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items13" xml:space="preserve">
+    <value>05487-020</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items14" xml:space="preserve">
+    <value>05634-030</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items15" xml:space="preserve">
+    <value>08737-363</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items16" xml:space="preserve">
+    <value>1010</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items17" xml:space="preserve">
+    <value>10100</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items18" xml:space="preserve">
+    <value>1081</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items19" xml:space="preserve">
+    <value>1204</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items20" xml:space="preserve">
+    <value>12209</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items21" xml:space="preserve">
+    <value>13008</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items22" xml:space="preserve">
+    <value>14776</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items23" xml:space="preserve">
+    <value>1675</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items24" xml:space="preserve">
+    <value>1734</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items25" xml:space="preserve">
+    <value>1756</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items26" xml:space="preserve">
+    <value>21240</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items27" xml:space="preserve">
+    <value>24100</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items28" xml:space="preserve">
+    <value>28001</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items29" xml:space="preserve">
+    <value>28023</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items30" xml:space="preserve">
+    <value>3012</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items31" xml:space="preserve">
+    <value>31000</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items32" xml:space="preserve">
+    <value>3508</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items33" xml:space="preserve">
+    <value>4110</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items34" xml:space="preserve">
+    <value>41101</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items35" xml:space="preserve">
+    <value>42100</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items36" xml:space="preserve">
+    <value>44000</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items37" xml:space="preserve">
+    <value>44087</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items38" xml:space="preserve">
+    <value>4980</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items39" xml:space="preserve">
+    <value>5020</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items40" xml:space="preserve">
+    <value>5022</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items41" xml:space="preserve">
+    <value>50739</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items42" xml:space="preserve">
+    <value>51100</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items43" xml:space="preserve">
+    <value>52066</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items44" xml:space="preserve">
+    <value>59000</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items45" xml:space="preserve">
+    <value>59801</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items46" xml:space="preserve">
+    <value>60528</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items47" xml:space="preserve">
+    <value>67000</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items48" xml:space="preserve">
+    <value>68306</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items49" xml:space="preserve">
+    <value>69004</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items50" xml:space="preserve">
+    <value>70563</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items51" xml:space="preserve">
+    <value>75016</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items52" xml:space="preserve">
+    <value>78000</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items53" xml:space="preserve">
+    <value>8010</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items54" xml:space="preserve">
+    <value>8022</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items55" xml:space="preserve">
+    <value>80805</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items56" xml:space="preserve">
+    <value>8200</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items57" xml:space="preserve">
+    <value>82520</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items58" xml:space="preserve">
+    <value>83720</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items59" xml:space="preserve">
+    <value>87110</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items60" xml:space="preserve">
+    <value>90110</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items61" xml:space="preserve">
+    <value>94117</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items62" xml:space="preserve">
+    <value>97201</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items63" xml:space="preserve">
+    <value>97219</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items64" xml:space="preserve">
+    <value>97403</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items65" xml:space="preserve">
+    <value>97827</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items66" xml:space="preserve">
+    <value>98034</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items67" xml:space="preserve">
+    <value>98124</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items68" xml:space="preserve">
+    <value>99362</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items69" xml:space="preserve">
+    <value>99508</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items70" xml:space="preserve">
+    <value>B-1180</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items71" xml:space="preserve">
+    <value>B-6000</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items72" xml:space="preserve">
+    <value>CO7 6JX</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items73" xml:space="preserve">
+    <value>EC2 5NT</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items74" xml:space="preserve">
+    <value>H1J 1C3</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items75" xml:space="preserve">
+    <value>OX15 4NB</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items76" xml:space="preserve">
+    <value>PO31 7PJ</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items77" xml:space="preserve">
+    <value>S-844 67</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items78" xml:space="preserve">
+    <value>S-958 22</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items79" xml:space="preserve">
+    <value>SW7 1RZ</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items80" xml:space="preserve">
+    <value>T2F 8M4</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items81" xml:space="preserve">
+    <value>V3F 2K1</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items82" xml:space="preserve">
+    <value>WX1 6LT</value>
+  </data>
+  <data name="repositoryItemComboBox2.Items83" xml:space="preserve">
+    <value>WX3 6FW</value>
+  </data>
+  <data name="repositoryItemComboBox3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemComboBox3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items" xml:space="preserve">
+    <value>AK</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items1" xml:space="preserve">
+    <value>BC</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items2" xml:space="preserve">
+    <value>CA</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items3" xml:space="preserve">
+    <value>Co. Cork</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items4" xml:space="preserve">
+    <value>DF</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items5" xml:space="preserve">
+    <value>Essex</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items6" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items7" xml:space="preserve">
+    <value>Isle of Wight</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items8" xml:space="preserve">
+    <value>Lara</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items9" xml:space="preserve">
+    <value>MT</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items10" xml:space="preserve">
+    <value>NM</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items11" xml:space="preserve">
+    <value>Nueva Esparta</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items12" xml:space="preserve">
+    <value>OR</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items13" xml:space="preserve">
+    <value>Québec</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items14" xml:space="preserve">
+    <value>RJ</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items15" xml:space="preserve">
+    <value>SP</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items16" xml:space="preserve">
+    <value>Táchira</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items17" xml:space="preserve">
+    <value>WA</value>
+  </data>
+  <data name="repositoryItemComboBox3.Items18" xml:space="preserve">
+    <value>WY</value>
+  </data>
+  <data name="repositoryItemComboBox4.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemComboBox4.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.2">
+    <value>Combo</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items" xml:space="preserve">
+    <value>Helsinki</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items1" xml:space="preserve">
+    <value>Cork</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items2" xml:space="preserve">
+    <value>Cowes</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items3" xml:space="preserve">
+    <value>Cunewalde</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items4" xml:space="preserve">
+    <value>Elgin</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items5" xml:space="preserve">
+    <value>Eugene</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items6" xml:space="preserve">
+    <value>Frankfurt a.M. </value>
+  </data>
+  <data name="repositoryItemComboBox4.Items7" xml:space="preserve">
+    <value>Lille</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items8" xml:space="preserve">
+    <value>Graz</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items9" xml:space="preserve">
+    <value>Caracas</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items10" xml:space="preserve">
+    <value>I. de Margarita</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items11" xml:space="preserve">
+    <value>Kirkland</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items12" xml:space="preserve">
+    <value>København</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items13" xml:space="preserve">
+    <value>Köln</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items14" xml:space="preserve">
+    <value>Lander</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items15" xml:space="preserve">
+    <value>Aachen</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items16" xml:space="preserve">
+    <value>Genève</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items17" xml:space="preserve">
+    <value>Boise</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items18" xml:space="preserve">
+    <value>Albuquerque</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items19" xml:space="preserve">
+    <value>Anchorage</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items20" xml:space="preserve">
+    <value>Århus</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items21" xml:space="preserve">
+    <value>Barcelona</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items22" xml:space="preserve">
+    <value>Barquisimeto</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items23" xml:space="preserve">
+    <value>Bergamo</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items24" xml:space="preserve">
+    <value>Colchester</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items25" xml:space="preserve">
+    <value>Bern</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items26" xml:space="preserve">
+    <value>Charleroi</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items27" xml:space="preserve">
+    <value>Bräcke</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items28" xml:space="preserve">
+    <value>Brandenburg</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items29" xml:space="preserve">
+    <value>Bruxelles</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items30" xml:space="preserve">
+    <value>Buenos Aires</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items31" xml:space="preserve">
+    <value>Butte</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items32" xml:space="preserve">
+    <value>Campinas</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items33" xml:space="preserve">
+    <value>Lisboa</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items34" xml:space="preserve">
+    <value>Berlin</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items35" xml:space="preserve">
+    <value>Stuttgart</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items36" xml:space="preserve">
+    <value>Salzburg</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items37" xml:space="preserve">
+    <value>San Cristóbal</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items38" xml:space="preserve">
+    <value>San Francisco</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items39" xml:space="preserve">
+    <value>São Paulo</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items40" xml:space="preserve">
+    <value>Seattle</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items41" xml:space="preserve">
+    <value>Sevilla</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items42" xml:space="preserve">
+    <value>Leipzig</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items43" xml:space="preserve">
+    <value>Strasbourg</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items44" xml:space="preserve">
+    <value>Reims</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items45" xml:space="preserve">
+    <value>Torino</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items46" xml:space="preserve">
+    <value>Toulouse</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items47" xml:space="preserve">
+    <value>Tsawassen</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items48" xml:space="preserve">
+    <value>Vancouver</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items49" xml:space="preserve">
+    <value>Versailles</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items50" xml:space="preserve">
+    <value>Walla Walla</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items51" xml:space="preserve">
+    <value>Stavern</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items52" xml:space="preserve">
+    <value>München</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items53" xml:space="preserve">
+    <value>London</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items54" xml:space="preserve">
+    <value>Luleå</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items55" xml:space="preserve">
+    <value>Lyon</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items56" xml:space="preserve">
+    <value>Madrid</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items57" xml:space="preserve">
+    <value>Mannheim</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items58" xml:space="preserve">
+    <value>Marseille</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items59" xml:space="preserve">
+    <value>Rio de Janeiro</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items60" xml:space="preserve">
+    <value>Montréal</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items61" xml:space="preserve">
+    <value>Resende</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items62" xml:space="preserve">
+    <value>Münster</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items63" xml:space="preserve">
+    <value>Nantes</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items64" xml:space="preserve">
+    <value>Oulu</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items65" xml:space="preserve">
+    <value>Paris</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items66" xml:space="preserve">
+    <value>Portland</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items67" xml:space="preserve">
+    <value>Reggio Emilia</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items68" xml:space="preserve">
+    <value>Warszawa</value>
+  </data>
+  <data name="repositoryItemComboBox4.Items69" xml:space="preserve">
+    <value>México D.F.</value>
+  </data>
+  <data name="repositoryItemSpinEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemSpinEdit1.Mask.EditMask" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="repositoryItemSpinEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="detailGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 287</value>
+  </data>
+  <data name="detailGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="editOrderlayoutView.CardCaptionFormat" xml:space="preserve">
+    <value>Order N{2} at {5}</value>
+  </data>
+  <data name="colOrderID1.Caption" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <data name="colCustomerID1.Caption" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="colEmployeeID.Caption" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <data name="colOrderDate1.Caption" xml:space="preserve">
+    <value>Order Date</value>
+  </data>
+  <data name="colRequiredDate1.Caption" xml:space="preserve">
+    <value>Required Date</value>
+  </data>
+  <data name="colShippedDate1.Caption" xml:space="preserve">
+    <value>Shipped Date</value>
+  </data>
+  <data name="colShipVia1.Caption" xml:space="preserve">
+    <value>Ship Via</value>
+  </data>
+  <data name="colFreight1.Caption" xml:space="preserve">
+    <value>Freight</value>
+  </data>
+  <data name="colShipName1.Caption" xml:space="preserve">
+    <value>Ship Name</value>
+  </data>
+  <data name="colShipAddress1.Caption" xml:space="preserve">
+    <value>Ship Address</value>
+  </data>
+  <data name="colShipCity1.Caption" xml:space="preserve">
+    <value>Ship City</value>
+  </data>
+  <data name="colShipRegion1.Caption" xml:space="preserve">
+    <value>Ship Region</value>
+  </data>
+  <data name="colShipPostalCode1.Caption" xml:space="preserve">
+    <value>Ship Postal Code</value>
+  </data>
+  <data name="colShipCountry1.Caption" xml:space="preserve">
+    <value>Ship Country</value>
+  </data>
+  <data name="layoutViewCard2.CustomizationFormText" xml:space="preserve">
+    <value>layoutViewTemplateCard</value>
+  </data>
+  <data name="LayoutItem2.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="LayoutItem2.CustomizationFormText" xml:space="preserve">
+    <value>Extended Order Information</value>
+  </data>
+  <data name="LayoutItem2.Text" xml:space="preserve">
+    <value>Extended Order Information</value>
+  </data>
+  <data name="LayoutItem3.CustomizationFormText" xml:space="preserve">
+    <value>LayoutItem22</value>
+  </data>
+  <data name="LayoutItem3.Text" xml:space="preserve">
+    <value>LayoutItem3</value>
+  </data>
+  <data name="LayoutItem5.CustomizationFormText" xml:space="preserve">
+    <value>item1</value>
+  </data>
+  <data name="LayoutItem5.Text" xml:space="preserve">
+    <value>LayoutItem5</value>
+  </data>
+  <data name="LayoutItem9.CustomizationFormText" xml:space="preserve">
+    <value>LayoutItem16</value>
+  </data>
+  <data name="LayoutItem9.Text" xml:space="preserve">
+    <value>LayoutItem9</value>
+  </data>
+  <data name="LayoutItem10.CustomizationFormText" xml:space="preserve">
+    <value>item5</value>
+  </data>
+  <data name="LayoutItem10.Text" xml:space="preserve">
+    <value>LayoutItem10</value>
+  </data>
+  <data name="LayoutItem14.CustomizationFormText" xml:space="preserve">
+    <value>LayoutItem18</value>
+  </data>
+  <data name="LayoutItem14.Text" xml:space="preserve">
+    <value>LayoutItem14</value>
+  </data>
+  <data name="LayoutItem15.CustomizationFormText" xml:space="preserve">
+    <value>item2</value>
+  </data>
+  <data name="LayoutItem15.Text" xml:space="preserve">
+    <value>LayoutItem15</value>
+  </data>
+  <data name="LayoutItem18.CustomizationFormText" xml:space="preserve">
+    <value>LayoutItem19</value>
+  </data>
+  <data name="LayoutItem18.Text" xml:space="preserve">
+    <value>LayoutItem18</value>
+  </data>
+  <data name="layoutViewCard2.Text" xml:space="preserve">
+    <value>TemplateCard</value>
+  </data>
+  <data name="&gt;&gt;detailGrid.Name" xml:space="preserve">
+    <value>detailGrid</value>
+  </data>
+  <data name="&gt;&gt;detailGrid.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;detailGrid.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;detailGrid.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="allowEditOnDoubleClick.EditValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="allowEditOnDoubleClick.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 29</value>
+  </data>
+  <data name="allowEditOnDoubleClick.Properties.Caption" xml:space="preserve">
+    <value>Edit Order on DoubleClick</value>
+  </data>
+  <data name="allowEditOnDoubleClick.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 19</value>
+  </data>
+  <data name="allowEditOnDoubleClick.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;allowEditOnDoubleClick.Name" xml:space="preserve">
+    <value>allowEditOnDoubleClick</value>
+  </data>
+  <data name="&gt;&gt;allowEditOnDoubleClick.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;allowEditOnDoubleClick.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;allowEditOnDoubleClick.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></assembly>
+  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="layoutControlGroup1.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="detailTableItem.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="detailTableItem.Text" xml:space="preserve">
+    <value>detailTableItem</value>
+  </data>
+  <data name="masterTableItem.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="masterTableItem.Text" xml:space="preserve">
+    <value>masterTableItem</value>
+  </data>
+  <data name="layoutControlGroup2.CustomizationFormText" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
+    <value>Master Table Position</value>
+  </data>
+  <data name="layoutControlItem3.Text" xml:space="preserve">
+    <value>Master Table Position</value>
+  </data>
+  <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="emptySpaceItem1.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="emptySpaceItem1.Text" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="layoutControlGroup2.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>545, 385</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="layoutControl1.Text" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>545, 385</value>
+  </data>
+  <data name="&gt;&gt;employesLayoutView.Name" xml:space="preserve">
+    <value>employesLayoutView</value>
+  </data>
+  <data name="&gt;&gt;employesLayoutView.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutView, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colLastName.Name" xml:space="preserve">
+    <value>colLastName</value>
+  </data>
+  <data name="&gt;&gt;colLastName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colLastName.Name" xml:space="preserve">
+    <value>layoutViewField_colLastName</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colLastName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colFirstName.Name" xml:space="preserve">
+    <value>colFirstName</value>
+  </data>
+  <data name="&gt;&gt;colFirstName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colFirstName.Name" xml:space="preserve">
+    <value>layoutViewField_colFirstName</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colFirstName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colPhoto.Name" xml:space="preserve">
+    <value>colPhoto</value>
+  </data>
+  <data name="&gt;&gt;colPhoto.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit2.Name" xml:space="preserve">
+    <value>repositoryItemPictureEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colPhoto.Name" xml:space="preserve">
+    <value>layoutViewField_colPhoto</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colPhoto.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colFullName.Name" xml:space="preserve">
+    <value>colFullName</value>
+  </data>
+  <data name="&gt;&gt;colFullName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1.Name" xml:space="preserve">
+    <value>layoutViewField_layoutViewColumn1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_layoutViewColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewCard1.Name" xml:space="preserve">
+    <value>layoutViewCard1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewCard1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewCard, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit1.Name" xml:space="preserve">
+    <value>repositoryItemPictureEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPictureEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;viewOrderGridView.Name" xml:space="preserve">
+    <value>viewOrderGridView</value>
+  </data>
+  <data name="&gt;&gt;viewOrderGridView.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colOrderID.Name" xml:space="preserve">
+    <value>colOrderID</value>
+  </data>
+  <data name="&gt;&gt;colOrderID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colCustomerID.Name" xml:space="preserve">
+    <value>colCustomerID</value>
+  </data>
+  <data name="&gt;&gt;colCustomerID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colEmployeeID1.Name" xml:space="preserve">
+    <value>colEmployeeID1</value>
+  </data>
+  <data name="&gt;&gt;colEmployeeID1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colOrderDate.Name" xml:space="preserve">
+    <value>colOrderDate</value>
+  </data>
+  <data name="&gt;&gt;colOrderDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colRequiredDate.Name" xml:space="preserve">
+    <value>colRequiredDate</value>
+  </data>
+  <data name="&gt;&gt;colRequiredDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShippedDate.Name" xml:space="preserve">
+    <value>colShippedDate</value>
+  </data>
+  <data name="&gt;&gt;colShippedDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipVia.Name" xml:space="preserve">
+    <value>colShipVia</value>
+  </data>
+  <data name="&gt;&gt;colShipVia.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colFreight.Name" xml:space="preserve">
+    <value>colFreight</value>
+  </data>
+  <data name="&gt;&gt;colFreight.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipName.Name" xml:space="preserve">
+    <value>colShipName</value>
+  </data>
+  <data name="&gt;&gt;colShipName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipAddress.Name" xml:space="preserve">
+    <value>colShipAddress</value>
+  </data>
+  <data name="&gt;&gt;colShipAddress.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipCity.Name" xml:space="preserve">
+    <value>colShipCity</value>
+  </data>
+  <data name="&gt;&gt;colShipCity.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipRegion.Name" xml:space="preserve">
+    <value>colShipRegion</value>
+  </data>
+  <data name="&gt;&gt;colShipRegion.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipPostalCode.Name" xml:space="preserve">
+    <value>colShipPostalCode</value>
+  </data>
+  <data name="&gt;&gt;colShipPostalCode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipCountry.Name" xml:space="preserve">
+    <value>colShipCountry</value>
+  </data>
+  <data name="&gt;&gt;colShipCountry.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemMemoEdit1.Name" xml:space="preserve">
+    <value>repositoryItemMemoEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemMemoEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemImageComboBox1.Name" xml:space="preserve">
+    <value>repositoryItemImageComboBox1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemImageComboBox1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox1.Name" xml:space="preserve">
+    <value>repositoryItemComboBox1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox2.Name" xml:space="preserve">
+    <value>repositoryItemComboBox2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox3.Name" xml:space="preserve">
+    <value>repositoryItemComboBox3</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox4.Name" xml:space="preserve">
+    <value>repositoryItemComboBox4</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemComboBox4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSpinEdit1.Name" xml:space="preserve">
+    <value>repositoryItemSpinEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSpinEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v16.2</value>
+  </data>
+  <data name="&gt;&gt;editOrderlayoutView.Name" xml:space="preserve">
+    <value>editOrderlayoutView</value>
+  </data>
+  <data name="&gt;&gt;editOrderlayoutView.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutView, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colOrderID1.Name" xml:space="preserve">
+    <value>colOrderID1</value>
+  </data>
+  <data name="&gt;&gt;colOrderID1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colOrderID1.Name" xml:space="preserve">
+    <value>layoutViewField_colOrderID1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colOrderID1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colCustomerID1.Name" xml:space="preserve">
+    <value>colCustomerID1</value>
+  </data>
+  <data name="&gt;&gt;colCustomerID1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colCustomerID1.Name" xml:space="preserve">
+    <value>layoutViewField_colCustomerID1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colCustomerID1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colEmployeeID.Name" xml:space="preserve">
+    <value>colEmployeeID</value>
+  </data>
+  <data name="&gt;&gt;colEmployeeID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colEmployeeID.Name" xml:space="preserve">
+    <value>layoutViewField_colEmployeeID</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colEmployeeID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colOrderDate1.Name" xml:space="preserve">
+    <value>colOrderDate1</value>
+  </data>
+  <data name="&gt;&gt;colOrderDate1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colOrderDate1.Name" xml:space="preserve">
+    <value>layoutViewField_colOrderDate1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colOrderDate1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colRequiredDate1.Name" xml:space="preserve">
+    <value>colRequiredDate1</value>
+  </data>
+  <data name="&gt;&gt;colRequiredDate1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colRequiredDate1.Name" xml:space="preserve">
+    <value>layoutViewField_colRequiredDate1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colRequiredDate1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShippedDate1.Name" xml:space="preserve">
+    <value>colShippedDate1</value>
+  </data>
+  <data name="&gt;&gt;colShippedDate1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShippedDate1.Name" xml:space="preserve">
+    <value>layoutViewField_colShippedDate1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShippedDate1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipVia1.Name" xml:space="preserve">
+    <value>colShipVia1</value>
+  </data>
+  <data name="&gt;&gt;colShipVia1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipVia1.Name" xml:space="preserve">
+    <value>layoutViewField_colShipVia1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipVia1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colFreight1.Name" xml:space="preserve">
+    <value>colFreight1</value>
+  </data>
+  <data name="&gt;&gt;colFreight1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colFreight1.Name" xml:space="preserve">
+    <value>layoutViewField_colFreight1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colFreight1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipName1.Name" xml:space="preserve">
+    <value>colShipName1</value>
+  </data>
+  <data name="&gt;&gt;colShipName1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipName1.Name" xml:space="preserve">
+    <value>layoutViewField_colShipName1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipName1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipAddress1.Name" xml:space="preserve">
+    <value>colShipAddress1</value>
+  </data>
+  <data name="&gt;&gt;colShipAddress1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipAddress1.Name" xml:space="preserve">
+    <value>layoutViewField_colShipAddress1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipAddress1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipCity1.Name" xml:space="preserve">
+    <value>colShipCity1</value>
+  </data>
+  <data name="&gt;&gt;colShipCity1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipCity1.Name" xml:space="preserve">
+    <value>layoutViewField_colShipCity1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipCity1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipRegion1.Name" xml:space="preserve">
+    <value>colShipRegion1</value>
+  </data>
+  <data name="&gt;&gt;colShipRegion1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipRegion1.Name" xml:space="preserve">
+    <value>layoutViewField_colShipRegion1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipRegion1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipPostalCode1.Name" xml:space="preserve">
+    <value>colShipPostalCode1</value>
+  </data>
+  <data name="&gt;&gt;colShipPostalCode1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipPostalCode1.Name" xml:space="preserve">
+    <value>layoutViewField_colShipPostalCode1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipPostalCode1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;colShipCountry1.Name" xml:space="preserve">
+    <value>colShipCountry1</value>
+  </data>
+  <data name="&gt;&gt;colShipCountry1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.LayoutViewColumn, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipCountry1.Name" xml:space="preserve">
+    <value>layoutViewField_colShipCountry1</value>
+  </data>
+  <data name="&gt;&gt;layoutViewField_colShipCountry1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewField, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewCard2.Name" xml:space="preserve">
+    <value>layoutViewCard2</value>
+  </data>
+  <data name="&gt;&gt;layoutViewCard2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Layout.LayoutViewCard, DevExpress.XtraGrid.v16.2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem2.Name" xml:space="preserve">
+    <value>LayoutItem2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleLabelItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem3.Name" xml:space="preserve">
+    <value>LayoutItem3</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem5.Name" xml:space="preserve">
+    <value>LayoutItem5</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem9.Name" xml:space="preserve">
+    <value>LayoutItem9</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem10.Name" xml:space="preserve">
+    <value>LayoutItem10</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem14.Name" xml:space="preserve">
+    <value>LayoutItem14</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem14.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem15.Name" xml:space="preserve">
+    <value>LayoutItem15</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem15.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem18.Name" xml:space="preserve">
+    <value>LayoutItem18</value>
+  </data>
+  <data name="&gt;&gt;LayoutItem18.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
+    <value>layoutControlGroup1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;detailTableItem.Name" xml:space="preserve">
+    <value>detailTableItem</value>
+  </data>
+  <data name="&gt;&gt;detailTableItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;masterTableItem.Name" xml:space="preserve">
+    <value>masterTableItem</value>
+  </data>
+  <data name="&gt;&gt;masterTableItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Name" xml:space="preserve">
+    <value>layoutControlGroup2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v16.2</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AdvancedGridEditing</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Demos.BaseLayoutModule, GridMainDemo, Culture=neutral</value>
+  </data>
+</root>

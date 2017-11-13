@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EventRegistration>
+  <Speakers>
+    <Speaker Name="Mehul Harry" ImageName="MehulHarry.jpg" Description="Mehul Harry has been a web developer for over a decade. He currently uses his knowledge and experience to help other web developers learn and grow. Mehul is also the ASP.NET Technical Evangelist at DevExpress."></Speaker>
+    <Speaker Name="Mark Miller" ImageName="MarkMiller.jpg" Description="Mark has been developing software since the early 1980s. He spent the 12 years preceeding 2004 coding developer tools to make developers more efficient. He created CodeRush for Delphi in 1997, and it has won numerous reader's choice awards."></Speaker>
+    <Speaker Name="Seth Juarez" ImageName="SethJuarez.jpg" Description="Seth Juarez has a Masters Degree in Computer Science and is also currently pursuing a PhD in the same. He is a Technical Evangelist for DevExpress where he specializes in data analysis in conjunction with their reporting toolset."></Speaker>
+  </Speakers>
+  
+  <Sections>
+    <Section Name="Conf Room 1"></Section>
+    <Section Name="Conf Room 2"></Section>
+    <Section Name="Conf Room 3"></Section>
+  </Sections>
+
+  <Categories>
+    <Category Name="ASP.NET Controls" Key="ASP" />
+    <Category Name="Business App Frameworks" Key="BAF" />
+    <Category Name="IDE Productivity Tools" Key="IDE" />
+    <Category Name="Software Development" Key="DEV" />
+  </Categories>
+
+  <ConferenceDay>
+    <Session
+      Subject="Introducing the ASP.NET Docking Suite"
+      Description="Learn how to use a new DevExpress ASP.NET Docking Suite. In this session, we will cover how to set up a new docking suite and describe other various aspects of its customization."
+      Speaker="Mehul Harry" CategoryKey="ASP" Level="1"
+      Location="Conf Room 1" StartTime="09:15 AM" EndTime="10:00 AM"
+      Featured="true" Image="docking.png" SpeakerDescription="Technical Evangelist">
+    </Session>
+    <Session
+      Subject="IExploring ASP.NET Charting Client Side Development"
+      Description="The client code available in the XtraCharts allows a large amount of flexibility, in this session we’re going to explore some what’s available on the client side for ASP.NET Charts."
+      Speaker="Mehul Harry" CategoryKey="ASP" Level="1"
+      Location="Conf Room 1" StartTime="10:15 AM" EndTime="11:00 AM">
+    </Session>
+    <Session
+      Subject="Julian on JavaScript: basic use of jQuery"
+      Description="JQuery is now established as the JavaScript framework to use on your websites, especially if you want to manipulate the elements in the page. So much so, that even Microsoft recommend using it with your ASP.NET and ASP.NET MVC sites. Join Julian in the first of an occasional series as he explores what jQuery provides for DOM access. This session will be about the very basics of jQuery usage, but will take the time to show off some of the nifty things you can do.
+		    The only prerequisite is that you have some basic experience with JavaScript."
+      Speaker="Julian Bucknall" CategoryKey="ASP" Level="2"
+      Location="Conf Room 1" StartTime="11:15 AM" EndTime="12:30 PM">
+    </Session>
+    <Session
+      Subject="Improving Web Site Performance and Scalability While Saving Money"
+      Description="Can you really improve the customer experience and save money? There are many simple techniques and free tools available that can do both! This session will start with a traditional ASP.NET web site and show step by step how to improve it for both client experience and cost savings. Review the basics of caching and learn how to avoid costly server round trips by using expirations to maximize use of the client's browser and also reduce server side execution time with data caching on the server. Use HTTP compression, minification of JavaScript and CSS, server side viewstate, and image optimization to reduce client downloads by 50-75%. Take advantage of free CDN networks to host jQuery and Ajax files. See how tools such as Ajax Minifier, Fiddler, Network Monitor, and Google Page speed can be used to help diagnose and verify improvements."
+      Speaker="Robert Boedigheimer" CategoryKey="ASP" Level="2"
+      Location="Conf Room 1" StartTime="13:45 PM" EndTime="15:00 PM">
+    </Session>
+    <Session
+      Subject="Creating Your First WP7 Application"
+      Description="Author and speaker, Shawn Wildermuth walks you through the steps of creating applications for Windows Phone 7."
+      Speaker="Shawn Wildermuth" CategoryKey="DEV" Level="1"
+      Location="Conf Room 1" StartTime="16:15 PM" EndTime="17:15 PM">
+    </Session>
+
+    <Session
+      Subject="CodeRush Feature Workshop: Super Sibling Navigation"
+      Description="In this session we will demonstrate building a new feature for Visual Studio using CodeRush and the DXCore. Mark and Rory build method next/previous navigation providers that will blow your mind with their sophistication and usefulness. If you want to see how the pros extend Visual Studio live before your eyes, don't miss it. FYI: Features are selected based on your requests, so you have full control over the content in these sessions. Features are built live right before your eyes, and submitted to the CodeRush community site after the session ends so you can download and install the feature immediately."
+      Speaker="Mark Miller, Rory Becker" CategoryKey="IDE" Level="3"
+      Location="Conf Room 2" StartTime="09:30 AM" EndTime="11:00 AM">
+    </Session>
+      
+    <Session
+      Subject="Working with the State Machine Module"
+      Description="In this session, we will demonstrate how to take advantage of the module in our project management application."
+      Speaker="Apostolis Bekiaris" CategoryKey="BAF" Level="1"
+      Location="Conf Room 2" StartTime="11:15 AM" EndTime="12:00 PM"
+      Featured="true" Image="xaf.png" SpeakerDescription="Technical Evangelist">
+    </Session>
+
+    <Session
+      Subject="CodeRush Feature Workshop: Easier Identifiers"
+      Description="In this session we will demonstrate building a new feature for Visual Studio using CodeRush and the DXCore. Features are built live right before your eyes, and submitted to the CodeRush community site after the session ends so you can download and install the feature immediately."
+      Speaker="Mark Miller, Rory Becker" CategoryKey="IDE" Level="3"
+      Location="Conf Room 2" StartTime="13:45 PM" EndTime="15:15 PM">
+    </Session>
+
+    <Session
+      Subject="Deploying XAF on Azure"
+      Description="This session will be all about Azure and how to deploy XAF XCRM on it. More specifically, we'll cover... 
+
+		      a) The deployment prerequisites in order to deploy a XAF application on Azure. 
+		      b) Modification of the XCRM source code in order to simulate a multitenant system (each HttpSession will have its own data) 
+		      c) Creating an Azure deployment package. 
+		      d) Exploring the Azure portal."
+      Speaker="Apostolis Bekiaris" CategoryKey="BAF" Level="1"
+      Location="Conf Room 2" StartTime="16:15 PM" EndTime="17:00 PM">
+    </Session>
+
+    <Session
+      Subject="Building a Scrolling Tile Engine with XNA on Windows Phone"
+      Description="This session shows basic techniques for creating games that use a scrolling tiled map. Displaying sprites (2D graphics) is also covered."
+      Speaker="Chris G. Williams" CategoryKey="DEV" Level="1"
+      Location="Conf Room 3" StartTime="09:15 AM" EndTime="10:15 AM">
+    </Session>
+    
+    <Session
+      Subject="Developing Web Applications for iPad"
+      Description="Learn how to get started making your own iPad web applications today. In this session, Mehul will introduce you to some basic UI concepts and will guide you through the process of creating a simple web app."
+      Speaker="Mehul Harry" CategoryKey="ASP" Level="1"
+      Location="Conf Room 3" StartTime="11:45 AM" EndTime="12:30 PM"
+      Featured="true" Image="iPad.png" SpeakerDescription="Technical Evangelist">
+    </Session>
+
+    <Session
+      Subject="XPO Profiler"
+      Description="We will demonstrate several practical scenarios of using XPO profiler to detect problems in your XPO applications."
+      Speaker="Apostolis Bekiaris" CategoryKey="BAF" Level="1"
+      Location="Conf Room 3" StartTime="13:45 PM" EndTime="15:00 PM">
+    </Session>
+    
+    <Session
+      Subject="RESTful Services with ASP.NET MVC"
+      Description="REST is the architecture of the Web, and RESTful Web services are now the most popular way of enabling browser-based applications to access information and behavior on Web servers. In Web 2.0 applications, desktop-like responsiveness and versatility are driven by client-side script code, and RESTful services with JavaScript-friendly request and response formats vastly simplify this kind of code. Open source frameworks like Rails have historically made the server side of these services correspondingly straightforward to implement, but the .NET community hasn’t benefitted from this kind of work until recently. Now, however, ASP.NET MVC (itself an open source project), along with the modest assistance of some other open-source tools and conventions, makes it easy to write full-featured RESTful Web services. We’ll explore REST itself, what RESTful Web services look like, and how to write them using the MVC framework along with Steve Hodgkiss’s RESTful Routing library."
+      Speaker="Richard Winslow" CategoryKey="ASP" Level="1"
+      Location="Conf Room 3" StartTime="16:15 PM" EndTime="17:00 PM">
+    </Session>
+    
+    <Break Subject="LUNCH" StartTime="12:30 PM" EndTime="13:30 PM"></Break>
+    <Break Subject="BREAK" StartTime="15:30 PM" EndTime="16:00 PM"></Break>
+  </ConferenceDay>
+
+  <ConferenceDay>
+    <Session
+      Subject="Julian on JavaScript - Learning from reading: underscore.js"
+      Description="One of the best ways of learning about a language is to read the source code of a well-regarded library written in that language. As part of a multi-part series, Julian will take a look at some well-regarded JavaScript libraries to identify coding patterns you can immediately use in your own code and libraries. This time it's the turn of underscore.js."
+      Speaker="Julian Bucknall" CategoryKey="ASP" Level="2"
+      Location="Conf Room 1" StartTime="10:00 AM" EndTime="11:15 AM">
+    </Session>
+    <Session
+      Subject="A run through the OWASP Top Ten Web Vulnerabilities"
+      Description="The OWASP Top 10 vulnerability list is the resource for discovering the most popular attacks against web applications on the internet right now. This session aims to go through them, demonstrate them and show you how to protect your ASP.NET web site."
+      Speaker="Barry Dorrans" CategoryKey="ASP" Level="1"
+      Location="Conf Room 1" StartTime="11:30 AM" EndTime="12:30 PM">
+    </Session>
+    <Session
+      Subject="Implementing the MVVM Pattern"
+      Description="Hit the ground running with yet another architectural design pattern, MVVM. In this session you will learn why using this pattern when programming WPF and Silverlight applications is more than just an alternative, it's almost a requirement. The benefits of testability, reusability, and separation of concerns will become obvious to you almost immediately. Tune in and find out what MVVM is and how to properly implement this pattern properly and efficiently."
+      Speaker="Miguel Castro" CategoryKey="DEV" Level="1"
+      Location="Conf Room 1" StartTime="14:15 PM" EndTime="15:00 PM">
+    </Session>
+    <Session
+      Subject="End-User Designer Localization"
+      Description="Learn how to localize your end-user report designer! In a global economy, it is essential that we accommodate all of our users. This session will describe the process of localizing the end-user report designer to suit your international needs."
+      Speaker="Seth Juarez" CategoryKey="DEV" Level="2"
+      Location="Conf Room 1" StartTime="15:15 PM" EndTime="16:00 PM">
+    </Session>
+    <Session
+      Subject="Async from scratch, from a language lover's perspective"
+      Description="You've probably seen some of the excitement around the 'async' feature of C# 5, but how does it all work under the hood? What does it mean when we say we're registering a continuation to run when a task completes? How much behaviour is actually prescribed by the language?
+
+			  In a shocking break from other presentations, I may well attempt to talk about async without the safety net of a flashy GUI. Instead, we'll create some very simple supposedly-asynchronous code, some of which won't even do anything asynchronous at all. Just don't tell the compiler. Who needs AsyncCTP.dll when we can write our own GetAwaiter method?
+
+			  If we have time, I'll also give some examples of extra building blocks we can use in a compositional way to make our async life simpler."
+      Speaker="Jon Skeet" CategoryKey="DEV" Level="2"
+      Location="Conf Room 1" StartTime="16:30 PM" EndTime="17:15 PM">
+    </Session>
+
+    <Session
+      Subject="Advanced TextCommands in CodeRush"
+      Description="Mark Miller and Rory Becker reveal how to exploit the power of advanced TextCommands in CodeRush templates, including a thorough examination of the ForEach TextCommand."
+      Speaker="Mark Miller, Rory Becker" CategoryKey="IDE" Level="3"
+      Location="Conf Room 2" StartTime="10:00 AM" EndTime="11:15 AM">
+    </Session>
+    <Session
+      Subject="XAF UI Customizations"
+      Description="Everyone has their own tastes and requirements when it comes to UI design and in this session I'll show you how to customize the default application templates if your tastes don't quite match ours."
+      Speaker="Apostolis Bekiaris" CategoryKey="BAF" Level="1"
+      Location="Conf Room 2" StartTime="11:30 AM" EndTime="12:30 PM">
+    </Session>
+    <Session
+      Subject="TDD in CodeRush"
+      Description="Mark Miller and Rory Becker reveal everything you need to know about working with the TDD features of CodeRush, featuring the Test Runner, templates to abstract the developer from the unit testing framework, and consume-first declaration."
+      Speaker="Mark Miller, Rory Becker" CategoryKey="IDE" Level="2"
+      Location="Conf Room 2" StartTime="14:15 PM" EndTime="15:00 PM">
+    </Session>
+    <Session
+      Subject="Functional testing deep dive"
+      Description="Everything that can be measured can be improved and XAF is no exception, in this session I'll show you how to use the in-built testing framework that ships with XAF to ensure your products are as good as they can be."
+      Speaker="Apostolis Bekiaris" CategoryKey="BAF" Level="3"
+      Location="Conf Room 2" StartTime="15:15 PM" EndTime="16:00 PM">
+    </Session>
+    <Session
+      Subject="Working with the TextDocument and TextView"
+      Description="Mark Miller and Rory Becker reveal how to programmatically work with the active text document, views, selections, and the caret."
+      Speaker="Mark Miller, Rory Becker" CategoryKey="IDE" Level="3"
+      Location="Conf Room 2" StartTime="16:30 PM" EndTime="17:15 PM">
+    </Session>
+
+    <Session
+      Subject="Reporting with the LLBLGen Pro Runtime Framework"
+      Description="This session will focus on using the LLBLGen Pro Runtime Framework in conjunction with the DevExpress Reporting Suite. We will be guided through the process of creating an LLBLGen Pro Project, generating entities, and consuming them in a report."
+      Speaker="Frans Bouma" CategoryKey="DEV" Level="2"
+      Location="Conf Room 3" StartTime="10:00 AM" EndTime="11:15 AM">
+    </Session>
+    <Session
+      Subject="Deeper Dive Into XNA on Windows Phone"
+      Description="This session covers using the phone specific features in more depth with XNA. Topics covered include touch input and gestures, the accelerometer, accessing the camera and more."
+      Speaker="Chris G. Williams" CategoryKey="DEV" Level="1"
+      Location="Conf Room 3" StartTime="11:30 AM" EndTime="12:30 PM">
+    </Session>
+    <Session
+      Subject="Team Foundation Server for Developers"
+      Description="Microsoft Team Foundation Server reaches all disciplines of the development lifecycle: project managers, testers, developers, business analysts, and management. This session focuses on what TFS means to the developer. We’ll cover the fundamentals of the TFS version control system and its seamless integration with work item tracking and automated build, highlighting how TFS can improve project visibility without adding overhead to the developer."
+      Speaker="Steve Andrews" CategoryKey="DEV" Level="1"
+      Location="Conf Room 3" StartTime="15:15 PM" EndTime="16:00 PM">
+    </Session>
+    <Session
+      Subject="Using the Push Notifications Service in your apps or games"
+      Description="This session explains the Microsoft Push Notification Service and how to use it to create Tile, Toast and Raw (in-app) updates."
+      Speaker="Chris G. Williams" CategoryKey="DEV" Level="1"
+      Location="Conf Room 3" StartTime="16:30 PM" EndTime="17:15 PM">
+    </Session>
+
+    <Break Subject="LUNCH" StartTime="13:00 PM" EndTime="14:00 PM"></Break>
+    <Break Subject="BREAK" StartTime="16:00 PM" EndTime="16:30 PM"></Break>
+  </ConferenceDay>
+
+  <ConferenceDay>
+    <Session
+          Subject="ASP.NET MVC 3 w/DevExpress Extensions"
+          Description="Learn about the new DevExpress MVC 3 support including: new project templates and how work with the new Razor engine."
+          Speaker="Mehul Harry" CategoryKey="ASP" Level="1"
+          Location="Conf Room 1" StartTime="10:00 AM" EndTime="11:00 AM">
+    </Session>
+    <Session
+      Subject="PivotGrid on The Web"
+      Description="In this session we will look at some best practices for using the PivotGrid in a web based application. We will also look at some of the advanced rendering options the PivotGrid provides."
+      Speaker="Robert Boedigheimer" CategoryKey="ASP" Level="2"
+      Location="Conf Room 1" StartTime="11:30 AM" EndTime="12:30 PM">
+    </Session>
+    <Session
+      Subject="Good C# Habits Can Encourage Bad JavaScript Habits"
+      Description="It seems that far too many people come to jQuery thinking that their previous C# knowledge will help them be successful at client-side scripting. In many cases, you can be successful with this approach, however, the more JavaScript you write you will inevitably find yourself uncovering strange bugs because you didn't take time to learn JavaScript properly.
+
+		This session is targeted for developers that use jQuery, but haven’t invested adequate time to learn some of the foundational JavaScript concepts that differ from C#. If you would like to avoid some of these common mistakes when moving from C#, then please join me as I try to explain some of the differences."
+      Speaker="Elijah Manor" CategoryKey="ASP" Level="1"
+      Location="Conf Room 1" StartTime="14:00 PM" EndTime="15:00 PM">
+    </Session>
+    <Session
+      Subject="Creating Your Own Financial Indicators"
+      Description="In this session Mehul shows how to create a new custom indicator and add it to its own pane."
+      Speaker="Mehul Harry" CategoryKey="ASP" Level="2"
+      Location="Conf Room 1" StartTime="15:15 PM" EndTime="16:00 PM">
+    </Session>
+    <Session
+      Subject="Advanced CodeRush Plug-ins – Custom Painting"
+      Description="Mark Miller and Rory Becker show how to paint on the Visual Studio editor surface."
+      Speaker="Mark Miller, Rory Becker" CategoryKey="IDE" Level="2"
+      Location="Conf Room 1" StartTime="16:30 PM" EndTime="17:15 PM">
+    </Session>
+    <Session
+      Subject="CodeRush Navigation"
+      Description="Mark and Rory go over the many different navigation features inside CodeRush."
+      Speaker="Mark Miller, Rory Becker" CategoryKey="IDE" Level="2"
+      Location="Conf Room 2" StartTime="10:00 AM" EndTime="11:15 AM">
+    </Session>
+    <Session
+      Subject="XAF Views Structure"
+      Description="Join us for a quick tour of the new and refactored Views hierarchy within XAF."
+      Speaker="Apostolis Bekiaris" CategoryKey="IDE" Level="1"
+      Location="Conf Room 2" StartTime="14:00 PM" EndTime="15:00 PM">
+    </Session>
+    <Session
+      Subject="Complete Tour of DevExpress ORM: eXpress Persistent Objects (XPO)"
+      Description="This session is a complete roundtrip of XPO, the eXpress Persistent Objects, the object/relational mapping tool made by DevExpress. A quick introduction and overview will kick things off, followed by information on best practices and usage patterns, the UnitOfWork, querying techniques, caching and XPO publication. It will be a fast-paced presentation that leaves you with a good impression of what XPO is, what it is good at, or, if you're already using it, what you might be missing. Hopefully we'll have some time for questions at the end!"
+      Speaker="Oliver Sturm" CategoryKey="BAF" Level="2"
+      Location="Conf Room 2" StartTime="15:15 PM" EndTime="16:00 PM">
+    </Session>
+    <Session
+      Subject="Data shaping and analysis (how to get your users excited)"
+      Description="In this session we will learn how to shape a standard relational data source to use as a pivot data source. We will then explore how to use the Pivot grid to let end users to explore the data in a meaningful way. When end users can explore the data in a way that is interesting to them they can get excited about the data."
+      Speaker="Apostolis Bekiaris" CategoryKey="DEV" Level="1"
+      Location="Conf Room 2" StartTime="16:30 PM" EndTime="17:15 PM">
+    </Session>
+
+    <Session
+      Subject="Introduction to SharePoint 2010 for Developers"
+      Description="So you've are developer, you've heard about this SharePoint 2010 thing and want to jump on the bandwagon? This is the session for you. Here you'll learn about the various options you have in standing up a SharePoint development environment. Then we'll explore the developer tools and build a container to store some data with a content type, list template and list instance). Finally you'll learn the best places to go to get information and help going forward from books, classes and online forums."
+      Speaker="Andrew Connell" CategoryKey="DEV" Level="1"
+      Location="Conf Room 3" StartTime="10:00 AM" EndTime="11:15 AM">
+    </Session>
+    <Session
+      Subject="Customizing Team Foundation Server 2010 Process Templates"
+      Description="Team Foundation Server (TFS) is Microsoft's flagship Application Lifecycle Management (ALM) platform. One of the many benefits of TFS is the ability to customize the entire process to fit your organization. We will start with downloading a process template from TFS and examining the components. Next, we will look at customizing work items and work item queries, source control settings, and reports and the project portal. Finally, we will upload the new template and apply it to a new Team Project, as well as look at process template version management."
+      Speaker="Steve Andrews" CategoryKey="DEV" Level="2"
+      Location="Conf Room 3" StartTime="11:30 AM" EndTime="12:30 PM">
+    </Session>
+    <Session
+      Subject="SharePoint 2010 Data Access"
+      Description="SharePoint 2010 has a robust browser-based user interface for interacting with data in SharePoint sites. In this presentation we'll explore the various data access options. This includes working with SharePoint data on the server with LINQ for SharePoint as well as from off the server with the Client Object Model, REST and Silverlight."
+      Speaker="Andrew Connell" CategoryKey="DEV" Level="1"
+      Location="Conf Room 3" StartTime="14:00 PM" EndTime="15:00 PM">
+    </Session>
+    <Session
+      Subject="Building Document Based Systems"
+      Description="In this session we will explore building document based system on top of the RavenDB document database for .NET. We will explore the different modeling requirement, the tradeoffs and the benefits of using a document based approach for modeling our systems."
+      Speaker="Oren Eini" CategoryKey="DEV" Level="3"
+      Location="Conf Room 3" StartTime="15:15 PM" EndTime="16:00 PM">
+    </Session>
+    <Session
+        Subject="Visual Studio 2010 Testing"
+        Description="Did you know that Visual Studio 2010 includes several quality-centric capabilities for the developer? Not just tools to test code after it’s written, but tools to help improve code bases before it actually reaches production? In this session we’ll explore the tools that put quality first for the developer: code analysis, metrics, test impact analysis, IntelliTrace, and performance profiling."
+        Speaker="Steve Lange" CategoryKey="DEV" Level="1"
+        Location="Conf Room 3" StartTime="16:30 PM" EndTime="17:15 PM">
+    </Session>
+    <Break Subject="LUNCH" StartTime="13:00 PM" EndTime="14:00 PM"></Break>
+    <Break Subject="BREAK" StartTime="16:00 PM" EndTime="16:30 PM"></Break>
+  </ConferenceDay>
+</EventRegistration>

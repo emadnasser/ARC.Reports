@@ -1,0 +1,70 @@
+﻿@model IEnumerable
+
+@section AdditionalResources{
+<style type="text/css">
+    .titleContainer
+    {
+        height: 32px;
+        padding: 6px 10px !important;
+        line-height: 145%;
+        text-align: left !important;
+    }
+</style>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form").on("click", "#lnkSelectAllRows", function () {
+            grid.SelectRows();
+        });
+        $("form").on("click", "#lnkClearSelection", function () {
+            grid.UnselectRows();
+        });
+        $("#selectAllMode").on('change', function () {
+            $("form").submit();
+        });
+    });
+    function OnGridViewInit(){
+        UpdateTitlePanel();
+    }
+    function OnGridViewSelectionChanged(){
+        UpdateTitlePanel();
+    }
+    function OnGridViewEndCallback(){
+        UpdateTitlePanel();
+    }
+    function UpdateTitlePanel(){
+        var selectedFilteredRowCount = GetSelectedFilteredRowCount();
+        
+        var text = "Total rows selected: <b>" + grid.GetSelectedRowCount() + "</b>. ";
+        var hiddenSelectedRowCount = grid.GetSelectedRowCount() - GetSelectedFilteredRowCount();
+        if(hiddenSelectedRowCount > 0)
+            text += "Selected rows hidden by the applied filter: <b>" + hiddenSelectedRowCount + "</b>.";
+        text += "<br />";
+        $("#lblInfo").html(text);
+
+        if($("#selectAllMode").val() != "AllPages"){
+            SetElementVisibility("lnkSelectAllRows", grid.cpVisibleRowCount > selectedFilteredRowCount);
+            SetElementVisibility("lnkClearSelection", grid.GetSelectedRowCount() > 0);
+        }
+    }
+    function GetSelectedFilteredRowCount() {
+        return grid.cpFilteredRowCountWithoutPage + grid.GetSelectedKeysOnPage().length;
+    }
+    function SetElementVisibility(id, visible){
+        var $element = $("#" + id);
+        visible ? $element.show() : $element.hide();
+    }
+</script>
+
+@using(Html.BeginForm()) {
+    <div style="padding-bottom: 10px;">
+        <label for="selectAllMode">SelectAll button mode:&nbsp;</label>
+        @Html.DropDownList(
+            "selectAllMode",
+            new SelectList(Enum.GetValues(typeof(GridViewSelectAllCheckBoxMode)), GridViewSelectionDemoHelper.SelectAllButtonMode),
+            new { style = "width: 100px;" }
+        )
+    </div>
+
+    @Html.Partial("AdvancedSelectionPartial", Model)
+}

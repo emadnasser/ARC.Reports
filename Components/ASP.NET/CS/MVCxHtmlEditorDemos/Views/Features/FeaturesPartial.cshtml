@@ -1,0 +1,40 @@
+﻿@Html.DevExpress().HtmlEditor(
+    settings =>
+    {
+        settings.Name = "FeaturesHtml";
+        settings.CallbackRouteValues = new { Controller = "Features", Action = "FeaturesPartial" };
+        settings.Height = Unit.Pixel(370);
+
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageUpload.FileSystemSettings.Assign(HtmlEditorFeaturesDemosHelper.FileSaveSettings.FileSystemSettings);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageUpload.ValidationSettings.Assign(HtmlEditorFeaturesDemosHelper.ImageUploadValidationSettings);
+
+        HtmlEditorFeaturesDemosHelper.SetHtmlEditorImageSelectorSettings(settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector);
+
+        if(Session["Options"] != null) {
+            HtmlEditorFeaturesDemoOptions options = (HtmlEditorFeaturesDemoOptions)Session["Options"];
+            settings.SettingsHtmlEditing.AllowScripts = options.AllowScripts;
+            settings.SettingsHtmlEditing.AllowIFrames = options.AllowIFrames;
+            settings.SettingsHtmlEditing.AllowFormElements = options.AllowFormElements;
+            settings.SettingsHtmlEditing.UpdateDeprecatedElements = options.UpdateDeprecatedElements;
+            settings.SettingsHtmlEditing.UpdateBoldItalic = options.UpdateBoldItalic;
+            settings.SettingsHtmlEditing.EnterMode = options.EnterMode;
+            settings.SettingsHtmlEditing.AllowIdAttributes = options.AllowIdAttributes;
+            settings.SettingsHtmlEditing.AllowStyleAttributes = options.AllowStyleAttributes;
+            settings.SettingsHtmlEditing.AllowedDocumentType = options.AllowedDocumentType;
+            settings.SettingsHtmlEditing.AllowEditFullDocument = options.AllowEditFullDocument;
+            settings.SettingsHtmlEditing.ResourcePathMode = options.ResourcePathMode;
+            settings.Settings.AllowCustomColorsInColorPickers = options.AllowCustomColorsInColorPickers;
+            settings.ActiveView = options.ActiveView;
+        }
+
+        Action<object, FileManagerActionEventArgsBase> editHandler = (sender, e) => {
+            e.Cancel = Utils.IsSiteMode;
+            e.ErrorText = Utils.GetReadOnlyMessageText();
+        };
+
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemDeleting = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.FolderCreating = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.FileUploading = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemMoving = (sender, e) => editHandler(sender, e);
+        settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.ItemRenaming = (sender, e) => editHandler(sender, e);
+    }).Bind(Model).GetHtml()

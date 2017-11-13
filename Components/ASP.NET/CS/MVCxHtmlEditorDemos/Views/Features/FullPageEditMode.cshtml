@@ -1,0 +1,9 @@
+﻿<script type="text/javascript">
+    function onDemoHtmlEditorActiveTabChanged(s, e) {
+        if (e.name === "HTML")
+            s.ExecuteCommand(ASPxClientCommandConsts.FORMATDOCUMENT_COMMAND, null);
+    }
+</script>
+@using (Html.BeginForm()){
+    @Html.Partial("FullPageEditModePartial")
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>News</title>
+    <link></link>
+    <description>1</description>
+    <language>en-US</language>
+    <webMaster></webMaster>
+    <lastBuildDate></lastBuildDate>
+    <ttl>60</ttl>
+    <item>
+      <title>UK's first trunk call from a pay phone</title>
+      <link>javascript:void(7)</link>
+      <description>
+        The UK's first trunk dialling system from a public call-box has been inaugurated in Bristol today.
+        It is the start of a countrywide service that will eventually replace the current Button A and Button B pre-payment system.
+      </description>
+      <pubDate>5 September 1959</pubDate>
+      <image>
+        <url>~/NewsControl/Images/OnThisDay/UKFirst.jpg</url>
+        <title>UK's first trunk call from a pay phone</title>
+        <link>javascript:void(7)</link>
+      </image>
+    </item>
+    <item>
+      <title>World glimpses far side of the Moon</title>
+      <link>javascript:void(8)</link>
+      <description>
+        The Soviet Union has revealed the first pictures of the far side of the Moon.
+        The pictures were taken about three weeks ago from Lunik 3, the Soviet satellite launched on 4 October, and transmitted by radio to the Earth, 300,000 miles (483,000 km) away.
+      </description>
+      <pubDate>26 October 1959</pubDate>
+      <image>
+        <url>~/NewsControl/Images/OnThisDay/WorldGlimpses.jpg</url>
+        <title>World glimpses far side of the Moon</title>
+        <link>javascript:void(8)</link>
+      </image>
+    </item>
+    <item>
+      <title>'Music of spheres' hails Venus fly-by</title>
+      <link>javascript:void(9)</link>
+      <description>
+        The unmanned US spacecraft, Mariner 2, has taken the first-ever scan from space of the planet Venus.
+        The mission took the spacecraft closer to Venus than any had ever been.
+      </description>
+      <pubDate>14 December 1962</pubDate>
+      <image>
+        <url>~/NewsControl/Images/OnThisDay/MusicSpheres.jpg</url>
+        <title>'Music of spheres' hails Venus fly-by</title>
+        <link>javascript:void(9)</link>
+      </image>
+    </item>
+    <item>
+      <title>Green light for Channel Tunnel</title>
+      <link>javascript:void(10)</link>
+      <description>
+        The British and French Governments have announced their commitment to build a tunnel under the English Channel.
+        Both countries now have the capital and technical skills to bring the project - first mooted 162 years ago - to life but their official statements do not give a definite timetable.
+      </description>
+      <pubDate>6 February 1964</pubDate>
+      <image>
+        <url>~/NewsControl/Images/OnThisDay/GreenLight.jpg</url>
+        <title>Green light for Channel Tunnel</title>
+        <link>javascript:void(10)</link>
+      </image>
+    </item>
+    <item>
+      <title>Green light for Channel Tunnel</title>
+      <link>javascript:void(11)</link>
+      <description>
+        A ground-breaking 15-minute live broadcast has shown ordinary Americans what it feels like to be a space probe hurtling to destruction on the Moon.
+        The extraordinary pictures from the Ranger 9 moon lander were beamed out directly from the spacecraft's internal cameras.
+      </description>
+      <pubDate>24 March 1965</pubDate>
+      <image>
+        <url>~/NewsControl/Images/OnThisDay/GreenLightChannelTunnel.jpg</url>
+        <title>Green light for Channel Tunnel</title>
+        <link>javascript:void(11)</link>
+      </image>
+    </item>
+  </channel>
+</rss>

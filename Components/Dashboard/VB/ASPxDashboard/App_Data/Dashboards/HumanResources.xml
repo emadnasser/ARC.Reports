@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Human Resources" />
+  <DataSources>
+    <ObjectDataSource ComponentName="dsDepartments">
+      <Name>Departments</Name>
+      <DataMember>DepartmentData</DataMember>
+    </ObjectDataSource>
+    <ObjectDataSource ComponentName="dsEmployees">
+      <Name>Employees</Name>
+	  <DataMember>EmployeeData</DataMember>
+    </ObjectDataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="piePayrollStructureSum" Name="Payroll Structure Summary" DataSource="dsEmployees" LabelContentType="Argument">
+      <DataItems>
+        <Measure DataMember="Overtime" Name="Overtime" UniqueName="DataItem2" />
+        <Measure DataMember="Bonus" Name="Bonus" UniqueName="DataItem1" />
+        <Measure DataMember="Salary" Name="Salary" UniqueName="DataItem0" />
+      </DataItems>
+      <Values>
+        <Value UniqueName="DataItem0" />
+        <Value UniqueName="DataItem1" />
+        <Value UniqueName="DataItem2" />
+      </Values>
+    </Pie>
+    <Grid ComponentName="gridStaffTurnoverTime" Name="Staff Turnover through Time" DataSource="dsDepartments" IsMasterFilterCrossDataSource="true">
+      <InteractivityOptions IgnoreMasterFilters="true" MasterFilterMode="Single" IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="StaffTurnroverCritical" SummaryType="Average" UniqueName="DataItem5" />
+        <Measure DataMember="StaffTurnrover" SummaryType="Average" UniqueName="DataItem2">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+        <Dimension DataMember="CurrentDate" Name="Year" UniqueName="DataItem3" />
+        <Dimension DataMember="CurrentDate" Name="Month" DateTimeGroupInterval="Month" UniqueName="DataItem0" />
+        <Measure DataMember="StaffTurnrover" SummaryType="Average" UniqueName="DataItem4">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem2">
+          <FormatConditionColorRangeBar ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <BarStyleSettings PredefinedColor="Green" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="33" />
+                  <BarStyleSettings PredefinedColor="Blue" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="67" />
+                  <BarStyleSettings PredefinedColor="Red" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+            <BarOptions ShowBarOnly="true" />
+          </FormatConditionColorRangeBar>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="Year" Weight="55.617977528089888">
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Month">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Turnover" Weight="84.9438202247191">
+          <Measure UniqueName="DataItem2" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridDeltaColumn Name="Turnover" Weight="84.438202247191015">
+          <ActualValue UniqueName="DataItem4" />
+          <TargetValue UniqueName="DataItem5" />
+          <DeltaOptions ValueType="ActualValue" ResultIndicationMode="WarningIfGreater" />
+        </GridDeltaColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Card ComponentName="cardStaffTurnoverByDept" Name=" Staff Turnover by Department" DataSource="dsDepartments" IsMasterFilterCrossDataSource="true" ContentLineCount="4">
+      <InteractivityOptions MasterFilterMode="Single" />
+      <DataItems>
+        <Dimension DataMember="Department" UniqueName="DataItem2" />
+        <Measure DataMember="StaffTurnroverCritical" SummaryType="Average" UniqueName="DataItem1" />
+        <Measure DataMember="StaffTurnrover" SummaryType="Average" UniqueName="DataItem0">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Card Name="StaffTurnrover (Average) vs StaffTurnroverCritical (Average)">
+        <ActualValue UniqueName="DataItem0" />
+        <TargetValue UniqueName="DataItem1" />
+        <DeltaOptions ValueType="ActualValue" ResultIndicationMode="WarningIfGreater" />
+      </Card>
+    </Card>
+    <Pie ComponentName="pieAbsenceReasonSum" Name="Absence Reason Summary" DataSource="dsEmployees" LabelContentType="Argument">
+      <DataItems>
+        <Measure DataMember="SickLeaveDays" Name="Sick Leave" UniqueName="DataItem1">
+          <NumericFormat FormatType="General" />
+        </Measure>
+        <Measure DataMember="VacationDays" Name="Vacation" UniqueName="DataItem0">
+          <NumericFormat FormatType="General" />
+        </Measure>
+      </DataItems>
+      <Values>
+        <Value UniqueName="DataItem0" />
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartPayrollStructure" Name=" Payroll Structure for Top 5 Employees" DataSource="dsEmployees">
+      <DataItems>
+        <Dimension DataMember="Employee" TopNEnabled="true" TopNMeasure="DataItem0" UniqueName="DataItem3" />
+        <Measure DataMember="Overtime" UniqueName="DataItem2" />
+        <Measure DataMember="Bonus" UniqueName="DataItem1" />
+        <Measure DataMember="Salary" UniqueName="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem3" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Value" />
+          <Series>
+            <Simple Name="Salary" SeriesType="StackedBar">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+            <Simple Name="Bonus" SeriesType="StackedBar">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+            <Simple Name="Overtime" SeriesType="StackedBar">
+              <Value UniqueName="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartAbsenseDuration" Name="Absence Duration for Top 5 Employees" DataSource="dsEmployees">
+      <DataItems>
+        <Dimension DataMember="Employee" TopNEnabled="true" TopNMeasure="DataItem0" UniqueName="DataItem2" />
+        <Measure DataMember="SickLeaveDays" UniqueName="DataItem1">
+          <NumericFormat FormatType="General" />
+        </Measure>
+        <Measure DataMember="VacationDays" UniqueName="DataItem0">
+          <NumericFormat FormatType="General" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Value" />
+          <Series>
+            <Simple Name="Vacation" SeriesType="StackedBar">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+            <Simple Name="Sick Leave" SeriesType="StackedBar">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="52.612393681652492">
+        <LayoutItem DashboardItem="gridStaffTurnoverTime" Weight="37.998436278342453" />
+        <LayoutItem DashboardItem="chartPayrollStructure" Weight="36.98201720093823" />
+        <LayoutItem DashboardItem="piePayrollStructureSum" Weight="25.019546520719313" />
+      </LayoutGroup>
+      <LayoutGroup Weight="47.387606318347508">
+        <LayoutItem DashboardItem="cardStaffTurnoverByDept" Weight="37.998436278342453" />
+        <LayoutItem DashboardItem="chartAbsenseDuration" Weight="36.98201720093823" />
+        <LayoutItem DashboardItem="pieAbsenceReasonSum" Weight="25.019546520719313" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

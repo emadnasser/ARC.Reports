@@ -1,0 +1,42 @@
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ASPxGaugesDemos", ".\", "{52A4D99B-BEBA-46F8-A786-63F6B2697796}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/ASPxGaugesDemos"
+		Debug.AspNetCompiler.PhysicalPath = ".\"
+		Debug.AspNetCompiler.TargetPath = "..\PrecompiledWeb\ASPxGaugesDemos\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ASPxGaugesDemos"
+		Release.AspNetCompiler.PhysicalPath = ".\"
+		Release.AspNetCompiler.TargetPath = "..\PrecompiledWeb\ASPxGaugesDemos\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = ".\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52A4D99B-BEBA-46F8-A786-63F6B2697796}.Debug|.NET.ActiveCfg = Debug|.NET
+		{52A4D99B-BEBA-46F8-A786-63F6B2697796}.Debug|.NET.Build.0 = Debug|.NET
+		{52A4D99B-BEBA-46F8-A786-63F6B2697796}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{52A4D99B-BEBA-46F8-A786-63F6B2697796}.Release|.NET.ActiveCfg = Debug|.NET
+		{52A4D99B-BEBA-46F8-A786-63F6B2697796}.Release|.NET.Build.0 = Debug|.NET
+		{52A4D99B-BEBA-46F8-A786-63F6B2697796}.Release|Any CPU.ActiveCfg = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+		StartPage="default.htm"
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+﻿@model IEnumerable
+
+<script type="text/javascript">
+    function OnDemoOptionsChanged(s, e){
+        grid.PerformCallback();
+    }
+    function OnBeginGridCallback(s, e){
+        e.customArgs['columnMoveMode'] = ColumnMoveMode.GetValue();
+    }
+</script>
+
+@(Html.DevExpress().ComboBox(
+    settings => {
+        settings.Name = "ColumnMoveMode";
+        settings.Properties.Caption = "ColumnMoveMode";
+        settings.Properties.ValueType = typeof(GridColumnMoveMode);
+        settings.Properties.ClientSideEvents.ValueChanged = "OnDemoOptionsChanged";
+    })
+    .BindList(Enum.GetValues(typeof(GridColumnMoveMode)))
+    .Bind(ViewBag.ColumnMoveMode)
+    .GetHtml())
+<br />
+
+@Html.Partial("DataCellBandsPartial", Model)
+
+@section AdditionalResources {
+    <style type="text/css">
+        .price-cell
+        {
+            font-size: 1.6em;
+            font-weight: 600;
+            text-align: center !important;
+        }
+        .address-cell
+        {
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+    </style>
+}

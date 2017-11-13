@@ -1,0 +1,175 @@
+<Page
+    x:Class="HybridApp.Views.DashboardView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:HybridApp.Views"
+    xmlns:Core="using:DevExpress.Core"
+    xmlns:ViewModels="using:HybridApp.ViewModels"
+    xmlns:Grid="using:DevExpress.UI.Xaml.Grid"
+    xmlns:dxmvvm="using:DevExpress.Mvvm"
+    xmlns:dxmvvmui="using:DevExpress.Mvvm.UI"
+    xmlns:dxmvvmi="using:DevExpress.Mvvm.UI.Interactivity"
+    xmlns:Editors="using:DevExpress.UI.Xaml.Editors"
+    xmlns:Controls="using:DevExpress.UI.Xaml.Controls"
+    xmlns:Charts="using:DevExpress.UI.Xaml.Charts"
+    xmlns:Xaml="using:DevExpress.UI.Xaml"
+    xmlns:Layout="using:DevExpress.UI.Xaml.Layout"
+    NavigationCacheMode="Enabled"
+    x:Name="root"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <ViewModels:DashboardViewModel/>
+    </Page.DataContext>
+    <dxmvvmi:Interaction.Behaviors>
+        <dxmvvmui:EventToCommand EventName="Loaded" Command="{Binding LoadedCommand}"/>
+    </dxmvvmi:Interaction.Behaviors>
+
+    <Grid VerticalAlignment="Stretch" x:Name="grid">
+        <Layout:PivotContainer HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Layout:PivotContainerItem Header="Sales">
+                <Grid:GridControl ItemsSource="{Binding Entities}">
+                    <Grid:GridControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="15,5,15,16">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Grid.RowSpan="2" Text="{Binding TotalAmount, Converter={StaticResource FinancialConverter}}" Style="{StaticResource SalesTotalAmount}"/>
+                                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding InvoiceNumber}" Style="{StaticResource SalesInvoiceNumber}" Margin="0,10,0,0" HorizontalAlignment="Right"/>
+                                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding OrderDate, Converter={StaticResource DateConverter}}" Style="{StaticResource CardDate}" HorizontalAlignment="Right"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Customer.Name}" Style="{StaticResource SalesInvoiceNumber}" />
+                                <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding Customer.BillingAddress.CityLine}" Margin="0,-2,0,0" Style="{StaticResource SalesAddressLine}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </Grid:GridControl.ItemTemplate>
+                </Grid:GridControl>
+            </Layout:PivotContainerItem>
+            <Layout:PivotContainerItem Header="Revenues">
+                <Grid Background="{StaticResource PageBackgroundBrush}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <dxmvvmi:Interaction.Behaviors>
+                            <local:ToggleButtonsResetBehavior/>
+                        </dxmvvmi:Interaction.Behaviors>
+                        <ToggleButton Content="Today" Style="{StaticResource CustomToggleButton}" IsChecked="{Binding RevenuePeriodSelector[2], Mode=TwoWay}"/>
+                        <ToggleButton Content="This Month" Style="{StaticResource CustomToggleButton}" IsChecked="{Binding RevenuePeriodSelector[1], Mode=TwoWay}"/>
+                        <ToggleButton Content="YTD" Style="{StaticResource CustomToggleButton}" IsChecked="{Binding RevenuePeriodSelector[0], Mode=TwoWay}"/>
+                    </StackPanel>
+                    <Charts:PieChart Grid.Row="1" Margin="-10,-10,-10,0" HorizontalAlignment="Stretch"
+                                     HorizontalContentAlignment="Stretch" SelectionMode="None" Name="chart2" BorderThickness="0" Palette="{StaticResource chartsPalette}" Padding="0">
+                        <Charts:PieChart.Series>
+                            <Charts:Series>
+                                <Charts:Series.View>
+                                    <Charts:DonutSeriesView HoleRadiusPercent="50" Padding="0" StartAngle="0" ShowLabels="True" LegendPointPattern="{}{A}">
+                                        <Charts:DonutSeriesView.LabelOptions>
+                                            <Charts:SeriesLabelOptions Pattern="{}{V:c0}K" ElementTemplate="{StaticResource DonutLabelTemplate}" Charts:PieSeriesView.LabelPosition="Outside" ShowConnectors="False"/>
+                                        </Charts:DonutSeriesView.LabelOptions>
+                                    </Charts:DonutSeriesView>
+                                </Charts:Series.View>
+                                <Charts:Series.Data>
+                                    <Charts:DataSourceAdapter DataSource="{Binding SalesSummarySelectedItem}">
+                                        <Charts:DataSourceAdapter.DataMembers>
+                                            <Charts:DataMember DataMemberType="Argument" ColumnName="Category"/>
+                                            <Charts:DataMember DataMemberType="Value" ColumnName="SalesForView"/>
+                                        </Charts:DataSourceAdapter.DataMembers>
+                                    </Charts:DataSourceAdapter>
+                                </Charts:Series.Data>
+                            </Charts:Series>
+                        </Charts:PieChart.Series>
+                        <Charts:PieChart.Legend>
+                            <Charts:Legend HorizontalPosition="Center" VerticalPosition="BottomOutside" Style="{StaticResource LegendStyle}"/>
+                        </Charts:PieChart.Legend>
+                    </Charts:PieChart>
+                </Grid>
+            </Layout:PivotContainerItem>
+            <Layout:PivotContainerItem Header="Cost of goods sold">
+                <Grid Background="{StaticResource PageBackgroundBrush}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <dxmvvmi:Interaction.Behaviors>
+                            <local:ToggleButtonsResetBehavior/>
+                        </dxmvvmi:Interaction.Behaviors>
+                        <ToggleButton Content="Today" Style="{StaticResource CustomToggleButton}" IsChecked="{Binding GoodSoldPeriodSelector[2], Mode=TwoWay}"/>
+                        <ToggleButton Content="This Month" Style="{StaticResource CustomToggleButton}" IsChecked="{Binding GoodSoldPeriodSelector[1], Mode=TwoWay}"/>
+                        <ToggleButton Content="YTD" Style="{StaticResource CustomToggleButton}" IsChecked="{Binding GoodSoldPeriodSelector[0], Mode=TwoWay}"/>
+                    </StackPanel>
+                    <Charts:CartesianChart Grid.Row="1" Margin="10,0,10,0" ToolTipEnabled="False" BorderThickness="0"
+                                            Palette="{StaticResource chartsPalette}" SelectionMode="None">
+                        <Charts:CartesianChart.AxisX>
+                            <Charts:AxisX>
+                                <Charts:AxisX.LabelOptions>
+                                    <Charts:AxisLabelOptions ElementTemplate="{StaticResource BarAxisXLabelTemplate}"/>
+                                </Charts:AxisX.LabelOptions>
+                            </Charts:AxisX>
+                        </Charts:CartesianChart.AxisX>
+                        <Charts:CartesianChart.AxisY>
+                            <Charts:AxisY>
+                                <Charts:AxisY.LabelOptions>
+                                    <Charts:AxisLabelOptions Pattern="{}{V:c1}K" FontFamily="Segoe UI Light" FontSize="13" FontWeight="Light" Foreground="{StaticResource GrayForegroundBrush}"/>
+                                </Charts:AxisY.LabelOptions>
+                            </Charts:AxisY>
+                        </Charts:CartesianChart.AxisY>
+                        <Charts:CartesianChart.Series>
+                            <Charts:Series>
+                                <Charts:Series.Data>
+                                    <Charts:DataSourceAdapter DataSource="{Binding CostSelectedItem}">
+                                        <Charts:DataSourceAdapter.DataMembers>
+                                            <Charts:DataMember DataMemberType="Argument" ColumnName="Category"/>
+                                            <Charts:DataMember DataMemberType="Value" ColumnName="CostForView"/>
+                                        </Charts:DataSourceAdapter.DataMembers>
+                                    </Charts:DataSourceAdapter>
+                                </Charts:Series.Data>
+                                <Charts:Series.View >
+                                    <Charts:SideBySideBarSeriesView ColorEach="True" BarWidth="0.8"/>
+                                </Charts:Series.View>
+                            </Charts:Series>
+                        </Charts:CartesianChart.Series>
+                    </Charts:CartesianChart>
+                </Grid>
+            </Layout:PivotContainerItem>
+            <Layout:PivotContainerItem Header="Opportunities">
+                <Grid Background="{StaticResource PageBackgroundBrush}">
+                    <Charts:FunnelChart BorderThickness="0" Palette="{StaticResource chartsPalette}" Padding="5" SelectionMode="None">
+                        <Charts:FunnelChart.Series>
+                            <Charts:Series>
+                                <Charts:Series.View>
+                                    <Charts:FunnelSeriesView ShowLabels="True" PointDistance="0" AlignToCenter="True" LegendPointPattern="{}{A}">
+                                        <Charts:FunnelSeriesView.LabelOptions>
+                                            <Charts:SeriesLabelOptions Pattern="{}{V:c0}K" ElementTemplate="{StaticResource DonutLabelTemplate}" ShowConnectors="False" Charts:FunnelSeriesView.LabelPosition="Right"/>
+                                        </Charts:FunnelSeriesView.LabelOptions>
+                                    </Charts:FunnelSeriesView>
+                                </Charts:Series.View>
+                                <Charts:Series.Data>
+                                    <Charts:DataSourceAdapter DataSource="{Binding SummaryOpportunities, Mode=OneWay}">
+                                        <Charts:DataSourceAdapter.DataMembers>
+                                            <Charts:DataMember DataMemberType="Argument" ColumnName="StageName"/>
+                                            <Charts:DataMember DataMemberType="Value" ColumnName="SummaryForView"/>
+                                        </Charts:DataSourceAdapter.DataMembers>
+                                    </Charts:DataSourceAdapter>
+                                </Charts:Series.Data>
+                            </Charts:Series>
+                        </Charts:FunnelChart.Series>
+                        <Charts:FunnelChart.Legend >
+                            <Charts:Legend HorizontalPosition="Center" VerticalPosition="BottomOutside" Margin="0,15,0,15" Style="{StaticResource LegendStyle}"/>
+                        </Charts:FunnelChart.Legend>
+                    </Charts:FunnelChart>
+                </Grid>
+            </Layout:PivotContainerItem>
+        </Layout:PivotContainer>
+    </Grid>
+</Page>

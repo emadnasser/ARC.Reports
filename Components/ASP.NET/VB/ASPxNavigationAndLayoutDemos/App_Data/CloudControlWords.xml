@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+  <Word Text="cycles" Value="29" NavigateUrl="1" />
+  <Word Text="insomnia" Value="408" NavigateUrl="2" />
+  <Word Text="fact" Value="4" NavigateUrl="3" />
+  <Word Text="surprise" Value="1" NavigateUrl="4" />
+  <Word Text="people" Value="29" NavigateUrl="5" />
+  <Word Text="read" Value="2" NavigateUrl="6" />
+  <Word Text="novel" Value="0" NavigateUrl="7" />
+
+  <Word Text="adventures" Value="106" NavigateUrl="8" />
+  <Word Text="story" Value="7" NavigateUrl="9" />
+  <Word Text="handy" Value="198" NavigateUrl="10" />
+  <Word Text="nights" Value="564" NavigateUrl="11" />
+
+  <Word Text="sleep" Value="2" NavigateUrl="12" />
+  <Word Text="tell" Value="275" NavigateUrl="13" />
+  <Word Text="dark" Value="18" NavigateUrl="14" />
+  <Word Text="writing" Value="154" NavigateUrl="15" />
+
+  <Word Text="mind" Value="145" NavigateUrl="16" />
+  <Word Text="typewriter" Value="352" NavigateUrl="17" />
+  <Word Text="word" Value="19" NavigateUrl="18" />
+  <Word Text="processor" Value="677" NavigateUrl="19" />
+
+  <Word Text="change" Value="20" NavigateUrl="20" />
+  <Word Text="thought" Value="166" NavigateUrl="21" />
+  <Word Text="deleting" Value="182" NavigateUrl="22" />
+  <Word Text="clause" Value="3" NavigateUrl="23" />
+  <Word Text="making" Value="1" NavigateUrl="24" />
+  <Word Text="dialogue" Value="184" NavigateUrl="25" />
+
+  <Word Text="start" Value="89" NavigateUrl="26" />
+  <Word Text="over" Value="37" NavigateUrl="27" />
+  <Word Text="beginning" Value="167" NavigateUrl="28" />
+  <Word Text="little" Value="115" NavigateUrl="29" />
+  <Word Text="drop" Value="174" NavigateUrl="30" />
+
+  <Word Text="chunk" Value="33" NavigateUrl="31" />
+  <Word Text="prose" Value="121" NavigateUrl="32" />
+  <Word Text="memory" Value="335" NavigateUrl="33" />
+  <Word Text="probability" Value="96" NavigateUrl="34" />
+
+  <Word Text="sound" Value="14" NavigateUrl="35" />
+  <Word Text="soothing" Value="40" NavigateUrl="36" />
+  <Word Text="time" Value="34" NavigateUrl="37" />
+  <Word Text="beat" Value="104" NavigateUrl="38" />
+  <Word Text="count" Value="316" NavigateUrl="39" />
+
+  <Word Text="event" Value="76" NavigateUrl="40" />
+  <Word Text="wear" Value="777" NavigateUrl="41" />
+  <Word Text="book" Value="3" NavigateUrl="42" />
+  <Word Text="will" Value="112" NavigateUrl="43" />
+
+  <Word Text="turning" Value="116" NavigateUrl="44" />
+  <Word Text="love" Value="96" NavigateUrl="45" />
+  <Word Text="comic" Value="91" NavigateUrl="46" />
+
+  <Word Text="paperback" Value="184" NavigateUrl="47" />
+  <Word Text="rag" Value="157" NavigateUrl="48" />
+  <Word Text="sleeplessness" Value="42" NavigateUrl="49" />
+  <Word Text="hope" Value="57" NavigateUrl="50" />
+
+  <Word Text="hour" Value="5" NavigateUrl="51" />
+  <Word Text="call" Value="2" NavigateUrl="52" />
+
+
+  <Word Text="developer" Value="57" NavigateUrl="53" />
+  <Word Text="interest" Value="352" NavigateUrl="54" />
+
+  <Word Text="date" Value="384" NavigateUrl="55" />
+  <Word Text="execution" Value="441" NavigateUrl="56" />
+  <Word Text="person" Value="177" NavigateUrl="57" />
+  <Word Text="trusty" Value="68" NavigateUrl="58" />
+
+  <Word Text="cart" Value="699" NavigateUrl="59" />
+  <Word Text="cell" Value="177" NavigateUrl="60" />
+  <Word Text="block" Value="131" NavigateUrl="61" />
+
+  <Word Text="notion" Value="22" NavigateUrl="62" />
+  <Word Text="hair" Value="26" NavigateUrl="63" />
+  <Word Text="tonic" Value="45" NavigateUrl="64" />
+  <Word Text="airplane" Value="43" NavigateUrl="65" />
+  <Word Text="paper" Value="23" NavigateUrl="66" />
+
+  <Word Text="disappearing" Value="117" NavigateUrl="67" />
+  <Word Text="idea" Value="23" NavigateUrl="68" />
+
+  <Word Text="way" Value="41" NavigateUrl="69" />
+  <Word Text="narrator" Value="338" NavigateUrl="70" />
+
+  <Word Text="mouse" Value="16" NavigateUrl="71" />
+  <Word Text="help" Value="12" NavigateUrl="72" />
+
+  <Word Text="part" Value="253" NavigateUrl="73" />
+  <Word Text="opening" Value="455" NavigateUrl="74" />
+  <Word Text="state" Value="3" NavigateUrl="75" />
+  <Word Text="course" Value="109" NavigateUrl="76" />
+
+  <Word Text="coin" Value="136" NavigateUrl="77" />
+  <Word Text="tale" Value="71" NavigateUrl="78" />
+  <Word Text="planet" Value="442" NavigateUrl="79" />
+  <Word Text="reason" Value="20" NavigateUrl="80" />
+
+  <Word Text="rain" Value="774" NavigateUrl="81" />
+</Dictionary>

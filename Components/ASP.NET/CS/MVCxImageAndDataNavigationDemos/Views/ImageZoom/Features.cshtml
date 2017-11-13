@@ -1,0 +1,45 @@
+﻿@model ImageZoomFeaturesOptions
+
+@using(Html.BeginForm()) {
+    <div style="float:left;">
+        @Html.DevExpress().ImageZoom(
+            settings => {
+                settings.Name = "imageZoom";
+                settings.ImageUrl = Url.Content("~/Content/ImageZoom/headphones_124696717_small.jpg");
+                settings.LargeImageUrl = Url.Content("~/Content/ImageZoom/headphones_124696717.jpg");
+        
+                settings.EnableExpandMode = Model.EnableExpandMode;
+                settings.ShowHint = Model.ShowHint;
+                settings.LargeImageLoadMode = Model.LargeImageLoadMode;
+                settings.SettingsZoomMode.ZoomWindowPosition = Model.ZoomWindowPosition;
+                settings.SettingsZoomMode.MouseBoxOpacityMode = Model.MouseBoxOpacityMode;
+                settings.ZoomWindowText = "Zoom Window Text";
+                settings.ExpandWindowText = "Expand Window Text";
+            }).GetHtml()
+    </div>
+    <div class="vertOptionsPanel">
+        <div>
+            <label class="checkBox" for="ShowHint">ShowHint</label>
+            @Html.CheckBox("ShowHint", Model.ShowHint)
+        </div>
+        <div>
+            <label class="checkBox" for="EnableExpandMode">EnableExpandMode</label>
+            @Html.CheckBox("EnableExpandMode", Model.EnableExpandMode)
+        </div>
+        <div>
+            <label class="checkBox" for="ZoomWindowPosition">ZoomWindowPosition</label>
+            @Html.DropDownList("ZoomWindowPosition", typeof(ZoomWindowPosition), Model.ZoomWindowPosition, new { style = "width:100px;" })
+        </div>
+        <div>
+            <label class="checkBox" for="MouseBoxOpacityMode">MouseBoxOpacityMode</label>
+            @Html.DropDownList("MouseBoxOpacityMode", typeof(MouseBoxOpacityMode), Model.MouseBoxOpacityMode, new { style = "width:100px;" })
+        </div>
+        <div>
+            <label class="checkBox" for="LargeImageLoadMode">LargeImageLoadMode</label>
+            @Html.DropDownList("LargeImageLoadMode", typeof(LargeImageLoadMode), Model.LargeImageLoadMode, new { style = "width:100px;" })
+        </div>
+        <div>
+            <input value="Apply" type="submit" />
+        </div>
+    </div>
+}

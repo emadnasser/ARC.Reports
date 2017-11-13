@@ -1,0 +1,28 @@
+﻿<table>
+    <tr>
+        <td>
+            @Html.DevExpress().ComboBox(
+                    settings => {
+                        settings.Name = "ExportToDocumentType";
+                        settings.Properties.ValueType = typeof(int);
+                        settings.SelectedIndex = 0;
+                        settings.Width = Unit.Pixel(215);
+                        settings.Style.Add(HtmlTextWriterStyle.MarginRight, "9px");
+                        settings.Properties.Items.Add("Excel Workbook (*.xlsx)", 1);
+                        settings.Properties.Items.Add("Excel 97-2003 Workbook (*.xls)", 2);
+                        settings.Properties.Items.Add("Comma delimited (*.csv)", 3);
+                        settings.Properties.Items.Add("PDF (*.pdf)", 4);
+                    }).GetHtml()
+        </td>
+        <td>
+            @Html.DevExpress().Button(
+                    settings => {
+                        settings.Name = "btnExport";
+                        settings.Text = "Download";
+                        settings.UseSubmitBehavior = true;
+
+                    }
+                ).GetHtml()
+        </td>
+    </tr>
+</table>
