@@ -1,8 +1,0 @@
-﻿@model IEnumerable
-
-@using(Html.BeginForm("ExportTo", "Exporting")) {
-    <div class="OptionsBottomMargin">
-        @Html.Partial("ToolbarExport", CardViewExportDemoHelper.ExportFormatsInfo.Keys)
-    </div>
-    @Html.Partial("ExportPartial", Model)
-}

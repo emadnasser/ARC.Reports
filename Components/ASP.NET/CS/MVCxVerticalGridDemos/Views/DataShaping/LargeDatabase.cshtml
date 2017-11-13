@@ -1,6 +1,0 @@
-﻿@if(!DatabaseGenerator.IsReady("GeneratedEmailTable")) {
-    @Html.Partial("CreateDatabasePartial", "GeneratedEmailTable")
-} else {
-    @Html.Partial("PerformanceTestPartial")
-    @Html.Partial("LargeDatabasePartial")
-}

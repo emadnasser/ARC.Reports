@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Toolbars>
-  <Toolbar Text="Office 2003" Name="Toolbars/Office2003.ascx" NavigateUrl="Toolbars.aspx" />
-  <Toolbar Text="Office 2007" Name="Toolbars/Office2007.ascx" NavigateUrl="Toolbars.aspx?Name=Office2007" />
-  <Toolbar Text="Windows XP" Name="Toolbars/WindowsXP.ascx" NavigateUrl="Toolbars.aspx?Name=WindowsXP" />
-</Toolbars>

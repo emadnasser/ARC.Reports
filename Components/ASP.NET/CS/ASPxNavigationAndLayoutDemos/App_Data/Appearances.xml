@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Appearances>
-  <AppearanceGroup Component="CloudControl">
-    <Appearance Text="Demo" Name="Appearances/Demo.ascx" NavigateUrl="Appearance.aspx" />
-    <Appearance Text="Technology" Name="Appearances/Technology.ascx" NavigateUrl="Appearance.aspx?Name=Technology" />
-    <Appearance Text="Strict" Name="Appearances/Strict.ascx" NavigateUrl="Appearance.aspx?Name=Strict" />
-    <Appearance Text="Violet" Name="Appearances/Violet.ascx" NavigateUrl="Appearance.aspx?Name=Violet" />
-  </AppearanceGroup>
-</Appearances>

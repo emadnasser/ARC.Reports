@@ -1,8 +1,0 @@
-﻿@model ReportsDemoModel
-@Html.DevExpress().Ribbon(settings => {
-    settings.Name = "Ribbon";
-    settings.ShowFileTab = false;
-    settings.Width = 1100;
-    settings.Tabs.AddRange(DocumentViewerExtension.DefaultRibbonTabs);
-}).GetHtml()
-@Html.Partial("CustomToolbarViewerPartial")

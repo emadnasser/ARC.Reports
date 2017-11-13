@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application Logo="ExpressAppLogo">
-  <NavigationItems NavigationStyle="NavBar" RootGroupsStyle="OutlookAnimated"/>
-  <Options Skin="Office 2016 Colorful" UIType="SingleWindowSDI" FormStyle="Ribbon" />
-</Application>

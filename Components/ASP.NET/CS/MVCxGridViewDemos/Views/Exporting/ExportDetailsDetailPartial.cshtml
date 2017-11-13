@@ -1,6 +1,0 @@
-﻿@{
-    GridViewSettings settings = GridViewExportDemoHelper.CreateGeneralDetailGridSettings(ViewBag.CategoryID);
-    settings.CallbackRouteValues = new { Action = "ExportDetailsDetailPartial", Controller = "Exporting", CategoryID = ViewBag.CategoryID };
-}
-
-@Html.DevExpress().GridView(settings).Bind(Model).GetHtml()

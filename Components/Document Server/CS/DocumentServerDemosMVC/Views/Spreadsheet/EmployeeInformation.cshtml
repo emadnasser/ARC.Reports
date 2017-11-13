@@ -1,6 +1,0 @@
-﻿@model SpreadsheetEmployeeInformationModel
-
-@using (Html.BeginForm("EmployeeInformationExportTo", "Spreadsheet", FormMethod.Post)) {
-    @Html.Partial("SpreadsheetDocumentDownloaderPartial")
-    @Html.Partial("SpreadsheetPreviewPartial", Model.PreviewModel)    
-}

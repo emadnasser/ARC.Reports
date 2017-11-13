@@ -1,2 +1,0 @@
-DevExpress.Xpf.Layout.v{DXVersion}.Core
-DevExpress.Xpf.Docking.v{DXVersion}

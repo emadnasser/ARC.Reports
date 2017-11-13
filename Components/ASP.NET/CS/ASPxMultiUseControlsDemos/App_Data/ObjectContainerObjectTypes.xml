@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ObjectTypes>
-  <Type Text="Flash" Name="ObjectTypes/Flash.ascx" NavigateUrl="Types.aspx" />
-  <Type Text="Html5 Video" Name="ObjectTypes/Html5Video.ascx" NavigateUrl="Types.aspx?Name=Html5Video" />
-  <Type Text="Html5 Audio" Name="ObjectTypes/Html5Audio.ascx" NavigateUrl="Types.aspx?Name=Html5Audio" />
-</ObjectTypes>

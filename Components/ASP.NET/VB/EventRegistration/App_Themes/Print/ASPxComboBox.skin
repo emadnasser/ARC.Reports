@@ -1,5 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-<dx:ASPxComboBox runat="server" CssPostfix="Print" CssFilePath="~/App_Themes/Print/{0}/styles.css" SpriteCssFilePath="~/App_Themes/Print/{0}/sprite.css" Height="28px" ShowShadow="False">
-    <Paddings PaddingLeft="7px"></Paddings>
-</dx:ASPxComboBox>

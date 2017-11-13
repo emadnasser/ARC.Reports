@@ -1,6 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v16.2, Version=16.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
-<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v16.2, Version=16.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
-
-<dxe:ASPxButtonEdit runat="server" CssFilePath="{0}/styles.css" CssPostfix="ClinicalStudyTheme"
-	SpriteCssFilePath="{0}/sprite.css" Spacing="0">
-</dxe:ASPxButtonEdit>

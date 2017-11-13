@@ -1,6 +1,0 @@
-﻿@{
-    var settings = CardViewExportDemoHelper.ExportSelectedCardViewSettings;
-    settings.ClientSideEvents.Init = "function(s, e) { cardView.SelectAllCardsOnPage(); }";
-    settings.ClientSideEvents.SelectionChanged = "function(s, e) { ToolbarExportButtons.SetEnabled(cardView.GetSelectedCardCount() > 0); }";
-    Html.DevExpress().CardView(settings).Bind(Model).GetHtml();
-}

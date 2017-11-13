@@ -1,7 +1,0 @@
-﻿@model SpreadsheetShiftScheduleModel
-
-@using (Html.BeginForm("ShiftScheduleExportTo", "Spreadsheet", FormMethod.Post)) {
-    @Html.Partial("SpreadsheetDocumentDownloaderPartial")
-    <br />
-    @Html.Partial("SpreadsheetPreviewPartial", Model.PreviewModel)    
-}

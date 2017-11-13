@@ -1,9 +1,0 @@
-﻿@Html.DevExpress().Captcha(settings => {
-    settings.Name = "captcha";
-    settings.CallbackRouteValues = new { Controller = "Overview", Action = "CaptchaPartial" };
-    settings.CodeLength = 7;
-    settings.TextBox.Position = DevExpress.Web.Captcha.ControlPosition.Bottom;
-    settings.Styles.TextBox.Width = Unit.Pixel(163);
-    settings.ChallengeImage.Width = 163;
-    settings.ValidationSettings.ErrorText = "The code is incorrect";
-}).GetHtml()

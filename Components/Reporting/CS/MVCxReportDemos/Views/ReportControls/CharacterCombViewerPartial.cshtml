@@ -1,8 +1,0 @@
-﻿@model ReportsDemoModel
-@Html.DevExpress().DocumentViewer(
-    settings => {
-        settings.Name = "DocumentViewer";
-        settings.Report = Model.Report;
-        settings.CallbackRouteValues = new { Controller = "ReportControls", Action = "CharacterCombViewerPartial", ReportID = Model.ReportID };
-        settings.ExportRouteValues = new { Controller = "ReportControls", Action = "DocumentViewerExportTo", ReportID = Model.ReportID };
-    }).GetHtml()

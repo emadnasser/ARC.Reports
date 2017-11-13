@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<MenuItems>
-  <RootItem Text="Back" ImageUrl="~/Menu/Images/Toolbars/WindowsXP/ButtonBack.png" />
-  <RootItem Text="Forward" ImageUrl="~/Menu/Images/Toolbars/WindowsXP/ButtonForward.png" />
-  <RootItem Text="Save" ImageUrl="~/Menu/Images/Toolbars/WindowsXP/ButtonSave.png" BeginGroup="True" />
-  <RootItem Text="Refresh" ImageUrl="~/Menu/Images/Toolbars/WindowsXP/ButtonRefresh.png" BeginGroup="True" />
-  <RootItem Text="Home" ImageUrl="~/Menu/Images/Toolbars/WindowsXP/ButtonHome.png" />
-  <RootItem Text="Search" ImageUrl="~/Menu/Images/Toolbars/WindowsXP/ButtonSearch.png" />
-</MenuItems>

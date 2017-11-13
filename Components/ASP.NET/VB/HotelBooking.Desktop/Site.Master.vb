@@ -1,6 +1,0 @@
-﻿Imports System
-
-Partial Public Class Site
-    Inherits System.Web.UI.MasterPage
-
-End Class

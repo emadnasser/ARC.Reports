@@ -1,2 +1,0 @@
-DevExpress.Xpf.Carousel.v{DXVersion}
-DevExpress.Xpf.NavBar.v{DXVersion}

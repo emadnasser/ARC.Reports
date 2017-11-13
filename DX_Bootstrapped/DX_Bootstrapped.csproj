@@ -1799,6 +1799,8 @@
     <Content Include="Views\Pages\Search.cshtml" />
     <Content Include="Views\Pages\SearchGridViewPartial.cshtml" />
     <Content Include="Views\Pages\MarketShareDetails.cshtml" />
+    <Content Include="Views\Pages\Login.cshtml" />
+    <Content Include="Views\Pages\Users.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1811,6 +1813,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EmadController.cs" />
+    <Compile Include="Controllers\PagesController.Users.cs" />
+    <Compile Include="Controllers\PagesController.Login.cs" />
     <Compile Include="Controllers\PagesController.MarketShareDetails.cs" />
     <Compile Include="Controllers\PagesController.BlogPosts.cs" />
     <Compile Include="Controllers\PagesController.Contacts.cs" />
