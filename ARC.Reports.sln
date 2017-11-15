@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_DAL", "EF_DAL\EF_DAL.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARC.ControlPanel", "ARC.ControlPanel\ARC.ControlPanel.csproj", "{1FF50FF7-6174-48F4-B748-D396B25E505A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{668CAA5D-E73E-4130-B8C6-0EBDC0E1CEA7}"
+	ProjectSection(SolutionItems) = preProject
+		tsconfig.json = tsconfig.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
