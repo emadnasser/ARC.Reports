@@ -1,4 +1,5 @@
-﻿
+﻿@model ARC.ControlPanel.Models.User
+
 @{
     ViewBag.Title = "Index";
 }
@@ -21,12 +22,39 @@
         @Html.TextBox("txtName", "", new { @placeholder = "Name", @class = "input-small", @style = "width: 250px;" })
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <input type="submit" value="Seacrh" class="btn btn-purple btn-sm" />
-        @Html.("txtId", "", new { @placeholder = "ID", @class = "input-small", @style = "width: 250px;" })
-
-        <input type="button" value="Go Somewhere Else" onclick="location.href='<%: Url.Action(" Action", "Controller" ) %>'" />
-
+        <input type="submit" id="addressSearch" value="Seacrh" onclick="location.href='@Url.Action("Index", "UsersController")'" class="btn btn-purple btn-sm" />
     </div>
 </div>
 <div class="hr hr-18 dotted hr-double"></div>
+<div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayFor(model => model.UserId)
+            </dt>
 
+            <dt>
+                @Html.DisplayFor(model => model.FirstName)
+            </dt>
+            <dt>
+                @Html.DisplayFor(model => model.LastName)
+            </dt>
+            <dt>
+                @Html.DisplayFor(model => model.Email)
+            </dt>
+            <dt>
+                @Html.DisplayFor(model => model.Phone)
+            </dt>
+            <dt>
+                @Html.DisplayFor(model => model.Mobile)
+            </dt>
+            <dt>
+                @Html.DisplayFor(model => model.Department)
+            </dt>
+            <dt>
+                @Html.DisplayFor(model => model.JobTitle)
+            </dt>
+
+        </dl>
+    </div>
+</div>
