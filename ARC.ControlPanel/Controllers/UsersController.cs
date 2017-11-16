@@ -6,14 +6,16 @@ using System.DirectoryServices.AccountManagement;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace ARC.ControlPanel.Controllers
 {
     public class UsersController : Controller
     {
-        // GET: Users
         public ActionResult Index()
         {
+            IsExist();
+
             User user = new User();
 
             try
@@ -53,6 +55,28 @@ namespace ARC.ControlPanel.Controllers
 
                         if (directoryEntry.Properties["title"].Value != null)
                             user.JobTitle = directoryEntry.Properties["title"].Value.ToString();
+
+                        //var xxx = Membership.ApplicationName;
+
+                        //Membership.
+
+                        //foreach (var u in dataList)
+                        //{
+                        //    if (Membership.GetUser("ARBANK\\" + u.S) != null)
+                        //    {
+                        //        var roles = Roles.GetRolesForUser("ARBANK\\" + u.S);
+                        //        foreach (var r in roles)
+                        //        {
+                        //            u.R += r + ", ";
+                        //        }
+
+                        //        if (u.R != null)
+                        //            u.R = u.R.Remove(u.R.Length - 2);
+                        //    }
+                        //}
+
+
+
                     }
                 }
             }
@@ -63,75 +87,23 @@ namespace ARC.ControlPanel.Controllers
             return View(user);
         }
 
-        // GET: Users/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Users/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Users/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        private void IsExist()
         {
             try
             {
-                // TODO: Add insert logic here
+                if (Request.LogonUserIdentity?.User != null)
+                {
+                    string id = Request.LogonUserIdentity.Name.Trim();
 
-                return RedirectToAction("Index");
+                    if (Membership.GetUser(id) == null || !Roles.GetRolesForUser(id).Contains("Admins"))
+                    {
+                        Server.Transfer("~/Public/Unauthorized.aspx");
+                        RedirectToAction("Index", "dfds");
+                    }
+                }
             }
             catch
             {
-                return View();
-            }
-        }
-
-        // GET: Users/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Users/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Users/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Users/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
             }
         }
     }

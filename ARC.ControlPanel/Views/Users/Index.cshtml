@@ -12,7 +12,7 @@
 <div class="alert alert-info" runat="server">
     Please search on the user and select link.
     <br />
-</div>  
+</div>
 <div class="hr hr-18 dotted hr-double" runat="server"></div>
 <div class="row">
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -27,34 +27,63 @@
 </div>
 <div class="hr hr-18 dotted hr-double"></div>
 <div class="row">
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayFor(model => model.UserId)
-            </dt>
+    <div class="col-xs-12 col-sm-12 widget-container-col">
+        <div class="widget-box widget-color-default">
+            <div class="widget-body">
+                <div class="widget-main no-padding">
+                    <table class="table table-striped table-bordered">
+                        <thead class="thin-border-bottom">
+                            <tr>
+                                <th>
+                                    <i class="ace-icon fa fa-info-circle"></i>
+                                    ID
+                                </th>
+                                <th>
+                                    <i class="ace-icon fa fa-user"></i>
+                                    Name
+                                </th>
+                                <th>
+                                    <i class="ace-icon fa fa-contao"></i>
+                                    Contacts
+                                </th>
+                                <th>
+                                    <i class="ace-icon fa fa-info-circle"></i>
+                                    Info
+                                </th>
+                                <th>
+                                    <i>@@</i>
+                                    Roles
+                                </th>
+                                <th class="hidden-480">Status</th>
+                            </tr>
+                        </thead>
 
-            <dt>
-                @Html.DisplayFor(model => model.FirstName)
-            </dt>
-            <dt>
-                @Html.DisplayFor(model => model.LastName)
-            </dt>
-            <dt>
-                @Html.DisplayFor(model => model.Email)
-            </dt>
-            <dt>
-                @Html.DisplayFor(model => model.Phone)
-            </dt>
-            <dt>
-                @Html.DisplayFor(model => model.Mobile)
-            </dt>
-            <dt>
-                @Html.DisplayFor(model => model.Department)
-            </dt>
-            <dt>
-                @Html.DisplayFor(model => model.JobTitle)
-            </dt>
-
-        </dl>
+                        <tbody>
+                            <tr>
+                                <td class="">
+                                    @Html.DisplayFor(model => model.UserId)
+                                </td>
+                                <td class="">
+                                    @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)
+                                </td>
+                                <td>
+                                    <a href="#">Email: @Html.DisplayFor(model => model.Email)</a><br />
+                                    Ext: @Html.DisplayFor(model => model.Phone)<br />
+                                    Mobile: @Html.DisplayFor(model => model.Mobile)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.Department)
+                                    @Html.DisplayFor(model => model.JobTitle)
+                                </td>
+                                <td></td>
+                                <td class="hidden-480">
+                                    <span class="label label-warning">Pending</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
