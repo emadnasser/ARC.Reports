@@ -45,6 +45,7 @@
     <Compile Include="Common\ConnectionTypes.cs" />
     <Compile Include="Common\GetConniction.cs" />
     <Compile Include="Common\Helper.cs" />
+    <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\BrokerageMetricsMonthly.cs" />
     <Compile Include="Entities\BrokerageMetricsYearly.cs" />
     <Compile Include="Entities\MarketShareTotal_D_Totals.cs" />

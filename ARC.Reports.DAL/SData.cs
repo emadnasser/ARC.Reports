@@ -736,6 +736,23 @@ namespace ARC.Reports.DAL
             return null;
         }
 
+        public static List<Account> AccountGet(string userName)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+            parameters[0] = new SqlParameter("@userName", userName);
+
+            var x = Helper.ExecStoredProcedure("[dbo].[AccountGet]", parameters);
+
+            if (x != null)
+                return (from DataRow dataTableObjRow in x.Rows
+                        select new Account
+                        {
+                            UserName = dataTableObjRow["UserName"].ToString(),
+                            Name = dataTableObjRow["Name"].ToString(),
+                        }).ToList();
+            return null;
+        }
+
         //public static List<Rep_001> Rep_emad(int pMarketType)
         //{
         //    SqlParameter[] parameters = new SqlParameter[1];

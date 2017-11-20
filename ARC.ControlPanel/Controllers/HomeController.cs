@@ -1,8 +1,11 @@
-﻿using System;
+﻿using ARC.ControlPanel.Models;
+using ARC.Reports.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace ARC.ControlPanel.Controllers
 {
@@ -10,21 +13,32 @@ namespace ARC.ControlPanel.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
+            //try
+            //{
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+            var adminUser = Membership.GetUser();
 
-            return View();
-        }
+            if (adminUser != null || !Roles.GetRolesForUser(adminUser.UserName).Contains("Admins"))
+            {
+                TipContext reportContext = new TipContext();
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+                Account account = reportContext.Accounts.Single(x => x.UserName == adminUser.UserName);
 
-            return View();
+                ViewData["UserName"] = account.FirstName + " " + account.LastName;
+
+                return View();
+
+
+                //}
+                //catch
+                //{
+                //}
+            }
+            else
+            {
+                //Server.Transfer("~/Public/Unauthorized.aspx");
+                return View("Emad");
+            }
         }
     }
 }

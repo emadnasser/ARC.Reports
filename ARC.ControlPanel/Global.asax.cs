@@ -20,6 +20,7 @@ namespace ARC.ControlPanel
 
 
             Database.SetInitializer<Models.EmployeeContext>(null);
+            Database.SetInitializer<Models.TipContext>(null);
 
         }
     }

@@ -12,17 +12,24 @@ namespace ARC.ControlPanel.Controllers
 {
     public class UsersController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(int appId)
         {
-            IsExist();
+            //IsExist();
 
             User user = new User();
+            string txtId = "";
+
+            //string strName = form["txtName"].ToString();
+
+            if (Request["txtId"] != null)
+                txtId = Request["txtId"].ToString().Trim();
+            else
+                return View();
 
             try
             {
                 using (PrincipalContext principalContext = new PrincipalContext(ContextType.Domain, "alrajhi.bank", "0100589", "uVZd0456"))
                 {
-                    string txtId = Request["txtId"].ToString().Trim();
                     //string txtName = Request["txtName"].ToString();
 
                     UserPrincipal _userPrincipal = UserPrincipal.FindByIdentity(principalContext, "0100589");
@@ -60,23 +67,17 @@ namespace ARC.ControlPanel.Controllers
 
                         //Membership.
 
-                        //foreach (var u in dataList)
-                        //{
-                        //    if (Membership.GetUser("ARBANK\\" + u.S) != null)
-                        //    {
-                        //        var roles = Roles.GetRolesForUser("ARBANK\\" + u.S);
-                        //        foreach (var r in roles)
-                        //        {
-                        //            u.R += r + ", ";
-                        //        }
+                        if (Membership.GetUser(user.UserId) != null)
+                        {
+                            var roles = Roles.GetRolesForUser(user.UserId);
+                            foreach (var r in roles)
+                            {
+                                user.Roles += r + ", ";
+                            }
 
-                        //        if (u.R != null)
-                        //            u.R = u.R.Remove(u.R.Length - 2);
-                        //    }
-                        //}
-
-
-
+                            if (user.Roles != null)
+                                user.Roles = user.Roles.Remove(user.Roles.Length - 2);
+                        }
                     }
                 }
             }
@@ -84,7 +85,7 @@ namespace ARC.ControlPanel.Controllers
             {
             }
 
-            return View(user);
+            return View("Users/Index", user);
         }
 
         private void IsExist()
@@ -106,5 +107,7 @@ namespace ARC.ControlPanel.Controllers
             {
             }
         }
+
+        //public ActionResult Seacrh(FormCollection form)
     }
 }

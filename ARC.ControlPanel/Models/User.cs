@@ -15,5 +15,6 @@ namespace ARC.ControlPanel.Models
         public string Mobile { get; set; }
         public string Department { get; set; }
         public string JobTitle { get; set; }
+        public string Roles { get; set; }
     }
 }
