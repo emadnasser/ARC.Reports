@@ -655,7 +655,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Emad\Index.cshtml" />
     <Content Include="Views\Employee\Details.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Get.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,31 +13,33 @@ namespace ARC.ControlPanel.Controllers
     {
         public ActionResult Index()
         {
-            //try
-            //{
+            GetUserInfo();
 
-            var adminUser = Membership.GetUser();
+            return View();
+        }
 
-            if (adminUser != null || !Roles.GetRolesForUser(adminUser.UserName).Contains("Admins"))
+        private void GetUserInfo()
+        {
+            try
             {
-                TipContext reportContext = new TipContext();
+                var adminUser = Membership.GetUser();
 
-                Account account = reportContext.Accounts.Single(x => x.UserName == adminUser.UserName);
+                if (adminUser != null || !Roles.GetRolesForUser(adminUser.UserName).Contains("Admins"))
+                {
+                    TipContext reportContext = new TipContext();
 
-                ViewData["UserName"] = account.FirstName + " " + account.LastName;
+                    Account account = reportContext.Accounts.Single(x => x.UserName == adminUser.UserName);
 
-                return View();
-
-
-                //}
-                //catch
-                //{
-                //}
+                    ViewData["UserName"] = account.FirstName + " " + account.LastName;
+                }
+                else
+                {
+                    //Server.Transfer("~/Public/Unauthorized.aspx");
+                    //return View("Emad");
+                }
             }
-            else
+            catch
             {
-                //Server.Transfer("~/Public/Unauthorized.aspx");
-                return View("Emad");
             }
         }
     }
