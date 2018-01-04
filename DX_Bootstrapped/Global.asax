@@ -1,1 +1,0 @@
-<%@ Application Codebehind="Global.asax.cs" Inherits="DX_Bootstrapped.MvcApplication" Language="C#" %>
