@@ -1,4 +1,6 @@
-﻿using DevExpress.Web;
+﻿using ARC.Reports.Classes.Enums;
+using ARC.Reports.DataModel;
+using DevExpress.Web;
 using DevExpress.XtraPrinting;
 using System;
 using System.Linq;
@@ -12,15 +14,17 @@ namespace ARC.Reports.Pages
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-            string id = Request.LogonUserIdentity.Name.Trim();
+            IsAutorized();
 
-            if (!Roles.GetRolesForUser(id).Contains("R_001"))
-            {
-                if (!Roles.GetRolesForUser(id).Contains("Admins"))
-                {
-                    Server.Transfer("~/Public/Unauthorized.aspx");
-                }
-            }
+            //string id = Request.LogonUserIdentity.Name.Trim();
+
+            //if (!Roles.GetRolesForUser(id).Contains("R_001"))
+            //{
+            //    if (!Roles.GetRolesForUser(id).Contains("Admins"))
+            //    {
+            //        Server.Transfer("~/Public/Unauthorized.aspx");
+            //    }
+            //}
 
             if (!Page.IsPostBack)
             {
@@ -182,5 +186,26 @@ namespace ARC.Reports.Pages
             {
             }
         }
+
+        private void IsAutorized()
+        {
+            var myUser = DataAccess.GetUser(User.Identity.Name);
+
+            if (myUser != null)
+            {
+                if (!myUser.Roles.Any(x => x.RoleName == RoleType.R_001.ToString()))
+                {
+                    if (!myUser.Roles.Any(x => x.RoleName == RoleType.ReportsAdmins.ToString()))
+                    {
+                        Server.Transfer("~/Public/Unauthorized.aspx");
+                    }
+                }
+            }
+            else
+            {
+                Server.Transfer("~/Public/Unauthorized.aspx");
+            }
+        }
+
     }
 }

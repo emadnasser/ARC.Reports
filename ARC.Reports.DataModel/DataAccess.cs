@@ -16,7 +16,8 @@ namespace ARC.Reports.DataModel
             using (var context = new Context())
             {
                 //context.Database.Log = message => Debug.WriteLine(message);
-                return context.Users.AsNoTracking().Include(x => x.Roles).FirstOrDefault(x => x.UserName == userName);
+                var ret = context.Users.AsNoTracking().Include(x => x.Roles).FirstOrDefault(x => x.UserName == userName);
+                return ret;
             }
         }
 

@@ -67,6 +67,12 @@
     <Reference Include="DevExpress.XtraGauges.v16.2.Core, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v16.2.Web, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -809,9 +815,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ARC.Reports.Classes\ARC.Reports.Classes.csproj">
+      <Project>{A7B6554A-7B37-4C6B-A3DB-A26059FB5F99}</Project>
+      <Name>ARC.Reports.Classes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ARC.Reports.DAL\ARC.Reports.DAL.csproj">
       <Project>{07d807a8-fcb1-4f9e-b7a9-d28ec0a7df3d}</Project>
       <Name>ARC.Reports.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ARC.Reports.DataModel\ARC.Reports.DataModel.csproj">
+      <Project>{dbe39fb6-a997-4929-90d7-ebd93227b135}</Project>
+      <Name>ARC.Reports.DataModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

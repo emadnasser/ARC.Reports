@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using ARC.Reports.Classes.Enums;
+using ARC.Reports.DataModel;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Web;
 using System;
 using System.Collections.Generic;
@@ -14,15 +16,17 @@ namespace ARC.Reports.Pages
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-            string id = Request.LogonUserIdentity.Name.Trim();
+            IsAutorized();
 
-            if (!Roles.GetRolesForUser(id).Contains("SummaryCommission"))
-            {
-                if (!Roles.GetRolesForUser(id).Contains("Admins"))
-                {
-                    Server.Transfer("~/Public/Unauthorized.aspx");
-                }
-            }
+            //string id = Request.LogonUserIdentity.Name.Trim();
+
+            //if (!Roles.GetRolesForUser(id).Contains("SummaryCommission"))
+            //{
+            //    if (!Roles.GetRolesForUser(id).Contains("Admins"))
+            //    {
+            //        Server.Transfer("~/Public/Unauthorized.aspx");
+            //    }
+            //}
         }
 
         protected void Page_Load(object sender, System.EventArgs e)
@@ -32,6 +36,26 @@ namespace ARC.Reports.Pages
             ////report.AfterPrint += report_AfterPrint;
             //report.CreateDocument(true);
             //ASPxDocumentViewer.Report = report;
+        }
+
+        private void IsAutorized()
+        {
+            var myUser = DataAccess.GetUser(User.Identity.Name);
+
+            if (myUser != null)
+            {
+                if (!myUser.Roles.Any(x => x.RoleName == RoleType.SummaryCommission.ToString()))
+                {
+                    if (!myUser.Roles.Any(x => x.RoleName == RoleType.ReportsAdmins.ToString()))
+                    {
+                        Server.Transfer("~/Public/Unauthorized.aspx");
+                    }
+                }
+            }
+            else
+            {
+                Server.Transfer("~/Public/Unauthorized.aspx");
+            }
         }
     }
 }

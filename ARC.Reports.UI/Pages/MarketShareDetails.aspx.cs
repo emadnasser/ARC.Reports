@@ -8,6 +8,8 @@ using DevExpress.XtraPrinting;
 using DevExpress.XtraPrintingLinks;
 using DevExpress.Export;
 using System.Drawing;
+using ARC.Reports.DataModel;
+using ARC.Reports.Classes.Enums;
 
 namespace ARC.Reports.Pages
 {
@@ -15,15 +17,17 @@ namespace ARC.Reports.Pages
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-            string id = Request.LogonUserIdentity.Name.Trim();
+            IsAutorized();
 
-            if (!Roles.GetRolesForUser(id).Contains("R_002"))
-            {
-                if (!Roles.GetRolesForUser(id).Contains("Admins"))
-                {
-                    Server.Transfer("~/Public/Unauthorized.aspx");
-                }
-            }
+            //string id = Request.LogonUserIdentity.Name.Trim();
+
+            //if (!Roles.GetRolesForUser(id).Contains("R_002"))
+            //{
+            //    if (!Roles.GetRolesForUser(id).Contains("Admins"))
+            //    {
+            //        Server.Transfer("~/Public/Unauthorized.aspx");
+            //    }
+            //}
 
             if (!Page.IsPostBack)
             {
@@ -139,6 +143,26 @@ namespace ARC.Reports.Pages
         {
             GetData();
             gridExport_1.WriteXlsxToResponse(new XlsxExportOptionsEx { ExportType = ExportType.WYSIWYG });
+        }
+
+        private void IsAutorized()
+        {
+            var myUser = DataAccess.GetUser(User.Identity.Name);
+
+            if (myUser != null)
+            {
+                if (!myUser.Roles.Any(x => x.RoleName == RoleType.R_002.ToString()))
+                {
+                    if (!myUser.Roles.Any(x => x.RoleName == RoleType.ReportsAdmins.ToString()))
+                    {
+                        Server.Transfer("~/Public/Unauthorized.aspx");
+                    }
+                }
+            }
+            else
+            {
+                Server.Transfer("~/Public/Unauthorized.aspx");
+            }
         }
 
         //void WriteToResponse(string fileName, bool saveAsFile, string fileFormat, MemoryStream stream)
