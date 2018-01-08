@@ -184,15 +184,15 @@ namespace ARC.Reports.Controls
 
                 //if (ASPxGridView6.Columns.Count >= 12)
                 //{
-                var month = DateTime.Now.Month + 1;
+                //var month = DateTime.Now.Month + 1;
 
                 //for (int i = month; i < 13; i++)
                 //{
                 //    ASPxGridView6.Columns.RemoveAt(month);
                 //}
 
-                if (month > 9)
-                    ASPxGridView6.Settings.HorizontalScrollBarMode = ScrollBarMode.Visible;
+                //if (month > 9)
+                ASPxGridView6.Settings.HorizontalScrollBarMode = ScrollBarMode.Visible;
                 //}
             }
             catch
