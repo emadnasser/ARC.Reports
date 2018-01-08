@@ -753,6 +753,39 @@ namespace ARC.Reports.DAL
             return null;
         }
 
+        public static List<int> GetYears(int @pMarketType)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            if (pMarketType == 0)
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SAM");
+            }
+            else
+            {
+                parameters[0] = new SqlParameter("@pMarketType", "SEM");
+            }
+
+            DataTable myDataTable;
+            myDataTable = Helper.ExecuteReader("SELECT" +
+                                                " DISTINCT [Year] FROM[ARC_Reports].[dbo].[Rep_0012] WHERE [MarketType] = 'SAM'" +
+                                                " ORDER BY[Year] DESC", parameters);
+
+            List<int> lst = new List<int>();
+
+            if (myDataTable != null)
+            {
+                foreach (DataRow item in myDataTable.Rows)
+                {
+                    lst.Add((int)item[0]);
+                }
+
+                return lst;
+            }
+
+            return null;
+        }
+        
         //public static List<Rep_001> Rep_emad(int pMarketType)
         //{
         //    SqlParameter[] parameters = new SqlParameter[1];

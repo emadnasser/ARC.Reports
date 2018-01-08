@@ -3,6 +3,7 @@ using ARC.Reports.DataModel;
 using DevExpress.Web;
 using DevExpress.XtraPrinting;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Security;
 using System.Web.UI;
@@ -30,6 +31,24 @@ namespace ARC.Reports.Pages
             {
                 ASPxDateEdit dateEdit = ASPxPageControl1.FindControl("dateEdit") as ASPxDateEdit;
                 dateEdit.Date = DateTime.Today;
+
+                int marketType = 0;
+
+                if (Session["ActiveTabIndex"] == null)
+                    Session["ActiveTabIndex"] = 0;
+                else
+                    marketType = (int)Session["ActiveTabIndex"];
+
+                ASPxComboBox cbxYears = ASPxPageControl1.FindControl("cbxYears") as ASPxComboBox;
+
+                var cbxYearsData = DAL.SData.GetYears(marketType);
+
+                foreach (var i in cbxYearsData)
+                {
+                    cbxYears.Items.Add(new ListEditItem() { Text = i.ToString(), Value = i });
+                }
+
+                cbxYears.SelectedIndex = 0;
             }
         }
 
@@ -43,10 +62,10 @@ namespace ARC.Reports.Pages
         {
             try
             {
-                //if (Session["ActiveTabIndex"] != null)
-                //    ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
-                //else
-                //    Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
+                if (Session["ActiveTabIndex"] != null)
+                    ASPxPageControl1.ActiveTabIndex = (int)Session["ActiveTabIndex"];
+                else
+                    Session["ActiveTabIndex"] = ASPxPageControl1.ActiveTabIndex;
 
                 GetData();
             }
@@ -65,12 +84,18 @@ namespace ARC.Reports.Pages
             GetData();
         }
 
+        protected void cbxYears_ValueChanged(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
         private void GetData()
         {
             try
             {
                 ASPxDateEdit dateEdit = ASPxPageControl1.FindControl("dateEdit") as ASPxDateEdit;
                 ASPxComboBox myOption = ASPxPageControl1.FindControl("myOption") as ASPxComboBox;
+                ASPxComboBox cbxYears = ASPxPageControl1.FindControl("cbxYears") as ASPxComboBox;
                 Label lblDate = ASPxPageControl1.FindControl("lblDate") as Label;
 
                 if (myOption.SelectedIndex == 0)
@@ -92,7 +117,8 @@ namespace ARC.Reports.Pages
                     MarketShareTotal_3Y1.OFF();
 
                     dateEdit.Visible = true;
-                    lblDate.Visible = true;
+                    cbxYears.Visible = false;
+                    lblDate.Text = "Date";
                     MarketShareTotal_1M.Visible = false;
                     MarketShareTotal_1M1.Visible = false;
                     MarketShareTotal_2Q.Visible = false;
@@ -104,6 +130,9 @@ namespace ARC.Reports.Pages
                 {
                     MarketShareTotal_1M.Date = dateEdit.Date.ToShortDateString();
                     MarketShareTotal_1M1.Date = dateEdit.Date.ToShortDateString();
+                    MarketShareTotal_1M.Year = Convert.ToInt32(cbxYears.SelectedItem.Text);
+                    MarketShareTotal_1M1.Year = Convert.ToInt32(cbxYears.SelectedItem.Text);
+
                     MarketShareTotal_1M.MarketType = 0;
                     MarketShareTotal_1M1.MarketType = 1;
 
@@ -119,7 +148,8 @@ namespace ARC.Reports.Pages
                     MarketShareTotal_1M.Visible = true;
                     MarketShareTotal_1M1.Visible = true;
                     dateEdit.Visible = false;
-                    lblDate.Visible = false;
+                    cbxYears.Visible = true;
+                    lblDate.Text = "Year";
                     MarketShareTotal_0D.Visible = false;
                     MarketShareTotal_0D1.Visible = false;
                     MarketShareTotal_2Q.Visible = false;
@@ -131,6 +161,9 @@ namespace ARC.Reports.Pages
                 {
                     MarketShareTotal_2Q.Date = dateEdit.Date.ToShortDateString();
                     MarketShareTotal_2Q1.Date = dateEdit.Date.ToShortDateString();
+                    MarketShareTotal_2Q.Year = Convert.ToInt32(cbxYears.SelectedItem.Text);
+                    MarketShareTotal_2Q1.Year = Convert.ToInt32(cbxYears.SelectedItem.Text);
+
                     MarketShareTotal_2Q.MarketType = 0;
                     MarketShareTotal_2Q1.MarketType = 1;
                     MarketShareTotal_2Q.Visible = true;
@@ -146,7 +179,8 @@ namespace ARC.Reports.Pages
                     MarketShareTotal_3Y1.OFF();
 
                     dateEdit.Visible = false;
-                    lblDate.Visible = false;
+                    cbxYears.Visible = true;
+                    lblDate.Text = "Year";
                     MarketShareTotal_0D.Visible = false;
                     MarketShareTotal_0D1.Visible = false;
                     MarketShareTotal_1M.Visible = false;
@@ -173,6 +207,7 @@ namespace ARC.Reports.Pages
                     MarketShareTotal_3Y1.ON();
 
                     dateEdit.Visible = false;
+                    cbxYears.Visible = false;
                     lblDate.Visible = false;
                     MarketShareTotal_0D.Visible = false;
                     MarketShareTotal_0D1.Visible = false;

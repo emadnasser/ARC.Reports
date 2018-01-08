@@ -14,7 +14,8 @@
             padding-top: 3px;
         }
 
-        #MainContent_ASPxPageControl1_TPTCL_dateEdit_0 {
+        #MainContent_ASPxPageControl1_TPTCL_dateEdit_0,
+        #MainContent_ASPxPageControl1_TPTCL_cbxYears_0 {
             float: right;
             margin-right: 40px
         }
@@ -98,6 +99,8 @@
                 </TabPages>
                 <SpaceAfterTabsTemplate>
                     <dx:ASPxDateEdit ID="dateEdit" runat="server" UseMaskBehavior="True" EnableTheming="True" Theme="DevEx" AutoPostBack="True" OnValueChanged="dateEdit_ValueChanged" CalendarProperties-ShowClearButton="false" CalendarProperties-ShowWeekNumbers="false" CalendarProperties-FirstDayOfWeek="Sunday" />
+                    <dx:ASPxComboBox ID="cbxYears" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True"  OnValueChanged="cbxYears_ValueChanged">
+                    </dx:ASPxComboBox>
                     <asp:Label ID="lblDate" runat="server" Text="Date:"></asp:Label>
                     <dx:ASPxComboBox ID="myOption" runat="server" EnableTheming="True" SelectedIndex="0" Theme="DevEx" AutoPostBack="True" OnValueChanged="myOption_ValueChanged">
                         <Items>
