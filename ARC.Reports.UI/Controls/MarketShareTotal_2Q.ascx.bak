@@ -1,20 +1,20 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MarketShareTotal_3Y.ascx.cs" Inherits="ARC.Reports.Controls.MarketShareTotal_3Y" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MarketShareTotal_2Q.ascx.cs" Inherits="ARC.Reports.Controls.MarketShareTotal_2Q" %>
 
-<%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v16.2, Version=16.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <div class="row">
     <div class="col-xs-6 col-sm-4 col-md-12 col-lg-12">
-        <dx:ASPxGridView ID="ASPxGridView8" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="False" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Id" Settings-ShowFooter="true">
+        <dx:ASPxGridView ID="ASPxGridView6" Width="100%" runat="server" Theme="DevEx" AutoGenerateColumns="false" OnCustomCallback="ASPxGridViews_CustomCallback" KeyFieldName="Channel" Settings-ShowFooter="true" OnCustomSummaryCalculate="ASPxGridView6_CustomSummaryCalculate">
             <Columns>
-                <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left" SortOrder="Ascending">
+                <dx:GridViewDataTextColumn FieldName="Channel" VisibleIndex="0" Caption="Channel" FixedStyle="Left">
                     <HeaderStyle HorizontalAlign="Center" />
                     <HeaderStyle HorizontalAlign="Center" Cursor="default" />
                     <CellStyle HorizontalAlign="Center" />
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewBandColumn Name="_1" HeaderStyle-HorizontalAlign="Center">
+                <dx:GridViewBandColumn Name="_1" Caption="Jan" HeaderStyle-HorizontalAlign="Center">
                     <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                     <Columns>
-                        <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares">
+                        <dx:GridViewDataTextColumn FieldName="MarketShare_1" VisibleIndex="1" Caption="Shares" UnboundType="String">
                             <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
                             <HeaderStyle HorizontalAlign="Center" />
                             <HeaderStyle HorizontalAlign="Center" Cursor="default" />
@@ -30,7 +30,7 @@
                         </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
-                <dx:GridViewBandColumn Name="_2" HeaderStyle-HorizontalAlign="Center">
+                <dx:GridViewBandColumn Name="_2" Caption="Feb" HeaderStyle-HorizontalAlign="Center">
                     <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="MarketShare_2" VisibleIndex="3" Caption="Shares">
@@ -49,7 +49,7 @@
                         </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
-                <dx:GridViewBandColumn Name="_3" HeaderStyle-HorizontalAlign="Center">
+                <dx:GridViewBandColumn Name="_3" Caption="Mar" HeaderStyle-HorizontalAlign="Center">
                     <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="MarketShare_3" VisibleIndex="5" Caption="Shares">
@@ -68,15 +68,36 @@
                         </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
+                <dx:GridViewBandColumn Name="_4" Caption="Apr" HeaderStyle-HorizontalAlign="Center">
+                    <HeaderStyle HorizontalAlign="Center" Cursor="default"></HeaderStyle>
+                    <Columns>
+                        <dx:GridViewDataTextColumn FieldName="MarketShare_4" VisibleIndex="7" Caption="Shares">
+                            <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                            <CellStyle HorizontalAlign="Center" BackColor="#D7DCEA" />
+                            <FooterCellStyle BackColor="#D7DCEA">
+                            </FooterCellStyle>
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="MarketTrades_4" VisibleIndex="8" Caption="Trades">
+                            <PropertiesTextEdit DisplayFormatString="{0}%"></PropertiesTextEdit>
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <HeaderStyle HorizontalAlign="Center" Cursor="default" />
+                            <CellStyle HorizontalAlign="Center" />
+                        </dx:GridViewDataTextColumn>
+                    </Columns>
+                </dx:GridViewBandColumn>
             </Columns>
             <TotalSummary>
                 <dx:ASPxSummaryItem FieldName="Channel" SummaryType="Sum" DisplayFormat="Average{0}" ShowInColumn="Channel" />
-                <dx:ASPxSummaryItem FieldName="MarketShare_1" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_1" />
-                <dx:ASPxSummaryItem FieldName="MarketTrades_1" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_1" />
-                <dx:ASPxSummaryItem FieldName="MarketShare_2" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_2" />
-                <dx:ASPxSummaryItem FieldName="MarketTrades_2" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_2" />
-                <dx:ASPxSummaryItem FieldName="MarketShare_3" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketShare_3" />
-                <dx:ASPxSummaryItem FieldName="MarketTrades_3" SummaryType="Sum" DisplayFormat="{0}%" ShowInColumn="MarketTrades_3" />
+                <dx:ASPxSummaryItem FieldName="Sm_s1" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_1" />
+                <dx:ASPxSummaryItem FieldName="Sm_t1" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_1" />
+                <dx:ASPxSummaryItem FieldName="Sm_s2" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_2" />
+                <dx:ASPxSummaryItem FieldName="Sm_t2" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_2" />
+                <dx:ASPxSummaryItem FieldName="Sm_s3" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_3" />
+                <dx:ASPxSummaryItem FieldName="Sm_t3" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_3" />
+                <dx:ASPxSummaryItem FieldName="Sm_s4" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketShare_4" />
+                <dx:ASPxSummaryItem FieldName="Sm_t4" SummaryType="Custom" DisplayFormat="{0}%" ShowInColumn="MarketTrades_4" />
             </TotalSummary>
             <Styles>
                 <Footer HorizontalAlign="Center" VerticalAlign="Middle">
@@ -84,19 +105,20 @@
                 <FixedColumn BackColor="#f5f7fa"></FixedColumn>
             </Styles>
             <SettingsPager Mode="ShowAllRecords" />
+
             <Settings ShowFooter="True"></Settings>
-            <SettingsBehavior AutoExpandAllGroups="true" />
+
             <SettingsBehavior AllowSort="true" SortMode="Value" />
         </dx:ASPxGridView>
         <br />
         <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Export To Excel" OnClick="ASPxButton1_Click" Theme="DevEx">
         </dx:ASPxButton>
-        <dx:ASPxTimer ID="ASPxTimer" runat="server" Interval="120000" Enabled="false">
+        <dx:ASPxTimer ID="ASPxTimer" runat="server" Interval="60000" Enabled="false">
             <ClientSideEvents Tick="function(s, e) { 
-                MainContent_ASPxPageControl1_MarketShareTotal_3Y_ASPxGridView8.PerformCallback();
-                MainContent_ASPxPageControl1_MarketShareTotal_3Y1_ASPxGridView8.PerformCallback();
+                MainContent_ASPxPageControl1_MarketShareTotal_2Q_ASPxGridView6.PerformCallback();
+                MainContent_ASPxPageControl1_MarketShareTotal_2Q1_ASPxGridView6.PerformCallback();
                 }" />
         </dx:ASPxTimer>
     </div>
-    <dx:ASPxGridViewExporter ID="gridExport_4" runat="server" GridViewID="ASPxGridView8" FileName="Market Share Totals Main - Yearly"></dx:ASPxGridViewExporter>
+    <dx:ASPxGridViewExporter ID="gridExport_2" runat="server" GridViewID="ASPxGridView6" FileName="Market Share Totals Main - Monthly"></dx:ASPxGridViewExporter>
 </div>
